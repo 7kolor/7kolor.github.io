@@ -56,6 +56,14 @@ def target_files(staged):
     return [f for f in out.splitlines() if f and os.path.isfile(f)]
 
 
+def walk_files(root):
+    out = []
+    for dirpath, _, names in os.walk(root):
+        for n in sorted(names):
+            out.append(os.path.join(dirpath, n))
+    return out
+
+
 def scan_text(name, content, forbid, warn, hits, warns):
     for m in EMAIL_RE.finditer(content):
         if not m.group(0).endswith(ALLOWED_EMAIL_SUFFIXES):
@@ -71,6 +79,7 @@ def scan_text(name, content, forbid, warn, hits, warns):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--staged", action="store_true", help="scan staged files only")
+    ap.add_argument("--path", help="scan an arbitrary directory (no git needed)")
     ap.add_argument("--all", action="store_true", help="scan all tracked files (default)")
     ap.add_argument("--history", action="store_true", help="also scan full git history")
     ap.add_argument("--rules")
@@ -80,14 +89,15 @@ def main():
     forbid, warn, forbid_raw = load_rules(args)
     hits, warns = [], []
 
-    for f in target_files(args.staged):
+    files = walk_files(args.path) if args.path else target_files(args.staged)
+    for f in files:
         try:
             content = open(f, encoding="utf-8", errors="replace").read()
         except OSError:
             continue
         scan_text(f, content, forbid, warn, hits, warns)
 
-    if args.history:
+    if args.history and not args.path:
         # author/committer identities in history
         ids = set(git("log", "--all", "--format=%ae%n%ce").split())
         for e in ids:
