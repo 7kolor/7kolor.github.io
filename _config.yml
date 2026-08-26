@@ -1,0 +1,22 @@
+title: 7kolor Signals
+description: >-
+  Weekly intelligence digest on developer communities —
+  signals, trends, and judgment. 每周开发者社区情报：信号、趋势与判断。
+url: "https://7kolor.github.io"
+theme: minima
+timezone: UTC
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+exclude:
+  - templates/
+  - scripts/
+  - "*.local.txt"
+  - "*.local.yaml"
+  - Gemfile
+  - Gemfile.lock
+defaults:
+  - scope:
+      path: "_posts"
+    values:
+      layout: post

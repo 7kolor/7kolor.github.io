@@ -1,0 +1,5 @@
+hn:     { name: "Hacker News",   url: "https://news.ycombinator.com" }
+reddit: { name: "Reddit",        url: "https://www.reddit.com" }
+ph:     { name: "Product Hunt",  url: "https://www.producthunt.com" }
+gh:     { name: "GitHub",        url: "https://github.com" }
+devto:  { name: "DEV Community", url: "https://dev.to" }

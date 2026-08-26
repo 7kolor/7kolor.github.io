@@ -1,0 +1,14 @@
+name: guard
+on: [push, pull_request]
+permissions: {}
+jobs:
+  sanitize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Sanitize check (worktree + full history)
+        env:
+          SANITIZE_RULES_B64: ${{ secrets.SANITIZE_RULES_B64 }}
+        run: python3 scripts/check_sanitize.py --all --history
