@@ -5,3 +5,7 @@ Weekly intelligence digest on developer communities — signals, trends, and jud
 
 🌐 Site / 站点: https://7kolor.github.io
 📮 Contact / 联系: sami.wu@7kolor.com
+
+## Feedback
+
+💬 [Discussions](https://github.com/7kolor/7kolor.github.io/discussions) · 🐛 [Issues](https://github.com/7kolor/7kolor.github.io/issues)

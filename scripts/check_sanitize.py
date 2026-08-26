@@ -92,7 +92,10 @@ def main():
     files = walk_files(args.path) if args.path else target_files(args.staged)
     for f in files:
         try:
-            content = open(f, encoding="utf-8", errors="replace").read()
+            raw = open(f, "rb").read()
+            if b"\0" in raw[:8192]:
+                continue  # skip binary files
+            content = raw.decode("utf-8", errors="replace")
         except OSError:
             continue
         scan_text(f, content, forbid, warn, hits, warns)
