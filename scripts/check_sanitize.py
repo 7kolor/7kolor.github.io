@@ -16,7 +16,8 @@ Usage:
 """
 import argparse, base64, os, re, subprocess, sys, tempfile
 
-ALLOWED_EMAIL_SUFFIXES = ("@users.noreply.github.com", "@7kolor.com")
+ALLOWED_EMAIL_SUFFIXES = ("@users.noreply.github.com", "@7kolor.com", "@github.com")
+ALLOWED_EMAILS = ("noreply@github.com",)
 EMAIL_RE = re.compile(r"[\w.+\-]+@[\w\-]+(?:\.[\w\-]+)+")
 ID_RE = re.compile(rb"^[\w.+\-]+@[\w\-]+(?:\.[\w\-]+)+$")
 
@@ -66,8 +67,9 @@ def walk_files(root):
 
 def scan_text(name, content, forbid, warn, hits, warns):
     for m in EMAIL_RE.finditer(content):
-        if not m.group(0).endswith(ALLOWED_EMAIL_SUFFIXES):
-            hits.append(f"{name}: disallowed email: {m.group(0)}")
+        email = m.group(0)
+        if not (email.endswith(ALLOWED_EMAIL_SUFFIXES) or email in ALLOWED_EMAILS):
+            hits.append(f"{name}: disallowed email: {email}")
     for p in forbid:
         for m in p.finditer(content):
             hits.append(f"{name}: forbid pattern {p.pattern!r} -> ...{m.group(0)[:40]}...")
@@ -106,7 +108,7 @@ def main():
         for e in ids:
             if e and not ID_RE.match(e.encode()):
                 continue
-            if e and not e.endswith(ALLOWED_EMAIL_SUFFIXES):
+            if e and not (e.endswith(ALLOWED_EMAIL_SUFFIXES) or e in ALLOWED_EMAILS):
                 hits.append(f"history: disallowed committer/author email: {e}")
         # commit messages
         scan_text("commit-messages", git("log", "--all", "--format=%B"), forbid, warn, hits, warns)
