@@ -4,686 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>7kolor Signals — W34 Weekly Report</title>
-    <style>
-        :root {
-            --primary: #2563eb;
-            --primary-dark: #1d4ed8;
-            --text: #1f2937;
-            --text-secondary: #6b7280;
-            --bg: #ffffff;
-            --bg-secondary: #f9fafb;
-            --border: #e5e7eb;
-            --accent-green: #10b981;
-            --accent-orange: #f59e0b;
-            --accent-red: #ef4444;
-            --accent-purple: #8b5cf6;
-            --accent-blue: #3b82f6;
-            --shadow: 0 1px 3px rgba(0,0,0,0.1);
-            --shadow-lg: 0 4px 6px -1px rgba(0,0,0,0.1);
-            --radius: 8px;
-            --radius-lg: 12px;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            line-height: 1.7;
-            color: var(--text);
-            background: var(--bg);
-        }
-        
-        /* Header */
-        .header {
-            background: var(--bg);
-            border-bottom: 1px solid var(--border);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        
-        .header-inner {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 24px;
-            height: 64px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            text-decoration: none;
-            color: var(--text);
-        }
-        
-        .logo-icon {
-            width: 36px;
-            height: 36px;
-            background: linear-gradient(135deg, var(--primary), var(--accent-purple));
-            border-radius: var(--radius);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: 700;
-            font-size: 16px;
-        }
-        
-        .logo-text {
-            font-size: 18px;
-            font-weight: 600;
-        }
-        
-        .logo-text span {
-            color: var(--primary);
-        }
-        
-        .nav {
-            display: flex;
-            align-items: center;
-            gap: 24px;
-        }
-        
-        .nav-links {
-            display: flex;
-            gap: 20px;
-        }
-        
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text-secondary);
-            font-size: 14px;
-            font-weight: 500;
-            transition: color 0.2s;
-        }
-        
-        .nav-links a:hover {
-            color: var(--primary);
-        }
-        
-        .lang-toggle {
-            display: flex;
-            background: var(--bg-secondary);
-            padding: 4px;
-            border-radius: var(--radius);
-            border: 1px solid var(--border);
-        }
-        
-        .lang-btn {
-            padding: 6px 14px;
-            border: none;
-            background: transparent;
-            color: var(--text-secondary);
-            font-size: 13px;
-            font-weight: 500;
-            cursor: pointer;
-            border-radius: 6px;
-            transition: all 0.2s;
-        }
-        
-        .lang-btn.active {
-            background: var(--bg);
-            color: var(--text);
-            box-shadow: var(--shadow);
-        }
-        
-        .lang-btn:hover:not(.active) {
-            color: var(--text);
-        }
-        
-        /* Hero */
-        .hero {
-            background: linear-gradient(135deg, #f0f9ff 0%, #eff6ff 100%);
-            padding: 60px 24px;
-            text-align: center;
-            border-bottom: 1px solid var(--border);
-        }
-        
-        .hero-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: var(--bg);
-            padding: 6px 16px;
-            border-radius: 20px;
-            font-size: 13px;
-            font-weight: 500;
-            color: var(--primary);
-            margin-bottom: 20px;
-            box-shadow: var(--shadow);
-        }
-        
-        .hero-badge .dot {
-            width: 8px;
-            height: 8px;
-            background: var(--accent-green);
-            border-radius: 50%;
-        }
-        
-        .hero h1 {
-            font-size: 36px;
-            font-weight: 700;
-            color: var(--text);
-            margin-bottom: 16px;
-            letter-spacing: -0.5px;
-        }
-        
-        .hero p {
-            font-size: 16px;
-            color: var(--text-secondary);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        
-        .hero-meta {
-            display: flex;
-            justify-content: center;
-            gap: 24px;
-            margin-top: 24px;
-            font-size: 14px;
-            color: var(--text-secondary);
-        }
-        
-        .hero-meta span {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-        
-        /* Main Content */
-        .main {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 24px;
-        }
-        
-        .content-grid {
-            display: grid;
-            grid-template-columns: 240px 1fr;
-            gap: 40px;
-        }
-        
-        /* Sidebar */
-        .sidebar {
-            position: sticky;
-            top: 100px;
-            height: fit-content;
-        }
-        
-        .sidebar-title {
-            font-size: 12px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: var(--text-secondary);
-            margin-bottom: 16px;
-        }
-        
-        .sidebar-nav {
-            list-style: none;
-        }
-        
-        .sidebar-nav li {
-            margin-bottom: 4px;
-        }
-        
-        .sidebar-nav a {
-            display: block;
-            padding: 8px 12px;
-            text-decoration: none;
-            color: var(--text-secondary);
-            font-size: 14px;
-            border-radius: var(--radius);
-            transition: all 0.2s;
-        }
-        
-        .sidebar-nav a:hover {
-            background: var(--bg-secondary);
-            color: var(--text);
-        }
-        
-        .sidebar-nav a.active {
-            background: var(--bg-secondary);
-            color: var(--primary);
-            font-weight: 500;
-        }
-        
-        /* Content */
-        .content {
-            min-width: 0;
-        }
-        
-        .content-section {
-            display: none;
-        }
-        
-        .content-section.active {
-            display: block;
-        }
-        
-        .section {
-            margin-bottom: 60px;
-            scroll-margin-top: 100px;
-        }
-        
-        .section-header {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 24px;
-            padding-bottom: 16px;
-            border-bottom: 2px solid var(--border);
-        }
-        
-        .section-icon {
-            width: 40px;
-            height: 40px;
-            border-radius: var(--radius);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 20px;
-        }
-        
-        .section-icon.blue { background: #eff6ff; }
-        .section-icon.green { background: #ecfdf5; }
-        .section-icon.orange { background: #fff7ed; }
-        .section-icon.red { background: #fef2f2; }
-        .section-icon.purple { background: #f5f3ff; }
-        
-        .section h2 {
-            font-size: 24px;
-            font-weight: 600;
-            color: var(--text);
-        }
-        
-        .card {
-            background: var(--bg);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-lg);
-            padding: 24px;
-            margin-bottom: 20px;
-            box-shadow: var(--shadow);
-        }
-        
-        .stat-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 16px;
-            margin: 20px 0;
-        }
-        .stat-card {
-            background: var(--bg-secondary);
-            padding: 20px;
-            border-radius: var(--radius);
-            text-align: center;
-            border-left: 4px solid var(--primary);
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-        .stat-card:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-lg);
-        }
-        .stat-card.positive {
-            border-left-color: var(--accent-green);
-        }
-        .stat-card.neutral {
-            border-left-color: var(--accent-orange);
-        }
-        .stat-card.negative {
-            border-left-color: var(--accent-red);
-        }
-        .stat-value {
-            font-size: 28px;
-            font-weight: 700;
-            color: var(--text);
-        }
-        .stat-card.positive .stat-value {
-            color: var(--accent-green);
-        }
-        .stat-card.neutral .stat-value {
-            color: var(--accent-orange);
-        }
-        .stat-card.negative .stat-value {
-            color: var(--accent-red);
-        }
-        .stat-label {
-            font-size: 12px;
-            color: var(--text-secondary);
-            margin-top: 4px;
-            font-weight: 500;
-        }
-        .stat-bar {
-            height: 6px;
-            background: var(--border);
-            border-radius: 3px;
-            margin-top: 12px;
-            overflow: hidden;
-        }
-        .stat-bar-fill {
-            height: 100%;
-            border-radius: 3px;
-            transition: width 0.5s ease;
-        }
-        .stat-card.positive .stat-bar-fill {
-            background: var(--accent-green);
-            width: 18.6%;
-        }
-        .stat-card.neutral .stat-bar-fill {
-            background: var(--accent-orange);
-            width: 56.5%;
-        }
-        .stat-card.negative .stat-bar-fill {
-            background: var(--accent-red);
-            width: 24.9%;
-        }
-        
-        .card-highlight {
-            background: linear-gradient(135deg, #eff6ff 0%, #f5f3ff 100%);
-            border-color: #c7d2fe;
-        }
-        
-        .card h3 {
-            font-size: 16px;
-            font-weight: 600;
-            margin-bottom: 12px;
-            color: var(--text);
-        }
-        
-        .card p {
-            color: var(--text-secondary);
-            font-size: 15px;
-        }
-        
-        /* Chart */
-        .chart-container {
-            background: var(--bg-secondary);
-            padding: 24px;
-            border-radius: var(--radius-lg);
-            margin: 20px 0;
-        }
-        
-        .chart-title {
-            text-align: center;
-            font-weight: 600;
-            color: var(--text);
-            margin-bottom: 20px;
-            font-size: 14px;
-        }
-        
-        .bar-chart {
-            display: flex;
-            align-items: flex-end;
-            justify-content: space-around;
-            height: 160px;
-            padding: 10px 0;
-        }
-        
-        .bar-item {
-            text-align: center;
-            width: 18%;
-        }
-        
-        .bar {
-            width: 40px;
-            margin: 0 auto;
-            border-radius: 4px 4px 0 0;
-            transition: opacity 0.2s;
-        }
-        
-        .bar:hover {
-            opacity: 0.8;
-        }
-        
-        .bar-label {
-            font-size: 12px;
-            margin-top: 8px;
-            color: var(--text-secondary);
-        }
-        
-        .bar-value {
-            font-size: 11px;
-            color: var(--text-secondary);
-            font-weight: 500;
-        }
-        
-        /* Table */
-        .data-table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 14px;
-            margin: 20px 0;
-        }
-        
-        .data-table th,
-        .data-table td {
-            padding: 14px 16px;
-            text-align: left;
-            border-bottom: 1px solid var(--border);
-        }
-        
-        .data-table th {
-            background: var(--bg-secondary);
-            font-weight: 600;
-            color: var(--text-secondary);
-            font-size: 12px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        
-        .data-table tr:hover {
-            background: var(--bg-secondary);
-        }
-        
-        .data-table a {
-            color: var(--primary);
-            text-decoration: none;
-        }
-        
-        .data-table a:hover {
-            text-decoration: underline;
-        }
-        
-        /* Tags */
-        .tag {
-            display: inline-block;
-            padding: 4px 10px;
-            border-radius: 20px;
-            font-size: 11px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        
-        .tag-new {
-            background: #d1fae5;
-            color: #065f46;
-        }
-        
-        .tag-hot {
-            background: #fee2e2;
-            color: #991b1b;
-        }
-        
-        .tag-trend {
-            background: #dbeafe;
-            color: #1e40af;
-        }
-        
-        /* Pain Point */
-        .pain-point {
-            background: var(--bg);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-lg);
-            padding: 24px;
-            margin-bottom: 20px;
-        }
-        
-        .pain-point-header {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 16px;
-        }
-        
-        .pain-point-icon {
-            width: 36px;
-            height: 36px;
-            background: #fef2f2;
-            border-radius: var(--radius);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 18px;
-        }
-        
-        .pain-point h4 {
-            font-size: 16px;
-            font-weight: 600;
-            color: var(--text);
-        }
-        
-        .quote-box {
-            background: #fef2f2;
-            padding: 16px 20px;
-            border-radius: var(--radius);
-            margin: 16px 0;
-            border-left: 4px solid var(--accent-red);
-            font-style: italic;
-            color: var(--text-secondary);
-        }
-        
-        .opportunity-box {
-            background: #ecfdf5;
-            padding: 16px 20px;
-            border-radius: var(--radius);
-            margin-top: 16px;
-            border-left: 4px solid var(--accent-green);
-        }
-        
-        .opportunity-box strong {
-            color: #065f46;
-        }
-        
-        /* Action List */
-        .action-list {
-            list-style: none;
-            padding: 0;
-        }
-        
-        .action-list li {
-            padding: 14px 0;
-            padding-left: 32px;
-            position: relative;
-            border-bottom: 1px solid var(--border);
-        }
-        
-        .action-list li:last-child {
-            border-bottom: none;
-        }
-        
-        .action-list li::before {
-            content: "→";
-            position: absolute;
-            left: 0;
-            color: var(--primary);
-            font-weight: 600;
-        }
-        
-        /* Footer */
-        .footer {
-            background: var(--bg-secondary);
-            border-top: 1px solid var(--border);
-            padding: 40px 24px;
-            text-align: center;
-        }
-        
-        .footer-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .footer p {
-            color: var(--text-secondary);
-            font-size: 14px;
-        }
-        
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 24px;
-            margin-top: 16px;
-        }
-        
-        .footer-links a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-size: 13px;
-        }
-        
-        .footer-links a:hover {
-            color: var(--primary);
-        }
-        
-        /* Responsive */
-        @media (max-width: 900px) {
-            .content-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .sidebar {
-                display: none;
-            }
-            
-            .hero h1 {
-                font-size: 28px;
-            }
-            
-            .nav-links {
-                display: none;
-            }
-        }
-        
-        @media (max-width: 600px) {
-            .header-inner {
-                padding: 0 16px;
-            }
-            
-            .hero {
-                padding: 40px 16px;
-            }
-            
-            .hero h1 {
-                font-size: 24px;
-            }
-            
-            .main {
-                padding: 24px 16px;
-            }
-            
-            .data-table {
-                font-size: 13px;
-            }
-            
-            .data-table th,
-            .data-table td {
-                padding: 10px 8px;
-            }
-        }
-    </style>
+    <meta name="description" content="W34 周报：独立开发者社区情报。Weekly intelligence digest on developer communities.">
+    <link rel="alternate" hreflang="zh" href="/weekly/w34/report-zh.html">
+    <link rel="alternate" hreflang="en" href="/weekly/w34/report-en.html">
+    <link rel="alternate" type="application/rss+xml" title="7kolor Signals" href="/feed.xml">
+    <link rel="stylesheet" href="/assets/css/main.css">
 </head>
 <body>
     <!-- Header -->
@@ -695,16 +20,13 @@
             </a>
             <nav class="nav">
                 <div class="nav-links">
-                    <a href="#overview">概览</a>
-                    <a href="#trends">趋势</a>
-                    <a href="#products">产品</a>
-                    <a href="#cases">案例</a>
-                    <a href="#pains">痛点</a>
-                    <a href="#actions">行动</a>
+                    <a href="/" data-zh="首页" data-en="Home">首页</a>
+                    <a href="/weekly/" data-zh="周报" data-en="Weekly">周报</a>
+                    <a href="/about.html" data-zh="关于" data-en="About">关于</a>
                 </div>
                 <div class="lang-toggle">
-                    <button class="lang-btn active" onclick="switchLang('zh', this)">中文</button>
-                    <button class="lang-btn" onclick="switchLang('en', this)">EN</button>
+                    <button class="lang-btn active" data-lang="zh" onclick="switchLang('zh', this)">中文</button>
+                    <button class="lang-btn" data-lang="en" onclick="switchLang('en', this)">EN</button>
                 </div>
             </nav>
         </div>
@@ -756,6 +78,7 @@
                     <div class="stat-grid">
                         <div class="stat-card">
                             <div class="stat-value">22,760</div>
+                            <div class="stat-label" data-zh="总热度" data-en="Total Heat">总热度</div>
                         </div>
                         <div class="stat-card positive">
                             <div class="stat-value">18.6%</div>
@@ -793,7 +116,7 @@
                         <h2 data-zh="热门趋势" data-en="Hot Trends">热门趋势</h2>
                     </div>
                     <h3 data-zh="TOP 10 热度帖" data-en="Top 10 Posts by Heat">TOP 10 热度帖</h3>
-                    <table class="data-table">
+                    <div class="table-wrap"><table class="data-table">
                         <thead><tr><th>#</th><th data-zh="标题" data-en="Title">标题</th><th data-zh="热度" data-en="Heat">热度</th></tr></thead>
                         <tbody>
                             <tr><td>1</td><td><a href="https://news.ycombinator.com/item?id=49419237">How Europe is killing makers and micro-entrepreneurs</a></td><td>3,697</td></tr>
@@ -807,7 +130,7 @@
                             <tr><td>9</td><td><a href="https://reddit.com/r/SaaS/comments/1vyvxo8">One Reddit post = 415K views, 1,100 users</a></td><td>347</td></tr>
                             <tr><td>10</td><td><a href="https://www.indiehackers.com/post/63fe100bf5">I launched a project to see if people would pay for your IH idea</a></td><td>343</td></tr>
                         </tbody>
-                    </table>
+                    </table></div>
                     
                     <h3 data-zh="热帖分析" data-en="Hot Post Analysis">热帖分析</h3>
                     
@@ -843,7 +166,7 @@
                         <h2 data-zh="新品速递" data-en="New Products">新品速递</h2>
                     </div>
                     <h3 data-zh="本周热门产品" data-en="Hot Products This Week">本周热门产品</h3>
-                    <table class="data-table">
+                    <div class="table-wrap"><table class="data-table">
                         <thead><tr><th><span data-zh="产品" data-en="Product">产品</span></th><th data-zh="介绍" data-en="Description">介绍</th><th data-zh="票数" data-en="Votes">票数</th><th data-zh="来源" data-en="Source">来源</th></tr></thead>
                         <tbody>
                             <tr><td><a href="https://www.producthunt.com/products/paymentkit">PaymentKit</a></td><td data-zh="支付系统，服务商倒闭也不受影响" data-en="Billing that survives a processor shutdown">支付系统，服务商倒闭也不受影响</td><td>457</td><td>PH</td></tr>
@@ -852,7 +175,7 @@
                             <tr><td><a href="https://www.producthunt.com/products/diet-claude">Diet Claude</a></td><td data-zh="Claude 用量限制提醒" data-en="Never get blindsided by Claude's usage limits again">Claude 用量限制提醒</td><td>411</td><td>PH</td></tr>
                             <tr><td><a href="https://www.producthunt.com/products/expertise-ai-6">Expertise AI</a></td><td data-zh="把 GTM 技能变成经常性收入" data-en="Turn your GTM skills into recurring revenue">把 GTM 技能变成经常性收入</td><td>366</td><td>PH</td></tr>
                         </tbody>
-                    </table>
+                    </table></div>
                     
                     <h3 data-zh="产品聚焦" data-en="Product Spotlight">产品聚焦</h3>
                     
@@ -879,16 +202,16 @@
                         <h2 data-zh="成功案例" data-en="Success Cases">成功案例</h2>
                     </div>
                     <h3 data-zh="本周值得关注的好消息" data-en="Good News This Week">本周值得关注的好消息</h3>
-                    <table class="data-table">
+                    <div class="table-wrap"><table class="data-table">
                         <thead><tr><th data-zh="案例" data-en="Case">案例</th><th data-zh="关键数据" data-en="Key Metrics">关键数据</th><th data-zh="来源" data-en="Source">来源</th></tr></thead>
                         <tbody>
-                            <tr><td><a href="https://reddit.com/r/appbusiness/comments/1vw950q">取消免费试用 + 翻倍定价</a></td><td>$3k Revenue, $1.6k MRR, 23天</td><td>r/appbusiness</td></tr>
-                            <tr><td><a href="https://reddit.com/r/SaaS/comments/1vyvxo8">Reddit 单帖 = 415K views</a></td><td>1,100 用户, 30 订阅</td><td>r/SaaS</td></tr>
-                            <tr><td><a href="https://reddit.com/r/SideProject/comments/1w11z6r">1.8M Reddit views, #6 paid travel app</a></td><td>流量5倍增长</td><td>r/SideProject</td></tr>
-                            <tr><td><a href="https://www.indiehackers.com/post/60da9ba8f2">招聘目录站突破 $100K</a></td><td>$100K 收入</td><td>IH</td></tr>
-                            <tr><td><a href="https://reddit.com/r/SaaS/comments/1vy3sf3">失败4次后赚到 $1150</a></td><td>SEO + 社交媒体</td><td>r/SaaS</td></tr>
+                            <tr><td><a href="https://reddit.com/r/appbusiness/comments/1vw950q" data-zh="取消免费试用 + 翻倍定价" data-en="Killed free trial, doubled price">取消免费试用 + 翻倍定价</a></td><td data-zh="$3k Revenue, $1.6k MRR, 23天" data-en="$3k Revenue, $1.6k MRR, 23 days">$3k Revenue, $1.6k MRR, 23天</td><td>r/appbusiness</td></tr>
+                            <tr><td><a href="https://reddit.com/r/SaaS/comments/1vyvxo8" data-zh="Reddit 单帖 = 415K views" data-en="One Reddit post = 415K views">Reddit 单帖 = 415K views</a></td><td data-zh="1,100 用户, 30 订阅" data-en="1,100 users, 30 subscribers">1,100 用户, 30 订阅</td><td>r/SaaS</td></tr>
+                            <tr><td><a href="https://reddit.com/r/SideProject/comments/1w11z6r">1.8M Reddit views, #6 paid travel app</a></td><td data-zh="流量5倍增长" data-en="5x traffic growth">流量5倍增长</td><td>r/SideProject</td></tr>
+                            <tr><td><a href="https://www.indiehackers.com/post/60da9ba8f2" data-zh="招聘目录站突破 $100K" data-en="Job directory site crosses $100K">招聘目录站突破 $100K</a></td><td data-zh="$100K 收入" data-en="$100K revenue">$100K 收入</td><td>IH</td></tr>
+                            <tr><td><a href="https://reddit.com/r/SaaS/comments/1vy3sf3" data-zh="失败4次后赚到 $1150" data-en="Made $1,150 after 4 failures">失败4次后赚到 $1150</a></td><td data-zh="SEO + 社交媒体" data-en="SEO + social media">SEO + 社交媒体</td><td>r/SaaS</td></tr>
                         </tbody>
-                    </table>
+                    </table></div>
                     
                     <h3 data-zh="成功故事" data-en="Success Stories">成功故事</h3>
                     
@@ -929,7 +252,7 @@
                             <h4 data-zh="AI 工具治理困境" data-en="AI Tool Governance">AI 工具治理困境</h4>
                         </div>
                         <div class="quote-box">
-                            <p>管理者每周都要处理业务部门使用新AI工具接入客户数据的请求。现有安全审查流程长达四周，导致团队绕过合规部门直接操作。</p>
+                            <p data-zh="管理者每周都要处理业务部门使用新AI工具接入客户数据的请求。现有安全审查流程长达四周，导致团队绕过合规部门直接操作。" data-en="Managers handle weekly requests from business units to connect new AI tools to customer data. The existing security review takes four weeks, causing teams to bypass compliance entirely.">管理者每周都要处理业务部门使用新AI工具接入客户数据的请求。现有安全审查流程长达四周，导致团队绕过合规部门直接操作。</p>
                         </div>
                         <p><a href="https://reddit.com/r/sysadmin/comments/1w0ijsa">How is your company handling the endless stream of "Can we use this AI tool?" Requests?</a> — 278</p>
                         <div class="deep-analysis">
@@ -943,7 +266,7 @@
                             <h4 data-zh="Docker 管理难题" data-en="Docker Management">Docker 管理难题</h4>
                         </div>
                         <div class="quote-box">
-                            <p>用户正在寻找 Portainer 的替代品，主要痛点是希望保持 docker-compose.yml 文件作为配置源，同时需要一个 UI 界面来管理容器、查看日志和更新服务。</p>
+                            <p data-zh="用户正在寻找 Portainer 的替代品，主要痛点是希望保持 docker-compose.yml 文件作为配置源，同时需要一个 UI 界面来管理容器、查看日志和更新服务。" data-en="Users are looking for Portainer alternatives. The main pain: keep docker-compose.yml as the source of truth while having a UI to manage containers, view logs, and update services.">用户正在寻找 Portainer 的替代品，主要痛点是希望保持 docker-compose.yml 文件作为配置源，同时需要一个 UI 界面来管理容器、查看日志和更新服务。</p>
                         </div>
                         <p><a href="https://reddit.com/r/selfhosted/comments/1w0mnlz">What are you using to manage Docker?</a> — 372</p>
                         <div class="deep-analysis">
@@ -957,7 +280,7 @@
                             <h4 data-zh="采购合规漏洞" data-en="Procurement Compliance">采购合规漏洞</h4>
                         </div>
                         <div class="quote-box">
-                            <p>公司规定超过5000美元的采购需管理层审批，但员工因审批流程慢而将大额拆分为多笔小额提交。</p>
+                            <p data-zh="公司规定超过5000美元的采购需管理层审批，但员工因审批流程慢而将大额拆分为多笔小额提交。" data-en="Company policy requires management approval for purchases over $5,000, but employees split large purchases into smaller ones because approval is too slow.">公司规定超过5000美元的采购需管理层审批，但员工因审批流程慢而将大额拆分为多笔小额提交。</p>
                         </div>
                         <p><a href="https://reddit.com/r/accounting/comments/1vz66ce">How to stop employees splitting purchases to avoid approval limits</a> — 299</p>
                         <div class="deep-analysis">
@@ -971,7 +294,7 @@
                             <h4 data-zh="服务价格不透明" data-en="Service Price Opacity">服务价格不透明</h4>
                         </div>
                         <div class="quote-box">
-                            <p>预订了49美元的空调管道清洁服务后，技师现场声称发现霉菌并推销600-700美元的深度治理服务。</p>
+                            <p data-zh="预订了49美元的空调管道清洁服务后，技师现场声称发现霉菌并推销600-700美元的深度治理服务。" data-en="After booking a $49 air duct cleaning, the technician claimed to find mold on-site and pushed a $600–700 deep remediation service.">预订了49美元的空调管道清洁服务后，技师现场声称发现霉菌并推销600-700美元的深度治理服务。</p>
                         </div>
                         <p><a href="https://reddit.com/r/hvacadvice/comments/1w12j40">$49 air duct cleaning turned into a $600–700 "mold remediation" quote</a> — 330</p>
                         <div class="deep-analysis">
@@ -1017,34 +340,13 @@
             <p style="margin-top: 8px;">© 2026 7kolor Signals</p>
             <div class="footer-links">
                 <a href="/" data-zh="首页" data-en="Home">首页</a>
-                <a href="/about/" data-zh="关于" data-en="About">关于</a>
+                <a href="/weekly/" data-zh="周报" data-en="Weekly">周报</a>
+                <a href="/about.html" data-zh="关于" data-en="About">关于</a>
                 <a href="/feed.xml" data-zh="订阅" data-en="RSS">订阅</a>
             </div>
         </div>
     </footer>
     
-    <script>
-        function switchLang(lang, btn) {
-            // Update buttons
-            document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
-            if (btn) btn.classList.add('active');
-            
-            // Update all elements with data-zh/data-en
-            document.querySelectorAll('[data-zh]').forEach(el => {
-                el.textContent = el.getAttribute('data-' + lang);
-            });
-        }
-        
-        // Smooth scroll for sidebar links
-        document.querySelectorAll('.sidebar-nav a').forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth' });
-                }
-            });
-        });
-    </script>
+    <script src="/assets/js/main.js"></script>
 </body>
 </html>
