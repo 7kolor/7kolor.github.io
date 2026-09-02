@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>7Kolor Insights</title>
+    <link>https://7kolor.github.io/</link>
+    <description>Weekly intelligence digest on developer communities — signals, trends, and judgment. 每周开发者社区情报：信号、趋势与判断。</description>
+    <language>zh-CN</language>
+    <atom:link href="https://7kolor.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>7Kolor Insights — 2026 W34 周报：AI 编程可信度危机与定价获客</title>
+      <link>https://7kolor.github.io/weekly/2026-W34/</link>
+      <guid>https://7kolor.github.io/weekly/2026-W34/</guid>
+      <pubDate>Sat, 29 Aug 2026 00:00:00 +0000</pubDate>
+      <description>AI 编程从「万能」到「不可靠」的共识正在形成；取消免费试用+翻倍定价 23 天做到 $1,600 MRR；合规成本上升为隐性威胁。</description>
+    </item>
+  </channel>
+</rss>

@@ -7,3 +7,7 @@ Gemfile.lock
 *.local.yaml
 drafts/
 .DS_Store
+
+# Python
+__pycache__/
+*.pyc
