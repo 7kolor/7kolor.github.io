@@ -7,11 +7,11 @@
     <language>zh-CN</language>
     <atom:link href="https://7kolor.github.io/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
-      <title>7kolor Signals — W34 周报 / Weekly Report</title>
-      <link>https://7kolor.github.io/weekly/w34/</link>
-      <guid>https://7kolor.github.io/weekly/w34/</guid>
-      <pubDate>Sat, 29 Aug 2026 09:00:00 +0000</pubDate>
-      <description>AI 编程从「万能」到「不可靠」的共识正在形成；定价策略成为获客开关；合规成本上升为隐性威胁。Consensus forms that AI coding is unreliable; pricing as the acquisition switch; compliance costs rising.</description>
+      <title>7kolor Signals — 2026 W34 周报：AI 编程可信度危机与定价获客</title>
+      <link>https://7kolor.github.io/weekly/2026-W34/</link>
+      <guid>https://7kolor.github.io/weekly/2026-W34/</guid>
+      <pubDate>Sat, 29 Aug 2026 00:00:00 +0000</pubDate>
+      <description>AI 编程从「万能」到「不可靠」的共识正在形成；取消免费试用+翻倍定价 23 天做到 $1,600 MRR；合规成本上升为隐性威胁。</description>
     </item>
   </channel>
 </rss>
