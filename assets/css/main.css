@@ -940,8 +940,8 @@ a.lang-btn { text-decoration: none; display: inline-block; }
     .landing-hero { padding: 72px 16px 96px; }
     .landing-hero .brand-mark .mark-word { font-size: 32px; }
     .landing-hero .brand-mark img { width: 52px; height: 52px; font-size: 24px; }
-    .insight-formula { flex-wrap: wrap; }
-    .insight-formula .op { transform: rotate(90deg); padding: 0; }
+
+
 }
 
 
@@ -981,20 +981,15 @@ a.lang-btn { text-decoration: none; display: inline-block; }
 .landing-hero .tagline, .landing-hero .tagline-sub { display: none; }
 
 /* The Insight Formula — refined, single accent */
-.insight-formula { margin: 44px auto 0; max-width: 860px; display: flex; align-items: center; justify-content: center; gap: 10px; flex-wrap: wrap; }
-.insight-formula .term {
-    background: var(--surface); border: 1px solid var(--border);
-    border-radius: 14px; padding: 12px 18px;
-    box-shadow: 0 1px 2px rgba(15,23,42,0.04);
-    white-space: nowrap; transition: border-color .2s, box-shadow .2s, transform .2s;
-}
-.insight-formula .term:hover { transform: translateY(-2px); border-color: rgba(37,99,235,0.3); box-shadow: var(--shadow); }
-.insight-formula .term .t-top { font-size: 10px; letter-spacing: 1px; text-transform: uppercase; color: var(--text-secondary); font-family: var(--mono); display: block; }
-.insight-formula .term .t-main { font-size: 18px; font-weight: 700; color: var(--text); display: block; margin-top: 3px; }
-.insight-formula .op { font-size: 22px; font-weight: 700; color: var(--text-secondary); font-family: var(--mono); flex: 0 0 auto; margin: 0 2px; }
-.insight-formula .eq { font-size: 30px; color: var(--primary); font-family: var(--mono); flex: 0 0 auto; margin: 0 4px; }
-.insight-formula .term.t-result { border-color: transparent; background: var(--grad); box-shadow: 0 10px 30px rgba(37,99,235,0.35); padding: 14px 22px; }
-.insight-formula .term.t-result .t-main { color: #fff; font-size: 19px; margin-top: 0; }
+
+
+
+
+
+
+
+
+
 
 .landing-cta-soft { margin-top: 44px; display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
 .landing-cta-soft a { font-size: 15px; font-weight: 600; text-decoration: none; color: var(--text-secondary); padding: 6px 2px; border-bottom: 2px solid transparent; transition: color .2s, border-color .2s; }
@@ -1003,8 +998,8 @@ a.lang-btn { text-decoration: none; display: inline-block; }
 @media (max-width: 900px) {
     .landing-hero { padding: 72px 16px 100px; }
     .landing-hero .hero-brand .hb-word { font-size: 34px; }
-    .insight-formula { gap: 8px; }
-    .insight-formula .term { padding: 10px 14px; }
+
+
 }
 
 
@@ -1052,17 +1047,15 @@ a, .report-card, .btn, .lang-btn { transition: color .2s var(--ease), background
 
 
 /* formula terms — fixed widths so zh/en switch does not shift layout */
-.insight-formula .term.t-you,
-.insight-formula .term.t-me { width: 128px; }
-.insight-formula .term.t-ai { width: 148px; }
-.insight-formula .term.t-result { width: 208px; }
-.insight-formula .op, .insight-formula .eq { width: 26px; text-align: center; }
+
+
+
+
 @media (max-width: 600px) {
-    .insight-formula .term.t-you,
-    .insight-formula .term.t-me { width: 116px; }
-    .insight-formula .term.t-ai { width: 132px; }
-    .insight-formula .term.t-result { width: 184px; }
-    .insight-formula .op, .insight-formula .eq { width: 22px; }
+
+
+
+
 }
 
 
@@ -1078,93 +1071,183 @@ a, .report-card, .btn, .lang-btn { transition: color .2s var(--ease), background
 .card-ico { width: 20px; height: 20px; color: var(--primary); vertical-align: -3px; margin-right: 6px; }
 
 /* ============================================================
-   LANDING BANNER v6 — split hero: statement left, signal panel right
+   LANDING BANNER v7 — animated tech atmosphere (light, colorful)
    ============================================================ */
 .landing-hero {
     position: relative;
     overflow: hidden;
-    padding: 76px 24px 96px;
+    padding: 104px 24px 132px;
+    text-align: center;
     border-bottom: 1px solid var(--border);
     background:
-        radial-gradient(1100px 560px at 50% -220px, rgba(6,182,212,0.13), transparent 66%),
-        radial-gradient(900px 480px at 15% -160px, rgba(37,99,235,0.10), transparent 60%),
-        linear-gradient(180deg, #e9f6fb 0%, #f2f9fd 52%, var(--bg) 100%);
+        radial-gradient(1000px 520px at 18% -10%, rgba(6,182,212,0.16), transparent 62%),
+        radial-gradient(900px 500px at 84% -16%, rgba(37,99,235,0.14), transparent 62%),
+        linear-gradient(180deg, #e6f5fb 0%, #f0f9fd 52%, var(--bg) 100%);
 }
+/* aurora drift — two soft color fields slowly moving */
 .landing-hero::before {
-    content: ""; position: absolute; inset: 0;
-    background-image: radial-gradient(rgba(36,86,230,0.10) 1px, transparent 1px);
-    background-size: 26px 26px;
-    -webkit-mask-image: linear-gradient(180deg, rgba(0,0,0,0.6), transparent 62%);
-    mask-image: linear-gradient(180deg, rgba(0,0,0,0.6), transparent 62%);
+    content: "";
+    position: absolute; inset: -12% -6%;
+    background:
+        radial-gradient(560px 300px at 22% 26%, rgba(6,182,212,0.20), transparent 70%),
+        radial-gradient(520px 300px at 78% 12%, rgba(37,99,235,0.16), transparent 70%),
+        radial-gradient(480px 260px at 55% 88%, rgba(2,132,199,0.10), transparent 70%);
+    -webkit-mask-image: linear-gradient(180deg, #000 40%, transparent 100%);
+    mask-image: linear-gradient(180deg, #000 40%, transparent 100%);
+    animation: aurora 16s ease-in-out infinite alternate;
     pointer-events: none;
+    z-index: 0;
 }
+@keyframes aurora {
+    0%   { transform: translate3d(-2.5%, 0, 0) scale(1);    opacity: .75; }
+    50%  { transform: translate3d(2.5%, 2%, 0) scale(1.07); opacity: 1; }
+    100% { transform: translate3d(-1.5%, -1.5%, 0) scale(1.03); opacity: .85; }
+}
+/* drifting dot grid */
+.landing-hero::after {
+    content: "";
+    position: absolute; inset: 0;
+    background-image: radial-gradient(rgba(2,132,199,0.12) 1px, transparent 1px);
+    background-size: 26px 26px;
+    -webkit-mask-image: linear-gradient(180deg, rgba(0,0,0,0.65), transparent 78%);
+    mask-image: linear-gradient(180deg, rgba(0,0,0,0.65), transparent 78%);
+    animation: gridDrift 26s linear infinite;
+    pointer-events: none;
+    z-index: 0;
+}
+@keyframes gridDrift { from { background-position: 0 0; } to { background-position: 52px 78px; } }
+
 .landing-hero .hero-content {
     position: relative;
     max-width: 1000px;
     margin: 0 auto;
     text-align: center;
+    z-index: 1;
 }
-.hero-content > * { position: relative; z-index: 1; }
 
+/* rotating tech rings behind the statement */
+.hero-deco { position: absolute; inset: 0; pointer-events: none; z-index: 0; }
+.hero-deco .ring {
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid rgba(6,182,212,0.30);
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+}
+.hero-deco .r1 { width: 560px; height: 560px; border-style: dashed; animation: spin 44s linear infinite; }
+.hero-deco .r2 { width: 700px; height: 700px; border-color: rgba(37,99,235,0.20); animation: spin 60s linear infinite reverse; }
+@keyframes spin { to { transform: translate(-50%, -50%) rotate(360deg); } }
+
+/* rising data particles */
+.hero-deco .part {
+    position: absolute;
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    background: rgba(6,182,212,0.55);
+    box-shadow: 0 0 8px rgba(6,182,212,0.5);
+    animation: rise 9s linear infinite;
+    opacity: 0;
+}
+.hero-deco .p1 { left: 12%; bottom: 8%;  animation-delay: 0s; }
+.hero-deco .p2 { left: 30%; bottom: -4%; animation-delay: 2.6s; }
+.hero-deco .p3 { right: 26%; bottom: 2%; animation-delay: 5.1s; }
+.hero-deco .p4 { right: 10%; bottom: -6%; animation-delay: 7.3s; }
+@keyframes rise {
+    0%   { transform: translateY(0); opacity: 0; }
+    12%  { opacity: .9; }
+    85%  { opacity: .7; }
+    100% { transform: translateY(-120px); opacity: 0; }
+}
+
+/* bottom signal wave */
+.hero-deco .wave {
+    position: absolute; left: 0; right: 0; bottom: -2px;
+    width: 100%; height: 110px;
+    animation: waveDrift 9s ease-in-out infinite alternate;
+}
+@keyframes waveDrift {
+    from { transform: translateY(3px); opacity: .9; }
+    to   { transform: translateY(-4px); opacity: 1; }
+}
+
+/* eyebrow — bilingual, hairlines, entrance */
 .hb-eyebrow {
     font-family: var(--font-mono);
-    font-size: 12px;
-    letter-spacing: 5px;
+    font-size: 13px;
+    letter-spacing: 4px;
     text-transform: uppercase;
-    color: var(--accent-amber);
-    margin-bottom: 18px;
-    display: flex; align-items: center; justify-content: center; gap: 10px;
+    color: var(--primary-dark);
+    margin-bottom: 20px;
+    display: flex; align-items: center; justify-content: center; gap: 12px;
+    animation: fadeDown .8s var(--ease) both;
 }
 .hb-eyebrow::before, .hb-eyebrow::after {
-    content: ""; width: 34px; height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(245,158,11,0.55));
+    content: ""; width: 36px; height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(6,182,212,0.6));
 }
 .hb-eyebrow::after { transform: rotate(180deg); }
+@keyframes fadeDown { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: none; } }
+
+/* brand — staggered entrance */
+.landing-hero .hero-brand { animation: fadeUp .8s var(--ease) .12s both; }
+@keyframes fadeUp { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
 .landing-hero .hero-brand .hb-word {
     font-family: var(--font-display);
-    font-size: 56px;
+    font-size: 62px;
     font-weight: 700;
     letter-spacing: -1.5px;
     color: var(--ink);
-    line-height: 1.04;
+    line-height: 1.03;
 }
 .landing-hero .hero-brand .hb-word .accent {
     background: var(--grad);
     -webkit-background-clip: text; background-clip: text;
     -webkit-text-fill-color: transparent;
+    background-size: 220% 100%;
+    animation: hueSlide 9s ease-in-out infinite;
 }
+@keyframes hueSlide { 0%,100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
 .landing-hero .hero-brand .hb-sub {
-    margin-top: 14px;
-    font-family: var(--font-mono);
-    font-size: 13px;
-    letter-spacing: 4px;
-    text-transform: uppercase;
+    margin-top: 16px;
+    font-size: 17px;
     color: var(--text-secondary);
+    letter-spacing: 1px;
 }
 
-/* ---- insight formula (fixed widths preserved) ---- */
-.insight-formula { margin: 40px auto 0; max-width: 860px; display: flex; align-items: center; justify-content: center; gap: 10px; flex-wrap: wrap; }
-.insight-formula .term {
-    background: var(--surface); border: 1px solid var(--border);
-    border-radius: 14px; padding: 12px 18px;
-    box-shadow: 0 2px 6px rgba(15,23,42,0.05), 0 10px 24px rgba(36,86,230,0.08);
-    white-space: nowrap; transition: border-color .2s var(--ease), box-shadow .2s var(--ease), transform .2s var(--ease);
+/* CTA — soft links, animated underline */
+.landing-cta-soft { margin-top: 68px; display: flex; justify-content: center; gap: 46px; flex-wrap: wrap; animation: fadeUp .8s var(--ease) .24s both; }
+.landing-cta-soft a {
+    font-size: 16px; font-weight: 600; text-decoration: none; color: var(--text-secondary);
+    padding: 7px 2px; position: relative;
+    transition: color .2s var(--ease);
 }
-.insight-formula .term:hover { transform: translateY(-2px); border-color: rgba(36,86,230,0.35); box-shadow: var(--shadow-lg); }
-.insight-formula .term .t-top { font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-secondary); font-family: var(--font-mono); display: block; }
-.insight-formula .term .t-main { font-size: 18px; font-weight: 600; color: var(--ink); display: block; margin-top: 3px; font-family: var(--font-display); }
-.insight-formula .term.t-you, .insight-formula .term.t-me { width: 128px; }
-.insight-formula .term.t-ai { width: 148px; }
-.insight-formula .term.t-result { width: 208px; }
-.insight-formula .op, .insight-formula .eq { width: 26px; text-align: center; font-family: var(--font-mono); color: var(--text-secondary); }
-.insight-formula .eq { font-size: 30px; color: var(--accent-amber); font-weight: 700; }
-.insight-formula .term.t-result { border-color: transparent; background: var(--grad); box-shadow: 0 10px 30px rgba(36,86,230,0.35); padding: 12px 22px; }
-.insight-formula .term.t-result .t-main { color: #fff; font-size: 19px; margin-top: 0; font-family: var(--font-display); }
+.landing-cta-soft a::after {
+    content: ""; position: absolute; left: 0; bottom: 0; height: 2px; width: 100%;
+    background: var(--grad);
+    transform: scaleX(0); transform-origin: left;
+    transition: transform .3s var(--ease);
+}
+.landing-cta-soft a:hover { color: var(--primary); }
+.landing-cta-soft a:hover::after { transform: scaleX(1); }
 
-/* CTA — moved lower (more separation from formula) */
-.landing-cta-soft { margin-top: 72px; display: flex; justify-content: center; gap: 44px; flex-wrap: wrap; }
-.landing-cta-soft a { font-size: 16px; font-weight: 600; text-decoration: none; color: var(--text-secondary); padding: 7px 2px; border-bottom: 2px solid transparent; transition: color .2s var(--ease), border-color .2s var(--ease); }
-.landing-cta-soft a:hover { color: var(--primary); border-bottom-color: var(--accent-amber); }
+/* responsive */
+@media (max-width: 980px) {
+    .landing-hero { padding: 76px 16px 100px; }
+    .landing-hero .hero-brand .hb-word { font-size: 42px; }
+    .hero-deco .r1 { width: 380px; height: 380px; }
+    .hero-deco .r2 { width: 480px; height: 480px; }
+}
+@media (max-width: 600px) {
+    .landing-hero .hero-brand .hb-word { font-size: 34px; }
+    .hb-eyebrow { font-size: 11px; letter-spacing: 2px; }
+    .hero-deco .wave { height: 70px; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .landing-hero::before, .landing-hero::after,
+    .hero-deco .ring, .hero-deco .part, .hero-deco .wave,
+    .hb-eyebrow, .landing-hero .hero-brand, .landing-cta-soft,
+    .landing-hero .hero-brand .hb-word .accent { animation: none !important; }
+}
 
 /* ============================================================
    REPORT CARDS — reveal fix (cards show when section is revealed)
@@ -1193,16 +1276,15 @@ h1, h2, h3, .logo-text { font-family: var(--font-display); letter-spacing: -0.3p
     .landing-cta-soft { margin-top: 52px; }
 }
 @media (max-width: 600px) {
-    .insight-formula .term.t-you, .insight-formula .term.t-me { width: 116px; }
-    .insight-formula .term.t-ai { width: 132px; }
-    .insight-formula .term.t-result { width: 184px; }
-    .insight-formula .op, .insight-formula .eq { width: 22px; }
+
+
+
+
 }
 @media (prefers-reduced-motion: reduce) {
-    .insight-formula .term, .report-card { transition: none; }
+
     .reveal, .reveal-item { opacity: 1; transform: none; }
 }
-
 /* ============================================================
    Organization LOGO presentation (dark mark on light theme)
    ============================================================ */
