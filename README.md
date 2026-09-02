@@ -1,7 +1,7 @@
-# 7kolor Signals
+# 7Kolor Insights
 
-Weekly intelligence digest on developer communities — signals, trends, and judgment.
-开发者社区周报情报：信号、趋势与判断。
+Data-driven analytics and intelligence services — deep insights into public sentiment, developer trends, and user demands.
+数据驱动的分析与情报服务：公众情绪、开发者趋势与用户需求洞察。
 
 🌐 Site / 站点: https://7kolor.github.io
 📮 Contact / 联系: sami.wu@7kolor.com

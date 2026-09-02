@@ -133,7 +133,7 @@ def rss_item(m) -> str:
     dt = datetime.fromisoformat(m["date"]).replace(tzinfo=timezone.utc)
     url = SITE + m["url"]
     return f"""    <item>
-      <title>7kolor Signals — {esc(title_zh)}</title>
+      <title>7Kolor Insights — {esc(title_zh)}</title>
       <link>{url}</link>
       <guid>{url}</guid>
       <pubDate>{format_datetime(dt)}</pubDate>
@@ -148,7 +148,7 @@ def build_feed(items) -> str:
     return f"""<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>7kolor Signals</title>
+    <title>7Kolor Insights</title>
     <link>{SITE}/</link>
     <description>Weekly intelligence digest on developer communities — signals, trends, and judgment. 每周开发者社区情报：信号、趋势与判断。</description>
     <language>zh-CN</language>
@@ -166,6 +166,9 @@ def main():
     index_path = ROOT / "index.html"
     index_html = index_path.read_text(encoding="utf-8")
     for kind, (_folder, _tz, _te, empty) in MODULES.items():
+        # 只在页面存在对应 AUTO 卡块时才填充（未预留的模块跳过）
+        if not re.search(r"<!-- AUTO:cards-" + re.escape(kind) + r":begin -->", index_html):
+            continue
         if items[kind]:
             cards = "\n".join(report_card(m) for m in items[kind])
         elif empty:

@@ -10,14 +10,16 @@ Writes <dir>/report-zh.html and <dir>/report-en.html
 The bilingual page stays the canonical URL; single-language pages are
 share-friendly variants whose lang toggle links to the other page.
 """
+import json
 import re
 import sys
 from pathlib import Path
 
-TITLES = {
-    "zh": "7kolor Signals — W34 周报",
-    "en": "7kolor Signals — W34 Weekly Report",
-}
+def titles(week_label):
+    return {
+        "zh": f"7Kolor Insights — {week_label} 周报",
+        "en": f"7Kolor Insights — {week_label} Weekly Report",
+    }
 LANG_NAMES = {"zh": "中文", "en": "EN"}
 
 
@@ -61,12 +63,22 @@ def retarget_toggle(html: str, lang: str, base: str) -> str:
 def build(week_dir: Path) -> None:
     src = (week_dir / "index.html").read_text(encoding="utf-8")
     base = str(week_dir).replace("\\", "/")
+    # 从 meta.json 推导周次标签，退化为文件夹名
+    label = week_dir.name
+    meta_path = week_dir / "meta.json"
+    if meta_path.exists():
+        try:
+            label = json.loads(meta_path.read_text(encoding="utf-8")).get(
+                "week_label_zh" if label.startswith("zh") else "week_label_zh", label)
+        except Exception:
+            pass
+    tt = titles(label)
     for lang in ("zh", "en"):
         out = src
         out = pick_lang(out, lang)
         out = retarget_toggle(out, lang, base)
         out = out.replace('<html lang="zh-CN">', f'<html lang="{lang}">')
-        out = re.sub(r"<title>.*?</title>", f"<title>{TITLES[lang]}</title>", out, count=1)
+        out = re.sub(r"<title>.*?</title>", f"<title>{tt[lang]}</title>", out, count=1)
         # mark as single-language page (main.js skips toggle restore)
         out = out.replace("<body>", f'<body data-lang-page="{lang}">', 1)
         target = week_dir / f"report-{lang}.html"
