@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" class="no-js">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,14 +30,20 @@
     </header>
 
     <section class="landing-hero">
+        <div class="hero-bg-decor" aria-hidden="true">
+            <span class="data-chip c1" data-zh="1M+ 记录" data-en="1M+ records">1M+ 记录</span>
+            <span class="data-chip c2" data-zh="趋势 +12.4%" data-en="trend +12.4%">趋势 +12.4%</span>
+            <span class="data-chip c3" data-zh="每周 24 信号" data-en="24 signals/wk">每周 24 信号</span>
+            <span class="data-chip c4" data-zh="热度 ↑" data-en="attention ↑">热度 ↑</span>
+        </div>
         <div class="hero-content">
-            <div class="hero-brand">
+            <div class="hero-brand reveal">
                 <div class="hb-word">7Kolor <span class="accent">Insights</span></div>
                 <div class="hb-sub" data-zh="赛道研判 · 痛点信号 · 成功案例" data-en="Track Analysis · Pain Signals · Success Cases">赛道研判 · 痛点信号 · 成功案例</div>
             </div>
 
             <!-- Insight Formula -->
-            <div class="insight-formula">
+            <div class="insight-formula reveal">
                 <div class="term t-you">
                     <span class="t-top" data-zh="您的" data-en="Your">您的</span>
                     <span class="t-main" data-zh="经验" data-en="Experience">经验</span>
@@ -58,7 +64,7 @@
                 </div>
             </div>
 
-            <div class="landing-cta-soft">
+            <div class="landing-cta-soft reveal">
                 <a href="/weekly/2026-W34/" data-zh="阅读最新一期 →" data-en="Read the latest issue →">阅读最新一期 →</a>
                 <a href="#services" data-zh="了解更多 →" data-en="Learn more →">了解更多 →</a>
             </div>
@@ -67,10 +73,10 @@
 
     <main class="site-main">
         <!-- 数据资产 -->
-        <section class="landing-section">
+        <section class="landing-section reveal">
             <div class="cred-strip">
                 <div class="cred-item">
-                    <div class="cred-value">1,000,000+</div>
+                    <div class="cred-value" data-count="1000000" data-suffix="+" data-final="1,000,000+">1,000,000+</div>
                     <div class="cred-label" data-zh="原始情报数据" data-en="Raw intelligence records">原始情报数据</div>
                 </div>
                 <div class="cred-item">
@@ -85,20 +91,20 @@
         </section>
 
         <!-- 我们的主张 -->
-        <section class="landing-section">
+        <section class="landing-section reveal">
             <div class="landing-section-header">
-                <h2 data-zh="🎯 我们的主张" data-en="🎯 Our Thesis">🎯 我们的主张</h2>
+                <h2 class="sec-head"><svg class="sec-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg><span data-zh="我们的主张" data-en="Our Thesis">我们的主张</span></h2>
             </div>
             <div class="thesis-grid">
-                <div class="card">
+                <div class="card reveal-item">
                     <h3 data-zh="前期洞察 > 闭门造车" data-en="Insight > Building in a Vacuum">前期洞察 > 闭门造车</h3>
                     <p data-zh="项目的成败，在写下第一行代码之前就已埋下伏笔。用户需求与痛点洞察，应该来自社区和真实用户的反馈与建议——而不是开发者独自凭空想象。" data-en="A project's fate is sealed before the first line of code. User needs and pain points should come from communities and real user feedback — not from a developer's imagination.">项目的成败，在写下第一行代码之前就已埋下伏笔。用户需求与痛点洞察，应该来自社区和真实用户的反馈与建议——而不是开发者独自凭空想象。</p>
                 </div>
-                <div class="card">
+                <div class="card reveal-item">
                     <h3 data-zh="前 100 个真实用户" data-en="The First 100 Real Users">前 100 个真实用户</h3>
                     <p data-zh="项目成功的关键，是获得前 100 个真实用户，并持续保持连接。上线后的体验打磨与反馈处理，远比技术栈的选择重要。" data-en="The key to success is winning your first 100 real users — and staying connected. Post-launch experience and feedback handling matter far more than your tech stack.">项目成功的关键，是获得前 100 个真实用户，并持续保持连接。上线后的体验打磨与反馈处理，远比技术栈的选择重要。</p>
                 </div>
-                <div class="card">
+                <div class="card reveal-item">
                     <h3 data-zh="AI 时代，选对赛道" data-en="In the AI Era, Pick the Right Track">AI 时代，选对赛道</h3>
                     <p data-zh="当 AI 抹平了技术门槛，判断力成为稀缺品。最重要的是找对赛道，准确把握用户的真实需求和痛点——这正是情报的价值。" data-en="As AI flattens the technology barrier, judgment becomes the scarce resource. Picking the right track and grasping real user needs and pain points is what matters — and that is exactly what intelligence is for.">当 AI 抹平了技术门槛，判断力成为稀缺品。最重要的是找对赛道，准确把握用户的真实需求和痛点——这正是情报的价值。</p>
                 </div>
@@ -106,12 +112,12 @@
         </section>
 
         <!-- 每周情报（自动生成） -->
-        <section class="landing-section">
+        <section class="landing-section reveal">
             <div class="landing-section-header">
-                <h2 data-zh="📡 每周情报" data-en="📡 Weekly Intelligence">📡 每周情报</h2>
+                <h2 class="sec-head"><svg class="sec-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="2"/><path d="M16.24 7.76a6 6 0 0 1 0 8.49M7.76 16.24a6 6 0 0 1 0-8.49M19.07 4.93a10 10 0 0 1 0 14.14M4.93 19.07a10 10 0 0 1 0-14.14"/></svg><span data-zh="每周情报" data-en="Weekly Intelligence">每周情报</span></h2>
                 <a href="/weekly/" data-zh="全部周报 →" data-en="All issues →">全部周报 →</a>
             </div>
-            <div class="report-grid">
+            <div class="report-grid report-grid-reveal">
             <!-- AUTO:cards-weekly:begin -->
                 <a class="report-card" href="/weekly/2026-W34/">
                     <span class="report-kind" data-zh="周报" data-en="Weekly">周报</span>
@@ -137,9 +143,9 @@
         <!-- 定制服务 -->
         <section class="landing-section" id="services">
             <div class="landing-section-header">
-                <h2 data-zh="🛠 定制化数据分析服务" data-en="🛠 Custom Data Analysis">🛠 定制化数据分析服务</h2>
+                <h2 class="sec-head"><svg class="sec-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a4.5 4.5 0 0 0-6.1 5.9L3 17.8V21h3.2l5.6-5.6a4.5 4.5 0 0 0 5.9-6.1l-2.8 2.8-3-3z"/></svg><span data-zh="定制化数据分析服务" data-en="Custom Data Analysis">定制化数据分析服务</span></h2>
             </div>
-            <div class="card card-highlight service-card">
+            <div class="card card-highlight service-card reveal">
                 <div>
                     <h3 data-zh="针对您所在的行业、您关注的赛道" data-en="For your industry and the tracks you care about">针对您所在的行业、您关注的赛道</h3>
                     <p data-zh="针对您所在的行业与赛道，我们系统收集真实用户评价、竞品动态与社区讨论，借百万级情报库与 LLM 分层加工，产出一份只属于你的深度分析报告："
