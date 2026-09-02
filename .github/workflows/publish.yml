@@ -1,0 +1,46 @@
+name: publish
+# 内容目录有变动时自动构建并发布：
+#   校验 meta.json → 生成单语页 report-zh/en → 更新首页卡片/归档/feed → 自动提交
+# 普通页面（index/about 等）改动不走此流程，直接由 GitHub Pages 发布。
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'weekly/**'
+      - 'analysis/**'
+      - 'insights/**'
+      - 'cases/**'
+      - 'scripts/**'
+      - '**/meta.json'
+      - '.github/workflows/*.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run tests
+        run: python3 -m unittest discover -s tests -v
+
+      - name: Validate & build
+        run: python3 scripts/publish.py
+
+      - name: Commit generated pages
+        run: |
+          git config user.name "7kolor-bot"
+          git config user.email "actions@github.com"
+          git add -A
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: auto-build content [skip ci]"
+            git push
+          else
+            echo "No changes to commit"
+          fi
