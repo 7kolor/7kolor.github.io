@@ -923,49 +923,7 @@ a.lang-btn { text-decoration: none; display: inline-block; }
 }
 .landing-hero .tagline-sub { font-size: 15px; color: var(--text-secondary); opacity: 0.92; }
 
-/* The Insight Formula */
-.insight-formula {
-    margin: 44px auto 0;
-    max-width: 860px;
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: 1fr;
-    align-items: center;
-    gap: 10px;
-}
-.insight-formula .term {
-    background: var(--surface-glass);
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-lg);
-    padding: 16px 10px;
-    box-shadow: var(--shadow);
-    transition: transform .2s, box-shadow .2s, border-color .2s;
-}
-.insight-formula .term:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-lg), var(--glow);
-    border-color: rgba(37,99,235,0.3);
-}
-.insight-formula .term .t-top {
-    font-size: 11px; letter-spacing: 1px; text-transform: uppercase;
-    color: var(--text-secondary); font-family: var(--mono); margin-bottom: 4px;
-}
-.insight-formula .term .t-main { font-size: 16px; font-weight: 700; }
-.insight-formula .term.t-you .t-main { color: var(--primary); }
-.insight-formula .term.t-me .t-main { color: var(--cyan); }
-.insight-formula .term.t-ai .t-main { color: var(--violet); }
-.insight-formula .op {
-    font-size: 22px; font-weight: 700;
-    color: var(--text-secondary); font-family: var(--mono);
-    text-align: center;
-    justify-self: center;
-}
-.insight-formula .equals { font-size: 30px; color: var(--primary); }
-.insight-formula .term.t-result { border-color: rgba(37,99,235,0.35); background: var(--grad); }
-.insight-formula .term.t-result .t-top { color: rgba(255,255,255,0.85); }
-.insight-formula .term.t-result .t-main { color: #fff; font-size: 17px; }
+/* The Insight Formula (defined below in Landing banner v2) */
 
 /* subtle CTA */
 .landing-cta-soft { margin-top: 40px; display: flex; justify-content: center; gap: 36px; }
@@ -983,7 +941,7 @@ a.lang-btn { text-decoration: none; display: inline-block; }
     .landing-hero { padding: 72px 16px 96px; }
     .landing-hero .brand-mark .mark-word { font-size: 32px; }
     .landing-hero .brand-mark img { width: 52px; height: 52px; font-size: 24px; }
-    .insight-formula { grid-auto-flow: row; grid-auto-columns: 1fr; gap: 8px; }
+    .insight-formula { flex-wrap: wrap; }
     .insight-formula .op { transform: rotate(90deg); padding: 0; }
 }
 
@@ -1018,37 +976,34 @@ a.lang-btn { text-decoration: none; display: inline-block; }
 @keyframes float { 0%,100% { transform: translateY(0) scale(1);} 50% { transform: translateY(-26px) scale(1.06);} }
 .landing-hero .hero-content { position: relative; }
 .landing-hero .kicker { display:inline-block; font-family: var(--mono); font-size: 12px; letter-spacing: 4px; text-transform: uppercase; color: var(--primary); padding: 6px 18px; border: 1px solid rgba(37,99,235,0.25); border-radius: 999px; background: var(--surface-glass); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); margin-bottom: 28px; }
-.landing-hero .hero-brand { display: inline-flex; align-items: center; gap: 16px; margin-bottom: 20px; }
-.landing-hero .hero-brand .hb-logo { width: 62px; height: 62px; background: var(--grad); border-radius: 18px; display: flex; align-items: center; justify-content: center; font-size: 30px; font-weight: 800; color: #fff; font-family: var(--mono); box-shadow: 0 12px 34px rgba(37,99,235,0.4), var(--glow); }
-.landing-hero .hero-brand .hb-word { text-align: left; font-size: 44px; font-weight: 800; letter-spacing: -1.5px; line-height: 1.05; }
+.landing-hero .hero-brand { display: block; text-align: center; margin-bottom: 20px; }
+.landing-hero .hero-brand .hb-word { font-size: 52px; font-weight: 800; letter-spacing: -1.5px; line-height: 1.05; }
 .landing-hero .hero-brand .hb-word .accent { background: var(--grad); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
-.landing-hero .hero-brand .hb-sub { font-size: 13px; color: var(--text-secondary); letter-spacing: 3px; text-transform: uppercase; font-family: var(--mono); }
-.landing-hero .tagline { font-size: 17px; color: var(--text-secondary); max-width: 680px; margin: 0 auto 6px; }
-.landing-hero .tagline-sub { font-size: 15px; color: var(--text-secondary); opacity: 0.92; }
+.landing-hero .hero-brand .hb-sub { margin-top: 12px; font-size: 14px; color: var(--text-secondary); letter-spacing: 4px; font-family: var(--mono); }
+.landing-hero .tagline, .landing-hero .tagline-sub { display: none; }
 
-.insight-formula { margin: 44px auto 0; max-width: 880px; display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; align-items: stretch; gap: 10px; }
-.insight-formula .term { background: var(--surface-glass); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 16px 12px; box-shadow: var(--shadow); transition: transform .2s, box-shadow .2s, border-color .2s; }
-.insight-formula .term:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg), var(--glow); border-color: rgba(37,99,235,0.3); }
-.insight-formula .term .t-top { font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--text-secondary); font-family: var(--mono); }
-.insight-formula .term .t-main { font-size: 16px; font-weight: 700; margin-top: 5px; }
+/* The Insight Formula — compact, single-line result */
+.insight-formula { margin: 36px auto 0; max-width: 860px; display: flex; align-items: center; justify-content: center; gap: 10px; flex-wrap: wrap; }
+.insight-formula .term { background: var(--surface-glass); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); border: 1px solid var(--border); border-radius: 14px; padding: 10px 16px; box-shadow: var(--shadow); transition: transform .2s, box-shadow .2s, border-color .2s; white-space: nowrap; }
+.insight-formula .term:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg), var(--glow); border-color: rgba(37,99,235,0.3); }
+.insight-formula .term .t-top { font-size: 10px; letter-spacing: 1px; text-transform: uppercase; color: var(--text-secondary); font-family: var(--mono); display: block; }
+.insight-formula .term .t-main { font-size: 18px; font-weight: 700; display: block; margin-top: 2px; }
 .insight-formula .term.t-you .t-main { color: var(--primary); }
 .insight-formula .term.t-me .t-main { color: var(--cyan); }
 .insight-formula .term.t-ai .t-main { color: var(--violet); }
-.insight-formula .op { font-size: 22px; font-weight: 700; color: var(--text-secondary); font-family: var(--mono); text-align: center; align-self: center; }
-.insight-formula .equals { font-size: 32px; color: var(--primary); align-self: center; text-align: center; }
-.insight-formula .term.t-result { border-color: transparent; background: var(--grad); box-shadow: 0 10px 30px rgba(37,99,235,0.4); }
-.insight-formula .term.t-result .t-top { color: rgba(255,255,255,0.85); }
-.insight-formula .term.t-result .t-main { color: #fff; font-size: 17px; }
+.insight-formula .op, .insight-formula .eq { font-size: 22px; font-weight: 700; color: var(--text-secondary); font-family: var(--mono); flex: 0 0 auto; margin: 0 2px; }
+.insight-formula .eq { font-size: 30px; color: var(--primary); }
+.insight-formula .term.t-result { border-color: transparent; background: var(--grad); box-shadow: 0 10px 30px rgba(37,99,235,0.4); padding: 12px 22px; }
+.insight-formula .term.t-result .t-main { color: #fff; font-size: 19px; margin-top: 0; }
 
-.landing-cta-soft { margin-top: 46px; display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
+.landing-cta-soft { margin-top: 40px; display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
 .landing-cta-soft a { font-size: 15px; font-weight: 600; text-decoration: none; color: var(--text-secondary); padding: 6px 2px; border-bottom: 2px solid transparent; transition: color .2s, border-color .2s; }
 .landing-cta-soft a:hover { color: var(--primary); border-bottom-color: var(--cyan); }
 
 @media (max-width: 900px) {
     .landing-hero { padding: 72px 16px 96px; }
-    .landing-hero .hero-brand .hb-word { font-size: 32px; }
-    .landing-hero .hero-brand .hb-logo { width: 52px; height: 52px; font-size: 24px; }
-    .insight-formula { grid-auto-flow: row; grid-auto-columns: 1fr; gap: 8px; }
+    .landing-hero .hero-brand .hb-word { font-size: 34px; }
+    .insight-formula { gap: 8px; }
 }
 
 
