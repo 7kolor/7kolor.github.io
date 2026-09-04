@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500;600;700&display=swap" rel="stylesheet">
         <title>关于 — 7Kolor Insights</title>
     <meta name="description" content="7Kolor Insights 的主张、数据资产、方法论与定制数据分析服务。">
-    <link rel="stylesheet" href="/assets/css/main.css?v=2">
+    <link rel="stylesheet" href="/assets/css/main.css?v=3">
 </head>
 <body>
     <header class="header">
@@ -20,8 +20,10 @@
             </a>
             <nav class="nav">
                 <div class="nav-links">
+                    <a href="/#framework" data-zh="六步流程" data-en="6-Step Framework">六步流程</a>
                     <a href="/weekly/" data-zh="每周情报" data-en="Weekly Intelligence">每周情报</a>
-                    <a href="#services" data-zh="定制分析" data-en="Services">定制分析</a>
+                    <a href="/#reports" data-zh="专项报告" data-en="Special Reports">专项报告</a>
+                    <a href="#services" data-zh="定制服务" data-en="Services">定制服务</a>
                     <a href="/about.html" data-zh="关于" data-en="About">关于</a>
                 </div>
                 <div class="lang-toggle">
@@ -32,14 +34,43 @@
         </div>
     </header>
 
-    <section class="hero">
+    <section class="landing-hero">
+        <div class="hero-deco" aria-hidden="true">
+            <span class="ring r1"></span>
+            <span class="ring r2"></span>
+            <span class="part p1"></span>
+            <span class="part p2"></span>
+            <span class="part p3"></span>
+            <span class="part p4"></span>
+            <svg class="wave" viewBox="0 0 1440 110" preserveAspectRatio="none">
+                <path d="M0,70 C120,110 320,20 500,55 C680,90 820,30 1000,60 C1180,90 1320,45 1440,60 L1440,110 L0,110 Z"
+                      fill="none" stroke="rgba(6,182,212,0.35)" stroke-width="2"/>
+                <path d="M0,92 C200,118 380,62 560,84 C740,110 900,60 1100,84 C1260,98 1380,76 1440,88"
+                      fill="none" stroke="rgba(37,99,235,0.25)" stroke-width="1.5"/>
+            </svg>
+        </div>
         <div class="hero-content">
-            <div class="hero-badge">
-                <span class="dot"></span>
-                <span data-zh="关于我们 · About" data-en="About Us">关于我们 · About</span>
+            <div class="hb-eyebrow" data-zh="关于我们 · About" data-en="About Us">关于我们 · About</div>
+            <div class="hero-brand">
+                <div class="hb-word">7Kolor <span class="accent">Insights</span></div>
+                <div class="hb-sub" data-zh="先洞察，后开发" data-en="Insight first, build second">先洞察，后开发</div>
             </div>
-            <h1 data-zh="7Kolor Insights" data-en="7Kolor Insights">7Kolor Insights</h1>
-            <p data-zh="数据驱动的洞察 · 面向独立开发者" data-en="Data-driven insight for indie developers">数据驱动的洞察 · 面向独立开发者</p>
+            <div class="hero-carousel" data-carousel>
+                <span class="slogan-item show" data-zh="Stop fork repo, start find gap." data-en="Stop fork repo, start find gap.">Stop fork repo, start find gap.</span>
+                <span class="slogan-item" data-zh="Stop git push, start data pull." data-en="Stop git push, start data pull.">Stop git push, start data pull.</span>
+                <span class="slogan-item" data-zh="Stop pull request, start pain research." data-en="Stop pull request, start pain research.">Stop pull request, start pain research.</span>
+                <span class="slogan-item" data-zh="Stop commit, start converse." data-en="Stop commit, start converse.">Stop commit, start converse.</span>
+                <span class="slogan-item" data-zh="Stop deploy, start discover." data-en="Stop deploy, start discover.">Stop deploy, start discover.</span>
+                <span class="slogan-item" data-zh="Stop Merge, Start Market." data-en="Stop Merge, Start Market.">Stop Merge, Start Market.</span>
+            </div>
+            <div class="hero-carousel-dots" data-carousel-dots>
+                <span class="dot active"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
+            </div>
+            <div class="landing-cta">
+                <a class="cta-main" href="/weekly/2026-W34/" data-zh="阅读最新报告 →" data-en="Read the latest report →">阅读最新报告 →</a>
+            </div>
+            <p class="hero-desc" data-zh="上百万条原始情报数据，覆盖 Hacker News、Reddit、Product Hunt、GitHub、DEV 等公开开发者社区。所有原始数据经过 LLM 细化打标、分层加工，再由人工研判精筛，最终沉淀为可执行的洞察——而不是信息的简单聚合。"
+               data-en="Over a million raw intelligence records across public developer communities — Hacker News, Reddit, Product Hunt, GitHub, DEV. Every record is LLM-tagged and layered, further refined by human review, and settled into actionable insight — not a mere aggregation of information.">上百万条原始情报数据，覆盖 Hacker News、Reddit、Product Hunt、GitHub、DEV 等公开开发者社区。所有原始数据经过 LLM 细化打标、分层加工，再由人工研判精筛，最终沉淀为可执行的洞察——而不是信息的简单聚合。</p>
         </div>
     </section>
 
@@ -166,7 +197,8 @@
                 <div class="fg">
                     <span class="fg-title" data-zh="内容" data-en="Content">内容</span>
                     <a href="/weekly/" data-zh="每周情报" data-en="Weekly Intelligence">每周情报</a>
-                    <a href="/#services" data-zh="定制分析" data-en="Services">定制分析</a>
+                    <a href="/#reports" data-zh="专项报告" data-en="Special Reports">专项报告</a>
+                    <a href="/#services" data-zh="定制服务" data-en="Services">定制服务</a>
                     <a href="/about.html" data-zh="关于" data-en="About">关于</a>
                 </div>
                 <div class="fg">

@@ -24,6 +24,21 @@
 
 3. **In the AI Era, Pick the Right Track** — As AI flattens the technology barrier, judgment becomes the scarce resource. That's where intelligence comes in.
 
+## The 6-Step Development Framework
+
+From 0 to 1, walk these six decision points before you write code:
+
+| Step | Core Question | Slogan |
+|------|---------------|--------|
+| ① Discover | What can make money? | Stop fork repo, start find gap |
+| ② Signals | What are users really saying? | Stop git push, start data pull |
+| ③ Pains | Why are they suffering? | Stop pull request, start pain research |
+| ④ Validate | Did I understand correctly? | Stop commit, start converse |
+| ⑤ Final | What's still missing before launch? | Stop deploy, start discover |
+| ⑥ Market | Anyone willing to pay? | Stop Merge, Start Market |
+
+Each step has a dedicated page at `/steps/step-1/` through `/steps/step-6/`.
+
 ## What We Offer
 
 ### 📰 Weekly Intelligence

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/assets/img/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>⑤ 最后把关 — 7Kolor Insights</title>
+    <meta name="description" content="六步开发决策流程 · 第5步：最后把关。Stop deploying, start discovering.">
+    <link rel="stylesheet" href="/assets/css/main.css?v=3">
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <a href="/" class="logo">
+                <img class="logo-img" src="/assets/img/logo.png" alt="7Kolor Insights" width="34" height="34">
+                <div class="logo-text">7Kolor <span>Insights</span></div>
+            </a>
+            <nav class="nav">
+                <div class="nav-links">
+                    <a href="/#framework" data-zh="六步流程" data-en="6-Step Framework">六步流程</a>
+                    <a href="/weekly/" data-zh="每周情报" data-en="Weekly Intelligence">每周情报</a>
+                    <a href="/#reports" data-zh="专项报告" data-en="Special Reports">专项报告</a>
+                    <a href="/#services" data-zh="定制服务" data-en="Services">定制服务</a>
+                    <a href="/about.html" data-zh="关于" data-en="About">关于</a>
+                </div>
+                <div class="lang-toggle">
+                    <button class="lang-btn active" data-lang="zh" onclick="switchLang('zh', this)">中文</button>
+                    <button class="lang-btn" data-lang="en" onclick="switchLang('en', this)">EN</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="step-hero">
+        <div class="step-hero-inner">
+            <div class="step-badge">
+                <span class="step-no">⑤</span>
+                <span data-zh="最后把关 · Final Check" data-en="Final Check">最后把关 · Final Check</span>
+            </div>
+            <h1 class="step-q" data-zh="上线前还漏了什么？" data-en="What's still missing before launch?">上线前还漏了什么？</h1>
+            <div class="step-slogan" data-zh="Stop deploying, start discovering." data-en="Stop deploying, start discovering.">Stop deploying, start discovering.</div>
+            <p class="step-desc" data-zh="别急着部署，先去发现还没被满足的需求。" data-en="Don't rush the deploy — discover the still-unmet needs.">别急着部署，先去发现还没被满足的需求。</p>
+        </div>
+    </section>
+
+    <nav class="step-mini-nav" aria-label="六步流程导航">
+        <div class="step-mini-inner">
+            <a href="/steps/step-4/" title="上一步" class="step-mini-link prev">← ④</a>
+            <span class="step-mini-list">
+                <a href="/steps/step-1/" class="step-mini">①发现机会</a>
+                <a href="/steps/step-2/" class="step-mini">②收集信号</a>
+                <a href="/steps/step-3/" class="step-mini">③深挖问题</a>
+                <a href="/steps/step-4/" class="step-mini">④验证假设</a>
+                <a href="/steps/step-5/" class="step-mini active">⑤最后把关</a>
+                <a href="/steps/step-6/" class="step-mini">⑥验证价值</a>
+            </span>
+            <a href="/steps/step-6/" title="下一步" class="step-mini-link next">⑥ →</a>
+        </div>
+    </nav>
+
+    <main class="site-main step-main">
+        <!-- 方法论 -->
+        <section class="landing-section reveal">
+            <div class="landing-section-header">
+                <h2 class="sec-head"><svg class="sec-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a4.5 4.5 0 0 0-6.1 5.9L3 17.8V21h3.2l5.6-5.6a4.5 4.5 0 0 0 5.9-6.1z"/><circle cx="12" cy="12" r="3"/></svg><span data-zh="本环节方法论" data-en="Methodology">本环节方法论</span></h2>
+            </div>
+            <div class="card card-highlight">
+                <p data-zh="最后把关阶段，我们系统复查上线前遗漏：边界条件、支付、合规，以及最后一波机会。"
+                   data-en="In the final check, we review edge cases, payments, compliance, and last opportunities.">最后把关阶段，我们系统复查上线前遗漏：边界条件、支付流程、合规风险，以及最后一波机会。</p>
+                <ul class="action-list">
+                    <li data-zh="上线前 Checklist 复查：边界、支付、合规" data-en="Run pre-launch checklist: edge, payment, compliance">上线前 Checklist 复查：边界、支付、合规</li>
+                    <li data-zh="对照六环节检查是否遗漏" data-en="Cross-check against all six steps">对照六环节检查是否遗漏</li>
+                    <li data-zh="用数据验证发布前最后一波机会" data-en="Validate the last wave of opportunities with data">用数据验证发布前最后一波机会</li>
+                </ul>
+                <div class="sources-line">
+                    <span class="mono-label" data-zh="数据来源" data-en="Sources">数据来源</span>
+                    <span>📡 Reddit · HN · IH · PH · GitHub</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 决策检查清单 -->
+        <section class="landing-section reveal">
+            <div class="landing-section-header">
+                <h2 class="sec-head"><svg class="sec-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg><span data-zh="决策检查清单" data-en="Decision Checklist">决策检查清单</span></h2>
+            </div>
+            <div class="content-grid three">
+                <div class="card">
+                    <h3 data-zh="✅ 覆盖边界" data-en="✅ Covered Edges">✅ 覆盖边界</h3>
+                    <p data-zh="极端场景/首次使用/异常输入都有预案。" data-en="Edge cases, first use, and errors are handled.">极端场景/首次使用/异常输入都有预案。</p>
+                </div>
+                <div class="card">
+                    <h3 data-zh="✅ 合规合规" data-en="✅ Compliance">✅ 合规合规</h3>
+                    <p data-zh="支付、隐私、法规维度没有硬伤。" data-en="Payments, privacy, and regulations are clean.">支付、隐私、法规维度没有硬伤。</p>
+                </div>
+                <div class="card">
+                    <h3 data-zh="✅ 监控已就绪" data-en="✅ Monitoring Ready">✅ 监控已就绪</h3>
+                    <p data-zh="上线后有基本的信号监控与反馈通道。" data-en="Signal monitoring and feedback channels are in place.">上线后有基本的信号监控与反馈通道。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 本环节报告 -->
+        <section class="landing-section reveal" id="reports">
+            <div class="landing-section-header">
+                <h2 class="sec-head"><svg class="sec-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8"/></svg><span data-zh="本环节报告" data-en="Reports for This Step">本环节报告</span><a href="/#reports" data-zh="全部报告 →" data-en="All reports →">全部报告 →</a></h2>
+            </div>
+            <div class="report-grid">
+                <a class="report-card" href="/weekly/2026-W34/">
+                    <span class="report-kind" data-zh="周报关联" data-en="Weekly Link">周报关联</span>
+                    <h3 data-zh="W34 · 最后把关摘录" data-en="W34 · Final Check Extract">W34 · 最后把关摘录</h3>
+                    <p data-zh="上线前遗漏与风险检查：合规、边界条件、最后一波机会。" data-en="Pre-launch gap check: compliance, edge cases, last opportunities.">上线前遗漏与风险检查：合规、边界条件、最后一波机会。</p>
+                    <div class="report-meta"><span>📅 2026-08-29</span><span>📊 Reddit · HN</span></div>
+                </a>
+                <div class="report-card report-card-soon">
+                    <span class="report-kind" data-zh="专项" data-en="Special">专项</span>
+                    <h3 data-zh="最后把关专项报告（筹备中）" data-en="Final Check Special Report (Coming Soon)">最后把关专项报告（筹备中）</h3>
+                    <p data-zh="深度扫描当前最值得进入的空白赛道。" data-en="Deep scan of whitespace tracks worth entering now.">深度扫描当前最值得进入的空白赛道。</p>
+                    <div class="report-meta"><span data-zh="敬请期待" data-en="Coming Soon">敬请期待</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 下一步引导 -->
+        <section class="landing-section">
+            <div class="more-modules">
+                <span data-zh="最后把关完成，下一步验证市场价值" data-en="Final check done, next: validate market">最后把关完成，下一步验证市场价值</span>
+                <a class="btn btn-primary" href="/steps/step-6/" data-zh="进入 ⑥ 验证价值 →" data-en="Go to ⑥ Validate Market →">进入 ⑥ 验证价值 →</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <img class="footer-logo" src="/assets/img/logo.png" alt="7Kolor Insights" width="28" height="28">
+                <span class="footer-name">7Kolor <span>Insights</span></span>
+                <span class="footer-tagline" data-zh="为独立开发者提供趋势分析与信号洞察" data-en="Trend analysis & signal insight for indie developers">为独立开发者提供趋势分析与信号洞察</span>
+            </div>
+            <div class="footer-groups">
+                <div class="fg">
+                    <span class="fg-title" data-zh="内容" data-en="Content">内容</span>
+                    <a href="/weekly/" data-zh="每周情报" data-en="Weekly Intelligence">每周情报</a>
+                    <a href="/#reports" data-zh="专项报告" data-en="Special Reports">专项报告</a>
+                    <a href="/#services" data-zh="定制服务" data-en="Services">定制服务</a>
+                    <a href="/about.html" data-zh="关于" data-en="About">关于</a>
+                </div>
+                <div class="fg">
+                    <span class="fg-title" data-zh="关注我们" data-en="Connect">关注我们</span>
+                    <a href="https://github.com/7kolor/7kolor.github.io" data-zh="GitHub" data-en="GitHub">GitHub</a>
+                    <a href="/feed.xml" data-zh="RSS 订阅" data-en="RSS Feed">RSS 订阅</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 7Kolor Insights</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>

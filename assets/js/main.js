@@ -93,6 +93,42 @@
     });
   }
 
+  // ---- Hero slogan carousel ----
+  function initCarousel() {
+    var car = document.querySelector('[data-carousel]');
+    if (!car) return;
+    var items = car.querySelectorAll('.slogan-item');
+    var dots = document.querySelectorAll('[data-carousel-dots] .dot');
+    var idx = 0;
+    var RED = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    function show(i) {
+      items.forEach(function (el, k) {
+        el.classList.toggle('show', k === i);
+        el.classList.toggle('hide', k !== i);
+      });
+      dots.forEach(function (d, k) { d.classList.toggle('active', k === i); });
+    }
+    show(0);
+    if (RED || items.length < 2) return;
+    setInterval(function () {
+      idx = (idx + 1) % items.length;
+      show(idx);
+    }, 3200);
+  }
+
+  // ---- Step boards: show ''暂无更多报告'' when fewer than 4 real reports ----
+  function initStepHints() {
+    var panels = document.querySelectorAll('.step-panel');
+    if (!panels.length) return;
+    panels.forEach(function (panel) {
+      var grid = panel.querySelector('.step-grid');
+      var hint = panel.querySelector('.step-empty-hint');
+      if (!grid || !hint) return;
+      var real = grid.querySelectorAll('.report-card:not(.report-card-soon)');
+      if (real.length > 0 && real.length < 4) hint.style.display = 'block';
+    });
+  }
+
   document.addEventListener('DOMContentLoaded', function () {
     // Restore preferred language on bilingual pages
     if (document.querySelector('[data-zh]') && !document.body.hasAttribute('data-lang-page')) {
@@ -105,8 +141,10 @@
     }
     initReveal();
     initCounters();
+    initCarousel();
     initHeader();
     initSmooth();
+    initStepHints();
   });
 
   // expose for pages that query reduced motion
