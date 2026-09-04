@@ -145,6 +145,33 @@ def replace_auto(html: str, name: str, body: str) -> str:
     return pat.sub(lambda m: m.group(1) + "\n" + body + "\n            " + m.group(2), html)
 
 
+def _content_html(m) -> str:
+    """Full report body for RSS <content:encoded> (kept as-is; CDATA-wrapped)."""
+    rel = m["url"].lstrip("/") + "index.html"
+    try:
+        html = (ROOT / rel).read_text(encoding="utf-8")
+    except OSError:
+        return ""
+    start = html.find('<div class="content">')
+    if start < 0:
+        return ""
+    i = start + len('<div class="content">')
+    depth, j, n = 1, i, len(html)
+    while j < n and depth:
+        od = html.find('<div', j)
+        cd = html.find('</div>', j)
+        if od < 0 and cd < 0:
+            break
+        if cd < 0 or (0 <= od < cd):
+            depth += 1
+            j = od + 5
+        else:
+            depth -= 1
+            j = cd + 6
+    body = html[i : j - 6]
+    return body.strip()
+
+
 def rss_item(m) -> str:
     title_zh = m.get("title_zh", m["id"])
     if m["kind"] == "weekly":
@@ -154,12 +181,17 @@ def rss_item(m) -> str:
     from datetime import datetime, timezone
     dt = datetime.fromisoformat(m["date"]).replace(tzinfo=timezone.utc)
     url = SITE + m["url"]
+    cat = KIND_LABEL.get(m["kind"], (m["kind"], ""))[0]
+    content = _content_html(m)
+    cenc = f"<![CDATA[{content}]]>" if content else ""
     return f"""    <item>
       <title>7Kolor Insights — {esc(title_zh)}</title>
       <link>{url}</link>
       <guid>{url}</guid>
       <pubDate>{format_datetime(dt)}</pubDate>
+      <category>{cat}</category>
       <description>{esc(m.get("desc_zh", ""))}</description>
+      <content:encoded>{cenc}</content:encoded>
     </item>"""
 
 
@@ -168,12 +200,20 @@ def build_feed(items) -> str:
     all_items.sort(key=lambda m: m.get("date", ""), reverse=True)
     body = "\n".join(rss_item(m) for m in all_items)
     return f"""<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>7Kolor Insights</title>
     <link>{SITE}/</link>
-    <description>Weekly intelligence digest on developer communities — signals, trends, and judgment. 每周开发者社区情报：信号、趋势与判断。</description>
+    <description>Weekly intelligence digest — signals, trends, and judgment for indie developers. 每周开发者社区情报：信号、趋势与判断。</description>
     <language>zh-CN</language>
+    <ttl>60</ttl>
+    <image>
+      <title>7Kolor Insights</title>
+      <url>{SITE}/assets/img/logo.png</url>
+      <link>{SITE}/</link>
+      <width>256</width>
+      <height>256</height>
+    </image>
     <atom:link href="{SITE}/feed.xml" rel="self" type="application/rss+xml"/>
 {body}
   </channel>

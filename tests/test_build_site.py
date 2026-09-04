@@ -76,6 +76,18 @@ class FeedTest(unittest.TestCase):
         self.assertTrue(feed.startswith("<?xml"))
         self.assertIn("<rss", feed)
 
+    def test_feed_rss_enhancements(self):
+        feed = build_site.build_feed({"weekly": [make_meta()]})
+        # content-encoded namespace declared
+        self.assertIn("xmlns:content=", feed)
+        # channel-level image + ttl
+        self.assertIn("<ttl>", feed)
+        self.assertIn("<image>", feed)
+        # every item carries a category
+        self.assertIn("<category>", feed)
+        # content:encoded is wrapped in CDATA
+        self.assertIn("<content:encoded><![CDATA[", feed)
+
 
 if __name__ == "__main__":
     unittest.main()
