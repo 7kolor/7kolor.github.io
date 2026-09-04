@@ -914,8 +914,6 @@ a.lang-btn { text-decoration: none; display: inline-block; }
     -webkit-mask-image: radial-gradient(ellipse 78% 78% at 50% 42%, #000 25%, transparent 78%);
     pointer-events: none;
 }
-    50% { transform: translateY(-26px) scale(1.06); }
-}
 .landing-hero .hero-content { position: relative; }
 .landing-hero .kicker {
     display: inline-block;
@@ -1929,6 +1927,31 @@ h1, h2, h3, .logo-text { font-family: var(--font-display); letter-spacing: -0.3p
     border: 1px solid var(--border);
     padding: 6px 14px;
     border-radius: 999px;
+    white-space: nowrap;
+}
+.step-tally-inner {
+    display: inline-flex;
+    align-items: center;
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--primary-dark);
+    background: var(--grad-soft, #e6efff);
+    border: 1px solid rgba(37, 99, 235, 0.25);
+    padding: 6px 14px;
+    border-radius: 999px;
+    white-space: nowrap;
+}
+.step-tally-in.empty {
+    display: inline-flex;
+    align-items: center;
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--text-secondary);
+    background: transparent;
+    border: 1px dashed var(--border);
+    padding: 6px 14px;
+    border-radius: 999px;
+    opacity: .8;
     white-space: nowrap;
 }
 .step-slogan {

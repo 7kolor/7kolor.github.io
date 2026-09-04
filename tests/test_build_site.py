@@ -52,6 +52,38 @@ class ReplaceAutoTest(unittest.TestCase):
             build_site.replace_auto("no block here", "cards-weekly", "x")
 
 
+class StepHelpersTest(unittest.TestCase):
+    def _analysis(self, sid, step, date):
+        return {"kind": "analysis", "id": sid, "url": f"/analysis/{sid}/",
+                "title_zh": f"报告{sid}", "title_en": f"Report {sid}",
+                "desc_zh": "d", "desc_en": "d", "date": date, "step": step}
+
+    def test_step_tally_empty(self):
+        self.assertIn("筹备中", build_site.step_tally([], 1))
+
+    def test_step_tally_counts_own_step(self):
+        metas = [self._analysis("a", 1, "2026-01-01"),
+                 self._analysis("b", 1, "2026-01-02"),
+                 self._analysis("c", 2, "2026-01-03")]
+        self.assertIn("2 篇报告", build_site.step_tally(metas, 1))
+
+    def test_step_cards_filters_by_step(self):
+        cards = build_site.step_cards([self._analysis("a", 1, "2026-01-01"),
+                                       self._analysis("b", 2, "2026-01-02")], 1)
+        self.assertIn("/analysis/a/", cards)
+        self.assertNotIn("/analysis/b/", cards)
+
+    def test_step_cards_empty_state(self):
+        self.assertIn("筹备中", build_site.step_cards([], 1))
+
+    def test_content_html_empty_when_missing(self):
+        self.assertEqual(build_site._content_html({"url": "/nonexistent/"}), "")
+
+    def test_content_html_extracts_real_body(self):
+        out = build_site._content_html({"url": "/weekly/2026-W34/"})
+        self.assertIn("概览", out)
+
+
 class FeedTest(unittest.TestCase):
     def test_items_sorted_newest_first(self):
         # feed entries carry the zh title (not the id), so use distinct titles
