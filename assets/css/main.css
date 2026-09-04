@@ -630,6 +630,17 @@ a.lang-btn { text-decoration: none; display: inline-block; }
 .btn-ghost:hover { border-color: var(--primary); color: var(--primary); }
 /* CTA — single primary button */
 .landing-cta { margin-top: 44px; }
+/* hero description paragraph */
+.hero-desc {
+    margin: 26px auto 0;
+    max-width: 720px;
+    color: var(--text-secondary);
+    font-size: 15px;
+    line-height: 1.85;
+}
+@media (max-width: 640px) {
+    .hero-desc { font-size: 14px; line-height: 1.7; }
+}
 .cta-main {
     display: inline-flex; align-items: center; gap: 10px;
     padding: 15px 38px;
@@ -710,7 +721,7 @@ a.lang-btn { text-decoration: none; display: inline-block; }
 }
 .report-card:hover::before { opacity: 1; }
 .report-card .report-kind {
-    display: inline-block;
+    display: none;
     font-size: 11px;
     font-weight: 600;
     text-transform: uppercase;
@@ -724,12 +735,18 @@ a.lang-btn { text-decoration: none; display: inline-block; }
     margin-bottom: 14px;
 }
 .report-card h3 { font-size: 18px; font-weight: 600; margin-bottom: 10px; letter-spacing: -0.2px; }
-.report-card p { font-size: 14px; color: var(--text-secondary); margin-bottom: 18px; }
+.report-card p { font-size: 14px; color: var(--text-secondary); margin-bottom: 18px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden; }
+
 .report-card .report-meta {
     font-size: 12px;
     color: var(--text-secondary);
     display: flex;
-    gap: 16px;
+    flex-direction: column;
+    gap: 4px;
     font-family: var(--mono);
 }
 
@@ -1896,25 +1913,11 @@ h1, h2, h3, .logo-text { font-family: var(--font-display); letter-spacing: -0.3p
     align-items: center;
     gap: 12px;
     margin: 0;
-    font-family: var(--font-display);
-    font-size: clamp(20px, 2.6vw, 27px);
-    font-weight: 700;
-    letter-spacing: -0.4px;
-    color: var(--text);
-}
-.step-num {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 32px; height: 32px;
-    background: var(--grad);
-    border-radius: 10px;
-    color: #fff;
     font-family: var(--mono);
-    font-size: 15px;
-    font-weight: 800;
-    box-shadow: 0 4px 12px rgba(37,99,235,0.28);
-    flex: 0 0 auto;
+    font-size: clamp(18px, 2.2vw, 23px);
+    font-weight: 700;
+    letter-spacing: -0.3px;
+    color: var(--primary-dark);
 }
 .step-tally {
     display: inline-flex;
@@ -1950,7 +1953,7 @@ h1, h2, h3, .logo-text { font-family: var(--font-display); letter-spacing: -0.3p
 .step-grid .report-card { padding: 18px 16px; }
 .step-grid .report-card h3 { font-size: 15px; }
 .step-grid .report-card p { font-size: 13px; margin-bottom: 12px; }
-.step-grid .report-card .report-meta { flex-wrap: wrap; gap: 8px; font-size: 11px; }
+.step-grid .report-card .report-meta { gap: 4px; font-size: 11px; }
 .step-empty-hint {
     margin: 14px 0 0;
     font-size: 13px;
@@ -1975,6 +1978,7 @@ h1, h2, h3, .logo-text { font-family: var(--font-display); letter-spacing: -0.3p
     transition: background .2s var(--ease), color .2s var(--ease), box-shadow .2s var(--ease), transform .2s var(--ease);
 }
 .step-all:hover { background: var(--grad); color: #fff; border-color: transparent; box-shadow: 0 8px 20px rgba(37,99,235,0.3); transform: translateY(-2px); }
+.list-more { display: flex; justify-content: center; margin-top: 26px; }
 
 /* 通用标题按钮（每周情报「查看全部周报」等，非纯文字链接） */
 .sec-head .hdr-btn {
@@ -2005,15 +2009,14 @@ h1, h2, h3, .logo-text { font-family: var(--font-display); letter-spacing: -0.3p
 
 /* 页脚上方数据资产 */
 .cred-foot {
-    padding: 0 24px;
-    margin: 6px 0 8px;
+    margin: 4px 0 10px;
 }
 .cred-foot .cred-strip {
-    max-width: 960px;
-    margin: 0 auto;
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow);
-    padding: 20px 24px;
+    padding: 18px 24px;
 }
+.cred-foot .cred-value { font-size: 26px; }
+.cred-foot .cred-label { margin-top: 4px; }
