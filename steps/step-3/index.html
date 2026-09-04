@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/assets/img/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>③ 深挖问题 — 7Kolor Insights</title>
+    <meta name="description" content="六步开发决策流程 · 第3步：深挖问题。Stop building features, start pain research.">
+    <link rel="stylesheet" href="/assets/css/main.css?v=3">
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <a href="/" class="logo">
+                <img class="logo-img" src="/assets/img/logo.png" alt="7Kolor Insights" width="34" height="34">
+                <div class="logo-text">7Kolor <span>Insights</span></div>
+            </a>
+            <nav class="nav">
+                <div class="nav-links">
+                    <a href="/#framework" data-zh="六步流程" data-en="6-Step Framework">六步流程</a>
+                    <a href="/weekly/" data-zh="每周情报" data-en="Weekly Intelligence">每周情报</a>
+                    <a href="/#reports" data-zh="专项报告" data-en="Special Reports">专项报告</a>
+                    <a href="/#services" data-zh="定制分析" data-en="Services">定制分析</a>
+                    <a href="/about.html" data-zh="关于" data-en="About">关于</a>
+                </div>
+                <div class="lang-toggle">
+                    <button class="lang-btn active" data-lang="zh" onclick="switchLang('zh', this)">中文</button>
+                    <button class="lang-btn" data-lang="en" onclick="switchLang('en', this)">EN</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="step-hero">
+        <div class="step-hero-inner">
+            <div class="step-badge">
+                <span class="step-no">①</span>
+                <span data-zh="深挖问题 · Pain Research" data-en="Pain Research">深挖问题 · Pain Research</span>
+            </div>
+            <h1 class="step-q" data-zh="他们为什么痛苦？" data-en="Why are they suffering?">他们为什么痛苦？</h1>
+            <div class="step-slogan" data-zh="Stop building features, start pain research." data-en="Stop building features, start pain research.">Stop building features, start pain research.</div>
+            <p class="step-desc" data-zh="别急着提功能需求，先去研究用户为什么痛苦。" data-en="Don't rush features — first research why users are in pain.">别急着提功能需求，先去研究用户为什么痛苦。</p>
+        </div>
+    </section>
+
+    <nav class="step-mini-nav" aria-label="六步流程导航">
+        <div class="step-mini-inner">
+            <a href="/steps/step-2/" title="上一步" class="step-mini-link prev">← ②</a>
+            <span class="step-mini-list">
+                <a href="/steps/step-1/" class="step-mini">①发现机会</a>
+                <a href="/steps/step-2/" class="step-mini">②收集信号</a>
+                <a href="/steps/step-3/" class="step-mini active">③深挖问题</a>
+                <a href="/steps/step-4/" class="step-mini">④验证假设</a>
+                <a href="/steps/step-5/" class="step-mini">⑤最后把关</a>
+                <a href="/steps/step-6/" class="step-mini">⑥验证价值</a>
+            </span>
+            <a href="/steps/step-4/" title="下一步" class="step-mini-link next">④ →</a>
+        </div>
+    </nav>
+
+    <main class="site-main step-main">
+        <!-- 方法论 -->
+        <section class="landing-section reveal">
+            <div class="landing-section-header">
+                <h2 class="sec-head"><svg class="sec-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a4.5 4.5 0 0 0-6.1 5.9L3 17.8V21h3.2l5.6-5.6a4.5 4.5 0 0 0 5.9-6.1z"/><circle cx="12" cy="12" r="3"/></svg><span data-zh="我们提供什么情报" data-en="What We Deliver">我们提供什么情报</span></h2>
+            </div>
+            <div class="card card-highlight">
+                <p data-zh="在「深挖问题」这个环节，我们不替你替用户做访谈，而是从公开讨论里把「他们到底在痛苦什么」拆清楚——谁在痛、因为什么、有多要命，做成「痛点分析」。"
+                   data-en="In the pain-research phase, we don't interview users for you — we dissect public discussion into a pain analysis: who suffers, why, and how much it matters.">在「深挖问题」这个环节，我们不替用户做访谈，而是从公开讨论里把「他们到底在痛苦什么」拆成一份「痛点分析」。</p>
+                <ul class="action-list">
+                    <li data-zh="🔬 原始数据深挖：围绕信号链收集帖子、评论等证据" data-en="Evidence mining: gather posts and comments around the signal chain">🔬 原始数据深挖：围绕信号链收集帖子、评论等证据</li>
+                    <li data-zh="🧬 痛点证据链：帖子、评论、行为交叉验证，找出结构性痛点" data-en="Pain chain: cross-validate posts, comments, behavior into structural pains">🧬 痛点证据链：帖子、评论、行为交叉验证，找出结构性痛点</li>
+                    <li data-zh="📉 分层判断：区分表层抱怨与底层结构性痛点" data-en="Layering: separate surface complaints from structural pain">📉 分层判断：区分表层抱怨与底层结构性痛点</li>
+                </ul>
+                <div class="sources-line">
+                    <span class="mono-label" data-zh="数据来源" data-en="Sources">数据来源</span>
+                    <span>📡 Reddit · HN · IH · PH · GitHub</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 决策检查清单 -->
+        <section class="landing-section reveal">
+            <div class="landing-section-header">
+                <h2 class="sec-head"><svg class="sec-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg><span data-zh="这份情报帮你判断什么" data-en="What This Helps You Decide">这份情报帮你判断什么</span></h2>
+            </div>
+            <div class="content-grid three">
+                <div class="card">
+                    <h3 data-zh="✅ 痛点可复现" data-en="✅ Reproducible">✅ 痛点可复现</h3>
+                    <p data-zh="多个场景/人群稳定触发同一痛点。" data-en="Multiple scenarios/groups consistently trigger the same pain.">多个场景/人群稳定触发同一痛点。</p>
+                </div>
+                <div class="card">
+                    <h3 data-zh="✅ 影响足够大" data-en="✅ High Impact">✅ 影响足够大</h3>
+                    <p data-zh="痛点影响核心工作流或造成实际损失。" data-en="The pain affects core workflows or causes loss.">痛点影响核心工作流或造成实际损失。</p>
+                </div>
+                <div class="card">
+                    <h3 data-zh="✅ 原因清晰" data-en="✅ Clear Cause">✅ 原因清晰</h3>
+                    <p data-zh="能说清谁在痛、为什么痛、当前怎么办。" data-en="You can explain who hurts, why, and what they do now.">能说清谁在痛、为什么痛、当前怎么办。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 本环节报告 -->
+        <section class="landing-section reveal" id="reports">
+            <div class="landing-section-header">
+                <h2 class="sec-head"><svg class="sec-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8"/></svg><span data-zh="本环节报告" data-en="Reports for This Step">本环节报告</span><a href="/#reports" data-zh="全部报告 →" data-en="All reports →">全部报告 →</a></h2>
+            </div>
+            <div class="report-grid">
+                <a class="report-card" href="/weekly/2026-W34/">
+                    <span class="report-kind" data-zh="周报关联" data-en="Weekly Link">周报关联</span>
+                    <h3 data-zh="W34 · 痛点深挖摘录" data-en="W34 · Pain Deep-Dive">W34 · 痛点深挖摘录</h3>
+                    <p data-zh="W34 周报的「用户痛点」版块：AI 工具治理、Docker 管理、采购合规。" data-en="W34 pain section: AI tool governance, Docker management, procurement compliance.">W34 周报的「用户痛点」版块：AI 工具治理、Docker 管理、采购合规。</p>
+                    <div class="report-meta"><span>📅 2026-08-29</span><span>📊 Reddit · HN</span></div>
+                </a>
+                <div class="report-card report-card-soon">
+                    <span class="report-kind" data-zh="专项" data-en="Special">专项</span>
+                    <h3 data-zh="深挖问题专项报告（筹备中）" data-en="Pain Research Special Report (Coming Soon)">深挖问题专项报告（筹备中）</h3>
+                    <p data-zh="深度扫描当前最值得进入的空白赛道。" data-en="Deep scan of whitespace tracks worth entering now.">深度扫描当前最值得进入的空白赛道。</p>
+                    <div class="report-meta"><span data-zh="敬请期待" data-en="Coming Soon">敬请期待</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 下一步引导 -->
+        <section class="landing-section">
+            <div class="more-modules">
+                <span data-zh="痛点研究完成，下一步验证用户假设" data-en="Pain research done, next: validate assumptions">痛点研究完成，下一步验证用户假设</span>
+                <a class="btn btn-primary" href="/steps/step-4/" data-zh="进入 ④ 验证假设 →" data-en="Go to ④ Validate Assumptions →">进入 ④ 验证假设 →</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <img class="footer-logo" src="/assets/img/logo.png" alt="7Kolor Insights" width="28" height="28">
+                <span class="footer-name">7Kolor <span>Insights</span></span>
+                <span class="footer-tagline" data-zh="为独立开发者提供趋势分析与信号洞察" data-en="Trend analysis & signal insight for indie developers">为独立开发者提供趋势分析与信号洞察</span>
+            </div>
+            <div class="footer-groups">
+                <div class="fg">
+                    <span class="fg-title" data-zh="流程" data-en="Framework">流程</span>
+                    <a href="/steps/step-1/" data-zh="① 发现机会" data-en="① Discover">① 发现机会</a>
+                    <a href="/steps/step-2/" data-zh="② 收集信号" data-en="② Signals">② 收集信号</a>
+                    <a href="/steps/step-3/" data-zh="③ 深挖问题" data-en="③ Pains">③ 深挖问题</a>
+                    <a href="/steps/step-4/" data-zh="④ 验证假设" data-en="④ Validate">④ 验证假设</a>
+                    <a href="/steps/step-5/" data-zh="⑤ 最后把关" data-en="⑤ Final">⑤ 最后把关</a>
+                    <a href="/steps/step-6/" data-zh="⑥ 验证价值" data-en="⑥ Market">⑥ 验证价值</a>
+                </div>
+                <div class="fg">
+                    <span class="fg-title" data-zh="内容" data-en="Content">内容</span>
+                    <a href="/weekly/" data-zh="每周情报" data-en="Weekly Intelligence">每周情报</a>
+                    <a href="/#reports" data-zh="专项报告" data-en="Special Reports">专项报告</a>
+                    <a href="/#services" data-zh="定制分析" data-en="Services">定制分析</a>
+                    <a href="/about.html" data-zh="关于" data-en="About">关于</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 7Kolor Insights</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>

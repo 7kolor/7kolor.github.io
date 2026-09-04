@@ -21,8 +21,10 @@
             </a>
             <nav class="nav">
                 <div class="nav-links">
-                    <a href="/weekly/" data-zh="每周情报" data-en="Weekly Intelligence">每周情报</a>
-                    <a href="#services" data-zh="定制分析" data-en="Services">定制分析</a>
+                    <a href="#framework" data-zh="六步流程" data-en="6-Step Framework">六步流程</a>
+                    <a href="/weekly/" data-zh="每周情报" data-en="Weekly">每周情报</a>
+                    <a href="#framework" data-zh="专项报告" data-en="Special Reports">专项报告</a>
+                    <a href="#services" data-zh="定制服务" data-en="Services">定制服务</a>
                     <a href="/about.html" data-zh="关于" data-en="About">关于</a>
                 </div>
                 <div class="lang-toggle">
@@ -42,9 +44,9 @@
             <span class="part p3"></span>
             <span class="part p4"></span>
             <svg class="wave" viewBox="0 0 1440 110" preserveAspectRatio="none">
-                <path d="M0,70 C180,110 320,20 500,55 C680,90 820,30 1000,60 C1180,90 1320,45 1440,60 L1440,110 L0,110 Z"
+                <path d="M0,70 C120,110 320,20 500,55 C680,90 820,30 1000,60 C1180,90 1320,45 1440,60 L1440,110 L0,110 Z"
                       fill="none" stroke="rgba(6,182,212,0.35)" stroke-width="2"/>
-                <path d="M0,92 C200,118 380,62 560,84 C740,106 900,66 1100,84 C1260,98 1380,76 1440,88"
+                <path d="M0,92 C200,118 380,62 560,84 C740,110 900,60 1100,84 C1260,98 1380,76 1440,88"
                       fill="none" stroke="rgba(37,99,235,0.25)" stroke-width="1.5"/>
             </svg>
         </div>
@@ -52,10 +54,21 @@
             <div class="hb-eyebrow" data-zh="独立开发者的数据情报" data-en="Intelligence for Indie Builders">独立开发者的数据情报</div>
             <div class="hero-brand">
                 <div class="hb-word">7Kolor <span class="accent">Insights</span></div>
-                <div class="hb-sub" data-zh="趋势分析 · 痛点信号 · 成功案例" data-en="Trend Analysis · Pain Signals · Success Cases">趋势分析 · 痛点信号 · 成功案例</div>
+                <div class="hb-sub" data-zh="先洞察，后开发" data-en="Insight first, build second">先洞察，后开发</div>
+            </div>
+            <div class="hero-carousel" data-carousel>
+                <span class="slogan-item show" data-zh="Stop fork repo, start find gap." data-en="Stop fork repo, start find gap.">Stop fork repo, start find gap.</span>
+                <span class="slogan-item" data-zh="Stop git push, start data pull." data-en="Stop git push, start data pull.">Stop git push, start data pull.</span>
+                <span class="slogan-item" data-zh="Stop pull request, start pain research." data-en="Stop pull request, start pain research.">Stop pull request, start pain research.</span>
+                <span class="slogan-item" data-zh="Stop commit, start converse." data-en="Stop commit, start converse.">Stop commit, start converse.</span>
+                <span class="slogan-item" data-zh="Stop deploy, start discover." data-en="Stop deploy, start discover.">Stop deploy, start discover.</span>
+                <span class="slogan-item" data-zh="Stop Merge, Start Market." data-en="Stop Merge, Start Market.">Stop Merge, Start Market.</span>
+            </div>
+            <div class="hero-carousel-dots" data-carousel-dots>
+                <span class="dot active"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
             </div>
             <div class="landing-cta">
-                <a class="cta-main" href="/weekly/2026-W34/" data-zh="阅读最新一期 →" data-en="Read the latest issue →">阅读最新一期 →</a>
+                <a class="cta-main" href="/weekly/2026-W34/" data-zh="阅读最新报告 →" data-en="Read the latest report →">阅读最新报告 →</a>
             </div>
         </div>
     </section>
@@ -64,52 +77,24 @@
 
 
     <main class="site-main">
-        <!-- 数据资产 -->
-        <section class="landing-section reveal">
-            <div class="cred-strip">
-                <div class="cred-item">
-                    <div class="cred-value" data-count="1000000" data-suffix="+" data-final="1,000,000+">1,000,000+</div>
-                    <div class="cred-label" data-zh="原始情报数据" data-en="Raw intelligence records">原始情报数据</div>
-                </div>
-                <div class="cred-item">
-                    <div class="cred-value">10<span class="cred-unit" data-zh="年" data-en=" yrs">年</span></div>
-                    <div class="cred-label" data-zh="数据分析经验" data-en="Years of data analysis">数据分析经验</div>
-                </div>
-                <div class="cred-item">
-                    <div class="cred-value">LLM</div>
-                    <div class="cred-label" data-zh="细化打标 · 分层加工" data-en="Tagging & layering">细化打标 · 分层加工</div>
-                </div>
-            </div>
-        </section>
-
         <!-- 我们的主张 -->
         <section class="landing-section reveal">
-            <div class="landing-section-header">
-                <h2 class="sec-head"><svg class="sec-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg><span data-zh="我们的主张" data-en="Our Thesis">我们的主张</span></h2>
-            </div>
-            <div class="thesis-grid">
-                <div class="card reveal-item">
-                    <h3 data-zh="前期洞察 > 闭门造车" data-en="Insight > Building in a Vacuum">前期洞察 > 闭门造车</h3>
-                    <p data-zh="项目的成败，在写下第一行代码之前就已埋下伏笔。用户需求与痛点洞察，应该来自社区和真实用户的反馈与建议——而不是开发者独自凭空想象。" data-en="A project's fate is sealed before the first line of code. User needs and pain points should come from communities and real user feedback — not from a developer's imagination.">项目的成败，在写下第一行代码之前就已埋下伏笔。用户需求与痛点洞察，应该来自社区和真实用户的反馈与建议——而不是开发者独自凭空想象。</p>
-                </div>
-                <div class="card reveal-item">
-                    <h3 data-zh="前 100 个真实用户" data-en="The First 100 Real Users">前 100 个真实用户</h3>
-                    <p data-zh="项目成功的关键，是获得前 100 个真实用户，并持续保持连接。上线后的体验打磨与反馈处理，远比技术栈的选择重要。" data-en="The key to success is winning your first 100 real users — and staying connected. Post-launch experience and feedback handling matter far more than your tech stack.">项目成功的关键，是获得前 100 个真实用户，并持续保持连接。上线后的体验打磨与反馈处理，远比技术栈的选择重要。</p>
-                </div>
-                <div class="card reveal-item">
-                    <h3 data-zh="AI 时代，选对赛道" data-en="In the AI Era, Pick the Right Track">AI 时代，选对赛道</h3>
-                    <p data-zh="当 AI 抹平了技术门槛，判断力成为稀缺品。最重要的是找对赛道，准确把握用户的真实需求和痛点——这正是情报的价值。" data-en="As AI flattens the technology barrier, judgment becomes the scarce resource. Picking the right track and grasping real user needs and pain points is what matters — and that is exactly what intelligence is for.">当 AI 抹平了技术门槛，判断力成为稀缺品。最重要的是找对赛道，准确把握用户的真实需求和痛点——这正是情报的价值。</p>
-                </div>
+            <h2 class="sec-head"><svg class="sec-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg><span data-zh="我们的主张" data-en="Our Thesis">我们的主张</span></h2>
+            <p class="thesis-line" data-zh="项目的成败，在写下第一行代码之前就已埋下伏笔。"
+               data-en="A project's fate is sealed before the first line of code.">项目的成败，在写下第一行代码之前就已埋下伏笔。</p>
+            <div class="thesis-row">
+                <p class="thesis-claim" data-zh="所以我们坚持：先洞察，后开发——别急着写代码，先去听用户到底在说什么、为什么痛苦、谁愿意买单。"
+                   data-en="So we insist: insight first, build second — don't rush to code; first hear what users are saying, why they hurt, and who would pay.">所以我们坚持：先洞察，后开发——别急着写代码，先去听用户到底在说什么、为什么痛苦、谁愿意买单。</p>
+                <a class="thesis-link" href="/about.html" data-zh="了解我们的方法" data-en="Learn our method">了解我们的方法</a>
             </div>
         </section>
-
-        <!-- 每周情报（自动生成） -->
-        <section class="landing-section reveal">
+        <!-- 板块一：每周情报（自动生成，最新多篇倒序） -->
+        <section class="landing-section reveal" id="weekly">
             <div class="landing-section-header">
-                <h2 class="sec-head"><svg class="sec-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="2"/><path d="M16.24 7.76a6 6 0 0 1 0 8.49M7.76 16.24a6 6 0 0 1 0-8.49M19.07 4.93a10 10 0 0 1 0 14.14M4.93 19.07a10 10 0 0 1 0-14.14"/></svg><span data-zh="每周情报" data-en="Weekly Intelligence">每周情报</span></h2>
-                <a href="/weekly/" data-zh="全部周报 →" data-en="All issues →">全部周报 →</a>
+                <h2 class="sec-head"><svg class="sec-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="2"/><path d="M16.24 7.76a6 6 0 0 1 0 8.49M7.76 16.24a6 6 0 0 1 0-8.49M19.07 4.93a10 10 0 0 1 0 14.14M4.93 19.07a10 10 0 0 1 0-14.14"/></svg><span class="bb-badge">📰</span><span data-zh="每周情报" data-en="Weekly Intelligence">每周情报</span><a class="hdr-btn" href="/weekly/" data-zh="查看全部周报" data-en="All issues">查看全部周报</a></h2>
+                <p class="board-sub" data-zh="每周一期，跟踪独立开发者生态的最新信号" data-en="Weekly, tracking the freshest signals in the indie dev ecosystem">每周一期，跟踪独立开发者生态的最新信号</p>
             </div>
-            <div class="report-grid report-grid-reveal">
+            <div class="report-grid report-grid-reveal weekly-grid">
             <!-- AUTO:cards-weekly:begin -->
                 <a class="report-card" href="/weekly/2026-W34/">
                     <span class="report-kind" data-zh="周报" data-en="Weekly">周报</span>
@@ -124,14 +109,149 @@
             </div>
         </section>
 
-        <!-- 更多板块：敬请期待 -->
-        <section class="landing-section">
-            <div class="more-modules">
-                <span data-zh="更多板块：专项分析 · 赛道洞察 · 成功案例详解" data-en="Coming next: deep-dive analysis · track insights · success case breakdowns">更多板块：专项分析 · 赛道洞察 · 成功案例详解</span>
-                <span data-zh="敬请期待" data-en="Stay tuned">敬请期待</span>
+        <!-- 板块二～七：六个流程板块 -->
+        <span id="reports" style="position:relative;top:-60px;display:block"></span>
+        <section class="landing-section reveal" id="framework">
+            <div class="landing-section-header">
+                <h2 class="sec-head"><svg class="sec-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20V10M18 20V4M6 20v-4"/></svg><span data-zh="六步开发决策流程" data-en="The 6-Step Framework">六步开发决策流程</span></h2>
             </div>
+            <p class="lead" data-zh="从 0 到 1 做产品，不是先写代码，而是先走完这六个决策节点。每个板块跟踪该环节的最新专项报告。"
+               data-en="From 0 to 1 isnt about coding first - it is walking six decision points. Each board tracks the latest reports for that step.">从 0 到 1 做产品，不是先写代码，而是先走完这六个决策节点。每个板块跟踪该环节的最新专项报告。</p>
         </section>
 
+
+    <!-- 板块一：① 发现机会 -->
+    <section class="landing-section reveal step-panel" id="board-1">
+        <div class="step-card-hd">
+            <h3 class="step-title"><span class="step-num">①</span><span data-zh="发现机会" data-en="Discover Opportunities">发现机会</span></h3>
+            <span class="step-tally"><!-- AUTO:step-count-1:begin -->
+<span class="step-tally-in empty" data-n="0">📊 报告筹备中</span>
+            <!-- AUTO:step-count-1:end --></span>
+        </div>
+        <p class="step-slogan" data-zh="Stop Fork Repo, Start Find Gap" data-en="Stop Fork Repo, Start Find Gap">Stop Fork Repo, Start Find Gap</p>
+        <p class="step-note" data-zh="别急着复制别人的仓库，先去发现没人填的空白。" data-en="Don't rush to fork — find the whitespace nobody fills.">别急着复制别人的仓库，先去发现没人填的空白。</p>
+        <div class="step-grid">
+        <!-- AUTO:cards-analysis-step1:begin -->
+                <div class="report-card report-card-soon">
+                    <span class="report-kind" data-zh="筹备中" data-en="Coming Soon">筹备中</span>
+                    <h3 data-zh="该环节专项报告筹备中" data-en="Step special reports in preparation">该环节专项报告筹备中</h3>
+                    <p data-zh="这个模块正在筹备中，敬请期待。" data-en="This module is in preparation. Stay tuned.">这个模块正在筹备中，敬请期待。</p>
+                </div>
+            <!-- AUTO:cards-analysis-step1:end -->
+        </div>
+        <p class="step-empty-hint" data-zh="该环节暂无更多报告" data-en="No more reports for this step">该环节暂无更多报告</p>
+        <a class="step-all" href="/steps/step-1/" data-zh="查看全部机会洞察报告" data-en="All opportunity reports">查看全部机会洞察报告</a>
+    </section>
+    <!-- 板块一：② 收集信号 -->
+    <section class="landing-section reveal step-panel" id="board-2">
+        <div class="step-card-hd">
+            <h3 class="step-title"><span class="step-num">②</span><span data-zh="收集信号" data-en="Gather the Signals">收集信号</span></h3>
+            <span class="step-tally"><!-- AUTO:step-count-2:begin -->
+<span class="step-tally-in empty" data-n="0">📊 报告筹备中</span>
+            <!-- AUTO:step-count-2:end --></span>
+        </div>
+        <p class="step-slogan" data-zh="Stop Git Push, Start Data Pull" data-en="Stop Git Push, Start Data Pull">Stop Git Push, Start Data Pull</p>
+        <p class="step-note" data-zh="别急着写代码，先去看看用户到底在说什么。" data-en="Don't write code yet — see what users are actually saying.">别急着写代码，先去看看用户到底在说什么。</p>
+        <div class="step-grid">
+        <!-- AUTO:cards-analysis-step2:begin -->
+                <div class="report-card report-card-soon">
+                    <span class="report-kind" data-zh="筹备中" data-en="Coming Soon">筹备中</span>
+                    <h3 data-zh="该环节专项报告筹备中" data-en="Step special reports in preparation">该环节专项报告筹备中</h3>
+                    <p data-zh="这个模块正在筹备中，敬请期待。" data-en="This module is in preparation. Stay tuned.">这个模块正在筹备中，敬请期待。</p>
+                </div>
+            <!-- AUTO:cards-analysis-step2:end -->
+        </div>
+        <p class="step-empty-hint" data-zh="该环节暂无更多报告" data-en="No more reports for this step">该环节暂无更多报告</p>
+        <a class="step-all" href="/steps/step-2/" data-zh="查看全部信号扫描报告" data-en="All signal reports">查看全部信号扫描报告</a>
+    </section>
+    <!-- 板块一：③ 深挖问题 -->
+    <section class="landing-section reveal step-panel" id="board-3">
+        <div class="step-card-hd">
+            <h3 class="step-title"><span class="step-num">③</span><span data-zh="深挖问题" data-en="Dig Into Pains">深挖问题</span></h3>
+            <span class="step-tally"><!-- AUTO:step-count-3:begin -->
+<span class="step-tally-in empty" data-n="0">📊 报告筹备中</span>
+            <!-- AUTO:step-count-3:end --></span>
+        </div>
+        <p class="step-slogan" data-zh="Stop Pull Request, Start Pain Research" data-en="Stop Pull Request, Start Pain Research">Stop Pull Request, Start Pain Research</p>
+        <p class="step-note" data-zh="别急着提功能需求，先去研究用户为什么痛苦。" data-en="Don't jump the feature — research why users are hurting.">别急着提功能需求，先去研究用户为什么痛苦。</p>
+        <div class="step-grid">
+        <!-- AUTO:cards-analysis-step3:begin -->
+                <div class="report-card report-card-soon">
+                    <span class="report-kind" data-zh="筹备中" data-en="Coming Soon">筹备中</span>
+                    <h3 data-zh="该环节专项报告筹备中" data-en="Step special reports in preparation">该环节专项报告筹备中</h3>
+                    <p data-zh="这个模块正在筹备中，敬请期待。" data-en="This module is in preparation. Stay tuned.">这个模块正在筹备中，敬请期待。</p>
+                </div>
+            <!-- AUTO:cards-analysis-step3:end -->
+        </div>
+        <p class="step-empty-hint" data-zh="该环节暂无更多报告" data-en="No more reports for this step">该环节暂无更多报告</p>
+        <a class="step-all" href="/steps/step-3/" data-zh="查看全部痛点研究报告" data-en="All pain research">查看全部痛点研究报告</a>
+    </section>
+    <!-- 板块一：④ 验证假设 -->
+    <section class="landing-section reveal step-panel" id="board-4">
+        <div class="step-card-hd">
+            <h3 class="step-title"><span class="step-num">④</span><span data-zh="验证假设" data-en="Validate Assumptions">验证假设</span></h3>
+            <span class="step-tally"><!-- AUTO:step-count-4:begin -->
+<span class="step-tally-in empty" data-n="0">📊 报告筹备中</span>
+            <!-- AUTO:step-count-4:end --></span>
+        </div>
+        <p class="step-slogan" data-zh="Stop Commit, Start Converse" data-en="Stop Commit, Start Converse">Stop Commit, Start Converse</p>
+        <p class="step-note" data-zh="别急着提交代码，先去听听用户怎么想。" data-en="Don't commit yet — go ask users what they think.">别急着提交代码，先去听听用户怎么想。</p>
+        <div class="step-grid">
+        <!-- AUTO:cards-analysis-step4:begin -->
+                <div class="report-card report-card-soon">
+                    <span class="report-kind" data-zh="筹备中" data-en="Coming Soon">筹备中</span>
+                    <h3 data-zh="该环节专项报告筹备中" data-en="Step special reports in preparation">该环节专项报告筹备中</h3>
+                    <p data-zh="这个模块正在筹备中，敬请期待。" data-en="This module is in preparation. Stay tuned.">这个模块正在筹备中，敬请期待。</p>
+                </div>
+            <!-- AUTO:cards-analysis-step4:end -->
+        </div>
+        <p class="step-empty-hint" data-zh="该环节暂无更多报告" data-en="No more reports for this step">该环节暂无更多报告</p>
+        <a class="step-all" href="/steps/step-4/" data-zh="查看全部验证报告" data-en="All verification reports">查看全部验证报告</a>
+    </section>
+    <!-- 板块一：⑤ 最后把关 -->
+    <section class="landing-section reveal step-panel" id="board-5">
+        <div class="step-card-hd">
+            <h3 class="step-title"><span class="step-num">⑤</span><span data-zh="最后把关" data-en="Final Checks">最后把关</span></h3>
+            <span class="step-tally"><!-- AUTO:step-count-5:begin -->
+<span class="step-tally-in empty" data-n="0">📊 报告筹备中</span>
+            <!-- AUTO:step-count-5:end --></span>
+        </div>
+        <p class="step-slogan" data-zh="Stop Deploy, Start Discover" data-en="Stop Deploy, Start Discover">Stop Deploy, Start Discover</p>
+        <p class="step-note" data-zh="别急着部署，先去发现还没被满足的需求。" data-en="Don't deploy yet — discover the needs still unmet.">别急着部署，先去发现还没被满足的需求。</p>
+        <div class="step-grid">
+        <!-- AUTO:cards-analysis-step5:begin -->
+                <div class="report-card report-card-soon">
+                    <span class="report-kind" data-zh="筹备中" data-en="Coming Soon">筹备中</span>
+                    <h3 data-zh="该环节专项报告筹备中" data-en="Step special reports in preparation">该环节专项报告筹备中</h3>
+                    <p data-zh="这个模块正在筹备中，敬请期待。" data-en="This module is in preparation. Stay tuned.">这个模块正在筹备中，敬请期待。</p>
+                </div>
+            <!-- AUTO:cards-analysis-step5:end -->
+        </div>
+        <p class="step-empty-hint" data-zh="该环节暂无更多报告" data-en="No more reports for this step">该环节暂无更多报告</p>
+        <a class="step-all" href="/steps/step-5/" data-zh="查看全部把关报告" data-en="All launch-check reports">查看全部把关报告</a>
+    </section>
+    <!-- 板块一：⑥ 验证价值 -->
+    <section class="landing-section reveal step-panel" id="board-6">
+        <div class="step-card-hd">
+            <h3 class="step-title"><span class="step-num">⑥</span><span data-zh="验证价值" data-en="Verify Value">验证价值</span></h3>
+            <span class="step-tally"><!-- AUTO:step-count-6:begin -->
+<span class="step-tally-in empty" data-n="0">📊 报告筹备中</span>
+            <!-- AUTO:step-count-6:end --></span>
+        </div>
+        <p class="step-slogan" data-zh="Stop Merge, Start Market" data-en="Stop Merge, Start Market">Stop Merge, Start Market</p>
+        <p class="step-note" data-zh="别急着合并代码，先去验证市场到底认不认。" data-en="Don't merge yet — verify the market actually pays.">别急着合并代码，先去验证市场到底认不认。</p>
+        <div class="step-grid">
+        <!-- AUTO:cards-analysis-step6:begin -->
+                <div class="report-card report-card-soon">
+                    <span class="report-kind" data-zh="筹备中" data-en="Coming Soon">筹备中</span>
+                    <h3 data-zh="该环节专项报告筹备中" data-en="Step special reports in preparation">该环节专项报告筹备中</h3>
+                    <p data-zh="这个模块正在筹备中，敬请期待。" data-en="This module is in preparation. Stay tuned.">这个模块正在筹备中，敬请期待。</p>
+                </div>
+            <!-- AUTO:cards-analysis-step6:end -->
+        </div>
+        <p class="step-empty-hint" data-zh="该环节暂无更多报告" data-en="No more reports for this step">该环节暂无更多报告</p>
+        <a class="step-all" href="/steps/step-6/" data-zh="查看全部价值验证报告" data-en="All market reports">查看全部价值验证报告</a>
+    </section>
         <!-- 定制服务 -->
         <section class="landing-section" id="services">
             <div class="landing-section-header">
@@ -156,6 +276,24 @@
         </section>
     </main>
 
+    <!-- 数据资产 -->
+    <section class="landing-section reveal cred-foot">
+        <div class="cred-strip">
+            <div class="cred-item">
+                <div class="cred-value" data-count="1000000" data-suffix="+" data-final="1,000,000+">1,000,000+</div>
+                <div class="cred-label" data-zh="原始情报数据" data-en="Raw intelligence records">原始情报数据</div>
+            </div>
+            <div class="cred-item">
+                <div class="cred-value">10<span class="cred-unit" data-zh="年" data-en=" yrs">年</span></div>
+                <div class="cred-label" data-zh="数据分析经验" data-en="Years of data analysis">数据分析经验</div>
+            </div>
+            <div class="cred-item">
+                <div class="cred-value">LLM</div>
+                <div class="cred-label" data-zh="细化打标 · 分层加工" data-en="Tagging & layering">细化打标 · 分层加工</div>
+            </div>
+        </div>
+    </section>
+
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-brand">
@@ -167,6 +305,7 @@
                 <div class="fg">
                     <span class="fg-title" data-zh="内容" data-en="Content">内容</span>
                     <a href="/weekly/" data-zh="每周情报" data-en="Weekly Intelligence">每周情报</a>
+                    <a href="/#framework" data-zh="专项报告" data-en="Special Reports">专项报告</a>
                     <a href="/#services" data-zh="定制分析" data-en="Services">定制分析</a>
                     <a href="/about.html" data-zh="关于" data-en="About">关于</a>
                 </div>

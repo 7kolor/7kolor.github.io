@@ -94,6 +94,28 @@ def empty_card(zh: str, en: str) -> str:
                 </div>'''
 
 
+# 首页每个环节板块展示的最新报告数量
+STEP_HOME_COUNT = 4
+
+
+def step_cards(analysis: list, step: int) -> str:
+    """Renders up to STEP_HOME_COUNT analysis cards for a given step (1-6)."""
+    by_step = [m for m in analysis if str(m.get("step", "")) == str(step)]
+    by_step.sort(key=lambda m: m.get("date", ""), reverse=True)
+    if not by_step:
+        return empty_card("该环节专项报告筹备中", "Step special reports in preparation")
+    cards = "\n".join(report_card(m) for m in by_step[:STEP_HOME_COUNT])
+    return cards
+
+
+def step_tally(analysis: list, step: int) -> str:
+    """Renders the header tally badge for a step's board ('📊 N 篇报告' or a coming-soon label)."""
+    count = sum(1 for m in analysis if str(m.get("step", "")) == str(step))
+    if count:
+        return f'<span class="step-tally-inner" data-n="{count}">📊 {count} 篇报告</span>'
+    return '<span class="step-tally-in empty" data-n="0">📊 报告筹备中</span>'
+
+
 def archive_item(m) -> str:
     title_zh = m.get("title_zh", m["id"])
     title_en = m.get("title_en", m["id"])
@@ -176,6 +198,18 @@ def main():
         else:
             cards = empty_card("内容筹备中", "In preparation")
         index_html = replace_auto(index_html, f"cards-{kind}", cards)
+
+    # --- homepage: six-step boards (analysis reports by step) ---
+    analysis_items = items["analysis"]
+    for step in range(1, 7):
+        block = f"cards-analysis-step{step}"
+        if not re.search(r"<!-- AUTO:" + re.escape(block) + r":begin -->", index_html):
+            continue
+        index_html = replace_auto(index_html, block, step_cards(analysis_items, step))
+        tally_block = f"step-count-{step}"
+        if re.search(r"<!-- AUTO:" + re.escape(tally_block) + r":begin -->", index_html):
+            index_html = replace_auto(index_html, tally_block, step_tally(analysis_items, step))
+
     index_path.write_text(index_html, encoding="utf-8")
     print(f"updated {index_path.relative_to(ROOT)}")
 
