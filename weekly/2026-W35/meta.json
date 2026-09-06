@@ -1,0 +1,13 @@
+{
+  "kind": "weekly",
+  "id": "2026-W35",
+  "week_label_zh": "2026 W35 周报",
+  "week_label_en": "2026 W35 Weekly Report",
+  "title_zh": "AI Agent 基础设施产品化与 AI 治理新赛道",
+  "title_en": "AI Agent Infrastructure Productization & AI Governance as New Track",
+  "desc_zh": "大模型周：GPT-6-Astra / Fable 5.1 / Gemini 3.8 Flash 同周发布，AI 创作交付层、AI 治理质检与端侧自托管成为被数据验证的三条机会赛道。",
+  "desc_en": "Mega-release week: GPT-6-Astra / Fable 5.1 / Gemini 3.8 Flash all landed. AI creation delivery, AI governance/QC, and edge self-hosting are three data-validated tracks.",
+  "date_range": "2026-08-30 ~ 09-05",
+  "date": "2026-09-05",
+  "sources": "Reddit · HN · IH · PH"
+}
