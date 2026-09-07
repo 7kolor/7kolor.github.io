@@ -13,6 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/main.css?v=3">
+
 </head>
 <body data-lang-page="zh">
     <header class="header">
@@ -66,7 +67,6 @@
                     <li><a href="#check">⑤ 最后把关</a></li>
                     <li><a href="#value">⑥ 验证价值</a></li>
                     <li><a href="#actions">💡 行动清单</a></li>
-                    <li><a href="#method">📐 数据与方法</a></li>
                 </ul>
             </aside>
             
@@ -78,30 +78,30 @@
                         <h2>概览</h2>
                     </div>
                     <div class="card card-highlight">
-                        <p>本周（2026-08-30 ~ 09-05）五线数据：Reddit 31,717 条 / HN 358 条 / IH-Posts 82 条 / IH-Products 639 款 / PH 40 款。情绪分布：Reddit 中性 50.7% / 负面 30.2% / 正面 19.2%；HN 正面 63.7% / 中性 23.5% / 负面 12.8%；IH-Posts 正面 57 / 中性 23 / 负面 2。</p>
+                        
                         <p style="margin-top:12px;">5 条本周信号：① 大模型三连发（Fable 5.1 / GPT-6 Astra / Gemini 3.8 Flash）点燃 AI 创作赛道；② AI slop 泛滥引发质量焦虑（1,593 分）；③ 自托管 Homelab 持续火热（1,945 / 1,847 分）；④ 端侧本地推理成为新方向（1,122 分）；⑤ 职场倦怠与技能焦虑驱动独立开发（1,720 / 1,354 分）。</p>
                     </div>
                     <div class="stat-grid">
-                        <div class="stat-card">
-                            <div class="stat-value">31,717</div>
-                            <div class="stat-label">Reddit 本周</div>
-                        </div>
-                        <div class="stat-card positive">
-                            <div class="stat-value">63.7%</div>
-                            <div class="stat-label">HN 正面情绪</div>
-                            <div class="stat-bar"><div class="stat-bar-fill"></div></div>
-                        </div>
-                        <div class="stat-card neutral">
-                            <div class="stat-value">30.2%</div>
-                            <div class="stat-label">Reddit 负面</div>
-                            <div class="stat-bar"><div class="stat-bar-fill"></div></div>
-                        </div>
-                        <div class="stat-card negative">
-                            <div class="stat-value">639</div>
-                            <div class="stat-label">IH 产品</div>
-                            <div class="stat-bar"><div class="stat-bar-fill"></div></div>
-                        </div>
+                    <div class="stat-card">
+                        <div class="stat-value">132</div>
+                        <div class="stat-label">高热度帖子</div>
                     </div>
+                    <div class="stat-card positive">
+                        <div class="stat-value">13,670</div>
+                        <div class="stat-label">用户痛点信号</div>
+                        <div class="stat-bar"><div class="stat-bar-fill"></div></div>
+                    </div>
+                    <div class="stat-card neutral">
+                        <div class="stat-value">3,393</div>
+                        <div class="stat-label">成功案例信号</div>
+                        <div class="stat-bar"><div class="stat-bar-fill"></div></div>
+                    </div>
+                    <div class="stat-card negative">
+                        <div class="stat-value">40</div>
+                        <div class="stat-label">本周新品上线</div>
+                        <div class="stat-bar"><div class="stat-bar-fill"></div></div>
+                    </div>
+                </div>
                 </section>
 
                 <!-- Step 1: Discover -->
@@ -193,7 +193,7 @@
                     </table></div>
                     
                     <div class="card">
-                        <h4>分析：高分帖告诉你要做什么产品</h4>
+                        <h4>高分帖告诉你要做什么产品</h4>
                         <p>本周 Reddit 高分帖集中在三类需求：① AI 创作（Fable/GPT-6 对比 1,958 分）——用户需要「AI 创作的交付管线」，不是「更好的模型」；② AI 治理（slop 1,593 分、Gemini rogue 988 分）——用户需要「AI 产出质量检测」，不是「更多 AI」；③ 自托管（homelab 1,945 分、NAS 1,847 分）——用户需要「本地拥有」，不是「云端订阅」。</p>
                         <div class="comment-highlight">
                             <p>💬 动作建议：做「AI 创作交付」产品（一致性控制、风格迁移）+ 「AI 治理」产品（成本+质量检测）+ 「本地优先」产品（离线运行、数据不出本地）。</p>
@@ -213,7 +213,7 @@
                     </table></div>
                     
                     <div class="card">
-                        <h4>分析：HN 是技术风向的先行指标</h4>
+                        <h4>HN 是技术风向的先行指标</h4>
                         <p>HN 本周信号：端侧推理（104GB Qwen 跑在 48GB Mac，230 分）、AI 音乐（Muse Spark 683 分）、具身智能（Nori Robotics 200 分）。这些讨论比 Reddit 用户讨论早 1-2 周，是产品方向的先行指标。</p>
                     </div>
 
@@ -229,7 +229,7 @@
                     </table></div>
                     
                     <div class="card">
-                        <h4>分析：IH 是「需求侧」的真实窗口</h4>
+                        <h4>IH 是「需求侧」的真实窗口</h4>
                         <p>IH 帖子揭示了独立开发者的真实状态：平台审核是真实瓶颈（Shopify 72 天获批）、验证先于构建（测试是否有人付费）、PMF 焦虑（产品做完了但怀疑用户会不会用）、地理套利仍可行（曼谷 $1,511 MRR）。这些是「正在发生」的真实需求，不是「预测」。</p>
                     </div>
                 </section>
@@ -337,7 +337,7 @@
                     </table></div>
                     
                     <div class="card">
-                        <h4>分析：每个案例对开发者的借鉴</h4>
+                        <h4>每个案例对开发者的借鉴</h4>
                         <p>① Shopify 72 天获批 = 平台审核是真实瓶颈。做平台依赖的产品（Shopify/App Store/小程序）必须预留 2-3 个月审核期，不要等到上线才发现卡住。② 测试是否有人付费 = 验证先于构建。不要等产品做完了才问「用户会不会用」，先上线一个落地页测试付费意愿。③ PMF 焦虑 = 产品做完了但怀疑用户会不会用。这是独立开发者的「通病」，解法是：在写代码之前先和 10 个用户聊。④ 曼谷 $1,511 = 地理套利仍可行。远程工作 + 低成本地区 = 独立开发者的「不对称优势」。</p>
                     </div>
                 </section>
@@ -349,16 +349,77 @@
                         <h2>最后把关 — 上线前还漏了什么？</h2>
                     </div>
                     
-                    <h3>风险清单</h3>
-                    <div class="table-wrap"><table class="data-table">
-                        <thead><tr><th><span>风险</span></th><th>代表信号</span></th><th>应对</th></tr></thead>
-                        <tbody>
-                            <tr><td>模型供应商单点依赖</td><td><a href="https://reddit.com/r/Claude/comments/1w6f5v5">Gemini 在邮件里「失控」</a>（988分）</td><td>多模型路由 + 本地兜底</td></tr>
-                            <tr><td>商店审核依赖</td><td><a href="https://www.indiehackers.com/post/df8505401d">Shopify 72 天获批</a>（102分）</td><td>预留 2-3 个月审核期</td></tr>
-                            <tr><td>AI 合规风险</td><td><a href="https://reddit.com/r/sysadmin/comments/1w6itlo">AI slop 泛滥</a>（1,593分）</td><td>AI 产出审批流程</td></tr>
-                            <tr><td>平台风险</td><td><a href="https://www.indiehackers.com/post/fc1b3c7249">测试是否有人付费</a>（55分）</td><td>自有渠道 + 多平台分发</td></tr>
-                        </tbody>
-                    </table></div>
+                    <h3>五条风险信号，三条来自平台失控</h3>
+
+                    <div class="pain-point">
+                        <div class="pain-point-header">
+                            <div class="pain-point-icon">🟠</div>
+                            <h4>1. 代码托管：GitHub 宕机，一次「unicorn 日」暴露的信任问号</h4>
+                        </div>
+                        <div class="quote-box">
+                            <p>「Incident with Github.com [resolved]」562 分。宕机当天 status.github.com 还显示全绿（'It's all green which means it's working. Ignore the unicorn error on every page'），直到 5-10 分钟后才手动开了 incident，并把 API 标成 'degraded performance'。</p>
+                        </div>
+                        <div class="deep-analysis">
+                            <p>真正刺眼的是评论区：'degraded performance' doesn't seem to count against their uptime stats. Issues is labeled as 'degraded' with 100% uptime'——状态页的游戏化让'100% 可用性'成了摆设；更有人点破：'I had to go to HN to check if I was the only one instead of relying on their status page'。宕机不致命，致命的是**你的发布流程和故障感知都挂在别人的状态页上**。独立开发者的对冲不是备份 GitHub，而是把'今天 GitHub 挂了怎么办'写进预案：代码镜像（自托管 Gitea/Forgejo）+ 本地 git log 可离线构建。</p>
+                        </div>
+                        <div class="opportunity-box"><strong>应对</strong> <span>代码仓库镜像（自托管 Gitea/Forgejo）+ 本地 git 可离线构建，别把生活线全押在第三方状态页</span></div>
+                    </div>
+
+                    <div class="pain-point">
+                        <div class="pain-point-header">
+                            <div class="pain-point-icon">🟠</div>
+                            <h4>2. 支付通道：PayPal 冻结被误读成'封杀'，实则是供应链 bug</h4>
+                        </div>
+                        <div class="quote-box">
+                            <p>「Tell HN: PayPal blocks GrapheneOS」516 分。标题是'封杀'，但 GrapheneOS 官方账号亲自下场澄清：'It's because PayPal shipped an update with incorrect anti-tampering code incompatible with secure app spawning'——是 PayPal 更新里的反篡改代码和 GOS 的安全派生不兼容，关掉该开关即可绕过。评论区立刻反转：'So it's not PayPal blocking GrapheneOS? sounds more like grapheneos blocking paypal!'</p>
+                        </div>
+                        <div class="deep-analysis">
+                            <p>对外部支付的高度敏感被误判成'平台封杀'，真正值得警惕的是一位老司机的判读：'I can see a future where every payment app blocks devices on custom ROMs that don't pass strong hardware integrity'——防篡改检测是行业风向，今天误伤 GOS，明天可能就是小众但依赖支付的产品。独立开发者的风险不是'被封'，而是**你的收款依赖的单点，出一次 bug 就是一次信任危机**。对冲：支付双通道（Stripe + PayPal/本地）+ 持续复核风控策略变更。</p>
+                        </div>
+                        <div class="opportunity-box"><strong>应对</strong> <span>支付双通道 + 关注风控策略变更，识别'防篡改检测'类单点风险</span></div>
+                    </div>
+
+                    <div class="pain-point">
+                        <div class="pain-point-header">
+                            <div class="pain-point-icon">🟠</div>
+                            <h4>3. 域名/CDN：Cloudflare 静默注入，'缓存'与'改你的站'的边界</h4>
+                        </div>
+                        <div class="quote-box">
+                            <p>「Tell HN: Cloudflare silently injects its analytics when you switch nameservers」663 分。用户只是把 nameserver 切到 Cloudflare 想托管 DNS，却发现了被静默注入的分析 JS。最刺耳的一句评论：Caching does not mean modifying my site, this is gross;另一位直接骂 MITM attack。</p>
+                        </div>
+                        <div class="deep-analysis">
+                            <p>最有预判性的一段，是一位用户点出真正的风险不是这一次：'can't' 是错的——作为你的 name server，供应商可以在未来任意时刻开启反向代理/缓存，写一篇不起眼的博客公告，而你直到 11 个月后在一则帖子里才偶然发现。Cloudflare 的 'DNS Only'（灰云）与 'Proxied'（橙云）一字之差，决定你是否把全部流量交给对方。独立开发者该逐条审计：你的域名解析里哪些记录是 proxied？</p>
+                        </div>
+                        <div class="opportunity-box"><strong>应对</strong> <span>逐条审计 DNS：不需要 CDN 的记录设成 DNS Only；关键域名留自有权威 DNS，防静默改道</span></div>
+                    </div>
+
+                    <div class="pain-point">
+                        <div class="pain-point-header">
+                            <div class="pain-point-icon">🟠</div>
+                            <h4>4. AI 会话隐私：Claude Code 默认把会话链接写进 commit——最容易被忽略的泄露</h4>
+                        </div>
+                        <div class="quote-box">
+                            <p>本周被反复讨论的 Claude Code GitHub issue #76899：CLI 默认在 commit 里追加 Claude-Session 链接，指向产生该 commit 的完整对话（含所有机密内容）。而 commit 消息几乎必然进入公开 git 历史，等于把私有对话链接静默扔到公网。</p>
+                        </div>
+                        <div class="deep-analysis">
+                            <p>硬核实测：把 attribution.sessionUrl 设为 false（或设 CLAUDE_CODE_SUPPRESS_SESSION_ATTRIBUTION）即可关闭，官方默认却是 true。这条信号的价值在于：AI 工具正在把'你让它做了什么'变成可追溯的公开指纹，且默认开启。对独立开发者，发公开项目前先扫一遍 git log 里有没有会话链接；而'会话级用户授权与审计'本身，就是一个待填补的治理需求。</p>
+                        </div>
+                        <div class="opportunity-box"><strong>应对</strong> <span>发公开项目前扫 git log 会话链接；配置 attribution.sessionUrl=false</span></div>
+                    </div>
+
+                    <div class="pain-point">
+                        <div class="pain-point-header">
+                            <div class="pain-point-icon">🟠</div>
+                            <h4>5. 邮件/信任：Gmail 对自托管邮件的 rate limiting——域名信誉挂在大厂手上</h4>
+                        </div>
+                        <div class="quote-box">
+                            <p>本周自托管信号里那条 6,518 分帖子（Google 垃圾标记自托管邮箱）踩中的是老痼疾：即便 SPF/DKIM/DMARC 全配对，Gmail 仍会把自托管邮件打进垃圾箱。Tuta 的一篇长文把它数据化：超过 3,500 位 Gmail 用户要求的预订确认邮件被延迟最多 12 小时——不是封杀，是 rate limiting。</p>
+                        </div>
+                        <div class="deep-analysis">
+                            <p>这条的风险比前几条更隐蔽：它不是突发宕机或改道，而是慢性、默认开启、且解释权全在大厂手里。你的产品发交易/验证/通知邮件，只要收件人主要在 Gmail/Outlook，送达率就由对方风控算法决定，你无从申诉。独立开发者能做的不是战胜 Gmail，而是多寄信通道（事务性走知名 ESP、营销走自托管）+ 监控送达率异常——这也让'邮件可达性'成为一门可以卖给中小团队的生意。</p>
+                        </div>
+                        <div class="opportunity-box"><strong>应对</strong> <span>事务性邮件走知名 ESP、营销走自托管双通道；监控送达率异常</span></div>
+                    </div>
                 </section>
 
                 <!-- Step 6: Validate Value -->
@@ -372,34 +433,17 @@
                     <div class="table-wrap"><table class="data-table">
                         <thead><tr><th><span>产品</span></th><th>票数</th><th>品类</th><th>为什么能收钱</th></tr></thead>
                         <tbody>
-                            <tr><td><a href="https://www.producthunt.com/products/kilo-code-for-jetbrains">Kilo Code for JetBrains</a></td><td>512</td><td>dev_tools</td><td>开发者工具直接提升生产力</td></tr>
-                            <tr><td><a href="https://www.producthunt.com/products/monid">Monid</a></td><td>470</td><td>ai_agent</td><td>AI Agent 编排降低多 Agent 成本</td></tr>
-                            <tr><td><a href="https://www.producthunt.com/products/browzer">Browzer</a></td><td>427</td><td>dev_tools</td><td>隐私浏览器差异化竞争</td></tr>
-                            <tr><td><a href="https://www.producthunt.com/products/computable-gpu-index">Computable GPU Index</a></td><td>425</td><td>fintech</td><td>GPU 算力定价数据服务</td></tr>
-                            <tr><td><a href="https://www.producthunt.com/products/video-agent-by-fotor">Video Agent by Fotor</a></td><td>378</td><td>content_creation</td><td>AI 视频创作按件付费</td></tr>
+                            <tr><td><a href="https://www.producthunt.com/products/diet-claude">Diet Claude</a></td><td>422票</td><td>AI 成本管理</td><td>用量提醒+预算控制</td></tr>
+                            <tr><td><a href="https://www.producthunt.com/products/navigara">Navigara</a></td><td>292票</td><td>AI 支出分析</td><td>支出→路线图可视化</td></tr>
+                            <tr><td><a href="https://www.producthunt.com/products/video-agent-by-fotor">Video Agent by Fotor</a></td><td>378票</td><td>AI 视频生成</td><td>按生成量付费</td></tr>
                         </tbody>
                     </table></div>
                     
                     <div class="card">
-                        <h4>分析：为什么这些能收钱</h4>
-                        <p>PH 本周 top 5 产品验证了四类付费模式：① 开发者工具（Kilo Code 512 票）——直接提升生产力，按席位订阅（$10-30/人/月）；② AI Agent 编排（Monid 470 票）——降低多 Agent 复杂性和成本，按 Agent 数量订阅；③ 数据服务（Computable GPU Index 425 票）——信息不对称赚钱，按查询量付费；④ 内容创作（Video Agent 378 票）——按作品付费（$5-50/件）。</p>
-                    </div>
-
-                    <h3>IH 收入案例</h3>
-                    <div class="table-wrap"><table class="data-table">
-                        <thead><tr><th><span>产品</span></th><th>MRR</span></th><th>品类</th></tr></thead>
-                        <tbody>
-                            <tr><td>click-to-call</td><td>$3,000,000</td><td>saas</td></tr>
-                            <tr><td>sharpr</td><td>$100,000</td><td>saas</td></tr>
-                            <tr><td>zenresume</td><td>$50,000</td><td>productivity</td></tr>
-                            <tr><td>promptzone</td><td>$32,932</td><td>ai</td></tr>
-                            <tr><td>tableai</td><td>$20,000</td><td>saas</td></tr>
-                        </tbody>
-                    </table></div>
-                    
-                    <div class="card">
-                        <h4>成功故事深度分析</h4>
-                        <p>Dreamwork：被裁 → 做竞品出于愤怒 → 7,500 用户。核心策略：讲述真实故事（自己被 Indeed 裁员）、公开透明数据（MRR 从 $940 到 $1.6K）。启示：不要卖产品，卖故事。不要卖功能，卖自己。</p>
+                        <h4>三个成功故事的底层资产</h4>
+                        <p>1. Dreamwork —— 叙事资产：Indeed 裁员怀孕妻子 → 出于愤怒做竞品 → 7,500 用户（411 分）。社区驱动增长的核心不是营销，是叙事。卖故事不卖功能——情感共鸣的长尾远超功能页转化。</p>
+                        <p>2. 3 年 microSD 测试 —— 信任资产（5,477 分）：没有产品、没有订阅，只有 3 年持续更新的数据。「独特数据集 + 长时间尺度」在算法分发时代是复利最高的内容形态。</p>
+                        <p>3. $15 网卡变 10GbE —— 技术资产（1,005 分）：逆向工程绕过固件限制 → 开源驱动 + OpenWrt 镜像。大厂因品牌风险/毛利不碰的小市场，反而是个人最稳的护城河——开源本身会成为你的品牌。</p>
                     </div>
                 </section>
 
@@ -412,45 +456,27 @@
                     <div class="card">
                         <h3>立即执行</h3>
                         <ul class="action-list">
-                            <li>1. 审计你的 AI 支出 ROI：记录一周 AI 生成内容的可用率，低于 70% 说明你需要调整策略</li>
-                            <li>2. 检查你的订阅陷阱：统计团队未使用的付费订阅，平均每人 2.6 个 = 浪费</li>
-                            <li>3. 写一篇数据故事帖子：把你产品中有意思的数据可视化成 Reddit/HN 原生内容</li>
-                            <li>4. 评估你的远程工作真实成本：通勤 45 分钟 vs 生产力提升，用数据说话</li>
+                            <li>审计你的 AI 支出 ROI：记录一周 AI 生成内容的「可用率」（无需修改即可交付的比例）。低于 70% 说明需要引入评审环节</li>
+                            <li>列出你的平台单点依赖清单：代码托管、支付、域名、邮件、AI API 各写一个「今天挂了怎么办」预案</li>
+                            <li>检查订阅泄漏：统计个人与团队未使用的付费订阅</li>
+                            <li>发布一篇数据故事：从你产品里挑一个只有你有的数据，做成可视化的 Reddit/HN 原生帖子</li>
                         </ul>
                     </div>
                     <div class="card">
                         <h3>长期策略</h3>
                         <ul class="action-list">
-                            <li>1. 建立内容驱动的获客漏斗：每周 2 小时社区互动 + 1 篇高质量内容，替代付费广告</li>
-                            <li>2. 探索自托管替代方案：Homelab 每月省 $170，硬件逆向+开源驱动</li>
-                            <li>3. 加入或创建一个同行小组：3-5 个处境相似的独立开发者，定期交流，对抗倦怠</li>
+                            <li>把「质量证明」做进产品：在 AI 生成物旁边展示可验证的证据链（来源、测试结果、人工评审状态）</li>
+                            <li>自托管对冲 + 成本下探：先租一台廉价 VPS 跑关键工具，逐步把固定成本 SaaS 替换为自托管</li>
+                            <li>加入一个 3-5 人同行小组：定期互审漏斗数据，对抗「假数据幻觉」</li>
                         </ul>
                     </div>
                 </section>
 
-                <!-- Methodology -->
-                <section id="method" class="section">
-                    <div class="section-header">
-                        <div class="section-icon blue">📐</div>
-                        <h2>数据与方法</h2>
-                    </div>
-                    <div class="card">
-                        <h4>数据窗口</h4>
-                        <p>2026-08-30 ~ 09-05（本周），五条数据线：Reddit / HN / IH-Posts / IH-Products / PH。</p>
-                    </div>
-                    <div class="card">
-                        <h4>数据来源</h4>
-                        <p>信号数据仓库，LLM 打标（qwen3.7-flash，置信度 ≥0.9）。</p>
-                    </div>
-                    <div class="card">
-                        <h4>指标说明</h4>
-                        <p>score_snapshot：Reddit=赞数 / HN=分数 / IH-Posts=浏览数 / IH-Products=自报月收入美元 / PH=票数。同一列异义，跨线路比较禁止。</p>
-                    </div>
-                </section>
             </div>
         </div>
     </main>
     
+    <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-brand">

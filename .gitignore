@@ -11,3 +11,4 @@ drafts/
 # Python
 __pycache__/
 *.pyc
+*.Rhistory

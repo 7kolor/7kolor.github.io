@@ -13,6 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/main.css?v=3">
+
 </head>
 <body data-lang-page="en">
     <header class="header">
@@ -66,7 +67,6 @@
                     <li><a href="#check">⑤ Final Check</a></li>
                     <li><a href="#value">⑥ Validate Value</a></li>
                     <li><a href="#actions">💡 Action Items</a></li>
-                    <li><a href="#method">📐 Methodology</a></li>
                 </ul>
             </aside>
             
@@ -78,30 +78,30 @@
                         <h2>Overview</h2>
                     </div>
                     <div class="card card-highlight">
-                        <p>This week (2026-08-30 ~ 09-05): Reddit 31,717 / HN 358 / IH-Posts 82 / IH-Products 639 / PH 40. Sentiment: Reddit neutral 50.7% / negative 30.2% / positive 19.2%; HN positive 63.7% / neutral 23.5% / negative 12.8%; IH-Posts positive 57 / neutral 23 / negative 2.</p>
+                        
                         <p style="margin-top:12px;">5 signals this week: ① Model triple-release (Fable 5.1 / GPT-6 Astra / Gemini 3.8 Flash) ignites AI creation track; ② AI slop proliferation triggers quality anxiety (1,593 pts); ③ Self-hosted Homelab continues hot (1,945 / 1,847 pts); ④ Edge local inference becomes new direction (1,122 pts); ⑤ Career burnout & skill anxiety drive indie dev (1,720 / 1,354 pts).</p>
                     </div>
                     <div class="stat-grid">
-                        <div class="stat-card">
-                            <div class="stat-value">31,717</div>
-                            <div class="stat-label">Reddit This Week</div>
-                        </div>
-                        <div class="stat-card positive">
-                            <div class="stat-value">63.7%</div>
-                            <div class="stat-label">HN Positive</div>
-                            <div class="stat-bar"><div class="stat-bar-fill"></div></div>
-                        </div>
-                        <div class="stat-card neutral">
-                            <div class="stat-value">30.2%</div>
-                            <div class="stat-label">Reddit Negative</div>
-                            <div class="stat-bar"><div class="stat-bar-fill"></div></div>
-                        </div>
-                        <div class="stat-card negative">
-                            <div class="stat-value">639</div>
-                            <div class="stat-label">IH Products</div>
-                            <div class="stat-bar"><div class="stat-bar-fill"></div></div>
-                        </div>
+                    <div class="stat-card">
+                        <div class="stat-value">132</div>
+                        <div class="stat-label">High-Engagement Posts</div>
                     </div>
+                    <div class="stat-card positive">
+                        <div class="stat-value">13,670</div>
+                        <div class="stat-label">Pain Point Signals</div>
+                        <div class="stat-bar"><div class="stat-bar-fill"></div></div>
+                    </div>
+                    <div class="stat-card neutral">
+                        <div class="stat-value">3,393</div>
+                        <div class="stat-label">Success Stories</div>
+                        <div class="stat-bar"><div class="stat-bar-fill"></div></div>
+                    </div>
+                    <div class="stat-card negative">
+                        <div class="stat-value">40</div>
+                        <div class="stat-label">New Products Launched</div>
+                        <div class="stat-bar"><div class="stat-bar-fill"></div></div>
+                    </div>
+                </div>
                 </section>
 
                 <!-- Step 1: Discover -->
@@ -349,16 +349,77 @@
                         <h2>Final Check — What's Missing Before Launch?</h2>
                     </div>
                     
-                    <h3>Risk List</h3>
-                    <div class="table-wrap"><table class="data-table">
-                        <thead><tr><th><span>Risk</span></th><th>Representative Signal</span></th><th>Mitigation</th></tr></thead>
-                        <tbody>
-                            <tr><td>模型供应商单点依赖</td><td><a href="https://reddit.com/r/Claude/comments/1w6f5v5">Gemini 在邮件里「失控」</a>（988分）</td><td>Multi-model routing + local fallback</td></tr>
-                            <tr><td>商店审核依赖</td><td><a href="https://www.indiehackers.com/post/df8505401d">Shopify 72 天获批</a>（102分）</td><td>Reserve 2-3 months for review</td></tr>
-                            <tr><td>AI 合规风险</td><td><a href="https://reddit.com/r/sysadmin/comments/1w6itlo">AI slop 泛滥</a>（1,593分）</td><td>AI output approval workflow</td></tr>
-                            <tr><td>平台风险</td><td><a href="https://www.indiehackers.com/post/fc1b3c7249">测试是否有人付费</a>（55分）</td><td>Own channel + multi-platform distribution</td></tr>
-                        </tbody>
-                    </table></div>
+                    <h3>Five Risk Signals, Three from Platform Runaway</h3>
+
+                    <div class="pain-point">
+                        <div class="pain-point-header">
+                            <div class="pain-point-icon">🟠</div>
+                            <h4>1. Code Hosting: GitHub Outage, the Trust Question Mark of a 'Unicorn Day'</h4>
+                        </div>
+                        <div class="quote-box">
+                            <p>'Incident with Github.com [resolved]' 562 pts. On the outage day status.github.com still showed all green ('It's all green which means it's working. Ignore the unicorn error on every page'), until 5-10 min later they manually opened an incident and marked the API as 'degraded performance'.</p>
+                        </div>
+                        <div class="deep-analysis">
+                            <p>What stings is in the comments: 'degraded performance' doesn't seem to count against their uptime stats. Issues is labeled as 'degraded' with 100% uptime'—status-page gamification makes '100% availability' a farce; someone even noted: 'I had to go to HN to check if I was the only one instead of relying on their status page'. The outage isn't fatal—what's fatal is **your release flow and incident awareness hang on someone else's status page**. The indie hedge isn't backing up GitHub, it's writing a 'what if GitHub goes down today' plan: code mirroring (self-hosted Gitea/Forgejo) + offline-clone-able local git log.</p>
+                        </div>
+                        <div class="opportunity-box"><strong>Mitigation</strong> <span>Code repo mirroring (self-hosted Gitea/Forgejo) + offline-buildable local git; don't stake your lifeline on a third-party status page</span></div>
+                    </div>
+
+                    <div class="pain-point">
+                        <div class="pain-point-header">
+                            <div class="pain-point-icon">🟠</div>
+                            <h4>2. Payment: PayPal 'Block' Was Actually a Supply-Chain Bug</h4>
+                        </div>
+                        <div class="quote-box">
+                            <p>'Tell HN: PayPal blocks GrapheneOS' 516 pts. The headline is 'block', but GrapheneOS's official account clarified personally: 'It's because PayPal shipped an update with incorrect anti-tampering code incompatible with secure app spawning'—PayPal's anti-tampering code was incompatible with GOS's secure app spawning, toggling it off bypasses. Comments quickly flipped: 'So it's not PayPal blocking GrapheneOS? sounds more like grapheneos blocking paypal!'</p>
+                        </div>
+                        <div class="deep-analysis">
+                            <p>The hyper-sensitivity toward external payments was misread as 'platform ban'; what's really worth heeding is a veteran's read: 'I can see a future where every payment app blocks devices on custom ROMs that don't pass strong hardware integrity'—anti-tamper detection is the industry direction; today it misfires on GOS, tomorrow it may be a niche-but-payment-dependent product. The indie risk isn't being 'banned', it's that **your single-point payment collection suffers a trust crisis on any one bug**. Hedge: dual payment channels (Stripe + PayPal/local) + continuously monitor policy changes.</p>
+                        </div>
+                        <div class="opportunity-box"><strong>Mitigation</strong> <span>Dual payment channels + monitor risk-policy changes; identify 'anti-tamper detection' single-point risks</span></div>
+                    </div>
+
+                    <div class="pain-point">
+                        <div class="pain-point-header">
+                            <div class="pain-point-icon">🟠</div>
+                            <h4>3. Domain/CDN: Cloudflare Silent Injection</h4>
+                        </div>
+                        <div class="quote-box">
+                            <p>'Tell HN: Cloudflare silently injects its analytics when you switch nameservers' 663 pts. User only pointed nameservers at Cloudflare to host DNS, but found silently injected analytics JS. Sharpest comment: 'Caching' does not mean 'modifying my site'; another called it outright 'MITM attack'.</p>
+                        </div>
+                        <div class="deep-analysis">
+                            <p>The most prescient comment flags the real risk isn't this one incident: 'can't' is wrong—as your nameserver, the vendor can flip on reverse proxy/caching at any future point, write an obscure blog post, and you only find out 11 months later in a thread. Cloudflare's 'DNS Only' vs 'Proxied' is one toggle deciding whether you hand over your entire traffic. Indie devs should audit record by record: which of your DNS records are proxied?</p>
+                        </div>
+                        <div class="opportunity-box"><strong>Mitigation</strong> <span>Audit records: set DNS Only where CDN is unneeded; keep critical domains on your own authoritative DNS to prevent silent rerouting</span></div>
+                    </div>
+
+                    <div class="pain-point">
+                        <div class="pain-point-header">
+                            <div class="pain-point-icon">🟠</div>
+                            <h4>4. AI Session Privacy: Claude Code Puts Session Links in Commits by Default</h4>
+                        </div>
+                        <div class="quote-box">
+                            <p>This week's widely-discussed Claude Code GitHub issue #76899: the CLI appends a Claude-Session link to commits by default, pointing to the full conversation that produced the commit (including all confidential content). Commit messages almost inevitably land in public git history—silently throwing private conversation links onto the public internet.</p>
+                        </div>
+                        <div class="deep-analysis">
+                            <p>Hard-tested: setting attribution.sessionUrl to false (or CLAUDE_CODE_SUPPRESS_SESSION_ATTRIBUTION) turns it off, but the official default is true. The signal's value: AI tools are turning 'what you had it do' into traceable public fingerprints, on by default. Before pushing public projects, sweep git log for session links; 'session-level user authorization & audit' is itself an unfilled governance need.</p>
+                        </div>
+                        <div class="opportunity-box"><strong>Mitigation</strong> <span>Sweep git log for session links before public projects; set attribution.sessionUrl=false</span></div>
+                    </div>
+
+                    <div class="pain-point">
+                        <div class="pain-point-header">
+                            <div class="pain-point-icon">🟠</div>
+                            <h4>5. Email/Trust: Gmail Rate-Limits Self-Hosted Mail</h4>
+                        </div>
+                        <div class="quote-box">
+                            <p>This week's self-hosting signal (6,518 pts, Google marking self-hosted email as spam) hits a chronic pain: even with SPF/DKIM/DMARC all correct, Gmail still drops self-hosted mail into spam. A Tuta article quantifies it: over 3,500 Gmail users' requested booking confirmations delayed up to 12 hours—not a ban, rate limiting.</p>
+                        </div>
+                        <div class="deep-analysis">
+                            <p>This risk is more insidious: not a sudden outage or rerouting, but chronic, default-on, with full interpretive power in big tech's hands. Your product sends transactional/verification/notification email—as long as recipients are mostly on Gmail/Outlook, deliverability is decided by their risk-scoring algorithm with no appeal channel. Indie devs can't beat Gmail, but can split channels (transactional via reputable ESPs, marketing self-hosted) + monitor deliverability anomalies—making 'email reachability' a service small teams will pay for.</p>
+                        </div>
+                        <div class="opportunity-box"><strong>Mitigation</strong> <span>Transactional via reputable ESPs + marketing self-hosted; monitor deliverability</span></div>
+                    </div>
                 </section>
 
                 <!-- Step 6: Validate Value -->
@@ -372,34 +433,17 @@
                     <div class="table-wrap"><table class="data-table">
                         <thead><tr><th><span>Product</span></th><th>Votes</th><th>Category</th><th>Why It Can Charge</th></tr></thead>
                         <tbody>
-                            <tr><td><a href="https://www.producthunt.com/products/kilo-code-for-jetbrains">Kilo Code for JetBrains</a></td><td>512</td><td>dev_tools</td><td>Developer tools directly boost productivity</td></tr>
-                            <tr><td><a href="https://www.producthunt.com/products/monid">Monid</a></td><td>470</td><td>ai_agent</td><td>AI Agent orchestration reduces multi-agent costs</td></tr>
-                            <tr><td><a href="https://www.producthunt.com/products/browzer">Browzer</a></td><td>427</td><td>dev_tools</td><td>Privacy browser differentiated competition</td></tr>
-                            <tr><td><a href="https://www.producthunt.com/products/computable-gpu-index">Computable GPU Index</a></td><td>425</td><td>fintech</td><td>GPU compute pricing data service</td></tr>
-                            <tr><td><a href="https://www.producthunt.com/products/video-agent-by-fotor">Video Agent by Fotor</a></td><td>378</td><td>content_creation</td><td>AI video creation pay-per-work</td></tr>
+                            <tr><td><a href="https://www.producthunt.com/products/diet-claude">Diet Claude</a></td><td>422票</td><td>AI Cost Management</td><td>Usage alerts + budget control</td></tr>
+                            <tr><td><a href="https://www.producthunt.com/products/navigara">Navigara</a></td><td>292票</td><td>AI Spend Analytics</td><td>Spend→roadmap visualization</td></tr>
+                            <tr><td><a href="https://www.producthunt.com/products/video-agent-by-fotor">Video Agent by Fotor</a></td><td>378票</td><td>AI Video Generation</td><td>Pay-per-generation</td></tr>
                         </tbody>
                     </table></div>
                     
                     <div class="card">
-                        <h4>Analysis: Why These Can Charge</h4>
-                        <p>PH this week's top 5 products validate four payment models: ① Developer tools (Kilo Code 512 votes)—directly boost productivity, per-seat subscription ($10-30/person/mo); ② AI Agent orchestration (Monid 470 votes)—reduce multi-agent complexity and cost, per-agent subscription; ③ Data services (Computable GPU Index 425 votes)—profit from information asymmetry, pay-per-query; ④ Content creation (Video Agent 378 votes)—pay-per-work ($5-50/piece).</p>
-                    </div>
-
-                    <h3>IH Revenue Cases</h3>
-                    <div class="table-wrap"><table class="data-table">
-                        <thead><tr><th><span>Product</span></th><th>MRR</span></th><th>Category</th></tr></thead>
-                        <tbody>
-                            <tr><td>click-to-call</td><td>$3,000,000</td><td>saas</td></tr>
-                            <tr><td>sharpr</td><td>$100,000</td><td>saas</td></tr>
-                            <tr><td>zenresume</td><td>$50,000</td><td>productivity</td></tr>
-                            <tr><td>promptzone</td><td>$32,932</td><td>ai</td></tr>
-                            <tr><td>tableai</td><td>$20,000</td><td>saas</td></tr>
-                        </tbody>
-                    </table></div>
-                    
-                    <div class="card">
-                        <h4>Success Story Deep Analysis</h4>
-                        <p>Dreamwork: Laid off → built competitor out of spite → 7,500 users. Core strategy: tell real story (laid off by Indeed), share transparent data (MRR from $940 to $1.6K). Lesson: Don't sell products, sell stories. Don't sell features, sell yourself.</p>
+                        <h4>Three Success Stories' Underlying Assets</h4>
+                        <p>1. Dreamwork — Narrative asset: Indeed laid off pregnant wife → built competitor out of anger → 7,500 users (411 pts). Community-driven growth's core isn't marketing, it's narrative. Sell stories not features—emotional resonance's long tail far exceeds feature page conversion.</p>
+                        <p>2. 3-year microSD test — Trust asset (5,477 pts): No product, no subscription, only 3 years of continuously updated data. 'Unique dataset + long time scale' is the highest-compounding content form in the algorithmic distribution era.</p>
+                        <p>3. $15 NIC to 10GbE — Technical asset (1,005 pts): Reverse engineering to bypass firmware limits → open-source driver + OpenWrt image. Small markets big companies won't touch due to brand risk/margin are instead individuals' most stable moats—open source itself becomes your brand.</p>
                     </div>
                 </section>
 
@@ -407,50 +451,32 @@
                 <section id="actions" class="section">
                     <div class="section-header">
                         <div class="section-icon purple">💡</div>
-                        <h2>Actions</h2>
+                        <h2>Action Items</h2>
                     </div>
                     <div class="card">
                         <h3>Do Now</h3>
                         <ul class="action-list">
-                            <li>1. Audit your AI spend ROI: Track AI-generated content usability for a week. Below 70%? You need to adjust your strategy.</li>
-                            <li>2. Check your subscription traps: Count unused paid subscriptions per team member. Average 2.6 each = waste.</li>
-                            <li>3. Write a data story post: Visualize interesting data from your product into native Reddit/HN content.</li>
-                            <li>4. Evaluate your remote work real cost: 45min commute vs productivity gain, use data.</li>
+                            <li>Audit your AI spend ROI: Track 'usability rate' of AI-generated content for a week (percentage deliverable without modification). Below 70% means you need review processes</li>
+                            <li>List your platform single-point-of-failure dependencies: code hosting, payments, domains, email, AI APIs—write a 'what if it goes down today' plan for each</li>
+                            <li>Check subscription leakage: inventory unused paid subscriptions for individuals and teams</li>
+                            <li>Publish a data story: pick a unique data point from your product, make it into a visual Reddit/HN native post</li>
                         </ul>
                     </div>
                     <div class="card">
                         <h3>Long-term</h3>
                         <ul class="action-list">
-                            <li>1. Build content-driven acquisition funnel: 2 hours community interaction + 1 quality content per week, replace paid ads.</li>
-                            <li>2. Explore self-hosted alternatives: Homelab saves $170/month, hardware hacking + open source drivers.</li>
-                            <li>3. Join or create a peer group: 3-5 indie developers in similar situations, regular communication to combat burnout.</li>
+                            <li>Build 'quality proof' into your product: show verifiable evidence chains next to AI-generated content (sources, test results, human review status)</li>
+                            <li>Self-hosting hedge + cost reduction: rent a cheap VPS for key tools first, gradually replace fixed-cost SaaS with self-hosting</li>
+                            <li>Join a 3-5 person peer group: regularly review funnel data together, combat 'fake data illusion'</li>
                         </ul>
                     </div>
                 </section>
 
-                <!-- Methodology -->
-                <section id="method" class="section">
-                    <div class="section-header">
-                        <div class="section-icon blue">📐</div>
-                        <h2>Methodology</h2>
-                    </div>
-                    <div class="card">
-                        <h4>Data Window</h4>
-                        <p>2026-08-30 ~ 09-05 (this week), five data lines: Reddit / HN / IH-Posts / IH-Products / PH.</p>
-                    </div>
-                    <div class="card">
-                        <h4>Data Source</h4>
-                        <p>信号数据仓库, LLM tagged (qwen3.7-flash, confidence ≥0.9).</p>
-                    </div>
-                    <div class="card">
-                        <h4>Metric Notes</h4>
-                        <p>score_snapshot: Reddit=upvotes / HN=points / IH-Posts=views / IH-Products=self-reported monthly revenue USD / PH=votes. Same column different meaning, cross-line comparison prohibited.</p>
-                    </div>
-                </section>
             </div>
         </div>
     </main>
     
+    <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-brand">
