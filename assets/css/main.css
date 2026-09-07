@@ -544,6 +544,26 @@ a.lang-btn { text-decoration: none; display: inline-block; }
 .footer-bottom p { margin: 0 !important; font-size: 13px; }
 .footer-bottom .footer-meta { opacity: .75; }
 
+
+/* Button styles for thesis-link and step-all */
+.thesis-link, .step-all {
+    display: inline-block;
+    padding: 12px 24px;
+    background: var(--grad);
+    color: #fff;
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
+    border-radius: var(--radius);
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: var(--shadow);
+}
+.thesis-link:hover, .step-all:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+    color: #fff;
+}
+
 @media (max-width: 720px) {
     .footer-content { grid-template-columns: 1fr; gap: 28px; }
     .footer-groups { justify-content: flex-start; gap: 40px; }
