@@ -29,7 +29,9 @@ def make_meta(**over):
 class ReportCardTest(unittest.TestCase):
     def test_fields_present(self):
         card = build_site.report_card(make_meta())
-        self.assertIn("2026 W34 周报：AI 编程", card)
+        self.assertIn("2026 W34", card)            # 期次标签独立显示
+        self.assertIn("<h3", card)                 # 标题为 h3
+        self.assertNotIn("周报：", card)            # 标题不再带「周报：」前缀
         self.assertIn("href=\"/weekly/2026-W34/\"", card)
         self.assertIn("中文描述", card)
 

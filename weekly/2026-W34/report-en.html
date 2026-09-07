@@ -12,10 +12,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/css/main.css?v=3">
+    <link rel="stylesheet" href="/assets/css/main.css?v=1af0321a35">
 </head>
 <body data-lang-page="en">
     <!-- Header -->
+<!-- AUTO:header:begin -->
     <header class="header">
         <div class="header-inner">
             <a href="/" class="logo">
@@ -24,20 +25,20 @@
             </a>
             <nav class="nav">
                 <div class="nav-links">
-                    <a href="/">Home</a>
-                    <a href="/#framework">6-Step Framework</a>
-                    <a href="/weekly/">Weekly</a>
-                    <a href="/#reports">Special Reports</a>
-                    <a href="/#services">Services</a>
-                    <a href="/about.html">About</a>
+                    <a href="/#framework" data-zh="六步流程" data-en="6-Step Framework">六步流程</a>
+                    <a href="/weekly/" data-zh="每周情报" data-en="Weekly Intelligence">每周情报</a>
+                    <a href="/#reports" data-zh="专项报告" data-en="Special Reports">专项报告</a>
+                    <a href="/#services" data-zh="定制服务" data-en="Services">定制服务</a>
+                    <a href="/about.html" data-zh="关于" data-en="About">关于</a>
                 </div>
                 <div class="lang-toggle">
-                    <a class="lang-btn" href="/weekly/2026-W34/report-zh.html">中文</a>
-                    <a class="lang-btn active" href="/weekly/2026-W34/report-en.html">EN</a>
+                    <button class="lang-btn active" data-lang="zh" onclick="switchLang('zh', this)">中文</button>
+                    <button class="lang-btn" data-lang="en" onclick="switchLang('en', this)">EN</button>
                 </div>
             </nav>
         </div>
     </header>
+    <!-- AUTO:header:end -->
     
     <!-- Hero -->
     <section class="hero">
@@ -341,33 +342,26 @@
     </main>
     
     <!-- Footer -->
+<!-- AUTO:footer:begin -->
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-brand">
-                <img class="footer-logo" src="/assets/img/logo.png" alt="7Kolor Insights" width="28" height="28">
+                <img class="footer-logo" src="/assets/img/logo.png" alt="7Kolor Insights" width="26" height="26">
                 <span class="footer-name">7Kolor <span>Insights</span></span>
-                <span class="footer-tagline">Trend analysis & signal insight for indie developers</span>
+                <span class="footer-tagline" data-zh="为独立开发者提供趋势分析与信号洞察" data-en="Trend analysis & signal insight for indie developers">为独立开发者提供趋势分析与信号洞察</span>
             </div>
-            <div class="footer-groups">
-                <div class="fg">
-                    <span class="fg-title">Content</span>
-                    <a href="/weekly/">Weekly</a>
-                    <a href="/#reports">Special Reports</a>
-                    <a href="/#services">Services</a>
-                    <a href="/about.html">About</a>
-                </div>
-                <div class="fg">
-                    <span class="fg-title">Connect</span>
-                    <a href="https://github.com/7kolor/7kolor.github.io">GitHub</a>
-                    <a href="/feed.xml">RSS Feed</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>© 2026 7Kolor Insights</p>
-                <p class="footer-meta">Data range 2026-08-23 ~ 08-29 | Sources Reddit / HN / IH / PH</p>
-            </div>
+            <nav class="footer-links">
+                <a href="/weekly/" data-zh="每周情报" data-en="Weekly">每周情报</a>
+                <a href="/#reports" data-zh="专项报告" data-en="Reports">专项报告</a>
+                <a href="/#services" data-zh="定制服务" data-en="Services">定制服务</a>
+                <a href="/about.html" data-zh="关于" data-en="About">关于</a>
+                <a href="https://github.com/7kolor/7kolor.github.io">GitHub</a>
+                <a href="/feed.xml">RSS</a>
+            </nav>
+            <p class="footer-copy">© 2026 7Kolor Insights</p>
         </div>
     </footer>
+    <!-- AUTO:footer:end -->
     
     <script src="/assets/js/main.js"></script>
 </body>

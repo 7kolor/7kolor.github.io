@@ -71,12 +71,18 @@ def report_card(m) -> str:
     title_en = m.get("title_en", m["id"])
     label_zh = m.get("week_label_zh", title_zh)
     label_en = m.get("week_label_en", title_en)
-    # 周报标题显示「2026 W34 周报：XXX」，其他模块只显示标题
+    # 周次 badge：取 label 中的期次（如 “2026 W35”）作为标签，标题只保留主题
+    badge_zh, badge_en = "", ""
     if m["kind"] == "weekly":
-        title_zh = f'{label_zh}：{title_zh}' if title_zh not in label_zh else label_zh
-        title_en = f'{label_en}: {title_en}' if title_en not in label_en else label_en
+        badge_zh = label_zh.replace("周报", "").strip()          # 2026 W35
+        badge_en = label_en.replace("Weekly Report", "").replace("Weekly", "").strip()
+        # 若标题仍以“周报：”开头则去掉前缀
+        if title_zh.startswith("周报："):
+            title_zh = title_zh[3:]
+        if title_en.lower().startswith("weekly report:"):
+            title_en = title_en[len("weekly report:"):].strip()
     return f'''                <a class="report-card" href="{m["url"]}">
-                    <span class="report-kind" data-zh="{kind_zh}" data-en="{kind_en}">{kind_zh}</span>
+                    <span class="report-kind" data-zh="{esc(badge_zh or kind_zh)}" data-en="{esc(badge_en or kind_en)}">{esc(badge_zh or kind_zh)}</span>
                     <h3 data-zh="{esc(title_zh)}" data-en="{esc(title_en)}">{esc(title_zh)}</h3>
                     <p data-zh="{esc(m.get("desc_zh", ""))}" data-en="{esc(m.get("desc_en", ""))}">{esc(m.get("desc_zh", ""))}</p>
                     <div class="report-meta">
@@ -120,10 +126,11 @@ def archive_item(m) -> str:
     title_zh = m.get("title_zh", m["id"])
     title_en = m.get("title_en", m["id"])
     if m["kind"] == "weekly":
-        label_zh = m.get("week_label_zh", title_zh)
-        label_en = m.get("week_label_en", title_en)
-        title_zh = f'{label_zh}：{title_zh}' if title_zh not in label_zh else label_zh
-        title_en = f'{label_en}: {title_en}' if title_en not in label_en else label_en
+        # 期次标签去掉「周报」二字，如「2026 W35」
+        label_zh = m.get("week_label_zh", title_zh).replace("周报", "").strip()
+        label_en = m.get("week_label_en", title_en).replace("Weekly Report", "").replace("Weekly", "").strip()
+        title_zh = f'{label_zh}：{title_zh}'
+        title_en = f'{label_en}: {title_en}'
     return f'''            <li>
                 <a class="archive-item" href="{m["url"]}">
                     <div>
@@ -143,6 +150,73 @@ def replace_auto(html: str, name: str, body: str) -> str:
     if not pat.search(html):
         raise SystemExit(f"ERROR: AUTO block '{name}' not found")
     return pat.sub(lambda m: m.group(1) + "\n" + body + "\n            " + m.group(2), html)
+
+
+PARTIALS = ROOT / "templates" / "partials"
+
+
+def replace_block(html: str, name: str, body: str):
+    """Replace a whole AUTO block (markers included). Returns None if absent."""
+    pat = re.compile(
+        r"<!-- AUTO:" + re.escape(name) + r":begin -->.*?<!-- AUTO:" + re.escape(name) + r":end -->",
+        re.S,
+    )
+    m = pat.search(html)
+    if not m:
+        return None
+    # inline blocks (e.g. inside an attribute) stay on one line
+    if "\n" not in m.group(0):
+        repl = f"<!-- AUTO:{name}:begin -->{body}<!-- AUTO:{name}:end -->"
+    else:
+        repl = f"<!-- AUTO:{name}:begin -->\n{body}\n    <!-- AUTO:{name}:end -->"
+    return pat.sub(lambda _m: repl, html, count=1)
+
+
+def chrome_pages():
+    """All site pages that share the canonical header/footer."""
+    pages = [ROOT / "index.html", ROOT / "about.html"]
+    for folder in ("weekly", "steps"):
+        base = ROOT / folder
+        if base.is_dir():
+            pages += sorted(base.glob("**/index.html"))
+            pages += sorted(base.glob("**/report-zh.html"))
+            pages += sorted(base.glob("**/report-en.html"))
+    return [p for p in pages if p.is_file()]
+
+
+import hashlib
+
+
+def _css_version() -> str:
+    """短哈希版本号：assets/css/main.css 内容一变，全站 href 自动换版本，绕过缓存。"""
+    css = (ROOT / "assets" / "css" / "main.css").read_bytes()
+    return hashlib.sha1(css).hexdigest()[:10]
+
+
+def _bust_css(html: str, version: str) -> str:
+    return re.sub(r"main\.css\?v=[0-9a-f]+", f"main.css?v={version}", html)
+
+
+def sync_chrome(items) -> None:
+    """Inject the single-source header/footer partials into every page that
+    carries AUTO:header / AUTO:footer markers, and keep the homepage CTA
+    pointing at the latest weekly report (AUTO:latest-cta)."""
+    header = (PARTIALS / "header.html").read_text(encoding="utf-8").strip("\n")
+    css_ver = _css_version()
+    footer = (PARTIALS / "footer.html").read_text(encoding="utf-8").strip("\n")
+    latest = items["weekly"][0]["url"] if items["weekly"] else "/weekly/"
+    latest_cta = (f'<a class="cta-main" href="{latest}" data-zh="阅读最新报告 →" data-en="Read the latest report →">阅读最新报告 →</a>')
+    for path in chrome_pages():
+        html = path.read_text(encoding="utf-8")
+        out = html
+        for name, body in (("header", header), ("footer", footer), ("latest-cta", latest_cta)):
+            newer = replace_block(out, name, body)
+            if newer is not None:
+                out = newer
+        out = _bust_css(out, css_ver)
+        if out != html:
+            path.write_text(out, encoding="utf-8")
+            print(f"chrome synced: {path.relative_to(ROOT)}")
 
 
 def _content_html(m) -> str:
@@ -175,8 +249,8 @@ def _content_html(m) -> str:
 def rss_item(m) -> str:
     title_zh = m.get("title_zh", m["id"])
     if m["kind"] == "weekly":
-        label_zh = m.get("week_label_zh", title_zh)
-        title_zh = f'{label_zh}：{title_zh}' if title_zh not in label_zh else label_zh
+        label_zh = m.get("week_label_zh", title_zh).replace("周报", "").strip()
+        title_zh = f'{label_zh}：{title_zh}'
     from email.utils import format_datetime
     from datetime import datetime, timezone
     dt = datetime.fromisoformat(m["date"]).replace(tzinfo=timezone.utc)
@@ -265,6 +339,9 @@ def main():
     # --- feed ---
     (ROOT / "feed.xml").write_text(build_feed(items), encoding="utf-8")
     print("updated feed.xml")
+
+    # --- shared chrome (header / footer / latest-weekly CTA) ---
+    sync_chrome(items)
 
 
 if __name__ == "__main__":
