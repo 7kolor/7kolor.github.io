@@ -31,6 +31,7 @@
 ├── scripts/                 # 构建脚本
 ├── tests/                   # 单元测试
 ├── templates/               # 发布工作流说明
+│   └── partials/            # 页眉 header.html / 页脚 footer.html（全站唯一来源）
 └── .github/workflows/       # CI/CD
 ```
 
@@ -42,7 +43,7 @@
 |------|------|---------|
 | `scripts/publish.py` | 一键发布：校验 meta.json → 生成单语页 → 更新首页/归档/feed | CI 或本地发布 |
 | `scripts/build_i18n.py` | 生成单语页 report-zh/en | 双语内容分离 |
-| `scripts/build_site.py` | 更新首页卡片、归档列表、feed.xml | 只动 AUTO 块，不碰手写内容 |
+| `scripts/build_site.py` | 更新首页卡片、归档列表、feed.xml，并同步全站页眉/页脚/最新周报 CTA（AUTO:header / AUTO:footer / AUTO:latest-cta） | 只动 AUTO 块，不碰手写内容 |
 | `scripts/check_sanitize.py` | 安全门禁 | 检查历史/工作区敏感信息 |
 
 ---

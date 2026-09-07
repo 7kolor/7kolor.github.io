@@ -9,10 +9,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500;600;700&display=swap" rel="stylesheet">
         <title>7Kolor Insights — 独立开发者情报与洞察 / Intelligence & Insight for Indie Developers</title>
     <meta name="description" content="给独立开发者的数据驱动洞察：赛道研判、痛点信号、成功案例。AI 时代技术不再是门槛，找对赛道、读懂真实需求才是关键。">
-    <link rel="stylesheet" href="/assets/css/main.css?v=3">
+    <link rel="stylesheet" href="/assets/css/main.css?v=1af0321a35">
     <link rel="alternate" type="application/rss+xml" title="7Kolor Insights" href="/feed.xml">
 </head>
 <body>
+<!-- AUTO:header:begin -->
     <header class="header">
         <div class="header-inner">
             <a href="/" class="logo">
@@ -21,10 +22,10 @@
             </a>
             <nav class="nav">
                 <div class="nav-links">
-                    <a href="#framework" data-zh="六步流程" data-en="6-Step Framework">六步流程</a>
-                    <a href="/weekly/" data-zh="每周情报" data-en="Weekly">每周情报</a>
-                    <a href="#reports" data-zh="专项报告" data-en="Special Reports">专项报告</a>
-                    <a href="#services" data-zh="定制服务" data-en="Services">定制服务</a>
+                    <a href="/#framework" data-zh="六步流程" data-en="6-Step Framework">六步流程</a>
+                    <a href="/weekly/" data-zh="每周情报" data-en="Weekly Intelligence">每周情报</a>
+                    <a href="/#reports" data-zh="专项报告" data-en="Special Reports">专项报告</a>
+                    <a href="/#services" data-zh="定制服务" data-en="Services">定制服务</a>
                     <a href="/about.html" data-zh="关于" data-en="About">关于</a>
                 </div>
                 <div class="lang-toggle">
@@ -34,6 +35,7 @@
             </nav>
         </div>
     </header>
+    <!-- AUTO:header:end -->
 
                 <section class="landing-hero">
         <div class="hero-deco" aria-hidden="true">
@@ -57,18 +59,20 @@
                 <div class="hb-sub" data-zh="先洞察，后开发" data-en="Insight first, build second">先洞察，后开发</div>
             </div>
             <div class="hero-carousel" data-carousel>
-                <span class="slogan-item show" data-zh="Stop fork repo, start find gap." data-en="Stop fork repo, start find gap.">Stop fork repo, start find gap.</span>
-                <span class="slogan-item" data-zh="Stop git push, start data pull." data-en="Stop git push, start data pull.">Stop git push, start data pull.</span>
-                <span class="slogan-item" data-zh="Stop pull request, start pain research." data-en="Stop pull request, start pain research.">Stop pull request, start pain research.</span>
-                <span class="slogan-item" data-zh="Stop commit, start converse." data-en="Stop commit, start converse.">Stop commit, start converse.</span>
-                <span class="slogan-item" data-zh="Stop deploy, start discover." data-en="Stop deploy, start discover.">Stop deploy, start discover.</span>
-                <span class="slogan-item" data-zh="Stop Merge, Start Market." data-en="Stop Merge, Start Market.">Stop Merge, Start Market.</span>
+                <span class="slogan-item show"><span class="stop">Stop Fork Repo</span>, <span class="start">Start Find Gap</span>.</span>
+                <span class="slogan-item"><span class="stop">Stop Git Push</span>, <span class="start">Start Data Pull</span>.</span>
+                <span class="slogan-item"><span class="stop">Stop Pull Request</span>, <span class="start">Start Pain Research</span>.</span>
+                <span class="slogan-item"><span class="stop">Stop Commit</span>, <span class="start">Start Converse</span>.</span>
+                <span class="slogan-item"><span class="stop">Stop Deploy</span>, <span class="start">Start Discover</span>.</span>
+                <span class="slogan-item"><span class="stop">Stop Merge</span>, <span class="start">Start Market</span>.</span>
             </div>
             <div class="hero-carousel-dots" data-carousel-dots>
                 <span class="dot active"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
             </div>
             <div class="landing-cta">
-                <a class="cta-main" href="/weekly/2026-W34/" data-zh="阅读最新报告 →" data-en="Read the latest report →">阅读最新报告 →</a>
+                <!-- AUTO:latest-cta:begin -->
+<a class="cta-main" href="/weekly/2026-W35/" data-zh="阅读最新报告 →" data-en="Read the latest report →">阅读最新报告 →</a>
+    <!-- AUTO:latest-cta:end -->
             </div>
         </div>
     </section>
@@ -78,8 +82,7 @@
 
     <main class="site-main">
         <!-- 我们的主张 -->
-        <section class="landing-section reveal">
-            <h2 class="sec-head"><svg class="sec-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg><span data-zh="我们的主张" data-en="Our Thesis">我们的主张</span></h2>
+        <section class="landing-section reveal thesis-sec">
             <p class="thesis-line" data-zh="项目的成败，在写下第一行代码之前就已埋下伏笔。"
                data-en="A project's fate is sealed before the first line of code.">项目的成败，在写下第一行代码之前就已埋下伏笔。</p>
             <div class="thesis-row">
@@ -91,13 +94,13 @@
         <!-- 板块一：每周情报（自动生成，最新多篇倒序） -->
         <section class="landing-section reveal" id="weekly">
             <div class="landing-section-header">
-                <h2 class="sec-head"><svg class="sec-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="2"/><path d="M16.24 7.76a6 6 0 0 1 0 8.49M7.76 16.24a6 6 0 0 1 0-8.49M19.07 4.93a10 10 0 0 1 0 14.14M4.93 19.07a10 10 0 0 1 0-14.14"/></svg><span class="bb-badge">📰</span><span data-zh="每周情报" data-en="Weekly Intelligence">每周情报</span></h2>
+                <h2 class="sec-head"><svg class="sec-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="2"/><path d="M16.24 7.76a6 6 0 0 1 0 8.49M7.76 16.24a6 6 0 0 1 0-8.49M19.07 4.93a10 10 0 0 1 0 14.14M4.93 19.07a10 10 0 0 1 0-14.14"/></svg><span data-zh="每周情报" data-en="Weekly Intelligence">每周情报</span></h2>
             </div>
             <div class="report-grid report-grid-reveal weekly-grid">
             <!-- AUTO:cards-weekly:begin -->
                 <a class="report-card" href="/weekly/2026-W35/">
-                    <span class="report-kind" data-zh="周报" data-en="Weekly">周报</span>
-                    <h3 data-zh="2026 W35 周报：AI Agent 基础设施产品化与 AI 治理新赛道" data-en="2026 W35 Weekly Report: AI Agent Infrastructure Productization &amp; AI Governance as New Track">2026 W35 周报：AI Agent 基础设施产品化与 AI 治理新赛道</h3>
+                    <span class="report-kind" data-zh="2026 W35" data-en="2026 W35">2026 W35</span>
+                    <h3 data-zh="AI Agent 基础设施产品化与 AI 治理新赛道" data-en="AI Agent Infrastructure Productization &amp; AI Governance as New Track">AI Agent 基础设施产品化与 AI 治理新赛道</h3>
                     <p data-zh="大模型周：GPT-6-Astra / Fable 5.1 / Gemini 3.8 Flash 同周发布，AI 创作交付层、AI 治理质检与端侧自托管成为被数据验证的三条机会赛道。" data-en="Mega-release week: GPT-6-Astra / Fable 5.1 / Gemini 3.8 Flash all landed. AI creation delivery, AI governance/QC, and edge self-hosting are three data-validated tracks.">大模型周：GPT-6-Astra / Fable 5.1 / Gemini 3.8 Flash 同周发布，AI 创作交付层、AI 治理质检与端侧自托管成为被数据验证的三条机会赛道。</p>
                     <div class="report-meta">
                         <span>📅 2026-08-30 ~ 09-05</span>
@@ -105,8 +108,8 @@
                     </div>
                 </a>
                 <a class="report-card" href="/weekly/2026-W34/">
-                    <span class="report-kind" data-zh="周报" data-en="Weekly">周报</span>
-                    <h3 data-zh="2026 W34：AI 编程可信度危机与定价获客" data-en="2026 W34: AI Coding Reliability Crisis &amp; Pricing as Growth">2026 W34：AI 编程可信度危机与定价获客</h3>
+                    <span class="report-kind" data-zh="2026 W34" data-en="2026 W34">2026 W34</span>
+                    <h3 data-zh="AI 编程可信度危机与定价获客" data-en="AI Coding Reliability Crisis &amp; Pricing as Growth">AI 编程可信度危机与定价获客</h3>
                     <p data-zh="AI 编程从「万能」到「不可靠」的共识正在形成；取消免费试用+翻倍定价 23 天做到 $1,600 MRR；合规成本上升为隐性威胁。" data-en="Consensus forms that AI coding is 'unreliable'; removing free trial + doubling price hit $1,600 MRR in 23 days; compliance costs rise as hidden threat.">AI 编程从「万能」到「不可靠」的共识正在形成；取消免费试用+翻倍定价 23 天做到 $1,600 MRR；合规成本上升为隐性威胁。</p>
                     <div class="report-meta">
                         <span>📅 2026-08-23 ~ 08-29</span>
@@ -134,7 +137,7 @@
     <!-- 板块一：① 发现机会 -->
     <section class="landing-section reveal step-panel" id="board-1">
         <div class="step-card-hd">
-            <h3 class="step-title">Stop Fork Repo, Start Find Gap</h3>
+            <h3 class="step-title"><span class="stop">Stop Fork Repo</span>, <span class="start">Start Find Gap</span></h3>
             <span class="step-tally"><!-- AUTO:step-count-1:begin -->
 <span class="step-tally-in empty" data-n="0">📊 报告筹备中</span>
             <!-- AUTO:step-count-1:end --></span>
@@ -155,7 +158,7 @@
     <!-- 板块一：② 收集信号 -->
     <section class="landing-section reveal step-panel" id="board-2">
         <div class="step-card-hd">
-            <h3 class="step-title">Stop Git Push, Start Data Pull</h3>
+            <h3 class="step-title"><span class="stop">Stop Git Push</span>, <span class="start">Start Data Pull</span></h3>
             <span class="step-tally"><!-- AUTO:step-count-2:begin -->
 <span class="step-tally-in empty" data-n="0">📊 报告筹备中</span>
             <!-- AUTO:step-count-2:end --></span>
@@ -176,7 +179,7 @@
     <!-- 板块一：③ 深挖问题 -->
     <section class="landing-section reveal step-panel" id="board-3">
         <div class="step-card-hd">
-            <h3 class="step-title">Stop Pull Request, Start Pain Research</h3>
+            <h3 class="step-title"><span class="stop">Stop Pull Request</span>, <span class="start">Start Pain Research</span></h3>
             <span class="step-tally"><!-- AUTO:step-count-3:begin -->
 <span class="step-tally-in empty" data-n="0">📊 报告筹备中</span>
             <!-- AUTO:step-count-3:end --></span>
@@ -197,7 +200,7 @@
     <!-- 板块一：④ 验证假设 -->
     <section class="landing-section reveal step-panel" id="board-4">
         <div class="step-card-hd">
-            <h3 class="step-title">Stop Commit, Start Converse</h3>
+            <h3 class="step-title"><span class="stop">Stop Commit</span>, <span class="start">Start Converse</span></h3>
             <span class="step-tally"><!-- AUTO:step-count-4:begin -->
 <span class="step-tally-in empty" data-n="0">📊 报告筹备中</span>
             <!-- AUTO:step-count-4:end --></span>
@@ -218,7 +221,7 @@
     <!-- 板块一：⑤ 最后把关 -->
     <section class="landing-section reveal step-panel" id="board-5">
         <div class="step-card-hd">
-            <h3 class="step-title">Stop Deploy, Start Discover</h3>
+            <h3 class="step-title"><span class="stop">Stop Deploy</span>, <span class="start">Start Discover</span></h3>
             <span class="step-tally"><!-- AUTO:step-count-5:begin -->
 <span class="step-tally-in empty" data-n="0">📊 报告筹备中</span>
             <!-- AUTO:step-count-5:end --></span>
@@ -239,7 +242,7 @@
     <!-- 板块一：⑥ 验证价值 -->
     <section class="landing-section reveal step-panel" id="board-6">
         <div class="step-card-hd">
-            <h3 class="step-title">Stop Merge, Start Market</h3>
+            <h3 class="step-title"><span class="stop">Stop Merge</span>, <span class="start">Start Market</span></h3>
             <span class="step-tally"><!-- AUTO:step-count-6:begin -->
 <span class="step-tally-in empty" data-n="0">📊 报告筹备中</span>
             <!-- AUTO:step-count-6:end --></span>
@@ -299,33 +302,26 @@
         </section>
     </main>
 
+<!-- AUTO:footer:begin -->
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-brand">
-                <img class="footer-logo" src="/assets/img/logo.png" alt="7Kolor Insights" width="28" height="28">
+                <img class="footer-logo" src="/assets/img/logo.png" alt="7Kolor Insights" width="26" height="26">
                 <span class="footer-name">7Kolor <span>Insights</span></span>
                 <span class="footer-tagline" data-zh="为独立开发者提供趋势分析与信号洞察" data-en="Trend analysis & signal insight for indie developers">为独立开发者提供趋势分析与信号洞察</span>
             </div>
-            <div class="footer-groups">
-                <div class="fg">
-                    <span class="fg-title" data-zh="内容" data-en="Content">内容</span>
-                    <a href="/weekly/" data-zh="每周情报" data-en="Weekly Intelligence">每周情报</a>
-                    <a href="/#reports" data-zh="专项报告" data-en="Special Reports">专项报告</a>
-                    <a href="/#services" data-zh="定制服务" data-en="Services">定制服务</a>
-                    <a href="/about.html" data-zh="关于" data-en="About">关于</a>
-                </div>
-                <div class="fg">
-                    <span class="fg-title" data-zh="关注我们" data-en="Connect">关注我们</span>
-                    <a href="https://github.com/7kolor/7kolor.github.io" data-zh="GitHub" data-en="GitHub">GitHub</a>
-                    <a href="/feed.xml" data-zh="RSS 订阅" data-en="RSS Feed">RSS 订阅</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>© 2026 7Kolor Insights</p>
-
-            </div>
+            <nav class="footer-links">
+                <a href="/weekly/" data-zh="每周情报" data-en="Weekly">每周情报</a>
+                <a href="/#reports" data-zh="专项报告" data-en="Reports">专项报告</a>
+                <a href="/#services" data-zh="定制服务" data-en="Services">定制服务</a>
+                <a href="/about.html" data-zh="关于" data-en="About">关于</a>
+                <a href="https://github.com/7kolor/7kolor.github.io">GitHub</a>
+                <a href="/feed.xml">RSS</a>
+            </nav>
+            <p class="footer-copy">© 2026 7Kolor Insights</p>
         </div>
     </footer>
+    <!-- AUTO:footer:end -->
 
     <script src="/assets/js/main.js"></script>
 </body>

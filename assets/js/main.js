@@ -9,7 +9,13 @@
     if (btn) btn.classList.add('active');
     document.querySelectorAll('[data-zh]').forEach(function (el) {
       var v = el.getAttribute('data-' + lang);
-      if (v !== null) el.textContent = v;
+      if (v === null) return;
+      // 带 data-html 的元素保留内联强调（加粗/高亮），其余为纯文本
+      if (el.getAttribute('data-html') === '1') {
+        el.innerHTML = v;
+      } else {
+        el.textContent = v;
+      }
     });
     try { localStorage.setItem('7kolor-lang', lang); } catch (e) {}
   }
