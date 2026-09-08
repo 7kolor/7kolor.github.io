@@ -1565,7 +1565,7 @@ h1, h2, h3, .logo-text { font-family: var(--font-display); letter-spacing: -0.3p
     height: 52px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;   /* 列表始终完全居中 */
     gap: 12px;
 }
 .step-mini-list {
@@ -1573,6 +1573,7 @@ h1, h2, h3, .logo-text { font-family: var(--font-display); letter-spacing: -0.3p
     gap: 4px;
     flex-wrap: wrap;
     justify-content: center;
+    flex: 1 1 auto;        /* 占满 prev/next 之间的空间，内容始终居中 */
 }
 .step-mini {
     display: inline-block;
