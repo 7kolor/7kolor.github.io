@@ -25,15 +25,15 @@
             </a>
             <nav class="nav">
                 <div class="nav-links">
-                    <a href="/#framework">6-Step Framework</a>
-                    <a href="/weekly/">Weekly Intelligence</a>
-                    <a href="/#reports">Special Reports</a>
-                    <a href="/#services">Custom Services</a>
-                    <a href="/about.html">About</a>
+                    <a href="/#framework" data-zh="六步流程" data-en="6-Step Framework">六步流程</a>
+                    <a href="/weekly/" data-zh="每周情报" data-en="Weekly Intelligence">每周情报</a>
+                    <a href="/#reports" data-zh="专项报告" data-en="Special Reports">专项报告</a>
+                    <a href="/#services" data-zh="定制服务" data-en="Custom Services">定制服务</a>
+                    <a href="/about.html" data-zh="关于" data-en="About">关于</a>
                 </div>
                 <div class="lang-toggle">
-                    <a class="lang-btn" href="/2026-W36/report-zh.html">中文</a>
-                    <a class="lang-btn active" href="/2026-W36/report-en.html">EN</a>
+                    <button class="lang-btn active" data-lang="zh" onclick="switchLang('zh', this)">中文</button>
+                    <button class="lang-btn" data-lang="en" onclick="switchLang('en', this)">EN</button>
                 </div>
             </nav>
         </div>
@@ -152,7 +152,7 @@
                             <h4>Pain Cluster 1: AI Tool Cost & 'My Tool Was Swallowed by the LLM'</h4>
                         </div>
                         <div class="quote-box">
-                            <p>'Claude can now edit videos and I'm having a bit of a panic' (455/310). 'AI features are making SaaS margins worse, and it's hitting micro SaaS builders hardest'. 'I used Claude Code to build my own accounting tool to replace QuickBooks Online'.<a href="https://www.reddit.com/r/videoediting/comments/1wavkzc">Claude 现在能剪视频了，我有点 panic</a>」（455/310）。「<a href="https://www.reddit.com/r/microsaas/comments/1w9n7se">AI 功能正在让 SaaS 的利润率变差，micro SaaS 独立开发者首当其冲</a>」。「<a href="https://www.reddit.com/r/quickbooksonline/comments/1wa6yab">我用 Claude Code 自制会计工具替代 QuickBooks Online</a>」。</p>
+                            <p>「<a href="https://www.reddit.com/r/videoediting/comments/1wavkzc">Claude 现在能剪视频了，我有点 panic</a>」（455/310）。「<a href="https://www.reddit.com/r/microsaas/comments/1w9n7se">AI 功能正在让 SaaS 的利润率变差，micro SaaS 独立开发者首当其冲</a>」。「<a href="https://www.reddit.com/r/quickbooksonline/comments/1wa6yab">我用 Claude Code 自制会计工具替代 QuickBooks Online</a>」。</p>
                         </div>
                         <div class="deep-analysis">
                             <p>Users aren't 'against AI'—they're 'discovering that AI call cost + subscription fees have eaten all the profit after adopting AI'. The 2,979 price-sensitive posts are full of 'what to do when my AI feature cost goes up'. This is a structural pain, not emotion.</p>
@@ -166,7 +166,7 @@
                             <h4>Pain Cluster 2: SaaS Is Dead vs SaaS Is Alive</h4>
                         </div>
                         <div class="quote-box">
-                            <p>Pro ('SaaS is dead'): 'I just built a video-editing helper, then GPT Astra could control the computer—my tool is useless now'. Con ('SaaS is alive'): 'Where does the SaaS-is-dead narrative come from? Most people don't want to build tools themselves'. Margin threat: 'AI features are making SaaS margins worse—fixed pricing + AI call cost = profit eaten'.<a href="https://www.reddit.com/r/SaaS/comments/1wcq4xn">我刚做了个视频剪辑辅助工具，结果 GPT Astra 能控制电脑，我的工具直接没用</a>」。反方（SaaS 还活着）：「<a href="https://www.reddit.com/r/SaaS/comments/1wbi3bp">SaaS is dead 这话哪来的？大多数人根本不想自己造工具</a>」。利润率威胁：「<a href="https://www.reddit.com/r/microsaas/comments/1w9n7se">AI 功能正在让 SaaS 利润率变差，固定定价 + AI 调用成本 = 利润被吃掉</a>」。</p>
+                            <p>正方（SaaS 要死了）：「<a href="https://www.reddit.com/r/SaaS/comments/1wcq4xn">我刚做了个视频剪辑辅助工具，结果 GPT Astra 能控制电脑，我的工具直接没用</a>」。反方（SaaS 还活着）：「<a href="https://www.reddit.com/r/SaaS/comments/1wbi3bp">SaaS is dead 这话哪来的？大多数人根本不想自己造工具</a>」。利润率威胁：「<a href="https://www.reddit.com/r/microsaas/comments/1w9n7se">AI 功能正在让 SaaS 利润率变差，固定定价 + AI 调用成本 = 利润被吃掉</a>」。</p>
                         </div>
                         <div class="deep-analysis">
                             <p>This isn't slogan debate—it's a real multi-post cross-attack (≥6 pro/con posts). This week's r/SaaS: 'watching your SaaS slowly die' (561 pts) + 'my client found my SaaS and now I'm jobless' (463 pts) = indie SaaS devs are experiencing 'clients replacing me with AI' as reality.</p>
@@ -180,7 +180,7 @@
                             <h4>Pain Cluster 3: Self-Hosting Migration Wave (Event-Driven, with Deadline)</h4>
                         </div>
                         <div class="quote-box">
-                            <p>'Portainer 3 dropping the free Community Edition (CE), pivoting to K8s + enterprise'. 'FileBrowser officially announcing EOL'. 'UPDATE PROXMOX NOW' (security vulnerability).<a href="https://www.reddit.com/r/selfhosted/comments/1wdbia2">Portainer 3 砍掉免费社区版（CE），转向 K8s + 企业版</a>」。「<a href="https://www.reddit.com/r/selfhosted/comments/1w9bo3s">FileBrowser 官方宣布停更</a>」。「<a href="https://www.reddit.com/r/proxmox/comments/1w9ts1w">UPDATE PROXMOX NOW</a>」（安全漏洞）。</p>
+                            <p>「<a href="https://www.reddit.com/r/selfhosted/comments/1wdbia2">Portainer 3 砍掉免费社区版（CE），转向 K8s + 企业版</a>」。「<a href="https://www.reddit.com/r/selfhosted/comments/1w9bo3s">FileBrowser 官方宣布停更</a>」。「<a href="https://www.reddit.com/r/proxmox/comments/1w9ts1w">UPDATE PROXMOX NOW</a>」（安全漏洞）。</p>
                         </div>
                         <div class="deep-analysis">
                             <p>All 3 core self-hosting tools having issues in the same week (feature cut + EOL + security vuln) = users forced to migrate. 'Seeking alternative' discussions: 1,690 posts, but few competitors. This window usually lasts 4-8 weeks, then closes.</p>
@@ -223,11 +223,11 @@
                             <th>Replicable Point</th>
                         </tr></thead>
                         <tbody>
-                            <tr><td>Claude-built accounting tool to replace QuickBooks Online<a href="https://www.reddit.com/r/quickbooksonline/comments/1wa6yab">Claude 自制会计工具替代 QuickBooks Online</a></td><td>Saved subscription fees</td><td>'LLM + proprietary workflow' replaces SaaS; vertical depth is the moat</td></tr>
-                            <tr><td>OBS + RTSP camera into Frigate ($50 hardware for AI monitoring, selfhosted threads)<a href="https://www.reddit.com/r/selfhosted/search?q=frigate">OBS + RTSP 摄像头接 Frigate（$50 硬件做 AI 监控，selfhosted 讨论）</a></td><td>$50 vs commercial $200/mo</td><td>'Cheap hardware + open-source software' combo for AI, 4× cost gap</td></tr>
-                            <tr><td>MCP parameterized queries replacing Text-to-SQL (MCP subs, security layer)<a href="https://www.reddit.com/r/MCPservers/comments/1w8v745">MCP 参数化查询替代 Text-to-SQL（MCPservers 版块，安全层）</a></td><td>Injection-proof + auditable</td><td>'MCP security layer' is a forming category—adding 'guardrails' to LLMs</td></tr>
-                            <tr><td>AppSumo lifetime-deal SaaS 4% churn (SaaS sub, lifetime failure postmortem)<a href="https://www.reddit.com/r/SaaS/comments/1w85es1">AppSumo 买断制 SaaS 流失率 4%（SaaS 版块，买断失败复盘）</a></td><td>Lifetime users churn within 12 months</td><td>Lifelong-purchase as primary monetization is a counter-example—LLM-era users expect subscription</td></tr>
-                            <tr><td>OpenRouter Provider Economics (HN, AI spend analytics)<a href="https://news.ycombinator.com/item?id=49469870">OpenRouter Provider Economics（HN，AI 支出分析）</a></td><td>Show HN discussed</td><td>'AI cost tracking' is a new 2026 SaaS pain-point category</td></tr>
+                            <tr><td><a href="https://www.reddit.com/r/quickbooksonline/comments/1wa6yab">Claude 自制会计工具替代 QuickBooks Online</a></td><td>Saved subscription fees</td><td>'LLM + proprietary workflow' replaces SaaS; vertical depth is the moat</td></tr>
+                            <tr><td><a href="https://www.reddit.com/r/selfhosted/search?q=frigate">OBS + RTSP 摄像头接 Frigate（$50 硬件做 AI 监控，selfhosted 讨论）</a></td><td>$50 vs commercial $200/mo</td><td>'Cheap hardware + open-source software' combo for AI, 4× cost gap</td></tr>
+                            <tr><td><a href="https://www.reddit.com/r/MCPservers/comments/1w8v745">MCP 参数化查询替代 Text-to-SQL（MCPservers 版块，安全层）</a></td><td>Injection-proof + auditable</td><td>'MCP security layer' is a forming category—adding 'guardrails' to LLMs</td></tr>
+                            <tr><td><a href="https://www.reddit.com/r/SaaS/comments/1w85es1">AppSumo 买断制 SaaS 流失率 4%（SaaS 版块，买断失败复盘）</a></td><td>Lifetime users churn within 12 months</td><td>Lifelong-purchase as primary monetization is a counter-example—LLM-era users expect subscription</td></tr>
+                            <tr><td><a href="https://news.ycombinator.com/item?id=49469870">OpenRouter Provider Economics（HN，AI 支出分析）</a></td><td>Show HN discussed</td><td>'AI cost tracking' is a new 2026 SaaS pain-point category</td></tr>
                         </tbody>
                     </table></div>
 
@@ -239,11 +239,11 @@
                             <th>Replicable Point</th>
                         </tr></thead>
                         <tbody>
-                            <tr><td>'4 months, 40 free users, first launch ever: the actual numbers behind ScreenerHub'<a href="https://www.reddit.com/r/indiehackers/comments/1w9n4vl">4 个月，40 个免费用户，第一次发布：ScreenerHub 的真实数字</a>」</td><td>40 free users / first sale</td><td>Small-audience 'build before launch' path: 40 free users = cold-start fuel</td></tr>
-                            <tr><td>'$48 MRR and I can't even say where the money is coming from'<a href="https://www.indiehackers.com/post/e4c2829e58">$48 MRR，我甚至说不清钱从哪来</a>」</td><td>$48/mo</td><td>'Affordable' positioning = $30-100/mo band (avoid the $200+ big-tech band)</td></tr>
-                            <tr><td>'1,800 AI skill assessments in—PMs outscore engineers'<a href="https://www.indiehackers.com/post/d55ece5460">1,800 次 AI 技能评估——PM 打分高于工程师</a>」</td><td>1,800 assessments</td><td>'AI skill validation' is a B2B paid scenario (enterprise pays)</td></tr>
-                            <tr><td>'I'm an AI CEO running a company to $1M MRR. Day 3, revenue: $0'<a href="https://www.indiehackers.com/post/fb6b8b7d66">我是个 AI CEO，公司做到 $1M MRR。第 3 天，收入：$0</a>」</td><td>Day 3 = $0 (failure sample)</td><td>'AI-driven false prosperity' counter-example—no real users</td></tr>
-                            <tr><td>'Built a debt payoff habit planner, it's live, revenue is still zero'<a href="https://www.indiehackers.com/post/caf0c26287">做了个还债习惯计划器，已上线，收入仍为 0</a>」</td><td>$0 (failure sample)</td><td>'Launch ≠ revenue'—build audience before launching</td></tr>
+                            <tr><td>「<a href="https://www.reddit.com/r/indiehackers/comments/1w9n4vl">4 个月，40 个免费用户，第一次发布：ScreenerHub 的真实数字</a>」</td><td>40 free users / first sale</td><td>Small-audience 'build before launch' path: 40 free users = cold-start fuel</td></tr>
+                            <tr><td>「<a href="https://www.indiehackers.com/post/e4c2829e58">$48 MRR，我甚至说不清钱从哪来</a>」</td><td>$48/mo</td><td>'Affordable' positioning = $30-100/mo band (avoid the $200+ big-tech band)</td></tr>
+                            <tr><td>「<a href="https://www.indiehackers.com/post/d55ece5460">1,800 次 AI 技能评估——PM 打分高于工程师</a>」</td><td>1,800 assessments</td><td>'AI skill validation' is a B2B paid scenario (enterprise pays)</td></tr>
+                            <tr><td>「<a href="https://www.indiehackers.com/post/fb6b8b7d66">我是个 AI CEO，公司做到 $1M MRR。第 3 天，收入：$0</a>」</td><td>Day 3 = $0 (failure sample)</td><td>'AI-driven false prosperity' counter-example—no real users</td></tr>
+                            <tr><td>「<a href="https://www.indiehackers.com/post/caf0c26287">做了个还债习惯计划器，已上线，收入仍为 0</a>」</td><td>$0 (failure sample)</td><td>'Launch ≠ revenue'—build audience before launching</td></tr>
                         </tbody>
                     </table></div>
                     <div class="card">
@@ -266,11 +266,11 @@
                         </tr></thead>
                         <tbody>
                             <tr><td>R1 Platform single-point dependency</td><td>YouTube sub heavy negatives + platform ban silent loss</td><td>9/10</td><td>Data export + multi-platform distribution</td></tr>
-                            <tr><td>R2 AI output credibility (vibe-coding backlash)</td><td>'The vibe coders' (10,783 pts) + AI image detection warning (5,166 pts)—users losing trust in AI outputs<a href="https://www.reddit.com/r/ClaudeAI/comments/1w61niq">The vibe coders</a>」（10,783 分）+ <a href="https://www.reddit.com/r/antiai/comments/1w81kdd">AI 图像识别预警</a>（5,166 分）——用户开始不信任 AI 生成物</td><td>8/10</td><td>Add evidence chain next to AI outputs (source / test / human-review status)</td></tr>
-                            <tr><td>R3 Price-hike churn (AI cost pass-through)</td><td>SaaS margin debate (463 pts) + 500% RAM price hike (AI hyperscalers pre-ordered 2027 global RAM supply, 6,015 pts)—cost rise passes through to end-user pricing<a href="https://www.reddit.com/r/SaaS/comments/1w8p7by">SaaS 利润率论战</a>（463 分）+ <a href="https://www.reddit.com/r/Futurology/comments/1vv9v7k">内存涨价 500%（AI 超大规模厂商预订 2027 全球 RAM 供应）</a>（6,015 分）——成本上行传导到终端定价</td><td>7/10</td><td>Write 'price commitment + cost transparency' into your README</td></tr>
+                            <tr><td>R2 AI output credibility (vibe-coding backlash)</td><td>「<a href="https://www.reddit.com/r/ClaudeAI/comments/1w61niq">The vibe coders</a>」（10,783 分）+ <a href="https://www.reddit.com/r/antiai/comments/1w81kdd">AI 图像识别预警</a>（5,166 分）——用户开始不信任 AI 生成物</td><td>8/10</td><td>Add evidence chain next to AI outputs (source / test / human-review status)</td></tr>
+                            <tr><td>R3 Price-hike churn (AI cost pass-through)</td><td><a href="https://www.reddit.com/r/SaaS/comments/1w8p7by">SaaS 利润率论战</a>（463 分）+ <a href="https://www.reddit.com/r/Futurology/comments/1vv9v7k">内存涨价 500%（AI 超大规模厂商预订 2027 全球 RAM 供应）</a>（6,015 分）——成本上行传导到终端定价</td><td>7/10</td><td>Write 'price commitment + cost transparency' into your README</td></tr>
                             <tr><td>R4 Concentrated product-abandonment migration</td><td>Portainer CE cut + FileBrowser EOL + Proxmox security update, 'seeking alternative' discussions 1,690</td><td>6/10</td><td>Go into those threads to research where users migrate; build a 'migration guide'</td></tr>
                             <tr><td>R5 Failure postmortems (deterrent post density)</td><td>295 'I advise you not to do X / I regret it' failure postmortem posts—new-entrant sentiment is cautious</td><td>6/10</td><td>Marketing: 'I solved X' case-study content, not half-baked feedback-begging</td></tr>
-                            <tr><td>R6 Lifelong-purchase structural risk</td><td>AppSumo lifetime-deal SaaS 4% churn (sample &lt;30, monitor only)<a href="https://www.reddit.com/r/SaaS/comments/1w85es1">AppSumo 买断制 SaaS 流失率 4%</a>（样本 &lt;30，仅监控）</td><td>5/10</td><td>Lifelong-purchase as primary monetization is a counter-example; subscription-first</td></tr>
+                            <tr><td>R6 Lifelong-purchase structural risk</td><td><a href="https://www.reddit.com/r/SaaS/comments/1w85es1">AppSumo 买断制 SaaS 流失率 4%</a>（样本 &lt;30，仅监控）</td><td>5/10</td><td>Lifelong-purchase as primary monetization is a counter-example; subscription-first</td></tr>
                             <tr><td>R7 AI capability absorption</td><td>'Claude can now edit videos and I'm panicking' 455 pts + big-model native capability covers thin wrappers</td><td>5/10</td><td>Add 'data ownership + vertical depth' moats</td></tr>
                             <tr><td>R8 Account ban/mis-ban</td><td>Etsy mis-banned by AI (sample &lt;30, monitor only)</td><td>4/10</td><td>Multi-platform backup accounts + periodic data export</td></tr>
                         </tbody>
@@ -290,9 +290,9 @@
                             <th>Where Your Pricing Should Land</th>
                         </tr></thead>
                         <tbody>
-                            <tr><td>&lt;$50/mo micro SaaS</td><td>$39 Next.js SEO kit validation / First $39 pre-order<a href="https://www.indiehackers.com/post/1vwmley">Next.js SEO 套件 $39 求验证（IH）</a> / <a href="https://www.indiehackers.com/post/1w7w6xz">预购首单 $39（首个 $39 预购，产品未完成）</a></td><td>Main battlefield, but '$20 AI subscription' is a new competitor</td></tr>
-                            <tr><td>$30-200/mo B2B tools</td><td>'Affordable SEO toolkit' $500 MRR / AppSumo lifetime-deal 4% churn (SaaS postmortem)<a href="https://www.indiehackers.com/post/662490d322">「可负担的 SEO 工具包」$500 MRR</a> / <a href="https://www.reddit.com/r/SaaS/comments/1w85es1">AppSumo 买断制 4% 流失（SaaS 复盘）</a></td><td>Mainstream monetization band; above $100 must carry a 'why cheaper/pricier than X' comparison page</td></tr>
-                            <tr><td>$4.5k-50k physical installation</td><td>HVAC heat pumps $49.5k quote sanity-check (hvacadvice)<a href="https://www.reddit.com/r/hvacadvice/comments/1wb4a7n">HVAC 热泵 $49.5k 报价求助（hvacadvice 版块）</a></td><td>Not directly serviceable, but 'quote audit' content (B2B tool direction) is viable</td></tr>
+                            <tr><td>&lt;$50/mo micro SaaS</td><td><a href="https://www.indiehackers.com/post/1vwmley">Next.js SEO 套件 $39 求验证（IH）</a> / <a href="https://www.indiehackers.com/post/1w7w6xz">预购首单 $39（首个 $39 预购，产品未完成）</a></td><td>Main battlefield, but '$20 AI subscription' is a new competitor</td></tr>
+                            <tr><td>$30-200/mo B2B tools</td><td><a href="https://www.indiehackers.com/post/662490d322">「可负担的 SEO 工具包」$500 MRR</a> / <a href="https://www.reddit.com/r/SaaS/comments/1w85es1">AppSumo 买断制 4% 流失（SaaS 复盘）</a></td><td>Mainstream monetization band; above $100 must carry a 'why cheaper/pricier than X' comparison page</td></tr>
+                            <tr><td>$4.5k-50k physical installation</td><td><a href="https://www.reddit.com/r/hvacadvice/comments/1wb4a7n">HVAC 热泵 $49.5k 报价求助（hvacadvice 版块）</a></td><td>Not directly serviceable, but 'quote audit' content (B2B tool direction) is viable</td></tr>
                         </tbody>
                     </table></div>
                     <div class="card">
@@ -376,13 +376,13 @@
             <div class="footer-brand">
                 <img class="footer-logo" src="/assets/img/logo.png" alt="7Kolor Insights" width="26" height="26">
                 <span class="footer-name">7Kolor <span>Insights</span></span>
-                <span class="footer-tagline">Trend analysis & signal insight for indie developers</span>
+                <span class="footer-tagline" data-zh="为独立开发者提供趋势分析与信号洞察" data-en="Trend analysis & signal insight for indie developers">为独立开发者提供趋势分析与信号洞察</span>
             </div>
             <nav class="footer-links">
-                <a href="/weekly/">Weekly</a>
-                <a href="/#reports">Reports</a>
-                <a href="/#services">Custom Services</a>
-                <a href="/about.html">About</a>
+                <a href="/weekly/" data-zh="每周情报" data-en="Weekly">每周情报</a>
+                <a href="/#reports" data-zh="专项报告" data-en="Reports">专项报告</a>
+                <a href="/#services" data-zh="定制服务" data-en="Custom Services">定制服务</a>
+                <a href="/about.html" data-zh="关于" data-en="About">关于</a>
                 <a href="https://github.com/7kolor/7kolor.github.io">GitHub</a>
                 <a href="/feed.xml">RSS</a>
             </nav>
