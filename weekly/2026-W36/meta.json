@@ -1,0 +1,13 @@
+{
+  "kind": "weekly",
+  "id": "2026-W36",
+  "week_label_zh": "2026 W36 周报",
+  "week_label_en": "2026 W36 Weekly Report",
+  "title_zh": "AI 替代焦虑遇上裁员潮反转：双信号之下的职业保障窗口",
+  "title_en": "AI Job-Replacement Anxiety Meets the Layoff Reversal: The Career-Security Window",
+  "desc_zh": "5 源全量 110,383 条去重打标：① 55% 高管后悔 AI 裁员、Visa 反向裁掉 $500K 高管——AI 裁员潮出现对冲；② $70/小时真人 AI 质检服务，付费需求成型；③ 超大规模厂商预订 2027 全球 50% RAM 供应，自托管/AI 硬件成本上行。",
+  "desc_en": "110,383 dedup tags across 5 sources: ① 55% of execs regret AI-driven layoffs and Visa cuts its own $500K hires—the layoff wave is reversing; ② $70/hr human AI quality-checking: a new paid service category forming; ③ hyperscalers book 50% of 2027 global RAM supply—self-hosted & AI hardware costs rising.",
+  "date_range": "2026-09-06 ~ 09-12",
+  "date": "2026-09-12",
+  "sources": "Reddit · HN · IH · PH"
+}

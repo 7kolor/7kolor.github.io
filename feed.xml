@@ -15,6 +15,308 @@
     </image>
     <atom:link href="https://7kolor.github.io/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>7Kolor Insights — 2026 W36：AI 替代焦虑遇上裁员潮反转：双信号之下的职业保障窗口</title>
+      <link>https://7kolor.github.io/weekly/2026-W36/</link>
+      <guid>https://7kolor.github.io/weekly/2026-W36/</guid>
+      <pubDate>Sat, 12 Sep 2026 00:00:00 +0000</pubDate>
+      <category>周报</category>
+      <description>5 源全量 110,383 条去重打标：① 55% 高管后悔 AI 裁员、Visa 反向裁掉 $500K 高管——AI 裁员潮出现对冲；② $70/小时真人 AI 质检服务，付费需求成型；③ 超大规模厂商预订 2027 全球 50% RAM 供应，自托管/AI 硬件成本上行。</description>
+      <content:encoded><![CDATA[<!-- Overview -->
+                
+                <!-- Overview -->
+                <section id="overview" class="section">
+                    <div class="section-header">
+                        <div class="section-icon blue">📋</div>
+                        <h2 data-zh="本周三件值得花 2 分钟读完的事" data-en="Three Things Worth 2 Minutes This Week">本周三件值得花 2 分钟读完的事</h2>
+                    </div>
+                    <div class="card card-highlight">
+                        <p data-zh="① 你的用户正在被「AI 替代掉我的工作」吞噬焦虑——11,433 分热帖是最大获客土壤；② 但同周出现裁员潮反转：55% 高管后悔 AI 裁员（5,284 分）、「Visa 裁掉 $500K 高管」（6,012 分），反向招聘信号成型；③ 自托管事件潮（Portainer CE 砍掉 + FileBrowser 停更 + Proxmox 安全更新 712 分）+ 硬件涨价（超大规模厂商预订 2027 RAM 供应），4-8 周迁移窗口打开。" data-en="① Your users are being devoured by 'AI is replacing my job' anxiety—the 11,433-pt post is the fattest acquisition soil; ② but the same week shows the layoff wave reversing: 55% of execs regret AI-driven layoffs (5,284 pts) + 'Visa cuts its $500K exec' (6,012 pts), a rehiring signal forming; ③ Self-hosting event cluster (Portainer CE cut + FileBrowser EOL + Proxmox security update 712 pts) + hardware price hike (hyperscalers booked 2027 RAM supply), a 4-8 week migration window opening.">① 你的用户正在被「AI 替代掉我的工作」吞噬焦虑——11,433 分热帖是最大获客土壤；② 但同周出现裁员潮反转：55% 高管后悔 AI 裁员（5,284 分）、「Visa 裁掉 $500K 高管」（6,012 分），反向招聘信号成型；③ 自托管事件潮（Portainer CE 砍掉 + FileBrowser 停更 + Proxmox 安全更新 712 分）+ 硬件涨价（超大规模厂商预订 2027 RAM 供应），4-8 周迁移窗口打开。</p>
+                    </div>
+                    <div class="stat-grid">
+                        <div class="stat-card">
+                            <div class="stat-value">34,271</div>
+                            <div class="stat-label" data-zh="本周新帖（上周 16,346，+109%）" data-en="New Posts This Week (last week 16,346, +109%)">本周新帖（上周 16,346，+109%）</div>
+                        </div>
+                        <div class="stat-card positive">
+                            <div class="stat-value">18,192</div>
+                            <div class="stat-label" data-zh="用户痛点 / 吐槽 / 急需求" data-en="User Pain / Complaints / Urgent Needs">用户痛点 / 吐槽 / 急需求</div>
+                        </div>
+                        <div class="stat-card neutral">
+                            <div class="stat-value">13,665</div>
+                            <div class="stat-label" data-zh="用户求助帖" data-en="User 'Help Me' Posts">用户求助帖</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value">5,279</div>
+                            <div class="stat-label" data-zh="想买 / 推荐信号" data-en="Buy / Recommend Signals">想买 / 推荐信号</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value">2,479</div>
+                            <div class="stat-label" data-zh="失败 / 吐槽复盘" data-en="Failure / Rant Postmortems">失败 / 吐槽复盘</div>
+                        </div>
+                        <div class="stat-card negative">
+                            <div class="stat-value">420</div>
+                            <div class="stat-label" data-zh="出圈大热帖" data-en="Breakout Hot Posts">出圈大热帖</div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Six-Step Matrix -->
+                <section id="sixstep" class="section">
+                    <div class="section-header">
+                        <div class="section-icon green">①</div>
+                        <h2 data-zh="六步框架：本周信号怎么映射到开发决策" data-en="Six-Step Framework: How Signals Map to Dev Decisions">六步框架：本周信号怎么映射到开发决策</h2>
+                    </div>
+                    <div class="table-wrap"><table class="data-table">
+                        <thead><tr>
+                            <th data-zh="步骤" data-en="Step">步骤</th>
+                            <th data-zh="核心问句" data-en="Core Question">核心问句</th>
+                            <th data-zh="本周多少条" data-en="How Many This Week">本周多少条</th>
+                            <th data-zh="本周最该读什么" data-en="What to Read">本周最该读什么</th>
+                        </tr></thead>
+                        <tbody>
+                            <tr><td data-zh="① 发现机会" data-en="① Discover">① 发现机会</td><td data-zh="做什么能赚钱？" data-en="What can make money?">做什么能赚钱？</td><td>3,823</td><td data-zh="3,823 条竞品发布/展示帖（营销+展示，全量）" data-en="3,823 competitor launch/showcase posts (marketing + showcase, full data)">3,823 条竞品发布/展示帖（营销+展示，全量）</td></tr>
+                            <tr><td data-zh="② 收集信号" data-en="② Collect Signals">② 收集信号</td><td data-zh="用户到底在说什么？" data-en="What are users actually saying?">用户到底在说什么？</td><td>34,271</td><td data-zh="痛点集中在 AI 工具成本 / 自托管迁移 / 本地服务报价" data-en="Pain concentrates in AI tool cost / self-hosting migration / local service quoting">痛点集中在 AI 工具成本 / 自托管迁移 / 本地服务报价</td></tr>
+                            <tr><td data-zh="③ 深挖问题" data-en="③ Deep Dive">③ 深挖问题</td><td data-zh="他们为什么痛苦？" data-en="Why are they in pain?">他们为什么痛苦？</td><td>14,720</td><td data-zh="三大痛点（见下），每个都给了「值得做 / 别做」的结论" data-en="Three pains (below), each with a clear 'do it / don't' verdict">三大痛点（见下），每个都给了「值得做 / 别做」的结论</td></tr>
+                            <tr><td data-zh="④ 验证假设" data-en="④ Validate">④ 验证假设</td><td data-zh="我理解对了吗？" data-en="Am I understanding correctly?">我理解对了吗？</td><td>5,279</td><td data-zh="被同伴背书最多的产品 + 被「晒出来」的解决方案" data-en="Most peer-endorsed products + 'shown-out' solutions">被同伴背书最多的产品 + 被「晒出来」的解决方案</td></tr>
+                            <tr><td data-zh="⑤ 最后把关" data-en="⑤ Final Check">⑤ 最后把关</td><td data-zh="上线前还漏了什么？" data-en="What's missed before launch?">上线前还漏了什么？</td><td>2,479</td><td data-zh="8 项风险，前 5 件是发布前 30 秒必查" data-en="8 risks, first 5 are 30-second pre-launch checks">8 项风险，前 5 件是发布前 30 秒必查</td></tr>
+                            <tr><td data-zh="⑥ 验证价值" data-en="⑥ Validate Value">⑥ 验证价值</td><td data-zh="有人愿意买单吗？" data-en="Will anyone pay?">有人愿意买单吗？</td><td>7</td><td data-zh="本周没人晒出「有人付钱」的实锤，但价格带能看出用户愿意花多少钱——见价格带" data-en="No proof of payment this week, but the price bands show what users will pay—see price bands">本周没人晒出「有人付钱」的实锤，但价格带能看出用户愿意花多少钱——见价格带</td></tr>
+                        </tbody>
+                    </table></div>
+                    <div class="card">
+                        <h4 data-zh="一句话读法" data-en="One-Line Reading">一句话读法</h4>
+                        <p data-zh="本周 3,823 条竞品发布/展示帖（大家在晒方案、找机会），但「有人愿意付钱」的信号只有 7 条——差着 500 倍。结论：晒「我解决了什么问题」比晒半成品求反馈，效果好 100 倍。" data-en="This week: 3,823 competitor launch/showcase posts (people showing solutions, hunting opportunities), but only 7 'willing to pay' signals—a 500× gap. Conclusion: showing 'what I solved' beats showing half-baked work for feedback by 100×.">本周 3,823 条竞品发布/展示帖（大家在晒方案、找机会），但「有人愿意付钱」的信号只有 7 条——差着 500 倍。结论：晒「我解决了什么问题」比晒半成品求反馈，效果好 100 倍。</p>
+                    </div>
+                </section>
+
+                <!-- Pain Clusters -->
+                <section id="problems" class="section">
+                    <div class="section-header">
+                        <div class="section-icon red">②</div>
+                        <h2 data-zh="三大痛点，每个都给你「值得做 / 别做」的结论" data-en="Three Pains, Each With a Clear 'Do It / Don't' Verdict">三大痛点，每个都给你「值得做 / 别做」的结论</h2>
+                    </div>
+
+                    <div class="pain-point">
+                        <div class="pain-point-header">
+                            <div class="pain-point-icon">🔴</div>
+                            <h4 data-zh="痛点簇 1：AI 工具成本与「我的工具被大模型吞了」" data-en="Pain Cluster 1: AI Tool Cost & 'My Tool Was Swallowed by the LLM'">痛点簇 1：AI 工具成本与「我的工具被大模型吞了」</h4>
+                        </div>
+                        <div class="quote-box">
+                            <p data-zh="「Claude 现在能剪视频了，我有点 panic」（455/310）。「AI 功能正在让 SaaS 的利润率变差，micro SaaS 独立开发者首当其冲」。「我用 Claude Code 自制会计工具替代 QuickBooks Online」。" data-en="'Claude can now edit videos and I'm having a bit of a panic' (455/310). 'AI features are making SaaS margins worse, and it's hitting micro SaaS builders hardest'. 'I used Claude Code to build my own accounting tool to replace QuickBooks Online'.">「<a href="https://www.reddit.com/r/videoediting/comments/1wavkzc">Claude 现在能剪视频了，我有点 panic</a>」（455/310）。「<a href="https://www.reddit.com/r/microsaas/comments/1w9n7se">AI 功能正在让 SaaS 的利润率变差，micro SaaS 独立开发者首当其冲</a>」。「<a href="https://www.reddit.com/r/quickbooksonline/comments/1wa6yab">我用 Claude Code 自制会计工具替代 QuickBooks Online</a>」。</p>
+                        </div>
+                        <div class="deep-analysis">
+                            <p data-zh="用户不是「不想用 AI」，是「用了 AI 之后发现 AI 调用成本 + 订阅费把利润吃光了」。2,979 条价格敏感帖里大量是「我的 AI 功能成本涨了怎么办」。这是结构性痛点，不是情绪。" data-en="Users aren't 'against AI'—they're 'discovering that AI call cost + subscription fees have eaten all the profit after adopting AI'. The 2,979 price-sensitive posts are full of 'what to do when my AI feature cost goes up'. This is a structural pain, not emotion.">用户不是「不想用 AI」，是「用了 AI 之后发现 AI 调用成本 + 订阅费把利润吃光了」。2,979 条价格敏感帖里大量是「我的 AI 功能成本涨了怎么办」。这是结构性痛点，不是情绪。</p>
+                        </div>
+                        <div class="opportunity-box"><strong data-zh="结论" data-en="Verdict">结论:</strong> <span data-zh="进：如果你的 AI 工具 &gt; $50/月，本周必须加「为什么比 X 便宜/贵」对比页 + 按量计费选项。不进：做「大模型原生替代薄封装」——大厂 6 个月内覆盖" data-en="In: If your AI tool is above $50/mo, you must add a 'why cheaper/pricier than X' comparison page + usage-based billing option this week. Out: Building 'big-model-native replacements for thin wrappers'—big tech covers within 6 months">进：如果你的 AI 工具 &gt; $50/月，本周必须加「为什么比 X 便宜/贵」对比页 + 按量计费选项。不进：做「大模型原生替代薄封装」——大厂 6 个月内覆盖</span></div>
+                    </div>
+
+                    <div class="pain-point">
+                        <div class="pain-point-header">
+                            <div class="pain-point-icon">🔴</div>
+                            <h4 data-zh="痛点簇 2：SaaS 要死了 vs SaaS 活得很好" data-en="Pain Cluster 2: SaaS Is Dead vs SaaS Is Alive">痛点簇 2：SaaS 要死了 vs SaaS 活得很好</h4>
+                        </div>
+                        <div class="quote-box">
+                            <p data-zh="正方（SaaS 要死了）：「我刚做了个视频剪辑辅助工具，结果 GPT Astra 能控制电脑，我的工具直接没用」。反方（SaaS 还活着）：「SaaS is dead 这话哪来的？大多数人根本不想自己造工具」。利润率威胁：「AI 功能正在让 SaaS 利润率变差，固定定价 + AI 调用成本 = 利润被吃掉」。" data-en="Pro ('SaaS is dead'): 'I just built a video-editing helper, then GPT Astra could control the computer—my tool is useless now'. Con ('SaaS is alive'): 'Where does the SaaS-is-dead narrative come from? Most people don't want to build tools themselves'. Margin threat: 'AI features are making SaaS margins worse—fixed pricing + AI call cost = profit eaten'.">正方（SaaS 要死了）：「<a href="https://www.reddit.com/r/SaaS/comments/1wcq4xn">我刚做了个视频剪辑辅助工具，结果 GPT Astra 能控制电脑，我的工具直接没用</a>」。反方（SaaS 还活着）：「<a href="https://www.reddit.com/r/SaaS/comments/1wbi3bp">SaaS is dead 这话哪来的？大多数人根本不想自己造工具</a>」。利润率威胁：「<a href="https://www.reddit.com/r/microsaas/comments/1w9n7se">AI 功能正在让 SaaS 利润率变差，固定定价 + AI 调用成本 = 利润被吃掉</a>」。</p>
+                        </div>
+                        <div class="deep-analysis">
+                            <p data-zh="这不是口号论战，是真实的多帖互相攻击（正反方 ≥6 帖）。「看着你的 SaaS 慢慢死」（561 分）+「客户找到我的 SaaS 我现在失业了」（463 分）= SaaS 独立开发者正在经历「客户直接用 AI 替代我」的现实。" data-en="This isn't slogan debate—it's a real multi-post cross-attack (≥6 pro/con posts). This week's r/SaaS: 'watching your SaaS slowly die' (561 pts) + 'my client found my SaaS and now I'm jobless' (463 pts) = indie SaaS devs are experiencing 'clients replacing me with AI' as reality.">这不是口号论战，是真实的多帖互相攻击（正反方 ≥6 帖）。「看着你的 SaaS 慢慢死」（561 分）+「客户找到我的 SaaS 我现在失业了」（463 分）= SaaS 独立开发者正在经历「客户直接用 AI 替代我」的现实。</p>
+                        </div>
+                        <div class="opportunity-box"><strong data-zh="结论" data-en="Verdict">结论:</strong> <span data-zh="进（3 种定位各做各的事）：定价 &lt;$30/月 且没有「AI 订阅替代不了」的独特价值 → 加对比页；做了 AI 功能但固定定价 → 利润率正被侵蚀，考虑按量计费或 AI 功能单独定价；薄封装产品 → 加「数据所有权 + 垂直深度」两个护城河" data-en="In (three positioning types, each does its own thing): Pricing &lt;$30/mo without 'AI-subscription-proof' unique value → add a comparison page; built AI features but fixed pricing → margins being eroded, consider usage-based or separate AI-feature pricing; thin-wrapper products → add 'data ownership + vertical depth' moats">进（3 种定位各做各的事）：定价 &lt;$30/月 且没有「AI 订阅替代不了」的独特价值 → 加对比页；做了 AI 功能但固定定价 → 利润率正被侵蚀，考虑按量计费或 AI 功能单独定价；薄封装产品 → 加「数据所有权 + 垂直深度」两个护城河</span></div>
+                    </div>
+
+                    <div class="pain-point">
+                        <div class="pain-point-header">
+                            <div class="pain-point-icon">🔴</div>
+                            <h4 data-zh="痛点簇 3：自托管迁移潮（事件驱动，有截止日期）" data-en="Pain Cluster 3: Self-Hosting Migration Wave (Event-Driven, with Deadline)">痛点簇 3：自托管迁移潮（事件驱动，有截止日期）</h4>
+                        </div>
+                        <div class="quote-box">
+                            <p data-zh="「Portainer 3 砍掉免费社区版（CE），转向 K8s + 企业版」。「FileBrowser 官方宣布停更」。「UPDATE PROXMOX NOW」（安全漏洞）。" data-en="'Portainer 3 dropping the free Community Edition (CE), pivoting to K8s + enterprise'. 'FileBrowser officially announcing EOL'. 'UPDATE PROXMOX NOW' (security vulnerability).">「<a href="https://www.reddit.com/r/selfhosted/comments/1wdbia2">Portainer 3 砍掉免费社区版（CE），转向 K8s + 企业版</a>」。「<a href="https://www.reddit.com/r/selfhosted/comments/1w9bo3s">FileBrowser 官方宣布停更</a>」。「<a href="https://www.reddit.com/r/proxmox/comments/1w9ts1w">UPDATE PROXMOX NOW</a>」（安全漏洞）。</p>
+                        </div>
+                        <div class="deep-analysis">
+                            <p data-zh="3 个自托管核心工具同周出问题（砍功能 + 停更 + 安全漏洞）= 用户被迫迁移。全网「求替代品」讨论 1,690 条，但竞争者很少。这种窗口通常 4-8 周，过期就关。" data-en="All 3 core self-hosting tools having issues in the same week (feature cut + EOL + security vuln) = users forced to migrate. 'Seeking alternative' discussions: 1,690 posts, but few competitors. This window usually lasts 4-8 weeks, then closes.">3 个自托管核心工具同周出问题（砍功能 + 停更 + 安全漏洞）= 用户被迫迁移。全网「求替代品」讨论 1,690 条，但竞争者很少。这种窗口通常 4-8 周，过期就关。</p>
+                        </div>
+                        <div class="opportunity-box"><strong data-zh="结论" data-en="Verdict">结论:</strong> <span data-zh="进（有自托管背景）：轻量 Portainer CE 替代（容器管理 + 反向代理 + Let's Encrypt）。进（没自托管背景）：「本地化部署成本计算器」（硬件涨价 + API 成本痛点，门槛更低）。不进：通用自托管面板（竞争已卷）" data-en="In (self-hosting background): Lightweight Portainer CE alternative (container mgmt + reverse proxy + Let's Encrypt). In (no self-hosting background): 'Local deployment cost calculator' (hardware price hikes + API cost pain, lower barrier). Out: Generic self-hosting panel (already crowded)">进（有自托管背景）：轻量 Portainer CE 替代（容器管理 + 反向代理 + Let's Encrypt）。进（没自托管背景）：「本地化部署成本计算器」（硬件涨价 + API 成本痛点，门槛更低）。不进：通用自托管面板（竞争已卷）</span></div>
+                    </div>
+                </section>
+
+                <!-- Endorsed Products & Cases -->
+                <section id="validate" class="section">
+                    <div class="section-header">
+                        <div class="section-icon blue">③</div>
+                        <h2 data-zh="验证假设：被同伴背书的产品 + 可复现案例" data-en="Validate: Peer-Endorsed Products + Reproducible Cases">验证假设：被同伴背书的产品 + 可复现案例</h2>
+                    </div>
+
+                    <h3 data-zh="本周被同伴「真推荐 / 真想买 / 真在用」的产品" data-en="Products Peers Actually Recommend / Want to Buy / Use This Week">本周被同伴「真推荐 / 真想买 / 真在用」的产品</h3>
+                    <div class="table-wrap"><table class="data-table">
+                        <thead><tr>
+                            <th><span data-zh="产品" data-en="Product">产品</span></th>
+                            <th data-zh="买信号帖数" data-en="Buy-Signal Posts">买信号帖数</th>
+                            <th data-zh="该不该跟进" data-en="Follow or Not">该不该跟进</th>
+                        </tr></thead>
+                        <tbody>
+                            <tr><td data-zh="Claude 系（Claude 116 / Code 63 / Pro 44 / Max 16，本周新帖）" data-en="Claude family (Claude 116 / Code 63 / Pro 44 / Max 16, posts created this week)">Claude 系（Claude 116 / Code 63 / Pro 44 / Max 16，本周新帖）</td><td>239</td><td data-zh="跟进：做外围工具（MCP 安全层 / 本地化替代 / 成本优化），不做竞品" data-en="Follow: build companion tools (MCP security layer / local alternative / cost optimization), not a competitor">跟进：做外围工具（MCP 安全层 / 本地化替代 / 成本优化），不做竞品</td></tr>
+                            <tr><td data-zh="ChatGPT 系（87 / 33 / 19，本周新帖）" data-en="ChatGPT family (87 / 33 / 19, posts created this week)">ChatGPT 系（87 / 33 / 19，本周新帖）</td><td>139</td><td data-zh="跟进：做「多模型切换 + 成本路由」工具" data-en="Follow: build 'multi-model switching + cost routing' tools">跟进：做「多模型切换 + 成本路由」工具</td></tr>
+                            <tr><td data-zh="Astra / Codex / Gemini / Fable" data-en="Astra / Codex / Gemini / Fable">Astra / Codex / Gemini / Fable</td><td>80 / 74 / 45 / 27</td><td data-zh="跟进：做「模型能力对比 + 选择器」工具" data-en="Follow: build 'model capability comparison + selector' tools">跟进：做「模型能力对比 + 选择器」工具</td></tr>
+                            <tr><td data-zh="Obsidian / Mac Studio / Suno / Proxmox" data-en="Obsidian / Mac Studio / Suno / Proxmox">Obsidian / Mac Studio / Suno / Proxmox</td><td>16 / 17 / 17 / 16</td><td data-zh="跟进：做「自托管选型向导」（Proxmox / NAS / UPS 簇）" data-en="Follow: build 'self-hosting selection guide' (Proxmox / NAS / UPS cluster)">跟进：做「自托管选型向导」（Proxmox / NAS / UPS 簇）</td></tr>
+                        </tbody>
+                    </table></div>
+                    <div class="card">
+                        <h4 data-zh="怎么读这张表" data-en="How to Read This Table">怎么读这张表</h4>
+                        <p data-zh="本周 purchase_intent 帖中 Claude 系合计 239 条（本周新帖）是最大单一购买意图池——但读帖子正文，多数是「我方案里用了 Claude」（不是独立口碑），真正「想买 / 求推荐」集中在「AI 周边工具」（MCP 安全层、本地替代、成本优化）。给用户卖「帮你选对 AI 工具」比「帮你用 AI」更有粘性——选型是一次性需求，但选错的代价（成本浪费、效果不好）让用户持续回来。" data-en="This week's purchase_intent posts show the Claude family at 239 (posts created this week) as the largest single purchase-intent pool—but reading post bodies, most are 'I used Claude in my stack' (not independent word-of-mouth); the real 'want to buy / seeking recommendation' concentrates in 'AI companion tools' (MCP security layers, local alternatives, cost optimization). Selling users 'help you pick the right AI tool' is stickier than 'help you use AI'—selection is one-time, but the cost of picking wrong (wasted spend, poor results) brings users back continuously.">本周 purchase_intent 帖中 Claude 系合计 239 条（本周新帖）是最大单一购买意图池——但读帖子正文，多数是「我方案里用了 Claude」（不是独立口碑），真正「想买 / 求推荐」集中在「AI 周边工具」（MCP 安全层、本地替代、成本优化）。给用户卖「帮你选对 AI 工具」比「帮你用 AI」更有粘性——选型是一次性需求，但选错的代价（成本浪费、效果不好）让用户持续回来。</p>
+                    </div>
+
+                    <h3 data-zh="5 个可复现成功案例（本周真新帖）" data-en="5 Reproducible Success Cases (This Week's True-New Posts)">5 个可复现成功案例（本周真新帖）</h3>
+                    <div class="table-wrap"><table class="data-table">
+                        <thead><tr>
+                            <th><span data-zh="案例" data-en="Case">案例</span></th>
+                            <th data-zh="结果" data-en="Outcome">结果</th>
+                            <th data-zh="可复制点" data-en="Replicable Point">可复制点</th>
+                        </tr></thead>
+                        <tbody>
+                            <tr><td data-zh="Claude 自制会计工具替代 QuickBooks Online（QuickBooks 版块）" data-en="Claude-built accounting tool to replace QuickBooks Online"><a href="https://www.reddit.com/r/quickbooksonline/comments/1wa6yab">Claude 自制会计工具替代 QuickBooks Online</a></td><td data-zh="省掉订阅费" data-en="Saved subscription fees">省掉订阅费</td><td data-zh="「大模型 + 自有流程」替代 SaaS，垂直深度是护城河" data-en="'LLM + proprietary workflow' replaces SaaS; vertical depth is the moat">「大模型 + 自有流程」替代 SaaS，垂直深度是护城河</td></tr>
+                            <tr><td data-zh="OBS + RTSP 摄像头接 Frigate（$50 硬件做 AI 监控，selfhosted 讨论）" data-en="OBS + RTSP camera into Frigate ($50 hardware for AI monitoring, selfhosted threads)"><a href="https://www.reddit.com/r/selfhosted/search?q=frigate">OBS + RTSP 摄像头接 Frigate（$50 硬件做 AI 监控，selfhosted 讨论）</a></td><td data-zh="$50 vs 商用 $200/月" data-en="$50 vs commercial $200/mo">$50 vs 商用 $200/月</td><td data-zh="「廉价硬件 + 开源软件」组合做 AI，成本差 4 倍" data-en="'Cheap hardware + open-source software' combo for AI, 4× cost gap">「廉价硬件 + 开源软件」组合做 AI，成本差 4 倍</td></tr>
+                            <tr><td data-zh="MCP 参数化查询替代 Text-to-SQL（MCP 版块，安全层）" data-en="MCP parameterized queries replacing Text-to-SQL (MCP subs, security layer)"><a href="https://www.reddit.com/r/MCPservers/comments/1w8v745">MCP 参数化查询替代 Text-to-SQL（MCPservers 版块，安全层）</a></td><td data-zh="防注入 + 可审计" data-en="Injection-proof + auditable">防注入 + 可审计</td><td data-zh="「MCP 安全层」是正在成型的品类——给大模型加「护栏」" data-en="'MCP security layer' is a forming category—adding 'guardrails' to LLMs">「MCP 安全层」是正在成型的品类——给大模型加「护栏」</td></tr>
+                            <tr><td data-zh="AppSumo 买断制 SaaS 流失率 4%（SaaS 版块，买断失败复盘）" data-en="AppSumo lifetime-deal SaaS 4% churn (SaaS sub, lifetime failure postmortem)"><a href="https://www.reddit.com/r/SaaS/comments/1w85es1">AppSumo 买断制 SaaS 流失率 4%（SaaS 版块，买断失败复盘）</a></td><td data-zh="买断用户 12 个月内流失" data-en="Lifetime users churn within 12 months">买断用户 12 个月内流失</td><td data-zh="买断制当主变现是反例——LLM 时代用户预期是订阅" data-en="Lifelong-purchase as primary monetization is a counter-example—LLM-era users expect subscription">买断制当主变现是反例——LLM 时代用户预期是订阅</td></tr>
+                            <tr><td data-zh="OpenRouter Provider Economics（HN，AI 支出分析）" data-en="OpenRouter Provider Economics (HN, AI spend analytics)"><a href="https://news.ycombinator.com/item?id=49469870">OpenRouter Provider Economics（HN，AI 支出分析）</a></td><td data-zh="Show HN 被讨论" data-en="Show HN discussed">Show HN 被讨论</td><td data-zh="「AI 成本追踪」是 2026 年 SaaS 新痛点品类" data-en="'AI cost tracking' is a new 2026 SaaS pain-point category">「AI 成本追踪」是 2026 年 SaaS 新痛点品类</td></tr>
+                        </tbody>
+                    </table></div>
+
+                    <h3 data-zh="IH 本周真实晒单" data-en="Real IH Revenue Reports This Week">IH 本周真实晒单</h3>
+                    <div class="table-wrap"><table class="data-table">
+                        <thead><tr>
+                            <th><span data-zh="案例" data-en="Case">案例</span></th>
+                            <th data-zh="数字" data-en="Number">数字</th>
+                            <th data-zh="可复制点" data-en="Replicable Point">可复制点</th>
+                        </tr></thead>
+                        <tbody>
+                            <tr><td data-zh="「I catalogued 570 construction software tools, sent 362 cold emails, just got my first paying customer」" data-en="'4 months, 40 free users, first launch ever: the actual numbers behind ScreenerHub'">「<a href="https://www.reddit.com/r/indiehackers/comments/1w9n4vl">4 个月，40 个免费用户，第一次发布：ScreenerHub 的真实数字</a>」</td><td data-zh="40 免费用户 / 首单" data-en="40 free users / first sale">40 免费用户 / 首单</td><td data-zh="小盘「发布前攒受众」路径：40 免费用户 = 冷启动燃料" data-en="Small-audience 'build before launch' path: 40 free users = cold-start fuel">小盘「发布前攒受众」路径：40 免费用户 = 冷启动燃料</td></tr>
+                            <tr><td data-zh="「From Frustration to $500 MRR: Building an Affordable SEO Toolkit」" data-en="'$48 MRR and I can't even say where the money is coming from'">「<a href="https://www.indiehackers.com/post/e4c2829e58">$48 MRR，我甚至说不清钱从哪来</a>」</td><td data-zh="$48/月" data-en="$48/mo">$48/月</td><td data-zh="「可负担」定位 = 价格带 $30-100/月（避开 $200+ 大厂带）" data-en="'Affordable' positioning = $30-100/mo band (avoid the $200+ big-tech band)">「可负担」定位 = 价格带 $30-100/月（避开 $200+ 大厂带）</td></tr>
+                            <tr><td data-zh="「1,800 AI skill assessments in—PMs outscore engineers」" data-en="'1,800 AI skill assessments in—PMs outscore engineers'">「<a href="https://www.indiehackers.com/post/d55ece5460">1,800 次 AI 技能评估——PM 打分高于工程师</a>」</td><td data-zh="1,800 评估" data-en="1,800 assessments">1,800 评估</td><td data-zh="「AI 技能验证」是 B2B 付费场景（企业买单）" data-en="'AI skill validation' is a B2B paid scenario (enterprise pays)">「AI 技能验证」是 B2B 付费场景（企业买单）</td></tr>
+                            <tr><td data-zh="「I'm an AI CEO running a company to $1M MRR. Day 3, revenue: $0」" data-en="'I'm an AI CEO running a company to $1M MRR. Day 3, revenue: $0'">「<a href="https://www.indiehackers.com/post/fb6b8b7d66">我是个 AI CEO，公司做到 $1M MRR。第 3 天，收入：$0</a>」</td><td data-zh="Day 3 = $0（失败样本）" data-en="Day 3 = $0 (failure sample)">Day 3 = $0（失败样本）</td><td data-zh="「AI 驱动的假繁荣」反例——没有真实用户" data-en="'AI-driven false prosperity' counter-example—no real users">「AI 驱动的假繁荣」反例——没有真实用户</td></tr>
+                            <tr><td data-zh="「Built a debt payoff habit planner, it's live, revenue is still zero」" data-en="'Built a debt payoff habit planner, it's live, revenue is still zero'">「<a href="https://www.indiehackers.com/post/caf0c26287">做了个还债习惯计划器，已上线，收入仍为 0</a>」</td><td data-zh="$0（失败样本）" data-en="$0 (failure sample)">$0（失败样本）</td><td data-zh="「上线 ≠ 有收入」——发布前先攒受众" data-en="'Launch ≠ revenue'—build audience before launching">「上线 ≠ 有收入」——发布前先攒受众</td></tr>
+                        </tbody>
+                    </table></div>
+                    <div class="card">
+                        <p data-zh="三句话总结：① 可复制路径是 $48→$48/月这条线（真实晒单中位数），$1M MRR 是「Day 3 收入 $0」的假繁荣样本；② 定价权来自「可负担」定位（$30-100/月带），不是功能多少；③ 两个失败样本（Day 3 $0 / 上线仍 $0）是内容素材——「为什么你发布后 0 流量」比「我赚了多少」更有传播力。" data-en="Three-line summary: ① The replicable path is the $48→$48/mo line (true revenue-report median); the $1M MRR is a 'Day 3 revenue $0' false-prosperity sample. ② Pricing power comes from 'affordable' positioning ($30-100/mo band), not feature count. ③ Two failure samples (Day 3 $0 / live-but-$0) are content material—'why your launch got zero traffic' is more shareable than 'how much I earned'.">三句话总结：① 可复制路径是 $48→$48/月这条线（真实晒单中位数），$1M MRR 是「Day 3 收入 $0」的假繁荣样本；② 定价权来自「可负担」定位（$30-100/月带），不是功能多少；③ 两个失败样本（Day 3 $0 / 上线仍 $0）是内容素材——「为什么你发布后 0 流量」比「我赚了多少」更有传播力。</p>
+                    </div>
+                </section>
+
+                <!-- 8 Pre-Launch Risks -->
+                <section id="check" class="section">
+                    <div class="section-header">
+                        <div class="section-icon purple">④</div>
+                        <h2 data-zh="最后把关：发布前 8 项风险（前 5 件是 30 秒必查）" data-en="Final Check: 8 Pre-Launch Risks (First 5 Are 30-Second Checks)">最后把关：发布前 8 项风险（前 5 件是 30 秒必查）</h2>
+                    </div>
+                    <div class="table-wrap"><table class="data-table">
+                        <thead><tr>
+                            <th data-zh="风险" data-en="Risk">风险</th>
+                            <th data-zh="本周证据" data-en="This Week's Evidence">本周证据</th>
+                            <th data-zh="分（1-10）" data-en="Score (1-10)">分（1-10）</th>
+                            <th data-zh="应对" data-en="Mitigation">应对</th>
+                        </tr></thead>
+                        <tbody>
+                            <tr><td data-zh="R1 平台单点依赖" data-en="R1 Platform single-point dependency">R1 平台单点依赖</td><td data-zh="YouTube 版块大量负面 + 平台封号静默损失" data-en="YouTube sub heavy negatives + platform ban silent loss">YouTube 版块大量负面 + 平台封号静默损失</td><td>9/10</td><td data-zh="数据可导出 + 多平台分发" data-en="Data export + multi-platform distribution">数据可导出 + 多平台分发</td></tr>
+                            <tr><td data-zh="R2 AI 产出可信度（vibe coding 反噬）" data-en="R2 AI output credibility (vibe-coding backlash)">R2 AI 产出可信度（vibe coding 反噬）</td><td data-zh="「The vibe coders」（10,783 分）+ AI 图像识别预警（5,166 分）——用户开始不信任 AI 生成物" data-en="'The vibe coders' (10,783 pts) + AI image detection warning (5,166 pts)—users losing trust in AI outputs">「<a href="https://www.reddit.com/r/ClaudeAI/comments/1w61niq">The vibe coders</a>」（10,783 分）+ <a href="https://www.reddit.com/r/antiai/comments/1w81kdd">AI 图像识别预警</a>（5,166 分）——用户开始不信任 AI 生成物</td><td>8/10</td><td data-zh="AI 产出旁加证据链（来源/测试/人工评审状态）" data-en="Add evidence chain next to AI outputs (source / test / human-review status)">AI 产出旁加证据链（来源/测试/人工评审状态）</td></tr>
+                            <tr><td data-zh="R3 涨价即流失（AI 成本传导）" data-en="R3 Price-hike churn (AI cost pass-through)">R3 涨价即流失（AI 成本传导）</td><td data-zh="SaaS 利润率论战（463 分）+ 内存涨价 500%（AI 超大规模厂商预订 2027 全球 RAM 供应，6,015 分）——成本上行传导到终端定价" data-en="SaaS margin debate (463 pts) + 500% RAM price hike (AI hyperscalers pre-ordered 2027 global RAM supply, 6,015 pts)—cost rise passes through to end-user pricing"><a href="https://www.reddit.com/r/SaaS/comments/1w8p7by">SaaS 利润率论战</a>（463 分）+ <a href="https://www.reddit.com/r/Futurology/comments/1vv9v7k">内存涨价 500%（AI 超大规模厂商预订 2027 全球 RAM 供应）</a>（6,015 分）——成本上行传导到终端定价</td><td>7/10</td><td data-zh="把「价格承诺 + 成本透明」写进 README" data-en="Write 'price commitment + cost transparency' into your README">把「价格承诺 + 成本透明」写进 README</td></tr>
+                            <tr><td data-zh="R4 弃用产品集中迁移" data-en="R4 Concentrated product-abandonment migration">R4 弃用产品集中迁移</td><td data-zh="Portainer CE 砍掉 + FileBrowser 停更 + Proxmox 安全更新，「求替代品」讨论 1,690 条" data-en="Portainer CE cut + FileBrowser EOL + Proxmox security update, 'seeking alternative' discussions 1,690">Portainer CE 砍掉 + FileBrowser 停更 + Proxmox 安全更新，「求替代品」讨论 1,690 条</td><td>6/10</td><td data-zh="进那些帖研究用户在迁去哪，做「迁移向导」" data-en="Go into those threads to research where users migrate; build a 'migration guide'">进那些帖研究用户在迁去哪，做「迁移向导」</td></tr>
+                            <tr><td data-zh="R5 失败复盘（劝退帖密度）" data-en="R5 Failure postmortems (deterrent post density)">R5 失败复盘（劝退帖密度）</td><td data-zh="295 条「我劝你别做 X / 我后悔了」失败复盘帖——新入行者情绪偏谨慎" data-en="295 'I advise you not to do X / I regret it' failure postmortem posts—new-entrant sentiment is cautious">295 条「我劝你别做 X / 我后悔了」失败复盘帖——新入行者情绪偏谨慎</td><td>6/10</td><td data-zh="营销改「我解决了 X」案例内容，别晒半成品求反馈" data-en="Marketing: 'I solved X' case-study content, not half-baked feedback-begging">营销改「我解决了 X」案例内容，别晒半成品求反馈</td></tr>
+                            <tr><td data-zh="R6 终身购结构风险" data-en="R6 Lifelong-purchase structural risk">R6 终身购结构风险</td><td data-zh="AppSumo 买断制 SaaS 流失率 4%（样本 &lt;30，仅监控）" data-en="AppSumo lifetime-deal SaaS 4% churn (sample &lt;30, monitor only)"><a href="https://www.reddit.com/r/SaaS/comments/1w85es1">AppSumo 买断制 SaaS 流失率 4%</a>（样本 &lt;30，仅监控）</td><td>5/10</td><td data-zh="买断制当主变现是反例，订阅为主" data-en="Lifelong-purchase as primary monetization is a counter-example; subscription-first">买断制当主变现是反例，订阅为主</td></tr>
+                            <tr><td data-zh="R7 AI 能力被吞并" data-en="R7 AI capability absorption">R7 AI 能力被吞并</td><td data-zh="「Claude 能剪视频了我 panic」455 分 + 大模型原生能力覆盖薄封装" data-en="'Claude can now edit videos and I'm panicking' 455 pts + big-model native capability covers thin wrappers">「Claude 能剪视频了我 panic」455 分 + 大模型原生能力覆盖薄封装</td><td>5/10</td><td data-zh="加「数据所有权 + 垂直深度」两个护城河" data-en="Add 'data ownership + vertical depth' moats">加「数据所有权 + 垂直深度」两个护城河</td></tr>
+                            <tr><td data-zh="R8 账号封禁/误封" data-en="R8 Account ban/mis-ban">R8 账号封禁/误封</td><td data-zh="Etsy 被 AI 误判封号（样本 &lt;30，仅监控）" data-en="Etsy mis-banned by AI (sample &lt;30, monitor only)">Etsy 被 AI 误判封号（样本 &lt;30，仅监控）</td><td>4/10</td><td data-zh="多平台备份账号 + 数据定期导出" data-en="Multi-platform backup accounts + periodic data export">多平台备份账号 + 数据定期导出</td></tr>
+                        </tbody>
+                    </table></div>
+                </section>
+
+                <!-- Who Pays · Price Bands -->
+                <section id="value" class="section">
+                    <div class="section-header">
+                        <div class="section-icon green">⑤</div>
+                        <h2 data-zh="验证价值：谁在付钱 + 三个价格带" data-en="Validate Value: Who's Paying + Three Price Bands">验证价值：谁在付钱 + 三个价格带</h2>
+                    </div>
+                    <div class="table-wrap"><table class="data-table">
+                        <thead><tr>
+                            <th data-zh="价格带" data-en="Price Band">价格带</th>
+                            <th data-zh="本周示例" data-en="This Week's Examples">本周示例</th>
+                            <th data-zh="你的定价该落哪" data-en="Where Your Pricing Should Land">你的定价该落哪</th>
+                        </tr></thead>
+                        <tbody>
+                            <tr><td data-zh="&lt;$50/月 微型 SaaS" data-en="&lt;$50/mo micro SaaS">&lt;$50/月 微型 SaaS</td><td data-zh="Next.js SEO 套件 $39 求验证（IH）/ 预购首单 $39（首个 $39 预购，产品未完成）" data-en="$39 Next.js SEO kit validation / First $39 pre-order"><a href="https://www.indiehackers.com/post/1vwmley">Next.js SEO 套件 $39 求验证（IH）</a> / <a href="https://www.indiehackers.com/post/1w7w6xz">预购首单 $39（首个 $39 预购，产品未完成）</a></td><td data-zh="主战场，但「20 刀 AI 订阅」是新竞争对手" data-en="Main battlefield, but '$20 AI subscription' is a new competitor">主战场，但「20 刀 AI 订阅」是新竞争对手</td></tr>
+                            <tr><td data-zh="$30-200/月 B2B 工具" data-en="$30-200/mo B2B tools">$30-200/月 B2B 工具</td><td data-zh="「可负担的 SEO 工具包」$500 MRR / AppSumo 买断制 4% 流失（SaaS 复盘）" data-en="'Affordable SEO toolkit' $500 MRR / AppSumo lifetime-deal 4% churn (SaaS postmortem)"><a href="https://www.indiehackers.com/post/662490d322">「可负担的 SEO 工具包」$500 MRR</a> / <a href="https://www.reddit.com/r/SaaS/comments/1w85es1">AppSumo 买断制 4% 流失（SaaS 复盘）</a></td><td data-zh="主流变现带，&gt;$100 必须带「为什么比 X 便宜/贵」对比页" data-en="Mainstream monetization band; above $100 must carry a 'why cheaper/pricier than X' comparison page">主流变现带，&gt;$100 必须带「为什么比 X 便宜/贵」对比页</td></tr>
+                            <tr><td data-zh="$4.5k-50k 实物安装" data-en="$4.5k-50k physical installation">$4.5k-50k 实物安装</td><td data-zh="HVAC 热泵 $49.5k 报价求助（hvacadvice 版块）" data-en="HVAC heat pumps $49.5k quote sanity-check (hvacadvice)"><a href="https://www.reddit.com/r/hvacadvice/comments/1wb4a7n">HVAC 热泵 $49.5k 报价求助（hvacadvice 版块）</a></td><td data-zh="不可直接承接，但可做「报价审计」内容（B 端工具方向）" data-en="Not directly serviceable, but 'quote audit' content (B2B tool direction) is viable">不可直接承接，但可做「报价审计」内容（B 端工具方向）</td></tr>
+                        </tbody>
+                    </table></div>
+                    <div class="card">
+                        <p data-zh="本周真新帖里带 $ 金额的「想买 / 求助」帖 102（买信号）+ 132（求助）= 234 条，主要由 AI 工具与 HVAC 报价拉动；上周是 7,241 条（含历史数据，趋势以本周为准）。全量 5 源产品中 74.8%（3,168/4,233）定价 unknown——「敢明码标价」是新品差异化机会。" data-en="This week's true-new posts with $ amounts in 'want-to-buy / help': 102 (buy-signal) + 132 (help) = 234, driven mainly by AI tools and HVAC quotes (last week's same-basis figure was 7,241, including historical re-tag baseline; treat this week as the trend reference). Across all 5 sources, 74.8% (3,168/4,233) of products have pricing unknown—'daring to show a price' is a new-product differentiator.">本周真新帖里带 $ 金额的「想买 / 求助」帖 102（买信号）+ 132（求助）= 234 条，主要由 AI 工具与 HVAC 报价拉动；上周是 7,241 条（含历史数据，趋势以本周为准）。全量 5 源产品中 74.8%（3,168/4,233）定价 unknown——「敢明码标价」是新品差异化机会。</p>
+                    </div>
+                </section>
+
+                <!-- Top Hot Posts by Subreddit -->
+                <section id="hotposts" class="section">
+                    <div class="section-header">
+                        <div class="section-icon orange">⑥</div>
+                        <h2 data-zh="本周出圈大热帖（420 条里挑 12 条）" data-en="This Week's Breakout Hot Posts (12 Picked from 420)">本周出圈大热帖（420 条里挑 12 条）</h2>
+                    </div>
+                    <div class="table-wrap"><table class="data-table">
+                        <thead><tr>
+                            <th><span data-zh="帖子" data-en="Post">帖子</span></th>
+                            <th data-zh="热度（赞/评论）" data-en="Heat (upvotes/comments)">热度（赞/评论）</th>
+                            <th data-zh="来源" data-en="Source">来源</th>
+                        </tr></thead>
+                        <tbody>
+                            <tr><td><a href="https://www.reddit.com/r/careerguidance/comments/1w9t4cf">我自动化了 15 小时/周的工作，主管要裁我</a></td><td>11,433/3,895</td><td>Reddit</td></tr>
+                            <tr><td><a href="https://www.reddit.com/r/ClaudeAI/comments/1w61niq">The vibe coders（ClaudeAI 社区嘲讽）</a></td><td>10,783/357</td><td>Reddit</td></tr>
+                            <tr><td><a href="https://www.reddit.com/r/technology/comments/1v98q2x">Visa 裁掉年薪近 $500K 高管（AI 轮次裁员）</a></td><td>6,012/287</td><td>Reddit</td></tr>
+                            <tr><td><a href="https://www.reddit.com/r/Futurology/comments/1vv9v7k">AI 超大规模厂商预订 2027 全球 RAM 供应，涨价 500%</a></td><td>6,015/1,137</td><td>Reddit</td></tr>
+                            <tr><td><a href="https://www.reddit.com/r/technology/comments/1vgglhf">55% 高管后悔 AI 裁员，开始反向招聘</a></td><td>5,284/407</td><td>Reddit</td></tr>
+                            <tr><td><a href="https://www.reddit.com/r/SaaS/comments/1w8p7by">看着你的 SaaS 慢慢死是什么感觉</a></td><td>561/151</td><td>Reddit</td></tr>
+                            <tr><td><a href="https://www.reddit.com/r/SaaS/comments/1w5amyj">客户找到我的 SaaS，我现在失业了</a></td><td>463/295</td><td>Reddit</td></tr>
+                            <tr><td><a href="https://www.reddit.com/r/proxmox/comments/1w9ts1w">UPDATE PROXMOX NOW（安全漏洞）</a></td><td>712/163</td><td>Reddit</td></tr>
+                            <tr><td><a href="https://www.reddit.com/r/selfhosted/comments/1w9bo3s">FileBrowser 官方宣布停更</a></td><td>361/64</td><td>Reddit</td></tr>
+                            <tr><td><a href="https://www.reddit.com/r/selfhosted/comments/1wdbia2">Portainer 3 砍掉 CE，转向 K8s + 企业版</a></td><td>254/164</td><td>Reddit</td></tr>
+                            <tr><td><a href="https://www.reddit.com/r/remoteworkers/comments/1wq8x2p">$70/小时请人评估 AI 回答质量</a></td><td>231/2,885</td><td>Reddit</td></tr>
+                            <tr><td><a href="https://www.reddit.com/r/SaaS/comments/1vry2tu">SaaS 没死，但比以往更难了</a></td><td>130/149</td><td>Reddit</td></tr>
+                        </tbody>
+                    </table></div>
+                    <div class="card">
+                        <h4 data-zh="热帖读法" data-en="Hot-Post Reading Guide">热帖读法</h4>
+                        <p data-zh="本周热帖集中在三条线：① AI 就业冲击（11,433 + 5,284 + 6,012 分，「裁了又招回来」叙事成型）；② 反 AI 情绪峰值（37,999 + 18,890 + 16,104 分，antiai 版块单周 1,842 条）；③ AI 质检服务（231 分但 2,885 条评论，评论/赞比 12.5:1——讨论热度远超表面热度）。HN 本周 2,040 条 Show HN 全部 0 分（快照时点为发布当天，热度未累积），技术风向讨论重心在 Reddit。" data-en="This week's hot posts cluster on three lines: ① AI employment impact (11,433 + 5,284 + 6,012 pts, 'lay off then rehire' narrative forming); ② Anti-AI sentiment peak (37,999 + 18,890 + 16,104 pts, antiai sub alone 1,842 posts); ③ AI QC service (231 pts but 2,885 comments, comment/like ratio 12.5:1—discussion heat far exceeds surface heat). HN this week: 2,040 Show HN posts all at 0 pts (snapshot at publish time, heat not yet accumulated); tech trend discussion center of gravity is on Reddit.">本周热帖集中在三条线：① AI 就业冲击（11,433 + 5,284 + 6,012 分，「裁了又招回来」叙事成型）；② 反 AI 情绪峰值（37,999 + 18,890 + 16,104 分，antiai 版块单周 1,842 条）；③ AI 质检服务（231 分但 2,885 条评论，评论/赞比 12.5:1——讨论热度远超表面热度）。HN 本周 2,040 条 Show HN 全部 0 分（快照时点为发布当天，热度未累积），技术风向讨论重心在 Reddit。</p>
+                    </div>
+                </section>
+
+                <!-- Action List -->
+                <section id="actions" class="section">
+                    <div class="section-header">
+                        <div class="section-icon purple">💡</div>
+                        <h2 data-zh="本周行动清单" data-en="This Week's Action List">本周行动清单</h2>
+                    </div>
+                    <div class="card">
+                        <h3 data-zh="立即执行" data-en="Do Now">立即执行</h3>
+                        <ul class="action-list">
+                            <li data-zh="自托管迁移工具（4-8 周窗口）⭐ 有自托管背景：做「轻量 Portainer CE 替代」（容器管理 + 反向代理 + Let's Encrypt）；「求替代品」讨论 1,690 条但竞争者提及极少" data-en="Self-hosting migration tool (4-8 week window) ⭐ self-hosting background: Build a 'lightweight Portainer CE alternative' (container mgmt + reverse proxy + Let's Encrypt); 'seeking alternative' discussions 1,690 posts but few competitor mentions">自托管迁移工具（4-8 周窗口）⭐ 有自托管背景：做「轻量 Portainer CE 替代」（容器管理 + 反向代理 + Let's Encrypt）；「求替代品」讨论 1,690 条但竞争者提及极少</li>
+                            <li data-zh="AI 质检 / 产出验收服务（门槛更低）：$70/小时真人评估已出现付费需求（2,885 条评论），做「AI 产出可信度评分 + 工作流审批」" data-en="AI QC / output acceptance service (lower barrier): $70/hr human evaluation shows paid demand (2,885 comments); build 'AI output credibility scoring + workflow approval'">AI 质检 / 产出验收服务（门槛更低）：$70/小时真人评估已出现付费需求（2,885 条评论），做「AI 产出可信度评分 + 工作流审批」</li>
+                            <li data-zh="职业保障工具（蓝海）：AI 替代焦虑 + 裁员反转双信号，做「AI 替代不掉的能力证明」文档化工具" data-en="Career security tool (blue ocean): AI replacement anxiety + layoff reversal dual signal; build 'AI-proof capability proof' documentation tool">职业保障工具（蓝海）：AI 替代焦虑 + 裁员反转双信号，做「AI 替代不掉的能力证明」文档化工具</li>
+                            <li data-zh="本地化部署成本计算器（硬件涨价 + API 成本痛点）：超大规模厂商预订 2027 RAM 供应，做「本地 AI 服务器选型 + 成本估算」" data-en="Local deployment cost calculator (hardware price hikes + API cost pain): hyperscalers booked 2027 RAM supply; build 'local AI server selection + cost estimation'">本地化部署成本计算器（硬件涨价 + API 成本痛点）：超大规模厂商预订 2027 RAM 供应，做「本地 AI 服务器选型 + 成本估算」</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3 data-zh="定位与文案（本周最该做的 3 件事）" data-en="Positioning & Copy (3 Things to Do This Week)">定位与文案（本周最该做的 3 件事）</h3>
+                        <ul class="action-list">
+                            <li data-zh="流量 100% 单一平台 → 加「数据可导出 + 多平台分发」（R1，9/10）" data-en="100% single-platform traffic → add 'data export + multi-platform distribution' (R1, 9/10)">流量 100% 单一平台 → 加「数据可导出 + 多平台分发」（R1，9/10）</li>
+                            <li data-zh="定价 &gt;$100/月 → 加「为什么比 X 便宜/贵」对比页（本周 74.8% 新品不写价格，明码标价是差异化）" data-en="Pricing above $100/mo → add 'why cheaper/pricier than X' comparison page (74.8% of new products don't show prices this week; showing a price is differentiation)">定价 &gt;$100/月 → 加「为什么比 X 便宜/贵」对比页（本周 74.8% 新品不写价格，明码标价是差异化）</li>
+                            <li data-zh="营销 = 「求 feedback」→ 改「我解决了 X」案例内容，带价格锚点 + AI 产出可信度证据链（R2，8/10）" data-en="Marketing = 'seeking feedback' → switch to 'I solved X' case-study content with price anchors + AI-output credibility evidence chain (R2, 8/10)">营销 = 「求 feedback」→ 改「我解决了 X」案例内容，带价格锚点 + AI 产出可信度证据链（R2，8/10）</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3 data-zh="别做" data-en="Don't">别做</h3>
+                        <ul class="action-list">
+                            <li data-zh="通用 AI 封装产品（大模型 6 个月内覆盖，R7）" data-en="Generic AI wrapper products (big models cover within 6 months, R7)">通用 AI 封装产品（大模型 6 个月内覆盖，R7）</li>
+                            <li data-zh="career/HR 工具（本周职业类痛点 13,180+7,955 条，竞争密度高）" data-en="Career/HR tools (this week's career pain 13,180+7,955 posts, high competition density)">career/HR 工具（本周职业类痛点 13,180+7,955 条，竞争密度高）</li>
+                            <li data-zh="$49.5k 价格带（蓝领工程，非 solo founder 可及）" data-en="$49.5k price band (blue-collar engineering, not solo-founder accessible)">$49.5k 价格带（蓝领工程，非 solo founder 可及）</li>
+                            <li data-zh="买断制当主变现（AppSumo 复盘 + 开源转付费反噬，两个反例）" data-en="Lifelong-purchase as primary monetization (AppSumo postmortems + open-source-to-paid backlash, two counter-examples)">买断制当主变现（AppSumo 复盘 + 开源转付费反噬，两个反例）</li>
+                        </ul>
+                    </div>
+                </section>]]></content:encoded>
+    </item>
+    <item>
       <title>7Kolor Insights — 2026 W35：AI Agent 基础设施产品化与 AI 治理新赛道</title>
       <link>https://7kolor.github.io/weekly/2026-W35/</link>
       <guid>https://7kolor.github.io/weekly/2026-W35/</guid>

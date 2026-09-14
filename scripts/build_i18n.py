@@ -55,17 +55,33 @@ def pick_lang(html: str, lang: str) -> str:
     that order, text without child tags) — the convention used across all
     site templates. Returns the tag without the data-* attributes, keeping
     the selected language's text.
+
+    Two cases for the default text after ">":
+    - plain text (no child tags): replaced by the selected language text.
+    - text followed by child tags (e.g. <a> links): only the plain-text
+      prefix is replaced; the child elements (clickable links) are kept
+      as-is. This avoids duplicating content when bilingual elements
+      carry inline anchors in their default text.
     """
     pat = re.compile(
-        r''' data-zh="([^"]*)" data-en="([^"]*)"([^>]*)>[^<]*''', re.S
+        r''' data-zh="([^"]*)" data-en="([^"]*)"([^>]*)>([^<]*)''', re.S
     )
 
     def repl(m):
-        zh, en, tail = m.group(1), m.group(2), m.group(3)
+        zh, en, tail, prefix = m.group(1), m.group(2), m.group(3), m.group(4)
         picked = zh if lang == "zh" else en
         # fall back to the other language when the chosen one is empty,
         # so elements with an empty translation never lose their content
-        return tail + ">" + (picked or (en if lang == "zh" else zh))
+        picked = picked or (en if lang == "zh" else zh)
+        rest = html[m.end():]
+        if rest.startswith("<a "):
+            # Default text carries the linked content (e.g. quote-box
+            # paragraphs with clickable anchors). The anchors already hold
+            # the readable link text, so keep the default text as-is and
+            # only strip the data-* attributes — appending `picked` would
+            # duplicate the plain text next to the linked text.
+            return tail + ">" + prefix
+        return tail + ">" + picked
 
     return pat.sub(repl, html)
 
