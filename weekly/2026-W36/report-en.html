@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7Kolor Insights — 2026 W36 Weekly Report</title>
+    <meta name="description" content="2026 W36：AI 替代焦虑遇上裁员潮反转，AI 质检服务成型，自托管事件潮。基于 5 源 110,383 条全量打标数据。">
+    <link rel="alternate" hreflang="zh" href="/weekly/2026-W36/report-zh.html">
+    <link rel="alternate" hreflang="en" href="/weekly/2026-W36/report-en.html">
+    <link rel="alternate" type="application/rss+xml" title="7Kolor Insights" href="/feed.xml">
+    <link rel="icon" type="image/png" href="/assets/img/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/main.css?v=022798fab4">
+
+</head>
+<body data-lang-page="en">
+<!-- AUTO:header:begin -->
+    <header class="header">
+        <div class="header-inner">
+            <a href="/" class="logo">
+                <img class="logo-img" src="/assets/img/logo.png" alt="7Kolor Insights" width="34" height="34">
+                <div class="logo-text">7Kolor <span>Insights</span></div>
+            </a>
+            <nav class="nav">
+                <div class="nav-links">
+                    <a href="/#framework" data-zh="六步流程" data-en="6-Step Framework">六步流程</a>
+                    <a href="/weekly/" data-zh="每周情报" data-en="Weekly Intelligence">每周情报</a>
+                    <a href="/#reports" data-zh="专项报告" data-en="Special Reports">专项报告</a>
+                    <a href="/#services" data-zh="定制服务" data-en="Custom Services">定制服务</a>
+                    <a href="/about.html" data-zh="关于" data-en="About">关于</a>
+                </div>
+                <div class="lang-toggle">
+                    <button class="lang-btn active" data-lang="zh" onclick="switchLang('zh', this)">中文</button>
+                    <button class="lang-btn" data-lang="en" onclick="switchLang('en', this)">EN</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- AUTO:header:end -->
+
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="dot"></span>
+                <span>2026 W36</span>
+            </div>
+            <h1>AI Job-Replacement Anxiety Meets the Layoff Reversal: The Career-Security Window</h1>
+            <p>Indie developer community intelligence: signals, trends & insight</p>
+            <div class="hero-meta">
+                <span>📅 2026-09-06 ~ 09-12</span>
+                <span>📊 Reddit · HN · IH · PH (5 sources, 110,383 tags)</span>
+            </div>
+        </div>
+    </section>
+
+    <main class="main">
+        <div class="content-grid">
+            <aside class="sidebar">
+                <div class="sidebar-title">Contents</div>
+                <ul class="sidebar-nav">
+                    <li><a href="#overview">📋 Overview</a></li>
+                    <li><a href="#discover">① Discover</a></li>
+                    <li><a href="#signals">② Collect Signals</a></li>
+                    <li><a href="#problems">③ Deep Dive</a></li>
+                    <li><a href="#validate">④ Validate</a></li>
+                    <li><a href="#check">⑤ Final Check</a></li>
+                    <li><a href="#value">⑥ Validate Value</a></li>
+                    <li><a href="#actions">💡 Action Items</a></li>
+                </ul>
+            </aside>
+
+            <div class="content">
+                <!-- Overview -->
+                <section id="overview" class="section">
+                    <div class="section-header">
+                        <div class="section-icon blue">📋</div>
+                        <h2>Overview</h2>
+                    </div>
+                    <div class="card card-highlight">
+                        <p>5 signals this week: ① AI replacement anxiety is still the fattest customer-acquisition soil (11,433-pt post); ② AI layoff wave is reversing—55% of execs regret AI-driven layoffs (5,284 pts), opening a career-security tool window; ③ AI quality-checking services show real willingness to pay—$70/hr to have humans evaluate AI answers (2,885 comments); ④ Self-hosting event cluster (Portainer CE cut + FileBrowser EOL + Proxmox security update), a 4-8 week migration window; ⑤ Hardware costs rising—hyperscalers booked 2027 global RAM supply, leave pricing buffer for self-hosted/AI hardware.</p>
+                    </div>
+                    <div class="stat-grid">
+                        <div class="stat-card">
+                            <div class="stat-value">110,383</div>
+                            <div class="stat-label">Total Tags (5 Sources)</div>
+                        </div>
+                        <div class="stat-card positive">
+                            <div class="stat-value">35,494</div>
+                            <div class="stat-label">True-New Posts (created in window)</div>
+                        </div>
+                        <div class="stat-card neutral">
+                            <div class="stat-value">32,314</div>
+                            <div class="stat-label">Pain Point Signals</div>
+                            <div class="stat-bar"><div class="stat-bar-fill"></div></div>
+                        </div>
+                        <div class="stat-card negative">
+                            <div class="stat-value">429</div>
+                            <div class="stat-label">Product Hunt Launches</div>
+                        </div>
+                    </div>
+
+                    <h3>Data Caveats (Important)</h3>
+                    <div class="card">
+                        <p>Of the 110,383 total tags, 74,889 are historical posts re-tagged on 09-10 by the #200 enum-rename batch (45,507 from Aug + 19,847 from Sep + 3,848 from Jan-Jun). For weekly trends, use the 'true-new' basis: 35,494 posts with created_utc also inside 09-06~09-12. The recruit-post share increase is a re-tag + B-prompt reclassification artifact (career-path posts reclassified to recruit, golden flip rate 73-80%), not a real hiring surge.</p>
+                    </div>
+                </section>
+
+                <!-- Step 1: Discover -->
+                <section id="discover" class="section">
+                    <div class="section-header">
+                        <div class="section-icon green">①</div>
+                        <h2>Discover — What Can Make Money?</h2>
+                    </div>
+
+                    <h3>Track A: Career Security & Anti-Replacement Tools</h3>
+                    <div class="table-wrap"><table class="data-table">
+                        <thead><tr><th><span>Signal</span></th><th>Heat</th><th>Source</th></tr></thead>
+                        <tbody>
+                            <tr><td><a href="https://www.reddit.com/r/careerguidance/comments/1w9t4cf">我自动化了 15 小时/周的工作，结果主管要裁我</a></td><td>11,433分/3,895评论</td><td>Reddit</td></tr>
+                            <tr><td><a href="https://www.reddit.com/r/careerguidance/comments/1w8tg7p">同事辞职了，整个后端只剩我一个人维护</a></td><td>1,687分/913评论</td><td>Reddit</td></tr>
+                            <tr><td><a href="https://www.reddit.com/r/cscareerquestions/comments/1w98g9q">如果 CS 因 AI 完蛋了，其他白领岗不会吗</a></td><td>956分/959评论</td><td>Reddit</td></tr>
+                            <tr><td><a href="https://www.reddit.com/r/technology/comments/1vgglhf">55% 高管后悔 AI 裁员，开始反向招聘</a></td><td>5,284分/407评论</td><td>Reddit</td></tr>
+                        </tbody>
+                    </table></div>
+                    <div class="card">
+                        <h4>How to Monetize This</h4>
+                        <p>AI replacement anxiety (11,433-pt post) and layoff reversal (55% regret, 5,284 pts) appeared in the same week, forming dual signals: one side is 'don't be replaced' panic demand, the other is 'rehire/retain talent' hedging demand. Career-security products should catch both ends: individual 'proof of AI-proof skills' tools, and team 'talent retention during AI layoff reversal' tools.</p>
+                        <div class="comment-highlight">
+                            <p>💬 For devs: Your target users are in collective anxiety. What they pay for is 'don't be replaced'—not 'learn AI', but 'work capabilities and tools AI can't replace'. Pricing: $30-100/mo (B2B team) or $10-30/mo (individual), with a 'why pricier than generic AI courses' comparison anchor.</p>
+                        </div>
+                    </div>
+
+                    <h3>Track B: AI Quality Inspection & Output Acceptance</h3>
+                    <div class="table-wrap"><table class="data-table">
+                        <thead><tr><th><span>Signal</span></th><th>Heat</th><th>Source</th></tr></thead>
+                        <tbody>
+                            <tr><td><a href="https://www.reddit.com/r/remoteworkers/comments/1wq8x2p">$70/小时请人评估 AI 回答质量</a></td><td>231分/2,885评论</td><td>Reddit</td></tr>
+                            <tr><td><a href="https://www.reddit.com/r/ClaudeAI/comments/1w61niq">The vibe coders（ClaudeAI 社区嘲讽）</a></td><td>10,783分/357评论</td><td>Reddit</td></tr>
+                            <tr><td><a href="https://www.reddit.com/r/antiai/comments/1w81kdd">AI 生成图像识别预警</a></td><td>5,166分/752评论</td><td>Reddit</td></tr>
+                        </tbody>
+                    </table></div>
+                    <div class="card">
+                        <h4>How to Monetize This</h4>
+                        <p>'$70/hr to have humans evaluate AI answers' (231 pts / 2,885 comments) is the week's most important new signal: AI output acceptance is becoming a real paid service from 'vibes'. 2,885 comments show a large, fragmented demand pool—no one offers a plug-and-play 'AI output acceptance' tool yet. ClaudeAI's mockery of vibe coders (10,783 pts) shows 'AI-generated code/content credibility' is a continuously discussed pain.</p>
+                        <div class="comment-highlight">
+                            <p>💬 For devs: Build an 'AI output acceptance' platform—submit AI-generated deliverable → hybrid human/rule evaluation → 'credibility score'. Target users: teams delivering client work via AI (agencies, consulting, dev outsourcing). Pricing: per-evaluation ($5-20/item) or monthly sub ($99-299/mo). 'Human + rule' hybrid is the differentiator—pure AI evaluation has no credibility.</p>
+                        </div>
+                    </div>
+
+                    <h3>Track C: Self-Hosting Migration (Event-Driven, with Deadline)</h3>
+                    <div class="table-wrap"><table class="data-table">
+                        <thead><tr><th><span>Signal</span></th><th>Heat</th><th>Source</th></tr></thead>
+                        <tbody>
+                            <tr><td><a href="https://www.reddit.com/r/selfhosted/comments/1wdbia2">Portainer 3 砍掉 CE，转向 K8s + 企业版</a></td><td>254分/164评论</td><td>Reddit</td></tr>
+                            <tr><td><a href="https://www.reddit.com/r/selfhosted/comments/1w9bo3s">FileBrowser 官方宣布停更</a></td><td>361分/64评论</td><td>Reddit</td></tr>
+                            <tr><td><a href="https://www.reddit.com/r/proxmox/comments/1w9ts1w">UPDATE PROXMOX NOW（安全漏洞）</a></td><td>712分/163评论</td><td>Reddit</td></tr>
+                            <tr><td><a href="https://www.reddit.com/r/Futurology/comments/1vv9v7k">AI 超大规模厂商预订 2027 全球 RAM 供应 50%</a></td><td>6,015分/1,137评论</td><td>Reddit</td></tr>
+                        </tbody>
+                    </table></div>
+                    <div class="card">
+                        <h4>How to Monetize This</h4>
+                        <p>Self-hosting event cluster has lasted 4+ weeks (Portainer CE cut + FileBrowser EOL + Proxmox security update), plus a new 'hardware cost rising' signal (hyperscalers booked 50% of 2027 global RAM supply + 500% RAM price hike, 6,015 pts / 1,137 comments)—pricing for self-hosted/AI hardware products needs a 20-30% cost buffer. Event-driven migration tool window is 4-8 weeks: a 'lightweight Portainer CE alternative' (container mgmt + reverse proxy + Let's Encrypt); only 8 posts mentioned competitors this week.</p>
+                        <div class="comment-highlight">
+                            <p>💬 For devs: Self-hosting background → build migration tools (4-8 week window, minimal competition); no self-hosting background → build a 'local deployment cost calculator' (hardware price hikes + API cost pain, lower barrier).</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Step 2: Collect Signals -->
+                <section id="signals" class="section">
+                    <div class="section-header">
+                        <div class="section-icon orange">②</div>
+                        <h2>Collect Signals — What Are Users Saying?</h2>
+                    </div>
+
+                    <h3>Top Posts This Week (by heat, event-level)</h3>
+                    <div class="table-wrap"><table class="data-table">
+                        <thead><tr><th><span>Post</span></th><th>Heat</th><th>Signal</th></tr></thead>
+                        <tbody>
+                            <tr><td><a href="https://www.reddit.com/r/antiai/comments/1w5txs5">So happy for this ban（反 AI 情绪事件）</a></td><td>37,999分/832评论</td><td>Anti-AI sentiment peak</td></tr>
+                            <tr><td><a href="https://www.reddit.com/r/Futurology/comments/1vqqv15">Big Tech 花 $500M 反对 UBI 政治运动</a></td><td>17,510分/1,560评论</td><td>AI unemployment → UBI policy war</td></tr>
+                            <tr><td><a href="https://www.reddit.com/r/careerguidance/comments/1w9t4cf">我自动化了 15 小时/周的工作，主管要裁我</a></td><td>11,433分/3,895评论</td><td>Fattest AI replacement anxiety soil</td></tr>
+                            <tr><td><a href="https://www.reddit.com/r/technology/comments/1voimvw">CEO 圣诞节前裁 900 人现在想回去</a></td><td>8,821分/289评论</td><td>Layoff reversal individual sample</td></tr>
+                            <tr><td><a href="https://www.reddit.com/r/ClaudeAI/comments/1w61niq">The vibe coders</a></td><td>10,783分/357评论</td><td>AI-generated code credibility anxiety</td></tr>
+                            <tr><td><a href="https://www.reddit.com/r/Futurology/comments/1vv9v7k">AI 超大规模厂商预订 2027 全球 RAM 供应</a></td><td>6,015分/1,137评论</td><td>Hardware cost rising</td></tr>
+                            <tr><td><a href="https://www.reddit.com/r/technology/comments/1v3x8qk">55% 高管后悔 AI 裁员</a></td><td>5,284分/407评论</td><td>AI layoff wave reversal</td></tr>
+                            <tr><td><a href="https://www.reddit.com/r/remoteworkers/comments/1wq8x2p">$70/小时请人评估 AI 回答</a></td><td>231分/2,885评论</td><td>AI QC service forming</td></tr>
+                        </tbody>
+                    </table></div>
+                    <div class="card">
+                        <h4>Analysis: What Hot Posts Tell You to Watch</h4>
+                        <p>This week's hot posts cluster on three lines: ① AI employment impact (11,433 + 8,821 + 5,284 pts, 'lay off then rehire' narrative forming); ② Anti-AI sentiment peak (37,999 + 18,890 + 16,104 pts, r/antiai alone 2,116 tags); ③ AI QC service (231 pts but 2,885 comments, comment/like ratio 12.5:1—discussion heat far exceeds surface heat). HN had no high-heat posts this week (Top 10 all Show HN at 0 pts); tech trend discussion center of gravity is on Reddit.</p>
+                    </div>
+
+                    <h3>This Week's Topic & Signal Density (True-New Basis)</h3>
+                    <div class="table-wrap"><table class="data-table">
+                        <thead><tr><th><span>Dimension</span></th><th>Top 3</th><th>Count</th></tr></thead>
+                        <tbody>
+                            <tr><td>Topic</td><td>troubleshooting / usage_tips / ai_industry</td><td>9,421 / 4,754 / 3,778</td></tr>
+                            <tr><td>Signal</td><td>user_pain_point / seeking_validation / negative_feedback</td><td>13,214 / — / —</td></tr>
+                            <tr><td>Industry</td><td>AI / SaaS / Marketing</td><td>AI entity 3,778 (true-new)</td></tr>
+                            <tr><td>Product</td><td>Claude family (Claude + Code + Pro/Max) / ChatGPT / Astra</td><td>255 / 120 / 80</td></tr>
+                        </tbody>
+                    </table></div>
+                    <div class="card">
+                        <p>Reading: On the true-new basis, troubleshooting (9,421) remains the #1 topic—users keep asking 'how to fix'; ai_industry (3,778) is the newly-entering Top-3 topic this week (last week it was not in Top 10), showing AI topic density is genuinely rising even on the true-new basis, not just a re-tag-day artifact.</p>
+                    </div>
+                </section>
+
+                <!-- Step 3: Deep Dive -->
+                <section id="problems" class="section">
+                    <div class="section-header">
+                        <div class="section-icon red">③</div>
+                        <h2>Deep Dive — Why Are They in Pain?</h2>
+                    </div>
+
+                    <div class="pain-point">
+                        <div class="pain-point-header">
+                            <div class="pain-point-icon">🔴</div>
+                            <h4>1. AI Replacement Anxiety: Backfired by Your Own Optimized Work</h4>
+                        </div>
+                        <div class="quote-box">
+                            <p>'Management is cutting my job after I automated 15 hours of weekly work, do I have to document it for them?' 11,433 pts / 3,895 comments. Same theme: 'My coworker quit and now I am the only one who knows how to keep the entire legacy backend from imploding' 1,687 pts / 913 comments; 'If CS is cooked because of AI, why wouldn't every other white-collar job be either?' 956 pts / 959 comments.</p>
+                        </div>
+                        <div class="deep-analysis">
+                            <p>Root cause: AI makes 'one person does three jobs' a reality, but 'the two extra people' didn't become 'two extra salaries'—they became 'jobs cut'. What hurts users isn't AI itself, it's 'I saved the company money, and the company used that savings to fire me'. The 3,895 comments are full of 'same situation +1'—collective anxiety, not an isolated case.</p>
+                        </div>
+                        <div class="opportunity-box"><strong>In/Out</strong> <span>In (consumer side): Build 'proof of AI-proof capability' tools—document + quantify the user's irreplaceability. Out (enterprise side): Building 'AI layoff decision tools' carries moral risk, and this week's layoff reversal signal (55% regret) shows enterprise demand is not yet crystallized</span></div>
+                    </div>
+
+                    <div class="pain-point">
+                        <div class="pain-point-header">
+                            <div class="pain-point-icon">🔴</div>
+                            <h4>2. SaaS Margins Eroded by AI Costs</h4>
+                        </div>
+                        <div class="quote-box">
+                            <p>'AI features are making SaaS margins worse, hitting micro SaaS builders hardest' r/microsaas 6 pts / 20 comments. 'SaaS isn't dead, but it's getting harder than ever' r/SaaS 130 pts / 149 comments. 'My client found my saas and now I'm jobless' r/SaaS 463 pts / 295 comments.</p>
+                        </div>
+                        <div class="deep-analysis">
+                            <p>Root cause: SaaS fixed subscription + AI usage-based call costs = margins squeezed from both sides. This week r/SaaS debate escalated from 'is SaaS dead' to 'how to protect SaaS margins'—the 463-pt post is a real 'client bypassed my SaaS and used AI directly' case, more concrete than 'SaaS is dead' slogans. Price-sensitive posts (price_sensitive 2,979) cluster in 'why pricier than a $20 AI subscription' comparison contexts.</p>
+                        </div>
+                        <div class="opportunity-box"><strong>In/Out</strong> <span>In: Build 'SaaS margin protection' tools—usage-based billing migration + AI call cost monitoring + pricing comparison anchor generation. Out: Build a generic 'AI replaces SaaS' product (big tech covers thin wrappers within 6 months)</span></div>
+                    </div>
+
+                    <div class="pain-point">
+                        <div class="pain-point-header">
+                            <div class="pain-point-icon">🔴</div>
+                            <h4>3. Self-Hosting Toolchain Mass Abandonment (Event-Driven)</h4>
+                        </div>
+                        <div class="quote-box">
+                            <p>'Portainer 3 Coming Without CE. Pivoting to Kubernetes and Enterprise Focus' 254 pts / 164 comments. 'reminder: FileBrowser officially dead' 361 pts / 64 comments. 'UPDATE PROXMOX NOW' (security vulnerability) 712 pts / 163 comments.</p>
+                        </div>
+                        <div class="deep-analysis">
+                            <p>Root cause: The self-hosting toolchain (Portainer / FileBrowser / Proxmox) is the standard stack for 'individual/small-team self-ops'; all three having issues in the same week (feature cut + EOL + security vuln) = users forced to migrate. Event-driven window 4-8 weeks, only 8 competitor mentions (proxmox 8 / portainer 2 / omv 2, title-level search). Self-hosting products cross-pollinate discussions (PVE/PBS API + HA auto-wake posts); building any companion tool has a traffic pool.</p>
+                        </div>
+                        <div class="opportunity-box"><strong>In/Out</strong> <span>In (self-hosting background): Lightweight Portainer CE alternative (container mgmt + reverse proxy + Let's Encrypt). No self-hosting background: Build a 'local deployment cost calculator' (hardware price hikes + API costs, lower barrier)</span></div>
+                    </div>
+                </section>
+
+                <!-- Step 4: Validate -->
+                <section id="validate" class="section">
+                    <div class="section-header">
+                        <div class="section-icon blue">④</div>
+                        <h2>Validate — Am I Understanding Correctly?</h2>
+                    </div>
+
+                    <h3>This Week's 'Show-Your-Work' Solutions & Peer-Endorsed Products</h3>
+                    <div class="table-wrap"><table class="data-table">
+                        <thead><tr><th><span>Product</span></th><th>Buy Signal (True-New)</th><th>Follow or Not</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>Claude family (Claude 116 + Code 63 + Pro 44 + Max 16)</strong></td><td>255</td><td>Follow: build companion tools (MCP security layer / local alternative / cost optimization), not a competitor</td></tr>
+                            <tr><td><strong>ChatGPT family (ChatGPT 87 + Plus 33 + Pro 19)</strong></td><td>139</td><td>Follow: build 'multi-model switching + cost routing' tools</td></tr>
+                            <tr><td><strong>Astra / Codex / Gemini / Fable</strong></td><td>80 / 74 / 45 / 27</td><td>Follow: build 'model capability comparison + selector' tools</td></tr>
+                            <tr><td><strong>Obsidian / Mac Studio / Suno / Proxmox</strong></td><td>20 / 17 / 17 / 16</td><td>Follow: build 'self-hosting selection guide' (Proxmox/NAS/UPS cluster)</td></tr>
+                        </tbody>
+                    </table></div>
+                    <div class="card">
+                        <h4>Buy Signal Interpretation (Content-Level, Not Mention Count)</h4>
+                        <p>This week's purchase_intent posts show the Claude family at 255 as the largest single purchase-intent pool—but reading post bodies, most are 'I used Claude in my stack' (not independent word-of-mouth); the real 'want to buy / seeking recommendation' is for 'AI companion tools' (MCP security layers, local alternatives, cost optimization). Selling users 'help you pick the right AI tool' is stickier than 'help you use AI'—selection is a one-time need, but the cost of picking wrong (wasted spend, poor results) brings users back continuously.</p>
+                    </div>
+
+                    <h3>IH Real Revenue Reports This Week (28 income-report posts, selected)</h3>
+                    <div class="table-wrap"><table class="data-table">
+                        <thead><tr><th><span>Case</span></th><th>Number</th><th>Replicable Point</th></tr></thead>
+                        <tbody>
+                            <tr><td>'$0 → $2M ARR in 5 years, bootstrapped, in an ecosystem everyone says is dying'</td><td>$2M ARR / 5 年</td><td>5 years in a 'everyone says it's dying' ecosystem = counter-cyclical track selection, don't benchmark to 3 years</td></tr>
+                            <tr><td>'I built a simple directory of job boards 4 years ago. It just passed $100K'</td><td>$100K 总</td><td>Simple directory site took 4 years to pass $100K = long-tail sites are slow-burn, don't expect fast</td></tr>
+                            <tr><td>'From Frustration to $500 MRR: Building an Affordable SEO Toolkit'</td><td>$500/月</td><td>'Affordable X' positioning = $30-100/mo price band (avoid the $200+ big-tech band)</td></tr>
+                            <tr><td>'$48 MRR and I can't prove where any of it came from'</td><td>$48/月</td><td>'Can't prove where customers come from' is the most common solo-founder gap = build 'customer-source attribution' tools</td></tr>
+                            <tr><td>'15 days after launching to zero audience: $0, 1 follower, 0 stars'</td><td>$0</td><td>'Launch to zero audience' failure sample = build audience before launch, not find traffic after</td></tr>
+                            <tr><td>'6 months, 46K queries, 10 power users, $0 marketing spend'</td><td>46K 查询 / 10 重度用户</td><td>High query volume but few power users = product has traffic but no stickiness, build 'power-user conversion' tools</td></tr>
+                        </tbody>
+                    </table></div>
+                    <div class="card">
+                        <p>Three-line summary: ① The replicable path is the $48→$500/mo line (true revenue-report median); $2M ARR is the '5-year + counter-cyclical' ceiling sample. ② Pricing power comes from 'affordable' positioning ($30-100/mo band), not feature count. ③ The 'zero-audience launch' and '46K queries / 10 power users' failure samples are content material—'why your launch got zero traffic' is more shareable than 'how much I earned'.</p>
+                    </div>
+                </section>
+
+                <!-- Step 5: Final Check -->
+                <section id="check" class="section">
+                    <div class="section-header">
+                        <div class="section-icon purple">⑤</div>
+                        <h2>Final Check — What's Missing Before Launch?</h2>
+                    </div>
+
+                    <h3>8 Risks This Week (First 5 Are 30-Second Pre-Launch Checks)</h3>
+                    <div class="table-wrap"><table class="data-table">
+                        <thead><tr><th><span>#</span></th><th>Risk</th><th>This Week's Evidence</th><th>Score (1-10)</th><th>Must Check?</th></tr></thead>
+                        <tbody>
+                            <tr><td>R1</td><td>Platform single-point dependency</td><td>r/youtube 335 negative posts + Etsy called 'AI slop' + platform bans (ban = silent loss)</td><td>9/10</td><td>✅</td></tr>
+                            <tr><td>R2</td><td>AI output credibility (vibe-coding backlash)</td><td>'The vibe coders' 10,783 pts + AI image detection warning 5,166 pts—users are losing trust in AI outputs</td><td>8/10</td><td>✅</td></tr>
+                            <tr><td>R3</td><td>Price-hike churn (AI cost pass-through)</td><td>SaaS margin debate (463 pts) + 500% RAM price hike (6,015 pts)—AI/hardware cost rise will pass through to end-user pricing</td><td>7/10</td><td>✅</td></tr>
+                            <tr><td>R4</td><td>Concentrated product-abandonment migration</td><td>Portainer CE cut + FileBrowser EOL + Proxmox security update, 138 'I abandoned X' posts</td><td>6/10</td><td>✅</td></tr>
+                            <tr><td>R5</td><td>Failure postmortems (deterrent post density)</td><td>392 'I advise you not to do X' failure postmortem posts—failure density exceeds success-share density this week, new-entrant sentiment is cautious</td><td>6/10</td><td>✅</td></tr>
+                            <tr><td>R6</td><td>Lifelong-purchase structural risk</td><td>AppSumo postmortems + open-source-to-paid backlash (small sample this week, &lt;30 posts, structural description only)</td><td>5/10</td><td>⏳</td></tr>
+                            <tr><td>R7</td><td>AI capability absorption</td><td>'Claude can now edit videos and I'm panicking' 455 pts + big-model native capability covers thin-wrapper risk</td><td>5/10</td><td>⏳</td></tr>
+                            <tr><td>R8</td><td>Account ban/mis-ban</td><td>Etsy mis-banned by AI + platform silent loss (sample &lt;30, monitor only)</td><td>4/10</td><td>⏳</td></tr>
+                        </tbody>
+                    </table></div>
+
+                    <div class="card">
+                        <h4>Pre-Launch 30-Second Self-Check (First 5)</h4>
+                        <ul class="action-list">
+                            <li>Is your product 100% dependent on a single platform for distribution? → If yes, add 'data export + multi-platform' to onboarding</li>
+                            <li>Do your AI outputs have 'credibility proof'? → If not, add evidence chains next to outputs (source / test / human-review status)</li>
+                            <li>Does your product have a price-hike history? → With AI/hardware cost pass-through, write 'price commitment + cost transparency' into your README</li>
+                            <li>Are your target users being hit by Portainer CE / FileBrowser / Proxmox abandonment? → If yes, go into those threads to research where users are migrating to</li>
+                            <li>Is your marketing 'seeking feedback'? → Switch to 'I solved X' case-study content (high solution-post density this week), with price anchors</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Step 6: Validate Value -->
+                <section id="value" class="section">
+                    <div class="section-header">
+                        <div class="section-icon green">⑥</div>
+                        <h2>Validate Value — Will People Pay?</h2>
+                    </div>
+
+                    <h3>This Week's Price Bands & Buy Signals</h3>
+                    <div class="table-wrap"><table class="data-table">
+                        <thead><tr><th><span>Price Band</span></th><th>This Week's Examples</th><th>Where Your Pricing Should Land</th></tr></thead>
+                        <tbody>
+                            <tr><td>&lt;$10/mo micro SaaS</td><td>$7 Reddit Ads test, $39 BreachProbe</td><td>Main battlefield, but '$20 AI subscription' is a new competitor</td></tr>
+                            <tr><td>$30-200/mo B2B tools</td><td>ASO $100-200/mo, B2B scheduling $349/mo</td><td>Mainstream monetization band; above $100 must carry a 'why cheaper/pricier than X' comparison page</td></tr>
+                            <tr><td>$4.5k-50k physical installation</td><td>HVAC $49.5k, driveway $11k</td><td>Not directly serviceable, but 'quote audit' content (B2B tool direction) is viable</td></tr>
+                        </tbody>
+                    </table></div>
+                    <div class="card">
+                        <p>This week 160 'I want to find X / anyone recommend X' posts with $ amounts (last week 112, +25%), driven mainly by AI tools and HVAC quotes. Of 429 PH new products, only 22% disclosed pricing across all 5 sources (free 624 / subscription 155 / freemium 123 / one_time 114 / usage 40); 74.8% (3,011/4,233) pricing unknown—'daring to show a price' is a new-product differentiator.</p>
+                    </div>
+                </section>
+
+                <!-- Action Items -->
+                <section id="actions" class="section">
+                    <div class="section-header">
+                        <div class="section-icon purple">💡</div>
+                        <h2>Action Items</h2>
+                    </div>
+                    <div class="card">
+                        <h3>Do Now (Ordered by Opportunity Window)</h3>
+                        <ul class="action-list">
+                            <li>Self-hosting migration tool (4-8 week window) ⭐ self-hosting background: Build a 'lightweight Portainer CE alternative' (container mgmt + reverse proxy + Let's Encrypt); only 8 competitor mentions</li>
+                            <li>AI QC / output acceptance service (lower barrier): $70/hr human evaluation shows paid demand; build 'AI output credibility scoring + workflow approval'</li>
+                            <li>Career security tool (blue ocean): AI replacement anxiety + layoff reversal dual signal; build 'AI-proof capability proof' documentation tool</li>
+                            <li>Local deployment cost calculator (hardware price hikes + API cost pain): hyperscalers booked 2027 RAM supply; build 'local AI server selection + cost estimation'</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3>Positioning & Copy (3 Things to Do This Week)</h3>
+                        <ul class="action-list">
+                            <li>100% single-platform traffic → add 'data export + multi-platform distribution' (R1, 9/10)</li>
+                            <li>Pricing above $100/mo → add 'why cheaper/pricier than X' comparison page (74.8% of new products don't show prices this week; showing a price is differentiation)</li>
+                            <li>Marketing = 'seeking feedback' → switch to 'I solved X' case-study content with price anchors + AI-output credibility evidence chain (R2, 8/10)</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3>Don't (High Competition Density / Window Closed)</h3>
+                        <ul class="action-list">
+                            <li>Generic AI wrapper products (big models cover within 6 months, R7)</li>
+                            <li>Career/HR tools (3,602+3,526 career pain posts this week, high competition density)</li>
+                            <li>$49.5k price band (blue-collar engineering, not solo-founder accessible)</li>
+                            <li>Lifelong-purchase as primary monetization (AppSumo postmortems + open-source-to-paid backlash, two counter-examples)</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Methodology -->
+                <section id="methodology" class="section">
+                    <div class="section-header">
+                        <div class="section-icon blue">📐</div>
+                        <h2>Methodology</h2>
+                    </div>
+                    <div class="card">
+                        <ul class="action-list">
+                            <li>Data sources: 5-source full 110,383 posts (reddit 101,082 / IH-products 3,804 / HN 3,357 / IH-posts 1,711 / PH 429), window tagged_at 2026-09-06 ~ 09-12 (UTC), post_id dedup keeping latest tag</li>
+                            <li>Trend basis: 'true-new' = created_utc also inside 09-06~09-12 (35,494 posts). 09-10 was the #200 enum-rename batch re-tag day (69,202 historical posts ingested: Aug 45,507 + Sep 19,847 + Jan-Jun 3,848); recruit-post share increase is a re-tag + 09-11 B-prompt reclassification artifact, not a real hiring surge</li>
+                            <li>In-flight gap: as of early 09-14, only 331 Reddit posts in this window remain untagged (7 with score>100), essentially complete</li>
+                            <li>Noise: 4,325 posts (3.9%); low-confidence (&lt;0.8) only 4; IH-posts noise rate 12.1% is the highest across sources (community posts are naturally ad/filler-heavy)</li>
+                            <li>Sample floor: groups &lt;30 posts get no trend claim (R6/R8 monitor only); IH revenue reports 28 = structural description</li>
+                            <li>Golden eval: 683-post test set overall accuracy 71.6% (annotation-sample evaluation, not production full-volume accuracy)</li>
+                        </ul>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+<!-- AUTO:footer:begin -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <img class="footer-logo" src="/assets/img/logo.png" alt="7Kolor Insights" width="26" height="26">
+                <span class="footer-name">7Kolor <span>Insights</span></span>
+                <span class="footer-tagline" data-zh="为独立开发者提供趋势分析与信号洞察" data-en="Trend analysis & signal insight for indie developers">为独立开发者提供趋势分析与信号洞察</span>
+            </div>
+            <nav class="footer-links">
+                <a href="/weekly/" data-zh="每周情报" data-en="Weekly">每周情报</a>
+                <a href="/#reports" data-zh="专项报告" data-en="Reports">专项报告</a>
+                <a href="/#services" data-zh="定制服务" data-en="Custom Services">定制服务</a>
+                <a href="/about.html" data-zh="关于" data-en="About">关于</a>
+                <a href="https://github.com/7kolor/7kolor.github.io">GitHub</a>
+                <a href="/feed.xml">RSS</a>
+            </nav>
+            <p class="footer-copy">© 2026 7Kolor Insights</p>
+        </div>
+    </footer>
+    <!-- AUTO:footer:end -->
+
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>
