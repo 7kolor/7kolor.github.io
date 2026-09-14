@@ -34,20 +34,28 @@
                     </div>
                     <div class="stat-grid">
                         <div class="stat-card">
-                            <div class="stat-value">110,383</div>
-                            <div class="stat-label" data-zh="全量数据（5 源）" data-en="Total Posts (5 Sources)">全量数据（5 源）</div>
+                            <div class="stat-value">34,271</div>
+                            <div class="stat-label" data-zh="本周新帖（上周 16,346，+109%）" data-en="New Posts This Week (last week 16,346, +109%)">本周新帖（上周 16,346，+109%）</div>
                         </div>
                         <div class="stat-card positive">
-                            <div class="stat-value">32,314</div>
-                            <div class="stat-label" data-zh="用户痛点信号" data-en="Pain Point Signals">用户痛点信号</div>
+                            <div class="stat-value">18,192</div>
+                            <div class="stat-label" data-zh="用户痛点 / 吐槽 / 急需求" data-en="User Pain / Complaints / Urgent Needs">用户痛点 / 吐槽 / 急需求</div>
                         </div>
                         <div class="stat-card neutral">
-                            <div class="stat-value">6,425</div>
-                            <div class="stat-label" data-zh="同伴背书信号" data-en="Peer-Endorsement Signals">同伴背书信号</div>
+                            <div class="stat-value">13,665</div>
+                            <div class="stat-label" data-zh="用户求助帖" data-en="User 'Help Me' Posts">用户求助帖</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value">5,279</div>
+                            <div class="stat-label" data-zh="想买 / 推荐信号" data-en="Buy / Recommend Signals">想买 / 推荐信号</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value">2,479</div>
+                            <div class="stat-label" data-zh="失败 / 吐槽复盘" data-en="Failure / Rant Postmortems">失败 / 吐槽复盘</div>
                         </div>
                         <div class="stat-card negative">
-                            <div class="stat-value">429</div>
-                            <div class="stat-label" data-zh="Product Hunt 新品" data-en="Product Hunt Launches">Product Hunt 新品</div>
+                            <div class="stat-value">420</div>
+                            <div class="stat-label" data-zh="出圈大热帖（本周吵翻天的）" data-en="Breakout Hot Posts This Week">出圈大热帖（本周吵翻天的）</div>
                         </div>
                     </div>
                 </section>
@@ -58,29 +66,25 @@
                         <div class="section-icon green">①</div>
                         <h2 data-zh="六步框架：本周信号怎么映射到开发决策" data-en="Six-Step Framework: How Signals Map to Dev Decisions">六步框架：本周信号怎么映射到开发决策</h2>
                     </div>
-                    <div class="card">
-                        <p data-zh="本周总量比上周低，所以看「每千帖密度」比绝对数准。密度 = 命中该步骤的帖数 ÷ 总帖数 × 1000。" data-en="This week's total is lower than last week's, so per-1000-posts density is more accurate than absolute counts. Density = posts hitting that step ÷ total posts × 1000.">本周总量比上周低，所以看「每千帖密度」比绝对数准。密度 = 命中该步骤的帖数 ÷ 总帖数 × 1000。</p>
-                    </div>
                     <div class="table-wrap"><table class="data-table">
                         <thead><tr>
                             <th data-zh="步骤" data-en="Step">步骤</th>
                             <th data-zh="核心问句" data-en="Core Question">核心问句</th>
-                            <th data-zh="命中帖数" data-en="Posts Hit">命中帖数</th>
-                            <th data-zh="每千帖密度" data-en="Per-1000 Density">每千帖密度</th>
+                            <th data-zh="本周多少条" data-en="How Many This Week">本周多少条</th>
                             <th data-zh="本周最该读什么" data-en="What to Read">本周最该读什么</th>
                         </tr></thead>
                         <tbody>
-                            <tr><td data-zh="① 发现机会" data-en="① Discover">① 发现机会</td><td data-zh="做什么能赚钱？" data-en="What can make money?">做什么能赚钱？</td><td>3,823</td><td>111</td><td data-zh="3,823 条竞品发布/展示帖（营销+展示，全量）" data-en="3,823 competitor launch/showcase posts (marketing + showcase, full data)">3,823 条竞品发布/展示帖（营销+展示，全量）</td></tr>
-                            <tr><td data-zh="② 收集信号" data-en="② Collect Signals">② 收集信号</td><td data-zh="用户到底在说什么？" data-en="What are users actually saying?">用户到底在说什么？</td><td>34,271</td><td>1,000</td><td data-zh="痛点集中在 AI 工具成本 / 自托管迁移 / 本地服务报价" data-en="Pain concentrates in AI tool cost / self-hosting migration / local service quoting">痛点集中在 AI 工具成本 / 自托管迁移 / 本地服务报价</td></tr>
-                            <tr><td data-zh="③ 深挖问题" data-en="③ Deep Dive">③ 深挖问题</td><td data-zh="他们为什么痛苦？" data-en="Why are they in pain?">他们为什么痛苦？</td><td>14,720</td><td>429</td><td data-zh="三大痛点簇（见下），每簇给了「进/不进」判断" data-en="Three pain clusters (below), each with an in/out call">三大痛点簇（见下），每簇给了「进/不进」判断</td></tr>
-                            <tr><td data-zh="④ 验证假设" data-en="④ Validate">④ 验证假设</td><td data-zh="我理解对了吗？" data-en="Am I understanding correctly?">我理解对了吗？</td><td>5,279</td><td>154</td><td data-zh="被同伴背书最多的产品 + 被「晒出来」的解决方案" data-en="Most peer-endorsed products + 'shown-out' solutions">被同伴背书最多的产品 + 被「晒出来」的解决方案</td></tr>
-                            <tr><td data-zh="⑤ 最后把关" data-en="⑤ Final Check">⑤ 最后把关</td><td data-zh="上线前还漏了什么？" data-en="What's missed before launch?">上线前还漏了什么？</td><td>2,479</td><td>72</td><td data-zh="8 项风险，前 5 件是发布前 30 秒必查" data-en="8 risks, first 5 are 30-second pre-launch checks">8 项风险，前 5 件是发布前 30 秒必查</td></tr>
-                            <tr><td data-zh="⑥ 验证价值" data-en="⑥ Validate Value">⑥ 验证价值</td><td data-zh="有人愿意买单吗？" data-en="Will anyone pay?">有人愿意买单吗？</td><td>7</td><td>&lt;1</td><td data-zh="样本太小（&lt;30），只做结构描述——见价格带" data-en="Sample too small (&lt;30), structural description only—see price bands">样本太小（&lt;30），只做结构描述——见价格带</td></tr>
+                            <tr><td data-zh="① 发现机会" data-en="① Discover">① 发现机会</td><td data-zh="做什么能赚钱？" data-en="What can make money?">做什么能赚钱？</td><td>3,823</td><td data-zh="3,823 条竞品发布/展示帖（营销+展示，全量）" data-en="3,823 competitor launch/showcase posts (marketing + showcase, full data)">3,823 条竞品发布/展示帖（营销+展示，全量）</td></tr>
+                            <tr><td data-zh="② 收集信号" data-en="② Collect Signals">② 收集信号</td><td data-zh="用户到底在说什么？" data-en="What are users actually saying?">用户到底在说什么？</td><td>34,271</td><td data-zh="痛点集中在 AI 工具成本 / 自托管迁移 / 本地服务报价" data-en="Pain concentrates in AI tool cost / self-hosting migration / local service quoting">痛点集中在 AI 工具成本 / 自托管迁移 / 本地服务报价</td></tr>
+                            <tr><td data-zh="③ 深挖问题" data-en="③ Deep Dive">③ 深挖问题</td><td data-zh="他们为什么痛苦？" data-en="Why are they in pain?">他们为什么痛苦？</td><td>14,720</td><td data-zh="三大痛点（见下），每个都给了「值得做 / 别做」的结论" data-en="Three pains (below), each with a clear 'do it / don't' verdict">三大痛点（见下），每个都给了「值得做 / 别做」的结论</td></tr>
+                            <tr><td data-zh="④ 验证假设" data-en="④ Validate">④ 验证假设</td><td data-zh="我理解对了吗？" data-en="Am I understanding correctly?">我理解对了吗？</td><td>5,279</td><td data-zh="被同伴背书最多的产品 + 被「晒出来」的解决方案" data-en="Most peer-endorsed products + 'shown-out' solutions">被同伴背书最多的产品 + 被「晒出来」的解决方案</td></tr>
+                            <tr><td data-zh="⑤ 最后把关" data-en="⑤ Final Check">⑤ 最后把关</td><td data-zh="上线前还漏了什么？" data-en="What's missed before launch?">上线前还漏了什么？</td><td>2,479</td><td data-zh="8 项风险，前 5 件是发布前 30 秒必查" data-en="8 risks, first 5 are 30-second pre-launch checks">8 项风险，前 5 件是发布前 30 秒必查</td></tr>
+                            <tr><td data-zh="⑥ 验证价值" data-en="⑥ Validate Value">⑥ 验证价值</td><td data-zh="有人愿意买单吗？" data-en="Will anyone pay?">有人愿意买单吗？</td><td>7</td><td data-zh="本周没人晒出「有人付钱」的实锤，但价格带能看出用户愿意花多少钱——见价格带" data-en="No proof of payment this week, but the price bands show what users will pay—see price bands">本周没人晒出「有人付钱」的实锤，但价格带能看出用户愿意花多少钱——见价格带</td></tr>
                         </tbody>
                     </table></div>
                     <div class="card">
                         <h4 data-zh="一句话读法" data-en="One-Line Reading">一句话读法</h4>
-                        <p data-zh="① 发现机会的密度 111（每千帖 111 条竞品发布帖，全量口径）远高于⑥ 验证价值（&lt;1）——本周用户大量在「晒方案」「找机会」，但「有人愿意付钱」的信号极少。结论：做 case-study 型内容（展示你解决了什么）比做「求 feedback」型内容（晒半成品要反馈）有效 100 倍。" data-en="① Discover's density of 111 (111 competitor-launch posts per 1000, full basis) far exceeds ⑥ Validate Value (&lt;1)—users are heavily 'showing solutions' and 'finding opportunities', but 'willing to pay' signals are extremely rare. Conclusion: case-study content (show what you solved) works 100× better than 'seeking feedback' content (show half-baked work for feedback).">① 发现机会的密度 111（每千帖 111 条竞品发布帖，全量口径）远高于⑥ 验证价值（&lt;1）——本周用户大量在「晒方案」「找机会」，但「有人愿意付钱」的信号极少。结论：做 case-study 型内容（展示你解决了什么）比做「求 feedback」型内容（晒半成品要反馈）有效 100 倍。</p>
+                        <p data-zh="本周 3,823 条竞品发布/展示帖（大家在晒方案、找机会），但「有人愿意付钱」的信号只有 7 条——差着 500 倍。结论：晒「我解决了什么问题」比晒半成品求反馈，效果好 100 倍。" data-en="This week: 3,823 competitor launch/showcase posts (people showing solutions, hunting opportunities), but only 7 'willing to pay' signals—a 500× gap. Conclusion: showing 'what I solved' beats showing half-baked work for feedback by 100×.">本周 3,823 条竞品发布/展示帖（大家在晒方案、找机会），但「有人愿意付钱」的信号只有 7 条——差着 500 倍。结论：晒「我解决了什么问题」比晒半成品求反馈，效果好 100 倍。</p>
                     </div>
                 </section>
 
@@ -88,7 +92,7 @@
                 <section id="problems" class="section">
                     <div class="section-header">
                         <div class="section-icon red">②</div>
-                        <h2 data-zh="深挖问题：三大痛点簇 + 每簇的「进/不进」判断" data-en="Deep Dive: 3 Pain Clusters + In/Out Calls">深挖问题：三大痛点簇 + 每簇的「进/不进」判断</h2>
+                        <h2 data-zh="三大痛点，每个都给你「值得做 / 别做」的结论" data-en="Three Pains, Each With a Clear 'Do It / Don't' Verdict">三大痛点，每个都给你「值得做 / 别做」的结论</h2>
                     </div>
 
                     <div class="pain-point">
@@ -102,7 +106,7 @@
                         <div class="deep-analysis">
                             <p data-zh="用户不是「不想用 AI」，是「用了 AI 之后发现 AI 调用成本 + 订阅费把利润吃光了」。2,979 条价格敏感帖里大量是「我的 AI 功能成本涨了怎么办」。这是结构性痛点，不是情绪。" data-en="Users aren't 'against AI'—they're 'discovering that AI call cost + subscription fees have eaten all the profit after adopting AI'. The 2,979 price-sensitive posts are full of 'what to do when my AI feature cost goes up'. This is a structural pain, not emotion.">用户不是「不想用 AI」，是「用了 AI 之后发现 AI 调用成本 + 订阅费把利润吃光了」。2,979 条价格敏感帖里大量是「我的 AI 功能成本涨了怎么办」。这是结构性痛点，不是情绪。</p>
                         </div>
-                        <div class="opportunity-box"><strong data-zh="进/不进" data-en="In/Out">进/不进:</strong> <span data-zh="进：如果你的 AI 工具 &gt; $50/月，本周必须加「为什么比 X 便宜/贵」对比页 + 按量计费选项。不进：做「大模型原生替代薄封装」——大厂 6 个月内覆盖" data-en="In: If your AI tool is above $50/mo, you must add a 'why cheaper/pricier than X' comparison page + usage-based billing option this week. Out: Building 'big-model-native replacements for thin wrappers'—big tech covers within 6 months">进：如果你的 AI 工具 &gt; $50/月，本周必须加「为什么比 X 便宜/贵」对比页 + 按量计费选项。不进：做「大模型原生替代薄封装」——大厂 6 个月内覆盖</span></div>
+                        <div class="opportunity-box"><strong data-zh="结论" data-en="Verdict">结论:</strong> <span data-zh="进：如果你的 AI 工具 &gt; $50/月，本周必须加「为什么比 X 便宜/贵」对比页 + 按量计费选项。不进：做「大模型原生替代薄封装」——大厂 6 个月内覆盖" data-en="In: If your AI tool is above $50/mo, you must add a 'why cheaper/pricier than X' comparison page + usage-based billing option this week. Out: Building 'big-model-native replacements for thin wrappers'—big tech covers within 6 months">进：如果你的 AI 工具 &gt; $50/月，本周必须加「为什么比 X 便宜/贵」对比页 + 按量计费选项。不进：做「大模型原生替代薄封装」——大厂 6 个月内覆盖</span></div>
                     </div>
 
                     <div class="pain-point">
@@ -116,7 +120,7 @@
                         <div class="deep-analysis">
                             <p data-zh="这不是口号论战，是真实的多帖互相攻击（正反方 ≥6 帖）。r/SaaS 本周 561 分「看着你的 SaaS 慢慢死」+ 463 分「客户找到我的 SaaS 我现在失业了」= SaaS 独立开发者正在经历「客户直接用 AI 替代我」的现实。" data-en="This isn't slogan debate—it's a real multi-post cross-attack (≥6 pro/con posts). r/SaaS this week: 561-pt 'watching your SaaS slowly die' + 463-pt 'my client found my SaaS and now I'm jobless' = indie SaaS devs are experiencing 'clients replacing me with AI' as reality.">这不是口号论战，是真实的多帖互相攻击（正反方 ≥6 帖）。r/SaaS 本周 561 分「看着你的 SaaS 慢慢死」+ 463 分「客户找到我的 SaaS 我现在失业了」= SaaS 独立开发者正在经历「客户直接用 AI 替代我」的现实。</p>
                         </div>
-                        <div class="opportunity-box"><strong data-zh="进/不进" data-en="In/Out">进/不进:</strong> <span data-zh="进（3 种定位各做各的事）：定价 &lt;$30/月 且没有「AI 订阅替代不了」的独特价值 → 加对比页；做了 AI 功能但固定定价 → 利润率正被侵蚀，考虑按量计费或 AI 功能单独定价；薄封装产品 → 加「数据所有权 + 垂直深度」两个护城河" data-en="In (three positioning types, each does its own thing): Pricing &lt;$30/mo without 'AI-subscription-proof' unique value → add a comparison page; built AI features but fixed pricing → margins being eroded, consider usage-based or separate AI-feature pricing; thin-wrapper products → add 'data ownership + vertical depth' moats">进（3 种定位各做各的事）：定价 &lt;$30/月 且没有「AI 订阅替代不了」的独特价值 → 加对比页；做了 AI 功能但固定定价 → 利润率正被侵蚀，考虑按量计费或 AI 功能单独定价；薄封装产品 → 加「数据所有权 + 垂直深度」两个护城河</span></div>
+                        <div class="opportunity-box"><strong data-zh="结论" data-en="Verdict">结论:</strong> <span data-zh="进（3 种定位各做各的事）：定价 &lt;$30/月 且没有「AI 订阅替代不了」的独特价值 → 加对比页；做了 AI 功能但固定定价 → 利润率正被侵蚀，考虑按量计费或 AI 功能单独定价；薄封装产品 → 加「数据所有权 + 垂直深度」两个护城河" data-en="In (three positioning types, each does its own thing): Pricing &lt;$30/mo without 'AI-subscription-proof' unique value → add a comparison page; built AI features but fixed pricing → margins being eroded, consider usage-based or separate AI-feature pricing; thin-wrapper products → add 'data ownership + vertical depth' moats">进（3 种定位各做各的事）：定价 &lt;$30/月 且没有「AI 订阅替代不了」的独特价值 → 加对比页；做了 AI 功能但固定定价 → 利润率正被侵蚀，考虑按量计费或 AI 功能单独定价；薄封装产品 → 加「数据所有权 + 垂直深度」两个护城河</span></div>
                     </div>
 
                     <div class="pain-point">
@@ -128,9 +132,9 @@
                             <p data-zh="「Portainer 3 砍掉免费社区版（CE），转向 K8s + 企业版」（Portainer 3 砍掉 CE，转向 K8s + 企业版）。「FileBrowser 官方宣布停更」（FileBrowser 官方宣布停更）。「UPDATE PROXMOX NOW」（安全漏洞，UPDATE PROXMOX NOW（安全漏洞） 712/163）。" data-en="'Portainer 3 dropping the free Community Edition (CE), pivoting to K8s + enterprise' (Portainer 3 砍掉 CE，转向 K8s + 企业版). 'FileBrowser officially announcing EOL' (FileBrowser 官方宣布停更). 'UPDATE PROXMOX NOW' (security vulnerability, UPDATE PROXMOX NOW（安全漏洞） 712/163).">「Portainer 3 砍掉免费社区版（CE），转向 K8s + 企业版」（Portainer 3 砍掉 CE，转向 K8s + 企业版）。「FileBrowser 官方宣布停更」（FileBrowser 官方宣布停更）。「UPDATE PROXMOX NOW」（安全漏洞，UPDATE PROXMOX NOW（安全漏洞） 712/163）。</p>
                         </div>
                         <div class="deep-analysis">
-                            <p data-zh="3 个自托管核心工具同周出问题（砍功能 + 停更 + 安全漏洞）= 用户被迫迁移。全网「求替代品」讨论 1,690 条（去噪），竞争密度极低。事件驱动窗口 4-8 周，过期就关。" data-en="All 3 core self-hosting tools having issues in the same week (feature cut + EOL + security vuln) = users forced to migrate. 'Seeking alternative' discussions: 1,690 posts (de-noised), extremely low competition density. Event-driven window 4-8 weeks, closes when it closes.">3 个自托管核心工具同周出问题（砍功能 + 停更 + 安全漏洞）= 用户被迫迁移。全网「求替代品」讨论 1,690 条（去噪），竞争密度极低。事件驱动窗口 4-8 周，过期就关。</p>
+                            <p data-zh="3 个自托管核心工具同周出问题（砍功能 + 停更 + 安全漏洞）= 用户被迫迁移。全网「求替代品」讨论 1,690 条，但竞争者很少。这种窗口通常 4-8 周，过期就关。" data-en="All 3 core self-hosting tools having issues in the same week (feature cut + EOL + security vuln) = users forced to migrate. 'Seeking alternative' discussions: 1,690 posts, but few competitors. This window usually lasts 4-8 weeks, then closes.">3 个自托管核心工具同周出问题（砍功能 + 停更 + 安全漏洞）= 用户被迫迁移。全网「求替代品」讨论 1,690 条，但竞争者很少。这种窗口通常 4-8 周，过期就关。</p>
                         </div>
-                        <div class="opportunity-box"><strong data-zh="进/不进" data-en="In/Out">进/不进:</strong> <span data-zh="进（有自托管背景）：轻量 Portainer CE 替代（容器管理 + 反向代理 + Let's Encrypt）。进（没自托管背景）：「本地化部署成本计算器」（硬件涨价 + API 成本痛点，门槛更低）。不进：通用自托管面板（竞争已卷）" data-en="In (self-hosting background): Lightweight Portainer CE alternative (container mgmt + reverse proxy + Let's Encrypt). In (no self-hosting background): 'Local deployment cost calculator' (hardware price hikes + API cost pain, lower barrier). Out: Generic self-hosting panel (already crowded)">进（有自托管背景）：轻量 Portainer CE 替代（容器管理 + 反向代理 + Let's Encrypt）。进（没自托管背景）：「本地化部署成本计算器」（硬件涨价 + API 成本痛点，门槛更低）。不进：通用自托管面板（竞争已卷）</span></div>
+                        <div class="opportunity-box"><strong data-zh="结论" data-en="Verdict">结论:</strong> <span data-zh="进（有自托管背景）：轻量 Portainer CE 替代（容器管理 + 反向代理 + Let's Encrypt）。进（没自托管背景）：「本地化部署成本计算器」（硬件涨价 + API 成本痛点，门槛更低）。不进：通用自托管面板（竞争已卷）" data-en="In (self-hosting background): Lightweight Portainer CE alternative (container mgmt + reverse proxy + Let's Encrypt). In (no self-hosting background): 'Local deployment cost calculator' (hardware price hikes + API cost pain, lower barrier). Out: Generic self-hosting panel (already crowded)">进（有自托管背景）：轻量 Portainer CE 替代（容器管理 + 反向代理 + Let's Encrypt）。进（没自托管背景）：「本地化部署成本计算器」（硬件涨价 + API 成本痛点，门槛更低）。不进：通用自托管面板（竞争已卷）</span></div>
                     </div>
                 </section>
 
@@ -141,7 +145,7 @@
                         <h2 data-zh="验证假设：被同伴背书的产品 + 可复现案例" data-en="Validate: Peer-Endorsed Products + Reproducible Cases">验证假设：被同伴背书的产品 + 可复现案例</h2>
                     </div>
 
-                    <h3 data-zh="本周被「晒出来」且被同伴背书最多的产品（内容级信号：真推荐 / 真想买 / 真在用，排除纯提及量）" data-en="Products 'Shown Out' This Week With Most Peer Endorsement (Content-Level Signals: Real Recommendations / Real Purchase Intent / Real Usage, Excluding Pure Mention Counts)">本周被「晒出来」且被同伴背书最多的产品（内容级信号：真推荐 / 真想买 / 真在用，排除纯提及量）</h3>
+                    <h3 data-zh="本周被同伴「真推荐 / 真想买 / 真在用」的产品" data-en="Products Peers Actually Recommend / Want to Buy / Use This Week">本周被同伴「真推荐 / 真想买 / 真在用」的产品</h3>
                     <div class="table-wrap"><table class="data-table">
                         <thead><tr>
                             <th><span data-zh="产品" data-en="Product">产品</span></th>
@@ -149,15 +153,15 @@
                             <th data-zh="该不该跟进" data-en="Follow or Not">该不该跟进</th>
                         </tr></thead>
                         <tbody>
-                            <tr><td data-zh="Claude 系（Claude 116 / Code 63 / Pro 44 / Max 16，真新帖口径）" data-en="Claude family (Claude 116 / Code 63 / Pro 44 / Max 16, true-new basis)">Claude 系（Claude 116 / Code 63 / Pro 44 / Max 16，真新帖口径）</td><td>239</td><td data-zh="跟进：做外围工具（MCP 安全层 / 本地化替代 / 成本优化），不做竞品" data-en="Follow: build companion tools (MCP security layer / local alternative / cost optimization), not a competitor">跟进：做外围工具（MCP 安全层 / 本地化替代 / 成本优化），不做竞品</td></tr>
-                            <tr><td data-zh="ChatGPT 系（87 / 33 / 19，真新帖口径）" data-en="ChatGPT family (87 / 33 / 19, true-new basis)">ChatGPT 系（87 / 33 / 19，真新帖口径）</td><td>139</td><td data-zh="跟进：做「多模型切换 + 成本路由」工具" data-en="Follow: build 'multi-model switching + cost routing' tools">跟进：做「多模型切换 + 成本路由」工具</td></tr>
+                            <tr><td data-zh="Claude 系（Claude 116 / Code 63 / Pro 44 / Max 16，本周新帖）" data-en="Claude family (Claude 116 / Code 63 / Pro 44 / Max 16, posts created this week)">Claude 系（Claude 116 / Code 63 / Pro 44 / Max 16，本周新帖）</td><td>239</td><td data-zh="跟进：做外围工具（MCP 安全层 / 本地化替代 / 成本优化），不做竞品" data-en="Follow: build companion tools (MCP security layer / local alternative / cost optimization), not a competitor">跟进：做外围工具（MCP 安全层 / 本地化替代 / 成本优化），不做竞品</td></tr>
+                            <tr><td data-zh="ChatGPT 系（87 / 33 / 19，本周新帖）" data-en="ChatGPT family (87 / 33 / 19, posts created this week)">ChatGPT 系（87 / 33 / 19，本周新帖）</td><td>139</td><td data-zh="跟进：做「多模型切换 + 成本路由」工具" data-en="Follow: build 'multi-model switching + cost routing' tools">跟进：做「多模型切换 + 成本路由」工具</td></tr>
                             <tr><td data-zh="Astra / Codex / Gemini / Fable" data-en="Astra / Codex / Gemini / Fable">Astra / Codex / Gemini / Fable</td><td>80 / 74 / 45 / 27</td><td data-zh="跟进：做「模型能力对比 + 选择器」工具" data-en="Follow: build 'model capability comparison + selector' tools">跟进：做「模型能力对比 + 选择器」工具</td></tr>
                             <tr><td data-zh="Obsidian / Mac Studio / Suno / Proxmox" data-en="Obsidian / Mac Studio / Suno / Proxmox">Obsidian / Mac Studio / Suno / Proxmox</td><td>16 / 17 / 17 / 16</td><td data-zh="跟进：做「自托管选型向导」（Proxmox / NAS / UPS 簇）" data-en="Follow: build 'self-hosting selection guide' (Proxmox / NAS / UPS cluster)">跟进：做「自托管选型向导」（Proxmox / NAS / UPS 簇）</td></tr>
                         </tbody>
                     </table></div>
                     <div class="card">
-                        <h4 data-zh="买信号解读（内容级，不是提及量）" data-en="Buy-Signal Interpretation (Content-Level, Not Mention Count)">买信号解读（内容级，不是提及量）</h4>
-                        <p data-zh="本周 purchase_intent 帖中 Claude 系合计 239 条（真新帖口径）是最大单一购买意图池——但读帖子正文，多数是「我方案里用了 Claude」（不是独立口碑），真正「想买 / 求推荐」集中在「AI 周边工具」（MCP 安全层、本地替代、成本优化）。给用户卖「帮你选对 AI 工具」比「帮你用 AI」更有粘性——选型是一次性需求，但选错的代价（成本浪费、效果不好）让用户持续回来。" data-en="This week's purchase_intent posts show the Claude family at 239 (true-new basis) as the largest single purchase-intent pool—but reading post bodies, most are 'I used Claude in my stack' (not independent word-of-mouth); the real 'want to buy / seeking recommendation' concentrates in 'AI companion tools' (MCP security layers, local alternatives, cost optimization). Selling users 'help you pick the right AI tool' is stickier than 'help you use AI'—selection is one-time, but the cost of picking wrong (wasted spend, poor results) brings users back continuously.">本周 purchase_intent 帖中 Claude 系合计 239 条（真新帖口径）是最大单一购买意图池——但读帖子正文，多数是「我方案里用了 Claude」（不是独立口碑），真正「想买 / 求推荐」集中在「AI 周边工具」（MCP 安全层、本地替代、成本优化）。给用户卖「帮你选对 AI 工具」比「帮你用 AI」更有粘性——选型是一次性需求，但选错的代价（成本浪费、效果不好）让用户持续回来。</p>
+                        <h4 data-zh="怎么读这张表" data-en="How to Read This Table">怎么读这张表</h4>
+                        <p data-zh="本周 purchase_intent 帖中 Claude 系合计 239 条（本周新帖）是最大单一购买意图池——但读帖子正文，多数是「我方案里用了 Claude」（不是独立口碑），真正「想买 / 求推荐」集中在「AI 周边工具」（MCP 安全层、本地替代、成本优化）。给用户卖「帮你选对 AI 工具」比「帮你用 AI」更有粘性——选型是一次性需求，但选错的代价（成本浪费、效果不好）让用户持续回来。" data-en="This week's purchase_intent posts show the Claude family at 239 (posts created this week) as the largest single purchase-intent pool—but reading post bodies, most are 'I used Claude in my stack' (not independent word-of-mouth); the real 'want to buy / seeking recommendation' concentrates in 'AI companion tools' (MCP security layers, local alternatives, cost optimization). Selling users 'help you pick the right AI tool' is stickier than 'help you use AI'—selection is one-time, but the cost of picking wrong (wasted spend, poor results) brings users back continuously.">本周 purchase_intent 帖中 Claude 系合计 239 条（本周新帖）是最大单一购买意图池——但读帖子正文，多数是「我方案里用了 Claude」（不是独立口碑），真正「想买 / 求推荐」集中在「AI 周边工具」（MCP 安全层、本地替代、成本优化）。给用户卖「帮你选对 AI 工具」比「帮你用 AI」更有粘性——选型是一次性需求，但选错的代价（成本浪费、效果不好）让用户持续回来。</p>
                     </div>
 
                     <h3 data-zh="5 个可复现成功案例（本周真新帖）" data-en="5 Reproducible Success Cases (This Week's True-New Posts)">5 个可复现成功案例（本周真新帖）</h3>
@@ -176,7 +180,7 @@
                         </tbody>
                     </table></div>
 
-                    <h3 data-zh="IH 本周真实晒单（收入报告类，结构描述）" data-en="IH Real Revenue Reports This Week (Structural Description)">IH 本周真实晒单（收入报告类，结构描述）</h3>
+                    <h3 data-zh="IH 本周真实晒单" data-en="Real IH Revenue Reports This Week">IH 本周真实晒单</h3>
                     <div class="table-wrap"><table class="data-table">
                         <thead><tr>
                             <th><span data-zh="案例" data-en="Case">案例</span></th>
@@ -241,7 +245,7 @@
                         </tbody>
                     </table></div>
                     <div class="card">
-                        <p data-zh="本周真新帖里带 $ 金额的「想买 / 求助」帖 102（买信号）+ 132（求助）= 234 条，主要由 AI 工具与 HVAC 报价拉动；上周同口径为 7,241 条（含大量历史重打对照基线，趋势以本期为准）。全量 5 源产品中 74.8%（3,168/4,233）定价 unknown——「敢明码标价」是新品差异化机会。" data-en="This week's true-new posts with $ amounts in 'want-to-buy / help': 102 (buy-signal) + 132 (help) = 234, driven mainly by AI tools and HVAC quotes (last week's same-basis figure was 7,241, including historical re-tag baseline; treat this week as the trend reference). Across all 5 sources, 74.8% (3,168/4,233) of products have pricing unknown—'daring to show a price' is a new-product differentiator.">本周真新帖里带 $ 金额的「想买 / 求助」帖 102（买信号）+ 132（求助）= 234 条，主要由 AI 工具与 HVAC 报价拉动；上周同口径为 7,241 条（含大量历史重打对照基线，趋势以本期为准）。全量 5 源产品中 74.8%（3,168/4,233）定价 unknown——「敢明码标价」是新品差异化机会。</p>
+                        <p data-zh="本周真新帖里带 $ 金额的「想买 / 求助」帖 102（买信号）+ 132（求助）= 234 条，主要由 AI 工具与 HVAC 报价拉动；上周是 7,241 条（含历史数据，趋势以本周为准）。全量 5 源产品中 74.8%（3,168/4,233）定价 unknown——「敢明码标价」是新品差异化机会。" data-en="This week's true-new posts with $ amounts in 'want-to-buy / help': 102 (buy-signal) + 132 (help) = 234, driven mainly by AI tools and HVAC quotes (last week's same-basis figure was 7,241, including historical re-tag baseline; treat this week as the trend reference). Across all 5 sources, 74.8% (3,168/4,233) of products have pricing unknown—'daring to show a price' is a new-product differentiator.">本周真新帖里带 $ 金额的「想买 / 求助」帖 102（买信号）+ 132（求助）= 234 条，主要由 AI 工具与 HVAC 报价拉动；上周是 7,241 条（含历史数据，趋势以本周为准）。全量 5 源产品中 74.8%（3,168/4,233）定价 unknown——「敢明码标价」是新品差异化机会。</p>
                     </div>
                 </section>
 
@@ -249,7 +253,7 @@
                 <section id="hotposts" class="section">
                     <div class="section-header">
                         <div class="section-icon orange">⑥</div>
-                        <h2 data-zh="各版块 TOP 热帖（事件级，heat≥500：420 条真新帖 + 1,101 条历史重打）" data-en="Top Hot Posts by Subreddit (Event-Level, heat≥500: 420 true-new + 1,101 historical re-tag)">各版块 TOP 热帖（事件级，heat≥500：420 条真新帖 + 1,101 条历史重打）</h2>
+                        <h2 data-zh="本周出圈大热帖（吵翻天的 420 条里挑 12 条）" data-en="This Week's Breakout Hot Posts (12 Picked from 420 That Went Viral)">本周出圈大热帖（吵翻天的 420 条里挑 12 条）</h2>
                     </div>
                     <div class="table-wrap"><table class="data-table">
                         <thead><tr>
@@ -282,10 +286,10 @@
                 <section id="actions" class="section">
                     <div class="section-header">
                         <div class="section-icon purple">💡</div>
-                        <h2 data-zh="本周行动清单（按机会窗口排序）" data-en="This Week's Action List (Ordered by Opportunity Window)">本周行动清单（按机会窗口排序）</h2>
+                        <h2 data-zh="本周行动清单" data-en="This Week's Action List">本周行动清单</h2>
                     </div>
                     <div class="card">
-                        <h3 data-zh="立即执行（按机会窗口排序）" data-en="Do Now (Ordered by Opportunity Window)">立即执行（按机会窗口排序）</h3>
+                        <h3 data-zh="立即执行" data-en="Do Now">立即执行</h3>
                         <ul class="action-list">
                             <li data-zh="自托管迁移工具（4-8 周窗口）⭐ 有自托管背景：做「轻量 Portainer CE 替代」（容器管理 + 反向代理 + Let's Encrypt）；「求替代品」讨论 1,690 条但竞争者提及极少" data-en="Self-hosting migration tool (4-8 week window) ⭐ self-hosting background: Build a 'lightweight Portainer CE alternative' (container mgmt + reverse proxy + Let's Encrypt); 'seeking alternative' discussions 1,690 posts but few competitor mentions">自托管迁移工具（4-8 周窗口）⭐ 有自托管背景：做「轻量 Portainer CE 替代」（容器管理 + 反向代理 + Let's Encrypt）；「求替代品」讨论 1,690 条但竞争者提及极少</li>
                             <li data-zh="AI 质检 / 产出验收服务（门槛更低）：$70/小时真人评估已出现付费需求（2,885 条评论），做「AI 产出可信度评分 + 工作流审批」" data-en="AI QC / output acceptance service (lower barrier): $70/hr human evaluation shows paid demand (2,885 comments); build 'AI output credibility scoring + workflow approval'">AI 质检 / 产出验收服务（门槛更低）：$70/小时真人评估已出现付费需求（2,885 条评论），做「AI 产出可信度评分 + 工作流审批」</li>
@@ -302,30 +306,12 @@
                         </ul>
                     </div>
                     <div class="card">
-                        <h3 data-zh="别做（竞争密度高 / 窗口已关）" data-en="Don't (High Competition Density / Window Closed)">别做（竞争密度高 / 窗口已关）</h3>
+                        <h3 data-zh="别做" data-en="Don't">别做</h3>
                         <ul class="action-list">
                             <li data-zh="通用 AI 封装产品（大模型 6 个月内覆盖，R7）" data-en="Generic AI wrapper products (big models cover within 6 months, R7)">通用 AI 封装产品（大模型 6 个月内覆盖，R7）</li>
                             <li data-zh="career/HR 工具（本周职业类痛点 13,180+7,955 条，竞争密度高）" data-en="Career/HR tools (this week's career pain 13,180+7,955 posts, high competition density)">career/HR 工具（本周职业类痛点 13,180+7,955 条，竞争密度高）</li>
                             <li data-zh="$49.5k 价格带（蓝领工程，非 solo founder 可及）" data-en="$49.5k price band (blue-collar engineering, not solo-founder accessible)">$49.5k 价格带（蓝领工程，非 solo founder 可及）</li>
                             <li data-zh="买断制当主变现（AppSumo 复盘 + 开源转付费反噬，两个反例）" data-en="Lifelong-purchase as primary monetization (AppSumo postmortems + open-source-to-paid backlash, two counter-examples)">买断制当主变现（AppSumo 复盘 + 开源转付费反噬，两个反例）</li>
-                        </ul>
-                    </div>
-                </section>
-
-                <!-- Methodology -->
-                <section id="methodology" class="section">
-                    <div class="section-header">
-                        <div class="section-icon blue">📐</div>
-                        <h2 data-zh="方法说明" data-en="Methodology">方法说明</h2>
-                    </div>
-                    <div class="card">
-                        <ul class="action-list">
-                            <li data-zh="数据源：5 源全量 110,383 条（reddit 101,082 / IH-products 3,804 / HN 3,357 / IH-posts 1,711 / PH 429），窗口 tagged_at 2026-09-06 ~ 09-12（UTC），post_id 去重取最新打标" data-en="Data sources: 5-source full 110,383 posts (reddit 101,082 / IH-products 3,804 / HN 3,357 / IH-posts 1,711 / PH 429), window tagged_at 2026-09-06 ~ 09-12 (UTC), post_id dedup keeping latest tag">数据源：5 源全量 110,383 条（reddit 101,082 / IH-products 3,804 / HN 3,357 / IH-posts 1,711 / PH 429），窗口 tagged_at 2026-09-06 ~ 09-12（UTC），post_id 去重取最新打标</li>
-                            <li data-zh="趋势口径：「真新帖」= created_utc 也在 09-06~09-12 内（35,494 条）。09-10 是 #200 枚举改名批次重打日（69,202 条历史帖入库：8 月 45,507 + 9 月 19,847 + 1-6 月 3,848），招募帖占比上升属重打 + 09-11 B 类提示词改判，不是真实招聘需求暴涨" data-en="Trend basis: 'true-new' = created_utc also inside 09-06~09-12 (35,494 posts). 09-10 was the #200 enum-rename batch re-tag day (69,202 historical posts ingested: Aug 45,507 + Sep 19,847 + Jan-Jun 3,848); recruit-post share increase is a re-tag + 09-11 B-prompt reclassification artifact, not a real hiring surge">趋势口径：「真新帖」= created_utc 也在 09-06~09-12 内（35,494 条）。09-10 是 #200 枚举改名批次重打日（69,202 条历史帖入库：8 月 45,507 + 9 月 19,847 + 1-6 月 3,848），招募帖占比上升属重打 + 09-11 B 类提示词改判，不是真实招聘需求暴涨</li>
-                            <li data-zh="在途缺口：截至 09-14 早，本窗口 Reddit 仅 331 条未打标（热帖 score&gt;100 仅 7 条），基本收齐" data-en="In-flight gap: as of early 09-14, only 331 Reddit posts in this window remain untagged (7 with score&gt;100), essentially complete">在途缺口：截至 09-14 早，本窗口 Reddit 仅 331 条未打标（热帖 score&gt;100 仅 7 条），基本收齐</li>
-                            <li data-zh="噪音：4,325 条（3.9%）；低置信度（&lt;0.8）仅 4 条；IH-posts 噪音率 12.1% 全源最高（社区帖天然广告/水帖多）" data-en="Noise: 4,325 posts (3.9%); low-confidence (&lt;0.8) only 4; IH-posts noise rate 12.1% is the highest across sources (community posts are naturally ad/filler-heavy)">噪音：4,325 条（3.9%）；低置信度（&lt;0.8）仅 4 条；IH-posts 噪音率 12.1% 全源最高（社区帖天然广告/水帖多）</li>
-                            <li data-zh="样本门槛：&lt;30 条的分组不做趋势结论（如 R6/R8 仅监控）；IH 晒单 28 条 = 结构描述" data-en="Sample floor: groups &lt;30 posts get no trend claim (R6/R8 monitor only); IH revenue reports 28 = structural description">样本门槛：&lt;30 条的分组不做趋势结论（如 R6/R8 仅监控）；IH 晒单 28 条 = 结构描述</li>
-                            <li data-zh="golden 评估：683 条测试集整体准确率 71.6%（标注样本评估，不代表生产全量精度）" data-en="Golden eval: 683-post test set overall accuracy 71.6% (annotation-sample evaluation, not production full-volume accuracy)">golden 评估：683 条测试集整体准确率 71.6%（标注样本评估，不代表生产全量精度）</li>
                         </ul>
                     </div>
                 </section>]]></content:encoded>
