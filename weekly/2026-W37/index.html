@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7Kolor Insights — 2026 W37</title>
+    <meta name="description" content="2026 W37：非工程师的真实抱怨是更大的金矿。会计/护士/小房东的重复流程痛，系统运维(7:1)、创业者(6:1)开发者工具空缺。基于 22,946 条开发者讨论（含 09-19）。">
+    <link rel="alternate" hreflang="zh" href="/weekly/2026-W37/report-zh.html">
+    <link rel="alternate" hreflang="en" href="/weekly/2026-W37/report-en.html">
+    <link rel="alternate" type="application/rss+xml" title="7Kolor Insights" href="/feed.xml">
+    <link rel="icon" type="image/png" href="/assets/img/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=Inter:wght@400;500;600;700&amp;family=Fira+Code:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/main.css?v=022798fab4">
+    <link rel="stylesheet" href="/weekly/2026-W37/w97.css">
+
+</head>
+<body>
+<!-- AUTO:header:begin -->
+    <header class="header">
+        <div class="header-inner">
+            <a href="/" class="logo">
+                <img class="logo-img" src="/assets/img/logo.png" alt="7Kolor Insights" width="34" height="34">
+                <div class="logo-text">7Kolor <span>Insights</span></div>
+            </a>
+            <nav class="nav">
+                <div class="nav-links">
+                    <a href="/#framework" data-zh="六步流程" data-en="6-Step Framework">六步流程</a>
+                    <a href="/weekly/" data-zh="每周情报" data-en="Weekly Intelligence">每周情报</a>
+                    <a href="/#reports" data-zh="专项报告" data-en="Special Reports">专项报告</a>
+                    <a href="/#services" data-zh="定制服务" data-en="Custom Services">定制服务</a>
+                    <a href="/about.html" data-zh="关于" data-en="About">关于</a>
+                </div>
+                <div class="lang-toggle">
+                    <button class="lang-btn active" data-lang="zh" onclick="switchLang('zh', this)">中文</button>
+                    <button class="lang-btn" data-lang="en" onclick="switchLang('en', this)">EN</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- AUTO:header:end -->
+
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="dot"></span>
+                <span data-zh="2026 W37" data-en="2026 W37">2026 W37</span>
+            </div>
+            <h1 data-zh="非工程师的真实抱怨，是更大的金矿" data-en="Non-Engineers' Raw Complaints Are the Bigger Gold Mine">非工程师的真实抱怨，是更大的金矿</h1>
+            <p data-zh="独立开发者社区情报：信号、趋势与洞察" data-en="Indie developer community intelligence: signals, trends &amp; insight">独立开发者社区情报：信号、趋势与洞察</p>
+            <div class="hero-meta">
+                <span data-zh="📅 2026-09-13 ~ 09-19" data-en="📅 2026-09-13 ~ 09-19">📅 2026-09-13 ~ 09-19</span>
+                <span data-zh="📊 22,946 条开发者讨论（含 09-19）" data-en="📊 22,946 developer discussions (incl. 09-19)">📊 22,946 条开发者讨论（含 09-19）</span>
+            </div>
+        </div>
+    </section>
+
+    <main class="main">
+        <div class="content-grid">
+            <aside class="sidebar">
+                <div class="sidebar-title" data-zh="目录" data-en="Contents">目录</div>
+                <ul class="sidebar-nav">
+                    <li><a href="#overview" data-zh="📋 概览 · 三件大事" data-en="📋 Overview · Top 3">📋 概览 · 三件大事</a></li>
+                    <li><a href="#sixstep" data-zh="① 六步框架总表" data-en="① Six-Step Matrix">① 六步框架总表</a></li>
+                    <li><a href="#cases" data-zh="② 成功案例 · 真实收入" data-en="② Success Cases · Real Revenue">② 成功案例 · 真实收入</a></li>
+                    <li><a href="#sources" data-zh="③ 跨源对照 · Reddit×IH×PH" data-en="③ Cross-Source · Reddit × IH × PH">③ 跨源对照 · Reddit×IH×PH</a></li>
+                    <li><a href="#noneng" data-zh="④ 非工程师的机会面" data-en="④ Non-Engineer Opportunity Surface">④ 非工程师的机会面</a></li>
+                    <li><a href="#validate" data-zh="⑤ 评论区情绪" data-en="⑤ Comment Sentiment">⑤ 评论区情绪</a></li>
+                    <li><a href="#selfhost" data-zh="⑥ 自托管需求" data-en="⑥ Self-Hosting Needs">⑥ 自托管需求</a></li>
+                    <li><a href="#hotposts" data-zh="⑦ 本周出圈热帖" data-en="⑦ Hot Posts">⑦ 本周出圈热帖</a></li>
+                    <li><a href="#actions" data-zh="💡 本周行动清单" data-en="💡 Action List">💡 本周行动清单</a></li>
+                    <li><a href="#actions" data-zh="💡 本周行动清单" data-en="💡 Action List">💡 本周行动清单</a></li>
+                </ul>
+            </aside>
+
+            <div class="content">
+                <!-- Overview -->
+                <section id="overview" class="section">
+                    <div class="section-header">
+                        <div class="section-icon blue">📋</div>
+                        <h2 data-zh="本周三件值得花 2 分钟读完的事" data-en="Three Things Worth 2 Minutes This Week">本周三件值得花 2 分钟读完的事</h2>
+                    </div>
+                    <div class="card card-highlight">
+                        <p data-zh="① 会计、护士、小房东这些非工程师的「重复流程痛」是这一周最大的机会面——AP 收件箱被骗、交接班报告、催租/押金都是「数据表格多、重复、术语多」，是最缺「把流程做成工具」的人群；② 系统运维(7:1)、创业者(6:1)的开发者工具「痛点多但几乎没人做」，独立项目(2.4:1)已挤；③ 职场高赞热帖不是劝你辞职，而是「反辞职自保」的实用主义——最高赞是教你抄 HR、护住失业金。" data-en="① Non-engineers' repetitive-workflow pain (AP inbox fraud, handoff reports, rent/collection chasing) is this week's biggest surface—'more data tables, more repetition, more jargon,' yet almost nobody builds them into tools; ② Dev-tool gaps in sysadmin (7:1) and entrepreneurs (6:1) have lots of pain and almost no solutions, while independent projects (2.4:1) is crowded; ③ Career top-upvote posts are not 'quit your job'—they're 'anti-quit, self-protect' pragmatism, teaching you to CC HR and protect your interests.">① 会计、护士、小房东这些非程序员的「重复流程」是这一周最大的机会面——AP 应付账款被骗、交接班报告对不上、催租/催收，都是「表格多、重复多、术语多」，缺的从来不是算法，而是「把流程做成工具」；② 系统运维(约 7:1)、创业者(约 6:1)的开发者工具是「痛点多、几乎没人做」，独立项目(约 2.4:1)已经挤；③ 职场热帖最高赞不是劝你辞职，而是「反辞职自保」的实用主义——教你抄报 HR、逼公司做决定、护住自己的钱。</p>
+                    </div>
+                    <div class="stat-grid">
+                        <div class="stat-card">
+                            <div class="stat-value">22,946</div>
+                            <div class="stat-label" data-zh="本周开发者讨论（含 09-19）" data-en="Developer discussions this week (incl. 09-19)">本周开发者讨论（含 09-19）</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value">8,050</div>
+                            <div class="stat-label" data-zh="明确到某个痛点" data-en="Posts with a specific pain point">明确到某个痛点</div>
+                        </div>
+                        <div class="stat-card neutral">
+                            <div class="stat-value">1,542</div>
+                            <div class="stat-label" data-zh="有付费/购买意向" data-en="Purchase / buy intent">有付费/购买意向</div>
+                        </div>
+                        <div class="stat-card positive">
+                            <div class="stat-value">+77%</div>
+                            <div class="stat-label" data-zh="「我做好了/解决了」较上周" data-en="'I built/solved it' vs last week">「我做好了/解决了」较上周</div>
+                        </div>
+                        <div class="stat-card negative">
+                            <div class="stat-value">-19%</div>
+                            <div class="stat-label" data-zh="负面反馈较上周" data-en="Negative feedback vs last week">负面反馈较上周</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value">1,108</div>
+                            <div class="stat-label" data-zh="「我做好了/解决了」" data-en="'I built/solved it'">「我做好了/解决了」</div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Six-Step Framework -->
+                <section id="sixstep" class="section">
+<div class="section-header">
+                        <div class="section-icon green">①</div>
+                        <h2 data-zh="六步框架：让这一周的信号变成你的下一步" data-en="Six-Step Framework: Turn This Week's Signals into Your Next Move">六步框架：让这一周的信号变成你的下一步</h2>
+                    </div>
+                    <div class="table-wrap"><table class="data-table">
+                        <thead><tr>
+                            <th data-zh="步骤" data-en="Step">步骤</th>
+                            <th data-zh="核心问句" data-en="Core Question">核心问句</th>
+                            <th data-zh="本周命中" data-en="This Week">本周命中</th>
+                            <th data-zh="变化" data-en="Change">变化</th>
+                        </tr></thead>
+                        <tbody>
+                            <tr><td data-zh="① 发现机会" data-en="① Discover">① 发现机会</td><td data-zh="做什么能赚钱？" data-en="What can make money?">做什么能赚钱？</td><td>1,542</td><td data-zh="持平" data-en="Flat">持平</td></tr>
+                            <tr><td data-zh="② 收集信号" data-en="② Collect">② 收集信号</td><td data-zh="用户到底在抱怨什么？" data-en="What are they complaining about?">用户到底在抱怨什么？</td><td>8,050</td><td data-zh="↓6%" data-en="↓6%">↓6%</td></tr>
+                            <tr><td data-zh="③ 深挖问题" data-en="③ Deep-dive">③ 深挖问题</td><td data-zh="他们为什么难受？" data-en="Why are they hurting?">他们为什么难受？</td><td>1,664</td><td data-zh="↓19%" data-en="↓19%">↓19%</td></tr>
+                            <tr><td data-zh="④ 验证假设" data-en="④ Validate">④ 验证假设</td><td data-zh="我理解对了吗？" data-en="Did I get it right?">我理解对了吗？</td><td>8,202</td><td data-zh="↑21%" data-en="↑21%">↑21%</td></tr>
+                            <tr><td data-zh="⑤ 最后把关" data-en="⑤ Check">⑤ 最后把关</td><td data-zh="上线前漏了什么？" data-en="What's missed before launch?">上线前漏了什么？</td><td>323</td><td data-zh="↓15%" data-en="↓15%">↓15%</td></tr>
+                            <tr><td data-zh="⑥ 验证有人买单" data-en="⑥ Prove payment">⑥ 验证有人买单</td><td data-zh="有人愿意付钱吗？" data-en="Will anyone pay?">有人愿意付钱吗？</td><td>1,108</td><td data-zh="+77%" data-en="+77%">+77%</td></tr>
+                        </tbody>
+                    </table></div>
+                    <p data-zh="下表把每一步展开：第一步问什么、证据在哪、对开发者现在该做什么。六步连起来，就是从「发现机会」到「确认有人买单」的完整路径。" data-en="Below, each of the six steps gets its question, its evidence this week, and the one actionable takeaway for you as a builder. Read them in order to follow the full model from seeing an opportunity to confirming someone pays.">下表把每一步展开：核心问句、本周证据、以及对开发者现在最该做的一件事。六步连起来，就是从「发现机会」到「确认有人买单」的完整路径。</p>
+
+                    <div class="pain-point step-s1">
+                        <div class="pain-point-header">
+                            <div class="pain-point-icon">①</div>
+                            <h4 data-zh="发现机会 · 做什么能赚钱？" data-en="Discover · What can make money?">发现机会 · 做什么能赚钱？</h4>
+                        </div>
+                        <div class="quote-box">
+                            <p data-zh="本周「想买 / 求助」多是比价与决策，不是冲动下单：$39 的套件求验证、可负担的 SEO 工具做到 $500 MRR。金额在上移——从「$20 值不值」变成「$100–200 预算给谁」。" data-en="Want-to-buy / help posts this week are comparison &amp; decisions, not impulse: a $39 kit seeking validation, an affordable SEO toolkit at $500 MRR. Money crept up—from 'is $20 worth it' to 'who gets the $100–200 budget'.">本周「想买 / 求助」多是比价与决策，不是冲动下单：$39 的套件在求验证、可负担的 SEO 工具做到 $500 MRR。金额在上移——从「$20 值不值」变成「$100–200 预算给谁」。</p>
+                        </div>
+                        <div class="deep-analysis">
+                            <p data-zh="对开发者：把落地页从「功能清单」改成「写给谁 + 预算对照」，并补一行「为什么比 X 贵 / 便宜」——这一周的需求正在往比价型迁移，接住比价的人就是接住成交。" data-en="Your move: make the landing 'who it's for + budget' instead of a feature list, add a 'why pricier/cheaper than X' row, and land the migrating comparison-inclined buyer.">对开发者：把落地页从「功能清单」改成「写给谁 + 预算对照」，再加一行「为什么比 X 贵 / 便宜」；比价型买家迁移期正好接住。</p>
+                        </div>
+                    </div>
+
+                    <div class="pain-point step-s2">
+                        <div class="pain-point-header">
+                            <div class="pain-point-icon">②</div>
+                            <h4 data-zh="收集信号 · 用户到底在抱怨什么？" data-en="Collect · What are users complaining about?">收集信号 · 用户到底在抱怨什么？</h4>
+                        </div>
+                        <div class="quote-box">
+                            <p data-zh="痛点没少，而是更具体、能直接落成产品：会计的 AP 收件箱（供应商改卡）、护士的交接班、房东的催缴——都精确到某一个不需要重复的方。纯发泄（太累 / 老板骂我）被剔掉，剩下来的是「我在重复抄 / 对账 / 交接」这类能工具化。" data-en="Pain isn't down—it got specific. The accountant's AP inbox, nurse's handover, landlord's rent-chase all reduce to one header action. Doing venting was excluded; what remains is repeat-work a tool can name.">痛点没少，而是往「更具体、能直接落成产品」走：会计的 AP 收件箱、护士的交接班、房东的催缴都精确到一个可重复动作；纯发泄（太累 / 老板骂我）被剔掉后，剩下来都是「能做成工具」的活。</p>
+                        </div>
+                        <div class="deep-analysis">
+                            <p data-zh="对开发者：去会计 / 护理 / 房东的评论区，看他们反复描述的那一个动作并直接命名你的工具——越垂直，竞争越好。痛点在变具体，是在提醒「原问题要细化成可做一个子功能」。" data-en="Your move: read those comment threads and name your product after the one action they keep re-describing. Pain getting more specific is a nudge—predict your own subset.">对开发者：去会计 / 护理 / 房东区看评论区，用他们反复描述的那个动作直接命名你的工具——越垂直越好。痛点变具体，正是提醒你「别做泛工具、做那一个动作」。</p>
+                        </div>
+                    </div>
+
+                    <div class="pain-point step-s3">
+                        <div class="pain-point-header">
+                            <div class="pain-point-icon">③</div>
+                            <h4 data-zh="深挖问题 · 他们为什么难受？" data-en="Deep-dive · Why does it hurt?">深挖问题 · 他们为什么难受？</h4>
+                        </div>
+                        <div class="quote-box">
+                            <p data-zh="负面反馈少了（↓19%），但需求没少——读者从「大声呼救」转成了「低头求工具」：问的是「有没有工具能帮我…」而不是咆哮。这不是没需求，是需求变得更指向、更静默。" data-en="Negative feedback is down (↓19%) but demand isn't—readers shifted from shouting to quietly asking 'is there a tool that can help me' rather than ranting. Not gone, just more pointed and quieter.">负面反馈少了（↓19%），但这不是没需求——读者从「大声呼救」转成「低头求工具」：问的是「有没有工具能帮我…」而不是咆哮。这就是「做得下去」的静默期。</p>
+                        </div>
+                        <div class="deep-analysis">
+                            <p data-zh="对开发者：别随负面少了就松懈。真正信号是评论区里那句「怎么不早有人做」；把它记下来，进你的需求待验证池，这是比广度更尖的信号。" data-en="Your move: fewer complaints isn't the exit. Log comments like 'why isn't this a tool yet' into a validation backlog—that's the sharper leading signal.">对开发者：别随负面少了就松懈。评论区那句「怎么不早有人做」才是真信号——记进你的需求待验证池，比泛泛的「有痛点」更尖。</p>
+                        </div>
+                    </div>
+
+                    <div class="pain-point step-s4">
+                        <div class="pain-point-header">
+                            <div class="pain-point-icon">④</div>
+                            <h4 data-zh="验证假设 · 我理解对了吗？" data-en="Validate · Did I get it right?">验证假设 · 我理解对了吗？</h4>
+                        </div>
+                        <div class="quote-box">
+                            <p data-zh="求认同、求支持比上周 +21%，内容在往「晒出来、让人看」走，这是你低成本验证需求与话术的窗口。晒可复制的（$1,559 个小工具被逐条求教）、别晒会被核爆的示大数（$88K 被拆）。" data-en="Validation-seeking is +21%—content shifts to 'show it'. Cheaply validate demand &amp; messaging here. Show reproducible numbers and small wins; big unauditable wins get torn apart.">求认同、求支持比上周 +21%，内容在往「晒出来 / 让人看」走——这是低成本验证需求与话术的窗口。晒可复制的（$1,559 小工具被逐条求教），别晒会被核爆的大数（$88K 被拆）。</p>
+                        </div>
+                        <div class="deep-analysis">
+                            <p data-zh="对开发者：发一条「我用 X 解决了这周会计那个 AP 痛」，而不是「半成品求意见」；看真来问「能用吗」的人有多少——那就是需求的刻度。" data-en="Post 'I built X for the AP pain we saw this week', not 'half-built piece, pls review'; count the real 'can I use this' asks—that's the demand signal.">对开发者：发一条「我用 X 解决了这周会计那个 AP 痛点」，而不是「半成品求意见」；看有多少人真心问「能用吗」——那才是需求的刻度。</p>
+                        </div>
+                    </div>
+
+                    <div class="pain-point step-s5">
+                        <div class="pain-point-header">
+                            <div class="pain-point-icon">⑤</div>
+                            <h4 data-zh="最后把关 · 上线前会断在哪？" data-en="Final check · What breaks at launch?">最后把关 · 上线前会断在哪？</h4>
+                        </div>
+                        <div class="quote-box">
+                            <p data-zh="本周最门槛粘的三个释放前风险：退订骚扰帖 3,569 赞说明「取消 / 退款」做到像绑架会直接拉爆负面；以及 $2K→0 的翻车，输在低估留存（只看获客）：以及「大而不可核查」的数字会被评论区拆台。" data-en="Launch risks this week: the 3,569-upvote unsubscribe-nagging post shows hostage-style cancel/refund inflates your negatives; $2K→0 crashed from underweighting retention; big unaudited numbers get torn apart in comments.">门槛一多、反噬越快。本周最贴的发布前风险：退订骚扰帖 3,569 赞——「取消 / 退款」做到像绑架，直接拉爆负面口碑；再看 $2K→0 的翻车，输在多算了获客、低估了留存；「大而不可验证」的数字会被评论区拆。</p>
+                        </div>
+                        <div class="deep-analysis">
+                            <p data-zh="对开发者：上线前把「取消 / 退款 / 导出数据」做成一键、无情绪；把「留存」当第一 KPI（反面案例：$2K→0）；不要用无法被复查的营销数字。" data-en="For you: make cancel/refund/export one-click and neutral; treat retention as KPI #1 (the $2K→0 counter-case); don't ship marketing numbers you can't back up.">对开发者：上线前把「取消 / 退款 / 导出数据」做成一键、无情绪；把「留存」当第一 KPI（反面：$2K→0）。别用不能被复查的数字做营销。</p>
+                        </div>
+                    </div>
+
+                    <div class="pain-point step-s6">
+                        <div class="pain-point-header">
+                            <div class="pain-point-icon">⑥</div>
+                            <h4 data-zh="验证有人买单 · 谁真的在付钱？" data-en="Prove payment · Who really pays?">验证有人买单 · 谁真的在付钱？</h4>
+                        </div>
+                        <div class="quote-box">
+                            <p data-zh="「我做好了 / 解决了 X」比上周 +77%——独立开发者集体进入「我被验证了」阶段；真帖子（iOS TTS 28 天 $4.6K、自用习惯 App $1,559、Tally AEO 等现象）就是你要找的证据池。" data-en="'I built / solved X' is up +77%—we're entering a 'I've been validated' collect plmia. Real posts (iOS TTS $4.6K in 28 days, self-use habit app $1,559, Tally AEO…) are your proof pool.">「我做好了 / 解决了 X」比上周 +77%——独立开发者集体进入「我被验证了」阶段；这些真帖（iOS TTS 28 天 $4.6K、自用习惯 App $1,559、Tally AEO…）就是你验证「有人买单」的最佳证据池。</p>
+                        </div>
+                        <div class="deep-analysis">
+                            <p data-zh="对开发者：敢标价 + 晒真实 $ 数是最强差异化（本周 74.8% 新品连价都不写）；把你自己那颗星也确实放进「有人付钱」这一类。" data-en="For you: daring to price + showing a real $ number is the strongest differentiation this week (74.8% of new products don't even price); put your 1st paying milestone in too.">对开发者：敢标价 + 晒真实 $ 数是最强差异化（本周 74.8% 新品连价都不写）；把自己「第一个真金白银」的那一天也放进来——那是最硬背书。</p>
+                        </div>
+                    </div>
+
+                    <div class="card card-highlight">
+                        <h4 data-zh="六步连起来的一句话" data-en="Six steps, one line">六步连起来的一句话</h4>
+                        <p data-zh="需求没消失（②更具体）、决策在成熟（①比价）、被验证的人在翻倍（⑥+77%）——现在正是「把该工具做出来」的窗口。给非工程师的垂直流程（会计 AP / 交接班 / 催缴）最大空白，给开发者的「系统运维 / 创业者（7:1 / 6:1）」也空着。六步走完，把「有人付钱」补硬，就不易掉坑。" data-en="Demand isn't gone (② more specific), decisions matured (① comparison), validated builders doubled (⑥ +77%). Non-engineer vertical flows + dev-tool ops 7:1 are the open gaps. Walk the six, then harden the pay step.">需求没消失、决策在成熟、被验证的人在翻倍——现在正是「把该工具做出来」的窗口。给非工程师的垂直流程（会计 AP / 交接班 / 催缴）是最大空白，给开发者的系统运维 7:1、创业者 6:1 也空着。按六步走完，把「有人付钱」这关做硬，就不容易掉坑。</p>
+                    </div>
+                </section>
+
+                <!-- ============ 成功案例 · 受欢迎产品 · 真实收入 ============ -->
+<section id="cases" class="section">
+    <div class="section-header">
+        <div class="section-icon green">✅</div>
+        <h2 data-zh="被背书的成功案例 · 受欢迎产品 · 真实收入" data-en="Backed Success Stories · Popular Products · Real Revenue">被背书的成功案例、受欢迎的产品、真实收入数据</h2>
+    </div>
+    <div class="card card-highlight">
+        <p data-zh="这一周，独立开发者晒「真实」付费进展的不少——上到百万级、下到 $151。共同点不是「钱多」，而是「真有人愿意付」。先验证有人付钱，再谈规模。" data-en="This week indie builders shared real paying traction—million-dollar scale down to $151. The common thread isn't size, it's real paying users. Validate payment, then scale.">这一周 Reddit 上独立开发者在晒「真金白银」进展的不少——上到百万级、也有人只有 $151。共同点不是钱多，而是「真有人愿意付钱」。先验证有人付钱，再谈规模。</p>
+    </div>
+
+    <h3 data-zh="看得见收入的成功案例" data-en="Win cases with visible revenue">看得见收入的成功案例</h3>
+    <div class="table-wrap"><table class="data-table">
+        <thead><tr>
+            <th data-zh="案例" data-en="Case">案例</th>
+            <th data-zh="真实数据" data-en="Real number">真实数据</th>
+            <th data-zh="评论区在干嘛" data-en="Comments doing">评论区在干嘛</th>
+            <th data-zh="你该带走" data-en="Takeaway">你该带走</th>
+        </tr></thead>
+        <tbody>
+            <tr><td><a href="https://www.reddit.com/r/appbusiness/comments/1wd3z8k" target="_blank" rel="noopener">Solo iOS 语音 TTS</a></td><td data-zh="28 天 $4,600 · MRR $852" data-en="28d → $4,600 · MRR $852">28 天 $4,600 · MRR $852</td><td data-zh="评论区已在聊竞品" data-en="competitors featured in comments">评论区已在聊竞品</td><td data-zh="离线强功能能撑起订阅溢价" data-en="strong offline features carry premium">离线强功能撑订阅溢价</td></tr>
+            <tr><td><a href="https://www.reddit.com/r/appbusiness/comments/1w9mryg" target="_blank" rel="noopener">童书 App</a></td><td data-zh="首月 $151" data-en="first month $151">首月 $151</td><td data-zh="评论区求扩量实操" data-en="comments ask how to scale">评论区求扩量实操</td><td data-zh="首个 $100 是里程碑，不=规模" data-en="first $100 is a milestone, not scale">首个 $100 是里程碑，不是规模</td></tr>
+            <tr><td><a href="https://www.reddit.com/r/appbusiness/comments/1wf3bix" target="_blank" rel="noopener">自用「习惯」App</a></td><td data-zh="$1,559" data-en="$1,559">$1,559</td><td data-zh="76 条在聊「自用产品边界」" data-en="76 comments on self-use line">76 条聊「自用产品边界」</td><td data-zh="解决自己真痛点=真需求" data-en="own-pain fix = real demand">解决自己真痛点=真需求</td></tr>
+            <tr><td><a href="https://www.reddit.com/r/SaaS/comments/1wime93" target="_blank" rel="noopener">Tally（表单）</a></td><td data-zh="$5M ARR / 11 人 · 靠 AEO" data-en="$5M ARR/11 via AEO">$5M ARR · 11 人 · 靠 AEO</td><td data-zh="评论区求 SEO/AEO 实操" data-en="comments ask AEO playbooks">评论区求 SEO/AEO 实操</td><td data-zh="用 AEO 占 LLM 回答里的"你的词"" data-en="own the word in LLM answers">用 AEO 占 LLM 回答里的词</td></tr>
+            <tr><td><a href="https://www.reddit.com/r/SaaS/comments/1wf4u3p" target="_blank" rel="noopener">6 个月做到 $1K MRR</a></td><td data-zh="$1K MRR · 零付费投流" data-en="$1K MRR, zero ads">$1K MRR · 0 投流</td><td data-zh="SEO+Reddit 反馈环；评论求证可复制性" data-en="SEO+Reddit loop; ask if replicable">SEO + Reddit 反馈闭环</td><td data-zh="尽早发布，反馈反哺 SEO" data-en="launch early, feedback feeds SEO">尽早发布，反馈反哺 SEO</td></tr>
+            <tr><td><a href="https://www.reddit.com/r/SaaS/comments/1wfyj8l" target="_blank" rel="noopener">内部工具 17 天</a></td><td data-zh="$1,000+ / 17 天" data-en="$1,000+ in 17d">$1,000+/17 天</td><td data-zh="作者本人回复" data-en="author replied">作者本人回复</td><td data-zh="做自己痛点的工具，起量最快" data-en="own-pain tools ramp fastest">自己痛点的工具起量最快</td></tr>
+        </tbody>
+    </table></div>
+
+    <h3 data-zh="更利基 / 更高价，也有人下单" data-en="Niche &amp; high-ticket also convert">更利基、更高价，也真有人下单</h3>
+    <div class="table-wrap"><table class="data-table">
+        <thead><tr><th data-zh="案例" data-en="Case"></th><th data-zh="数据" data-en="Data"></th><th data-zh="你该带走" data-en="Takeaway"></th></tr></thead>
+        <tbody>
+            <tr><td><a href="https://www.reddit.com/r/SaaS/comments/1wfwjoa" target="_blank" rel="noopener">最高价计划 $399/月首单</a></td><td data-zh="$399/月" data-en="$399/mo">$399/月</td><td data-zh="敢设高价还成交=强 PMF 信号" data-en="price high &amp; close = PMF">高价成交=强 PMF</td></tr>
+            <tr><td><a href="https://www.reddit.com/r/SaaS/comments/1w97h1l" target="_blank" rel="noopener">开发 1 年拿到首单</a></td><td data-zh="首单" data-en="first paying">首单</td><td data-zh="可配置保真&gt;提示词" data-en="config-fidelity &gt; prompts">「可配置保真」比「提示词」值钱</td></tr>
+            <tr><td><a href="https://www.reddit.com/r/microsaas/comments/1weet8f" target="_blank" rel="noopener">贺卡工具 首月</a></td><td data-zh="$1,186（零营销）" data-en="$1,186 no marketing">$1,186 · 0 营销</td><td data-zh="简单利基 > 大而全" data-en="simple niche &gt; broad">小而准的怪点比大而全好卖</td></tr>
+            <tr><td><a href="https://www.reddit.com/r/SaaS/comments/1w9qohk" target="_blank" rel="noopener">游戏当 SaaS 订阅</a></td><td data-zh="&gt;$1K 订阅" data-en="&gt;$1K sub">>$1K</td><td data-zh="非传统品类也可订阅定价" data-en="subscription beyond SaaS">非传统品类也能订阅定价</td></tr>
+        </tbody>
+    </table></div>
+
+    <h3 data-zh="两类"翻车"更值得做镜子" data-en="Two crushes worth mirroring">两类「翻车」，比成功更值得做镜子</h3>
+    <div class="table-wrap"><table class="data-table">
+        <thead><tr><th data-zh="情况" data-en="Situation"></th><th data-zh="断在哪" data-en="What broke"></th><th data-zh="该带走" data-en="Takeaway"></th></tr></thead>
+        <tbody>
+            <tr><td><a href="https://www.reddit.com/r/SaaS/comments/1wfkonp" target="_blank" rel="noopener">$2K MRR → 0</a></td><td data-zh="低估留存崩了（只盯获客）" data-en="underweighted retention">低估留存崩了</td><td data-zh="留存 &gt; 获客" data-en="retention &gt; acquisition">留存 > 获客，别只盯用户数</td></tr>
+            <tr><td><a href="https://www.reddit.com/r/SaaS/comments/1wguk09" target="_blank" rel="noopener">0 → $3.6K MRR</a></td><td data-zh="全靠社区分享、0 投流" data-en="community-driven, no ads">0 投流靠社区</td><td data-zh="内容分享可替代付费投流" data-en="content &gt; paid ads">内容即获客</td></tr>
+        </tbody>
+    </table></div>
+
+    <div class="deep-analysis">
+        <p data-zh="一句话：真正「受欢迎的产品」不是初始爆表漏斗，而是这一周评论区「恭喜 + 逐条求教」的那一类——它证明你真解决了别人的烦心事。把上面的真实案例当「验证有人付钱」的尺子。" data-en="真受欢迎，不是初始爆裂漏斗，而是评论区「恭喜+逐条求教」那类——证明你真解决了别人烦恼。把这些案例当「有人付钱」的尺子。" >真正受欢迎的产品，不是一上来就漏斗爆满，而是评论区「恭喜 + 逐条求教」的那种——它证明你真解决了别人的烦心事。用这些真实案例当「验证有人付钱」的尺子。</p>
+    </div>
+</section>
+
+<!-- ============ 跨源：Reddit × IH × PH（外加 HN 的诚实缺口） ============ -->
+                <section id="sources" class="section">
+                  <div class="section-header">
+                    <div class="section-icon purple">🔄</div>
+                    <h2 data-zh="跨源交叉验证：同一件事，好几堆人在同时撞" data-en="Cross-Source: The same pain, hit by several circuits at once">跨源交叉验证：同一个痛点，好几个圈子各自撞见</h2>
+                  </div>
+
+                  <div class="card card-highlight">
+                    <p data-zh="对开发者最有用的，不是「哪个平台帖多」，而是同一个需要有没有被多个圈子各自撞见：这一边在抱怨，那一边已经有人做出来、卖出去、甚至翻车了。下面每组对照都给了真实的产品 / 帖子标题，方便你自己打开核实——结论都不是来自一条帖子，而是多个来源同时指向同一个方向。" data-en="The useful thing isn't which forum posts more, but whether the same need is hit by several circuits at once: one side complains, another ships &amp; sells it, another even fails on it. Each cross-check below carries the real product/post to verify. Conclusions never rest on one post.">对开发者最有用的不是哪个平台帖多，而是同一个需要有没有被好几个圈子同时撞见：一边在抱怨，那边已经有人做出来、卖出去、甚至翻车了。下面每对对照都给出真实的产品名字和帖子题目，方便你打开核实。这些结论都不是靠一条帖子，而是多个来源一起指向同一方向。</p>
+                  </div>
+
+                  <div class="pain-point step-s1">
+                    <div class="pain-point-header"><div class="pain-point-icon">🔁</div>
+                      <h4 data-zh="对照 ① · 本地 / 离线 / 私有 AI：Reddit 在困惑，HN 已经有人发布上线，IH 在卖" data-en="Cross ① · Local/offline/private AI: Reddit ask, HN ships, IH sells">对照 ① · 本地 / 离线 / 私有 AI：同一需求，三个圈子各自走到了不同位置</h4></div>
+                    <div class="quote-box">
+                      <p data-zh="这个需求这一周三个源都见到，而且不是同一条帖：
+                · Reddit：开发者平时提的问题里，好多在犹豫「数据/代码要不要交给云端模型」「本地能不能跑」「离线能不能用」，甚至已经有人靠「离线语音转文字」做到月入 $852——因为它不用连云端；
+                · HN 本周真实上线（Show HN）：有人发布了「完全在你本地可运行、开源、还能离线用的 AI 平台」，也有人做了「离线 Markdown 笔记，只在你自己的设备之间同步」；
+                · IH（独立开发者平台）：本周有人卖主打「本地」的产品，并报告了可复现的真实月收入。
+                三个圈子不约而同指向同一件事：用户越来越在意「数据留给自己」，而「本地优先」已经从理念变成有人真的卖得出钱、有人真的愿意付钱的东西。" data-en="This need hit three circuits this week, independently: Reddit — devs hesitate about sending code/data to cloud models and keep asking 'can I run local / offline'; one even earns $852/mo from offline-capable voice-to-text because it needs no cloud. HN — real 'Show HN' launches: a fully local, open-source, offline-runnable AI platform, and an offline Markdown notes app syncing only between your own devices. IH — people launching products with a 'local' angle and reporting reproducible revenue. All three converged: users care about data staying with them, and local-first has moved from ideal to sold-and-paid.">这个需要这周在三个独立来源都见到，且不是同一条：Reddit 这块，很多开发者平时就在「该不该把代码/数据交给云端模型」「能不能本地、离线段」犹豫，甚至已有人靠「不连云的离线语音转文字」拿到月入 $852；HN 这一周有真实上架帖「能在本地电脑运行、开源、离线可用的 AI 平台」，还有「离线 Markdown 笔记，只在自己的设备间同步」；IH 正在上线主打「本地」的产品，并且有人上报了可复现的真实月收入。三个方向不约而同：用户越来越想把数据留在自己手里，而「本地优先」已经从理念变成「真有人卖出去、真有人付费」的东西。</p>
+                    </div>
+                    <div class="deep-analysis">
+                      <p data-zh="给你的落点：本地/离线 AI 不是「没人做」，而是「有人已经卖出去 + 有人愿意付」。你不必自己做模型——把「本地优先、离线可用、数据可导出、不绑定某个云」挂到你现有产品上，就能吃这一波。" data-en="Landing: local/offline isn't a fake market — sellers exist and users pay. You don't need your own model; attach 'local-first, offline, export, no cloud lock' to an existing product.">给你的落点：本地/离线 AI 不是「没人做」，而是「已经有人卖出去 + 有人愿意付钱」。你不用自己做模型，只要把「本地优先、离线可用、数据可导出、不绑定某家云」挂到你现有的产品上，就能吃到这波需求。</p>
+                    </div>
+                  </div>
+
+                  <div class="pain-point step-s2">
+                    <div class="pain-point-header"><div class="pain-point-icon">📊</div>
+                      <h4 data-zh="对照 ② · 本周真实新上架的产品 + 评论区温度：这些是大家正在看、正在推的" data-en="cross ② · This week's real launches + comment heat: what people are watching">对照 ② · 本周真实新上架 + 评论区热度（先看大家在追什么，再想你要不要碰）</h4></div>
+                    <div class="table-wrap"><table class="data-table">
+                      <thead><tr>
+                        <th data-zh="本周上线" data-en="Launched">本周上线</th>
+                        <th data-zh="它解决什么" data-en="What it solves">它解决什么</th>
+                        <th data-zh="评论区" data-en="Comment vibe">评论区</th>
+                      </tr></thead>
+                      <tbody>
+                        <tr><td>tiun.（595 票 / 102 评）</td><td data-zh="做 AI 产品的收款、退款、计费" data-en="AI-product billing / refund / payments">AI 产品的收款 / 退款 / 计费</td><td data-zh="在聊「AI 产品该怎么收钱」" data-en="debating how AI products charge">在聊「AI 产品到底怎么收钱」</td></tr>
+                        <tr><td>Ami AI（564 票 / 199 评）</td><td data-zh="帮 AI 产品自动拉客户" data-en="auto customer-acquisition for AI apps">给 AI 产品自动拉客户</td><td data-zh="高赞是「这正是我要的」" data-en="top: exactly what I was looking for">评论多赞正是「我正要这个」</td></tr>
+                        <tr><td>Kilo Code for iOS（498 票 / 79 评）</td><td data-zh="手机上跑 Coding Agent" data-en="mobile coding agent">手机上的 Coding Agent</td><td data-zh="在谈 Agent 靠不靠谱" data-en="is an agent any good">在聊 Agent 到底能不能信</td></tr>
+                        <tr><td>…整个前排</td><td data-zh="几乎全为「做 AI 的人」定制" data-en="almost all AI-builder tooling">几乎全是给 AI 开发者配套</td><td data-zh="评论区拦腰就是这几样" data-en="comments cluster here">评论区翻来覆去就这几类</td></tr>
+                      </tbody>
+                    </table></div>
+                    <div class="deep-analysis">
+                      <p data-zh="本周新上线的，十有七八是「帮做 AI 产品的人搞钱」：收款、退款、拉客户、语音、移动 Agent，评论区特别热，讨论全都集中在「做 AI 怎么变现、怎么收、怎么拉客」。这是好消息也是提示：帮「做 AI 的人服务」这条链路已经很挤，但几乎全是「帮他们卖货收钱」；真正还能帮的，是被抽成、被扣款、被吃利润的这一头。" data-en="Most of this week's launches are 'help AI-builders make money': billing, refunds, acquisition, voice, mobile agents — hot comments all about how AI products monetize, charge, grow. The 'serve AI-builders' lane is crowded, but it's nearly all 'help them sell &amp; collect'; the lean still open is the ones being skimmed, withheld, margin-eaten.">本周新上线的，十有七八是「帮做 AI 产品的人搞钱」：收款、退款、拉客户、语音、移动 Agent，评论区特别热，讨论全集中在「做 AI 怎么变现、怎么收、怎么拉客」。这是好消息也是提示：帮「做 AI 的人服务」这条链路已经很挤，但几乎全是「帮他们卖货收钱」；真正还能帮的，是被抽成、被扣款、被吃利润的这一头。</p>
+                    </div>
+                  </div>
+
+                  <div class="pain-point step-s3">
+                    <div class="pain-point-header"><div class="pain-point-icon">❄️</div>
+                      <h4 data-zh="对照 ③ · Reddit 的痛点，在别处已经有人做出来、并看到结果（不是空的）" data-en="Cross ③ · A Reddit pain already has a product elsewhere — and it got results">对照 ③ · 一个「Reddit 在提、别处已有成品」的例子</h4></div>
+                    <div class="quote-box">
+                      <p data-zh="拿「离线 / 本地可跑」来对照：Reddit 上有人在「本地能不能装上、动不动就要联网、离线段」；而在 IH 这周就有人把「本地就能自己掌控收入」的工具做出来了，HN 也有人已经把它开源、可免费使用。同一件事，一个源头还在疑问，另一源头已经做出来且正在跑——不是「没人做」，是「已有人做 + 你们还在吐槽 = 补缺口的缝」。你要找的往往不是一个全空白，而是一个「他们做了、但还有一小群人不满意」的那条缝。" data-en="On 'local/runnable offline': Reddit still asks whether it can run locally / stay offline; this week IH already has a self-controllable-income tool built, and HN has open-sourced one for free. One source still questions, another already shipped &amp; runs — not 'no one builds it' but 'built + still-grumbling = the seam'. The opportunity is usually a seam, not a blank.">拿「离线 / 本地可跑」来对照：Reddit 上有人在「本地能不能装上、动不动就要联网、离线段」；而 IH 这些就已有人把「本地就能自己掌控」的工具做出来了，HN 也有人已经把它开源、能免费使用。同一件事，一个源头还在疑问，另一个源头已经做出来且正在跑——不是「没人做」，而是「已有人做 + 你们还在吐槽 = 补缺口的缝」。你要找的往往不是一个全空白，而是一个「他们做了、但还有一小群人不满意」的那条缝。</p>
+                    </div>
+                    <div class="deep-analysis">
+                      <p data-zh="给你的提示：与其从零开拓，不如去读「已有成品 + 真实开口处(评论区)」——看哪个已有产品被说「能用但差一点点」，那个差一点，就是你的产品。读 IH 的复盘、读 HN 的 Show 下面的提问，都是现成的需求量比特。" data-en="Read existing products + the grumble in their comments: which one gets 'it works but is missing X' — that X is your product. IH postmortems and the questions under HN 'Show' posts are ready-made demand signals.">给你的提示：与其从零开拓，不如去读「已有成品 + 真实开口处（评论区）」——看哪个已有产品被说「能用但差一点点」，那个差一点，就是你的产品。读独立开发者的复盘、读 HN Show 下面的提问，都是现成的需求信号。</p>
+                    </div>
+                  </div>
+
+                  <div class="pain-point step-s4">
+                    <div class="pain-point-header"><div class="pain-point-icon">🧭</div>
+                      <h4 data-zh="对照 ④ ·「怕被 AI 取代 / 对职场失去热情 / 平台扣钱」——职场声吵与 HN 的 Ask 对上了" data-en="Cross ④ · 'fear of AI, career fatigue, funds withheld' — job threads &amp; HN Ask align">对照 ④ · 职场焦虑：热帖与 HN 的 Ask 是一个东西</h4></div>
+                    <div class="quote-box">
+                      <p data-zh="在热帖、产品评论区，反复出现的职业焦虑是：怕被 AI 取代、对做得越来越累的行业失去热情、被铺天盖地的 AI 内容淹没。而 HN 的 Ask 也是同一个样子——这周就有「AI 时代怎么面过程序员？」「我对 IT 行业逐渐失去动力」的帖子，「Stripe 扣了我 $100,000」也在 HN 传。两个圈子的情绪完全对上：不是单平台偶尔一提，是很多群的共感。" data-en="Career anxiety repeats across hot posts &amp; product comments: fear of being replaced by AI, losing enthusiasm for an exhausting job, drowning in AI noise. HN Ask mirrors it — e.g. 'interview devs in a post-AI world?', 'losing motivation in IT', 'Stripe withheld $100K'. Two circuits emotionally align; it's shared, not a fluke.">在热帖、产品评论区，反复出现的职业焦虑是：怕被 AI 取代、对做得越来越累的行业失去热情、被铺天盖地的 AI 内容淹没。而 HN 的 Ask 也是同一个主题——这周就有「AI 时代怎么面试程序员？」「我对 IT 行业逐渐失去动力」的帖子，「Stripe 扣了我 $100,000」也在 HN 传。两个圈子的情绪完全对上：不是单独一个平台偶尔提起，而是很多圈子共同的烦恼。</p>
+                    </div>
+                    <div class="deep-analysis">
+                      <p data-zh="给你的机会点：与其做「教大家学会 AI」，不如做「职场自保」——离职/谈薪前替人梳理、被扣款提醒、以及「我是不是快被 AI 顶掉」的提示。这个方向很私密、很真实、开发门槛不高，而且被很多圈子一起反复提。" data-en="Your wedge isn't 'teach AI' but 'career self-protection': pre-exit / raise-prep checklist, payment-withholding alerts, cues that AI may displace you. Private, real, low to build, and repeatedly brought up across many circuits.">给你的机会点：与其做「教大家学会 AI」，不如做「职场自保」——离职/谈薪前替人梳理、被扣款提醒、以及提醒「我是不是快被 AI 顶掉」。这个方向很私密、很真实、开发门槛不高，而且被很多圈子一起反复提起。</p>
+                    </div>
+                  </div>
+
+                  <div class="card card-highlight">
+                    <h4 data-zh="跨源的一句话" data-en="Cross-source, in one line">跨源的一句话</h4>
+                    <p data-zh="动手前，用「① 本地/离线不交云；② 已经有人靠它挣到钱；③ 我自己每天也要用」三条去套。至少命中两条才动手，命中一条只观望，一条都不中就换。真正的机会不是一个大空白，而是「已有人做 + 仍有一小撮人不满意」那条缝。" data-en="Vet new ideas against: (1) offline/private; (2) someone already sells it; (3) you wouldn't use it daily. Take two of three to build, one to wait, zero to pass. The opportunity is usually a seam — product already exists but a minority is still dissatisfied.">动手前请用三条去套：「①本地/离线不联网；②已经有人靠它挣到钱；③我自己每天都在用」。至少中两条就动手，只中一条先观望，一条都不中也别碰。真机会通常不是全空的空白，而是一条「已经有人做了，但还有一小撮人不满意」的缝。</p>
+                  </div>
+                </section>
+                <section id="noneng" class="section">
+                    <div class="section-header">
+                        <div class="section-icon purple">②</div>
+                        <h2 data-zh="非工程师人群，才是更大的金矿" data-en="Non-Engineers: The Bigger Gold Mine">非工程师人群，才是更大的金矿</h2>
+                    </div>
+                    <p data-zh="我们通常只盯「程序员给程序员做工具」。但会计、护士、小房东、油漆工、货车司机的「抱怨」，一旦能被一键/流程/自动化解决，就是你的机会。纯发泄（「太累」「老板骂我」）不算——只有「太累因为我在重复抄/贴/对账/交接」这类才算工具化痛点。" data-en="We usually only look at 'build-for-developers' tools. But the complaints of accountants, nurses, small landlords, painters and truckers, once they can be solved by a click / workflow / automation, are your chance. Pure venting ('I'm tired' 'my boss scolded me') doesn't count; only 'tired because I repeat copy/paste/reconcile/handoff' does.">我们通常只盯「程序员给程序员做工具」。但会计、护士、小房东、油漆工、货车司机的「抱怨」，一旦被一键/流程/自动化解决，就是你的机会。这一节把他们的「工具化痛点」筛出来——纯发泄（「太累」「老板骂我」）不算，只有「太累因为我在重复抄/贴/对账/交接」这类才算。</p>
+
+                    <h3 data-zh="会计（AP 收件箱最痛）" data-en="Accountants (AP inbox is the pain)">会计（AP 收件箱最痛）</h3>
+                    <div class="table-wrap"><table class="data-table">
+                        <thead><tr>
+                            <th data-zh="真实帖子" data-en="Real Post">真实帖子</th>
+                            <th data-zh="把它变成什么工具" data-en="Turn it into a tool">把它变成什么工具</th>
+                        </tr></thead>
+                        <tbody>
+                            <tr><td><a href="https://www.reddit.com/r/accounting/comments/1wf74ra">供应商改银行卡，我 AP 收件箱再也不信了</a></td><td data-zh="应付账款发票防伪 / 供应商账户变更校验工具（B2B 反诈）" data-en="AP invoice anti-fraud / supplier-account-change verification (B2B anti-fraud)">应付账款发票防伪 / 供应商账户变更校验工具（B2B 反诈）</td></tr>
+                            <tr><td><a href="https://www.reddit.com/r/accounting/comments/1whwehd">会计里最难给非会计解释的概念</a></td><td data-zh="会计知知识讲解 / AI 讲解器" data-en="Accounting concept explainer / AI">会计讲解 / AI 讲解器</td></tr>
+                            <tr><td><a href="https://www.reddit.com/r/accounting/comments/1wjvkr2">处理难答的技术问题怎么找答案</a></td><td data-zh="会计问答专家 / 内部知识沉淀 SaaS" data-en="Accounting Q&amp;A expert / internal-knowledge SaaS">会计问答专家 / 内部知识沉淀 SaaS</td></tr>
+                            <tr><td><a href="https://www.reddit.com/r/accounting/comments/1wiicul">ERP 梦魇</a></td><td data-zh="ERP 实施 / 迁移工具" data-en="ERP implementation / migration">ERP 实施 / 迁移工具</td></tr>
+                        </tbody>
+                    </table></div>
+
+                    <h3 data-zh="护理/医护" data-en="Nursing / Healthcare">护理/医护</h3>
+                    <div class="table-wrap"><table class="data-table">
+                        <thead><tr>
+                            <th data-zh="真实帖子" data-en="Real Post">真实帖子</th>
+                            <th data-zh="工具机会" data-en="Tool Opportunity">工具机会</th>
+                        </tr></thead>
+                        <tbody>
+                            <tr><td><a href="https://www.reddit.com/r/nursing/comments/1wh8fm2">你来接这个病人，说床尾报告</a></td><td data-zh="交接班报告自动生成——护理经典痛点，SaaS 有真实付费场景" data-en="Auto-generate handoff/shift reports—classic nursing pain, real paid SaaS scenario">交接班报告自动生成——护理有真实付费场景</td></tr>
+                            <tr><td><a href="https://www.reddit.com/r/nursing/comments/1wjtxjr">长照临床第一周被震惊，这是正常的吗</a></td><td data-zh="护理实习 / 临床陪伴学习工具" data-en="Nursing clinical companion / study tool">护理实习 / 临床陪伴学习工具</td></tr>
+                            <tr><td><a href="https://www.reddit.com/r/nursing/comments/1whxf50">总被叫去上班</a></td><td data-zh="排班 / 加班管理" data-en="Scheduling / overtime management">排班 / 加班管理</td></tr>
+                        </tbody>
+                    </table></div>
+
+                    <h3 data-zh="小房东" data-en="Small Landlords">小房东</h3>
+                    <div class="table-wrap"><table class="data-table">
+                        <thead><tr>
+                            <th data-zh="真实帖子" data-en="Real Post">真实帖子</th>
+                            <th data-zh="工具机会" data-en="Tool Opportunity">工具机会</th>
+                        </tr></thead>
+                        <tbody>
+                            <tr><td><a href="https://www.reddit.com/r/landlord/comments/1whmhgz">租客不交租、无视</a></td><td data-zh="催租 / 欠款跟踪 / 通知书生成" data-en="Rent-chase / arrears tracking / notice generation">催租 / 欠款跟踪 / 通知书生成</td></tr>
+                            <tr><td><a href="https://www.reddit.com/r/landlord/comments/1wfbcps">租客退租后一股味散不掉</a></td><td data-zh="退房流程 / 押金核算模板" data-en="Move-out flow / bond-return template">退房流程 / 押金核算模板</td></tr>
+                        </tbody>
+                    </table></div>
+                    <div class="card">
+                        <h4 data-zh="三条通用判断" data-en="Three General Takeaways">三条通用判断</h4>
+                        <p data-zh="① 这些行业的共性 = 数据表格多、重复、术语多，缺的从来不是算法难，而是「把流程做成工具」；② 很多「痛点帖」同时追问「有没有能自做的/能开发的东西」，等于已经在喊「我想要一个工具」；③ 你验证时他们更好说话（真被天天卡），付费意愿反而比程序员强。缺点：垂直人群小、获客靠内容而非投放——先用「做工具 + 图文 + 采访」小步试。" data-en="① These industries share: more tables, more repetition, more jargon; what's missing isn't complex algorithms but 'making the workflow into a tool'. ② Many pain posts simultaneously ask 'is there something I can make/that's buildable'—they're already shouting 'I want a tool'. ③ They're easier to reach and their willingness to pay may beat developers. Downside: small vertical audiences; acquisition by content not ads—start small with 'build + posts + interviews'. The reality is the痛点 all ask 'is there something I can build / buy to fix this'.">① 这些行业的共性 = 数据表格多、重复、术语多，最缺的不是「算法难」而是「把流程做成工具」；② 很多「痛点帖」会同时追问「有没有能自己做/能做出来的东西」，等于已经在喊「我想要一个工具」；③ 验证时更好说话（真在天天被卡）、付费意愿反而更强。缺点：人群小、获客要靠内容而非投放——先用「工具 + 图文 + 采访」小步试。</p>
+                    </div>
+                    <h3 data-zh="做开发者工具的空白度：痛点多、没人做 = 机会" data-en="Dev-Tool Gap: high pain, low build = opportunity">做开发者工具的空白度：痛点多、没人做 = 机会</h3>
+                    <div class="table-wrap"><table class="data-table">
+                        <thead><tr>
+                            <th data-zh="板块" data-en="Subreddit">板块</th>
+                            <th data-zh="讨论" data-en="Posts">讨论</th>
+                            <th data-zh="痛点抱怨" data-en="Pain">痛点抱怨</th>
+                            <th data-zh="有人给方案" data-en="Plans">有人给方案</th>
+                            <th data-zh="比值" data-en="Ratio">比值</th>
+                        </tr></thead>
+                        <tbody>
+                            <tr><td data-zh="系统/运维" data-en="Sysadmin">系统/运维</td><td>209</td><td>122</td><td>18</td><td data-zh="约 7:1，痛点多、解决少" data-en="~7:1, high pain, few solves">约 7:1，痛点多、解决少</td></tr>
+                            <tr><td data-zh="创业者" data-en="Entrepreneurs">创业者</td><td>297</td><td>94</td><td>16</td><td data-zh="约 6:1" data-en="~6:1">约 6:1</td></tr>
+                            <tr><td data-zh="自托管" data-en="Self-hosted">自托管</td><td>227</td><td>139</td><td>44</td><td data-zh="约 3:1" data-en="~3:1">约 3:1</td></tr>
+                            <tr><td data-zh="独立项目" data-en="Side Project">独立项目</td><td>1,593</td><td>287</td><td>122</td><td data-zh="约 2.4:1 已挤" data-en="~2.4:1 already crowded">独立项目</td></tr>
+                        </tbody>
+                    </table></div>
+                </section>
+
+                <!-- Validated and Reproducible Cases -->
+                <section id="validate" class="section">
+                    <div class="section-header">
+                        <div class="section-icon blue">③</div>
+                        <h2 data-zh="验证假设：被同伴背书的产品 + 可复现案例" data-en="Validate: Endorsed Products + Reproducible Cases">验证假设：被同伴背书的产品 + 可复现案例</h2>
+                    </div>
+                                        <p data-zh="完整案例库（含更全的案例、翻车与真实收入）已并入上方「② 成功案例 · 真实收入」一节。" data-en="The full case library (with more cases, crashes & real revenue) now lives in the top-level Success Cases section.">完整成功案例库（更多案例、翻车、真实收入）已并入上面的「② 成功案例」一节，这里只给「怎么验证」这个判断。</p>
+                    <div class="card">
+                        <h4 data-zh="怎么读这张表" data-en="How to Read This Table">怎么读这张表</h4>
+                        <p data-zh="共同点：钱不一定多（$151 也有），但都「有一批真实用户愿意付费」——先验证有人付钱，再谈规模。你看的时候别盯「多少」，盯「他怎么确认有人愿意买」。两个翻车（$2K→0 低估留存、0→$3.6K 全靠社区）是可复制的教训：留存 &gt; 获客、内容 &gt; 投放。" data-en="Common: money isn't always much ($151 yes), but each has a batch of real paying users—validate someone pays first, then scale. Don't stare at the dollar, watch 'how they confirmed people want to buy'. The two crashes ($2K→0 under-valuing retention; 0→$3.6K on content) are replicable lessons: retention &gt; acquisition, content &gt; ads.">共同点：钱不一定多（$151 也有），但都真的有一批真实用户愿意付费——先验证有人付钱，再谈规模。你看的时候别盯「多少」，盯「他怎么确认有人愿意买」。两个翻车（$2K→0 低估留存 / 0→$3.6K 全靠内容）可复制：留存 &gt; 获客，内容 &gt; 投放。</p>
+                    </div>
+                </section>
+
+                <!-- Comment Sentiment -->
+                <section id="sentiment" class="section">
+                    <div class="section-header">
+                        <div class="section-icon red">④</div>
+                        <h2 data-zh="评论区在说什么：社区情绪" data-en="What Comments Say: Community Sentiment">评论区在说什么：社区情绪</h2>
+                    </div>
+                    <p data-zh="一个观点有没有被高赞，比标题更能代表「大家到底怎么想」。从代表性帖的评论区挖出的情绪。" data-en="Whether a view got upvoted says more than the title. Sentiment pulled from key posts' comments.">一个观点有没有被高赞，比帖子标题更能代表「大家到底怎么想」。下面从几个代表性帖的评论区里抽出的情绪。</p>
+
+                    <h3 data-zh="职场焦虑线：最高赞不是劝你辞职，是「反辞职自保」" data-en="Career anxiety: top upvotes aren't 'quit', they're anti-quit self-protection">职场焦虑线：最高赞不是劝你辞职，是「反辞职自保」</h3>
+                    <div class="table-wrap"><table class="data-table">
+                        <thead><tr>
+                            <th data-zh_1="帖子" data-zh="帖子" data-en="Post">帖子</th>
+                            <th data-zh="评论区信号" data-en="Comment Signal">评论区信号</th>
+                        </tr></thead>
+                        <tbody>
+                            <tr><td><a href="https://www.reddit.com/r/careerguidance/comments/1wg7pnw">蜜月假被收回，该辞职吗</a></td><td data-zh="最高赞不是「快走」，而是「别主动辞」——发邮件抄 HR、说明行程已预付不可退，让他们开口让你拿失业金；自己护住钱。" data-en="Top-vote isn't 'leave now'—it's 'don't resign on your own': email CC HR, note the prepaid non-refundable trip, make them make the call so you can claim unemployment; protect your own money.">最高赞不是「快辞职」，是「别主动辞，发邮件抄 HR、说明已预付不可退，让他们开口让你拿失业金」——逼公司做决定，自己护住钱。</td></tr>
+                            <tr><td><a href="https://www.reddit.com/r/careerguidance/comments/1wg6lb5">老板太有价值升不了职</a></td><td data-zh="3544 赞「按你的重要性要加薪」，楼主当场被说服去找下家。金句：「工作是钱换时间，你不欠雇主任何东西」" data-en="3544-vote 'raise by your importance'; OP immediately decides to shop around. Quote: 'Work is trading time for money; you owe your employer nothing'">雇主太有价值升不了职：3544 赞「按你的重要性要加薪」，楼主当场被说服去找下家。金句「工作是钱换时间，你不欠雇主任何东西」</td></tr>
+                            <tr><td><a href="https://www.reddit.com/r/careerguidance/comments/1wh350a">空降总监要我免费培训他</a></td><td data-zh="整楼骂公司，主流=「最低限度干活 + 同步跳槽」" data-en="The whole thread blames the company; mainstream = do minimum + line up next job">空降总监要我免费培训他：整楼骂公司，主流 = 最低限度干活 + 同步跳槽。</td></tr>
+                        </tbody>
+                    </table></div>
+                    <div class="card">
+                        <p data-zh="→ 给做产品的人：这批「要么走、要么被逼走」的委屈人，是「帮换工作/谈涨薪/离职收摊」工具和内容的目标人群。但注意他们真在问的是「怎么办」——做「离职决策树 / 离职清单 / 薪资对标」工具，能被问到、真能帮上忙。" data-en="→ For makers: these 'leave-or-be-forced' employees are the audience for 'change job / negotiate raise / wrap up' tools and content. But they're really asking 'what do I do next'—so build decision trees / checklists / salary-bench mark that get asked and actually help.">→ 给做产品的人：这批「要么走、要么被逼」的委屈人，是你「帮他们换工作/谈涨薪/离职收摊」工具与内容的核心人群。但他们真在问的是「怎么办」——做「离职决策树 / 离职清单 / 薪资对标」这类工具，能被问到、真能帮得上。</p>
+                    </div>
+
+                    <h3 data-zh="人均收入线：金额越大越被拆，金额小反而好" data-en="Income Line: the bigger the number, the more it's torn apart">收入线：金额越大越被拆台</h3>
+                    <p data-zh="大热帖评论区最高赞=拆台（「你站上写 Trustpilot 4.8，实际 4.0 一堆一星」）；18 万访问的帖也被提醒「你确定没把爬虫算进访量吗」。反倒是 $1,559 的习惯 App 评论区是一水「恭喜、你耗时多久、图怎么做」——逐条求教、信任高。结论：晒可再复现的钱，别晒会被核爆的大数。" data-en="A hot post's top comment is to tear it down ('you wrote Trustpilot 4.8, actually 4.0 + a pile of one-stars'); the 180k-traffic post gets 'are you sure you didn't count crawlers?'. But the $1,559 habit app gets a wall of 'congrats, how long, how'd you make the chart'—asking, not accusing. Verdict: display reproducible money, not big numbers that any break.">收入线：晒「大数字」会被拆台，晒「可复现」反而收到满屏「恭喜/求教」。做内容想用「晒数字」拿稿，「小可复现」永远强过「大会被锤」。</p>
+
+                    <h3 data-zh="反 AI 情绪：反的是「没用的壳」，不是「反 AI」" data-en="Anti-AI mood: against useless shells, not AI itself">反 AI 情绪：反的是「没用的壳」</h3>
+                    <p data-zh="反 vibe coding（「码生成 ≠ 软件工程」）高赞 230；sysadmin「AI 让人变没用」162。但同样有被高赞反驳「不要一棒子打死 vibe code」「你吐槽 slop 自己的格式就是 slop」。读法：做「一个具体领域的 AI」（办公自动化、自托管助手）反而高赞——" data-en="Anti vibe coding ('code-gen ≠ software engineering') high-vote 230; sysadmin 'AI makes people useless' 162. But also high-vote pushback 'don't condemn vibe coding wholesale' / 'you complain about slop while formatting like slop'. Read it: build a domain-specific AI (office automation, self-hosting assistant) and you get the upvotes.">反 vibe coding（「码生成 ≠ 软件工程」）高赞 230，sysadmin「AI 让人变没用」162 赞；但也有高赞反驳「不要一棒子打死 #vibe code」「你吐槽 slop 自己格式就是 slop」。读法：做「一个具体领域的 AI」反而高赞——反的其实是「没差别的套壳」。</p>
+                </section>
+
+                <!-- Self-Hosting -->
+                <section id="selfhost" class="section">
+                    <div class="section-header">
+                        <div class="section-icon green">⑤</div>
+                        <h2 data-zh="自托管 / homelab：技术人「自己手拼」的需求" data-en="Self-host / homelab: the DIY-tinkerer demand">自托管 / homelab：技术人「自己手拼」的真实需求</h2>
+                    </div>
+                    <div class="table-wrap"><table class="data-table">
+                        <thead><tr>
+                            <th data-zh="现象" data-en="Phenomenon">现象</th>
+                            <th data-zh="证据帖" data-en="Evidence Post">证据帖</th>
+                            <th data-zh="你该做什么" data-en="Your Move">你该做什么</th>
+                        </tr></thead>
+                        <tbody>
+                            <tr><td data-zh="被黑 = 一直被提（单帖高分）" data-en="Being hack= discussed (high-score single post)">被黑 = 一直被提</td><td><a href="https://www.reddit.com/r/selfhosted/comments/1wfq2vx">homelab 被 CVE 攻破 16 小时</a></td><td data-zh="做「收敛暴露面 / 加 tailscale / 加警报」的自托管安全自检与补丁提醒工具，有人要，几乎没人做" data-en="Build a self-hosting security self-check + patch-reminder ('shrink exposure / tailscale / add alerts') — wanted, barely built">收敛暴露面 + 警报的自检 / 补丁提醒工具，有人要、几乎没人做</td></tr>
+                            <tr><td data-zh="「低价主板真香」被评论拉回现实" data-en="Cheap-mobo 'nice' gets grounded">「低价主板真香」被拉回现实</td><td><a href="https://www.reddit.com/r/homelab/comments/1wip5ah">我骂过低价 X99，现在整套都在它</a></td><td data-zh="高赞 167 直说「可以家里用、别上企业」——做「成本选型」内容时看清这个边界" data-en="Top-167 says 'fine at home, not for enterprise'—when you make cost-selection content, honor that boundary">167 赞直说「家用可、别上企业」——做成本选型内容要守住这个边界</td></tr>
+                            <tr><td data-zh="「冷口碑」自托管永远聚人" data-en="Cool-crowd self-host always collects">「冷口碑」自托管永远聚人</td><td><a href="https://www.reddit.com/r/selfhosted/comments/1wgwo01">什么最值得自托管</a></td><td data-zh="做「小众自托管周刊/榜单」，聚有口味差异的极客" data-en="curate 'niche self-hosting weekly/list' to gather ironic geeks">小众自托管榜单/青睐的人，做周刊聚人</td></tr>
+                        </tbody>
+                    </table></div>
+                    <div class="card">
+                        <h4 data-zh="一句话" data-en="In One Line">一句话</h4>
+                        <p data-zh="自托管「自己拼」的人，安全自检、加固、成本选型、小众周刊都有人问，但把这些做成产品的人极少，几乎没人做成产品。" data-en="Self-hosters ask about security self-checks, hardening, cost selection, niche newsletters, yet almost nobody ships them as products，几乎没人做成产品.">自托管「自己拼」的人，安全自检、加固、成本选型、小众周刊都有人问，而真正把它们做成产品的人极少。</p>
+                    </div>
+                </section>
+
+                <!-- Hot Posts -->
+                <section id="hotposts" class="section">
+                    <div class="section-header">
+                        <div class="section-icon orange">⑥</div>
+                        <h2 data-zh="本周几叙出圈热帖" data-en="A Few Breakout Hot Posts">本周出圈热帖</h2>
+                    </div>
+                    <div class="table-wrap"><table class="data-table">
+                        <thead><tr>
+                            <th data-zh="帖子" data-en="Post">帖子</th>
+                            <th data-zh="来源" data-en="Source">来源</th>
+                        </tr></thead>
+                        <tbody>
+                            <tr><td><a href="https://www.reddit.com/r/careerguidance/comments/1wg7pnw">蜜月假被收回，该辞职吗</a></td><td>Reddit（高赞）</td></tr>
+                            <tr><td><a href="https://www.reddit.com/r/careerguidance/comments/1wg6lb5">老板太有价值，升不了职</a></td><td>Reddit（高赞）</td></tr>
+                            <tr><td><a href="https://www.reddit.com/r/sysadmin/comments/1wjdpgx">某办公软件退订时向全部用户群发骚扰</a></td><td>Reddit（3,569 赞）</td></tr>
+                            <tr><td><a href="https://www.reddit.com/r/selfhosted/comments/1wfq2vx">homelab 被 CVE 攻破 16 小时</a></td><td>Reddit（1,220 赞）</td></tr>
+                            <tr><td><a href="https://www.reddit.com/r/homelab/comments/1wip5ah">低价 X99 整机真香，被拉回现实</a></td><td>Reddit（1,568 赞）</td></tr>
+                            <tr><td><a href="https://www.reddit.com/r/selfhosted/comments/1wgwo01">什么最值得自托管</a></td><td>Reddit（637/431）</td></tr>
+                        </tbody>
+                    </table></div>
+                    <div class="card">
+                        <h4 data-zh="热帖读法" data-en="Hot-Post Reading Guide">热帖读法</h4>
+                        <p data-zh="本周热帖最重的叙事是三人「职场自保」。（蜜月假、升不了职两台高赞 = 「别走、护住钱」，空降总监 = 「待住别陪跑」）都在往「反辞职自保」收。sysadmin 的退订骚扰（3,569）是「别做绑架式挽留」的最硬反向案例。" data-en="This week's hot posts center on '职场 self-protection'（蜜月假 &amp; two raise-anxiety posts). The career line = 'don't quit, protect money'；the sysadmin unsubscribe-spam (3,569) is the hardest counter-case to 'don't do hostage-style retention'.">本周最重的叙事是「职场自保」：蜜月假、升不了职两条高赞都不是劝辞职，而是「别走、把钱护住」；sysadmin 的「退订骚扰全员」（3,569 赞）是「别做绑架式挽留」最硬的反面案例。</p>
+                    </div>
+                </section>
+
+                <!-- Action List -->
+                <section id="actions" class="section">
+                    <div class="section-header">
+                        <div class="section-icon purple">💡</div>
+                        <h2 data-zh="本周行动清单" data-en="This Week's Action List">本周行动清单</h2>
+                    </div>
+                    <div class="card">
+                        <h3 data-zh="立即执行" data-en="Do Now">立即执行</h3>
+                        <ul class="action-list">
+                            <li data-zh="非工程师垂直工具（本周最大空白）⭐ 从自己熟的行业下手：会计 AP 发票防伪、护士交接班报告、房东催租/押金——他们是真被重复劳动逼疯、付费意愿强的人" data-en="Non-engineer vertical tool (the biggest open space) ⭐ start from an industry you know: AP invoice fraud-check, nurse handover reports, landlord arrears chasing—people really tortured by repetition and most willing to pay.">非工程师垂直工具（本周最大空白）⭐ 从自己熟的行业入手：会计 AP 发票防伪、护士交接班报告、房东催租/押金——他们被重复劳动逼疯了、付费意愿最强</li>
+                            <li data-zh="开发者工具尽管捡：系统运维(7:1) / 创业者(6:1) 痛点多、几乎没人做「自托管安全自检 / 加固 / 补丁提醒」" data-en="Dev tools despite the crowd: sysadmin (7:1) / entrepreneurs (6:1) pain is real and barely built—'self-host security self-check / harden / patch reminders'">相反系统运维(7:1)、创业者(6:1)几乎没有替代者——去占「自托管安全自检 / 加固 / 补丁提醒」这个空位</li>
+                            <li data-zh="别去挤独立项目（2.4:1）除非你已能验证有人付费；先做「已有人在付费」的营销包装" data-en="Avoid a crowded independent-projects lane unless you have validated paying users; first prove 'someone already pays'—same as the $151 童书 case">独立项目已挤（2.4:1），想做就「先验证有人付费」——$151 童书那类做小先验</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3 data-zh="定位与文案（本周最该做的 3 件事）" data-en="Positioning &amp; Copy (3 things this week)">定位与文案（本周最该做的 3 件事）</h3>
+                        <ul class="action-list">
+                            <li data-zh="在会计 / 护士 / 房东区先写「某流程怎么自动化」，正文用高赞场景（AP 被骗、床尾报告、催租），再推出工具" data-en="In the accounting / nursing / landlord subs first write 'how to automate X', body from high-vote scenes (AP fraud, bed rail report, rent chase), then ship the tool.">先在会计/护士/房东区写「某流程怎么自动化」，用高赞真实场景做正文，再推出专属工具。</li>
+                            <li data-zh="晒可复现的 $1-3K 实操复盘；要晒数字，用「小、可复现」而非「大、会拆台」" data-en="Post reproducible $1-3K practical retros; if you show numbers, use small &amp; reproducible, not big &amp; ripped apart">晒可复现的 $1-3K 实操复盘，被拆台的大数别晒</li>
+                            <li data-zh="你的产品若做了 AI 功能，把「我用 AI 估了什么、校验了什么」写明，避开『浅 AI 壳』的印象" data-en="If your product uses AI, be explicit about 'what AI did &amp; what was validated' to avoid the 'thin AI shell' impression">用「能说清我用了 AI + 校验了什么」对抗「深层 AI 壳」的印象</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3 data-zh="别做" data-en="Don't">别做</h3>
+                        <ul class="action-list">
+                            <li data-zh="第 1001 个 AI 壳（真在聊的才 36 帖；反 vibe coding 230 赞）——别做表层套壳；「OpenAI 90% miss」只有一帖，别当行业定论" data-en="The #1001 AI shell (only ~36 real posts; anti vibe-coding 230 upvotes)—don't build a thin shell; the 'OpenAI 90% miss' claim is a single thread, not a verdict">别做第 1001 个 AI 壳：真在聊的才 36 帖、反 vibe coding 230 赞；「OpenAI 90% miss」只有一帖，别当定论</li>
+                            <li data-zh="绑架式挽留（退订恐吓）——禁用，最硬反面案例已有 3,569 赞" data-en="Hostage-retention (unsubscribe alarms)——don't, the hardest counter-example already has 3,569 赞">别做「退订挽留恐吓」，已经有 3,569 赞的反面教材</li>
+                            <li data-zh="带价格炒作的大数内容（评论区会拆台）——把「晒钱」换成「晒可复现步骤 + 教程」" data-en="Stop big-number bragging with prices (comments will tear it apart); switch 'show money' to 'reproducible steps + tutorial'">别做大数炒作：把「晒钱」换成「晒可复现步骤 + 教程」</li>
+                        </ul>
+                    </div>
+                </section>
+</div>
+        </div>
+    </main>
+
+<!-- AUTO:footer:begin -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <img class="footer-logo" src="/assets/img/logo.png" alt="7Kolor Insights" width="26" height="26">
+                <span class="footer-name">7Kolor <span>Insights</span></span>
+                <span class="footer-tagline" data-zh="为独立开发者提供趋势分析与信号洞察" data-en="Trend analysis & signal insight for indie developers">为独立开发者提供趋势分析与信号洞察</span>
+            </div>
+            <nav class="footer-links">
+                <a href="/weekly/" data-zh="每周情报" data-en="Weekly">每周情报</a>
+                <a href="/#reports" data-zh="专项报告" data-en="Reports">专项报告</a>
+                <a href="/#services" data-zh="定制服务" data-en="Custom Services">定制服务</a>
+                <a href="/about.html" data-zh="关于" data-en="About">关于</a>
+                <a href="https://github.com/7kolor/7kolor.github.io">GitHub</a>
+                <a href="/feed.xml">RSS</a>
+            </nav>
+            <p class="footer-copy">© 2026 7Kolor Insights</p>
+        </div>
+    </footer>
+    <!-- AUTO:footer:end -->
+
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>

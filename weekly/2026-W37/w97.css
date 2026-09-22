@@ -1,0 +1,151 @@
+/* ===== 7Kolor W37 – refined editorial polish (scoped to this week's report pages) =====
+   Redesign of the step/case cards: drops the heavy solid-color numbered blocks for a
+   clean, tinted "small pill + soft colored rail" treatment. Scoped under #sixstep,
+   #sources, #cases — the rest of the site's main.css stays untouched. */
+
+/* ---------- shared lead paragraph ---------- */
+#sixstep > p {
+  max-inline-size: 62ch;
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--text-secondary);
+  margin: 28px 0 38px;
+  padding-left: 14px;
+  border-left: 3px solid var(--primary);
+}
+
+/* ============================================================
+   Six-step + cross-source cards: modern "pill + soft rail" look
+   ============================================================ */
+#sixstep .pain-point,
+#sources .pain-point,
+#cases .pain-point {
+  position: relative;
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--border);
+  border-radius: 16px;
+  padding: 22px 26px 22px 22px;
+  margin: 0 0 26px;
+  background: #fff;
+  box-shadow: 0 1px 2px rgba(15,23,42,.04), 0 6px 20px rgba(15,23,42,.04);
+}
+
+/* phase pill: small, tinted, not a giant block */
+#sixstep .pain-point-header,
+#sources .pain-point-header,
+#cases .pain-point-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 8px;
+}
+
+#sixstep .pain-point-icon,
+#sources .pain-point-icon,
+#cases .pain-point-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  font-family: var(--mono);
+  font-style: normal;
+  font-size: 15px;
+  font-weight: 700;
+  color: #1f2937;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: none;
+  flex: 0 0 auto;
+}
+
+/* per-phase: colored icon-chip + thin colored card rail (much lighter than a block) */
+#sixstep .pain-point.step-s1 .pain-point-icon { color:#2563eb; border-color:#bfdbfe; background:#eff6ff; }
+#sixstep .pain-point.step-s2 .pain-point-icon { color:#7c3aed; border-color:#ddd6fe; background:#f5f3ff; }
+#sixstep .pain-point.step-s3 .pain-point-icon { color:#b45309; border-color:#fed7aa; background:#fff7ed; }
+#sixstep .pain-point.step-s4 .pain-point-icon { color:#0d9488; border-color:#99f6e4; background:#f0fdfa; }
+#sixstep .pain-point.step-s5 .pain-point-icon { color:#dc2626; border-color:#fecaca; background:#fef2f2; }
+#sixstep .pain-point.step-s6 .pain-point-icon { color:#059669; border-color:#a7f3d0; background:#ecfdf5; }
+
+#sixstep .pain-point.step-s1 { border-left-color:#60a5fa; }
+#sixstep .pain-point.step-s2 { border-left-color:#a78bfa; }
+#sixstep .pain-point.step-s3 { border-left-color:#fb923c; }
+#sixstep .pain-point.step-s4 { border-left-color:#2dd4bf; }
+#sixstep .pain-point.step-s5 { border-left-color:#f87171; }
+#sixstep .pain-point.step-s6 { border-left-color:#34d399; }
+
+#sixstep .pain-point:hover,
+#sources .pain-point:hover,
+#cases .pain-point:hover {
+  border-color: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(15,23,42,.08);
+  transition: transform .16s ease, box-shadow .16s ease, border-color .16s ease;
+}
+
+/* remove the old vertical connector rail (the pill already orders the steps) */
+#sixstep .pain-point::before { display: none; }
+
+/* headings */
+#sixstep h4, #sources h4, #cases h4 {
+  font-size: 17px;
+  font-weight: 650;
+  letter-spacing: -0.2px;
+  color: var(--text);
+}
+
+/* evidence block: soft, breathable, not red-heavy */
+#sixstep .quote-box, #sources .quote-box, #cases .quote-box {
+  background: #f8fafc;
+  border-left: 3px solid var(--primary);
+  padding: 16px 20px;
+  border-radius: 12px;
+  margin: 14px 0 12px;
+  line-height: 1.72;
+  font-size: 14.5px;
+  color: var(--text-secondary);
+  max-inline-size: 70ch;
+  font-style: normal;
+}
+
+/* developer-action: green-tinted call, separated and clearly a next-step */
+#sixstep .deep-analysis, #sources .deep-analysis, #cases .deep-analysis {
+  background: #f0fdf4;
+  border-left: 3px solid var(--accent-green);
+  padding: 13px 16px;
+  border-radius: 0 12px 12px 0;
+  margin: 6px 0 0;
+  max-inline-size: 70ch;
+}
+#sixstep .deep-analysis p, #sources .deep-analysis p, #cases .deep-analysis p {
+  font-size: 14.5px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* ============================================================
+   Section headers: match the icon chip tint to its meaning
+   (keeps the emoji, but gives each section a soft colored edge)
+   ============================================================ */
+.section-header {
+  position: relative;
+}
+.section-icon {
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(15,23,42,.06);
+}
+.section-icon.blue   { background:#eff6ff; border-color:#bfdbfe; }
+.section-icon.green  { background:#ecfdf5; border-color:#a7f3d0; }
+.section-icon.orange { background:#fff7ed; border-color:#fed7aa; }
+.section-icon.red    { background:#fef2f2; border-color:#fecaca; }
+.section-icon.purple { background:#f5f3ff; border-color:#ddd6fe; }
+.section-header::after {
+  background: linear-gradient(90deg, #2563eb, #0d9488);
+  width: 160px;
+  height: 2px;
+}
+
+/* ---------- responsive: tighten without clutter ---------- */
+@media (max-width: 640px) {
+  #sixstep .pain-point, #sources .pain-point, #cases .pain-point { padding: 18px; border-left-width: 4px; }
+  #sixstep .pain-point-icon, #sources .pain-point-icon, #cases .pain-point-icon { width: 40px; height: 40px; font-size: 14px; }
+}
