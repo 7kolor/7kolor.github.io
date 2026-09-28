@@ -1,0 +1,186 @@
+/* ============================================================
+   7Kolor W38 — editorial reading layer
+   站点家族（sky-blue/slate）之内做阅读升级：
+   · 信号青 #0E7490 = 链接 / 竖轨 / 密度计（"信号"的视觉语言）
+   · 焦糖橙 #B4532A = 只给翻车与负值
+   · 正文 16.5px/1.85、行长 ≤72ch，治"挤"
+   · 六步表密度列 = 纯 CSS 信号条；矩阵判决列 = 胶囊
+   作用域全部锁在 .content 内，不碰全站 chrome
+   ============================================================ */
+
+/* ---------- 类型与节奏 ---------- */
+.content .section { margin-bottom: 72px; }
+.content .section-header { margin-bottom: 28px; padding-bottom: 18px; border-bottom: 2px solid #16283B; position: relative; }
+.content .section-header::after { content: ""; position: absolute; left: 0; bottom: -2px; width: 64px; height: 2px; background: var(--signal, #0E7490); }
+.content .section h2 {
+    font-family: "Space Grotesk", "PingFang SC", "Microsoft YaHei", sans-serif;
+    font-size: clamp(23px, 2.4vw, 30px);
+    font-weight: 700; letter-spacing: -0.01em; line-height: 1.35;
+    color: #16283B;
+}
+.content .section-icon { display: none; }   /* 编号由标题本身承担，图标是噪音 */
+
+.content p {
+    max-width: 72ch;
+    font-size: 16.5px; line-height: 1.85;
+    color: #33475C;
+    margin: 0 0 18px;
+}
+.content p:last-child { margin-bottom: 0; }
+
+/* 生成器拆出的 inline span：必须无缝流动 */
+.content span[data-zh] { display: inline; }
+.content span.em, .content strong { font-weight: 650; color: #16283B; }
+
+/* 链接 = 信号青 + 细下划线，hover 才实 */
+.content p a, .content li a, .content td a, .content h4 a {
+    color: var(--signal, #0E7490);
+    font-weight: 500;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-decoration-color: rgba(14, 116, 144, .35);
+    text-underline-offset: 3.5px;
+    transition: text-decoration-color .15s ease, background-color .15s ease;
+}
+.content p a:hover, .content li a:hover, .content td a:hover, .content h4 a:hover {
+    text-decoration-thickness: 2px;
+    text-decoration-color: var(--signal, #0E7490);
+    background: rgba(14, 116, 144, .06);
+}
+
+/* ---------- 卡片（三级小节） ---------- */
+.content .card {
+    background: #fff;
+    border: 1px solid #DFE8EF;
+    border-radius: 12px;
+    padding: 26px 30px 22px;
+    margin: 0 0 20px;
+    box-shadow: 0 1px 2px rgba(22, 40, 59, .04);
+}
+.content .card h4 {
+    font-family: "Space Grotesk", "PingFang SC", sans-serif;
+    font-size: 18.5px; font-weight: 700; line-height: 1.5;
+    color: #16283B;
+    margin: 0 0 14px;
+    padding-left: 16px;
+    position: relative;
+}
+.content .card h4::before {
+    content: ""; position: absolute; left: 0; top: .42em;
+    width: 7px; height: 7px; border-radius: 2px;
+    background: var(--signal, #0E7490);
+}
+.content .card p { font-size: 16px; }
+
+/* ---------- 引读（blockquote 行） ---------- */
+.content p.callout {
+    background: #EEF4F8;
+    border-left: 3px solid var(--signal, #0E7490);
+    border-radius: 0 10px 10px 0;
+    padding: 14px 20px;
+    margin: 20px 0 24px;
+    color: #22405A;
+    max-width: 76ch;
+}
+
+/* ---------- 表格：证据面板 ---------- */
+.content .table-wrap {
+    border: 1px solid #DFE8EF;
+    border-radius: 12px;
+    overflow-x: auto;
+    background: #fff;
+    box-shadow: 0 1px 2px rgba(22, 40, 59, .04);
+    margin: 4px 0 22px;
+}
+.content .data-table { width: 100%; border-collapse: collapse; min-width: 640px; }
+.content .data-table th {
+    font-family: "Space Grotesk", "PingFang SC", sans-serif;
+    font-size: 12.5px; font-weight: 600;
+    letter-spacing: .08em;
+    color: #52647C;
+    text-align: left;
+    background: #F4F7FA;
+    padding: 12px 16px;
+    border-bottom: 2px solid #DFE8EF;
+    white-space: nowrap;
+}
+.content .data-table td {
+    font-size: 14.5px; line-height: 1.7;
+    color: #33475C;
+    padding: 13px 16px;
+    border-bottom: 1px solid #EDF2F7;
+    vertical-align: top;
+    font-variant-numeric: tabular-nums;
+}
+.content .data-table tr:last-child td { border-bottom: none; }
+.content .data-table tr:nth-child(even) td { background: #FBFCFE; }
+.content .data-table td:first-child { font-weight: 600; color: #16283B; }
+.content .data-table td a { font-weight: 500; }
+
+/* 六步框架：密度列 = 数字 + 信号条（数据自己说话） */
+#sixstep .data-table td:nth-child(5) {
+    font-family: "Fira Code", monospace;
+    font-weight: 600; color: #16283B;
+}
+#sixstep .data-table td:nth-child(5)::after {
+    content: ""; display: block;
+    height: 4px; width: calc(var(--d, 0) * .28%);
+    max-width: 100%;
+    margin-top: 6px;
+    border-radius: 2px;
+    background: linear-gradient(90deg, #0E7490, #0891B2);
+}
+#sixstep .data-table td:last-child { font-weight: 600; white-space: nowrap; }
+
+/* 矩阵：判决列 = 胶囊 */
+#matrix .data-table td.verdict { white-space: nowrap; }
+#matrix .data-table td.verdict span[data-zh] {
+    display: inline-block;
+    background: rgba(14, 116, 144, .08);
+    border: 1px solid rgba(14, 116, 144, .25);
+    color: #0B5D73;
+    font-size: 13px; font-weight: 600; line-height: 1.5;
+    padding: 5px 12px;
+    border-radius: 999px;
+}
+
+/* ---------- 列表：翻车橙 / 行动青 ---------- */
+.content ul.action-list { list-style: none; margin: 6px 0 4px; padding: 0; }
+.content ul.action-list li {
+    position: relative;
+    padding: 0 0 14px 26px;
+    margin: 0;
+    max-width: 72ch;
+    font-size: 16px; line-height: 1.8;
+    color: #33475C;
+}
+.content ul.action-list li::before {
+    content: ""; position: absolute; left: 4px; top: .62em;
+    width: 7px; height: 7px; border-radius: 50%;
+    background: var(--signal, #0E7490);
+}
+#cases ul.action-list li::before { background: #B4532A; }   /* 翻车 = 焦糖橙 */
+#cases ul.action-list li { padding-bottom: 16px; border-bottom: 1px dashed #EDF2F7; }
+#cases ul.action-list li:last-child { border-bottom: none; padding-bottom: 0; }
+
+/* ---------- 统计卡（概览区）微调 ---------- */
+.content .stat-grid { margin-bottom: 26px; }
+.content .stat-value { font-family: "Space Grotesk", "Fira Code", monospace; letter-spacing: -0.02em; }
+
+/* ---------- 响应式 ---------- */
+@media (max-width: 760px) {
+    .content .section { margin-bottom: 52px; }
+    .content .card { padding: 20px 18px 16px; }
+    .content p, .content ul.action-list li { font-size: 15.5px; }
+    .content .data-table td { padding: 11px 12px; }
+}
+
+/* ---------- 可访问性 ---------- */
+.content a:focus-visible, .content a:focus {
+    outline: 2px solid var(--signal, #0E7490);
+    outline-offset: 2px;
+    border-radius: 3px;
+}
+@media (prefers-reduced-motion: reduce) {
+    .content * { transition: none !important; }
+}

@@ -12,3 +12,9 @@ drafts/
 __pycache__/
 *.pyc
 *.Rhistory
+
+# scratch
+/side_6_step/scratch/
+
+# DSH weekly-report pipeline process artifacts (not part of this repo)
+/dsh/
