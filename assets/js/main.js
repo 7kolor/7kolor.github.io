@@ -17,6 +17,7 @@
         el.textContent = v;
       }
     });
+    document.documentElement.lang = lang === 'en' ? 'en' : 'zh-CN';
     try { localStorage.setItem('7kolor-lang', lang); } catch (e) {}
   }
   window.switchLang = switchLang;

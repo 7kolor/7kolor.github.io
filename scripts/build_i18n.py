@@ -111,11 +111,13 @@ def build(item_dir: Path) -> None:
     src = (item_dir / "index.html").read_text(encoding="utf-8")
     label_zh = label_en = item_dir.name
     meta_path = item_dir / "meta.json"
+    desc = {}
     if meta_path.exists():
         try:
             meta = json.loads(meta_path.read_text(encoding="utf-8"))
             label_zh = meta.get("week_label_zh") or label_zh
             label_en = meta.get("week_label_en") or label_en
+            desc = {c: meta.get("desc_" + c) for c in ("zh", "en")}
         except (json.JSONDecodeError, OSError):
             pass  # label falls back to the folder name
     try:
@@ -129,6 +131,9 @@ def build(item_dir: Path) -> None:
         out = retarget_toggle(out, lang, base)
         out = re.sub(r'<html lang="zh-CN"', f'<html lang="{lang}"', out, count=1)
         out = re.sub(r"<title>.*?</title>", f"<title>{tt[lang]}</title>", out, count=1)
+        if desc.get(lang):
+            out = re.sub(r'<meta name="description" content="[^"]*">',
+                         f'<meta name="description" content="{desc[lang]}">', out, count=1)
         out = out.replace("<body>", f'<body data-lang-page="{lang}">', 1)
         target = item_dir / f"report-{lang}.html"
         target.write_text(out, encoding="utf-8")

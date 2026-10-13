@@ -13,6 +13,7 @@
     --cyan: #06b6d4;              /* logo cyan */
     --cyandark: #0e7490;
     --accent-amber: #f59e0b;      /* signal highlight (sparingly) */
+    --accent-orange: #f59e0b;     /* alias: neutral stat cards (was used but undefined) */
     --accent-green: #10b981;
     --accent-red: #ef4444;
     --bg: #f7fafc;                /* light, cool */
