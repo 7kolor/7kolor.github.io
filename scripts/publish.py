@@ -93,11 +93,13 @@ def main():
     if args.check:
         return 0
 
-    # 1) single-language pages
+    # 1) site-wide rebuild first: sync AUTO chrome partials into content pages
+    #    (cards + archive + feed + header/footer), so i18n builds translate the
+    #    final chrome instead of being overwritten by a later bilingual re-inject
+    build_site.main()
+    # 2) single-language pages (translate AFTER chrome sync)
     for d in dirs:
         build_i18n.build(d)
-    # 2) site-wide rebuild (cards + archive + feed)
-    build_site.main()
     return 0
 
 

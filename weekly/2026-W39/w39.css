@@ -1,0 +1,322 @@
+/* ============================================================
+   7Kolor W39 — editorial reading layer（W38 家族 + 新组件）
+   · 信号青 #0E7490 = 链接/竖轨/密度计；焦糖橙 #B4532A = 翻车
+   · 新增：引语卡 quote-card / 话术代码块 pre.script / 方向档案
+     details.dossier（默认折叠）/ mark 高亮 / 主推行 li.first / 回执卡
+   · 作用域全部锁在 .content 内，不碰全站 chrome
+   ============================================================ */
+
+.content { --signal: #0E7490; --danger: #B4532A; --go: #0E9F6E; --receipt-bg: #FBF7EE; --receipt-line: #EADFC8; --receipt-ink: #7C5E1B; --receipt-text: #5B5142; }
+
+.content .section { margin-bottom: 72px; scroll-margin-top: 84px; }
+.content .section-header { margin-bottom: 28px; padding-bottom: 18px; border-bottom: 2px solid #16283B; position: relative; }
+.content .section-header::after { content: ""; position: absolute; left: 0; bottom: -2px; width: 64px; height: 2px; background: var(--signal); }
+.content .section h2 {
+    font-family: "Space Grotesk", "PingFang SC", "Microsoft YaHei", sans-serif;
+    font-size: clamp(23px, 2.4vw, 30px);
+    font-weight: 700; letter-spacing: -0.01em; line-height: 1.35;
+    color: #16283B;
+}
+.content .section-icon { display: none; }
+
+.content p { max-width: 72ch; font-size: 16.5px; line-height: 1.85; color: #33475C; margin: 0 0 18px; }
+.content p:last-child { margin-bottom: 0; }
+.content span[data-zh] { display: inline; }
+.content span.em, .content strong { font-weight: 650; color: #16283B; }
+.content mark { background: linear-gradient(transparent 58%, rgba(245, 158, 11, .45) 58%); color: inherit; padding: 0 2px; }
+
+.content p a, .content li a, .content td a, .content h4 a, .content summary a, .content .src a, .content .callout a {
+    color: var(--signal); font-weight: 500;
+    text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px;
+}
+.content p a:hover, .content li a:hover, .content td a:hover, .content h4 a:hover, .content .src a:hover { text-decoration-thickness: 2px; }
+
+/* ---------- 卡片 ---------- */
+.content .card {
+    background: #fff; border: 1px solid #DFE8EF; border-radius: 12px;
+    padding: 26px 30px 22px; margin: 0 0 20px;
+    box-shadow: 0 1px 2px rgba(22, 40, 59, .04);
+}
+.content .card h4 {
+    font-family: "Space Grotesk", "PingFang SC", sans-serif;
+    font-size: 18.5px; font-weight: 700; line-height: 1.5;
+    color: #16283B; margin: 0 0 14px; padding-left: 16px; position: relative;
+}
+.content .card h4::before {
+    content: ""; position: absolute; left: 0; top: .42em;
+    width: 7px; height: 7px; border-radius: 2px; background: var(--signal);
+}
+.content .card p { font-size: 16px; }
+
+/* ---------- 引语卡：实抓评论原文 ---------- */
+.content .quote-card {
+    background: #F0F6F9; border: 1px solid #DCE8EF; border-left: 4px solid var(--signal);
+    border-radius: 12px; padding: 14px 20px 12px; margin: 2px 0 18px;
+}
+.content .quote-card .q { display: block; font-size: 17px; font-weight: 600; color: #16283B; line-height: 1.75; }
+.content .quote-card .src { display: block; margin-top: 8px; font-family: "Fira Code", monospace; font-size: 12px; color: #52647C; line-height: 1.9; }
+.content .quote-card .score {
+    display: inline-block; background: #16283B; color: #fff;
+    border-radius: 999px; padding: 3px 10px; font-size: 12px; margin-right: 8px;
+}
+
+/* ---------- 话术代码块 ---------- */
+.content pre.script {
+    background: #16283B; color: #DFEDF5;
+    font-family: "Fira Code", ui-monospace, Menlo, monospace;
+    font-size: 13.5px; line-height: 1.85;
+    border-radius: 12px; padding: 16px 20px; overflow-x: auto;
+    margin: 4px 0 18px; max-width: 76ch;
+}
+
+/* ---------- 引读 ---------- */
+.content p.callout {
+    background: #EEF4F8; border-left: 4px solid var(--signal);
+    border-radius: 0 10px 10px 0; padding: 14px 20px;
+    margin: 20px 0 24px; color: #22405A; max-width: 76ch;
+}
+
+/* ---------- 方向档案：默认折叠 ---------- */
+.content .dossier { background: #fff; border: 1px solid #DFE8EF; border-radius: 12px; margin: 0 0 12px; overflow: hidden;  box-shadow: 0 1px 2px rgba(22, 40, 59, .04); }
+.content .dossier summary {
+    cursor: pointer; list-style: none; display: flex; align-items: baseline; gap: 10px;
+    padding: 14px 18px; font-weight: 650; color: #16283B; font-size: 15.5px; line-height: 1.6;
+}
+.content .dossier summary::-webkit-details-marker { display: none; }
+.content .dossier summary::after { content: "+"; margin-left: auto; font-family: "Fira Code", monospace; color: #52647C; font-size: 16px; }
+.content .dossier[open] summary::after { content: "−"; }
+.content .dossier summary:hover { background: #F6FAFB; }
+.content .dossier .tagchip {
+    font-family: "Fira Code", monospace; font-size: 12px; flex: none;
+    background: var(--signal); color: #fff; border-radius: 6px; padding: 2px 8px;
+}
+.content .dossier .d-body { padding: 4px 18px 16px; border-top: 1px dashed #E4EDF2; }
+.content .dossier .d-body ul { list-style: none; padding: 0; margin: 10px 0 0; }
+.content .dossier .d-body li { position: relative; padding-left: 18px; font-size: 14.5px; line-height: 1.8; color: #33475C; margin: 8px 0; max-width: 74ch; }
+.content .dossier .d-body li::before {
+    content: ""; position: absolute; left: 2px; top: .78em;
+    width: 6px; height: 6px; border-radius: 2px; background: var(--signal); opacity: .5;
+}
+.content .dossier .d-body p { font-size: 14.5px; margin: 10px 0 0; }
+
+/* ---------- 表格：证据面板 ---------- */
+.content .table-wrap {
+    border: 1px solid #DFE8EF; border-radius: 12px; overflow-x: auto;
+    background: #fff; box-shadow: 0 1px 2px rgba(22, 40, 59, .04); margin: 4px 0 22px;
+}
+.content .data-table { width: 100%; border-collapse: collapse; min-width: 640px; }
+.content .data-table th {
+    font-family: "Space Grotesk", "PingFang SC", sans-serif;
+    font-size: 12.5px; font-weight: 600; letter-spacing: .08em;
+    color: #52647C; text-align: left; background: #F4F7FA;
+    padding: 12px 16px; border-bottom: 2px solid #DFE8EF; white-space: nowrap;
+}
+.content .data-table td {
+    font-size: 14.5px; line-height: 1.7; color: #33475C;
+    padding: 13px 16px; border-bottom: 1px solid #EDF2F7;
+    vertical-align: top; font-variant-numeric: tabular-nums;
+}
+.content .data-table tr:last-child td { border-bottom: none; }
+.content .data-table tr:nth-child(even) td { background: #FBFCFE; }
+.content .data-table td:first-child { font-weight: 600; color: #16283B; }
+.content .data-table td a { font-weight: 500; }
+
+/* 六步框架：密度列 = 数字 + 信号条 */
+#sixstep .data-table td:nth-child(5) { font-family: "Fira Code", monospace; font-weight: 600; color: #16283B; }
+#sixstep .data-table td:nth-child(5)::after {
+    content: ""; display: block; height: 4px;
+    width: calc(var(--d, 0) * .28%); max-width: 100%;
+    margin-top: 6px; border-radius: 2px;
+    background: linear-gradient(90deg, #0E7490, #0891B2);
+}
+#sixstep .data-table td:last-child { font-weight: 600; white-space: nowrap; }
+
+/* 矩阵：判决列 = 胶囊 */
+#matrix .data-table td.verdict { white-space: nowrap; }
+.content .data-table td:first-child { font-family: inherit; }
+#matrix .data-table td.verdict span {
+    display: inline-block; background: rgba(14, 116, 144, .08);
+    border: 1px solid rgba(14, 116, 144, .25); color: #0B5D73;
+    font-size: 13px; font-weight: 600; line-height: 1.5;
+    padding: 5px 12px; border-radius: 999px;
+}
+
+/* ---------- 列表 ---------- */
+.content ul.action-list { list-style: none; margin: 6px 0 4px; padding: 0; }
+.content ul.action-list li {
+    position: relative; max-width: 72ch; padding: 13px 0 13px 32px;
+    border-bottom: 1px dashed #EDF2F7;
+    color: #33475C; font-size: 15px; line-height: 1.85;
+}
+.content ul.action-list li:last-child { border-bottom: none; }
+.content ul.action-list li::before {
+    content: "▸"; position: absolute; left: 4px; top: 12px;
+    color: var(--signal); font-weight: 700;
+}
+#cases ul.action-list li::before { color: var(--danger); }
+.content ul.action-list li.first {
+    background: #F0F9F4; border: 1px solid #CDE9DA; border-left: 4px solid var(--go);
+    border-radius: 0 12px 12px 0; padding: 14px 16px 14px 40px; margin: 4px 0 14px;
+}
+.content ul.action-list li.first::before { content: "★"; left: 14px; top: 14px; color: var(--go); }
+.content ul.action-list li.first .lead-badge {
+    font-family: "Fira Code", monospace; font-size: 12px; color: #0B7A4B;
+    border: 1px solid var(--go); border-radius: 999px; padding: 2px 9px; margin-right: 8px;
+}
+
+/* ---------- 回执卡 ---------- */
+.content .receipt { background: var(--receipt-bg); border: 1px solid var(--receipt-line); border-radius: 12px; padding: 14px 18px 12px; margin: 0 0 22px; }
+.content .receipt .r-title {
+    font-family: "Space Grotesk", "PingFang SC", sans-serif; font-weight: 700;
+    font-size: 14px; color: var(--receipt-ink); letter-spacing: .04em; margin-bottom: 6px;
+}
+.content .receipt ul { list-style: none; margin: 0; padding: 0; }
+.content .receipt li { position: relative; padding-left: 16px; font-size: 14px; line-height: 1.9; color: var(--receipt-text); }
+.content .receipt li::before { content: ""; position: absolute; left: 2px; top: .85em; width: 5px; height: 5px; border-radius: 1px; background: var(--receipt-ink); opacity: .45; }
+
+/* ---------- 统计卡 ---------- */
+.content .stat-grid { margin-bottom: 26px; }
+.content .stat-value { font-family: "Space Grotesk", "Fira Code", monospace; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+.content .stat-card .stat-bar-fill { width: var(--w, 0%); background: var(--signal); min-width: 4px; }
+.content .stat-card.negative .stat-bar-fill { background: var(--danger); }
+.content .stat-card.positive .stat-bar-fill { background: var(--go); }
+.content .stat-card { border-top-color: #D7E3EC; border-radius: 12px; box-shadow: 0 1px 2px rgba(22, 40, 59, .04); }
+.content .stat-card .stat-value { color: #52647C; }
+.content .stat-card.neutral { border-top-color: #D7E3EC; }
+.content .stat-card.neutral .stat-value { color: #52647C; }
+.content .stat-card.positive { border-top-color: var(--go); }
+.content .stat-card.negative { border-top-color: var(--danger); }
+.content .stat-card.negative .stat-value { color: var(--danger); }
+.content .card:hover, .content .stat-card:hover { transform: none; box-shadow: 0 1px 2px rgba(22, 40, 59, .04); }
+.content .stat-card.positive .stat-value { color: #0E9F6E; }
+
+@media (max-width: 900px) {
+    .content p, .content ul.action-list li { font-size: 15.5px; }
+    .content .card { padding: 18px; }
+    .content .card > .route-card:last-child { margin: 16px -18px -18px; }
+    .route-head { padding: 12px 18px 10px; }
+    .route-slide { padding: 18px 18px 8px; }
+    .route-nav { padding: 10px 8px 12px; }
+    .content .card p, .content .dossier .d-body li { font-size: 15px; }
+}
+
+/* ---------- 行动路线步进卡（0→3） ---------- */
+.route-card {
+    background: #fff; border: 1px solid #DFE8EF; border-left: 4px solid var(--signal);
+    border-radius: 12px; margin: 4px 0 18px; overflow: hidden;
+    box-shadow: 0 1px 2px rgba(22, 40, 59, .04);
+}
+.content .card > .route-card:last-child {
+    margin: 22px -30px -22px; border: none; border-top: 1px solid #E4EDF2;
+    border-radius: 0; box-shadow: none; border-left: none;
+}
+.route-head { display: flex; align-items: center; padding: 14px 26px 12px; border-bottom: 1px solid #E4EDF2; background: #F8FBFD; }
+.route-title { font-family: "Space Grotesk", "PingFang SC", sans-serif; font-weight: 700; font-size: 13.5px; letter-spacing: .05em; color: #16283B; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+.route-track { display: grid; padding: 0; touch-action: pan-y; }
+.route-track.ready { transition: height .3s ease; }
+.route-slide {
+    padding: 22px 26px 10px;
+    grid-area: 1 / 1; opacity: 0; transform: translateX(calc(18px * var(--dir, 1)));
+    transition: opacity .3s ease, transform .3s ease, visibility .3s;
+    pointer-events: none; visibility: hidden;
+}
+.route-slide.is-active { opacity: 1; transform: none; pointer-events: auto; visibility: visible; }
+.route-chip {
+    display: inline-block; font-family: "Fira Code", monospace; font-size: 12px; font-weight: 600;
+    letter-spacing: .12em; color: #0B5D73; background: rgba(14, 116, 144, .07);
+    border: 1px solid rgba(14, 116, 144, .22); border-radius: 999px; padding: 3px 12px; margin-bottom: 14px;
+}
+.route-slide h5 { font-family: "Space Grotesk", "PingFang SC", sans-serif; font-size: 17px; font-weight: 700; color: #16283B; margin: 0 0 12px; line-height: 1.55; }
+.route-slide p { font-size: 15px; line-height: 1.85; color: #33475C; margin: 0 0 12px; max-width: 70ch; }
+.route-slide pre.script { margin: 2px 0 14px; font-size: 13px; border-radius: 10px; }
+.route-slide .pass, .route-slide .kill {
+    display: inline-block; font-size: 12.5px; font-weight: 500; line-height: 1.6;
+    border-radius: 999px; padding: 5px 12px; margin: 0 8px 6px 0;
+}
+.route-slide .pass { background: rgba(14, 159, 110, .10); color: #0B7A4B; border: 1px solid rgba(14, 159, 110, .28); }
+.route-slide .kill { background: rgba(180, 83, 42, .07); color: #9A4120; border: 1px solid rgba(180, 83, 42, .30); }
+.route-nav { display: flex; align-items: center; gap: 14px; padding: 12px 14px 14px; border-top: 1px solid #EDF2F7; background: #F8FBFD; }
+.route-dots { flex: 1; display: flex; gap: 10px; justify-content: center; align-items: center; }
+.route-btn {
+    appearance: none; flex: none; width: 32px; height: 32px; border-radius: 50%;
+    background: transparent; border: none; color: #8FA6B5; cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 19px; line-height: 1; padding: 0 0 2px;
+    transition: color .18s ease, background .18s ease;
+}
+.route-btn:hover { color: #0E7490; background: rgba(14, 116, 144, .08); }
+.route-btn:active { transform: scale(.92); }
+.route-prev::before { content: "\2039"; }
+.route-next::before { content: "\203A"; }
+@media (pointer: coarse) { .route-btn { width: 40px; height: 40px; font-size: 22px; } }
+.route-dot { position: relative; width: 30px; height: 16px; border-radius: 999px; border: none; background: transparent; cursor: pointer; padding: 0; }
+.route-dot::before { content: ""; position: absolute; left: 0; right: 0; top: 50%; height: 3px; margin-top: -1.5px; border-radius: 999px; background: #CBDBE4; }
+.route-dot::after { content: ""; position: absolute; left: 0; top: 50%; height: 3px; margin-top: -1.5px; border-radius: 999px; background: var(--signal); width: 0; }
+.route-dot.is-active::before { background: rgba(14, 116, 144, .30); }
+.route-dot.is-active::after { animation: routeFill 6s linear forwards; }
+.route-dot.is-paused::after { animation-play-state: paused; }
+@keyframes routeFill { from { width: 0; } to { width: 100%; } }
+@media (prefers-reduced-motion: reduce) { .route-dot.is-active::after { animation: none; width: 100%; } }
+
+/* ---------- 键盘焦点可见性 ---------- */
+.route-btn:focus-visible, .route-dot:focus-visible, .route-card:focus-visible,
+.content .dossier summary:focus-visible, .content a:focus-visible {
+    outline: 2px solid var(--signal); outline-offset: 2px;
+}
+.route-dot:focus-visible { outline-offset: 3px; }
+
+/* ---------- 无 JS 兜底：步进卡全部展开 ---------- */
+.no-js .route-track { display: block; }
+.no-js .route-slide { opacity: 1; visibility: visible; transform: none; pointer-events: auto; }
+.no-js .route-nav, .no-js .route-dots { display: none; }
+
+/* ---------- 工具类 ---------- */
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+
+/* ---------- 阅读进度条（scaleX，无重排） ---------- */
+.read-progress { position: fixed; top: 0; left: 0; height: 3px; width: 100%; transform: scaleX(var(--p, 0)); transform-origin: 0 50%; background: linear-gradient(90deg, #0E7490, #0891B2); z-index: 999; }
+
+/* ---------- 微交互打磨 ---------- */
+.content .card, .content .dossier, .route-card { transition: opacity .5s ease, transform .22s ease, box-shadow .22s ease, border-color .22s ease; }
+.content .quote-card { transition: box-shadow .2s ease; }
+.content .quote-card:hover { box-shadow: inset 3px 0 0 0 var(--signal); }
+.content .data-table td { transition: background .15s ease; }
+.content .data-table tbody tr:hover td { background: #EEF6F9; }
+.content .dossier summary { transition: background .18s ease; }
+.content .dossier summary::after { transition: transform .25s ease; }
+.content .dossier[open] summary::after { transform: rotate(180deg); }
+@supports (interpolate-size: allow-keywords) {
+    :root { interpolate-size: allow-keywords; }
+    .content .dossier::details-content { transition: height .3s ease, content-visibility .3s ease; height: 0; overflow: clip; }
+    .content .dossier[open]::details-content { height: auto; }
+}
+
+
+/* ---------- 打印 ---------- */
+@media print {
+    .read-progress, .route-nav, .route-dots, .lang-toggle { display: none !important; }
+    .reveal, .reveal-item { opacity: 1 !important; transform: none !important; }
+    .route-track { display: block; height: auto !important; }
+    .route-slide { opacity: 1 !important; visibility: visible !important; transform: none !important; pointer-events: auto; }
+    .route-card, .content .card, .content .dossier { break-inside: avoid; box-shadow: none; }
+}
+
+/* ---------- 家族色彩纠偏：hero / 侧栏 ---------- */
+.hero { background: radial-gradient(600px 220px at 18% 0%, rgba(14, 116, 144, .08), transparent 70%), linear-gradient(180deg, #EFF6F9, var(--bg)); }
+.hero h1 { font-family: "Space Grotesk", "PingFang SC", "Microsoft YaHei", sans-serif; }
+.hero-badge { color: #0E7490; border-color: rgba(14, 116, 144, .22); }
+.hero-badge .dot { background: #0E7490; box-shadow: 0 0 8px rgba(14, 116, 144, .45); }
+.sidebar-nav a.active { color: #0E7490; border-left-color: #0E7490; background: #F0F6F9; }
+
+/* ---------- 脚注 ---------- */
+.content .footnote { font-size: 13px; color: #52647C; line-height: 1.8; margin: -10px 0 16px; max-width: 72ch; }
+
+/* ---------- 打印（深色块降级 + 隐藏壳层） ---------- */
+@media print {
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .sidebar, .header { display: none !important; }
+    .content pre.script, .route-slide pre.script { background: #fff; color: #16283B; border: 1px solid #CBD5E0; }
+    .quote-card .score, .tagchip { background: #fff; color: #16283B; border: 1px solid #CBD5E0; }
+    .content .dossier::details-content { transition: none; height: auto; }
+}
