@@ -16,13 +16,14 @@ SAMPLE_HTML = """<!DOCTYPE html>
 <body>
     <header><span class="logo-text">7Kolor <span>Insights</span></span>
         <div class="lang-toggle">
-            <button class="lang-btn active" data-lang="zh">中文</button>
+            <button class="lang-btn active" data-lang="zh-CN">中文</button>
             <button class="lang-btn" data-lang="en">EN</button>
         </div>
     </header>
     <h1 data-zh="趋势分析" data-en="Trend Analysis">趋势分析</h1>
     <p data-zh="为独立开发者提供洞察" data-en="Insight for indie developers">为独立开发者提供洞察</p>
     <p data-zh="无翻译的元素" data-en="">无翻译的元素</p>
+    <li data-zh="按下 10 个你的买家真会打进 ChatGPT 的 prompt，跑一遍" data-en="Write 10 prompts your buyers would type into ChatGPT and run them"><strong data-zh="按下 10 个" data-en="Write 10 prompts">按下 10 个</strong><span data-zh="，跑一遍" data-en=", run them">，跑一遍</span></li>
 </body>
 </html>"""
 
@@ -34,11 +35,19 @@ class PickLangTest(unittest.TestCase):
         self.assertIn(">为独立开发者提供洞察<", out)
         self.assertNotIn("data-zh", out)
         self.assertNotIn("data-en", out)
+        # Child-carrying element: parent's full value must NOT render
+        # (children already carry the content — no duplication)
+        self.assertNotIn("按下 10 个你的买家真会打进", out)
 
     def test_en_selected(self):
         out = build_i18n.pick_lang(SAMPLE_HTML, "en")
         self.assertIn(">Trend Analysis<", out)
         self.assertIn(">Insight for indie developers<", out)
+        # Child-carrying element: content starts with a tag, so the parent's
+        # data-en must never render; children translate themselves.
+        self.assertIn(">Write 10 prompts</strong>", out)
+        self.assertIn(">, run them</span>", out)
+        self.assertNotIn("Write 10 prompts your buyers", out)
 
     def test_empty_en_falls_back_to_empty(self):
         out = build_i18n.pick_lang(SAMPLE_HTML, "en")
@@ -94,7 +103,7 @@ class BuildEndToEndTest(unittest.TestCase):
         self.assertIn("<title>7Kolor Insights — 2026 W99 Weekly Report</title>", en)
         self.assertIn(">趋势分析<", zh)
         self.assertIn(">Trend Analysis<", en)
-        self.assertIn('lang="zh"', zh)
+        self.assertIn('lang="zh-CN"', zh)
         self.assertIn('lang="en"', en)
 
 
