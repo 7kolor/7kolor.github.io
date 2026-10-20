@@ -69,18 +69,18 @@ def pick_lang(html: str, lang: str) -> str:
 
     def repl(m):
         zh, en, tail, prefix = m.group(1), m.group(2), m.group(3), m.group(4)
-        picked = zh if lang == "zh" else en
-        # fall back to the other language when the chosen one is empty,
-        # so elements with an empty translation never lose their content
-        picked = picked or (en if lang == "zh" else zh)
         rest = html[m.end():]
-        if rest.startswith("<a "):
-            # Default text carries the linked content (e.g. quote-box
-            # paragraphs with clickable anchors). The anchors already hold
-            # the readable link text, so keep the default text as-is and
-            # only strip the data-* attributes — appending `picked` would
-            # duplicate the plain text next to the linked text.
+        nxt = rest.lstrip()
+        # Child-carrying element: the plain text after ">" (if any) is
+        # only the first slice of the sentence; the remaining slices are
+        # carried by children that each hold their own data-zh /
+        # data-en. Keep the prefix as-is and strip the data-* attrs —
+        # the children translate themselves.
+        if nxt[:1] == "<" and nxt[1:2] != "/":
             return tail + ">" + prefix
+        # Plain-text element: replace with the chosen language value.
+        picked = zh if lang == "zh" else en
+        picked = picked or (en if lang == "zh" else zh)
         return tail + ">" + picked
 
     return pat.sub(repl, html)
@@ -129,7 +129,7 @@ def build(item_dir: Path) -> None:
         out = src
         out = pick_lang(out, lang)
         out = retarget_toggle(out, lang, base)
-        out = re.sub(r'<html lang="zh-CN"', f'<html lang="{lang}"', out, count=1)
+        out = re.sub(r'<html lang="zh-CN"', f'<html lang="{"zh-CN" if lang == "zh" else lang}"', out, count=1)
         out = re.sub(r"<title>.*?</title>", f"<title>{tt[lang]}</title>", out, count=1)
         if desc.get(lang):
             out = re.sub(r'<meta name="description" content="[^"]*">',

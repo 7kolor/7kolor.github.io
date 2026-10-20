@@ -18,3 +18,7 @@ __pycache__/
 
 # DSH weekly-report pipeline process artifacts (not part of this repo)
 /dsh/
+
+# 本地调研资料（第三方内容，不入公开仓库）
+/research/
+
