@@ -297,43 +297,71 @@ def build_feed(items) -> str:
 """
 
 
-def _tracked_files(pattern: str):
-    """Tracked files matching a git pathspec — exactly what GitHub Pages deploys."""
+# Never publishable as sitemap entries, even if tracked or
+# freshly created: build inputs, test fixtures, local junk dirs.
+# (gitignored dirs are already excluded by --exclude-standard; this is
+# the second line of defence for dirs that are not gitignored yet.)
+_SKIP_DIR_PREFIXES = ("templates/", "tests/", "node_modules/", "_site/",
+                      "drafts/", "research/", "docs/", "PLUMB/", "wsh37_sh7/")
+
+
+def _is_publishable_rel(rel: str) -> bool:
+    if rel.startswith(".") or "/." in rel:
+        return False
+    if rel.startswith(_SKIP_DIR_PREFIXES):
+        return False
+    if Path(rel).name.startswith("tmp_") or Path(rel).name == "404.html":
+        return False
+    return True
+
+
+def _all_publishable_html(base: Path):
+    """All publishable *.html under base: tracked + untracked-but-not-ignored
+    (git ls-files --cached --others --exclude-standard), so a brand-new page
+    is discoverable BEFORE its first commit. Falls back to an rglob walk when
+    git is unavailable (e.g. building from a git-archive export)."""
     import subprocess
-    out = subprocess.run(
-        ["git", "ls-files", pattern],
-        cwd=ROOT, capture_output=True, text=True, check=True,
-    )
-    return [line for line in out.stdout.splitlines() if line]
+    try:
+        out = subprocess.run(
+            ["git", "ls-files", "-z",
+             "--cached", "--others", "--exclude-standard", "--", "*.html"],
+            cwd=base, capture_output=True, text=True, check=True,
+        )
+        rels = [r for r in out.stdout.split("\0") if r]
+    except Exception:
+        rels = sorted(p.relative_to(base).as_posix()
+                      for p in base.rglob("*.html"))
+    return [r for r in rels if _is_publishable_rel(r)]
 
 
 def _is_redirect_alias(path) -> bool:
     """Pages that only <meta http-equiv="refresh"> to a canonical URL
-    (e.g. weekly/w34/ -> /weekly/2026-W34/) must not appear in the sitemap."""
+    (e.g. weekly/w34/ -> /weekly/2026-W34/) must not appear in the sitemap.
+    Matches a real refresh directive only — an X-UA-Compatible meta plus the
+    word 'refresh' in prose must NOT exclude a page."""
     try:
         head = path.read_text(encoding="utf-8", errors="ignore")[:4096]
     except OSError:
         return False
-    return "http-equiv" in head and "refresh" in head
+    return re.search(r"<meta[^>]+http-equiv\s*=\s*['\"]?refresh", head, re.I) is not None
 
 
-def discover_static_pages():
-    """Sitemap page list, derived from TRACKED files (git ls-files) — never
-    from the local working tree, so untracked junk (_site/, drafts/, test
-    fixtures, ...) can never leak into the sitemap.
+def discover_static_pages(base: Path = ROOT):
+    """Sitemap page list, derived from publishable *.html files (see
+    _all_publishable_html) — same content the deploy will serve, whether the
+    file is tracked yet or not.
 
-    - every tracked index.html becomes its directory URL (root index -> "/"),
-      except redirect aliases
-    - tracked root-level pages like /about.html are included
-    - nested non-index pages (report-zh.html / report-en.html single-language
-      pages, templates/partials) are included here as file URLs
+    - every index.html becomes its directory URL (root index -> "/"), except
+      redirect aliases
+    - root-level pages like /about.html are included
+    - single-language report-zh.html / report-en.html are included as file URLs
 
-    Anything with a tracked index.html — a new step page, a new issue, a new
+    Anything with an index.html — a new step page, a new issue, a new
     top-level section — is discovered automatically. No manual list.
     """
     pages = set()
-    for rel in _tracked_files("*.html"):
-        path = ROOT / rel
+    for rel in _all_publishable_html(base):
+        path = base / rel
         parent = Path(rel).parent
         if Path(rel).name == "index.html":
             if _is_redirect_alias(path):
@@ -343,20 +371,19 @@ def discover_static_pages():
         elif str(parent) == ".":
             pages.add("/" + Path(rel).name)  # /about.html etc.
         elif Path(rel).name in ("report-zh.html", "report-en.html"):
-            # single-language report pages (templates/partials etc. stay out)
             pages.add("/" + Path(rel).parent.as_posix().strip("/") + "/" + Path(rel).name)
     return sorted(pages)
 
 
-def build_sitemap(items) -> str:
+def build_sitemap(items, base: Path = ROOT) -> str:
     """Full sitemap.xml body. Content items (bilingual + single-language
-    pages, when present on disk) get <lastmod> from meta date."""
-    urls = {SITE + p: None for p in discover_static_pages()}
+    pages, when present on disk under base) get <lastmod> from meta date."""
+    urls = {SITE + p: None for p in discover_static_pages(base)}
     for group in items.values():
         for m in group:
             urls[SITE + m["url"]] = m.get("date")
             for lang in ("report-zh.html", "report-en.html"):
-                if (ROOT / m["url"].lstrip("/") / lang).is_file():
+                if (base / m["url"].lstrip("/") / lang).is_file():
                     urls[SITE + m["url"] + lang] = m.get("date")
     body = "\n".join(
         f"  <url>\n    <loc>{esc(u)}</loc>"
@@ -451,19 +478,30 @@ def main():
     (ROOT / "feed.xml").write_text(build_feed(items), encoding="utf-8")
     print("updated feed.xml")
 
-    # --- sitemap ---
+    # --- sitemap + llms.txt ---
+    build_agent_files(items)
+
+    # --- shared chrome (header / footer / latest-weekly CTA) ---
+    sync_chrome(items)
+
+
+def build_agent_files(items) -> None:
+    """Regenerate sitemap.xml and the llms.txt report list.
+
+    Called once from main() and AGAIN by publish.py after the single-language
+    pages are built, so a brand-new content dir gets its report-zh/en URLs in
+    the sitemap on the very first publish (build_sitemap only lists
+    single-language pages that already exist on disk).
+    """
     (ROOT / "sitemap.xml").write_text(build_sitemap(items), encoding="utf-8")
     print("updated sitemap.xml")
 
-    # --- llms.txt report list (AUTO block; the rest of llms.txt is hand-authored) ---
+    # AUTO block only; the rest of llms.txt is hand-authored
     llms_path = ROOT / "llms.txt"
     llms = llms_path.read_text(encoding="utf-8")
     llms = replace_auto(llms, "llms-reports", build_llms_reports(items), indent="")
     llms_path.write_text(llms, encoding="utf-8")
     print("updated llms.txt")
-
-    # --- shared chrome (header / footer / latest-weekly CTA) ---
-    sync_chrome(items)
 
 
 if __name__ == "__main__":

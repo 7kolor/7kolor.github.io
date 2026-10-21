@@ -10,6 +10,8 @@ Guarded contracts:
   code step — documented in agents.md, not implied here)
 - meta fields are sanitized before entering llms.txt Markdown
 """
+import subprocess
+import tempfile
 import unittest
 import xml.etree.ElementTree as ET
 from pathlib import Path
@@ -38,8 +40,8 @@ def make_meta(**over):
     return m
 
 
-def sitemap_locs(items):
-    tree = ET.fromstring(build_site.build_sitemap(items))
+def sitemap_locs(items, base=ROOT):
+    tree = ET.fromstring(build_site.build_sitemap(items, base=base))
     return {loc.text: url for loc, url in
             ((u.find("sm:loc", NS), u) for u in tree.findall("sm:url", NS))}
 
@@ -87,10 +89,9 @@ class SitemapTest(unittest.TestCase):
         self.assertEqual(committed, build_site.build_sitemap(build_site.load_items()))
 
     def test_untracked_junk_cannot_leak_in(self):
-        # discover_static_pages reads the git index, not the working tree:
-        # untracked dirs/files must never appear in the sitemap
         locs = sitemap_locs(build_site.load_items())
-        for bad in ("/_site/", "/drafts/", "/node_modules/"):
+        for bad in ("/_site/", "/drafts/", "/node_modules/", "/404.html",
+                    "/tests/", "/templates/"):
             self.assertFalse(any(bad in u for u in locs), bad)
 
 
@@ -138,6 +139,81 @@ class LlmsTest(unittest.TestCase):
         robots = (ROOT / "robots.txt").read_text(encoding="utf-8")
         self.assertIn("Allow: /", robots)
         self.assertIn("Sitemap: " + build_site.SITE + "/sitemap.xml", robots)
+
+
+class TempSiteTest(unittest.TestCase):
+    """Real end-to-end tests in a scratch git repo: these exercise the actual
+    discovery path (git ls-files --cached --others) instead of synthetic
+    dicts, covering the first-publish scenarios that synthetic tests can't."""
+
+    def setUp(self):
+        self._tmp = tempfile.TemporaryDirectory()
+        self.base = Path(self._tmp.name)
+        subprocess.run(["git", "init", "-q"], cwd=self.base, check=True)
+
+    def tearDown(self):
+        self._tmp.cleanup()
+
+    def _write(self, rel, content="<html><body>hi</body></html>"):
+        p = self.base / rel
+        p.parent.mkdir(parents=True, exist_ok=True)
+        p.write_text(content, encoding="utf-8")
+        return p
+
+    def test_new_pages_discovered_before_first_commit(self):
+        # the documented flow is publish -> git add -A: at publish time a new
+        # page is UNTRACKED — it must still be discovered
+        self._write("index.html")
+        self._write("about.html")
+        self._write("steps/step-7/index.html")
+        self._write("weekly/2026-W99/index.html")
+        # non-ASCII path (core.quotePath would octal-escape it)
+        self._write("weekly/中文测试/index.html")
+        # redirect alias
+        self._write("weekly/w99/index.html",
+                    '<meta http-equiv="refresh" content="0; url=/weekly/2026-W99/">')
+        # never publishable even when present
+        self._write("404.html")
+        self._write("tests/fixtures/site/index.html")
+        self._write("_site/index.html")
+        self._write("templates/partials/header.html")
+
+        pages = build_site.discover_static_pages(self.base)
+        for good in ("/", "/about.html", "/steps/step-7/",
+                     "/weekly/2026-W99/", "/weekly/中文测试/"):
+            self.assertIn(good, pages)
+        for bad in ("/weekly/w99/", "/404.html",
+                    "/tests/fixtures/site/", "/_site/",
+                    "/templates/partials/header.html"):
+            self.assertNotIn(bad, pages)
+
+    def test_x_ua_compatible_is_not_a_redirect(self):
+        # 'refresh' in prose + X-UA-Compatible meta must NOT exclude the page
+        page = ('<head><meta http-equiv="X-UA-Compatible"'
+                ' content="IE=edge"></head>'
+                "<body>please refresh the page</body>")
+        self._write("docs-live/page/index.html", page)
+        self.assertIn("/docs-live/page/",
+                      build_site.discover_static_pages(self.base))
+
+    def test_first_publish_single_language_refresh(self):
+        # publish.py order: build_site -> i18n -> build_agent_files again.
+        # A brand-new content dir has no single-language pages at step 1;
+        # the refresh must pick them up (build_sitemap lists them only
+        # when they exist on disk).
+        self._write("weekly/2026-W99/index.html")
+        items = {"weekly": [make_meta()]}
+        locs = sitemap_locs(items, base=self.base)
+        self.assertIn(build_site.SITE + "/weekly/2026-W99/", locs)
+        self.assertNotIn(build_site.SITE + "/weekly/2026-W99/report-zh.html", locs)
+
+        # i18n step "builds" the single-language pages...
+        self._write("weekly/2026-W99/report-zh.html")
+        self._write("weekly/2026-W99/report-en.html")
+        # ...publish.py step 3 refreshes agent files
+        locs = sitemap_locs(items, base=self.base)
+        self.assertIn(build_site.SITE + "/weekly/2026-W99/report-zh.html", locs)
+        self.assertIn(build_site.SITE + "/weekly/2026-W99/report-en.html", locs)
 
 
 if __name__ == "__main__":

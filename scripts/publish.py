@@ -114,6 +114,9 @@ def main():
     # 2) single-language pages (translate AFTER chrome sync)
     for d in dirs:
         build_i18n.build(d)
+    # 3) refresh sitemap / llms.txt now that single-language pages exist,
+    #    so a brand-new content dir is complete on its very first publish
+    build_site.build_agent_files(build_site.load_items())
     return 0
 
 
