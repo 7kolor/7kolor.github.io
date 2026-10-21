@@ -12,3 +12,26 @@ jobs:
         env:
           SANITIZE_RULES_B64: ${{ secrets.SANITIZE_RULES_B64 }}
         run: python3 scripts/check_sanitize.py --all --history
+
+  # 合并门禁：所有 push / PR 都必须通过。配合仓库 Settings → Branches
+  # 的 "Require status checks" 启用后，不过关无法合并进 main。
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Unit tests
+        run: python3 -m unittest discover -s tests -v
+
+      - name: Validate meta.json
+        run: python3 scripts/publish.py --check
+
+      # 产物新鲜度：重新构建后工作区必须完全干净（含 untracked）。
+      # 这条保证 sitemap.xml / llms.txt / feed.xml / 单语页与源内容
+      # 永远一致 —— 发新周报后忘了跑 publish、或忘了 add 新生成的
+      # 单语页，都会直接红在这里（git diff 不含 untracked，所以用
+      # git status --porcelain）。
+      - name: Generated files must be up to date
+        run: |
+          python3 scripts/publish.py
+          test -z "$(git status --porcelain)" || { git status --short; exit 1; }

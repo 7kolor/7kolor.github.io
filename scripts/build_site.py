@@ -7,6 +7,8 @@ cases/, analysis/) for */meta.json, then regenerates:
   - the auto blocks in index.html        (report cards per module)
   - the auto block in weekly/index.html  (archive list)
   - feed.xml                             (RSS items)
+  - sitemap.xml                          (full site URL map, auto-discovered)
+  - the AUTO:llms-reports block in llms.txt (agent-facing report list)
 
 Adding a new week / report:
   1. create  weekly/2026-W35/  with index.html + meta.json
@@ -142,14 +144,14 @@ def archive_item(m) -> str:
             </li>'''
 
 
-def replace_auto(html: str, name: str, body: str) -> str:
+def replace_auto(html: str, name: str, body: str, indent: str = "            ") -> str:
     pat = re.compile(
         r"(<!-- AUTO:" + re.escape(name) + r":begin -->).*?(<!-- AUTO:" + re.escape(name) + r":end -->)",
         re.S,
     )
     if not pat.search(html):
         raise SystemExit(f"ERROR: AUTO block '{name}' not found")
-    return pat.sub(lambda m: m.group(1) + "\n" + body + "\n            " + m.group(2), html)
+    return pat.sub(lambda m: m.group(1) + "\n" + body + "\n" + indent + m.group(2), html)
 
 
 PARTIALS = ROOT / "templates" / "partials"
@@ -295,6 +297,142 @@ def build_feed(items) -> str:
 """
 
 
+# Never publishable as sitemap entries, even if tracked or
+# freshly created: build inputs, test fixtures, local junk dirs.
+# (gitignored dirs are already excluded by --exclude-standard; this is
+# the second line of defence for dirs that are not gitignored yet.)
+_SKIP_DIR_PREFIXES = ("templates/", "tests/", "node_modules/", "_site/",
+                      "drafts/", "research/", "docs/", "PLUMB/", "wsh37_sh7/")
+
+
+def _is_publishable_rel(rel: str) -> bool:
+    if rel.startswith(".") or "/." in rel:
+        return False
+    if rel.startswith(_SKIP_DIR_PREFIXES):
+        return False
+    if Path(rel).name.startswith("tmp_") or Path(rel).name == "404.html":
+        return False
+    return True
+
+
+def _all_publishable_html(base: Path):
+    """All publishable *.html under base: tracked + untracked-but-not-ignored
+    (git ls-files --cached --others --exclude-standard), so a brand-new page
+    is discoverable BEFORE its first commit. Falls back to an rglob walk when
+    git is unavailable (e.g. building from a git-archive export)."""
+    import subprocess
+    try:
+        out = subprocess.run(
+            ["git", "ls-files", "-z",
+             "--cached", "--others", "--exclude-standard", "--", "*.html"],
+            cwd=base, capture_output=True, text=True, check=True,
+        )
+        rels = [r for r in out.stdout.split("\0") if r]
+    except Exception:
+        rels = sorted(p.relative_to(base).as_posix()
+                      for p in base.rglob("*.html"))
+    return [r for r in rels if _is_publishable_rel(r)]
+
+
+def _is_redirect_alias(path) -> bool:
+    """Pages that only <meta http-equiv="refresh"> to a canonical URL
+    (e.g. weekly/w34/ -> /weekly/2026-W34/) must not appear in the sitemap.
+    Matches a real refresh directive only — an X-UA-Compatible meta plus the
+    word 'refresh' in prose must NOT exclude a page."""
+    try:
+        head = path.read_text(encoding="utf-8", errors="ignore")[:4096]
+    except OSError:
+        return False
+    return re.search(r"<meta[^>]+http-equiv\s*=\s*['\"]?refresh", head, re.I) is not None
+
+
+def discover_static_pages(base: Path = ROOT):
+    """Sitemap page list, derived from publishable *.html files (see
+    _all_publishable_html) — same content the deploy will serve, whether the
+    file is tracked yet or not.
+
+    - every index.html becomes its directory URL (root index -> "/"), except
+      redirect aliases
+    - root-level pages like /about.html are included
+    - single-language report-zh.html / report-en.html are included as file URLs
+
+    Anything with an index.html — a new step page, a new issue, a new
+    top-level section — is discovered automatically. No manual list.
+    """
+    pages = set()
+    for rel in _all_publishable_html(base):
+        path = base / rel
+        parent = Path(rel).parent
+        if Path(rel).name == "index.html":
+            if _is_redirect_alias(path):
+                continue
+            url = "/" if str(parent) == "." else "/" + parent.as_posix().strip("/") + "/"
+            pages.add(url)
+        elif str(parent) == ".":
+            pages.add("/" + Path(rel).name)  # /about.html etc.
+        elif Path(rel).name in ("report-zh.html", "report-en.html"):
+            pages.add("/" + Path(rel).parent.as_posix().strip("/") + "/" + Path(rel).name)
+    return sorted(pages)
+
+
+def build_sitemap(items, base: Path = ROOT) -> str:
+    """Full sitemap.xml body. Content items (bilingual + single-language
+    pages, when present on disk under base) get <lastmod> from meta date."""
+    urls = {SITE + p: None for p in discover_static_pages(base)}
+    for group in items.values():
+        for m in group:
+            urls[SITE + m["url"]] = m.get("date")
+            for lang in ("report-zh.html", "report-en.html"):
+                if (base / m["url"].lstrip("/") / lang).is_file():
+                    urls[SITE + m["url"] + lang] = m.get("date")
+    body = "\n".join(
+        f"  <url>\n    <loc>{esc(u)}</loc>"
+        + (f"\n    <lastmod>{d}</lastmod>" if d else "")
+        + "\n  </url>"
+        for u, d in sorted(urls.items())
+    )
+    return (
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+        f"{body}\n</urlset>\n"
+    )
+
+
+def _md_safe(s) -> str:
+    """Make a free-form meta field safe for inline Markdown (llms.txt):
+    collapse to one line, strip HTML comments (incl. injected AUTO
+    markers), and escape brackets/parens so a stray ](... can't break
+    the list link or forge block boundaries."""
+    s = re.sub(r"<!--.*?-->", "", s or "", flags=re.S)
+    s = re.sub(r"\s+", " ", s).strip()
+    return re.sub(r"([\[\]()])", r"\\\1", s)
+
+
+def build_llms_reports(items) -> str:
+    """Markdown report list for the AUTO:llms-reports block in llms.txt.
+
+    Iterates MODULES, so a registered content kind starts appearing here
+    as soon as it has any meta.json. (Registering a brand-new kind itself
+    is a deliberate step — see agents.md.)
+    """
+    chunks = []
+    for kind, (_folder, title_zh, title_en, _empty) in MODULES.items():
+        group = items.get(kind) or []
+        if not group:
+            continue
+        lines = []
+        for m in group:
+            title = _md_safe(m.get("title_zh"))
+            label = (m["id"] + " " + title).strip()
+            desc = _md_safe(m.get("desc_zh"))
+            line = f"- [{label}]({SITE}{m['url']})"
+            if desc:
+                line += f" — {desc}"
+            lines.append(line)
+        chunks.append(f"### {title_zh} / {title_en}\n" + "\n".join(lines))
+    return "\n\n".join(chunks)
+
+
 def main():
     items = load_items()
 
@@ -340,8 +478,30 @@ def main():
     (ROOT / "feed.xml").write_text(build_feed(items), encoding="utf-8")
     print("updated feed.xml")
 
+    # --- sitemap + llms.txt ---
+    build_agent_files(items)
+
     # --- shared chrome (header / footer / latest-weekly CTA) ---
     sync_chrome(items)
+
+
+def build_agent_files(items) -> None:
+    """Regenerate sitemap.xml and the llms.txt report list.
+
+    Called once from main() and AGAIN by publish.py after the single-language
+    pages are built, so a brand-new content dir gets its report-zh/en URLs in
+    the sitemap on the very first publish (build_sitemap only lists
+    single-language pages that already exist on disk).
+    """
+    (ROOT / "sitemap.xml").write_text(build_sitemap(items), encoding="utf-8")
+    print("updated sitemap.xml")
+
+    # AUTO block only; the rest of llms.txt is hand-authored
+    llms_path = ROOT / "llms.txt"
+    llms = llms_path.read_text(encoding="utf-8")
+    llms = replace_auto(llms, "llms-reports", build_llms_reports(items), indent="")
+    llms_path.write_text(llms, encoding="utf-8")
+    print("updated llms.txt")
 
 
 if __name__ == "__main__":

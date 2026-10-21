@@ -9,8 +9,9 @@
 - **前端**: 纯 HTML/CSS/JS，无框架依赖
 - **构建**: Python 3 标准库（零外部依赖）
 - **部署**: GitHub Pages + GitHub Actions
-- **测试**: unittest（18 个测试用例）
-- **CI**: guard（安全门禁）+ publish（自动发布）
+- **测试**: unittest（39 个测试用例）
+- **CI**: guard（安全门禁 + 测试/产物新鲜度门禁）+ publish（自动发布）
+- **本地钩子**: pre-commit（身份校验 + staged 敏感信息扫描）+ pre-push（全量测试 + meta 校验 + 全量敏感信息扫描）。钩子在机器级共享目录（`core.hooksPath` 指向 7kolor 工作区 `.githooks/`），不入本仓库；新机器需手动放置或软链
 
 ---
 
@@ -20,6 +21,9 @@
 .
 ├── index.html               # 首页（英雄区 + 数据资产 + 情报卡片）
 ├── about.html               # 关于页
+├── llms.txt                 # 给阅读型 agent 的站点导览（报告列表为 AUTO 块，构建生成）
+├── robots.txt               # 全放行 + 指向 sitemap
+├── sitemap.xml              # 全站 URL 地图（构建生成；含单语页，重定向别名除外）
 ├── weekly/                  # 每周情报内容
 │   ├── index.html           # 周报归档页
 │   └── 2026-W34/            # 一期周报
@@ -43,7 +47,7 @@
 |------|------|---------|
 | `scripts/publish.py` | 一键发布：校验 meta.json → 生成单语页 → 更新首页/归档/feed | CI 或本地发布 |
 | `scripts/build_i18n.py` | 生成单语页 report-zh/en | 双语内容分离 |
-| `scripts/build_site.py` | 更新首页卡片、归档列表、feed.xml，并同步全站页眉/页脚/最新周报 CTA（AUTO:header / AUTO:footer / AUTO:latest-cta） | 只动 AUTO 块，不碰手写内容 |
+| `scripts/build_site.py` | 更新首页卡片、归档列表、feed.xml、sitemap.xml、llms.txt 报告列表，并同步全站页眉/页脚/最新周报 CTA | 只动 AUTO 块，不碰手写内容；sitemap 基于 git ls-files（跟踪 + 未跟踪未忽略）发现页面并排除重定向别名/404/tests/templates；llms 遍历已注册 MODULES：新增一期内容零登记，新增内容类型需按下方步骤注册。**构建需要 git**（git-archive 导出无 .git 时回退为目录遍历） |
 | `scripts/check_sanitize.py` | 安全门禁 | 检查历史/工作区敏感信息 |
 
 ---
@@ -60,11 +64,23 @@ rm weekly/2026-W35/meta.json
 # 2. 编辑正文（双语，data-zh / data-en 属性）与 meta.json
 #    详见 templates/weekly-report.md
 
-# 3. push —— CI 自动构建发布
-git add weekly/2026-W35
+# 3. 本地构建（生成归档/feed/sitemap/llms 更新），测试后 push
+python3 scripts/publish.py
+python3 -m unittest discover -s tests
+git add -A
 git commit -m "feat: 2026 W35 周报"
-git push
+git push   # pre-push 钩子跑全量门禁；CI guard 再挡一次，不过关无法合并
 ```
+
+> 忘了跑 `publish.py` 就 push：CI guard 的 "Generated files must be up to date" 会重新构建并
+> 检查工作区（含 untracked）是否干净，产物过期或漏 add 新页都会红。注意 guard 与 publish 是
+> 两个独立触发的 workflow，guard 红不会阻止 publish —— 但 stale 产物上线后下次任一内容 push
+> 会被门禁拦住，所以应在 guard 变绿后再合并/推送。
+>
+> **新增内容类型（kind）注册步骤**：① `build_site.py` 的 MODULES + KIND_LABEL ② `publish.py`
+> 的 REQUIRED_BY_KIND ③ `build_i18n.py` 的 CONTENT_ROOTS ④ 首页预留 `<!-- AUTO:cards-<kind> -->` 块。
+> 注册后该类型的每期内容对 sitemap / llms.txt / feed / 归档全部自动生效，无需再改代码。
+> 新增一期内容（已有类型）则什么都不用登记。
 
 ### 手动构建（本地预览）
 
@@ -103,14 +119,14 @@ python3 -m http.server 4000           # 本地预览
 | `insights` | 行业洞察 |
 | `cases` | 成功案例 |
 
-新内容类型只需把目录建在对应根文件夹下，再在首页预留对应的 `<!-- AUTO:cards-<kind> -->` 块。
+新内容类型需完成 4 步注册（见「发布流程」上方的注册步骤清单）；已有类型新增一期只需建目录 + meta.json + 正文。
 
 ---
 
 ## 开发命令
 
 ```bash
-# 运行全部测试（18 个）
+# 运行全部测试（39 个）
 python3 -m unittest discover -s tests -v
 
 # 本地预览
