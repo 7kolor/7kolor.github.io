@@ -26,10 +26,12 @@ jobs:
       - name: Validate meta.json
         run: python3 scripts/publish.py --check
 
-      # 产物新鲜度：重新构建后不允许有任何 diff。
+      # 产物新鲜度：重新构建后工作区必须完全干净（含 untracked）。
       # 这条保证 sitemap.xml / llms.txt / feed.xml / 单语页与源内容
-      # 永远一致 —— 发新周报后忘了跑 publish 会直接红在这里。
+      # 永远一致 —— 发新周报后忘了跑 publish、或忘了 add 新生成的
+      # 单语页，都会直接红在这里（git diff 不含 untracked，所以用
+      # git status --porcelain）。
       - name: Generated files must be up to date
         run: |
           python3 scripts/publish.py
-          git diff --exit-code
+          test -z "$(git status --porcelain)" || { git status --short; exit 1; }

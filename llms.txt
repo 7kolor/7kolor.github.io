@@ -11,7 +11,7 @@
 - 最新一期见[首页](https://7kolor.github.io/)顶部卡片；全部历史见[周报归档](https://7kolor.github.io/weekly/)。
 - 每篇报告正文页默认中文、可切换英文；同时提供单语版本，URL 约定：内容页为 `/{kind}/{id}/`，单语版为 `/{kind}/{id}/report-zh.html` 与 `/{kind}/{id}/report-en.html`。
 - 全文 RSS（含完整正文）：[feed.xml](https://7kolor.github.io/feed.xml) — 抓取这一个文件即可拿到全部报告正文，无需爬 HTML。
-- 机器索引与站点地图：[reports.json](https://7kolor.github.io/reports.json)（筹备中）、[sitemap.xml](https://7kolor.github.io/sitemap.xml)。
+- 站点地图：[sitemap.xml](https://7kolor.github.io/sitemap.xml)；机器索引 reports.json 筹备中。
 
 ## 更新节奏 / Cadence
 
@@ -25,8 +25,8 @@
 - [2026-W40 三场信任崩塌，钱在观望：帮决定、帮搬走、帮验证](https://7kolor.github.io/weekly/2026-W40/) — 22,033 条讨论：雇主、订阅商、卖家三场信任崩塌同周发生——主推互信报价单；新增上期判断回执栏。
 - [2026-W39 买家还在观望，动手的人先醒了：帮人敢下单的三个方向](https://7kolor.github.io/weekly/2026-W39/) — 25,785 条讨论：晒单密度 +15% 是唯一超阈值异动，掏钱更谨慎——主推报价基准数据站，第 0 步只要 2 小时。
 - [2026-W38 需求还在，买家在观望：八大方向的需求×供给对照](https://7kolor.github.io/weekly/2026-W38/) — 25,200 条开发者讨论（数据已收盘）：① 家庭维修自诊是全年最大真空，供给全是玩具规模；② 记账 993 个产品几乎全哑火，单环节幸存者活得很好；③ AI agent 供给爆炸遇上买方疲劳——PH 票数是同行鼓掌，Reddit 评论区才是用户表情。
-- [2026-W37 非工程师的真实抱怨，是更大的金矿](https://7kolor.github.io/weekly/2026-W37/) — 22,946 条开发者讨论（含 09-19 完整）：① 会计/护士/小房东等非工程师的重复流程痛是最大机会面；② 系统运维(7:1)、创业者(6:1)开发者工具几乎没人做；③ 职场高赞是「反辞职自保」实用主义。
+- [2026-W37 非工程师的真实抱怨，是更大的金矿](https://7kolor.github.io/weekly/2026-W37/) — 22,946 条开发者讨论（含 09-19 完整）：① 会计/护士/小房东等非工程师的重复流程痛是最大机会面；② 系统运维\(7:1\)、创业者\(6:1\)开发者工具几乎没人做；③ 职场高赞是「反辞职自保」实用主义。
 - [2026-W36 AI 替代焦虑遇上裁员潮反转：双信号之下的职业保障窗口](https://7kolor.github.io/weekly/2026-W36/) — 5 源全量 110,383 条去重打标：① 55% 高管后悔 AI 裁员、Visa 反向裁掉 $500K 高管——AI 裁员潮出现对冲；② $70/小时真人 AI 质检服务，付费需求成型；③ 超大规模厂商预订 2027 全球 50% RAM 供应，自托管/AI 硬件成本上行。
 - [2026-W35 AI Agent 基础设施产品化与 AI 治理新赛道](https://7kolor.github.io/weekly/2026-W35/) — 大模型周：GPT-6-Astra / Fable 5.1 / Gemini 3.8 Flash 同周发布，AI 创作交付层、AI 治理质检与端侧自托管成为被数据验证的三条机会赛道。
 - [2026-W34 AI 编程可信度危机与定价获客](https://7kolor.github.io/weekly/2026-W34/) — AI 编程从「万能」到「不可靠」的共识正在形成；取消免费试用+翻倍定价 23 天做到 $1,600 MRR；合规成本上升为隐性威胁。
-            <!-- AUTO:llms-reports:end -->
+<!-- AUTO:llms-reports:end -->

@@ -11,6 +11,8 @@ on:
       - 'insights/**'
       - 'cases/**'
       - 'scripts/**'
+      - 'templates/**'
+      - 'assets/**'
       - '**/meta.json'
       - '.github/workflows/*.yml'
 

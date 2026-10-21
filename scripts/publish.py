@@ -67,11 +67,25 @@ def all_content_dirs():
     return build_i18n.discover_content_dirs()
 
 
+def all_meta_paths():
+    """Every */meta.json under a content root — even when the item dir has
+    no index.html yet (discover_content_dirs would silently skip those and
+    we'd publish sitemap/feed links to a 404 page)."""
+    paths = []
+    for root in build_i18n.CONTENT_ROOTS:
+        base = ROOT / root
+        if base.is_dir():
+            paths += sorted(base.glob("*/meta.json"))
+    return paths
+
+
 def run_checks():
     dirs = all_content_dirs()
     problems = []
-    for d in dirs:
-        problems.extend(validate_meta(d / "meta.json"))
+    for meta_path in all_meta_paths():
+        problems.extend(validate_meta(meta_path))
+        if not (meta_path.parent / "index.html").is_file():
+            problems.append(f"{meta_path.parent}: 有 meta.json 但缺少 index.html（会生成死链）")
     return dirs, problems
 
 

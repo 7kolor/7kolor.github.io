@@ -9,7 +9,7 @@
 - **前端**: 纯 HTML/CSS/JS，无框架依赖
 - **构建**: Python 3 标准库（零外部依赖）
 - **部署**: GitHub Pages + GitHub Actions
-- **测试**: unittest（31 个测试用例）
+- **测试**: unittest（36 个测试用例）
 - **CI**: guard（安全门禁 + 测试/产物新鲜度门禁）+ publish（自动发布）
 - **本地钩子**: pre-commit（身份校验 + staged 敏感信息扫描）+ pre-push（全量测试 + meta 校验 + 全量敏感信息扫描）
 
@@ -23,7 +23,7 @@
 ├── about.html               # 关于页
 ├── llms.txt                 # 给阅读型 agent 的站点导览（报告列表为 AUTO 块，构建生成）
 ├── robots.txt               # 全放行 + 指向 sitemap
-├── sitemap.xml              # 全站 URL 地图（构建生成，自动发现所有 index.html）
+├── sitemap.xml              # 全站 URL 地图（构建生成，基于 git 跟踪文件，重定向别名除外）
 ├── weekly/                  # 每周情报内容
 │   ├── index.html           # 周报归档页
 │   └── 2026-W34/            # 一期周报
@@ -47,7 +47,7 @@
 |------|------|---------|
 | `scripts/publish.py` | 一键发布：校验 meta.json → 生成单语页 → 更新首页/归档/feed | CI 或本地发布 |
 | `scripts/build_i18n.py` | 生成单语页 report-zh/en | 双语内容分离 |
-| `scripts/build_site.py` | 更新首页卡片、归档列表、feed.xml、sitemap.xml、llms.txt 报告列表，并同步全站页眉/页脚/最新周报 CTA | 只动 AUTO 块，不碰手写内容；sitemap 自动发现全站 index.html，新类型/新页面无需手工登记 |
+| `scripts/build_site.py` | 更新首页卡片、归档列表、feed.xml、sitemap.xml、llms.txt 报告列表，并同步全站页眉/页脚/最新周报 CTA | 只动 AUTO 块，不碰手写内容；sitemap/llms 基于 git 跟踪文件与已注册 MODULES 自动生成：新增一期内容零登记，新增内容类型需按下方步骤注册 |
 | `scripts/check_sanitize.py` | 安全门禁 | 检查历史/工作区敏感信息 |
 
 ---
@@ -72,8 +72,15 @@ git commit -m "feat: 2026 W35 周报"
 git push   # pre-push 钩子跑全量门禁；CI guard 再挡一次，不过关无法合并
 ```
 
-> 忘了跑 `publish.py` 就 push 也没关系：CI guard 的 "Generated files must be up to date"
-> 会重新构建并检查 diff，产物过期直接红，publish 工作流不会运行。
+> 忘了跑 `publish.py` 就 push：CI guard 的 "Generated files must be up to date" 会重新构建并
+> 检查工作区（含 untracked）是否干净，产物过期或漏 add 新页都会红。注意 guard 与 publish 是
+> 两个独立触发的 workflow，guard 红不会阻止 publish —— 但 stale 产物上线后下次任一内容 push
+> 会被门禁拦住，所以应在 guard 变绿后再合并/推送。
+>
+> **新增内容类型（kind）注册步骤**：① `build_site.py` 的 MODULES + KIND_LABEL ② `publish.py`
+> 的 REQUIRED_BY_KIND ③ `build_i18n.py` 的 CONTENT_ROOTS ④ 首页预留 `<!-- AUTO:cards-<kind> -->` 块。
+> 注册后该类型的每期内容对 sitemap / llms.txt / feed / 归档全部自动生效，无需再改代码。
+> 新增一期内容（已有类型）则什么都不用登记。
 
 ### 手动构建（本地预览）
 
@@ -112,14 +119,14 @@ python3 -m http.server 4000           # 本地预览
 | `insights` | 行业洞察 |
 | `cases` | 成功案例 |
 
-新内容类型只需把目录建在对应根文件夹下，再在首页预留对应的 `<!-- AUTO:cards-<kind> -->` 块。
+新内容类型需完成 4 步注册（见「发布流程」上方的注册步骤清单）；已有类型新增一期只需建目录 + meta.json + 正文。
 
 ---
 
 ## 开发命令
 
 ```bash
-# 运行全部测试（31 个）
+# 运行全部测试（36 个）
 python3 -m unittest discover -s tests -v
 
 # 本地预览
