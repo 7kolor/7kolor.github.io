@@ -7,6 +7,8 @@ cases/, analysis/) for */meta.json, then regenerates:
   - the auto blocks in index.html        (report cards per module)
   - the auto block in weekly/index.html  (archive list)
   - feed.xml                             (RSS items)
+  - sitemap.xml                          (full site URL map, auto-discovered)
+  - the AUTO:llms-reports block in llms.txt (agent-facing report list)
 
 Adding a new week / report:
   1. create  weekly/2026-W35/  with index.html + meta.json
@@ -295,6 +297,71 @@ def build_feed(items) -> str:
 """
 
 
+def discover_static_pages():
+    """Sitemap page list: every index.html on the site (root becomes "/")
+    plus non-index root pages like /about.html.
+
+    Report pages also come from load_items() (with <lastmod>); anything with
+    an index.html — a new step page, a new content-kind landing dir, a new
+    top-level section — is discovered automatically. No manual list.
+    """
+    pages = set()
+    for p in sorted(ROOT.rglob("index.html")):
+        rel = p.relative_to(ROOT)
+        if any(part.startswith(".") for part in rel.parts):
+            continue
+        if str(rel.parent) == ".":
+            pages.add("/")
+        else:
+            pages.add("/" + rel.parent.as_posix().strip("/") + "/")
+    for p in sorted(ROOT.glob("*.html")):
+        if p.name != "index.html":
+            pages.add("/" + p.name)
+    return sorted(pages)
+
+
+def build_sitemap(items) -> str:
+    """Full sitemap.xml body. Content items get <lastmod> from meta date."""
+    urls = {SITE + p: None for p in discover_static_pages()}
+    for group in items.values():
+        for m in group:
+            urls[SITE + m["url"]] = m.get("date")
+    body = "\n".join(
+        f"  <url>\n    <loc>{esc(u)}</loc>"
+        + (f"\n    <lastmod>{d}</lastmod>" if d else "")
+        + "\n  </url>"
+        for u, d in sorted(urls.items())
+    )
+    return (
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+        f"{body}\n</urlset>\n"
+    )
+
+
+def build_llms_reports(items) -> str:
+    """Markdown report list for the AUTO:llms-reports block in llms.txt.
+
+    Iterates MODULES, so a future content kind starts appearing here as
+    soon as it has any meta.json — nothing to maintain by hand.
+    """
+    chunks = []
+    for kind, (_folder, title_zh, title_en, _empty) in MODULES.items():
+        group = items.get(kind) or []
+        if not group:
+            continue
+        lines = []
+        for m in group:
+            title = m.get("title_zh") or m["id"]
+            desc = (m.get("desc_zh") or "").strip()
+            line = f"- [{m['id']} {title}]({SITE}{m['url']})"
+            if desc:
+                line += f" — {desc}"
+            lines.append(line)
+        chunks.append(f"### {title_zh} / {title_en}\n" + "\n".join(lines))
+    return "\n\n".join(chunks)
+
+
 def main():
     items = load_items()
 
@@ -339,6 +406,17 @@ def main():
     # --- feed ---
     (ROOT / "feed.xml").write_text(build_feed(items), encoding="utf-8")
     print("updated feed.xml")
+
+    # --- sitemap ---
+    (ROOT / "sitemap.xml").write_text(build_sitemap(items), encoding="utf-8")
+    print("updated sitemap.xml")
+
+    # --- llms.txt report list (AUTO block; the rest of llms.txt is hand-authored) ---
+    llms_path = ROOT / "llms.txt"
+    llms = llms_path.read_text(encoding="utf-8")
+    llms = replace_auto(llms, "llms-reports", build_llms_reports(items))
+    llms_path.write_text(llms, encoding="utf-8")
+    print("updated llms.txt")
 
     # --- shared chrome (header / footer / latest-weekly CTA) ---
     sync_chrome(items)
