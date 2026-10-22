@@ -1,0 +1,63 @@
+# 站点健康检查：对线上 7kolor.github.io 做端到端冒烟测试。
+# 每周日 08:05 UTC（北京时间周日 16:05）自动跑一次，也可手动触发。
+# 不构建、不部署、不需要任何 secret —— 红灯即通知（GitHub 通知/邮件）。
+name: site-health
+on:
+  schedule:
+    - cron: "5 8 * * 0"
+  workflow_dispatch:
+permissions: {}
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Entry points reachable
+        run: |
+          set -e
+          for p in llms.txt robots.txt sitemap.xml feed.xml reports.json; do
+            code=$(curl -s --max-time 30 --retry 2 -o /dev/null -w "%{http_code}" "https://7kolor.github.io/$p")
+            echo "$p -> $code"
+            [ "$code" = "200" ] || { echo "FAIL: $p returned $code"; exit 1; }
+          done
+      - name: Sitemap URLs all live
+        run: |
+          set -e
+          mapfile -t urls < <(curl -s --max-time 30 --retry 2 https://7kolor.github.io/sitemap.xml \
+            | grep -oP '(?<=<loc>).*?(?=</loc>)')
+          echo "checking urls: ${#urls[@]}"
+          [ "${#urls[@]}" -ge 10 ] || { echo "FAIL: too few urls"; exit 1; }
+          for u in "${urls[@]}"; do
+            code=$(curl -s --max-time 30 --retry 2 -o /dev/null -w "%{http_code}" -L "$u")
+            [ "$code" = "200" ] || { echo "FAIL: $u -> $code"; exit 1; }
+          done
+          echo "all urls 200"
+      - name: reports.json links resolve
+        run: |
+          set -e
+          curl -s --max-time 30 --retry 2 https://7kolor.github.io/reports.json > /tmp/reports.json
+          python3 - <<'PY'
+          import json, urllib.request
+          data = json.load(open('/tmp/reports.json'))
+          assert data['count'] == len(data['reports']) >= 1
+          n = 0
+          for r in data['reports']:
+              for k, u in r['links'].items():
+                  code = urllib.request.urlopen(u, timeout=30).getcode()
+                  assert code == 200, (u, code)
+                  n += 1
+          print(str(n) + ' links all 200')
+          PY
+      - name: No redirect-alias or junk in sitemap
+        run: |
+          set -e
+          curl -s --max-time 30 --retry 2 https://7kolor.github.io/sitemap.xml > /tmp/sm.xml
+          ! grep -q "weekly/w34" /tmp/sm.xml || { echo "FAIL: redirect alias in sitemap"; exit 1; }
+          ! grep -qE "templates/|tests/|404" /tmp/sm.xml || { echo "FAIL: non-publishable page in sitemap"; exit 1; }
+          echo "sitemap clean"
+      - name: llms.txt mentions the machine index
+        run: |
+          set -e
+          curl -s --max-time 30 --retry 2 https://7kolor.github.io/llms.txt | grep -q "reports.json" \
+            || { echo "FAIL: llms.txt lost the reports.json pointer"; exit 1; }
+          echo "llms.txt OK"

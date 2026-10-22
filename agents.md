@@ -9,7 +9,7 @@
 - **前端**: 纯 HTML/CSS/JS，无框架依赖
 - **构建**: Python 3 标准库（零外部依赖）
 - **部署**: GitHub Pages + GitHub Actions
-- **测试**: unittest（39 个测试用例）
+- **测试**: unittest（59 个测试用例）
 - **CI**: guard（安全门禁 + 测试/产物新鲜度门禁）+ publish（自动发布）
 - **本地钩子**: pre-commit（身份校验 + staged 敏感信息扫描）+ pre-push（全量测试 + meta 校验 + 全量敏感信息扫描）。钩子在机器级共享目录（`core.hooksPath` 指向 7kolor 工作区 `.githooks/`），不入本仓库；新机器需手动放置或软链
 
@@ -24,13 +24,16 @@
 ├── llms.txt                 # 给阅读型 agent 的站点导览（报告列表为 AUTO 块，构建生成）
 ├── robots.txt               # 全放行 + 指向 sitemap
 ├── sitemap.xml              # 全站 URL 地图（构建生成；含单语页，重定向别名除外）
+├── reports.json             # 全站报告机器索引（构建生成，links 只含真实存在的文件）
 ├── weekly/                  # 每周情报内容
 │   ├── index.html           # 周报归档页
 │   └── 2026-W34/            # 一期周报
 │       ├── index.html       # 双语正文（带 data-zh / data-en 属性）
 │       ├── meta.json        # 元数据（标题/日期/来源）
 │       ├── report-zh.html   # 单语版（构建生成）
-│       └── report-en.html   # 单语版（构建生成）
+│       ├── report-en.html   # 单语版（构建生成）
+│       ├── report.md        # 中文 Markdown 正文（构建生成，给 AI/agent）
+│       └── report-en.md     # 英文 Markdown 正文（构建生成）
 ├── assets/                  # CSS / JS / 图片
 ├── scripts/                 # 构建脚本
 ├── tests/                   # 单元测试
@@ -46,9 +49,12 @@
 | 脚本 | 职责 | 使用场景 |
 |------|------|---------|
 | `scripts/publish.py` | 一键发布：校验 meta.json → 生成单语页 → 更新首页/归档/feed | CI 或本地发布 |
-| `scripts/build_i18n.py` | 生成单语页 report-zh/en | 双语内容分离 |
+| `scripts/build_i18n.py` | 生成单语页 report-zh/en + Markdown 版 report.md / report-en.md（html.parser 零依赖转换） | 双语内容分离 + LLM 友好格式 |
 | `scripts/build_site.py` | 更新首页卡片、归档列表、feed.xml、sitemap.xml、llms.txt 报告列表，并同步全站页眉/页脚/最新周报 CTA | 只动 AUTO 块，不碰手写内容；sitemap 基于 git ls-files（跟踪 + 未跟踪未忽略）发现页面并排除重定向别名/404/tests/templates；llms 遍历已注册 MODULES：新增一期内容零登记，新增内容类型需按下方步骤注册。**构建需要 git**（git-archive 导出无 .git 时回退为目录遍历） |
 | `scripts/check_sanitize.py` | 安全门禁 | 检查历史/工作区敏感信息 |
+
+工作流：guard（PR/push 门禁：sanitize + 测试 + 产物新鲜度）· publish（内容变更自动构建发布）·
+site-health（每周日定时线上冒烟：五个入口 200、sitemap 全 URL 200、reports.json 链接全通、无别名泄漏）
 
 ---
 
@@ -78,7 +84,8 @@ git push   # pre-push 钩子跑全量门禁；CI guard 再挡一次，不过关�
 > 会被门禁拦住，所以应在 guard 变绿后再合并/推送。
 >
 > **新增内容类型（kind）注册步骤**：① `build_site.py` 的 MODULES + KIND_LABEL ② `publish.py`
-> 的 REQUIRED_BY_KIND ③ `build_i18n.py` 的 CONTENT_ROOTS ④ 首页预留 `<!-- AUTO:cards-<kind> -->` 块。
+> 的 REQUIRED_BY_KIND ③ `build_i18n.py` 的 CONTENT_ROOTS ④ 首页预留 `<!-- AUTO:cards-<kind> -->` 块
+> ⑤ 该类型模板页的 <head> 放 `<!-- AUTO:head-meta:begin/end -->` 标记（canonical/OG/JSON-LD 注入点）。
 > 注册后该类型的每期内容对 sitemap / llms.txt / feed / 归档全部自动生效，无需再改代码。
 > 新增一期内容（已有类型）则什么都不用登记。
 
@@ -126,7 +133,7 @@ python3 -m http.server 4000           # 本地预览
 ## 开发命令
 
 ```bash
-# 运行全部测试（39 个）
+# 运行全部测试（59 个）
 python3 -m unittest discover -s tests -v
 
 # 本地预览
@@ -140,4 +147,8 @@ python3 -m http.server 4000
 1. **双语内容**：使用 `data-zh` / `data-en` 属性标记
 2. **模板参考**：`templates/weekly-report.md`
 3. **AUTO 块**：首页/归档/feed 有 `<!-- AUTO:xxx -->` 标记，构建脚本只修改这些区域
+   - **构建生成物清单**（一律由 `publish.py` 产出，**禁止手工编辑**；唯一事实源是双语 index.html + meta.json）：
+     `report-zh/en.html`、`report.md`、`report-en.md`、`sitemap.xml`、`reports.json`、`llms.txt` 的 AUTO 块、
+     `feed.xml`、首页/归档的 AUTO 块、报告页 `head-meta`（canonical/OG/JSON-LD）。
+     历史生成版本（如 W34/W35 早期手写 report.md）如需找回：`git show <commit>:<path>`。
 4. **安全门禁**：CI 会自动扫描敏感信息，避免泄露

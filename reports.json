@@ -1,0 +1,150 @@
+{
+  "site": "https://7kolor.github.io",
+  "schema_version": 1,
+  "description": "7Kolor Insights — 独立开发者情报周报索引 / index of weekly intelligence reports",
+  "kinds": [
+    "weekly",
+    "analysis",
+    "insights",
+    "cases"
+  ],
+  "count": 8,
+  "reports": [
+    {
+      "id": "2026-W41",
+      "kind": "weekly",
+      "title_zh": "议价权的账单，和那个“没人要工具”的空白",
+      "title_en": "The Bill for Bargaining Power, and the Gap Where Nobody Wants a Tool",
+      "desc_zh": "我们读完评论区后，把本周三个候选方向全部否掉了。为什么“没人想要工具”比“没人做过”更值得说。",
+      "desc_en": "After reading the comment sections, we killed all three of this week's candidate directions. Why \"nobody wants a tool\" matters more than \"nobody has built it\".",
+      "date": "2026-10-17",
+      "url": "https://7kolor.github.io/weekly/2026-W41/",
+      "links": {
+        "page": "https://7kolor.github.io/weekly/2026-W41/",
+        "zh": "https://7kolor.github.io/weekly/2026-W41/report-zh.html",
+        "en": "https://7kolor.github.io/weekly/2026-W41/report-en.html",
+        "markdown": "https://7kolor.github.io/weekly/2026-W41/report.md",
+        "markdown_en": "https://7kolor.github.io/weekly/2026-W41/report-en.md"
+      }
+    },
+    {
+      "id": "2026-W40",
+      "kind": "weekly",
+      "title_zh": "三场信任崩塌，钱在观望：帮决定、帮搬走、帮验证",
+      "title_en": "Three Trust Collapses, Money on Hold: Help Decide, Migrate, Verify",
+      "desc_zh": "22,033 条讨论：雇主、订阅商、卖家三场信任崩塌同周发生——主推互信报价单；新增上期判断回执栏。",
+      "desc_en": "22,033 discussions: trust collapses by employers, subscriptions and sellers in one week. Top pick: the mutual-trust quote sheet; new: last-issue verdict receipts.",
+      "date": "2026-10-10",
+      "url": "https://7kolor.github.io/weekly/2026-W40/",
+      "links": {
+        "page": "https://7kolor.github.io/weekly/2026-W40/",
+        "zh": "https://7kolor.github.io/weekly/2026-W40/report-zh.html",
+        "en": "https://7kolor.github.io/weekly/2026-W40/report-en.html",
+        "markdown": "https://7kolor.github.io/weekly/2026-W40/report.md",
+        "markdown_en": "https://7kolor.github.io/weekly/2026-W40/report-en.md"
+      }
+    },
+    {
+      "id": "2026-W39",
+      "kind": "weekly",
+      "title_zh": "买家还在观望，动手的人先醒了：帮人敢下单的三个方向",
+      "title_en": "Buyers Watch, Builders Move: Three Plays That Help People Commit",
+      "desc_zh": "25,785 条讨论：晒单密度 +15% 是唯一超阈值异动，掏钱更谨慎——主推报价基准数据站，第 0 步只要 2 小时。",
+      "desc_en": "25,785 discussions: show-off density +15% is the only above-noise move; buyers hesitate. Top pick: a repair-price benchmark site — step zero takes 2 hours.",
+      "date": "2026-10-03",
+      "url": "https://7kolor.github.io/weekly/2026-W39/",
+      "links": {
+        "page": "https://7kolor.github.io/weekly/2026-W39/",
+        "zh": "https://7kolor.github.io/weekly/2026-W39/report-zh.html",
+        "en": "https://7kolor.github.io/weekly/2026-W39/report-en.html",
+        "markdown": "https://7kolor.github.io/weekly/2026-W39/report.md",
+        "markdown_en": "https://7kolor.github.io/weekly/2026-W39/report-en.md"
+      }
+    },
+    {
+      "id": "2026-W38",
+      "kind": "weekly",
+      "title_zh": "需求还在，买家在观望：八大方向的需求×供给对照",
+      "title_en": "Demand Persists, Buyers Hesitate: A Demand x Supply Map in Eight Directions",
+      "desc_zh": "25,200 条开发者讨论（数据已收盘）：① 家庭维修自诊是全年最大真空，供给全是玩具规模；② 记账 993 个产品几乎全哑火，单环节幸存者活得很好；③ AI agent 供给爆炸遇上买方疲劳——PH 票数是同行鼓掌，Reddit 评论区才是用户表情。",
+      "desc_en": "25,200 developer discussions (data closed): 1) home-repair self-diagnosis is the year's biggest vacuum; 2) 993 bookkeeping products flopped while single-workflow survivors thrive; 3) AI-agent supply explosion meets buyer fatigue - PH votes are peer applause, Reddit comments are the user's face.",
+      "date": "2026-09-26",
+      "url": "https://7kolor.github.io/weekly/2026-W38/",
+      "links": {
+        "page": "https://7kolor.github.io/weekly/2026-W38/",
+        "zh": "https://7kolor.github.io/weekly/2026-W38/report-zh.html",
+        "en": "https://7kolor.github.io/weekly/2026-W38/report-en.html",
+        "markdown": "https://7kolor.github.io/weekly/2026-W38/report.md",
+        "markdown_en": "https://7kolor.github.io/weekly/2026-W38/report-en.md"
+      }
+    },
+    {
+      "id": "2026-W37",
+      "kind": "weekly",
+      "title_zh": "非工程师的真实抱怨，是更大的金矿",
+      "title_en": "Non-Engineers' Raw Complaints Are the Bigger Gold Mine",
+      "desc_zh": "22,946 条开发者讨论（含 09-19 完整）：① 会计/护士/小房东等非工程师的重复流程痛是最大机会面；② 系统运维(7:1)、创业者(6:1)开发者工具几乎没人做；③ 职场高赞是「反辞职自保」实用主义。",
+      "desc_en": "22,946 developer discussions (incl. complete 09-19): ① non-engineers' repetitive-workflow pain (AP/handover/rent-chase) is the biggest surface; ② dev tools in sysadmin (7:1) and entrepreneurs (6:1) gaps are barely built; ③ career top-upvotes are 'anti-quit, self-protect' pragmatism.",
+      "date": "2026-09-19",
+      "url": "https://7kolor.github.io/weekly/2026-W37/",
+      "links": {
+        "page": "https://7kolor.github.io/weekly/2026-W37/",
+        "zh": "https://7kolor.github.io/weekly/2026-W37/report-zh.html",
+        "en": "https://7kolor.github.io/weekly/2026-W37/report-en.html",
+        "markdown": "https://7kolor.github.io/weekly/2026-W37/report.md",
+        "markdown_en": "https://7kolor.github.io/weekly/2026-W37/report-en.md"
+      }
+    },
+    {
+      "id": "2026-W36",
+      "kind": "weekly",
+      "title_zh": "AI 替代焦虑遇上裁员潮反转：双信号之下的职业保障窗口",
+      "title_en": "AI Job-Replacement Anxiety Meets the Layoff Reversal: The Career-Security Window",
+      "desc_zh": "5 源全量 110,383 条去重打标：① 55% 高管后悔 AI 裁员、Visa 反向裁掉 $500K 高管——AI 裁员潮出现对冲；② $70/小时真人 AI 质检服务，付费需求成型；③ 超大规模厂商预订 2027 全球 50% RAM 供应，自托管/AI 硬件成本上行。",
+      "desc_en": "110,383 dedup tags across 5 sources: ① 55% of execs regret AI-driven layoffs and Visa cuts its own $500K hires—the layoff wave is reversing; ② $70/hr human AI quality-checking: a new paid service category forming; ③ hyperscalers book 50% of 2027 global RAM supply—self-hosted & AI hardware costs rising.",
+      "date": "2026-09-12",
+      "url": "https://7kolor.github.io/weekly/2026-W36/",
+      "links": {
+        "page": "https://7kolor.github.io/weekly/2026-W36/",
+        "zh": "https://7kolor.github.io/weekly/2026-W36/report-zh.html",
+        "en": "https://7kolor.github.io/weekly/2026-W36/report-en.html",
+        "markdown": "https://7kolor.github.io/weekly/2026-W36/report.md",
+        "markdown_en": "https://7kolor.github.io/weekly/2026-W36/report-en.md"
+      }
+    },
+    {
+      "id": "2026-W35",
+      "kind": "weekly",
+      "title_zh": "AI Agent 基础设施产品化与 AI 治理新赛道",
+      "title_en": "AI Agent Infrastructure Productization & AI Governance as New Track",
+      "desc_zh": "大模型周：GPT-6-Astra / Fable 5.1 / Gemini 3.8 Flash 同周发布，AI 创作交付层、AI 治理质检与端侧自托管成为被数据验证的三条机会赛道。",
+      "desc_en": "Mega-release week: GPT-6-Astra / Fable 5.1 / Gemini 3.8 Flash all landed. AI creation delivery, AI governance/QC, and edge self-hosting are three data-validated tracks.",
+      "date": "2026-09-05",
+      "url": "https://7kolor.github.io/weekly/2026-W35/",
+      "links": {
+        "page": "https://7kolor.github.io/weekly/2026-W35/",
+        "zh": "https://7kolor.github.io/weekly/2026-W35/report-zh.html",
+        "en": "https://7kolor.github.io/weekly/2026-W35/report-en.html",
+        "markdown": "https://7kolor.github.io/weekly/2026-W35/report.md",
+        "markdown_en": "https://7kolor.github.io/weekly/2026-W35/report-en.md"
+      }
+    },
+    {
+      "id": "2026-W34",
+      "kind": "weekly",
+      "title_zh": "AI 编程可信度危机与定价获客",
+      "title_en": "AI Coding Reliability Crisis & Pricing as Growth",
+      "desc_zh": "AI 编程从「万能」到「不可靠」的共识正在形成；取消免费试用+翻倍定价 23 天做到 $1,600 MRR；合规成本上升为隐性威胁。",
+      "desc_en": "Consensus forms that AI coding is 'unreliable'; removing free trial + doubling price hit $1,600 MRR in 23 days; compliance costs rise as hidden threat.",
+      "date": "2026-08-29",
+      "url": "https://7kolor.github.io/weekly/2026-W34/",
+      "links": {
+        "page": "https://7kolor.github.io/weekly/2026-W34/",
+        "zh": "https://7kolor.github.io/weekly/2026-W34/report-zh.html",
+        "en": "https://7kolor.github.io/weekly/2026-W34/report-en.html",
+        "markdown": "https://7kolor.github.io/weekly/2026-W34/report.md",
+        "markdown_en": "https://7kolor.github.io/weekly/2026-W34/report-en.md"
+      }
+    }
+  ]
+}

@@ -433,6 +433,129 @@ def build_llms_reports(items) -> str:
     return "\n\n".join(chunks)
 
 
+def build_reports_json(items) -> str:
+    """Machine-readable index of every report (#21): one JSON, one request,
+    instead of crawling HTML. links only contain files that really exist on
+    disk (dead links are a #20 review finding — never repeat that)."""
+    reports = []
+    for kind in MODULES:
+        for m in items.get(kind) or []:
+            base = SITE + m["url"]
+            rel = m["url"].lstrip("/")
+            links = {}
+            if (ROOT / rel / "index.html").is_file():
+                links["page"] = base
+            for key, fname in (("zh", "report-zh.html"),
+                               ("en", "report-en.html"),
+                               ("markdown", "report.md"),
+                               ("markdown_en", "report-en.md")):
+                if (ROOT / rel / fname).is_file():
+                    links[key] = f"{base}{fname}"
+            reports.append({
+                "id": m["id"],
+                "kind": kind,
+                "title_zh": m.get("title_zh", ""),
+                "title_en": m.get("title_en", ""),
+                "desc_zh": m.get("desc_zh", ""),
+                "desc_en": m.get("desc_en", ""),
+                "date": m.get("date", ""),
+                "url": base,
+                "links": links,
+            })
+    reports.sort(key=lambda r: r.get("date", ""), reverse=True)  # global date order
+    return json.dumps({
+        "site": SITE,
+        "schema_version": 1,
+        "description": "7Kolor Insights — 独立开发者情报周报索引 / index of weekly intelligence reports",
+        "kinds": [k for k in MODULES],
+        "count": len(reports),
+        "reports": reports,
+    }, ensure_ascii=False, indent=2) + "\n"
+
+
+def build_head_meta(m, lang: str = "zh") -> str:
+    """canonical + Open Graph + JSON-LD (NewsArticle + BreadcrumbList) for a
+    report page's AUTO:head-meta block (#22). Injected into <head> — humans
+    never see it, search engines and LLM fetchers read it directly.
+
+    lang selects the metadata language: the bilingual index page and the
+    single-language variants each carry their own (review B1 — an English
+    page must never expose Chinese og:title / inLanguage). canonical always
+    points at the canonical bilingual page, matching <link rel=canonical>."""
+    url = SITE + m["url"]
+    other = "en" if lang == "zh" else "zh"
+    title = m.get("title_" + lang) or m.get("title_" + other) or m["id"]
+    title_alt = m.get("title_" + other) or ""
+    desc = m.get("desc_" + lang) or m.get("desc_" + other) or ""
+    label = m.get("week_label_" + lang) or m.get("week_label_" + other) or m["id"]
+    locale = "zh_CN" if lang == "zh" else "en_US"
+    speech = "zh-CN" if lang == "zh" else "en"
+    graph = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "NewsArticle",
+                "@id": url + "#article",
+                "headline": title,
+                "alternativeHeadline": title_alt,
+                "description": desc,
+                "image": SITE + "/assets/img/logo.png",
+                "datePublished": m.get("date", ""),
+                "inLanguage": speech,
+                "author": {"@type": "Organization", "name": "7Kolor",
+                           "url": SITE},
+                "publisher": {"@type": "Organization", "name": "7Kolor",
+                              "url": SITE,
+                              "logo": {"@type": "ImageObject",
+                                       "url": SITE + "/assets/img/logo.png"}},
+                "mainEntityOfPage": url,
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {"@type": "ListItem", "position": 1,
+                     "name": "首页 / Home", "item": SITE + "/"},
+                    {"@type": "ListItem", "position": 2,
+                     "name": "周报 / Weekly",
+                     "item": SITE + "/" + m["url"].strip("/").split("/")[0] + "/"},
+                    {"@type": "ListItem", "position": 3,
+                     "name": label, "item": url},
+                ],
+            },
+        ],
+    }
+    script = json.dumps(graph, ensure_ascii=False)
+    # a stray "</" (e.g. "</script>" inside a title/desc) would truncate the
+    # script element and inject raw markup into <head> — JSON-safe escape
+    script = script.replace("</", "<\\/")
+    return (
+        f'    <link rel="canonical" href="{url}">\n'
+        f'    <meta property="og:type" content="article">\n'
+        f'    <meta property="og:title" content="{esc(title)}">\n'
+        f'    <meta property="og:description" content="{esc(desc)}">\n'
+        f'    <meta property="og:url" content="{url}">\n'
+        f'    <meta property="og:locale" content="{locale}">\n'
+        f'    <meta property="og:image" content="{SITE}/assets/img/logo.png">\n'
+        f'    <script type="application/ld+json">{script}</script>'
+    )
+
+
+def sync_report_head_meta(items) -> None:
+    """Fill the AUTO:head-meta block of every report page (#22). Pages
+    without the block are skipped, so future content kinds opt in by
+    adding the markers to their template."""
+    for kind in MODULES:
+        for m in items.get(kind) or []:
+            path = ROOT / m["url"].lstrip("/") / "index.html"
+            if not path.is_file():
+                continue
+            html = path.read_text(encoding="utf-8")
+            out = replace_block(html, "head-meta", build_head_meta(m))
+            if out is not None and out != html:
+                path.write_text(out, encoding="utf-8")
+                print(f"head-meta synced: {path.relative_to(ROOT)}")
+
+
 def main():
     items = load_items()
 
@@ -478,11 +601,14 @@ def main():
     (ROOT / "feed.xml").write_text(build_feed(items), encoding="utf-8")
     print("updated feed.xml")
 
-    # --- sitemap + llms.txt ---
+    # --- sitemap + llms.txt + reports.json ---
     build_agent_files(items)
 
     # --- shared chrome (header / footer / latest-weekly CTA) ---
     sync_chrome(items)
+
+    # --- canonical / Open Graph / JSON-LD on report pages (#22) ---
+    sync_report_head_meta(items)
 
 
 def build_agent_files(items) -> None:
@@ -502,6 +628,10 @@ def build_agent_files(items) -> None:
     llms = replace_auto(llms, "llms-reports", build_llms_reports(items), indent="")
     llms_path.write_text(llms, encoding="utf-8")
     print("updated llms.txt")
+
+    # --- machine index (#21) ---
+    (ROOT / "reports.json").write_text(build_reports_json(items), encoding="utf-8")
+    print("updated reports.json")
 
 
 if __name__ == "__main__":
