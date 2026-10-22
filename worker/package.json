@@ -1,0 +1,10 @@
+{
+  "name": "7kolor-ai-gateway",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "AI data gateway for 7kolor.github.io: /ai/* byte-identical proxy + UA-bucketed analytics (issue #31)",
+  "scripts": {
+    "test": "node --test test/*.test.mjs"
+  }
+}
