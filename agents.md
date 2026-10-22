@@ -9,7 +9,7 @@
 - **前端**: 纯 HTML/CSS/JS，无框架依赖
 - **构建**: Python 3 标准库（零外部依赖）
 - **部署**: GitHub Pages + GitHub Actions
-- **测试**: unittest（58 个测试用例）
+- **测试**: unittest（59 个测试用例）
 - **CI**: guard（安全门禁 + 测试/产物新鲜度门禁）+ publish（自动发布）
 - **本地钩子**: pre-commit（身份校验 + staged 敏感信息扫描）+ pre-push（全量测试 + meta 校验 + 全量敏感信息扫描）。钩子在机器级共享目录（`core.hooksPath` 指向 7kolor 工作区 `.githooks/`），不入本仓库；新机器需手动放置或软链
 
@@ -133,7 +133,7 @@ python3 -m http.server 4000           # 本地预览
 ## 开发命令
 
 ```bash
-# 运行全部测试（58 个）
+# 运行全部测试（59 个）
 python3 -m unittest discover -s tests -v
 
 # 本地预览

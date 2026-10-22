@@ -70,8 +70,7 @@ class ReportsJsonTest(unittest.TestCase):
         bare = build_site.build_reports_json(
             {"weekly": [make_meta(url="/weekly/2099-W01/")]})
         entry = json.loads(bare)["reports"][0]
-        self.assertNotIn("links", entry) if "links" not in entry else None
-        self.assertEqual(entry.get("links", {}), {})
+        self.assertEqual(entry["links"], {})
 
 
 class MarkdownTest(unittest.TestCase):
@@ -98,6 +97,13 @@ class MarkdownTest(unittest.TestCase):
         self.assertIn("> 引用", md)
         self.assertIn("```", md)
         self.assertIn("x = 1", md)
+
+    def test_blockquote_multi_paragraph(self):
+        # every paragraph of a quote stays quoted (review suggestion)
+        md = build_i18n.html_to_markdown(
+            "<blockquote><p>第一段</p><p>第二段</p></blockquote>")
+        self.assertIn("> 第一段", md)
+        self.assertIn("> 第二段", md)
 
     def test_table_is_gfm_not_fake_heading(self):
         # a leading "# 标题" cell must NOT become an H1 (review finding):
