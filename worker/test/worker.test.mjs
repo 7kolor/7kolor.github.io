@@ -88,6 +88,15 @@ test("GET /ai/ping returns the check-in JSON and still counts", async () => {
   assert.deepEqual(env.captured[0].blobs[1], "agent-opencode");
 });
 
+test("GET /ai/ping/ (trailing slash) also short-circuits to the check-in JSON", async () => {
+  globalThis.fetch = async () => {
+    throw new Error("ping must not hit the origin");
+  };
+  const res = await worker.fetch(new Request("https://gw.test/ai/ping/"), makeEnv(), null);
+  assert.equal(res.status, 200);
+  assert.deepEqual(await res.json(), { ok: true, gateway: "7kolor-ai-gateway" });
+});
+
 test("HEAD /ai/ping returns 200 without a body", async () => {
   globalThis.fetch = async () => new Response("x");
   const res = await worker.fetch(new Request("https://gw.test/ai/ping", { method: "HEAD" }), makeEnv(), null);

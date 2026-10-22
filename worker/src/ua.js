@@ -19,7 +19,7 @@ export function bucketUa(ua) {
   return BUCKET_UNKNOWN;
 }
 
-// 邮箱打码：保留首字符与域名 —— "jane@7kolor.com" -> "j***@example.com"
+// 邮箱打码：保留首字符与域名 —— "jane@7kolor.com" -> "j***@7kolor.com"
 //（issue #31 给出的格式）。任何邮箱必须先被本规则覆盖，才能进入存储层。
 const EMAIL_RE = /([A-Za-z0-9._%+-])[A-Za-z0-9._%+-]*@([A-Za-z0-9-]+(?:\.[A-Za-z0-9-]+)+)/g;
 

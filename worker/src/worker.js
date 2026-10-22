@@ -59,7 +59,7 @@ async function handleProxy(request, url, env, ctx) {
   // /ai/ping 是 llms.txt 引导的自愿签到端点：返回极简 JSON（同样计入统计），
   // 不代理源站（源站并没有 /ping 这个文件）。
   const targetPath = url.pathname.replace(/^\/ai/, "") || "/";
-  if (targetPath === "/ping") {
+  if (targetPath === "/ping" || targetPath === "/ping/") {
     const pingHeaders = { "cache-control": "no-store" };
     if (request.method === "HEAD") return new Response(null, { status: 200, headers: pingHeaders });
     return jsonResponse({ ok: true, gateway: WORKER_NAME }, 200, pingHeaders);

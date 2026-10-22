@@ -56,9 +56,15 @@ curl -s -A "Claude-User/1.0 (user: bob@7kolor.com)" http://localhost:8787/ai/llm
 ## 隐私边界
 
 - 不记录完整 IP、不记录请求体；路径只存 pathname（**query 一律丢弃**）
-- UA 必须先过 `sanitizeUa()` 才进存储层：邮箱打码（`jane@7kolor.com` → `j***@example.com`）、`user:/login=` 值打码、家目录用户名打码、截断 256 字符
+- UA 必须先过 `sanitizeUa()` 才进存储层：邮箱打码（`jane@7kolor.com` → `j***@7kolor.com`）、`user:/login=` 值打码、家目录用户名打码、截断 256 字符
 - `/ai-stats` 只输出计数与 ≤20 条「时间/路径/桶」记录，**不输出任何 UA 值**（脱敏后的也不输出）
 - 统计写失败绝不影响代理本身（fire-and-forget + catch）
+
+### 已知边界（脱敏覆盖面，宁过度不欠脱敏）
+
+- 带引号 local part 的邮箱形式、`~user` 缩写家目录不匹配——真实 UA 中极罕见，接受
+- 「无锚点的裸用户名」不识别（与普通单词不可区分，识别必误伤）；键值形式（`user:/login=`）与家目录形式已覆盖
+- 分桶规则表在 `src/config.js`，新增 agent 即加一行 + 一条测试
 
 ## 代码结构
 

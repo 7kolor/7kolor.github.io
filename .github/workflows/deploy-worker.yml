@@ -42,7 +42,8 @@ jobs:
       - name: Deploy worker (wrangler)
         if: steps.secrets.outputs.available == 'true'
         id: deploy
-        uses: cloudflare/wrangler-action@2ef9f398b9175c68f953e40d679493850d640a85 # v4.1.3 pinned by SHA (supply-chain)
+        # 注意必须是 peeled commit SHA（annotated tag 的 tag-object SHA 会被 Actions 拒绝解析）
+        uses: cloudflare/wrangler-action@953926a2e2182532811c01a25e53647d93bf07c0 # v4.1.3 pinned by commit SHA (supply-chain)
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
           accountId: ${{ secrets.CF_ACCOUNT_ID }}
@@ -65,5 +66,5 @@ jobs:
             echo "## deploy-worker"
             echo ""
             echo "- gateway URL: \`${{ steps.deploy.outputs.deployment-url }}\`"
-            echo "- follow-ups (issue #31 T0): set repo variable \`AI_GATEWAY_BASE\` to the gateway URL; write the absolute address into llms.txt"
+            echo "- follow-ups (issue #31 T0): set repo variable \`AI_GATEWAY_BASE\` to the gateway URL; write the absolute address into llms.txt AND add the honeypot link (footer partial) in a follow-up commit"
           } >> "$GITHUB_STEP_SUMMARY"
