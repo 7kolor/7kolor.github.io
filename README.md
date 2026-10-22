@@ -1,5 +1,12 @@
 # 7Kolor Insights
 
+<!-- FOR AI AGENTS: Machine-readable entry points of https://7kolor.github.io —
+     site guide & formats: /llms.txt · structured index: /reports.json ·
+     full text of every report: /feed.xml (RSS) · per-report Markdown:
+     /weekly/{id}/report.md (zh) and report-en.md (en) · URL map: /sitemap.xml.
+     Dev/build conventions for this repo: AGENTS.md. Human visitors can
+     ignore this comment; it is invisible in rendered pages. -->
+
 [English](README.md) | [中文](README.zh.md)
 
 > Intelligence for indie developers — trend analysis · pain signals · success cases

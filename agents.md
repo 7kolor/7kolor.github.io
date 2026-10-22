@@ -9,7 +9,7 @@
 - **前端**: 纯 HTML/CSS/JS，无框架依赖
 - **构建**: Python 3 标准库（零外部依赖）
 - **部署**: GitHub Pages + GitHub Actions
-- **测试**: unittest（39 个测试用例）
+- **测试**: unittest（52 个测试用例）
 - **CI**: guard（安全门禁 + 测试/产物新鲜度门禁）+ publish（自动发布）
 - **本地钩子**: pre-commit（身份校验 + staged 敏感信息扫描）+ pre-push（全量测试 + meta 校验 + 全量敏感信息扫描）。钩子在机器级共享目录（`core.hooksPath` 指向 7kolor 工作区 `.githooks/`），不入本仓库；新机器需手动放置或软链
 
@@ -24,13 +24,16 @@
 ├── llms.txt                 # 给阅读型 agent 的站点导览（报告列表为 AUTO 块，构建生成）
 ├── robots.txt               # 全放行 + 指向 sitemap
 ├── sitemap.xml              # 全站 URL 地图（构建生成；含单语页，重定向别名除外）
+├── reports.json             # 全站报告机器索引（构建生成，links 只含真实存在的文件）
 ├── weekly/                  # 每周情报内容
 │   ├── index.html           # 周报归档页
 │   └── 2026-W34/            # 一期周报
 │       ├── index.html       # 双语正文（带 data-zh / data-en 属性）
 │       ├── meta.json        # 元数据（标题/日期/来源）
 │       ├── report-zh.html   # 单语版（构建生成）
-│       └── report-en.html   # 单语版（构建生成）
+│       ├── report-en.html   # 单语版（构建生成）
+│       ├── report.md        # 中文 Markdown 正文（构建生成，给 AI/agent）
+│       └── report-en.md     # 英文 Markdown 正文（构建生成）
 ├── assets/                  # CSS / JS / 图片
 ├── scripts/                 # 构建脚本
 ├── tests/                   # 单元测试
@@ -46,9 +49,12 @@
 | 脚本 | 职责 | 使用场景 |
 |------|------|---------|
 | `scripts/publish.py` | 一键发布：校验 meta.json → 生成单语页 → 更新首页/归档/feed | CI 或本地发布 |
-| `scripts/build_i18n.py` | 生成单语页 report-zh/en | 双语内容分离 |
+| `scripts/build_i18n.py` | 生成单语页 report-zh/en + Markdown 版 report.md / report-en.md（html.parser 零依赖转换） | 双语内容分离 + LLM 友好格式 |
 | `scripts/build_site.py` | 更新首页卡片、归档列表、feed.xml、sitemap.xml、llms.txt 报告列表，并同步全站页眉/页脚/最新周报 CTA | 只动 AUTO 块，不碰手写内容；sitemap 基于 git ls-files（跟踪 + 未跟踪未忽略）发现页面并排除重定向别名/404/tests/templates；llms 遍历已注册 MODULES：新增一期内容零登记，新增内容类型需按下方步骤注册。**构建需要 git**（git-archive 导出无 .git 时回退为目录遍历） |
 | `scripts/check_sanitize.py` | 安全门禁 | 检查历史/工作区敏感信息 |
+
+工作流：guard（PR/push 门禁：sanitize + 测试 + 产物新鲜度）· publish（内容变更自动构建发布）·
+site-health（每周日定时线上冒烟：五个入口 200、sitemap 全 URL 200、reports.json 链接全通、无别名泄漏）
 
 ---
 
@@ -126,7 +132,7 @@ python3 -m http.server 4000           # 本地预览
 ## 开发命令
 
 ```bash
-# 运行全部测试（39 个）
+# 运行全部测试（52 个）
 python3 -m unittest discover -s tests -v
 
 # 本地预览

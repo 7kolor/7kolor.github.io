@@ -6,12 +6,17 @@
 
 7Kolor Insights 每周六发布一期双语周报（中文 + English），扫描 Reddit、Hacker News、IndieHackers、Product Hunt 等开发者社区，提炼值得行动的需求信号与机会判断。
 
-## 怎么用 / How to use
+## 怎么用 / How to use（给 AI agent 的抓取指南）
 
-- 最新一期见[首页](https://7kolor.github.io/)顶部卡片；全部历史见[周报归档](https://7kolor.github.io/weekly/)。
-- 每篇报告正文页默认中文、可切换英文；同时提供单语版本，URL 约定：内容页为 `/{kind}/{id}/`，单语版为 `/{kind}/{id}/report-zh.html` 与 `/{kind}/{id}/report-en.html`。
-- 全文 RSS（含完整正文）：[feed.xml](https://7kolor.github.io/feed.xml) — 抓取这一个文件即可拿到全部报告正文，无需爬 HTML。
-- 站点地图：[sitemap.xml](https://7kolor.github.io/sitemap.xml)；机器索引 reports.json 筹备中。
+按问题类型选最省的路径：
+
+- **只要目录**（有哪些期、每期标题/摘要/日期）→ 抓 [reports.json](https://7kolor.github.io/reports.json)（约 4KB，含每期全部格式的直接链接）。
+- **只要某一期的正文** → 抓 `/{kind}/{id}/report.md`（中文 Markdown）或 `report-en.md`（英文），无需解析 HTML。
+- **要全量正文一次拿全** → 抓 [feed.xml](https://7kolor.github.io/feed.xml)（全文 RSS，含 8 期完整正文）。
+- **要网页渲染版**（人类阅读）→ 内容页 `/{kind}/{id}/` 默认中文，单语版 `report-zh.html` / `report-en.html`。
+- 全部页面清单见 [sitemap.xml](https://7kolor.github.io/sitemap.xml)。
+
+URL 约定：`{kind}` 目前有 `weekly`（周报），未来扩展 analysis / insights / cases；`{id}` 形如 `2026-W41`。更新节奏：每周六（北京时间）。
 
 ## 更新节奏 / Cadence
 
