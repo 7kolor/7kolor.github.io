@@ -61,3 +61,29 @@ jobs:
           curl -s --max-time 30 --retry 2 https://7kolor.github.io/llms.txt | grep -q "reports.json" \
             || { echo "FAIL: llms.txt lost the reports.json pointer"; exit 1; }
           echo "llms.txt OK"
+      # AI 数据网关探测（issue #31）：可选、非阻塞 —— 网关 URL 存在 repo
+      # variable AI_GATEWAY_BASE（首次 worker 部署后设置）才会执行。
+      - name: AI gateway probe (optional, non-blocking)
+        continue-on-error: true
+        run: |
+          base="${{ vars.AI_GATEWAY_BASE }}"
+          if [ -z "$base" ]; then
+            echo "SKIP: repo variable AI_GATEWAY_BASE not set (set it after the first deploy-worker run)"
+            exit 0
+          fi
+          set -e
+          code=$(curl -s --max-time 30 --retry 2 -o /tmp/aistats.json -w "%{http_code}" "$base/ai-stats")
+          echo "/ai-stats -> $code"
+          [ "$code" = "200" ] || { echo "FAIL: /ai-stats returned $code (non-blocking)"; exit 1; }
+          python3 - <<'PY'
+          import json
+          data = json.load(open('/tmp/aistats.json'))
+          assert set(data) == {"by_agent", "by_path", "by_day", "recent"}, sorted(data)
+          assert isinstance(data["recent"], list) and len(data["recent"]) <= 20
+          assert all(set(r) == {"ts", "path", "bucket"} for r in data["recent"])
+          print("/ai-stats shape OK")
+          PY
+          # /ai/* 代理必须与源站字节一致（diff/cmp 为空）
+          curl -s --max-time 30 --retry 2 "$base/ai/reports.json" -o /tmp/gw.json
+          curl -s --max-time 30 --retry 2 "https://7kolor.github.io/reports.json" -o /tmp/origin.json
+          cmp /tmp/gw.json /tmp/origin.json && echo "/ai/reports.json byte-identical"

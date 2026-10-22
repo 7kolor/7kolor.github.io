@@ -22,3 +22,6 @@ __pycache__/
 # 本地调研资料（第三方内容，不入公开仓库）
 /research/
 
+# Wrangler 本地缓存（npx wrangler dev 产物，永不入库）
+worker/.wrangler/
+

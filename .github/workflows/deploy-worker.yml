@@ -1,0 +1,69 @@
+name: deploy-worker
+# worker/** 有变更 push 到 main 时自动 wrangler deploy（issue #31）。
+# Cloudflare 凭据由仓库 secrets 提供：CF_API_TOKEN / CF_ACCOUNT_ID（见 worker/README.md）。
+# secret 缺失（尚未开通 Cloudflare）时本 job 明确 skip 并保持绿色，不阻塞 CI。
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'worker/**'
+      - '.github/workflows/deploy-worker.yml'
+  workflow_dispatch:
+
+permissions: {}
+
+concurrency:
+  group: deploy-worker-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  # 部署与运行时 secret 同步用同一个 wrangler 版本，保证可复现
+  WRANGLER_VERSION: "4.151.3"
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+    steps:
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1 pinned by SHA (supply-chain)
+
+      - name: Check secrets present
+        id: secrets
+        run: |
+          if [ -z "${CLOUDFLARE_API_TOKEN:-}" ] || [ -z "${CLOUDFLARE_ACCOUNT_ID:-}" ]; then
+            echo "available=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::Skipped: repo secrets CF_API_TOKEN / CF_ACCOUNT_ID are not set. Create the Cloudflare account and add both secrets (worker/README.md), then re-run deploy-worker."
+          else
+            echo "available=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Deploy worker (wrangler)
+        if: steps.secrets.outputs.available == 'true'
+        id: deploy
+        uses: cloudflare/wrangler-action@2ef9f398b9175c68f953e40d679493850d640a85 # v4.1.3 pinned by SHA (supply-chain)
+        with:
+          apiToken: ${{ secrets.CF_API_TOKEN }}
+          accountId: ${{ secrets.CF_ACCOUNT_ID }}
+          wranglerVersion: ${{ env.WRANGLER_VERSION }}
+          workingDirectory: worker
+
+      # /ai-stats 运行时要用同一组凭据查 Analytics Engine SQL API；
+      # wrangler secret put 从 stdin 读值（非交互管道写法）。
+      - name: Sync runtime secrets for /ai-stats
+        if: steps.secrets.outputs.available == 'true'
+        working-directory: worker
+        run: |
+          printf '%s' "$CLOUDFLARE_ACCOUNT_ID" | npx -y "wrangler@$WRANGLER_VERSION" secret put CF_ACCOUNT_ID
+          printf '%s' "$CLOUDFLARE_API_TOKEN"  | npx -y "wrangler@$WRANGLER_VERSION" secret put CF_API_TOKEN
+
+      - name: Write deploy summary
+        if: steps.secrets.outputs.available == 'true'
+        run: |
+          {
+            echo "## deploy-worker"
+            echo ""
+            echo "- gateway URL: \`${{ steps.deploy.outputs.deployment-url }}\`"
+            echo "- follow-ups (issue #31 T0): set repo variable \`AI_GATEWAY_BASE\` to the gateway URL; write the absolute address into llms.txt"
+          } >> "$GITHUB_STEP_SUMMARY"

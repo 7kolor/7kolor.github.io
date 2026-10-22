@@ -29,6 +29,11 @@ jobs:
       - name: Unit tests
         run: python3 -m unittest discover -s tests -v
 
+      # Worker（issue #31）纯函数单测：node:test，runner 自带 node（无需
+      # setup-node）。tests/test_worker.py 也会把同一套测试桥接进 unittest。
+      - name: Worker unit tests (node:test)
+        run: node --test worker/test/*.test.mjs
+
       - name: Validate meta.json
         run: python3 scripts/publish.py --check
 

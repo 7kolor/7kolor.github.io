@@ -1,0 +1,15 @@
+# Cloudflare Worker: AI 数据网关（issue #31）
+# /ai/* 代理 7kolor.github.io（字节一致）+ UA 分桶访问统计（Analytics Engine）
+# 部署：.github/workflows/deploy-worker.yml（push 到 main 且 worker/** 变更）
+# 本地：npx wrangler dev    文档与开通步骤：worker/README.md
+name = "7kolor-ai-gateway"
+main = "src/worker.js"
+compatibility_date = "2026-10-01"
+
+# Analytics Engine：免费版每天 10 万数据点写入 + 1 万读查询（当前未计费）。
+# dataset 首次写入时自动创建，无需在控制台预建任何资源（选型理由见 README）。
+# config.js 中的 WORKER_NAME / DATASET / STATS_BINDING 必须与此保持一致
+#（worker/test/config.test.mjs 有一致性测试）。
+[[analytics_engine_datasets]]
+binding = "AI_LOG"
+dataset = "ai_gateway_log"

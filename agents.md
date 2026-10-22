@@ -9,8 +9,8 @@
 - **前端**: 纯 HTML/CSS/JS，无框架依赖
 - **构建**: Python 3 标准库（零外部依赖）
 - **部署**: GitHub Pages + GitHub Actions
-- **测试**: unittest（59 个测试用例）
-- **CI**: guard（安全门禁 + 测试/产物新鲜度门禁）+ publish（自动发布）
+- **测试**: unittest（60 个测试用例，含 worker JS 测试桥接）+ node:test（Worker 纯函数单测）
+- **CI**: guard（安全门禁 + 测试/产物新鲜度门禁）+ publish（自动发布）+ deploy-worker（worker/** 变更自动部署 Cloudflare，secret 缺失时明确 skip 不红）
 - **本地钩子**: pre-commit（身份校验 + staged 敏感信息扫描）+ pre-push（全量测试 + meta 校验 + 全量敏感信息扫描）。钩子在机器级共享目录（`core.hooksPath` 指向 7kolor 工作区 `.githooks/`），不入本仓库；新机器需手动放置或软链
 
 ---
@@ -25,6 +25,7 @@
 ├── robots.txt               # 全放行 + 指向 sitemap
 ├── sitemap.xml              # 全站 URL 地图（构建生成；含单语页，重定向别名除外）
 ├── reports.json             # 全站报告机器索引（构建生成，links 只含真实存在的文件）
+├── worker/                  # Cloudflare Worker 数据网关（issue #31）：/ai/* 字节一致代理 + UA 分桶统计
 ├── weekly/                  # 每周情报内容
 │   ├── index.html           # 周报归档页
 │   └── 2026-W34/            # 一期周报
@@ -54,7 +55,8 @@
 | `scripts/check_sanitize.py` | 安全门禁 | 检查历史/工作区敏感信息 |
 
 工作流：guard（PR/push 门禁：sanitize + 测试 + 产物新鲜度）· publish（内容变更自动构建发布）·
-site-health（每周日定时线上冒烟：五个入口 200、sitemap 全 URL 200、reports.json 链接全通、无别名泄漏）
+site-health（每周日定时线上冒烟：五个入口 200、sitemap 全 URL 200、reports.json 链接全通、无别名泄漏，网关探测可选非阻塞）·
+deploy-worker（worker/** 变更自动部署 Cloudflare Worker 数据网关）
 
 ---
 
@@ -133,8 +135,11 @@ python3 -m http.server 4000           # 本地预览
 ## 开发命令
 
 ```bash
-# 运行全部测试（59 个）
+# 运行全部测试（60 个，含 worker 桥接）
 python3 -m unittest discover -s tests -v
+
+# Worker 纯函数单测（unittest 已桥接，此命令用于单独跑）
+node --test worker/test/*.test.mjs
 
 # 本地预览
 python3 -m http.server 4000
