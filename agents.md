@@ -147,4 +147,8 @@ python3 -m http.server 4000
 1. **双语内容**：使用 `data-zh` / `data-en` 属性标记
 2. **模板参考**：`templates/weekly-report.md`
 3. **AUTO 块**：首页/归档/feed 有 `<!-- AUTO:xxx -->` 标记，构建脚本只修改这些区域
+   - **构建生成物清单**（一律由 `publish.py` 产出，**禁止手工编辑**；唯一事实源是双语 index.html + meta.json）：
+     `report-zh/en.html`、`report.md`、`report-en.md`、`sitemap.xml`、`reports.json`、`llms.txt` 的 AUTO 块、
+     `feed.xml`、首页/归档的 AUTO 块、报告页 `head-meta`（canonical/OG/JSON-LD）。
+     历史生成版本（如 W34/W35 早期手写 report.md）如需找回：`git show <commit>:<path>`。
 4. **安全门禁**：CI 会自动扫描敏感信息，避免泄露
