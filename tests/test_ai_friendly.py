@@ -81,8 +81,36 @@ class MarkdownTest(unittest.TestCase):
         self.assertIn("> 引用", md)
         self.assertIn("```", md)
         self.assertIn("x = 1", md)
-        self.assertIn("A", md)                   # table degrades, content kept
-        self.assertIn("1", md)
+
+    def test_table_is_gfm_not_fake_heading(self):
+        # a leading "# 标题" cell must NOT become an H1 (review finding):
+        # GFM table rows are pipe-wrapped, with a header separator line
+        md = build_i18n.html_to_markdown(
+            "<table><tr><th># 标题</th><th>热度</th></tr>"
+            "<tr><td>甲</td><td>100</td></tr></table>")
+        self.assertIn("| # 标题 | 热度 |", md)
+        self.assertIn("|---|", md)
+        self.assertIn("| 甲 | 100 |", md)
+        self.assertNotIn("\n# 标题\n", md)
+
+    def test_h5_h6_img_and_ol_numbers(self):
+        md = build_i18n.html_to_markdown(
+            "<h5>五级</h5><h6>六级</h6><img src='a.png' alt='图A'>"
+            "<ol><li>一</li><li>二</li></ol>")
+        self.assertIn("##### 五级", md)
+        self.assertIn("###### 六级", md)
+        self.assertIn("![图A](a.png)", md)
+        self.assertIn("1. 一", md)
+        self.assertIn("2. 二", md)
+
+    def test_report_en_md_has_english_content(self):
+        items = build_site.load_items()
+        for m in items["weekly"]:
+            p = ROOT / m["url"].lstrip("/") / "report-en.md"
+            md = p.read_text(encoding="utf-8")
+            self.assertGreater(len(md), 500, p)
+            self.assertIn(m["title_en"][:15].replace('"', ''),
+                          md.replace('"', ''))
 
     def test_script_style_content_dropped(self):
         md = build_i18n.html_to_markdown(
@@ -113,26 +141,36 @@ class MarkdownTest(unittest.TestCase):
 
 class HeadMetaTest(unittest.TestCase):
     def _pages(self):
+        """Every report page in every language: bilingual index, report-zh,
+        report-en (review B1 — the single-language pages used to inherit
+        Chinese metadata, and tests that only checked index.html were
+        blind to it)."""
         items = build_site.load_items()
         for m in items["weekly"]:
-            yield m, (ROOT / m["url"].lstrip("/") / "index.html").read_text(encoding="utf-8")
+            base = ROOT / m["url"].lstrip("/")
+            yield m, "zh", "index.html", (base / "index.html").read_text(encoding="utf-8")
+            yield m, "zh", "report-zh.html", (base / "report-zh.html").read_text(encoding="utf-8")
+            yield m, "en", "report-en.html", (base / "report-en.html").read_text(encoding="utf-8")
 
     def test_auto_block_present_on_all_report_pages(self):
-        for m, html in self._pages():
-            self.assertIn("<!-- AUTO:head-meta:begin -->", html, m["id"])
-            self.assertIn("<!-- AUTO:head-meta:end -->", html, m["id"])
+        for m, lang, fname, html in self._pages():
+            self.assertIn("<!-- AUTO:head-meta:begin -->", html, f"{m['id']} {fname}")
+            self.assertIn("<!-- AUTO:head-meta:end -->", html, f"{m['id']} {fname}")
 
     def test_jsonld_parses_and_has_required_types(self):
         pat = re.compile(r'<script type="application/ld\+json">(.*?)</script>', re.S)
-        for m, html in self._pages():
+        for m, lang, fname, html in self._pages():
             scripts = pat.findall(html)
-            self.assertTrue(scripts, f"no JSON-LD on {m['id']}")
+            self.assertTrue(scripts, f"no JSON-LD on {m['id']} {fname}")
             data = json.loads(scripts[0])
             types = {node.get("@type") for node in data["@graph"]}
-            self.assertIn("NewsArticle", types, m["id"])
-            self.assertIn("BreadcrumbList", types, m["id"])
+            self.assertIn("NewsArticle", types, f"{m['id']} {fname}")
+            self.assertIn("BreadcrumbList", types, f"{m['id']} {fname}")
             article = next(n for n in data["@graph"] if n["@type"] == "NewsArticle")
-            self.assertEqual(article["headline"], m["title_zh"])
+            self.assertEqual(article["headline"], m["title_" + lang],
+                             f"{m['id']} {fname} headline not in {lang}")
+            self.assertEqual(article["inLanguage"], "zh-CN" if lang == "zh" else "en",
+                             f"{m['id']} {fname} inLanguage mismatch")
             self.assertEqual(article["datePublished"], m["date"])
             crumb = next(n for n in data["@graph"] if n["@type"] == "BreadcrumbList")
             self.assertEqual(len(crumb["itemListElement"]), 3)
@@ -148,26 +186,46 @@ class HeadMetaTest(unittest.TestCase):
         self.assertIn("<\\/script>", body)
 
     def test_canonical_and_og_present(self):
-        for m, html in self._pages():
-            self.assertIn(f'<link rel="canonical" href="{build_site.SITE}{m["url"]}">', html, m["id"])
-            self.assertIn('property="og:title"', html, m["id"])
-            self.assertIn('property="og:description"', html, m["id"])
-            # no second un-filled block: begin/end must be one line apart at most
+        for m, lang, fname, html in self._pages():
+            tag = f"{m['id']} {fname}"
+            self.assertIn(f'<link rel="canonical" href="{build_site.SITE}{m["url"]}">', html, tag)
+            self.assertIn('property="og:title"', html, tag)
+            self.assertIn('property="og:description"', html, tag)
+            expected_locale = "zh_CN" if lang == "zh" else "en_US"
+            self.assertIn(f'property="og:locale" content="{expected_locale}"', html, tag)
+            # html lang attribute agrees with the metadata language
+            html_lang = re.search(r'<html lang="([^"]+)"', html).group(1)
+            self.assertTrue(html_lang.startswith("zh") if lang == "zh" else html_lang == "en",
+                            f"{tag}: html lang={html_lang} meta lang={lang}")
+            # no un-filled block
             block = re.search(
                 r"<!-- AUTO:head-meta:begin -->(.*?)<!-- AUTO:head-meta:end -->",
                 html, re.S).group(1)
-            self.assertIn("canonical", block, m["id"])
+            self.assertIn("canonical", block, tag)
 
     def test_committed_report_md_is_fresh(self):
         # same freshness contract as reports.json: rebuilding i18n output
-        # must not change the committed report.md files
+        # must reproduce the committed report.md byte-for-byte. Runs in a
+        # temp copy so the test never writes the working tree.
+        import shutil
+        import tempfile
         items = build_site.load_items()
         m = items["weekly"][0]
-        d = ROOT / m["url"].lstrip("/")
-        before = (d / "report.md").read_text(encoding="utf-8")
-        build_i18n.build(d)
-        after = (d / "report.md").read_text(encoding="utf-8")
-        self.assertEqual(before, after)
+        src = ROOT / m["url"].lstrip("/")
+        with tempfile.TemporaryDirectory() as tmp:
+            # mirror the repo-relative layout (weekly/<id>) and point
+            # build_i18n.ROOT at the temp root so relative paths match
+            d = Path(tmp) / src.parent.name / src.name
+            d.parent.mkdir(parents=True)
+            shutil.copytree(src, d)
+            committed = (src / "report.md").read_text(encoding="utf-8")
+            saved_root = build_i18n.ROOT
+            try:
+                build_i18n.ROOT = Path(tmp)
+                build_i18n.build(d)
+            finally:
+                build_i18n.ROOT = saved_root
+            self.assertEqual(committed, (d / "report.md").read_text(encoding="utf-8"))
 
 
 if __name__ == "__main__":

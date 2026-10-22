@@ -1,5 +1,6 @@
 {
   "site": "https://7kolor.github.io",
+  "schema_version": 1,
   "description": "7Kolor Insights — 独立开发者情报周报索引 / index of weekly intelligence reports",
   "kinds": [
     "weekly",

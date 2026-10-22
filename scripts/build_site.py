@@ -441,8 +441,10 @@ def build_reports_json(items) -> str:
     for kind in MODULES:
         for m in items.get(kind) or []:
             base = SITE + m["url"]
-            links = {"page": base}
             rel = m["url"].lstrip("/")
+            links = {}
+            if (ROOT / rel / "index.html").is_file():
+                links["page"] = base
             for key, fname in (("zh", "report-zh.html"),
                                ("en", "report-en.html"),
                                ("markdown", "report.md"),
@@ -460,8 +462,10 @@ def build_reports_json(items) -> str:
                 "url": base,
                 "links": links,
             })
+    reports.sort(key=lambda r: r.get("date", ""), reverse=True)  # global date order
     return json.dumps({
         "site": SITE,
+        "schema_version": 1,
         "description": "7Kolor Insights — 独立开发者情报周报索引 / index of weekly intelligence reports",
         "kinds": [k for k in MODULES],
         "count": len(reports),
@@ -469,15 +473,23 @@ def build_reports_json(items) -> str:
     }, ensure_ascii=False, indent=2) + "\n"
 
 
-def build_head_meta(m) -> str:
+def build_head_meta(m, lang: str = "zh") -> str:
     """canonical + Open Graph + JSON-LD (NewsArticle + BreadcrumbList) for a
     report page's AUTO:head-meta block (#22). Injected into <head> — humans
-    never see it, search engines and LLM fetchers read it directly."""
+    never see it, search engines and LLM fetchers read it directly.
+
+    lang selects the metadata language: the bilingual index page and the
+    single-language variants each carry their own (review B1 — an English
+    page must never expose Chinese og:title / inLanguage). canonical always
+    points at the canonical bilingual page, matching <link rel=canonical>."""
     url = SITE + m["url"]
-    title = m.get("title_zh") or m["id"]
-    title_en = m.get("title_en") or ""
-    desc = m.get("desc_zh") or ""
-    label = m.get("week_label_zh") or m["id"]
+    other = "en" if lang == "zh" else "zh"
+    title = m.get("title_" + lang) or m.get("title_" + other) or m["id"]
+    title_alt = m.get("title_" + other) or ""
+    desc = m.get("desc_" + lang) or m.get("desc_" + other) or ""
+    label = m.get("week_label_" + lang) or m.get("week_label_" + other) or m["id"]
+    locale = "zh_CN" if lang == "zh" else "en_US"
+    speech = "zh-CN" if lang == "zh" else "en"
     graph = {
         "@context": "https://schema.org",
         "@graph": [
@@ -485,14 +497,17 @@ def build_head_meta(m) -> str:
                 "@type": "NewsArticle",
                 "@id": url + "#article",
                 "headline": title,
-                "alternativeHeadline": title_en,
+                "alternativeHeadline": title_alt,
                 "description": desc,
+                "image": SITE + "/assets/img/logo.png",
                 "datePublished": m.get("date", ""),
-                "inLanguage": "zh-CN",
+                "inLanguage": speech,
                 "author": {"@type": "Organization", "name": "7Kolor",
                            "url": SITE},
                 "publisher": {"@type": "Organization", "name": "7Kolor",
-                              "url": SITE},
+                              "url": SITE,
+                              "logo": {"@type": "ImageObject",
+                                       "url": SITE + "/assets/img/logo.png"}},
                 "mainEntityOfPage": url,
             },
             {
@@ -519,7 +534,8 @@ def build_head_meta(m) -> str:
         f'    <meta property="og:title" content="{esc(title)}">\n'
         f'    <meta property="og:description" content="{esc(desc)}">\n'
         f'    <meta property="og:url" content="{url}">\n'
-        f'    <meta property="og:locale" content="zh_CN">\n'
+        f'    <meta property="og:locale" content="{locale}">\n'
+        f'    <meta property="og:image" content="{SITE}/assets/img/logo.png">\n'
         f'    <script type="application/ld+json">{script}</script>'
     )
 

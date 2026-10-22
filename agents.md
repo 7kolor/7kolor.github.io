@@ -9,7 +9,7 @@
 - **前端**: 纯 HTML/CSS/JS，无框架依赖
 - **构建**: Python 3 标准库（零外部依赖）
 - **部署**: GitHub Pages + GitHub Actions
-- **测试**: unittest（52 个测试用例）
+- **测试**: unittest（55 个测试用例）
 - **CI**: guard（安全门禁 + 测试/产物新鲜度门禁）+ publish（自动发布）
 - **本地钩子**: pre-commit（身份校验 + staged 敏感信息扫描）+ pre-push（全量测试 + meta 校验 + 全量敏感信息扫描）。钩子在机器级共享目录（`core.hooksPath` 指向 7kolor 工作区 `.githooks/`），不入本仓库；新机器需手动放置或软链
 
@@ -84,7 +84,8 @@ git push   # pre-push 钩子跑全量门禁；CI guard 再挡一次，不过关�
 > 会被门禁拦住，所以应在 guard 变绿后再合并/推送。
 >
 > **新增内容类型（kind）注册步骤**：① `build_site.py` 的 MODULES + KIND_LABEL ② `publish.py`
-> 的 REQUIRED_BY_KIND ③ `build_i18n.py` 的 CONTENT_ROOTS ④ 首页预留 `<!-- AUTO:cards-<kind> -->` 块。
+> 的 REQUIRED_BY_KIND ③ `build_i18n.py` 的 CONTENT_ROOTS ④ 首页预留 `<!-- AUTO:cards-<kind> -->` 块
+> ⑤ 该类型模板页的 <head> 放 `<!-- AUTO:head-meta:begin/end -->` 标记（canonical/OG/JSON-LD 注入点）。
 > 注册后该类型的每期内容对 sitemap / llms.txt / feed / 归档全部自动生效，无需再改代码。
 > 新增一期内容（已有类型）则什么都不用登记。
 
@@ -132,7 +133,7 @@ python3 -m http.server 4000           # 本地预览
 ## 开发命令
 
 ```bash
-# 运行全部测试（52 个）
+# 运行全部测试（55 个）
 python3 -m unittest discover -s tests -v
 
 # 本地预览

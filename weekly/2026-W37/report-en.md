@@ -18,13 +18,14 @@
 
 ## Six-Step Framework: Turn This Week's Signals into Your Next Move
 
- Step  | Core Question  | This Week  | Change
-① Discover | What can make money? | 1,542 | Flat
-② Collect | What are they complaining about? | 8,050 | ↓6%
-③ Deep-dive | Why are they hurting? | 1,664 | ↓19%
-④ Validate | Did I get it right? | 8,202 | ↑21%
-⑤ Check | What's missed before launch? | 323 | ↓15%
-⑥ Prove payment | Will anyone pay? | 1,108 | +77%
+| Step | Core Question | This Week | Change |
+|---|---|---|---|
+| ① Discover | What can make money? | 1,542 | Flat |
+| ② Collect | What are they complaining about? | 8,050 | ↓6% |
+| ③ Deep-dive | Why are they hurting? | 1,664 | ↓19% |
+| ④ Validate | Did I get it right? | 8,202 | ↑21% |
+| ⑤ Check | What's missed before launch? | 323 | ↓15% |
+| ⑥ Prove payment | Will anyone pay? | 1,108 | +77% |
 
 Below, each of the six steps gets its question, its evidence this week, and the one actionable takeaway for you as a builder. Read them in order to follow the full model from seeing an opportunity to confirming someone pays.
 
@@ -88,27 +89,30 @@ This week indie builders shared real paying traction—million-dollar scale down
 
 ### Win cases with visible revenue
 
- Case  | Real number  | Comments doing  | Takeaway
-[Solo iOS 语音 TTS](https://www.reddit.com/r/appbusiness/comments/1wd3z8k) | 28d → $4,600 · MRR $852 | competitors featured in comments | strong offline features carry premium
-[童书 App](https://www.reddit.com/r/appbusiness/comments/1w9mryg) | first month $151 | comments ask how to scale | first $100 is a milestone, not scale
-[自用「习惯」App](https://www.reddit.com/r/appbusiness/comments/1wf3bix) | $1,559 | 76 comments on self-use line | own-pain fix = real demand
-[Tally（表单）](https://www.reddit.com/r/SaaS/comments/1wime93) | $5M ARR/11 via AEO | comments ask AEO playbooks | 用 AEO 占 LLM 回答里的词
-[6 个月做到 $1K MRR](https://www.reddit.com/r/SaaS/comments/1wf4u3p) | $1K MRR, zero ads | SEO+Reddit loop; ask if replicable | launch early, feedback feeds SEO
-[内部工具 17 天](https://www.reddit.com/r/SaaS/comments/1wfyj8l) | $1,000+ in 17d | author replied | own-pain tools ramp fastest
+| Case | Real number | Comments doing | Takeaway |
+|---|---|---|---|
+| Solo iOS 语音 TTS | 28d → $4,600 · MRR $852 | competitors featured in comments | strong offline features carry premium |
+| 童书 App | first month $151 | comments ask how to scale | first $100 is a milestone, not scale |
+| 自用「习惯」App | $1,559 | 76 comments on self-use line | own-pain fix = real demand |
+| Tally（表单） | $5M ARR/11 via AEO | comments ask AEO playbooks | 用 AEO 占 LLM 回答里的词 |
+| 6 个月做到 $1K MRR | $1K MRR, zero ads | SEO+Reddit loop; ask if replicable | launch early, feedback feeds SEO |
+| 内部工具 17 天 | $1,000+ in 17d | author replied | own-pain tools ramp fastest |
 
 ### Niche & high-ticket also convert
 
-Case | Data | Takeaway
-[最高价计划 $399/月首单](https://www.reddit.com/r/SaaS/comments/1wfwjoa) | $399/mo | price high & close = PMF
-[开发 1 年拿到首单](https://www.reddit.com/r/SaaS/comments/1w97h1l) | first paying | config-fidelity > prompts
-[贺卡工具 首月](https://www.reddit.com/r/microsaas/comments/1weet8f) | $1,186 no marketing | simple niche > broad
-[游戏当 SaaS 订阅](https://www.reddit.com/r/SaaS/comments/1w9qohk) | >$1K sub | subscription beyond SaaS
+| Case | Data | Takeaway |
+|---|---|---|
+| 最高价计划 $399/月首单 | $399/mo | price high & close = PMF |
+| 开发 1 年拿到首单 | first paying | config-fidelity > prompts |
+| 贺卡工具 首月 | $1,186 no marketing | simple niche > broad |
+| 游戏当 SaaS 订阅 | >$1K sub | subscription beyond SaaS |
 
 ### 两类「翻车」，比成功更值得做镜子
 
-Situation | What broke | Takeaway
-[$2K MRR → 0](https://www.reddit.com/r/SaaS/comments/1wfkonp) | underweighted retention | retention > acquisition
-[0 → $3.6K MRR](https://www.reddit.com/r/SaaS/comments/1wguk09) | community-driven, no ads | content > paid ads
+| Situation | What broke | Takeaway |
+|---|---|---|
+| $2K MRR → 0 | underweighted retention | retention > acquisition |
+| 0 → $3.6K MRR | community-driven, no ads | content > paid ads |
 
 真受欢迎，不是初始爆裂漏斗，而是评论区「恭喜+逐条求教」那类——证明你真解决了别人烦恼。把这些案例当「有人付钱」的尺子。
 
@@ -130,11 +134,12 @@ Landing: local/offline isn't a fake market — sellers exist and users pay. You 
 
 #### cross ② · This week's real launches + comment heat: what people are watching
 
- Launched  | What it solves  | Comment vibe
-tiun.（595 票 / 102 评） | AI-product billing / refund / payments | debating how AI products charge
-Ami AI（564 票 / 199 评） | auto customer-acquisition for AI apps | top: exactly what I was looking for
-Kilo Code for iOS（498 票 / 79 评） | mobile coding agent | is an agent any good
-…整个前排 | almost all AI-builder tooling | comments cluster here
+| Launched | What it solves | Comment vibe |
+|---|---|---|
+| tiun.（595 票 / 102 评） | AI-product billing / refund / payments | debating how AI products charge |
+| Ami AI（564 票 / 199 评） | auto customer-acquisition for AI apps | top: exactly what I was looking for |
+| Kilo Code for iOS（498 票 / 79 评） | mobile coding agent | is an agent any good |
+| …整个前排 | almost all AI-builder tooling | comments cluster here |
 
 Most of this week's launches are 'help AI-builders make money': billing, refunds, acquisition, voice, mobile agents — hot comments all about how AI products monetize, charge, grow. The 'serve AI-builders' lane is crowded, but it's nearly all 'help them sell & collect'; the lean still open is the ones being skimmed, withheld, margin-eaten.
 
@@ -166,24 +171,27 @@ We usually only look at 'build-for-developers' tools. But the complaints of acco
 
 ### Accountants (AP inbox is the pain)
 
- Real Post  | Turn it into a tool
-[供应商改银行卡，我 AP 收件箱再也不信了](https://www.reddit.com/r/accounting/comments/1wf74ra) | AP invoice anti-fraud / supplier-account-change verification (B2B anti-fraud)
-[会计里最难给非会计解释的概念](https://www.reddit.com/r/accounting/comments/1whwehd) | Accounting concept explainer / AI
-[处理难答的技术问题怎么找答案](https://www.reddit.com/r/accounting/comments/1wjvkr2) | Accounting Q&A expert / internal-knowledge SaaS
-[ERP 梦魇](https://www.reddit.com/r/accounting/comments/1wiicul) | ERP implementation / migration
+| Real Post | Turn it into a tool |
+|---|---|
+| 供应商改银行卡，我 AP 收件箱再也不信了 | AP invoice anti-fraud / supplier-account-change verification (B2B anti-fraud) |
+| 会计里最难给非会计解释的概念 | Accounting concept explainer / AI |
+| 处理难答的技术问题怎么找答案 | Accounting Q&A expert / internal-knowledge SaaS |
+| ERP 梦魇 | ERP implementation / migration |
 
 ### Nursing / Healthcare
 
- Real Post  | Tool Opportunity
-[你来接这个病人，说床尾报告](https://www.reddit.com/r/nursing/comments/1wh8fm2) | Auto-generate handoff/shift reports—classic nursing pain, real paid SaaS scenario
-[长照临床第一周被震惊，这是正常的吗](https://www.reddit.com/r/nursing/comments/1wjtxjr) | Nursing clinical companion / study tool
-[总被叫去上班](https://www.reddit.com/r/nursing/comments/1whxf50) | Scheduling / overtime management
+| Real Post | Tool Opportunity |
+|---|---|
+| 你来接这个病人，说床尾报告 | Auto-generate handoff/shift reports—classic nursing pain, real paid SaaS scenario |
+| 长照临床第一周被震惊，这是正常的吗 | Nursing clinical companion / study tool |
+| 总被叫去上班 | Scheduling / overtime management |
 
 ### Small Landlords
 
- Real Post  | Tool Opportunity
-[租客不交租、无视](https://www.reddit.com/r/landlord/comments/1whmhgz) | Rent-chase / arrears tracking / notice generation
-[租客退租后一股味散不掉](https://www.reddit.com/r/landlord/comments/1wfbcps) | Move-out flow / bond-return template
+| Real Post | Tool Opportunity |
+|---|---|
+| 租客不交租、无视 | Rent-chase / arrears tracking / notice generation |
+| 租客退租后一股味散不掉 | Move-out flow / bond-return template |
 
 #### Three General Takeaways
 
@@ -191,12 +199,12 @@ We usually only look at 'build-for-developers' tools. But the complaints of acco
 
 ### Dev-Tool Gap: high pain, low build = opportunity
 
- Subreddit  | Posts  | Pain  | Plans  | Ratio
-Sysadmin | 209 | 122 | 18 | ~7:1, high pain, few solves
-Entrepreneurs | 297 | 94 | 16 | ~6:1
-Self-hosted | 227 | 139 | 44 | ~3:1
-Side Project | 1,593 | 287 | 122 | ~2.4:1 already crowded
-
+| Subreddit | Posts | Pain | Plans | Ratio |
+|---|---|---|---|---|
+| Sysadmin | 209 | 122 | 18 | ~7:1, high pain, few solves |
+| Entrepreneurs | 297 | 94 | 16 | ~6:1 |
+| Self-hosted | 227 | 139 | 44 | ~3:1 |
+| Side Project | 1,593 | 287 | 122 | ~2.4:1 already crowded |
      ③
 
 ## Validate: Endorsed Products + Reproducible Cases
@@ -215,10 +223,11 @@ Whether a view got upvoted says more than the title. Sentiment pulled from key p
 
 ### Career anxiety: top upvotes aren't 'quit', they're anti-quit self-protection
 
- Post  | Comment Signal
-[蜜月假被收回，该辞职吗](https://www.reddit.com/r/careerguidance/comments/1wg7pnw) | Top-vote isn't 'leave now'—it's 'don't resign on your own': email CC HR, note the prepaid non-refundable trip, make them make the call so you can claim unemployment; protect your own money.
-[老板太有价值升不了职](https://www.reddit.com/r/careerguidance/comments/1wg6lb5) | 3544-vote 'raise by your importance'; OP immediately decides to shop around. Quote: 'Work is trading time for money; you owe your employer nothing'
-[空降总监要我免费培训他](https://www.reddit.com/r/careerguidance/comments/1wh350a) | The whole thread blames the company; mainstream = do minimum + line up next job
+| Post | Comment Signal |
+|---|---|
+| 蜜月假被收回，该辞职吗 | Top-vote isn't 'leave now'—it's 'don't resign on your own': email CC HR, note the prepaid non-refundable trip, make them make the call so you can claim unemployment; protect your own money. |
+| 老板太有价值升不了职 | 3544-vote 'raise by your importance'; OP immediately decides to shop around. Quote: 'Work is trading time for money; you owe your employer nothing' |
+| 空降总监要我免费培训他 | The whole thread blames the company; mainstream = do minimum + line up next job |
 
 → For makers: these 'leave-or-be-forced' employees are the audience for 'change job / negotiate raise / wrap up' tools and content. But they're really asking 'what do I do next'—so build decision trees / checklists / salary-bench mark that get asked and actually help.
 
@@ -234,10 +243,11 @@ Anti vibe coding ('code-gen ≠ software engineering') high-vote 230; sysadmin '
 
 ## Self-host / homelab: the DIY-tinkerer demand
 
- Phenomenon  | Evidence Post  | Your Move
-Being hack= discussed (high-score single post) | [homelab 被 CVE 攻破 16 小时](https://www.reddit.com/r/selfhosted/comments/1wfq2vx) | Build a self-hosting security self-check + patch-reminder ('shrink exposure / tailscale / add alerts') — wanted, barely built
-Cheap-mobo 'nice' gets grounded | [我骂过低价 X99，现在整套都在它](https://www.reddit.com/r/homelab/comments/1wip5ah) | Top-167 says 'fine at home, not for enterprise'—when you make cost-selection content, honor that boundary
-Cool-crowd self-host always collects | [什么最值得自托管](https://www.reddit.com/r/selfhosted/comments/1wgwo01) | curate 'niche self-hosting weekly/list' to gather ironic geeks
+| Phenomenon | Evidence Post | Your Move |
+|---|---|---|
+| Being hack= discussed (high-score single post) | homelab 被 CVE 攻破 16 小时 | Build a self-hosting security self-check + patch-reminder ('shrink exposure / tailscale / add alerts') — wanted, barely built |
+| Cheap-mobo 'nice' gets grounded | 我骂过低价 X99，现在整套都在它 | Top-167 says 'fine at home, not for enterprise'—when you make cost-selection content, honor that boundary |
+| Cool-crowd self-host always collects | 什么最值得自托管 | curate 'niche self-hosting weekly/list' to gather ironic geeks |
 
 #### In One Line
 
@@ -247,13 +257,14 @@ Self-hosters ask about security self-checks, hardening, cost selection, niche ne
 
 ## A Few Breakout Hot Posts
 
- Post  | Source
-[蜜月假被收回，该辞职吗](https://www.reddit.com/r/careerguidance/comments/1wg7pnw) | Reddit（高赞）
-[老板太有价值，升不了职](https://www.reddit.com/r/careerguidance/comments/1wg6lb5) | Reddit（高赞）
-[某办公软件退订时向全部用户群发骚扰](https://www.reddit.com/r/sysadmin/comments/1wjdpgx) | Reddit（3,569 赞）
-[homelab 被 CVE 攻破 16 小时](https://www.reddit.com/r/selfhosted/comments/1wfq2vx) | Reddit（1,220 赞）
-[低价 X99 整机真香，被拉回现实](https://www.reddit.com/r/homelab/comments/1wip5ah) | Reddit（1,568 赞）
-[什么最值得自托管](https://www.reddit.com/r/selfhosted/comments/1wgwo01) | Reddit（637/431）
+| Post | Source |
+|---|---|
+| 蜜月假被收回，该辞职吗 | Reddit（高赞） |
+| 老板太有价值，升不了职 | Reddit（高赞） |
+| 某办公软件退订时向全部用户群发骚扰 | Reddit（3,569 赞） |
+| homelab 被 CVE 攻破 16 小时 | Reddit（1,220 赞） |
+| 低价 X99 整机真香，被拉回现实 | Reddit（1,568 赞） |
+| 什么最值得自托管 | Reddit（637/431） |
 
 #### Hot-Post Reading Guide
 

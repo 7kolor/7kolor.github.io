@@ -10,12 +10,13 @@ permissions: {}
 jobs:
   smoke:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - name: Entry points reachable
         run: |
           set -e
           for p in llms.txt robots.txt sitemap.xml feed.xml reports.json; do
-            code=$(curl -s -o /dev/null -w "%{http_code}" "https://7kolor.github.io/$p")
+            code=$(curl -s --max-time 30 --retry 2 -o /dev/null -w "%{http_code}" "https://7kolor.github.io/$p")
             echo "$p -> $code"
             [ "$code" = "200" ] || { echo "FAIL: $p returned $code"; exit 1; }
           done
@@ -27,7 +28,7 @@ jobs:
           echo "checking urls: ${#urls[@]}"
           [ "${#urls[@]}" -ge 10 ] || { echo "FAIL: too few urls"; exit 1; }
           for u in "${urls[@]}"; do
-            code=$(curl -s -o /dev/null -w "%{http_code}" -L "$u")
+            code=$(curl -s --max-time 30 --retry 2 -o /dev/null -w "%{http_code}" -L "$u")
             [ "$code" = "200" ] || { echo "FAIL: $u -> $code"; exit 1; }
           done
           echo "all urls 200"
@@ -49,7 +50,14 @@ jobs:
           PY
       - name: No redirect-alias or junk in sitemap
         run: |
-          curl -s https://7kolor.github.io/sitemap.xml > /tmp/sm.xml
+          set -e
+          curl -s --max-time 30 https://7kolor.github.io/sitemap.xml > /tmp/sm.xml
           ! grep -q "weekly/w34" /tmp/sm.xml || { echo "FAIL: redirect alias in sitemap"; exit 1; }
           ! grep -qE "templates/|tests/|404" /tmp/sm.xml || { echo "FAIL: non-publishable page in sitemap"; exit 1; }
           echo "sitemap clean"
+      - name: llms.txt mentions the machine index
+        run: |
+          set -e
+          curl -s --max-time 30 https://7kolor.github.io/llms.txt | grep -q "reports.json" \
+            || { echo "FAIL: llms.txt lost the reports.json pointer"; exit 1; }
+          echo "llms.txt OK"

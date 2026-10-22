@@ -18,7 +18,9 @@
 
 A 1,050-upvote bill: "$8k to swap a water heater; the unit is $900 at the home center" — but $900 is the parts price; $8k bundles labor, permits, warranty, carrying cost. the benchmark's job is splitting fair labor from the gouge wedge — not treating 9x as the information gap. 457 upvotes: "they prey on the elderly"; 172: a contractor's "costs tripled since 2018" — gouging-callers, victim-blamers, PE structuralists, elder-defenders, cost-defenders, price-sharers: six voices in one comment section, the most transparent black box yet.
 
-  Playbook · The Trust Quote Sheet (0 to 3)  STEP 0 · 2HValidate: two-question DMs to 10 contractors
+  Playbook · The Trust Quote Sheet (0 to 3)  STEP 0 · 2H
+
+##### Validate: two-question DMs to 10 contractors
 
 ```
 I'm building an itemized, verifiable quote tool.
@@ -28,17 +30,23 @@ Would you list your company free as a trust anchor?
 
 ✓ Pass: 3+ substantive replies; at least one offers to pay✕ Two silent weeks → kill
 
-  STEP 1 · W1Two-sided MVP: badges for contractors, checklists for homeowners
+  STEP 1 · W1
+
+##### Two-sided MVP: badges for contractors, checklists for homeowners
 
 Listed contractors get not software but a "transparent-quote certified" badge for their own site; homeowners get the itemized checklist + upload scoring. The gender premium is one thread's anecdote (n=1) — a candidate for a talking-point feature, not a conclusion.
 
-  STEP 2 · W2Prove external distribution — the comments are already shopping
+  STEP 2 · W2
+
+##### Prove external distribution — the comments are already shopping
 
 2,142 comments already chain price checks — reply with links, never open hard-sell posts. If the PE buyout wave persists (a single comment's structural read, unverified), the mess has staying power: longer demand (corroboration, not proof).
 
 ✕ No clicks from external distribution in 2 weeks → change channel or kill
 
-  STEP 3 · ONGOINGMonetization: leads + premium-content double engine
+  STEP 3 · ONGOING
+
+##### Monetization: leads + premium-content double engine
 
 Contractors pay per lead (the badge is the converter); the "is this brand's premium worth it" series is the second engine — the 834-upvote IKEA-kitchen thread shares the quote cluster's readers.
 
@@ -64,13 +72,14 @@ Channel discipline: 579+172 comments already discuss migrating — reply with li
 
 ## 2. Six-step framework: turning signals into decisions
 
-Step | Question | Signals hit | This week | Density | Last week | Change
-① Spot opportunity | What makes money? | Purchase intent | 1,093 | 50 | 1,277 | flat*
-② Collect signals | What do users complain about? | Concrete pain | 7,861 | 357 | 9,123 | flat
-③ Dig into problems | Why does it hurt? | Negative feedback | 1,630 | 74 | 1,908 | flat
-④ Validate assumptions | Did I read it right? | Seeking validation | 8,828 | 401 | 9,660 | +7%
-⑤ Final checks | What did I miss? | Churn risk | 364 | 16.5 | 399 | +6%
-⑥ Prove someone pays | "Built it / solved it" | Supply-side signal | 1,023 | 46 | 1,222 | flat
+| Step | Question | Signals hit | This week | Density | Last week | Change |
+|---|---|---|---|---|---|---|
+| ① Spot opportunity | What makes money? | Purchase intent | 1,093 | 50 | 1,277 | flat* |
+| ② Collect signals | What do users complain about? | Concrete pain | 7,861 | 357 | 9,123 | flat |
+| ③ Dig into problems | Why does it hurt? | Negative feedback | 1,630 | 74 | 1,908 | flat |
+| ④ Validate assumptions | Did I read it right? | Seeking validation | 8,828 | 401 | 9,660 | +7% |
+| ⑤ Final checks | What did I miss? | Churn risk | 364 | 16.5 | 399 | +6% |
+| ⑥ Prove someone pays | "Built it / solved it" | Supply-side signal | 1,023 | 46 | 1,222 | flat |
 
 Three weeks read together: the money didn't vanish, it's waiting — and it flows to helping decide (distribution), migrate, and verify.
 
@@ -84,16 +93,16 @@ Three weeks read together: the money didn't vanish, it's waiting — and it flow
 
 ## 3. Demand × supply: verdicts and dossiers
 
-Direction | What users shout | How far others got | Verdict
-Price benchmark / trust quote sheet | [2,142 comments: gouging, victim-blaming and PE structuralists in one thread](https://www.reddit.com/r/homeimprovement/comments/1wzl6kd/) | ConstructIQ self-reports $50k/mo (contractor workflow) | Top pick · A
-SaaS exit kit | [Plex $749.99: 588 upvotes of anger, 155 "open source rots too"](https://www.reddit.com/r/selfhosted/comments/1x0hapb/) | Task Session self-reports $92k/mo (positioning signal) | Dossier B
-Legacy one-piece migrations | [The whole business lives on an AS/400; 175 comments, no answer](https://www.reddit.com/r/sysadmin/comments/1wzhctv/) | hypercubic 58 votes, Coast 155 — both early | Dossier C
-AI app margins | [13k installs, €6k loss, open books; 97 comments self-organize a cost audit](https://www.reddit.com/r/SaaS/comments/1wy4wbu/) | Helicone/Langfuse/OpenRouter cover per-request cost | Dossier D
-Device privacy checkup | [LG NIC pull: doers vs cold-water split](https://www.reddit.com/r/homelab/comments/1wxmzo5/) | Firewalla/Fing hardware; the "report layer" is open | Watchlist
-Wedding guest photo drop | [298 upvotes "already exists, open source" + 49 "nobody uploaded at ours"](https://www.reddit.com/r/selfhosted/comments/1wx8klb/) | WeddingShare exists, open source | Counter-example · skip
-Dashboard personalization | [Illustrated Home Assistant dashboard, 927 points](https://news.ycombinator.com/item?id=49986882) | No skin layer in the HA ecosystem | Reputation play
-Tool payback calculator | [$2,150 bender: 1,265 upvotes "that's boss-man purchase"](https://www.reddit.com/r/electricians/comments/1x15cqr/) | Nothing | Low-priority watch
-
+| Direction | What users shout | How far others got | Verdict |
+|---|---|---|---|
+| Price benchmark / trust quote sheet | 2,142 comments: gouging, victim-blaming and PE structuralists in one thread | ConstructIQ self-reports $50k/mo (contractor workflow) | Top pick · A |
+| SaaS exit kit | Plex $749.99: 588 upvotes of anger, 155 "open source rots too" | Task Session self-reports $92k/mo (positioning signal) | Dossier B |
+| Legacy one-piece migrations | The whole business lives on an AS/400; 175 comments, no answer | hypercubic 58 votes, Coast 155 — both early | Dossier C |
+| AI app margins | 13k installs, €6k loss, open books; 97 comments self-organize a cost audit | Helicone/Langfuse/OpenRouter cover per-request cost | Dossier D |
+| Device privacy checkup | LG NIC pull: doers vs cold-water split | Firewalla/Fing hardware; the "report layer" is open | Watchlist |
+| Wedding guest photo drop | 298 upvotes "already exists, open source" + 49 "nobody uploaded at ours" | WeddingShare exists, open source | Counter-example · skip |
+| Dashboard personalization | Illustrated Home Assistant dashboard, 927 points | No skin layer in the HA ecosystem | Reputation play |
+| Tool payback calculator | $2,150 bender: 1,265 upvotes "that's boss-man purchase" | Nothing | Low-priority watch |
  APrice benchmark / trust quote sheet — top pick: turn "mutual trust" into the contractor's lead asset
 
 - Three-week chain: W38 AI client-manager stalling → W39 $8,400 paint + the "polite rejection" mechanism → W40 structural layer (PE buyouts, 252 upvotes) + one n=1 premium anecdote. The only cluster with evidence thickening three weeks straight.
@@ -118,10 +127,11 @@ Tool payback calculator | [$2,150 bender: 1,265 upvotes "that's boss-man purchas
 
 ## 4. Who made money this week, and who crashed
 
-Case | Numbers | What comments did | Takeaway
-[Prep66: the second attempt](https://www.reddit.com/r/SaaS/comments/1wxabzn/) | £4k of ads, 9 months, $0 first try; £25 → MRR second time | 5 upvotes nail it: "£210 for 15,000 visits and 0 paid is the number to read" | A quasi-experiment (n=2): same founder, similar spend, switched tracks, vitamin → painkiller. Validate the first action before scaling spend
-[Task Session: self-hosted CRM](https://www.indiehackers.com/product/task-session) | Self-reported $92k/mo (disputed) | Even discounted, counter-positioning shows real buying power | Don't build a "smarter CRM"; build "the CRM on your own server" — subscription fatigue becomes the selling point
-PH narrative watch: IrisGo 539 · Rill 543 | PH #3 / 543 votes | AI copy shifts from "helps you" to "runs it for you"; the AI-coding-workflow accessory category opens — votes = attention, same discount as W39's iFixAi | Inventory the breaks in your AI workflow; each break is a candidate product
+| Case | Numbers | What comments did | Takeaway |
+|---|---|---|---|
+| Prep66: the second attempt | £4k of ads, 9 months, $0 first try; £25 → MRR second time | 5 upvotes nail it: "£210 for 15,000 visits and 0 paid is the number to read" | A quasi-experiment (n=2): same founder, similar spend, switched tracks, vitamin → painkiller. Validate the first action before scaling spend |
+| Task Session: self-hosted CRM | Self-reported $92k/mo (disputed) | Even discounted, counter-positioning shows real buying power | Don't build a "smarter CRM"; build "the CRM on your own server" — subscription fatigue becomes the selling point |
+| PH narrative watch: IrisGo 539 · Rill 543 | PH #3 / 543 votes | AI copy shifts from "helps you" to "runs it for you"; the AI-coding-workflow accessory category opens — votes = attention, same discount as W39's iFixAi | Inventory the breaks in your AI workflow; each break is a candidate product |
 
 The crashes — what to check before it's your turn:
 
@@ -151,11 +161,12 @@ Nurses — watchlist, one line.Three straight weeks of high-engagement threads; 
 
 ## 7. The loudest threads: a stalemate is a product spec
 
-Thread | Sticking point → product
-[Replace the AS/400 or not (175 comments)](https://www.reddit.com/r/sysadmin/comments/1wzhctv/) | "Selection costs more" and "just replace it" are both right — migration cost is a black box. Product: not a migration platform, a blocker checklist (tables/reports/interfaces). Step one: hand-sort the 175 comments into a v1 checklist.
-[Offer lowballed 20% (1,229 comments)](https://www.reddit.com/r/careerguidance/comments/1x0kvgn/) | The fight-back camp (1,713 upvotes: "they're betting you're desperate") and the walk-away camp both do the math by hand. Traffic-map slot (settled): the offer-decision calculator is a hook, not a standalone venture.
-[Gas prices eating the paycheck](https://www.reddit.com/r/managers/comments/1wy6ukc/) | 206 upvotes of gallows humor: "you tried everything except money." The stalemate reveals an incentive problem, not a tool problem — the value here is negative: downgrade deliberately to the "don't build" list. Writing "there is no opportunity here" is part of the job.
-[Quoting has become psychological warfare (2,142 comments)](https://www.reddit.com/r/homeimprovement/comments/1wzl6kd/) | Six voices in one thread — folded into A's playbook (top pick).
+| Thread | Sticking point → product |
+|---|---|
+| Replace the AS/400 or not (175 comments) | "Selection costs more" and "just replace it" are both right — migration cost is a black box. Product: not a migration platform, a blocker checklist (tables/reports/interfaces). Step one: hand-sort the 175 comments into a v1 checklist. |
+| Offer lowballed 20% (1,229 comments) | The fight-back camp (1,713 upvotes: "they're betting you're desperate") and the walk-away camp both do the math by hand. Traffic-map slot (settled): the offer-decision calculator is a hook, not a standalone venture. |
+| Gas prices eating the paycheck | 206 upvotes of gallows humor: "you tried everything except money." The stalemate reveals an incentive problem, not a tool problem — the value here is negative: downgrade deliberately to the "don't build" list. Writing "there is no opportunity here" is part of the job. |
+| Quoting has become psychological warfare (2,142 comments) | Six voices in one thread — folded into A's playbook (top pick). |
 
 ## 8. Action list for this week
 

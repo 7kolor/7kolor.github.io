@@ -20,12 +20,13 @@
 
 ### 赛道 A：AI 创作交付层
 
-信号 | 热度 | 来源
-[Fable 5.1 vs GPT-6 Astra：3D Blender 差距](https://reddit.com/r/StableDiffusion/comments/1w7ppcj) | 1,958分/268评论 | Reddit
-[Fable 5.1 做了个 Minecraft mod 卖 $20](https://reddit.com/r/ChatGPT/comments/1w5ftqe) | 970分/133评论 | Reddit
-[Gemini 3.8 Flash 发布](https://news.ycombinator.com/item?id=49537553) | 1,151分/661评论 | HN
-[Muse Spark 1.3（AI 音乐）](https://news.ycombinator.com/item?id=49541256) | 683分/447评论 | HN
-[Video Agent by Fotor](https://www.producthunt.com/products/video-agent-by-fotor) | 378票 | PH
+| 信号 | 热度 | 来源 |
+|---|---|---|
+| Fable 5.1 vs GPT-6 Astra：3D Blender 差距 | 1,958分/268评论 | Reddit |
+| Fable 5.1 做了个 Minecraft mod 卖 $20 | 970分/133评论 | Reddit |
+| Gemini 3.8 Flash 发布 | 1,151分/661评论 | HN |
+| Muse Spark 1.3（AI 音乐） | 683分/447评论 | HN |
+| Video Agent by Fotor | 378票 | PH |
 
 #### 这个机会怎么变现
 
@@ -35,10 +36,11 @@
 
 ### 赛道 B：AI 治理与质检
 
-信号 | 热度 | 来源
-[Please, stop sending me slop](https://reddit.com/r/sysadmin/comments/1w6itlo) | 1,593分/449评论 | Reddit
-[Gemini 在我的邮件里「失控」](https://reddit.com/r/Claude/comments/1w6f5v5) | 988分/197评论 | Reddit
-[Claude Max「20x」只适用于 5 小时窗口](https://reddit.com/r/Claude/comments/1w38v98) | 1,302分/176评论 | Reddit
+| 信号 | 热度 | 来源 |
+|---|---|---|
+| Please, stop sending me slop | 1,593分/449评论 | Reddit |
+| Gemini 在我的邮件里「失控」 | 988分/197评论 | Reddit |
+| Claude Max「20x」只适用于 5 小时窗口 | 1,302分/176评论 | Reddit |
 
 #### 这个机会怎么变现
 
@@ -48,12 +50,13 @@ AI slop 帖（1,593 分）和 Gemini rogue 帖（988 分）揭示了一个被忽
 
 ### 赛道 C：端侧/自托管
 
-信号 | 热度 | 来源
-[My first Homelab](https://reddit.com/r/homelab/comments/1w258uf) | 1,945分/104评论 | Reddit
-[3 个周末搭好 NAS](https://reddit.com/r/homelab/comments/1w4ur29) | 1,847分/93评论 | Reddit
-[15 美元网卡变 10GbE](https://reddit.com/r/homelab/comments/1w3r8tp) | 1,005分/148评论 | Reddit
-[104GB Qwen 跑在 48GB Mac](https://news.ycombinator.com/item?id=49524447) | 230分/115评论 | HN
-[RTX 3070 8GB 跑 MiniMax H3 电影镜头](https://reddit.com/r/LocalLLaMA/comments/1w6nwp4) | 1,122分/191评论 | Reddit
+| 信号 | 热度 | 来源 |
+|---|---|---|
+| My first Homelab | 1,945分/104评论 | Reddit |
+| 3 个周末搭好 NAS | 1,847分/93评论 | Reddit |
+| 15 美元网卡变 10GbE | 1,005分/148评论 | Reddit |
+| 104GB Qwen 跑在 48GB Mac | 230分/115评论 | HN |
+| RTX 3070 8GB 跑 MiniMax H3 电影镜头 | 1,122分/191评论 | Reddit |
 
 #### 这个机会怎么变现
 
@@ -67,15 +70,16 @@ AI slop 帖（1,593 分）和 Gemini rogue 帖（988 分）揭示了一个被忽
 
 ### Reddit 高分帖：用户痛什么、赞什么
 
-帖子 | 热度 | 信号
-[Fable 5.1 vs GPT-6 Astra：3D Blender 差距](https://reddit.com/r/StableDiffusion/comments/1w7ppcj) | 1,958/268 | AI 创作质量对比
-[AI bros 用 AI 造假画](https://reddit.com/r/antiai/comments/1w52a61) | 1,951/241 | 反 AI 情绪
-[My first Homelab](https://reddit.com/r/homelab/comments/1w258uf) | 1,945/104 | 自托管省钱驱动
-[3 个周末搭好 NAS](https://reddit.com/r/homelab/comments/1w4ur29) | 1,847/93 | 硬件 DIY 热情
-[每天通勤 45 分钟只为坐 Zoom](https://reddit.com/r/careerguidance/comments/1w58m3q) | 1,720/230 | RTO 反弹
-[Please, stop sending me slop](https://reddit.com/r/sysadmin/comments/1w6itlo) | 1,593/449 | AI 产出质量焦虑
-[AI slop 占领 Snapchat](https://reddit.com/r/ChatGPT/comments/1w33svd) | 1,452/139 | AI 内容污染
-[怎么培训外聘的人](https://reddit.com/r/careerguidance/comments/1w68qw1) | 1,354/785 | 职场价值重估
+| 帖子 | 热度 | 信号 |
+|---|---|---|
+| Fable 5.1 vs GPT-6 Astra：3D Blender 差距 | 1,958/268 | AI 创作质量对比 |
+| AI bros 用 AI 造假画 | 1,951/241 | 反 AI 情绪 |
+| My first Homelab | 1,945/104 | 自托管省钱驱动 |
+| 3 个周末搭好 NAS | 1,847/93 | 硬件 DIY 热情 |
+| 每天通勤 45 分钟只为坐 Zoom | 1,720/230 | RTO 反弹 |
+| Please, stop sending me slop | 1,593/449 | AI 产出质量焦虑 |
+| AI slop 占领 Snapchat | 1,452/139 | AI 内容污染 |
+| 怎么培训外聘的人 | 1,354/785 | 职场价值重估 |
 
 #### 高分帖告诉你要做什么产品
 
@@ -85,12 +89,13 @@ AI slop 帖（1,593 分）和 Gemini rogue 帖（988 分）揭示了一个被忽
 
 ### HN 本周：技术风向向
 
-帖子 | 热度 | 信号
-[Gemini 3.8 Flash and 3.8 Flash Cyber](https://news.ycombinator.com/item?id=49537553) | 1,151/661 | Google 新模型发布
-[Muse Spark 1.3（AI 音乐）](https://news.ycombinator.com/item?id=49541256) | 683/447 | AI 音乐生成赛道
-[104GB Qwen 跑在 48GB Mac](https://news.ycombinator.com/item?id=49524447) | 230/115 | 端侧大模型推理
-[Launch HN：Nori Robotics 人形机器人](https://news.ycombinator.com/item?id=49525153) | 200/66 | 具身智能/机器人
-[Weedout Safari 扩展](https://news.ycombinator.com/item?id=49528895) | 182/81 | AI 内容过滤
+| 帖子 | 热度 | 信号 |
+|---|---|---|
+| Gemini 3.8 Flash and 3.8 Flash Cyber | 1,151/661 | Google 新模型发布 |
+| Muse Spark 1.3（AI 音乐） | 683/447 | AI 音乐生成赛道 |
+| 104GB Qwen 跑在 48GB Mac | 230/115 | 端侧大模型推理 |
+| Launch HN：Nori Robotics 人形机器人 | 200/66 | 具身智能/机器人 |
+| Weedout Safari 扩展 | 182/81 | AI 内容过滤 |
 
 #### HN 是技术风向的先行指标
 
@@ -98,11 +103,12 @@ HN 本周信号：端侧推理（104GB Qwen 跑在 48GB Mac，230 分）、AI �
 
 ### IH 本周：独立开发者真实状态
 
-帖子 | 热度 | 信号
-[Shopify 应用 72 天获批、现在卡住](https://www.indiehackers.com/post/df8505401d) | 102/110 | 平台审核是真实瓶颈
-[上线网站测试「是否有人为你的项目付费」](https://www.indiehackers.com/post/fc1b3c7249) | 55/53 | 验证先于构建
-[产品做完了，开始怀疑用户会不会用](https://www.indiehackers.com/post/8a6682dba3) | 52/109 | PMF 焦虑
-[我解雇了所有客户搬去曼谷，第一个月 $1,511](https://www.indiehackers.com/post/9a3b7adc5b) | 13/29 | 地理套利仍可行
+| 帖子 | 热度 | 信号 |
+|---|---|---|
+| Shopify 应用 72 天获批、现在卡住 | 102/110 | 平台审核是真实瓶颈 |
+| 上线网站测试「是否有人为你的项目付费」 | 55/53 | 验证先于构建 |
+| 产品做完了，开始怀疑用户会不会用 | 52/109 | PMF 焦虑 |
+| 我解雇了所有客户搬去曼谷，第一个月 $1,511 | 13/29 | 地理套利仍可行 |
 
 #### IH 是「需求侧」的真实窗口
 
@@ -168,11 +174,12 @@ IH 帖子揭示了独立开发者的真实状态：平台审核是真实瓶颈�
 
 ### IH 本周真实案例验证
 
-案例 | 数据 | 验证了什么
-[Shopify 应用 72 天获批、现在卡住](https://www.indiehackers.com/post/df8505401d) | 102分/110评论 | 平台审核是真实瓶颈
-[上线网站测试「是否有人为你的项目付费」](https://www.indiehackers.com/post/fc1b3c7249) | 55分/53评论 | 验证先于构建
-[产品做完了，开始怀疑用户会不会用](https://www.indiehackers.com/post/8a6682dba3) | 52分/109评论 | PMF 焦虑普遍存在
-[我解雇了所有客户搬去曼谷，第一个月 $1,511](https://www.indiehackers.com/post/9a3b7adc5b) | 13分/29评论 | 地理套利仍可行
+| 案例 | 数据 | 验证了什么 |
+|---|---|---|
+| Shopify 应用 72 天获批、现在卡住 | 102分/110评论 | 平台审核是真实瓶颈 |
+| 上线网站测试「是否有人为你的项目付费」 | 55分/53评论 | 验证先于构建 |
+| 产品做完了，开始怀疑用户会不会用 | 52分/109评论 | PMF 焦虑普遍存在 |
+| 我解雇了所有客户搬去曼谷，第一个月 $1,511 | 13分/29评论 | 地理套利仍可行 |
 
 #### 每个案例对开发者的借鉴
 
@@ -230,10 +237,11 @@ IH 帖子揭示了独立开发者的真实状态：平台审核是真实瓶颈�
 
 ### PH 本周新品已验证的付费模式
 
-产品 | 票数 | 品类 | 为什么能收钱
-[Diet Claude](https://www.producthunt.com/products/diet-claude) | 422票 | AI 成本管理 | 用量提醒+预算控制
-[Navigara](https://www.producthunt.com/products/navigara) | 292票 | AI 支出分析 | 支出→路线图可视化
-[Video Agent by Fotor](https://www.producthunt.com/products/video-agent-by-fotor) | 378票 | AI 视频生成 | 按生成量付费
+| 产品 | 票数 | 品类 | 为什么能收钱 |
+|---|---|---|---|
+| Diet Claude | 422票 | AI 成本管理 | 用量提醒+预算控制 |
+| Navigara | 292票 | AI 支出分析 | 支出→路线图可视化 |
+| Video Agent by Fotor | 378票 | AI 视频生成 | 按生成量付费 |
 
 #### 三个成功故事的底层资产
 

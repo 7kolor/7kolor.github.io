@@ -110,8 +110,8 @@ So we did not rest the call on that alone. The load-bearing evidence is the next
 **Recommendation**:
 
 1. **Do not write a product.** Do ** step zero** first — turn the price ranges in this week's threads into a public, searchable "quote baseline table" (by trade × region × model). It costs a few hours.
-1. **Tighten the pass bar to: within two weeks, at least 3 substantive inquiries, and at least 1 that proactively asks "can it cover other trades too?"** Below that, kill it — because the ** zero-tool-demand** evidence is already hard.
-1. **If you insist on software, the entry point must save contractors money** (quote faster and more accurately, fewer reworks) — not help homeowners push prices down. ** Get the direction wrong and you please nobody**: homeowners are one-off buyers with almost no repeat purchase, while contractors have every incentive to resist transparency.
+2. **Tighten the pass bar to: within two weeks, at least 3 substantive inquiries, and at least 1 that proactively asks "can it cover other trades too?"** Below that, kill it — because the ** zero-tool-demand** evidence is already hard.
+3. **If you insist on software, the entry point must save contractors money** (quote faster and more accurately, fewer reworks) — not help homeowners push prices down. ** Get the direction wrong and you please nobody**: homeowners are one-off buyers with almost no repeat purchase, while contractors have every incentive to resist transparency.
 
 ## II. Three Filters for Telling Real Signals from Noise
 
@@ -369,37 +369,50 @@ Note: revenue figures are self-reported and unverified — discount them. Produc
 
 The earners — focus on why each one worked:
 
- Case  | Numbers (self-reported, discount them)  | Why it works  | What you can copy
- Supplement DTC store for sale (1x3fp8l)  | $30K AUD lifetime revenue / 14 active subscriptions / **about $423 MRR**  | **The most instructive one**: $30K lifetime revenue sounds sexy until you break it down — 14 subscriptions, about $423 MRR. The poster says the store launched 2026-04-11 and got there in about six months on Meta ads: 3.2% conversion, 500+ orders, 700 emails. ** Note: the post is a store-sale ad in r/dropshipping** — the poster is selling the store, so the numbers carry ** a motive to inflate the valuation**  | **DTC revenue ≠ MRR; the valuation logic differs by 5–10x.** For any “I did $X in revenue” claim, ask first: how many subscriptions? What's retention?
- A 3.5-year-old app in r/SaaS (1x5wp6n)  | First year $100k lifetime → peak around $6k MRR → **about $3,200/mo now**  | **A rare curve that includes the decline**: in their words, “It's now around $3200 for 3.5 year old app. In our first year we did $100k in total revenue and later on touched like $6k MRR” — **an open admission of decline**. More useful than any curve that only goes up  | The real shape of an old product is ** a slow decay after the peak**. Plan on “half the peak after three and a half years” rather than on a growth curve.
- A first Mac app (1x5392l)  | Self-reported “just past $10k revenue, launched in March”  | An indie developer's ** positive sample**: one platform, clear payment, $10k in seven months  | Launch date + platform + revenue — all three, or it's a story, not data
- A subscription portfolio (1x6uixw)  | Claims **$100k+ MRR**  | Challenged as a course-seller, the poster hit back: “our own subscription apps are doing over $100k MRR today” — **but the comments didn't buy it**: of 26 comments, 3 are negative. The top comment (6 points) says flat out, “The ‘app sits in our developer account’ part is where I'd stop reading.” Others: “handing over the app code... is borderline insane” (3 points) and “Very nice AI-generated responses by the way, opus 5.5?” (2 points, implying the poster used AI to write replies). ** This is a self-report that got challenged on the spot — and the challenges won**  | If you want to sell “teaching people to build products,” have verifiable first-party numbers first — otherwise you'll drown in the same challenges. ** Note**: this read comes from going through all 26 comments by hand.
- Pancake ([PH](https://www.producthunt.com/products/pancake))  | Very high attention this week  | Positioned as ** the Vercel of GTM**— engineering and platformizing go-to-market, using a PaaS metaphor developers already understand to cut the cost of comprehension.  | **Evidence of attention, not of revenue.** What's copyable is the narrative structure: “turn some manual function into a deployable platform.”
- OpenCode 2.0 ([PH](https://www.producthunt.com/products/opencode) / [HN](https://news.ycombinator.com/item?id=50094994))  | **Climbing on both PH and HN the same day**  | **Cross-platform resonance** is the strongest signal shape this week: the same product rising independently on PH and HN means demand doesn't depend on one community's taste. ** But the heat isn't uniform inside**: one of the top comments on the 884-point thread asks, “Didn't OpenCode rename to Crush? The original dev went off to a new project. Where did this come from? Is it a fork? Who's behind it?” — **high heat on the same product mixed with doubts about governance and provenance**. The same week on HN: “Major security regression merged into OpenCode V2” ([50075319](https://news.ycombinator.com/item?id=50075319), 16 points / 9 comments) and “OpenCode Hacked. Keys Stolen” ([50133287](https://news.ycombinator.com/item?id=50133287), 5 points / 0 comments) — **the latter two are far too cold to use as high-heat samples**; they only serve as a side note that security risk in this tool category is surfacing.  | Launch on PH + HN together; the audiences overlap without being identical, and resonance beats a single high score. But ** resonance isn't reputation** — read what the comments on a high-scoring HN thread are asking. If the top comments ask “who are you and where did this come from,” then ** the heat bought attention, not trust**
+| Case | Numbers (self-reported, discount them) | Why it works | What you can copy |
+|---|---|---|---|
+| Supplement DTC store for sale (1x3fp8l) | $30K AUD lifetime revenue / 14 active subscriptions / about $423 MRR** | The most instructive one**: $30K lifetime revenue sounds sexy until you break it down — 14 subscriptions, about $423 MRR. The poster says the store launched 2026-04-11 and got there in about six months on Meta ads: 3.2% conversion, 500+ orders, 700 emails. Note: the post is a store-sale ad in r/dropshipping** — the poster is selling the store, so the numbers carry a motive to inflate the valuation** | DTC revenue ≠ MRR; the valuation logic differs by 5–10x.** For any “I did $X in revenue” claim, ask first: how many subscriptions? What's retention? |
+| A 3.5-year-old app in r/SaaS (1x5wp6n) | First year $100k lifetime → peak around $6k MRR → about $3,200/mo now** | A rare curve that includes the decline**: in their words, “It's now around $3200 for 3.5 year old app. In our first year we did $100k in total revenue and later on touched like $6k MRR” — an open admission of decline**. More useful than any curve that only goes up | The real shape of an old product is a slow decay after the peak**. Plan on “half the peak after three and a half years” rather than on a growth curve. |
+| A first Mac app (1x5392l) | Self-reported “just past $10k revenue, launched in March” | An indie developer's positive sample**: one platform, clear payment, $10k in seven months | Launch date + platform + revenue — all three, or it's a story, not data |
+| A subscription portfolio (1x6uixw) | Claims $100k+ MRR** | Challenged as a course-seller, the poster hit back: “our own subscription apps are doing over $100k MRR today” — but the comments didn't buy it**: of 26 comments, 3 are negative. The top comment (6 points) says flat out, “The ‘app sits in our developer account’ part is where I'd stop reading.” Others: “handing over the app code... is borderline insane” (3 points) and “Very nice AI-generated responses by the way, opus 5.5?” (2 points, implying the poster used AI to write replies). This is a self-report that got challenged on the spot — and the challenges won** | If you want to sell “teaching people to build products,” have verifiable first-party numbers first — otherwise you'll drown in the same challenges. Note**: this read comes from going through all 26 comments by hand. |
+| Pancake (PH) | Very high attention this week | Positioned as the Vercel of GTM**— engineering and platformizing go-to-market, using a PaaS metaphor developers already understand to cut the cost of comprehension. | Evidence of attention, not of revenue.** What's copyable is the narrative structure: “turn some manual function into a deployable platform.” |
+| OpenCode 2.0 (PH / HN) | Climbing on both PH and HN the same day** | Cross-platform resonance** is the strongest signal shape this week: the same product rising independently on PH and HN means demand doesn't depend on one community's taste. But the heat isn't uniform inside**: one of the top comments on the 884-point thread asks, “Didn't OpenCode rename to Crush? The original dev went off to a new project. Where did this come from? Is it a fork? Who's behind it?” — high heat on the same product mixed with doubts about governance and provenance**. The same week on HN: “Major security regression merged into OpenCode V2” (50075319, 16 points / 9 comments) and “OpenCode Hacked. Keys Stolen” (50133287, 5 points / 0 comments) — the latter two are far too cold to use as high-heat samples**; they only serve as a side note that security risk in this tool category is surfacing. | Launch on PH + HN together; the audiences overlap without being identical, and resonance beats a single high score. But resonance isn't reputation** — read what the comments on a high-scoring HN thread are asking. If the top comments ask “who are you and where did this come from,” then the heat bought attention, not trust** |
 
 The crashes — focus on how to spot them early:
 
-  Crash cases · how to spot them early  Case 1 / 6 The engagement illusion
+  Crash cases · how to spot them early  Case 1 / 6
+
+##### The engagement illusion
 
  ([1x42vho](https://www.reddit.com/r/sidehustlepaglu/comments/1x42vho/), 1,022 comments): one of the hottest recruiting posts this week, and the comments are ** almost entirely bot replies and noise**. ** Lesson**: high engagement ≠ a strong signal. If the comments contain no specific people, numbers, or failures, it's noise. This one is now written into how this report filters everything.
 
-  Case 2 / 6 Six months at $0 revenue
+  Case 2 / 6
+
+##### Six months at $0 revenue
 
  (r/SaaS): “6 months in, $0 revenue. What marketing actually worked for you?” — **six months to discover distribution was never validated**, which means step zero never happened before launch. Compare with the quoting-baseline approach in section III: spend a few hours checking whether anyone asks, then write code.
 
-  Case 3 / 6 “Anyone can clone your SaaS”
+  Case 3 / 6
+
+##### “Anyone can clone your SaaS”
 
  (r/SaaS): this anxiety got amplified by AI, but ** the real problem isn't replicability, it's having no distribution moat**. Replicable but unknown = not replicable. Unreplicable but unknown = still dead.
 
-  Case 4 / 6 Free trials treated as free labor
+  Case 4 / 6
+
+##### Free trials treated as free labor
 
  (r/SaaS, titled “Free trial is free exploit ????”): a free-tier design flaw — **a free user doesn't cost zero; they cost support plus infrastructure**. There's also an ongoing r/SaaS discussion about AI costs eating margin; treat AI cost as COGS, not as a utility bill.
 
-  Case 5 / 6 A 22% increase, half the regulars gone
+  Case 5 / 6
+
+##### A 22% increase, half the regulars gone
 
  (r/smallbusiness, 1x40gbo): “I finally raised my prices after 3 years, and half my regular customers...” — **three years of no increases, then a 22% jump**. Half the regulars left, but total revenue barely moved because the rest pay more. Small, frequent increases beat one catch-up jump — directly usable if you price subscriptions.
 
-  Case 6 / 6 A whole business built on social platforms
+  Case 6 / 6
+
+##### A whole business built on social platforms
 
  (r/smallbusiness): “10 years of building a business is on social medias. 10k...” — **platform risk**. Same for indie developers: an email list and your own domain are the only distribution channels that one email can't switch off.
 

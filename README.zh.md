@@ -3,7 +3,7 @@
 <!-- FOR AI AGENTS: https://7kolor.github.io 的机器入口 — 站点导览与格式说明:
      /llms.txt · 结构化索引: /reports.json · 全部报告全文: /feed.xml (RSS) ·
      单期 Markdown 正文: /weekly/{id}/report.md（中文）与 report-en.md（英文）·
-     全站 URL 清单: /sitemap.xml。仓库开发规范见 AGENTS.md。
+     全站 URL 清单: /sitemap.xml。仓库开发规范见 agents.md。
      本注释在渲染页面中不可见，人类读者可忽略。 -->
 
 [English](README.md) | [中文](README.zh.md)

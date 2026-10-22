@@ -20,12 +20,13 @@
 
 ### Track A: AI Creation Delivery Layer
 
-Signal | Heat | Source
-[Fable 5.1 vs GPT-6 Astra：3D Blender 差距](https://reddit.com/r/StableDiffusion/comments/1w7ppcj) | 1,958分/268评论 | Reddit
-[Fable 5.1 做了个 Minecraft mod 卖 $20](https://reddit.com/r/ChatGPT/comments/1w5ftqe) | 970分/133评论 | Reddit
-[Gemini 3.8 Flash 发布](https://news.ycombinator.com/item?id=49537553) | 1,151分/661评论 | HN
-[Muse Spark 1.3（AI 音乐）](https://news.ycombinator.com/item?id=49541256) | 683分/447评论 | HN
-[Video Agent by Fotor](https://www.producthunt.com/products/video-agent-by-fotor) | 378票 | PH
+| Signal | Heat | Source |
+|---|---|---|
+| Fable 5.1 vs GPT-6 Astra：3D Blender 差距 | 1,958分/268评论 | Reddit |
+| Fable 5.1 做了个 Minecraft mod 卖 $20 | 970分/133评论 | Reddit |
+| Gemini 3.8 Flash 发布 | 1,151分/661评论 | HN |
+| Muse Spark 1.3（AI 音乐） | 683分/447评论 | HN |
+| Video Agent by Fotor | 378票 | PH |
 
 #### How to Monetize This
 
@@ -35,10 +36,11 @@ Model triple-release (Fable 5.1 / GPT-6 Astra / Gemini 3.8 Flash) ignites AI cre
 
 ### Track B: AI Governance & Quality Inspection
 
-Signal | Heat | Source
-[Please, stop sending me slop](https://reddit.com/r/sysadmin/comments/1w6itlo) | 1,593分/449评论 | Reddit
-[Gemini 在我的邮件里「失控」](https://reddit.com/r/Claude/comments/1w6f5v5) | 988分/197评论 | Reddit
-[Claude Max「20x」只适用于 5 小时窗口](https://reddit.com/r/Claude/comments/1w38v98) | 1,302分/176评论 | Reddit
+| Signal | Heat | Source |
+|---|---|---|
+| Please, stop sending me slop | 1,593分/449评论 | Reddit |
+| Gemini 在我的邮件里「失控」 | 988分/197评论 | Reddit |
+| Claude Max「20x」只适用于 5 小时窗口 | 1,302分/176评论 | Reddit |
 
 #### How to Monetize This
 
@@ -48,12 +50,13 @@ AI slop post (1,593 pts) and Gemini rogue post (988 pts) reveal an overlooked ne
 
 ### Track C: Edge / Self-Hosting
 
-Signal | Heat | Source
-[My first Homelab](https://reddit.com/r/homelab/comments/1w258uf) | 1,945分/104评论 | Reddit
-[3 个周末搭好 NAS](https://reddit.com/r/homelab/comments/1w4ur29) | 1,847分/93评论 | Reddit
-[15 美元网卡变 10GbE](https://reddit.com/r/homelab/comments/1w3r8tp) | 1,005分/148评论 | Reddit
-[104GB Qwen 跑在 48GB Mac](https://news.ycombinator.com/item?id=49524447) | 230分/115评论 | HN
-[RTX 3070 8GB 跑 MiniMax H3 电影镜头](https://reddit.com/r/LocalLLaMA/comments/1w6nwp4) | 1,122分/191评论 | Reddit
+| Signal | Heat | Source |
+|---|---|---|
+| My first Homelab | 1,945分/104评论 | Reddit |
+| 3 个周末搭好 NAS | 1,847分/93评论 | Reddit |
+| 15 美元网卡变 10GbE | 1,005分/148评论 | Reddit |
+| 104GB Qwen 跑在 48GB Mac | 230分/115评论 | HN |
+| RTX 3070 8GB 跑 MiniMax H3 电影镜头 | 1,122分/191评论 | Reddit |
 
 #### How to Monetize This
 
@@ -67,15 +70,16 @@ Self-hosted Homelab posts (1,945 / 1,847 / 1,005 pts) and edge inference posts (
 
 ### Reddit High-Score Posts: What Users Pain For, Praise For
 
-Post | Heat | Signal
-[Fable 5.1 vs GPT-6 Astra：3D Blender 差距](https://reddit.com/r/StableDiffusion/comments/1w7ppcj) | 1,958/268 | AI creation quality comparison
-[AI bros 用 AI 造假画](https://reddit.com/r/antiai/comments/1w52a61) | 1,951/241 | Anti-AI sentiment
-[My first Homelab](https://reddit.com/r/homelab/comments/1w258uf) | 1,945/104 | Self-hosted saving-driven
-[3 个周末搭好 NAS](https://reddit.com/r/homelab/comments/1w4ur29) | 1,847/93 | Hardware DIY enthusiasm
-[每天通勤 45 分钟只为坐 Zoom](https://reddit.com/r/careerguidance/comments/1w58m3q) | 1,720/230 | RTO backlash
-[Please, stop sending me slop](https://reddit.com/r/sysadmin/comments/1w6itlo) | 1,593/449 | AI output quality anxiety
-[AI slop 占领 Snapchat](https://reddit.com/r/ChatGPT/comments/1w33svd) | 1,452/139 | AI content pollution
-[怎么培训外聘的人](https://reddit.com/r/careerguidance/comments/1w68qw1) | 1,354/785 | Career value reassessment
+| Post | Heat | Signal |
+|---|---|---|
+| Fable 5.1 vs GPT-6 Astra：3D Blender 差距 | 1,958/268 | AI creation quality comparison |
+| AI bros 用 AI 造假画 | 1,951/241 | Anti-AI sentiment |
+| My first Homelab | 1,945/104 | Self-hosted saving-driven |
+| 3 个周末搭好 NAS | 1,847/93 | Hardware DIY enthusiasm |
+| 每天通勤 45 分钟只为坐 Zoom | 1,720/230 | RTO backlash |
+| Please, stop sending me slop | 1,593/449 | AI output quality anxiety |
+| AI slop 占领 Snapchat | 1,452/139 | AI content pollution |
+| 怎么培训外聘的人 | 1,354/785 | Career value reassessment |
 
 #### Analysis: High-Score Posts Tell You What Products to Build
 
@@ -85,12 +89,13 @@ This week's Reddit high-score posts focus on three needs: ① AI creation (Fable
 
 ### HN This Week: Technology Trends
 
-Post | Heat | Signal
-[Gemini 3.8 Flash and 3.8 Flash Cyber](https://news.ycombinator.com/item?id=49537553) | 1,151/661 | Google new model release
-[Muse Spark 1.3（AI 音乐）](https://news.ycombinator.com/item?id=49541256) | 683/447 | AI music generation track
-[104GB Qwen 跑在 48GB Mac](https://news.ycombinator.com/item?id=49524447) | 230/115 | Edge large model inference
-[Launch HN：Nori Robotics 人形机器人](https://news.ycombinator.com/item?id=49525153) | 200/66 | Embodied AI / robotics
-[Weedout Safari 扩展](https://news.ycombinator.com/item?id=49528895) | 182/81 | AI content filtering
+| Post | Heat | Signal |
+|---|---|---|
+| Gemini 3.8 Flash and 3.8 Flash Cyber | 1,151/661 | Google new model release |
+| Muse Spark 1.3（AI 音乐） | 683/447 | AI music generation track |
+| 104GB Qwen 跑在 48GB Mac | 230/115 | Edge large model inference |
+| Launch HN：Nori Robotics 人形机器人 | 200/66 | Embodied AI / robotics |
+| Weedout Safari 扩展 | 182/81 | AI content filtering |
 
 #### Analysis: HN is a Leading Indicator of Technology Trends
 
@@ -98,11 +103,12 @@ HN this week signals: edge inference (104GB Qwen on 48GB Mac, 230 pts), AI music
 
 ### IH This Week: Real State of Indie Devs
 
-Post | Heat | Signal
-[Shopify 应用 72 天获批、现在卡住](https://www.indiehackers.com/post/df8505401d) | 102/110 | Platform review is a real bottleneck
-[上线网站测试「是否有人为你的项目付费」](https://www.indiehackers.com/post/fc1b3c7249) | 55/53 | Validate before building
-[产品做完了，开始怀疑用户会不会用](https://www.indiehackers.com/post/8a6682dba3) | 52/109 | PMF anxiety
-[我解雇了所有客户搬去曼谷，第一个月 $1,511](https://www.indiehackers.com/post/9a3b7adc5b) | 13/29 | Geographic arbitrage still works
+| Post | Heat | Signal |
+|---|---|---|
+| Shopify 应用 72 天获批、现在卡住 | 102/110 | Platform review is a real bottleneck |
+| 上线网站测试「是否有人为你的项目付费」 | 55/53 | Validate before building |
+| 产品做完了，开始怀疑用户会不会用 | 52/109 | PMF anxiety |
+| 我解雇了所有客户搬去曼谷，第一个月 $1,511 | 13/29 | Geographic arbitrage still works |
 
 #### Analysis: IH is the Real Window of 'Demand Side'
 
@@ -168,11 +174,12 @@ Root cause: Hybrid work formalization + internal promotion mechanism failure. Co
 
 ### IH This Week Real Case Validation
 
-Case | Data | What It Validates
-[Shopify 应用 72 天获批、现在卡住](https://www.indiehackers.com/post/df8505401d) | 102分/110评论 | Platform review is a real bottleneck
-[上线网站测试「是否有人为你的项目付费」](https://www.indiehackers.com/post/fc1b3c7249) | 55分/53评论 | Validate before building
-[产品做完了，开始怀疑用户会不会用](https://www.indiehackers.com/post/8a6682dba3) | 52分/109评论 | PMF anxiety is universal
-[我解雇了所有客户搬去曼谷，第一个月 $1,511](https://www.indiehackers.com/post/9a3b7adc5b) | 13分/29评论 | Geographic arbitrage still works
+| Case | Data | What It Validates |
+|---|---|---|
+| Shopify 应用 72 天获批、现在卡住 | 102分/110评论 | Platform review is a real bottleneck |
+| 上线网站测试「是否有人为你的项目付费」 | 55分/53评论 | Validate before building |
+| 产品做完了，开始怀疑用户会不会用 | 52分/109评论 | PMF anxiety is universal |
+| 我解雇了所有客户搬去曼谷，第一个月 $1,511 | 13分/29评论 | Geographic arbitrage still works |
 
 #### Analysis: Lessons for Devs from Each Case
 
@@ -230,10 +237,11 @@ This risk is more insidious: not a sudden outage or rerouting, but chronic, defa
 
 ### PH This Week New Products' Validated Payment Models
 
-Product | Votes | Category | Why It Can Charge
-[Diet Claude](https://www.producthunt.com/products/diet-claude) | 422票 | AI Cost Management | Usage alerts + budget control
-[Navigara](https://www.producthunt.com/products/navigara) | 292票 | AI Spend Analytics | Spend→roadmap visualization
-[Video Agent by Fotor](https://www.producthunt.com/products/video-agent-by-fotor) | 378票 | AI Video Generation | Pay-per-generation
+| Product | Votes | Category | Why It Can Charge |
+|---|---|---|---|
+| Diet Claude | 422票 | AI Cost Management | Usage alerts + budget control |
+| Navigara | 292票 | AI Spend Analytics | Spend→roadmap visualization |
+| Video Agent by Fotor | 378票 | AI Video Generation | Pay-per-generation |
 
 #### Three Success Stories' Underlying Assets
 

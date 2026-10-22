@@ -109,31 +109,37 @@ def retarget_toggle(html: str, lang: str, base: Path) -> str:
 
 
 _SKIP_TAGS = {"script", "style", "svg", "nav", "header", "footer", "button"}
-_HEADING_PREFIX = {"h1": "# ", "h2": "## ", "h3": "### ", "h4": "#### "}
+_HEADING_PREFIX = {"h1": "# ", "h2": "## ", "h3": "### ", "h4": "#### ",
+                     "h5": "##### ", "h6": "###### "}
 
 
 class _MdConverter(HTMLParser):
-    """Minimal HTML -> Markdown converter for report bodies.
+    """HTML -> Markdown converter for report bodies (zero-dependency).
 
-    Supports: h1-h4, p, ul/ol/li (nested), strong/b, em/i, a[href],
-    blockquote, code/pre, br. Unknown block tags are traversed (content
-    kept); tables degrade to plain-text rows. Deliberately small: report
-    bodies use a limited, consistent markup subset.
+    Supports: h1-h6, p, ul/ol/li (nested, real ol numbering), strong/b,
+    em/i, a[href], img[alt], blockquote (multi-paragraph), code/pre, br,
+    and tables as GitHub-Flavoured Markdown (header row + --- separator).
+    Unknown block tags are traversed (content kept). Known limits:
+    text trailing a nested list stays at list-margin (structure loss only),
+    and deeply mixed inline markup may keep delimiter pairs unbalanced.
     """
 
     def __init__(self):
         super().__init__(convert_charrefs=True)
         self.out = []
         self.stack = []          # open tag names, for nesting context
-        self.list_stack = []     # 'ul' / 'ol' per nesting level
+        self.list_stack = []     # ("ul"|"ol", running counter) per level
         self.href = None         # open <a> href
         self.pre = False         # inside <pre>
-        self.in_heading = None   # h1-h4 tag name while inside it
-        self.in_li = False
-        self.cell_sep = False    # inside table row: separate cells
+        self.in_heading = None   # h1-h6 tag name while inside it
+        self.in_bq = 0           # blockquote nesting depth
+        self.table = None        # {"rows": [...], "row": [...], "cell": str}
 
     def _emit(self, s):
-        self.out.append(s)
+        if self.table is not None:
+            self.table["cell"] += s
+        else:
+            self.out.append(s)
 
     def _newline(self, n=1):
         text = "".join(self.out)
@@ -146,6 +152,8 @@ class _MdConverter(HTMLParser):
         self.stack.append(tag)
         if tag in _SKIP_TAGS:
             return
+        if self.table is not None and tag not in ("table", "tr", "td", "th"):
+            return  # inside a table cell only text (and nested cell tags) counts
         if tag in _HEADING_PREFIX:
             self._newline(2)
             self._emit(_HEADING_PREFIX[tag])
@@ -155,14 +163,18 @@ class _MdConverter(HTMLParser):
         elif tag == "br":
             self._newline(1)
         elif tag in ("ul", "ol"):
-            self.list_stack.append(tag)
+            self.list_stack.append([tag, 0])
             self._newline(1)
         elif tag == "li":
             self._newline(1)
             indent = "  " * max(0, len(self.list_stack) - 1)
-            bullet = "-" if (self.list_stack and self.list_stack[-1] == "ul") else "1."
-            self._emit(f"{indent}{bullet} ")
-            self.in_li = True
+            if self.list_stack:
+                kind, n = self.list_stack[-1]
+                self.list_stack[-1][1] = n + 1
+                marker = "-" if kind == "ul" else f"{n + 1}."
+            else:
+                marker = "-"
+            self._emit(f"{indent}{marker} ")
         elif tag in ("strong", "b"):
             self._emit("**")
         elif tag in ("em", "i"):
@@ -171,9 +183,14 @@ class _MdConverter(HTMLParser):
             self.href = attrs.get("href")
             if self.href:
                 self._emit("[")
+        elif tag == "img":
+            src = attrs.get("src", "")
+            alt = (attrs.get("alt") or "").replace("]", "")
+            self._emit(f"![{alt}]({src})" if src else alt)
         elif tag == "blockquote":
             self._newline(2)
             self._emit("> ")
+            self.in_bq += 1
         elif tag == "pre":
             self._newline(2)
             self._emit("```\n")
@@ -181,15 +198,15 @@ class _MdConverter(HTMLParser):
         elif tag == "code":
             if not self.pre:
                 self._emit("`")
-        elif tag in ("td", "th"):
-            if self.cell_sep:
-                self._emit(" | ")
-            self.cell_sep = True
-        elif tag == "tr":
-            self._newline(1)
-            self.cell_sep = False
         elif tag == "table":
             self._newline(2)
+            self.table = {"rows": [], "row": None, "cell": ""}
+        elif tag == "tr":
+            if self.table is not None:
+                self.table["row"] = []
+        elif tag in ("td", "th"):
+            if self.table is not None and self.table["row"] is not None:
+                self.table["cell"] = ""
         # other tags: traverse children, keep text
 
     def handle_endtag(self, tag):
@@ -206,8 +223,6 @@ class _MdConverter(HTMLParser):
             if self.list_stack:
                 self.list_stack.pop()
             self._newline(1)
-        elif tag == "li":
-            self.in_li = False
         elif tag in ("strong", "b"):
             self._emit("**")
         elif tag in ("em", "i"):
@@ -217,6 +232,7 @@ class _MdConverter(HTMLParser):
                 self._emit(f"]({self.href})")
             self.href = None
         elif tag == "blockquote":
+            self.in_bq = max(0, self.in_bq - 1)
             self._newline(2)
         elif tag == "pre":
             self._emit("\n```")
@@ -225,18 +241,47 @@ class _MdConverter(HTMLParser):
         elif tag == "code":
             if not self.pre:
                 self._emit("`")
-        elif tag == "table":
-            self._newline(2)
+        elif tag in ("td", "th") and self.table is not None:
+            if self.table["row"] is not None:
+                cell = " ".join(self.table["cell"].split())
+                cell = cell.replace("|", "\\|")
+                self.table["row"].append(cell)
+        elif tag == "tr" and self.table is not None:
+            if self.table["row"] is not None:
+                self.table["rows"].append(self.table["row"])
+                self.table["row"] = None
+        elif tag == "table" and self.table is not None:
+            rows = self.table["rows"]
+            self.table = None
+            self._flush_table(rows)
+        # other tags: nothing special
+
+    def _flush_table(self, rows):
+        rows = [r for r in rows if r]
+        if not rows:
+            return
+        def fmt(r):
+            return "| " + " | ".join(r) + " |"
+        self.out.append(fmt(rows[0]) + "\n")
+        self.out.append("|" + "---|" * len(rows[0]) + "\n")
+        for r in rows[1:]:
+            self.out.append(fmt(r) + "\n")
+        self._newline(1)
 
     def handle_startendtag(self, tag, attrs):
         if tag == "br":
             self._newline(1)
+        elif tag == "img":
+            self.handle_starttag(tag, attrs)
 
     def handle_data(self, data):
         if any(t in _SKIP_TAGS for t in self.stack):
             return
         if self.pre or self.in_heading:
             self._emit(data)
+        elif self.in_bq:
+            # keep multi-paragraph quotes quoted: prefix every line
+            self._emit("\n> ".join(data.split("\n")))
         else:
             self._emit(re.sub(r"\s+", " ", data))
 
@@ -245,7 +290,6 @@ class _MdConverter(HTMLParser):
         text = re.sub(r"[ \t]+\n", "\n", text)
         text = re.sub(r"\n{3,}", "\n\n", text)
         return text.strip() + "\n"
-
 
 def html_to_markdown(html: str) -> str:
     """Convert a report-body HTML fragment to Markdown (zero-dependency)."""
@@ -308,6 +352,27 @@ def build(item_dir: Path) -> None:
             out = re.sub(r'<meta name="description" content="[^"]*">',
                          f'<meta name="description" content="{desc[lang]}">', out, count=1)
         out = out.replace("<body>", f'<body data-lang-page="{lang}">', 1)
+        # head-meta must speak the page's language (review B1): rebuild the
+        # AUTO:head-meta block with this lang's titles/desc/locale
+        try:
+            from build_site import build_head_meta, replace_block
+            stub = {
+                "id": meta.get("id", item_dir.name) if meta_path.exists() else item_dir.name,
+                "url": "/" + base.as_posix().strip("/") + "/",
+                "date": (meta.get("date", "") if meta_path.exists() else ""),
+                "title_zh": titles_meta.get("zh") or label_zh,
+                "title_en": titles_meta.get("en") or label_en,
+                "desc_zh": desc.get("zh") or "",
+                "desc_en": desc.get("en") or "",
+                "week_label_zh": label_zh,
+                "week_label_en": label_en,
+            }
+            refilled = replace_block(out, "head-meta",
+                                     build_head_meta(stub, lang=lang))
+            if refilled is not None:
+                out = refilled
+        except ImportError:
+            pass  # build_site unavailable (standalone use): keep copied head
         target = item_dir / f"report-{lang}.html"
         target.write_text(out, encoding="utf-8")
         print(f"built {target}")

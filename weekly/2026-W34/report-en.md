@@ -20,17 +20,18 @@ This week's community intelligence: Consensus is forming that AI coding has shif
 
 ### Top 10 Posts by Heat
 
-# | Title | Heat
-1 | [How Europe is killing makers and micro-entrepreneurs](https://news.ycombinator.com/item?id=49419237) | 3,697
-2 | [CEO fired developers to make room for AI](https://news.ycombinator.com/item?id=49458418) | 2,432
-3 | [Anthropic's best AI model struggles as cheaper tools thrive](https://news.ycombinator.com/item?id=49411102) | 2,221
-4 | [Coding expertise is going to collapse from AI reliance](https://news.ycombinator.com/item?id=49421554) | 1,646
-5 | [Why does it feel like some people live in a parallel universe?](https://reddit.com/r/ExperiencedDevs/comments/1w1q7gt) | 1,566
-6 | [Small Models Have Arrived](https://news.ycombinator.com/item?id=49466917) | 1,473
-7 | [PaymentKit — Billing that survives a processor shutdown](https://www.producthunt.com/products/paymentkit) | 675
-8 | [My app was dead. Killed free trial, doubled price → $1.6K MRR](https://reddit.com/r/appbusiness/comments/1vw950q) | 420
-9 | [One Reddit post = 415K views, 1,100 users](https://reddit.com/r/SaaS/comments/1vyvxo8) | 347
-10 | [I launched a project to see if people would pay for your IH idea](https://www.indiehackers.com/post/63fe100bf5) | 343
+| # | Title | Heat |
+|---|---|---|
+| 1 | How Europe is killing makers and micro-entrepreneurs | 3,697 |
+| 2 | CEO fired developers to make room for AI | 2,432 |
+| 3 | Anthropic's best AI model struggles as cheaper tools thrive | 2,221 |
+| 4 | Coding expertise is going to collapse from AI reliance | 1,646 |
+| 5 | Why does it feel like some people live in a parallel universe? | 1,566 |
+| 6 | Small Models Have Arrived | 1,473 |
+| 7 | PaymentKit — Billing that survives a processor shutdown | 675 |
+| 8 | My app was dead. Killed free trial, doubled price → $1.6K MRR | 420 |
+| 9 | One Reddit post = 415K views, 1,100 users | 347 |
+| 10 | I launched a project to see if people would pay for your IH idea | 343 |
 
 ### Hot Post Analysis
 
@@ -58,12 +59,13 @@ Brazilian developer Parceladinho's post received 124 comments, sharing the turna
 
 ### Hot Products This Week
 
-Product | Description | Votes | Source
-[PaymentKit](https://www.producthunt.com/products/paymentkit) | Billing that survives a processor shutdown | 457 | PH
-[x1](https://www.producthunt.com/products/x1-2) | Lovable for iPhone apps. From idea to App Store | 500 | PH
-[Skydive](https://www.producthunt.com/products/skydive) | Build cloud agents that work across your tools | 399 | PH
-[Diet Claude](https://www.producthunt.com/products/diet-claude) | Never get blindsided by Claude's usage limits again | 411 | PH
-[Expertise AI](https://www.producthunt.com/products/expertise-ai-6) | Turn your GTM skills into recurring revenue | 366 | PH
+| Product | Description | Votes | Source |
+|---|---|---|---|
+| PaymentKit | Billing that survives a processor shutdown | 457 | PH |
+| x1 | Lovable for iPhone apps. From idea to App Store | 500 | PH |
+| Skydive | Build cloud agents that work across your tools | 399 | PH |
+| Diet Claude | Never get blindsided by Claude's usage limits again | 411 | PH |
+| Expertise AI | Turn your GTM skills into recurring revenue | 366 | PH |
 
 ### Product Spotlight
 
@@ -85,12 +87,13 @@ Skydive received 399 votes, focusing on 'building cloud agents that work across 
 
 ### Good News This Week
 
-Case | Key Metrics | Source
-[Killed free trial, doubled price](https://reddit.com/r/appbusiness/comments/1vw950q) | $3k Revenue, $1.6k MRR, 23 days | r/appbusiness
-[One Reddit post = 415K views](https://reddit.com/r/SaaS/comments/1vyvxo8) | 1,100 users, 30 subscribers | r/SaaS
-[1.8M Reddit views, #6 paid travel app](https://reddit.com/r/SideProject/comments/1w11z6r) | 5x traffic growth | r/SideProject
-[Job directory site crosses $100K](https://www.indiehackers.com/post/60da9ba8f2) | $100K revenue | IH
-[Made $1,150 after 4 failures](https://reddit.com/r/SaaS/comments/1vy3sf3) | SEO + social media | r/SaaS
+| Case | Key Metrics | Source |
+|---|---|---|
+| Killed free trial, doubled price | $3k Revenue, $1.6k MRR, 23 days | r/appbusiness |
+| One Reddit post = 415K views | 1,100 users, 30 subscribers | r/SaaS |
+| 1.8M Reddit views, #6 paid travel app | 5x traffic growth | r/SideProject |
+| Job directory site crosses $100K | $100K revenue | IH |
+| Made $1,150 after 4 failures | SEO + social media | r/SaaS |
 
 ### Success Stories
 
