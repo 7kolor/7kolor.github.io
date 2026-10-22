@@ -91,28 +91,28 @@
 
 | 案例 | 真实数据 | 评论区在干嘛 | 你该带走 |
 |---|---|---|---|
-| Solo iOS 语音 TTS | 28 天 $4,600 · MRR $852 | 评论区已在聊竞品 | 离线强功能能撑起订阅溢价 |
-| 童书 App | 首月 $151 | 评论区求扩量实操 | 首个 $100 是里程碑，不=规模 |
-| 自用「习惯」App | $1,559 | 76 条在聊「自用产品边界」 | 解决自己真痛点=真需求 |
-| Tally（表单） | $5M ARR / 11 人 · 靠 AEO | 评论区求 SEO/AEO 实操 | 用 AEO 占 LLM 回答里的词 |
-| 6 个月做到 $1K MRR | $1K MRR · 零付费投流 | SEO+Reddit 反馈环；评论求证可复制性 | 尽早发布，反馈反哺 SEO |
-| 内部工具 17 天 | $1,000+ / 17 天 | 作者本人回复 | 做自己痛点的工具，起量最快 |
+| [Solo iOS 语音 TTS](https://www.reddit.com/r/appbusiness/comments/1wd3z8k) | 28 天 $4,600 · MRR $852 | 评论区已在聊竞品 | 离线强功能能撑起订阅溢价 |
+| [童书 App](https://www.reddit.com/r/appbusiness/comments/1w9mryg) | 首月 $151 | 评论区求扩量实操 | 首个 $100 是里程碑，不=规模 |
+| [自用「习惯」App](https://www.reddit.com/r/appbusiness/comments/1wf3bix) | $1,559 | 76 条在聊「自用产品边界」 | 解决自己真痛点=真需求 |
+| [Tally（表单）](https://www.reddit.com/r/SaaS/comments/1wime93) | $5M ARR / 11 人 · 靠 AEO | 评论区求 SEO/AEO 实操 | 用 AEO 占 LLM 回答里的词 |
+| [6 个月做到 $1K MRR](https://www.reddit.com/r/SaaS/comments/1wf4u3p) | $1K MRR · 零付费投流 | SEO+Reddit 反馈环；评论求证可复制性 | 尽早发布，反馈反哺 SEO |
+| [内部工具 17 天](https://www.reddit.com/r/SaaS/comments/1wfyj8l) | $1,000+ / 17 天 | 作者本人回复 | 做自己痛点的工具，起量最快 |
 
 ### 更利基 / 更高价，也有人下单
 
 | 案例 | 数据 | 你该带走 |
 |---|---|---|
-| 最高价计划 $399/月首单 | $399/月 | 敢设高价还成交=强 PMF 信号 |
-| 开发 1 年拿到首单 | 首单 | 可配置保真>提示词 |
-| 贺卡工具 首月 | $1,186（零营销） | 简单利基 > 大而全 |
-| 游戏当 SaaS 订阅 | >$1K 订阅 | 非传统品类也可订阅定价 |
+| [最高价计划 $399/月首单](https://www.reddit.com/r/SaaS/comments/1wfwjoa) | $399/月 | 敢设高价还成交=强 PMF 信号 |
+| [开发 1 年拿到首单](https://www.reddit.com/r/SaaS/comments/1w97h1l) | 首单 | 可配置保真>提示词 |
+| [贺卡工具 首月](https://www.reddit.com/r/microsaas/comments/1weet8f) | $1,186（零营销） | 简单利基 > 大而全 |
+| [游戏当 SaaS 订阅](https://www.reddit.com/r/SaaS/comments/1w9qohk) | >$1K 订阅 | 非传统品类也可订阅定价 |
 
 ### 两类「翻车」，比成功更值得做镜子
 
 | 情况 | 断在哪 | 该带走 |
 |---|---|---|
-| $2K MRR → 0 | 低估留存崩了（只盯获客） | 留存 > 获客 |
-| 0 → $3.6K MRR | 全靠社区分享、0 投流 | 内容分享可替代付费投流 |
+| [$2K MRR → 0](https://www.reddit.com/r/SaaS/comments/1wfkonp) | 低估留存崩了（只盯获客） | 留存 > 获客 |
+| [0 → $3.6K MRR](https://www.reddit.com/r/SaaS/comments/1wguk09) | 全靠社区分享、0 投流 | 内容分享可替代付费投流 |
 
 一句话：真正「受欢迎的产品」不是初始爆表漏斗，而是这一周评论区「恭喜 + 逐条求教」的那一类——它证明你真解决了别人的烦心事。把上面的真实案例当「验证有人付钱」的尺子。
 
@@ -173,25 +173,25 @@
 
 | 真实帖子 | 把它变成什么工具 |
 |---|---|
-| 供应商改银行卡，我 AP 收件箱再也不信了 | 应付账款发票防伪 / 供应商账户变更校验工具（B2B 反诈） |
-| 会计里最难给非会计解释的概念 | 会计知知识讲解 / AI 讲解器 |
-| 处理难答的技术问题怎么找答案 | 会计问答专家 / 内部知识沉淀 SaaS |
-| ERP 梦魇 | ERP 实施 / 迁移工具 |
+| [供应商改银行卡，我 AP 收件箱再也不信了](https://www.reddit.com/r/accounting/comments/1wf74ra) | 应付账款发票防伪 / 供应商账户变更校验工具（B2B 反诈） |
+| [会计里最难给非会计解释的概念](https://www.reddit.com/r/accounting/comments/1whwehd) | 会计知知识讲解 / AI 讲解器 |
+| [处理难答的技术问题怎么找答案](https://www.reddit.com/r/accounting/comments/1wjvkr2) | 会计问答专家 / 内部知识沉淀 SaaS |
+| [ERP 梦魇](https://www.reddit.com/r/accounting/comments/1wiicul) | ERP 实施 / 迁移工具 |
 
 ### 护理/医护
 
 | 真实帖子 | 工具机会 |
 |---|---|
-| 你来接这个病人，说床尾报告 | 交接班报告自动生成——护理经典痛点，SaaS 有真实付费场景 |
-| 长照临床第一周被震惊，这是正常的吗 | 护理实习 / 临床陪伴学习工具 |
-| 总被叫去上班 | 排班 / 加班管理 |
+| [你来接这个病人，说床尾报告](https://www.reddit.com/r/nursing/comments/1wh8fm2) | 交接班报告自动生成——护理经典痛点，SaaS 有真实付费场景 |
+| [长照临床第一周被震惊，这是正常的吗](https://www.reddit.com/r/nursing/comments/1wjtxjr) | 护理实习 / 临床陪伴学习工具 |
+| [总被叫去上班](https://www.reddit.com/r/nursing/comments/1whxf50) | 排班 / 加班管理 |
 
 ### 小房东
 
 | 真实帖子 | 工具机会 |
 |---|---|
-| 租客不交租、无视 | 催租 / 欠款跟踪 / 通知书生成 |
-| 租客退租后一股味散不掉 | 退房流程 / 押金核算模板 |
+| [租客不交租、无视](https://www.reddit.com/r/landlord/comments/1whmhgz) | 催租 / 欠款跟踪 / 通知书生成 |
+| [租客退租后一股味散不掉](https://www.reddit.com/r/landlord/comments/1wfbcps) | 退房流程 / 押金核算模板 |
 
 #### 三条通用判断
 
@@ -225,9 +225,9 @@
 
 | 帖子 | 评论区信号 |
 |---|---|
-| 蜜月假被收回，该辞职吗 | 最高赞不是「快走」，而是「别主动辞」——发邮件抄 HR、说明行程已预付不可退，让他们开口让你拿失业金；自己护住钱。 |
-| 老板太有价值升不了职 | 3544 赞「按你的重要性要加薪」，楼主当场被说服去找下家。金句：「工作是钱换时间，你不欠雇主任何东西」 |
-| 空降总监要我免费培训他 | 整楼骂公司，主流=「最低限度干活 + 同步跳槽」 |
+| [蜜月假被收回，该辞职吗](https://www.reddit.com/r/careerguidance/comments/1wg7pnw) | 最高赞不是「快走」，而是「别主动辞」——发邮件抄 HR、说明行程已预付不可退，让他们开口让你拿失业金；自己护住钱。 |
+| [老板太有价值升不了职](https://www.reddit.com/r/careerguidance/comments/1wg6lb5) | 3544 赞「按你的重要性要加薪」，楼主当场被说服去找下家。金句：「工作是钱换时间，你不欠雇主任何东西」 |
+| [空降总监要我免费培训他](https://www.reddit.com/r/careerguidance/comments/1wh350a) | 整楼骂公司，主流=「最低限度干活 + 同步跳槽」 |
 
 → 给做产品的人：这批「要么走、要么被逼走」的委屈人，是「帮换工作/谈涨薪/离职收摊」工具和内容的目标人群。但注意他们真在问的是「怎么办」——做「离职决策树 / 离职清单 / 薪资对标」工具，能被问到、真能帮上忙。
 
@@ -245,9 +245,9 @@
 
 | 现象 | 证据帖 | 你该做什么 |
 |---|---|---|
-| 被黑 = 一直被提（单帖高分） | homelab 被 CVE 攻破 16 小时 | 做「收敛暴露面 / 加 tailscale / 加警报」的自托管安全自检与补丁提醒工具，有人要，几乎没人做 |
-| 「低价主板真香」被评论拉回现实 | 我骂过低价 X99，现在整套都在它 | 高赞 167 直说「可以家里用、别上企业」——做「成本选型」内容时看清这个边界 |
-| 「冷口碑」自托管永远聚人 | 什么最值得自托管 | 做「小众自托管周刊/榜单」，聚有口味差异的极客 |
+| 被黑 = 一直被提（单帖高分） | [homelab 被 CVE 攻破 16 小时](https://www.reddit.com/r/selfhosted/comments/1wfq2vx) | 做「收敛暴露面 / 加 tailscale / 加警报」的自托管安全自检与补丁提醒工具，有人要，几乎没人做 |
+| 「低价主板真香」被评论拉回现实 | [我骂过低价 X99，现在整套都在它](https://www.reddit.com/r/homelab/comments/1wip5ah) | 高赞 167 直说「可以家里用、别上企业」——做「成本选型」内容时看清这个边界 |
+| 「冷口碑」自托管永远聚人 | [什么最值得自托管](https://www.reddit.com/r/selfhosted/comments/1wgwo01) | 做「小众自托管周刊/榜单」，聚有口味差异的极客 |
 
 #### 一句话
 
@@ -259,12 +259,12 @@
 
 | 帖子 | 来源 |
 |---|---|
-| 蜜月假被收回，该辞职吗 | Reddit（高赞） |
-| 老板太有价值，升不了职 | Reddit（高赞） |
-| 某办公软件退订时向全部用户群发骚扰 | Reddit（3,569 赞） |
-| homelab 被 CVE 攻破 16 小时 | Reddit（1,220 赞） |
-| 低价 X99 整机真香，被拉回现实 | Reddit（1,568 赞） |
-| 什么最值得自托管 | Reddit（637/431） |
+| [蜜月假被收回，该辞职吗](https://www.reddit.com/r/careerguidance/comments/1wg7pnw) | Reddit（高赞） |
+| [老板太有价值，升不了职](https://www.reddit.com/r/careerguidance/comments/1wg6lb5) | Reddit（高赞） |
+| [某办公软件退订时向全部用户群发骚扰](https://www.reddit.com/r/sysadmin/comments/1wjdpgx) | Reddit（3,569 赞） |
+| [homelab 被 CVE 攻破 16 小时](https://www.reddit.com/r/selfhosted/comments/1wfq2vx) | Reddit（1,220 赞） |
+| [低价 X99 整机真香，被拉回现实](https://www.reddit.com/r/homelab/comments/1wip5ah) | Reddit（1,568 赞） |
+| [什么最值得自托管](https://www.reddit.com/r/selfhosted/comments/1wgwo01) | Reddit（637/431） |
 
 #### 热帖读法
 

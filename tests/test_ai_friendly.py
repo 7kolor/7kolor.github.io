@@ -56,6 +56,23 @@ class ReportsJsonTest(unittest.TestCase):
         committed = (ROOT / "reports.json").read_text(encoding="utf-8")
         self.assertEqual(committed, build_site.build_reports_json(build_site.load_items()))
 
+    def test_schema_version_and_global_date_order(self):
+        self.assertEqual(self.data["schema_version"], 1)
+        dates = [r["date"] for r in self.data["reports"]]
+        self.assertEqual(dates, sorted(dates, reverse=True))
+
+    def test_link_key_sets_and_missing_file_omitted(self):
+        for r in self.data["reports"]:
+            self.assertIn("page", r["links"])
+            for key in ("zh", "en", "markdown", "markdown_en"):
+                self.assertIn(key, r["links"])   # full publish ⇒ all formats
+        # a synthetic item without files must not advertise dead links
+        bare = build_site.build_reports_json(
+            {"weekly": [make_meta(url="/weekly/2099-W01/")]})
+        entry = json.loads(bare)["reports"][0]
+        self.assertNotIn("links", entry) if "links" not in entry else None
+        self.assertEqual(entry.get("links", {}), {})
+
 
 class MarkdownTest(unittest.TestCase):
     def test_headings_paragraph_strong_link(self):
@@ -92,6 +109,17 @@ class MarkdownTest(unittest.TestCase):
         self.assertIn("|---|", md)
         self.assertIn("| 甲 | 100 |", md)
         self.assertNotIn("\n# 标题\n", md)
+
+    def test_table_cells_keep_inline_markup(self):
+        # review finding: links/bold inside table cells must survive and
+        # delimiters must stay paired (no orphaned **)
+        md = build_i18n.html_to_markdown(
+            '<table><tr><th>案例</th><th>出处</th></tr>'
+            '<tr><td><strong>甲</strong> 产品</td>'
+            '<td><a href="https://x.example">原文</a></td></tr></table>')
+        self.assertIn("**甲**", md)
+        self.assertIn("[原文](https://x.example)", md)
+        self.assertEqual(md.count("**") % 2, 0)   # paired delimiters
 
     def test_h5_h6_img_and_ol_numbers(self):
         md = build_i18n.html_to_markdown(
@@ -191,6 +219,9 @@ class HeadMetaTest(unittest.TestCase):
             self.assertIn(f'<link rel="canonical" href="{build_site.SITE}{m["url"]}">', html, tag)
             self.assertIn('property="og:title"', html, tag)
             self.assertIn('property="og:description"', html, tag)
+            expected_title = m["title_" + lang]
+            self.assertIn(f'property="og:title" content="{build_site.esc(expected_title)}"',
+                          html, f"{tag}: og:title not in {lang}")
             expected_locale = "zh_CN" if lang == "zh" else "en_US"
             self.assertIn(f'property="og:locale" content="{expected_locale}"', html, tag)
             # html lang attribute agrees with the metadata language
@@ -210,22 +241,22 @@ class HeadMetaTest(unittest.TestCase):
         import shutil
         import tempfile
         items = build_site.load_items()
-        m = items["weekly"][0]
-        src = ROOT / m["url"].lstrip("/")
         with tempfile.TemporaryDirectory() as tmp:
-            # mirror the repo-relative layout (weekly/<id>) and point
-            # build_i18n.ROOT at the temp root so relative paths match
-            d = Path(tmp) / src.parent.name / src.name
-            d.parent.mkdir(parents=True)
-            shutil.copytree(src, d)
-            committed = (src / "report.md").read_text(encoding="utf-8")
             saved_root = build_i18n.ROOT
             try:
                 build_i18n.ROOT = Path(tmp)
-                build_i18n.build(d)
+                for m in items["weekly"]:
+                    src = ROOT / m["url"].lstrip("/")
+                    d = Path(tmp) / src.parent.name / src.name
+                    d.parent.mkdir(parents=True, exist_ok=True)
+                    shutil.copytree(src, d)
+                    build_i18n.build(d)
+                    for name in ("report.md", "report-en.md"):
+                        committed = (src / name).read_text(encoding="utf-8")
+                        self.assertEqual(committed, (d / name).read_text(encoding="utf-8"),
+                                         f"{m['id']} {name} stale")
             finally:
                 build_i18n.ROOT = saved_root
-            self.assertEqual(committed, (d / "report.md").read_text(encoding="utf-8"))
 
 
 if __name__ == "__main__":

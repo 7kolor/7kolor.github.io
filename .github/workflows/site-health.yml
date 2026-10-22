@@ -23,7 +23,7 @@ jobs:
       - name: Sitemap URLs all live
         run: |
           set -e
-          mapfile -t urls < <(curl -s https://7kolor.github.io/sitemap.xml \
+          mapfile -t urls < <(curl -s --max-time 30 --retry 2 https://7kolor.github.io/sitemap.xml \
             | grep -oP '(?<=<loc>).*?(?=</loc>)')
           echo "checking urls: ${#urls[@]}"
           [ "${#urls[@]}" -ge 10 ] || { echo "FAIL: too few urls"; exit 1; }
@@ -35,7 +35,7 @@ jobs:
       - name: reports.json links resolve
         run: |
           set -e
-          curl -s https://7kolor.github.io/reports.json > /tmp/reports.json
+          curl -s --max-time 30 --retry 2 https://7kolor.github.io/reports.json > /tmp/reports.json
           python3 - <<'PY'
           import json, urllib.request
           data = json.load(open('/tmp/reports.json'))
@@ -51,13 +51,13 @@ jobs:
       - name: No redirect-alias or junk in sitemap
         run: |
           set -e
-          curl -s --max-time 30 https://7kolor.github.io/sitemap.xml > /tmp/sm.xml
+          curl -s --max-time 30 --retry 2 https://7kolor.github.io/sitemap.xml > /tmp/sm.xml
           ! grep -q "weekly/w34" /tmp/sm.xml || { echo "FAIL: redirect alias in sitemap"; exit 1; }
           ! grep -qE "templates/|tests/|404" /tmp/sm.xml || { echo "FAIL: non-publishable page in sitemap"; exit 1; }
           echo "sitemap clean"
       - name: llms.txt mentions the machine index
         run: |
           set -e
-          curl -s --max-time 30 https://7kolor.github.io/llms.txt | grep -q "reports.json" \
+          curl -s --max-time 30 --retry 2 https://7kolor.github.io/llms.txt | grep -q "reports.json" \
             || { echo "FAIL: llms.txt lost the reports.json pointer"; exit 1; }
           echo "llms.txt OK"

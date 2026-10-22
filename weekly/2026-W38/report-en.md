@@ -75,14 +75,14 @@ This table answers the question builders care about most: for any direction you 
 
 | Direction | What users are shouting | How far others got | Verdict |
 |---|---|---|---|
-| Home-repair self-diagnosis | "Something broke and I don't know step one" — the comment section grows a decision tree by itself | Best of the year: 12 votes; zero revenue-generating products | New opportunity — B-side technicians, see item 1 |
-| Bookkeeping/invoicing | Sage 50 users panic-switching, 299 replies; solo-accountant wave | 993 products all flopped; survivors are all single-workflow tools | Red ocean — enter via niche only, see item 2 |
-| Career decision tools | Offer bait-and-switch, blocked transfer, PIP — thousands of comments per thread doing the math for the OP | Resume/interview tools are crowded; decision-evaluation tools: zero | Vacuum but low-frequency & sensitive — calculators and content, not a standalone app |
-| Creator content ownership | One takedown and the work is gone — 7,091 upvotes | Nobody built it | New opportunity — free tier first: local copy + timestamp, monetize later |
-| AI usage audit | Teams argue "how much AI should we use" with no answer | Rippling owns the generic layer, 298 votes | Giants' turf — vertical-stack audits only, window closing |
-| Self-hosted delivery | Free tier carved away; users name three alternatives on the spot | Alternatives everywhere; new tools get a checklist audit on day one | Paper-thin loyalty — sell packaged services, not another panel |
-| VMware migration ecosystem | Mass exodus; 442 upvotes answer just "Proxmox" | Backup/monitoring/docs around Proxmox: open slots | Migration window — enter now, red ocean in two years |
-| Tradesperson client management | A landscaper would rather fire every residential client than absorb one more nightmare customer | Single-workflow collection validated at $10k/mo | Single-workflow copy: scope logs + payment chasing; no all-in-one platforms |
+| Home-repair self-diagnosis | ["Something broke and I don't know step one"](https://www.reddit.com/r/plumbing/comments/1wp7j72/) — the comment section grows a decision tree by itself | Best of the year: 12 votes; zero revenue-generating products | New opportunity — B-side technicians, see item 1 |
+| Bookkeeping/invoicing | [Sage 50 users panic-switching, 299 replies](https://www.indiehackers.com/post/8aa645f609); solo-accountant wave | 993 products all flopped; survivors are all single-workflow tools | Red ocean — enter via niche only, see item 2 |
+| Career decision tools | [Offer bait-and-switch](https://www.reddit.com/r/careerguidance/comments/1wnccwq/), [blocked transfer](https://www.reddit.com/r/careerguidance/comments/1wq21bc/), [PIP](https://www.reddit.com/r/careeradvice/comments/1wpzycw/) — thousands of comments per thread doing the math for the OP | Resume/interview tools are crowded; decision-evaluation tools: zero | Vacuum but low-frequency & sensitive — calculators and content, not a standalone app |
+| Creator content ownership | [One takedown and the work is gone](https://www.reddit.com/r/youtube/comments/1wmty3y/) — 7,091 upvotes | Nobody built it | New opportunity — free tier first: local copy + timestamp, monetize later |
+| AI usage audit | [Teams argue "how much AI should we use" with no answer](https://www.reddit.com/r/experienceddevs/comments/1wo4d8p/) | Rippling owns the generic layer, 298 votes | Giants' turf — vertical-stack audits only, window closing |
+| Self-hosted delivery | [Free tier carved away; users name three alternatives on the spot](https://www.reddit.com/r/selfhosted/comments/1wnhg3b/) | Alternatives everywhere; new tools get a checklist audit on day one | Paper-thin loyalty — sell packaged services, not another panel |
+| VMware migration ecosystem | [Mass exodus; 442 upvotes answer just "Proxmox"](https://www.reddit.com/r/sysadmin/comments/1wpx7rh/) | Backup/monitoring/docs around Proxmox: open slots | Migration window — enter now, red ocean in two years |
+| Tradesperson client management | [A landscaper would rather fire every residential client than absorb one more nightmare customer](https://www.reddit.com/r/landscaping/comments/1wlc83i/) | Single-workflow collection validated at $10k/mo | Single-workflow copy: scope logs + payment chasing; no all-in-one platforms |
 
 Every row is verifiable: what users shout links to the original thread; how far others got links to real product pages.
 
@@ -94,11 +94,11 @@ The earners (comment sections decide credibility):
 
 | Case | Numbers | What the comments did | Takeaway |
 |---|---|---|---|
-| $2,517.54 MRR in 3 weeks | $2,517/3 weeks | A wall of "where did your first sales come from?" — asking for the method | Showing "how" beats showing "how much" |
-| Quit to solo accounting, $10k+ in two weeks | $10k+ | OP shared the playbook (146 upvotes): in-person networking + free P&L as the hook | Free diagnosis is the B-side hook |
-| Turned reading Reddit complaints into $13k | $13k | 51 upvotes nailed it: "you're selling the filtering and research" | Pain-point aggregation IS a product |
-| Facebook page at $1,600-2,000/mo | $1,600-2,000/mo | Top comment pours cold water: "monetized 3 days ago — made $2 😅" | Same playbook, wildly different yields |
-| $500k-1M monthly revenue, not one free hour | The dark side | "Outsource everything you can" / "hire an assistant" | The KPI is "earned + still has time" |
+| [$2,517.54 MRR in 3 weeks](https://www.reddit.com/r/saasdevelopers/comments/1wmvr0t/) | $2,517/3 weeks | A wall of "where did your first sales come from?" — asking for the method | Showing "how" beats showing "how much" |
+| [Quit to solo accounting, $10k+ in two weeks](https://www.reddit.com/r/accounting/comments/1wn75ba/) | $10k+ | OP shared the playbook (146 upvotes): in-person networking + free P&L as the hook | Free diagnosis is the B-side hook |
+| [Turned reading Reddit complaints into $13k](https://www.reddit.com/r/passive_income/comments/1wlg27d/) | $13k | 51 upvotes nailed it: "you're selling the filtering and research" | Pain-point aggregation IS a product |
+| [Facebook page at $1,600-2,000/mo](https://www.reddit.com/r/passive_income/comments/1wpz5pf/) | $1,600-2,000/mo | Top comment pours cold water: "monetized 3 days ago — made $2 😅" | Same playbook, wildly different yields |
+| [$500k-1M monthly revenue, not one free hour](https://www.reddit.com/r/smallbusiness/comments/1wlbw0j/) | The dark side | "Outsource everything you can" / "hire an assistant" | The KPI is "earned + still has time" |
 
 The crashes (all avoidable):
 
@@ -156,12 +156,12 @@ Threads with far more comments than upvotes are arguments without consensus — 
 
 | Thread | What they're fighting about |
 |---|---|
-| Leaving VMware — what did you pick? | 693 comments on migration; the 442-upvote answer is two words, "Proxmox" — so few options that one consensus answer exists |
-| Barely any AI at my job: sinking ship or goldmine? | 540 comments on job value; top comment 1,211 "savor the not-insane workplace"; 341 upvotes "I'm looking for my own level of AI use" |
-| Why are devs cheering better LLMs? | 627 comments: 569 upvotes "no tech hires this year" vs 511 upvotes "I build more and love it" — both real, same week |
-| PIP'd with an offer in hand: quiet-quit or notice? | 1,064 comments not on whether to leave, but on PTO and insurance timing |
-| Offer comes in below the posted range | 1,344 comments on whether to accept — where negotiation boundaries sit |
-| Laid off, old company asks me to consult | 694 comments on pricing it and handling the old relationship |
+| [Leaving VMware — what did you pick?](https://www.reddit.com/r/sysadmin/comments/1wpx7rh/) | 693 comments on migration; the 442-upvote answer is two words, "Proxmox" — so few options that one consensus answer exists |
+| [Barely any AI at my job: sinking ship or goldmine?](https://www.reddit.com/r/experienceddevs/comments/1wo4d8p/) | 540 comments on job value; top comment 1,211 "savor the not-insane workplace"; 341 upvotes "I'm looking for my own level of AI use" |
+| [Why are devs cheering better LLMs?](https://www.reddit.com/r/experienceddevs/comments/1wqzk86/) | 627 comments: 569 upvotes "no tech hires this year" vs 511 upvotes "I build more and love it" — both real, same week |
+| [PIP'd with an offer in hand: quiet-quit or notice?](https://www.reddit.com/r/careeradvice/comments/1wpzycw/) | 1,064 comments not on whether to leave, but on PTO and insurance timing |
+| [Offer comes in below the posted range](https://www.reddit.com/r/careerguidance/comments/1wnccwq/) | 1,344 comments on whether to accept — where negotiation boundaries sit |
+| [Laid off, old company asks me to consult](https://www.reddit.com/r/careeradvice/comments/1wo9ctk/) | 694 comments on pricing it and handling the old relationship |
 
 "I'm looking for my own level of AI use" — that 341-upvote sentence is a product position in itself. This list directly calibrates three rows of section 3: the VMware migration ecosystem, the AI usage audit, and career decision tools.
 

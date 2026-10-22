@@ -89,14 +89,14 @@ Noise rule: labels are LLM-assigned; moves within ±7% are not read as trends.Th
 
 | Direction | What users shout | How far others got | Verdict |
 |---|---|---|---|
-| Repair price benchmark | $8,400 paint job; 673 comments call out the brush-off pricing | HomeRepairCalc self-reports $1k/mo; Angi-class conflicts | Top pick · A |
-| Vertical AI QA | seller wants an audit he can't afford | iFixAi, 441 votes, generic only (attention ≠ revenue) | Dossier B |
-| Complaint-data content site | 2,300-owner-post analysis hits the hot board | No lookalike on the board; easy to start, moat is ops | Dossier C |
-| Self-host exit + budget backup | Notion doubles; 57 upvotes "your data locks you in" | Task Session self-reports $92k/mo; exporters missing | Dossier D |
-| Solo-accountant tools | 474 upvotes "I forbid my kids to study accounting" | TaxDrop self-reports $11.5k/mo; single-workflow survivor | Niche only · E |
-| Comp decision aids | ~4,000 comments, all cheering the refusal of a fake promotion | Best supply: 22-vote toys | Traffic map only |
-| Homeowner device dossier | Christmas lights mystery; commenters chime in with the same problem | Nothing | Content first |
-| Solo cost calculator | $44k/yr health insurance scares off solo founders; 367 upvotes | Nothing | Content hook |
+| Repair price benchmark | [$8,400 paint job; 673 comments call out the brush-off pricing](https://www.reddit.com/r/homeimprovement/comments/1wt8iyg/) | HomeRepairCalc self-reports $1k/mo; Angi-class conflicts | Top pick · A |
+| Vertical AI QA | [seller wants an audit he can't afford](https://www.reddit.com/r/SaaS/comments/1wt49xm/) | iFixAi, 441 votes, generic only (attention ≠ revenue) | Dossier B |
+| Complaint-data content site | [2,300-owner-post analysis hits the hot board](https://www.reddit.com/r/dataisbeautiful/comments/1wrx4u3/) | No lookalike on the board; easy to start, moat is ops | Dossier C |
+| Self-host exit + budget backup | [Notion doubles; 57 upvotes "your data locks you in"](https://www.reddit.com/r/notion/comments/1wsti6y/) | Task Session self-reports $92k/mo; exporters missing | Dossier D |
+| Solo-accountant tools | [474 upvotes "I forbid my kids to study accounting"](https://www.reddit.com/r/accounting/comments/1wv63dt/) | TaxDrop self-reports $11.5k/mo; single-workflow survivor | Niche only · E |
+| Comp decision aids | [~4,000 comments, all cheering the refusal of a fake promotion](https://www.reddit.com/r/careerguidance/comments/1wsejs6/) | Best supply: 22-vote toys | Traffic map only |
+| Homeowner device dossier | [Christmas lights mystery; commenters chime in with the same problem](https://www.reddit.com/r/homeowners/comments/1wsywzg/) | Nothing | Content first |
+| Solo cost calculator | [$44k/yr health insurance scares off solo founders; 367 upvotes](https://www.reddit.com/r/smallbusiness/comments/1wsu2va/) | Nothing | Content hook |
  ARepair price benchmark — top pick: 2-hour step zero, two weeks to a verdict
 
 - Evidence chain (3 weeks): W38's AI client-manager stalling → this week's $8,400 paint job + [Leafguard $17k](https://www.reddit.com/r/homeimprovement/comments/1wvwizg/) — "is this price normal?" asked three weeks running.
@@ -128,10 +128,10 @@ Noise rule: labels are LLM-assigned; moves within ±7% are not read as trends.Th
 
 | Case | Numbers | What comments did | Takeaway |
 |---|---|---|---|
-| GhostText: a shortcut sold at $4.99 | Steady one-time sales | OP's own answer: cold start via r/macapps alone, zero ad spend | Failure condition: the moment servers & support enter, buyable economics collapse |
-| ownedfor.com: 2,300 owner posts | Hot-board hit | Half praise, half methodology nitpicks — the argument is the traffic | Hot-post → site conversion is unpublished; don't assume 1:1 |
-| iFixAi: independent AI-agent audits | PH #5 (441 votes) | Votes = attention, not purchases | Vertical slots open; no evidence the window is closing |
-| Pandas→Polars: the maintainer answers in person | Top-comment slot | Authority comes from maintainer status; indies don't have it | But "camp the comments on launch day, reply first as the author" works just as well |
+| [GhostText: a shortcut sold at $4.99](https://www.reddit.com/r/Startup_Ideas/comments/1wsjbio/) | Steady one-time sales | OP's own answer: cold start via r/macapps alone, zero ad spend | Failure condition: the moment servers & support enter, buyable economics collapse |
+| [ownedfor.com: 2,300 owner posts](https://www.reddit.com/r/dataisbeautiful/comments/1wrx4u3/) | Hot-board hit | Half praise, half methodology nitpicks — the argument is the traffic | Hot-post → site conversion is unpublished; don't assume 1:1 |
+| [iFixAi: independent AI-agent audits](https://www.producthunt.com/products/ifixai) | PH #5 (441 votes) | Votes = attention, not purchases | Vertical slots open; no evidence the window is closing |
+| [Pandas→Polars: the maintainer answers in person](https://www.reddit.com/r/Python/comments/1wrihu9/) | Top-comment slot | Authority comes from maintainer status; indies don't have it | But "camp the comments on launch day, reply first as the author" works just as well |
 
 The crashes — what to check before it's your turn:
 
@@ -165,10 +165,10 @@ The rule: when both sides are right and a thousand comments produce no answer, t
 
 | Thread | Sticking point → product |
 |---|---|
-| A mud pit in the yard (1,262 comments) | Gravel 1,865 vs trees 1,091; the top reply opens "not a pro" — professional advice is absent. Product: decision cards (symptom → options → cost → timeline); step one: hand-build 3 cards, post them under similar questions. |
-| Pandas or Polars | Even the maintainer says "it depends" — nobody has ever measured migration cost. Product: a compatibility scanner serving the won't-migrate half; bigger market than a migrator, zero competition. |
-| Ditch Veeam or not | Savers and sticker-price loyalists are both right — nobody puts total migration cost (labor × hours + downtime risk + learning) next to renewal on one sheet. Product: a migration-cost comparator, content page first. |
-| $8,400 to paint one room | The fight is about the quoting mechanism itself — folded into A's playbook. |
+| [A mud pit in the yard (1,262 comments)](https://www.reddit.com/r/landscaping/comments/1wu51m2/) | Gravel 1,865 vs trees 1,091; the top reply opens "not a pro" — professional advice is absent. Product: decision cards (symptom → options → cost → timeline); step one: hand-build 3 cards, post them under similar questions. |
+| [Pandas or Polars](https://www.reddit.com/r/Python/comments/1wrihu9/) | Even the maintainer says "it depends" — nobody has ever measured migration cost. Product: a compatibility scanner serving the won't-migrate half; bigger market than a migrator, zero competition. |
+| [Ditch Veeam or not](https://www.reddit.com/r/sysadmin/comments/1wthktn/) | Savers and sticker-price loyalists are both right — nobody puts total migration cost (labor × hours + downtime risk + learning) next to renewal on one sheet. Product: a migration-cost comparator, content page first. |
+| [$8,400 to paint one room](https://www.reddit.com/r/homeimprovement/comments/1wt8iyg/) | The fight is about the quoting mechanism itself — folded into A's playbook. |
 
 ## 8. Action list for this week
 

@@ -80,21 +80,21 @@ This week's purchase_intent posts show the Claude family at 239 (posts created t
 
 | Case | Outcome | Replicable Point |
 |---|---|---|
-| Claude 自制会计工具替代 QuickBooks Online | Saved subscription fees | 'LLM + proprietary workflow' replaces SaaS; vertical depth is the moat |
-| OBS + RTSP 摄像头接 Frigate（$50 硬件做 AI 监控，selfhosted 讨论） | $50 vs commercial $200/mo | 'Cheap hardware + open-source software' combo for AI, 4× cost gap |
-| MCP 参数化查询替代 Text-to-SQL（MCPservers 版块，安全层） | Injection-proof + auditable | 'MCP security layer' is a forming category—adding 'guardrails' to LLMs |
-| AppSumo 买断制 SaaS 流失率 4%（SaaS 版块，买断失败复盘） | Lifetime users churn within 12 months | Lifelong-purchase as primary monetization is a counter-example—LLM-era users expect subscription |
-| OpenRouter Provider Economics（HN，AI 支出分析） | Show HN discussed | 'AI cost tracking' is a new 2026 SaaS pain-point category |
+| [Claude 自制会计工具替代 QuickBooks Online](https://www.reddit.com/r/quickbooksonline/comments/1wa6yab) | Saved subscription fees | 'LLM + proprietary workflow' replaces SaaS; vertical depth is the moat |
+| [OBS + RTSP 摄像头接 Frigate（$50 硬件做 AI 监控，selfhosted 讨论）](https://www.reddit.com/r/selfhosted/search?q=frigate) | $50 vs commercial $200/mo | 'Cheap hardware + open-source software' combo for AI, 4× cost gap |
+| [MCP 参数化查询替代 Text-to-SQL（MCPservers 版块，安全层）](https://www.reddit.com/r/MCPservers/comments/1w8v745) | Injection-proof + auditable | 'MCP security layer' is a forming category—adding 'guardrails' to LLMs |
+| [AppSumo 买断制 SaaS 流失率 4%（SaaS 版块，买断失败复盘）](https://www.reddit.com/r/SaaS/comments/1w85es1) | Lifetime users churn within 12 months | Lifelong-purchase as primary monetization is a counter-example—LLM-era users expect subscription |
+| [OpenRouter Provider Economics（HN，AI 支出分析）](https://news.ycombinator.com/item?id=49469870) | Show HN discussed | 'AI cost tracking' is a new 2026 SaaS pain-point category |
 
 ### Real IH Revenue Reports This Week
 
 | Case | Number | Replicable Point |
 |---|---|---|
-| 「4 个月，40 个免费用户，第一次发布：ScreenerHub 的真实数字」 | 40 free users / first sale | Small-audience 'build before launch' path: 40 free users = cold-start fuel |
-| 「$48 MRR，我甚至说不清钱从哪来」 | $48/mo | 'Affordable' positioning = $30-100/mo band (avoid the $200+ big-tech band) |
-| 「1,800 次 AI 技能评估——PM 打分高于工程师」 | 1,800 assessments | 'AI skill validation' is a B2B paid scenario (enterprise pays) |
-| 「我是个 AI CEO，公司做到 $1M MRR。第 3 天，收入：$0」 | Day 3 = $0 (failure sample) | 'AI-driven false prosperity' counter-example—no real users |
-| 「做了个还债习惯计划器，已上线，收入仍为 0」 | $0 (failure sample) | 'Launch ≠ revenue'—build audience before launching |
+| 「[4 个月，40 个免费用户，第一次发布：ScreenerHub 的真实数字](https://www.reddit.com/r/indiehackers/comments/1w9n4vl)」 | 40 free users / first sale | Small-audience 'build before launch' path: 40 free users = cold-start fuel |
+| 「[$48 MRR，我甚至说不清钱从哪来](https://www.indiehackers.com/post/e4c2829e58)」 | $48/mo | 'Affordable' positioning = $30-100/mo band (avoid the $200+ big-tech band) |
+| 「[1,800 次 AI 技能评估——PM 打分高于工程师](https://www.indiehackers.com/post/d55ece5460)」 | 1,800 assessments | 'AI skill validation' is a B2B paid scenario (enterprise pays) |
+| 「[我是个 AI CEO，公司做到 $1M MRR。第 3 天，收入：$0](https://www.indiehackers.com/post/fb6b8b7d66)」 | Day 3 = $0 (failure sample) | 'AI-driven false prosperity' counter-example—no real users |
+| 「[做了个还债习惯计划器，已上线，收入仍为 0](https://www.indiehackers.com/post/caf0c26287)」 | $0 (failure sample) | 'Launch ≠ revenue'—build audience before launching |
 
 Three-line summary: ① The replicable path is the $48→$48/mo line (true revenue-report median); the $1M MRR is a 'Day 3 revenue $0' false-prosperity sample. ② Pricing power comes from 'affordable' positioning ($30-100/mo band), not feature count. ③ Two failure samples (Day 3 $0 / live-but-$0) are content material—'why your launch got zero traffic' is more shareable than 'how much I earned'.
 
@@ -105,11 +105,11 @@ Three-line summary: ① The replicable path is the $48→$48/mo line (true reven
 | Risk | This Week's Evidence | Score (1-10) | Mitigation |
 |---|---|---|---|
 | R1 Platform single-point dependency | YouTube sub heavy negatives + platform ban silent loss | 9/10 | Data export + multi-platform distribution |
-| R2 AI output credibility (vibe-coding backlash) | 「The vibe coders」（10,783 分）+ AI 图像识别预警（5,166 分）——用户开始不信任 AI 生成物 | 8/10 | Add evidence chain next to AI outputs (source / test / human-review status) |
-| R3 Price-hike churn (AI cost pass-through) | SaaS 利润率论战（463 分）+ 内存涨价 500%（AI 超大规模厂商预订 2027 全球 RAM 供应）（6,015 分）——成本上行传导到终端定价 | 7/10 | Write 'price commitment + cost transparency' into your README |
+| R2 AI output credibility (vibe-coding backlash) | 「[The vibe coders](https://www.reddit.com/r/ClaudeAI/comments/1w61niq)」（10,783 分）+ [AI 图像识别预警](https://www.reddit.com/r/antiai/comments/1w81kdd)（5,166 分）——用户开始不信任 AI 生成物 | 8/10 | Add evidence chain next to AI outputs (source / test / human-review status) |
+| R3 Price-hike churn (AI cost pass-through) | [SaaS 利润率论战](https://www.reddit.com/r/SaaS/comments/1w8p7by)（463 分）+ [内存涨价 500%（AI 超大规模厂商预订 2027 全球 RAM 供应）](https://www.reddit.com/r/Futurology/comments/1vv9v7k)（6,015 分）——成本上行传导到终端定价 | 7/10 | Write 'price commitment + cost transparency' into your README |
 | R4 Concentrated product-abandonment migration | Portainer CE cut + FileBrowser EOL + Proxmox security update, 'seeking alternative' discussions 1,690 | 6/10 | Go into those threads to research where users migrate; build a 'migration guide' |
 | R5 Failure postmortems (deterrent post density) | 295 'I advise you not to do X / I regret it' failure postmortem posts—new-entrant sentiment is cautious | 6/10 | Marketing: 'I solved X' case-study content, not half-baked feedback-begging |
-| R6 Lifelong-purchase structural risk | AppSumo 买断制 SaaS 流失率 4%（样本 <30，仅监控） | 5/10 | Lifelong-purchase as primary monetization is a counter-example; subscription-first |
+| R6 Lifelong-purchase structural risk | [AppSumo 买断制 SaaS 流失率 4%](https://www.reddit.com/r/SaaS/comments/1w85es1)（样本 <30，仅监控） | 5/10 | Lifelong-purchase as primary monetization is a counter-example; subscription-first |
 | R7 AI capability absorption | 'Claude can now edit videos and I'm panicking' 455 pts + big-model native capability covers thin wrappers | 5/10 | Add 'data ownership + vertical depth' moats |
 | R8 Account ban/mis-ban | Etsy mis-banned by AI (sample <30, monitor only) | 4/10 | Multi-platform backup accounts + periodic data export |
      ⑤
@@ -118,9 +118,9 @@ Three-line summary: ① The replicable path is the $48→$48/mo line (true reven
 
 | Price Band | This Week's Examples | Where Your Pricing Should Land |
 |---|---|---|
-| <$50/mo micro SaaS | Next.js SEO 套件 $39 求验证（IH） / 预购首单 $39（首个 $39 预购，产品未完成） | Main battlefield, but '$20 AI subscription' is a new competitor |
-| $30-200/mo B2B tools | 「可负担的 SEO 工具包」$500 MRR / AppSumo 买断制 4% 流失（SaaS 复盘） | Mainstream monetization band; above $100 must carry a 'why cheaper/pricier than X' comparison page |
-| $4.5k-50k physical installation | HVAC 热泵 $49.5k 报价求助（hvacadvice 版块） | Not directly serviceable, but 'quote audit' content (B2B tool direction) is viable |
+| <$50/mo micro SaaS | [Next.js SEO 套件 $39 求验证（IH）](https://www.indiehackers.com/post/1vwmley) / [预购首单 $39（首个 $39 预购，产品未完成）](https://www.indiehackers.com/post/1w7w6xz) | Main battlefield, but '$20 AI subscription' is a new competitor |
+| $30-200/mo B2B tools | [「可负担的 SEO 工具包」$500 MRR](https://www.indiehackers.com/post/662490d322) / [AppSumo 买断制 4% 流失（SaaS 复盘）](https://www.reddit.com/r/SaaS/comments/1w85es1) | Mainstream monetization band; above $100 must carry a 'why cheaper/pricier than X' comparison page |
+| $4.5k-50k physical installation | [HVAC 热泵 $49.5k 报价求助（hvacadvice 版块）](https://www.reddit.com/r/hvacadvice/comments/1wb4a7n) | Not directly serviceable, but 'quote audit' content (B2B tool direction) is viable |
 
 This week's true-new posts with $ amounts in 'want-to-buy / help': 102 (buy-signal) + 132 (help) = 234, driven mainly by AI tools and HVAC quotes (last week's same-basis figure was 7,241, including historical re-tag baseline; treat this week as the trend reference). Across all 5 sources, 74.8% (3,168/4,233) of products have pricing unknown—'daring to show a price' is a new-product differentiator.
 
@@ -130,18 +130,18 @@ This week's true-new posts with $ amounts in 'want-to-buy / help': 102 (buy-sign
 
 | Post | Heat (upvotes/comments) | Source |
 |---|---|---|
-| 我自动化了 15 小时/周的工作，主管要裁我 | 11,433/3,895 | Reddit |
-| The vibe coders（ClaudeAI 社区嘲讽） | 10,783/357 | Reddit |
-| Visa 裁掉年薪近 $500K 高管（AI 轮次裁员） | 6,012/287 | Reddit |
-| AI 超大规模厂商预订 2027 全球 RAM 供应，涨价 500% | 6,015/1,137 | Reddit |
-| 55% 高管后悔 AI 裁员，开始反向招聘 | 5,284/407 | Reddit |
-| 看着你的 SaaS 慢慢死是什么感觉 | 561/151 | Reddit |
-| 客户找到我的 SaaS，我现在失业了 | 463/295 | Reddit |
-| UPDATE PROXMOX NOW（安全漏洞） | 712/163 | Reddit |
-| FileBrowser 官方宣布停更 | 361/64 | Reddit |
-| Portainer 3 砍掉 CE，转向 K8s + 企业版 | 254/164 | Reddit |
-| $70/小时请人评估 AI 回答质量 | 231/2,885 | Reddit |
-| SaaS 没死，但比以往更难了 | 130/149 | Reddit |
+| [我自动化了 15 小时/周的工作，主管要裁我](https://www.reddit.com/r/careerguidance/comments/1w9t4cf) | 11,433/3,895 | Reddit |
+| [The vibe coders（ClaudeAI 社区嘲讽）](https://www.reddit.com/r/ClaudeAI/comments/1w61niq) | 10,783/357 | Reddit |
+| [Visa 裁掉年薪近 $500K 高管（AI 轮次裁员）](https://www.reddit.com/r/technology/comments/1v98q2x) | 6,012/287 | Reddit |
+| [AI 超大规模厂商预订 2027 全球 RAM 供应，涨价 500%](https://www.reddit.com/r/Futurology/comments/1vv9v7k) | 6,015/1,137 | Reddit |
+| [55% 高管后悔 AI 裁员，开始反向招聘](https://www.reddit.com/r/technology/comments/1vgglhf) | 5,284/407 | Reddit |
+| [看着你的 SaaS 慢慢死是什么感觉](https://www.reddit.com/r/SaaS/comments/1w8p7by) | 561/151 | Reddit |
+| [客户找到我的 SaaS，我现在失业了](https://www.reddit.com/r/SaaS/comments/1w5amyj) | 463/295 | Reddit |
+| [UPDATE PROXMOX NOW（安全漏洞）](https://www.reddit.com/r/proxmox/comments/1w9ts1w) | 712/163 | Reddit |
+| [FileBrowser 官方宣布停更](https://www.reddit.com/r/selfhosted/comments/1w9bo3s) | 361/64 | Reddit |
+| [Portainer 3 砍掉 CE，转向 K8s + 企业版](https://www.reddit.com/r/selfhosted/comments/1wdbia2) | 254/164 | Reddit |
+| [$70/小时请人评估 AI 回答质量](https://www.reddit.com/r/remoteworkers/comments/1wq8x2p) | 231/2,885 | Reddit |
+| [SaaS 没死，但比以往更难了](https://www.reddit.com/r/SaaS/comments/1vry2tu) | 130/149 | Reddit |
 
 #### Hot-Post Reading Guide
 

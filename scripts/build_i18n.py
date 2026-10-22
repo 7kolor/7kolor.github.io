@@ -109,6 +109,7 @@ def retarget_toggle(html: str, lang: str, base: Path) -> str:
 
 
 _SKIP_TAGS = {"script", "style", "svg", "nav", "header", "footer", "button"}
+_INLINE_TAGS = {"a", "strong", "b", "em", "i", "code", "br", "img"}
 _HEADING_PREFIX = {"h1": "# ", "h2": "## ", "h3": "### ", "h4": "#### ",
                      "h5": "##### ", "h6": "###### "}
 
@@ -142,10 +143,21 @@ class _MdConverter(HTMLParser):
             self.out.append(s)
 
     def _newline(self, n=1):
+        if self.table is not None:
+            self.table["cell"] += " "   # cell text is whitespace-normalized later
+            return
         text = "".join(self.out)
         need = n - (len(text) - len(text.rstrip("\n")))
         if need > 0:
             self.out.append("\n" * need)
+
+    def _para_break(self):
+        """Blank line between blocks; inside a blockquote every line keeps
+        the "> " prefix so multi-paragraph quotes stay quoted."""
+        if self.in_bq:
+            self._emit("\n> ")
+        else:
+            self._newline(2)
 
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
@@ -153,13 +165,16 @@ class _MdConverter(HTMLParser):
         if tag in _SKIP_TAGS:
             return
         if self.table is not None and tag not in ("table", "tr", "td", "th"):
-            return  # inside a table cell only text (and nested cell tags) counts
+            if tag not in _INLINE_TAGS:
+                return  # block tags inside a cell: traverse as plain text
+            # inline tags (a/strong/em/code/br/img) fall through — _emit
+            # routes their text/markers into the cell buffer
         if tag in _HEADING_PREFIX:
             self._newline(2)
             self._emit(_HEADING_PREFIX[tag])
             self.in_heading = tag
         elif tag == "p":
-            self._newline(2)
+            self._para_break()
         elif tag == "br":
             self._newline(1)
         elif tag in ("ul", "ol"):
@@ -218,7 +233,7 @@ class _MdConverter(HTMLParser):
             self._newline(2)
             self.in_heading = None
         elif tag == "p":
-            self._newline(2)
+            self._para_break()
         elif tag in ("ul", "ol"):
             if self.list_stack:
                 self.list_stack.pop()
@@ -327,6 +342,7 @@ def build(item_dir: Path) -> None:
     meta_path = item_dir / "meta.json"
     desc = {}
     titles_meta = {}
+    meta = {}
     if meta_path.exists():
         try:
             meta = json.loads(meta_path.read_text(encoding="utf-8"))

@@ -22,16 +22,16 @@
 
 | # | 标题 | 热度 |
 |---|---|---|
-| 1 | How Europe is killing makers and micro-entrepreneurs | 3,697 |
-| 2 | CEO fired developers to make room for AI | 2,432 |
-| 3 | Anthropic's best AI model struggles as cheaper tools thrive | 2,221 |
-| 4 | Coding expertise is going to collapse from AI reliance | 1,646 |
-| 5 | Why does it feel like some people live in a parallel universe? | 1,566 |
-| 6 | Small Models Have Arrived | 1,473 |
-| 7 | PaymentKit — Billing that survives a processor shutdown | 675 |
-| 8 | My app was dead. Killed free trial, doubled price → $1.6K MRR | 420 |
-| 9 | One Reddit post = 415K views, 1,100 users | 347 |
-| 10 | I launched a project to see if people would pay for your IH idea | 343 |
+| 1 | [How Europe is killing makers and micro-entrepreneurs](https://news.ycombinator.com/item?id=49419237) | 3,697 |
+| 2 | [CEO fired developers to make room for AI](https://news.ycombinator.com/item?id=49458418) | 2,432 |
+| 3 | [Anthropic's best AI model struggles as cheaper tools thrive](https://news.ycombinator.com/item?id=49411102) | 2,221 |
+| 4 | [Coding expertise is going to collapse from AI reliance](https://news.ycombinator.com/item?id=49421554) | 1,646 |
+| 5 | [Why does it feel like some people live in a parallel universe?](https://reddit.com/r/ExperiencedDevs/comments/1w1q7gt) | 1,566 |
+| 6 | [Small Models Have Arrived](https://news.ycombinator.com/item?id=49466917) | 1,473 |
+| 7 | [PaymentKit — Billing that survives a processor shutdown](https://www.producthunt.com/products/paymentkit) | 675 |
+| 8 | [My app was dead. Killed free trial, doubled price → $1.6K MRR](https://reddit.com/r/appbusiness/comments/1vw950q) | 420 |
+| 9 | [One Reddit post = 415K views, 1,100 users](https://reddit.com/r/SaaS/comments/1vyvxo8) | 347 |
+| 10 | [I launched a project to see if people would pay for your IH idea](https://www.indiehackers.com/post/63fe100bf5) | 343 |
 
 ### 热帖分析
 
@@ -61,11 +61,11 @@
 
 | 产品 | 介绍 | 票数 | 来源 |
 |---|---|---|---|
-| PaymentKit | 支付系统，服务商倒闭也不受影响 | 457 | PH |
-| x1 | Lovable for iPhone apps | 500 | PH |
-| Skydive | 跨工具云代理 | 399 | PH |
-| Diet Claude | Claude 用量限制提醒 | 411 | PH |
-| Expertise AI | 把 GTM 技能变成经常性收入 | 366 | PH |
+| [PaymentKit](https://www.producthunt.com/products/paymentkit) | 支付系统，服务商倒闭也不受影响 | 457 | PH |
+| [x1](https://www.producthunt.com/products/x1-2) | Lovable for iPhone apps | 500 | PH |
+| [Skydive](https://www.producthunt.com/products/skydive) | 跨工具云代理 | 399 | PH |
+| [Diet Claude](https://www.producthunt.com/products/diet-claude) | Claude 用量限制提醒 | 411 | PH |
+| [Expertise AI](https://www.producthunt.com/products/expertise-ai-6) | 把 GTM 技能变成经常性收入 | 366 | PH |
 
 ### 产品聚焦
 
@@ -89,11 +89,11 @@ Skydive 获得 399 票，主打「构建跨工具工作的云代理」。这标�
 
 | 案例 | 关键数据 | 来源 |
 |---|---|---|
-| 取消免费试用 + 翻倍定价 | $3k Revenue, $1.6k MRR, 23天 | r/appbusiness |
-| Reddit 单帖 = 415K views | 1,100 用户, 30 订阅 | r/SaaS |
-| 1.8M Reddit views, #6 paid travel app | 流量5倍增长 | r/SideProject |
-| 招聘目录站突破 $100K | $100K 收入 | IH |
-| 失败4次后赚到 $1150 | SEO + 社交媒体 | r/SaaS |
+| [取消免费试用 + 翻倍定价](https://reddit.com/r/appbusiness/comments/1vw950q) | $3k Revenue, $1.6k MRR, 23天 | r/appbusiness |
+| [Reddit 单帖 = 415K views](https://reddit.com/r/SaaS/comments/1vyvxo8) | 1,100 用户, 30 订阅 | r/SaaS |
+| [1.8M Reddit views, #6 paid travel app](https://reddit.com/r/SideProject/comments/1w11z6r) | 流量5倍增长 | r/SideProject |
+| [招聘目录站突破 $100K](https://www.indiehackers.com/post/60da9ba8f2) | $100K 收入 | IH |
+| [失败4次后赚到 $1150](https://reddit.com/r/SaaS/comments/1vy3sf3) | SEO + 社交媒体 | r/SaaS |
 
 ### 成功故事
 

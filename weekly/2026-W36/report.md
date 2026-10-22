@@ -80,21 +80,21 @@
 
 | 案例 | 结果 | 可复制点 |
 |---|---|---|
-| Claude 自制会计工具替代 QuickBooks Online | 省掉订阅费 | 「大模型 + 自有流程」替代 SaaS，垂直深度是护城河 |
-| OBS + RTSP 摄像头接 Frigate（$50 硬件做 AI 监控，selfhosted 讨论） | $50 vs 商用 $200/月 | 「廉价硬件 + 开源软件」组合做 AI，成本差 4 倍 |
-| MCP 参数化查询替代 Text-to-SQL（MCPservers 版块，安全层） | 防注入 + 可审计 | 「MCP 安全层」是正在成型的品类——给大模型加「护栏」 |
-| AppSumo 买断制 SaaS 流失率 4%（SaaS 版块，买断失败复盘） | 买断用户 12 个月内流失 | 买断制当主变现是反例——LLM 时代用户预期是订阅 |
-| OpenRouter Provider Economics（HN，AI 支出分析） | Show HN 被讨论 | 「AI 成本追踪」是 2026 年 SaaS 新痛点品类 |
+| [Claude 自制会计工具替代 QuickBooks Online](https://www.reddit.com/r/quickbooksonline/comments/1wa6yab) | 省掉订阅费 | 「大模型 + 自有流程」替代 SaaS，垂直深度是护城河 |
+| [OBS + RTSP 摄像头接 Frigate（$50 硬件做 AI 监控，selfhosted 讨论）](https://www.reddit.com/r/selfhosted/search?q=frigate) | $50 vs 商用 $200/月 | 「廉价硬件 + 开源软件」组合做 AI，成本差 4 倍 |
+| [MCP 参数化查询替代 Text-to-SQL（MCPservers 版块，安全层）](https://www.reddit.com/r/MCPservers/comments/1w8v745) | 防注入 + 可审计 | 「MCP 安全层」是正在成型的品类——给大模型加「护栏」 |
+| [AppSumo 买断制 SaaS 流失率 4%（SaaS 版块，买断失败复盘）](https://www.reddit.com/r/SaaS/comments/1w85es1) | 买断用户 12 个月内流失 | 买断制当主变现是反例——LLM 时代用户预期是订阅 |
+| [OpenRouter Provider Economics（HN，AI 支出分析）](https://news.ycombinator.com/item?id=49469870) | Show HN 被讨论 | 「AI 成本追踪」是 2026 年 SaaS 新痛点品类 |
 
 ### IH 本周真实晒单
 
 | 案例 | 数字 | 可复制点 |
 |---|---|---|
-| 「4 个月，40 个免费用户，第一次发布：ScreenerHub 的真实数字」 | 40 免费用户 / 首单 | 小盘「发布前攒受众」路径：40 免费用户 = 冷启动燃料 |
-| 「$48 MRR，我甚至说不清钱从哪来」 | $48/月 | 「可负担」定位 = 价格带 $30-100/月（避开 $200+ 大厂带） |
-| 「1,800 次 AI 技能评估——PM 打分高于工程师」 | 1,800 评估 | 「AI 技能验证」是 B2B 付费场景（企业买单） |
-| 「我是个 AI CEO，公司做到 $1M MRR。第 3 天，收入：$0」 | Day 3 = $0（失败样本） | 「AI 驱动的假繁荣」反例——没有真实用户 |
-| 「做了个还债习惯计划器，已上线，收入仍为 0」 | $0（失败样本） | 「上线 ≠ 有收入」——发布前先攒受众 |
+| 「[4 个月，40 个免费用户，第一次发布：ScreenerHub 的真实数字](https://www.reddit.com/r/indiehackers/comments/1w9n4vl)」 | 40 免费用户 / 首单 | 小盘「发布前攒受众」路径：40 免费用户 = 冷启动燃料 |
+| 「[$48 MRR，我甚至说不清钱从哪来](https://www.indiehackers.com/post/e4c2829e58)」 | $48/月 | 「可负担」定位 = 价格带 $30-100/月（避开 $200+ 大厂带） |
+| 「[1,800 次 AI 技能评估——PM 打分高于工程师](https://www.indiehackers.com/post/d55ece5460)」 | 1,800 评估 | 「AI 技能验证」是 B2B 付费场景（企业买单） |
+| 「[我是个 AI CEO，公司做到 $1M MRR。第 3 天，收入：$0](https://www.indiehackers.com/post/fb6b8b7d66)」 | Day 3 = $0（失败样本） | 「AI 驱动的假繁荣」反例——没有真实用户 |
+| 「[做了个还债习惯计划器，已上线，收入仍为 0](https://www.indiehackers.com/post/caf0c26287)」 | $0（失败样本） | 「上线 ≠ 有收入」——发布前先攒受众 |
 
 三句话总结：① 可复制路径是 $48→$48/月这条线（真实晒单中位数），$1M MRR 是「Day 3 收入 $0」的假繁荣样本；② 定价权来自「可负担」定位（$30-100/月带），不是功能多少；③ 两个失败样本（Day 3 $0 / 上线仍 $0）是内容素材——「为什么你发布后 0 流量」比「我赚了多少」更有传播力。
 
@@ -105,11 +105,11 @@
 | 风险 | 本周证据 | 分（1-10） | 应对 |
 |---|---|---|---|
 | R1 平台单点依赖 | YouTube 版块大量负面 + 平台封号静默损失 | 9/10 | 数据可导出 + 多平台分发 |
-| R2 AI 产出可信度（vibe coding 反噬） | 「The vibe coders」（10,783 分）+ AI 图像识别预警（5,166 分）——用户开始不信任 AI 生成物 | 8/10 | AI 产出旁加证据链（来源/测试/人工评审状态） |
-| R3 涨价即流失（AI 成本传导） | SaaS 利润率论战（463 分）+ 内存涨价 500%（AI 超大规模厂商预订 2027 全球 RAM 供应）（6,015 分）——成本上行传导到终端定价 | 7/10 | 把「价格承诺 + 成本透明」写进 README |
+| R2 AI 产出可信度（vibe coding 反噬） | 「[The vibe coders](https://www.reddit.com/r/ClaudeAI/comments/1w61niq)」（10,783 分）+ [AI 图像识别预警](https://www.reddit.com/r/antiai/comments/1w81kdd)（5,166 分）——用户开始不信任 AI 生成物 | 8/10 | AI 产出旁加证据链（来源/测试/人工评审状态） |
+| R3 涨价即流失（AI 成本传导） | [SaaS 利润率论战](https://www.reddit.com/r/SaaS/comments/1w8p7by)（463 分）+ [内存涨价 500%（AI 超大规模厂商预订 2027 全球 RAM 供应）](https://www.reddit.com/r/Futurology/comments/1vv9v7k)（6,015 分）——成本上行传导到终端定价 | 7/10 | 把「价格承诺 + 成本透明」写进 README |
 | R4 弃用产品集中迁移 | Portainer CE 砍掉 + FileBrowser 停更 + Proxmox 安全更新，「求替代品」讨论 1,690 条 | 6/10 | 进那些帖研究用户在迁去哪，做「迁移向导」 |
 | R5 失败复盘（劝退帖密度） | 295 条「我劝你别做 X / 我后悔了」失败复盘帖——新入行者情绪偏谨慎 | 6/10 | 营销改「我解决了 X」案例内容，别晒半成品求反馈 |
-| R6 终身购结构风险 | AppSumo 买断制 SaaS 流失率 4%（样本 <30，仅监控） | 5/10 | 买断制当主变现是反例，订阅为主 |
+| R6 终身购结构风险 | [AppSumo 买断制 SaaS 流失率 4%](https://www.reddit.com/r/SaaS/comments/1w85es1)（样本 <30，仅监控） | 5/10 | 买断制当主变现是反例，订阅为主 |
 | R7 AI 能力被吞并 | 「Claude 能剪视频了我 panic」455 分 + 大模型原生能力覆盖薄封装 | 5/10 | 加「数据所有权 + 垂直深度」两个护城河 |
 | R8 账号封禁/误封 | Etsy 被 AI 误判封号（样本 <30，仅监控） | 4/10 | 多平台备份账号 + 数据定期导出 |
      ⑤
@@ -118,9 +118,9 @@
 
 | 价格带 | 本周示例 | 你的定价该落哪 |
 |---|---|---|
-| <$50/月 微型 SaaS | Next.js SEO 套件 $39 求验证（IH） / 预购首单 $39（首个 $39 预购，产品未完成） | 主战场，但「20 刀 AI 订阅」是新竞争对手 |
-| $30-200/月 B2B 工具 | 「可负担的 SEO 工具包」$500 MRR / AppSumo 买断制 4% 流失（SaaS 复盘） | 主流变现带，>$100 必须带「为什么比 X 便宜/贵」对比页 |
-| $4.5k-50k 实物安装 | HVAC 热泵 $49.5k 报价求助（hvacadvice 版块） | 不可直接承接，但可做「报价审计」内容（B 端工具方向） |
+| <$50/月 微型 SaaS | [Next.js SEO 套件 $39 求验证（IH）](https://www.indiehackers.com/post/1vwmley) / [预购首单 $39（首个 $39 预购，产品未完成）](https://www.indiehackers.com/post/1w7w6xz) | 主战场，但「20 刀 AI 订阅」是新竞争对手 |
+| $30-200/月 B2B 工具 | [「可负担的 SEO 工具包」$500 MRR](https://www.indiehackers.com/post/662490d322) / [AppSumo 买断制 4% 流失（SaaS 复盘）](https://www.reddit.com/r/SaaS/comments/1w85es1) | 主流变现带，>$100 必须带「为什么比 X 便宜/贵」对比页 |
+| $4.5k-50k 实物安装 | [HVAC 热泵 $49.5k 报价求助（hvacadvice 版块）](https://www.reddit.com/r/hvacadvice/comments/1wb4a7n) | 不可直接承接，但可做「报价审计」内容（B 端工具方向） |
 
 本周真新帖里带 $ 金额的「想买 / 求助」帖 102（买信号）+ 132（求助）= 234 条，主要由 AI 工具与 HVAC 报价拉动；上周是 7,241 条（含历史数据，趋势以本周为准）。全量 5 源产品中 74.8%（3,168/4,233）定价 unknown——「敢明码标价」是新品差异化机会。
 
@@ -130,18 +130,18 @@
 
 | 帖子 | 热度（赞/评论） | 来源 |
 |---|---|---|
-| 我自动化了 15 小时/周的工作，主管要裁我 | 11,433/3,895 | Reddit |
-| The vibe coders（ClaudeAI 社区嘲讽） | 10,783/357 | Reddit |
-| Visa 裁掉年薪近 $500K 高管（AI 轮次裁员） | 6,012/287 | Reddit |
-| AI 超大规模厂商预订 2027 全球 RAM 供应，涨价 500% | 6,015/1,137 | Reddit |
-| 55% 高管后悔 AI 裁员，开始反向招聘 | 5,284/407 | Reddit |
-| 看着你的 SaaS 慢慢死是什么感觉 | 561/151 | Reddit |
-| 客户找到我的 SaaS，我现在失业了 | 463/295 | Reddit |
-| UPDATE PROXMOX NOW（安全漏洞） | 712/163 | Reddit |
-| FileBrowser 官方宣布停更 | 361/64 | Reddit |
-| Portainer 3 砍掉 CE，转向 K8s + 企业版 | 254/164 | Reddit |
-| $70/小时请人评估 AI 回答质量 | 231/2,885 | Reddit |
-| SaaS 没死，但比以往更难了 | 130/149 | Reddit |
+| [我自动化了 15 小时/周的工作，主管要裁我](https://www.reddit.com/r/careerguidance/comments/1w9t4cf) | 11,433/3,895 | Reddit |
+| [The vibe coders（ClaudeAI 社区嘲讽）](https://www.reddit.com/r/ClaudeAI/comments/1w61niq) | 10,783/357 | Reddit |
+| [Visa 裁掉年薪近 $500K 高管（AI 轮次裁员）](https://www.reddit.com/r/technology/comments/1v98q2x) | 6,012/287 | Reddit |
+| [AI 超大规模厂商预订 2027 全球 RAM 供应，涨价 500%](https://www.reddit.com/r/Futurology/comments/1vv9v7k) | 6,015/1,137 | Reddit |
+| [55% 高管后悔 AI 裁员，开始反向招聘](https://www.reddit.com/r/technology/comments/1vgglhf) | 5,284/407 | Reddit |
+| [看着你的 SaaS 慢慢死是什么感觉](https://www.reddit.com/r/SaaS/comments/1w8p7by) | 561/151 | Reddit |
+| [客户找到我的 SaaS，我现在失业了](https://www.reddit.com/r/SaaS/comments/1w5amyj) | 463/295 | Reddit |
+| [UPDATE PROXMOX NOW（安全漏洞）](https://www.reddit.com/r/proxmox/comments/1w9ts1w) | 712/163 | Reddit |
+| [FileBrowser 官方宣布停更](https://www.reddit.com/r/selfhosted/comments/1w9bo3s) | 361/64 | Reddit |
+| [Portainer 3 砍掉 CE，转向 K8s + 企业版](https://www.reddit.com/r/selfhosted/comments/1wdbia2) | 254/164 | Reddit |
+| [$70/小时请人评估 AI 回答质量](https://www.reddit.com/r/remoteworkers/comments/1wq8x2p) | 231/2,885 | Reddit |
+| [SaaS 没死，但比以往更难了](https://www.reddit.com/r/SaaS/comments/1vry2tu) | 130/149 | Reddit |
 
 #### 热帖读法
 
