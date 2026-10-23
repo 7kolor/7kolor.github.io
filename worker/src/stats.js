@@ -23,7 +23,7 @@ export function buildDataPoint({ path, bucket, ua }) {
 
 // 四类聚合查询文本。计数一律用 SUM(_sample_interval) 加权：
 // AWE 在高流量下会采样，加权后总数仍然正确。
-// recent 依赖 SQL 的 ORDER BY timestamp DESC —— composePayload 只负责截断。
+// recent 依赖 SQL 的 ORDER BY ts DESC —— composePayload 只负责截断。
 export function buildSqlQuery(kind) {
   switch (kind) {
     case "by_agent":
@@ -31,9 +31,9 @@ export function buildSqlQuery(kind) {
     case "by_path":
       return "SELECT blob1 AS path, SUM(_sample_interval) AS n FROM " + DATASET + " GROUP BY path ORDER BY n DESC LIMIT " + BY_PATH_LIMIT + " FORMAT JSON";
     case "by_day":
-      return "SELECT formatDateTime(timestamp, '%Y-%m-%d') AS day, SUM(_sample_interval) AS n FROM " + DATASET + " GROUP BY day ORDER BY day DESC LIMIT " + BY_DAY_LIMIT + " FORMAT JSON";
+      return "SELECT formatDateTime(toDateTime(timestamp), '%Y-%m-%d') AS day, SUM(_sample_interval) AS n FROM " + DATASET + " GROUP BY day ORDER BY day DESC LIMIT " + BY_DAY_LIMIT + " FORMAT JSON";
     case "recent":
-      return "SELECT timestamp AS ts, blob1 AS path, blob2 AS bucket FROM " + DATASET + " ORDER BY timestamp DESC LIMIT " + RECENT_LIMIT + " FORMAT JSON";
+      return "SELECT toDateTime(timestamp) AS ts, blob1 AS path, blob2 AS bucket FROM " + DATASET + " ORDER BY ts DESC LIMIT " + RECENT_LIMIT + " FORMAT JSON";
     default:
       throw new Error("unknown query kind: " + kind);
   }

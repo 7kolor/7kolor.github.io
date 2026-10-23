@@ -31,7 +31,7 @@ test("buildSqlQuery covers the four aggregation kinds on the configured dataset"
   assert.ok(buildSqlQuery("by_path").includes("LIMIT " + BY_PATH_LIMIT));
   assert.ok(buildSqlQuery("by_day").includes("LIMIT " + BY_DAY_LIMIT));
   assert.ok(buildSqlQuery("recent").includes("LIMIT " + RECENT_LIMIT));
-  assert.ok(buildSqlQuery("by_day").includes("formatDateTime(timestamp, '%Y-%m-%d')"));
+  assert.ok(buildSqlQuery("by_day").includes("formatDateTime(toDateTime(timestamp), '%Y-%m-%d')"));
   assert.throws(() => buildSqlQuery("nope"));
 });
 
