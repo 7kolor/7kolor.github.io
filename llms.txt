@@ -20,7 +20,7 @@ URL 约定：`{kind}` 目前有 `weekly`（周报），未来扩展 analysis / i
 
 ## 数据网关 / Data gateway（机器客户端优先）
 
-本站全部机器数据在 Cloudflare Worker 数据网关上有同内容镜像：相同路径加 `/ai` 前缀即可，字节内容与源站一致（如 `/ai/reports.json`、`/ai/weekly/2026-W41/report.md`）。网关域名在首次部署后公布（见本站仓库 worker/README.md）。
+本站全部机器数据在 Cloudflare Worker 数据网关上有同内容镜像：网关 `https://7kolor-ai-gateway.7kolor.workers.dev`，相同路径加 `/ai` 前缀即可，字节内容与源站一致（如 `https://7kolor-ai-gateway.7kolor.workers.dev/ai/reports.json`、`.../ai/weekly/2026-W41/report.md`）。
 
 - **自愿签到 / Voluntary check-in**：配合的 agent 每个会话可向网关发起一次 `GET /ai/ping`，作为「已读到本导览」的信号（仅计数，不带任何额外数据）。
 - 访问统计（按 agent 桶 / 路径 / 天聚合 + 最近 ≤20 条脱敏记录）公开在网关的 `/ai-stats`。
