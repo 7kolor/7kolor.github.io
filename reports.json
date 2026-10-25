@@ -8,8 +8,25 @@
     "insights",
     "cases"
   ],
-  "count": 8,
+  "count": 9,
   "reports": [
+    {
+      "id": "2026-W42",
+      "kind": "weekly",
+      "title_zh": "你看不上的生意，正在赚钱",
+      "title_en": "The Businesses You Look Down On Are Making Money",
+      "desc_zh": "拍照评腹肌的 App 月入五位数，被断言一句话就能抄死的 AI 套壳晒出亿级年收入，被裁的人比在岗贵——本周商业情报，另附七个我们亲手否掉的方向。",
+      "desc_en": "An abs-rating app clears five figures a month, \"copyable\" AI wrappers flaunt nine-figure revenue, and laid-off experts cost more than employed ones — this week's business intel, plus seven directions we killed after reading the comments.",
+      "date": "2026-10-24",
+      "url": "https://7kolor.github.io/weekly/2026-W42/",
+      "links": {
+        "page": "https://7kolor.github.io/weekly/2026-W42/",
+        "zh": "https://7kolor.github.io/weekly/2026-W42/report-zh.html",
+        "en": "https://7kolor.github.io/weekly/2026-W42/report-en.html",
+        "markdown": "https://7kolor.github.io/weekly/2026-W42/report.md",
+        "markdown_en": "https://7kolor.github.io/weekly/2026-W42/report-en.md"
+      }
+    },
     {
       "id": "2026-W41",
       "kind": "weekly",
