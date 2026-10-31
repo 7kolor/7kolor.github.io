@@ -109,6 +109,8 @@ def retarget_toggle(html: str, lang: str, base: Path) -> str:
 
 
 _SKIP_TAGS = {"script", "style", "svg", "nav", "header", "footer", "button"}
+# 网页专属卡片容器：转 Markdown 时整块剥离（看板/速览/主线链/结论条——文本离开布局不可读）
+_SKIP_CLASSES = {"breach-bar", "stat-grid", "speedboard", "board-head", "takeaway"}
 _INLINE_TAGS = {"a", "strong", "b", "em", "i", "code", "br", "img"}
 _HEADING_PREFIX = {"h1": "# ", "h2": "## ", "h3": "### ", "h4": "#### ",
                      "h5": "##### ", "h6": "###### "}
@@ -135,6 +137,7 @@ class _MdConverter(HTMLParser):
         self.in_heading = None   # h1-h6 tag name while inside it
         self.in_bq = 0           # blockquote nesting depth
         self.table = None        # {"rows": [...], "row": [...], "cell": str}
+        self.skip_depth = 0      # >0 时正在跳过 _SKIP_CLASSES 容器（计所有嵌套标签）
 
     def _emit(self, s):
         if self.table is not None:
@@ -161,6 +164,14 @@ class _MdConverter(HTMLParser):
 
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
+        if self.skip_depth > 0:
+            self.skip_depth += 1
+            self.stack.append(tag)
+            return
+        if set((attrs.get("class") or "").split()) & _SKIP_CLASSES:
+            self.skip_depth = 1
+            self.stack.append(tag)
+            return
         self.stack.append(tag)
         if tag in _SKIP_TAGS:
             return
@@ -225,6 +236,11 @@ class _MdConverter(HTMLParser):
         # other tags: traverse children, keep text
 
     def handle_endtag(self, tag):
+        if self.skip_depth > 0:
+            self.skip_depth -= 1
+            if self.stack and self.stack[-1] == tag:
+                self.stack.pop()
+            return
         if self.stack and self.stack[-1] == tag:
             self.stack.pop()
         if tag in _SKIP_TAGS:
@@ -284,12 +300,16 @@ class _MdConverter(HTMLParser):
         self._newline(1)
 
     def handle_startendtag(self, tag, attrs):
+        if self.skip_depth > 0:
+            return
         if tag == "br":
             self._newline(1)
         elif tag == "img":
             self.handle_starttag(tag, attrs)
 
     def handle_data(self, data):
+        if self.skip_depth > 0:
+            return
         if any(t in _SKIP_TAGS for t in self.stack):
             return
         if self.pre or self.in_heading:
