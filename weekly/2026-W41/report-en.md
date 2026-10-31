@@ -14,11 +14,11 @@
 
 > "I thought I was buying a service; it turns out I was buying a hostage."
 
- This week’s theme · the bargaining-power structure   VMware migration savings (one company)$11.3MTopgolf thread · r/sysadmin Water-heater quote comments730r/askaplumber · hottest trade thread Regulars lost to one price rise22%r/smallbusiness · three years flat, then one jump Counter-offer thread comments1,354r/careerguidance · "Never take the counter offer"    This week at a glance · three things for developers   ✓ The one worth building [**Payment-availability matrix**information gap, $0 to start](#directions) [**Two weekend MVPs**domain-migration executor / self-hosted health tracker](#actions)   ✗ Killed by the comments [**Quote-comparison tools**730 comments, zero tool demand](#top3) [**A 3-month GEO bet**practitioners can't attribute](#actions)   ! Validate before building [**Post-migration ops**sell time first (answer 3 threads)](#top3) [**Sovereignty integration layer**sell to companies, not replacements](#signals)   How to read: every section opens with a TL;DR bar → long content folds (click to expand) → hover any 1x id to preview the thread.
+ This week’s theme · the bargaining-power structure
 
 ## I. The Three Most Important Things This Week
 
-  TL;DRAll three hot stories this week point away from building a product: the VMware money sits after the migration, GEO cannot be measured, and a 730-comment quote thread produced zero tool demand.  01
+    01
 
 ### 1. The VMware exodus: the decision is long made, the money is stuck on the last mile of the migration
 
@@ -115,8 +115,6 @@ So we did not rest the call on that alone. The load-bearing evidence is the next
 
 ## II. Three Filters for Telling Real Signals from Noise
 
-  TL;DRThree filters that remove 90% of the noise: high engagement ≠ a strong signal; top votes ≠ actionable; shipping a solution ≠ anyone paying.
-
 This section is not about methodology. It gives you ** three filters you can use immediately** — these are exactly what we used this week to separate noise from signal.
 
 ### Filter 1: engagement volume ≠ signal strength
@@ -154,8 +152,6 @@ Posts and screenshots saying "I built it / I solved it" prove that ** someone is
  No specific person, number, or failure in the comments = noise.
 
 ## III. Demand × Supply: Eight Directions Plus One Section on Acquisition
-
-  TL;DRNothing this week deserves a three-month bet. The only zero-cost, start-this-week move: the payment-availability matrix (
 
 ### Bottom line first: nothing this week is worth betting three months on
 
@@ -363,8 +359,6 @@ Questions like "how do I get my first N users" come up every week, but engagemen
 
 ## IV. Who made money this week, and who crashed
 
- TL;DREvery revenue number is self-reported — discount them all. The crashes share one mistake: mistaking engagement for demand. Skim the
-
 Note: revenue figures are self-reported and unverified — discount them. Product Hunt discloses no revenue, so those cells stay blank. High-signal cases are fewer than usual this week (part of the material went unprocessed), so the sample is thinner.
 
 The earners — focus on why each one worked:
@@ -417,8 +411,6 @@ The crashes — focus on how to spot them early:
  (r/smallbusiness): “10 years of building a business is on social medias. 10k...” — **platform risk**. Same for indie developers: an email list and your own domain are the only distribution channels that one email can't switch off.
 
 ## V. Signals worth reading in this week's threads
-
- TL;DRSix signals, but two matter: 1) digital sovereignty (sell to companies, not individuals) and 2)
 
 #### Signal 1: EU and non-US “digital sovereignty” — the most solid theme this week, but selling to companies and selling to individuals are two different businesses
 
@@ -510,8 +502,6 @@ He isn't paying for more features; he's paying because ** “I know it won't sud
 
 ## VI. How non-engineers' complaints become your business
 
- TL;DRNon-engineers’ complaints are your content topics, not tool demand — users already solve them for free by posting questions.
-
 In this week's data, ** the most emotionally charged and highest-engagement pain points came from non-technical communities**. Three examples (but note: ** high engagement ≠ demand for a tool** — see below):
 
 **1. Homeownership: “Is this normal?”** — an r/homeowners post, “There's a hole more than 5 feet deep under my garage, is this normal?”, drew 855 comments (1x59bc6). The thread has both professional judgment (“a 5-foot void under a slab usually means you need an engineer”) and plenty of self-deprecation. The same week: “should I buy the vacant lot next door” (1x4klsw) at 981 and “do you regret buying your house” (1x5dnvu) at 208.
@@ -529,8 +519,6 @@ In this week's data, ** the most emotionally charged and highest-engagement pain
 **Why these non-engineer pain points matter more if you build products** (this part is written for developers; if you run a company yourself, skip to section VII): the paying power of technical communities (r/SideProject, r/SaaS) is suppressed by “free alternatives” and “I could build that myself.” Meanwhile ** plumbers, electricians, HVAC techs, homeowners, and bookkeepers are the people who actually pay**, and their tools are typically a decade behind. This week, across r/plumbing, r/hvacadvice, r/homeimprovement, r/askaplumber, and r/smallbusiness, ** complaints with concrete scenarios were the single most frequent type of content** — the distribution itself is a directional hint.
 
 ## VII. Running a Business or a Service Shop: 6 Things You Can Copy This Week
-
-  TL;DRSix cash-flow plays for people who run a business or service shop: put payment terms in the quote, stop new orders at 30 days overdue, schedule collections... copy them today.
 
 ⚠️ One precondition: these are US business conventions (net-30, an AP department, early-payment discounts). Elsewhere the norm is a deposit over chat and the balance on delivery — there is no AP layer at all. Translate the practice, don't copy the vocabulary.
 
@@ -583,8 +571,6 @@ An honest summary: in this week's threads the answers were mostly tougher contra
 
 ## VIII. The Week's Loudest Fights: A Deadlock Is a Product Spec
 
-  TL;DRFive fights = five product specs: consensus can be productized (counter-offer), deadlock marks the gap (home anomalies). Open the ones that touch your direction.
-
 This week's most-commented threads — and in every one of these fights, both sides are handing you product intelligence:
 
 #### 1. Home anomalies (855 comments / 2,778 points)
@@ -631,7 +617,7 @@ One general rule for reading: across this week's five fights, ** whenever both s
 
 ## IX. This Week's Action List
 
-  TL;DRTime decides the move: 2 hours = validation, one weekend = MVP, three months = only the payment-availability matrix — and spend two weeks manually falsifying GEO first.  2H
+    2H
 
 ### If you only have 2 hours (validate, don't code)
 

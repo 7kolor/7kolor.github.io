@@ -8,8 +8,6 @@
 
 ---
 
-25,785 Developer Discussions   354 Pain Density / 1k (flat)    −7% Purchase Intent WoW (at noise edge)    +15% Show-off Density WoW (only above-noise move)
-
 ## 1. Three things worth 2 minutes of your time this week
 
 #### 1. The home-repair quote black box: a data business with zero tiling required

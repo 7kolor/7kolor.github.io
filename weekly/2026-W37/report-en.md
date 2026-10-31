@@ -14,7 +14,7 @@
 
 ① Non-engineers' repetitive-workflow pain (AP inbox fraud, handoff reports, rent/collection chasing) is this week's biggest surface—'more data tables, more repetition, more jargon,' yet almost nobody builds them into tools; ② Dev-tool gaps in sysadmin (7:1) and entrepreneurs (6:1) have lots of pain and almost no solutions, while independent projects (2.4:1) is crowded; ③ Career top-upvote posts are not 'quit your job'—they're 'anti-quit, self-protect' pragmatism, teaching you to CC HR and protect your interests.
 
-    22,946 Developer discussions this week (incl. 09-19)   8,050 Posts with a specific pain point   1,542 Purchase / buy intent   +77% 'I built/solved it' vs last week   -19% Negative feedback vs last week   1,108 'I built/solved it'       ①
+       ①
 
 ## Six-Step Framework: Turn This Week's Signals into Your Next Move
 

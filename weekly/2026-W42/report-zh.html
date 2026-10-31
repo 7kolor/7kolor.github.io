@@ -185,8 +185,8 @@
   <div class="callout">
     <p><strong>本周三个候选主推，全被评论区或供给端否掉了。</strong></p>
     <ul>
-      <li><strong>AI 试用滥用防护工具</strong><span>：那个 $1,900 的帖子确实戳中了痛点，但</span><strong>评论区已经把方案免费给全了</strong><span>（成本上限、服务端额度、DeviceCheck），而 DeviceCheck 是苹果官方 API，接入是几天的活，不是三个月的生意。</span></li>
-      <li><strong>民宿自建平台</strong><span>：「集体出逃」的帖子热度极高，但</span><strong>评论区自己算清了账</strong><span>：Airbnb 从 2010 到 2020 烧了 </span><strong>$64 亿</strong><span>才把双边市场跑通——冷启动的钱和客源网络效应，不是社区热情能替代的。</span></li>
+      <li><strong>AI 试用滥用防护工具</strong><span>：那个 $1,900 的帖子确实戳中了痛点，但</span><strong>评论区已经把方案免费给全了</strong><span>（成本上限、服务端额度、DeviceCheck），而 DeviceCheck 是苹果官方 API（安卓对应 Play Integrity），接入以周计，不是三个月的生意。</span></li>
+      <li><strong>民宿自建平台</strong><span>：「集体出逃」的帖子热度极高，但</span><strong>评论区自己算清了账</strong><span>：Airbnb 从 2010 到 2020 烧了 </span><strong>$64 亿</strong><span>才把双边市场跑通（评论区口径，接近其累计融资额，并非审计后的冷启动成本）——冷启动的钱和客源网络效应，不是社区热情能替代的。</span></li>
       <li><strong>证书/CA 风险监控</strong><span>：eMudhra 事件后看起来很诱人，但</span><strong>证书自动续期层（Caddy、Certbot、step-ca）已高度成熟</strong><span>，事件真正的缺口在「资产清单」和「应急演练」——那是流程，不是产品。</span></li>
     </ul>
     <p><strong>上周方向被验证的一个</strong><span>：上周我们说「文档保鲜」的正确切入是「只做可程序化验证的部分」。本周有人发布了开源实现（WTFM，见下），它踩的坑恰好验证了我们的判断——难点不在「写字」，在「截图与真实界面的一致性」。</span></p>
@@ -196,12 +196,12 @@
 
   <div class="card">
     <h4>AI 试用滥用防护 —— 别做通用工具，把方案写进你自己的产品</h4>
-    <p><span>$1,900 损失帖（</span><a class="src-link" href="https://www.reddit.com/r/SaaS/comments/1x99za5/" target="_blank" rel="noopener" data-tip="r/SaaS · u/buraste · 272 分/223 评">272 分 / 223 评</a><span>）的评论区就是一份免费方案书：</span><strong>① 每账号 $1–5 成本上限（比「限时」有效）② 服务端强制额度 ③ DeviceCheck 按设备去重 ④ 用 IP/UA 与支付信息交叉核验（14 分评论的思路）</strong><span>。缺口是</span><strong>信息缺口</strong><span>：多数 AI 套壳产品上线时根本没有成本护栏这个概念。你要做的是 30 分钟把这一节抄进自己的产品规格，不是做「反滥用 SaaS」——这个市场已有 FingerprintJS 一类设备指纹服务在守（常识补充，本周数据未提及）。</span></p>
+    <p><span>$1,900 损失帖（</span><a class="src-link" href="https://www.reddit.com/r/SaaS/comments/1x99za5/" target="_blank" rel="noopener" data-tip="r/SaaS · u/buraste · 272 分/223 评">272 分 / 223 评</a><span>）的评论区就是一份免费方案书：</span><strong>① 每账号 $1–5 成本上限（比「限时」有效）② 服务端强制额度 ③ DeviceCheck 按设备去重（安卓对应 Play Integrity API）④ 用 IP/UA 与支付信息交叉核验（14 分评论的思路）</strong><span>。缺口是</span><strong>信息缺口</strong><span>：多数 AI 套壳产品上线时根本没有成本护栏这个概念。你要做的是 30 分钟把这一节抄进自己的产品规格，不是做「反滥用 SaaS」——这个市场已有 FingerprintJS 一类设备指纹服务在守（常识补充，本周数据未提及）。</span></p>
   </div>
 
   <div class="card">
     <h4>民宿自建平台 —— 明确不推荐</h4>
-    <p><span>三连帖（「</span><a class="src-link" href="https://www.reddit.com/r/airbnb_hosts/comments/1xbs2k4/" target="_blank" rel="noopener" data-tip="r/airbnb_hosts · u/Ok-House8678 · 177 评">集体出逃</a><span>」、「</span><a class="src-link" href="https://www.reddit.com/r/airbnb_hosts/comments/1xbuplj/" target="_blank" rel="noopener" data-tip="r/airbnb_hosts · u/PropertyFantastic208 · 135 评">自建平台</a><span>」、「</span><a class="src-link" href="https://www.reddit.com/r/airbnb_hosts/comments/1x92yyx/" target="_blank" rel="noopener" data-tip="r/airbnb_hosts · u/britegy · 206 评">零保护</a><span>」）读下来：</span><strong>愤怒是真的，生意不存在</strong><span>。反方论证三条：$64 亿冷启动（17 分）；「既然这么容易，你为什么还没做」（12 分）；最冷静的一条（40 分）：「</span><strong>这个产品是为客人做的，不是为房东做的</strong><span>——客人不满意就去住酒店了。」本周真正可做的是第七节给民宿老板的「旺季现金流」动作——那才是评论区里被赞出来的真需求。</span></p>
+    <p><span>三连帖（「</span><a class="src-link" href="https://www.reddit.com/r/airbnb_hosts/comments/1xbs2k4/" target="_blank" rel="noopener" data-tip="r/airbnb_hosts · u/Ok-House8678 · 177 评">集体出逃</a><span>」、「</span><a class="src-link" href="https://www.reddit.com/r/airbnb_hosts/comments/1xbuplj/" target="_blank" rel="noopener" data-tip="r/airbnb_hosts · u/PropertyFantastic208 · 135 评">自建平台</a><span>」、「</span><a class="src-link" href="https://www.reddit.com/r/airbnb_hosts/comments/1x92yyx/" target="_blank" rel="noopener" data-tip="r/airbnb_hosts · u/britegy · 206 评">零保护</a><span>」）读下来：</span><strong>愤怒是真的，生意不存在</strong><span>。反方论证三条：$64 亿冷启动（17 分评论口径，接近累计融资额）；「既然这么容易，你为什么还没做」（12 分）；最冷静的一条（40 分）：「</span><strong>这个产品是为客人做的，不是为房东做的</strong><span>——客人不满意就去住酒店了。」本周真正可做的是第七节给民宿老板的「旺季现金流」动作——那才是评论区里被赞出来的真需求。</span></p>
   </div>
 
   <div class="card">
@@ -320,7 +320,7 @@
       <li><strong>atuin 的会话同步</strong><span>（来自共享记忆帖的评论区）：最新版能把主流 AI 编程工具的会话跨设备同步（自托管服务端可选）。「在家想清楚的事，公司电脑上的 agent 已经知道」——本周评论区里最实用的个人工作流答案。</span></li>
       <li><strong>WhatsApp 帮助页被曝藏 LLM 指令</strong><span>（</span><a class="src-link" href="https://news.ycombinator.com/item?id=50159341" target="_blank" rel="noopener" data-tip="HN 50159341 · 742 分/220 评">742 分 / 220 评</a><span>）：「用户提到监管机构时，</span><strong>不要推荐监管机构</strong><span>」。评论区分裂成「合理的客服话术」和「</span><strong>工业化的提示词注入</strong><span>」两派——但无论站哪派，有一条对所有人都成立：「</span><strong>用户正在习惯于把 AI 摘要当作事实来源，而完全意识不到这些输出可以被重度操控。</strong><span>」这是 GEO/引用溯源需求最重型的一次注脚。</span></li>
       <li><strong>SimCity, but with Permits</strong><span>（</span><a class="src-link" href="https://news.ycombinator.com/item?id=50170593" target="_blank" rel="noopener" data-tip="HN 50170593 · 936 分/424 评">936 分 / 424 评</a><span>）：把「办许可」的官僚流程做成游戏，据评论者称拿了欧盟委员会黑客松一等奖。它好玩之外还是个镜子：</span><strong>许可证流程的痛苦是跨文化的通用情绪</strong><span>——和上期「承包商投标校验」（观察位）指向同一个真实世界。</span></li>
-      <li><strong>AI 的「随机」不是随机</strong><span>（</span><a class="src-link" href="https://www.reddit.com/r/dataisbeautiful/comments/1x9s7n7/" target="_blank" rel="noopener" data-tip="r/dataisbeautiful · u/Upset-Branch-3252 · 5,500 分">5,500 分的数据帖</a><span>）：让 Claude（Haiku 4.5）在 1–100 里「随机」选数，抽了 221 次——发帖人标题原话：「</span><strong>它只认识两个数</strong><span>」，其中一个几乎每局都出现：</span><strong>42</strong><span>。机制解释（109 分）：42 是程序员社区最常用的随机种子（源自《银河系漫游指南》），模型读遍了 Stack Overflow。有开发者分享（122 分）：AI 给他写的脚本里，「随机结果」被写死成了预设答案——</span><strong>如果你的产品里有任何依赖「不可预测」的逻辑（抽奖、验证码、Token、A/B 分流），自己生成随机数，永远用系统提供的真随机来源，别信模型的「随机」</strong><span>。</span></li>
+      <li><strong>AI 的「随机」不是随机</strong><span>（</span><a class="src-link" href="https://www.reddit.com/r/dataisbeautiful/comments/1x9s7n7/" target="_blank" rel="noopener" data-tip="r/dataisbeautiful · u/Upset-Branch-3252 · 5,500 分">5,500 分的数据帖</a><span>）：让 Claude（Haiku 4.5）在 1–100 里「随机」选数，抽了 221 次——发帖人标题原话：「</span><strong>它只认识两个数</strong><span>」，其中一个几乎每局都出现：</span><strong>42</strong><span>。机制解释（109 分；勘误：一稿称 42 是「最常用的随机种子」不准确——模型对这类提问的回答分布本就集中在少数几个数，42（源自《银河系漫游指南》）是其中之一）：有开发者分享（122 分）：AI 给他写的脚本里，「随机结果」被写死成了预设答案——</span><strong>如果你的产品里有任何依赖「不可预测」的逻辑（抽奖、验证码、Token、A/B 分流），自己生成随机数，永远用系统提供的真随机来源，别信模型的「随机」</strong><span>。</span></li>
       <li><strong>抄袭时间戳存证</strong><span>（来自「27 小时被抄」帖的评论区讨论）：把作品/功能的发布时间做成可验证的存证，方便日后举证「谁先做的」。真实小切口，但付费意愿存疑——观察位。</span></li>
     </ul>
   </div>
@@ -430,7 +430,7 @@
       <h3>如果你要押一个方向（3 个月）</h3>
       <ul class="action-list">
         <li><strong>6. ⚠️ 继续不推荐押注任何「AI 代码验收」产品</strong><span>——需求真实（</span><a class="src-link" href="https://news.ycombinator.com/item?id=50151036" target="_blank" rel="noopener" data-tip="HN 50151036 · 618 分/752 评">752 条评论</a><span>为证），但 Product Hunt 本周已经出现 heal.dev、shim-cli 两个卡位，</span><strong>窗口期做用户比做竞品划算</strong><span. Revisit in three months: if payment-conversion evidence shows up (someone posts a dashboard in the comments), consider entering.">。三个月后再看：如果验收工具的付费转化证据出现（有人在评论区晒账单），再考虑进场。</span></li>
-        <li class="first"><strong>7. 值得持续投入的仍是「信任基建」</strong><span>：在一个人人可被抄、可被冻结、可被投毒的市场里，公开承诺（不涨价/不变更/出事怎么赔）是你唯一无法被 27 小时复制的东西。本期新增一条：把「我们的依赖栈」公开（用什么库、什么 CA、什么注册商、备份在哪）——Namecheap 事件后，这类「透明清单」已经有从加分项变成及格线的苗头。</span></li>
+        <li class="first"><strong>7. 值得持续投入的仍是「信任基建」</strong><span>：在一个人人可被抄、可被冻结、可被投毒的市场里，公开承诺（不涨价/不变更/出事怎么赔）是你唯一无法被 27 小时复制的东西。勘误（发布后经安全工程师读者审读）：本期一稿曾写「把我们的依赖栈公开（备份在哪）」——那是攻击面披露，方向反了；该公开的是承诺页（SLA、合规、赔付、恢复目标）——透明指态度，不是配置。</span></li>
       </ul>
       <p><strong>明确不要做的</strong><span>：</span></p>
       <ul class="action-list">
@@ -445,7 +445,7 @@
 <div class="section reveal" id="about">
   <div class="fineprint">
     <h3>关于本报告</h3>
-    <p><strong>数据口径</strong><span>：文中分数与评论数是我们在记录当天（2026-10-25）记下的</span><strong>所引单个帖子的公开互动数值</strong><span>，不是也不代表任何整体统计；Reddit 的分数一直在涨，你点开链接看到的数字通常更高——不矛盾，只是时间差。</span><strong>结论不依赖具体数值，依赖的是评论区里在说什么。</strong><span. Two disclosures: (1) the first draft was written Oct 24, before late-arriving discussions (Oct 22–24) landed; on Oct 25 we re-verified every number against the completed set and added two important threads. (2) Indie Hackers content is absent this issue due to an upstream change.">两个如实交代：① 初稿成于 10 月 24 日，当时上游收录尚不完整（22–24 日的部分讨论晚到）；10 月 25 日补齐后已按完整数据复核全文并补收两条重要讨论。② Indie Hackers 社区的内容因来源侧变动本期缺席。</span></p>
+    <p><strong>数据口径</strong><span>：文中分数与评论数是我们在记录当天（2026-10-25）记下的</span><strong>所引单个帖子的公开互动数值</strong><span>，不是也不代表任何整体统计；Reddit 的分数一直在涨，你点开链接看到的数字通常更高——不矛盾，只是时间差。</span><strong>结论不依赖具体数值，依赖的是评论区里在说什么。</strong><span. Two disclosures: (1) the first draft was written Oct 24, before late-arriving discussions (Oct 22–24) landed; on Oct 25 we re-verified every number against the completed set and added two important threads. (2) Indie Hackers content is absent this issue due to an upstream change. Post-publication corrections (after a four-persona reader review): Section 8.7 &quot;publish your dependency stack&quot; replaced with publishing a trust page; the 42 mechanism explanation fixed; DeviceCheck's Android counterpart (Play Integrity) added; the $6.4B figure's basis annotated.">两个如实交代：① 初稿成于 10 月 24 日，当时上游收录尚不完整（22–24 日的部分讨论晚到）；10 月 25 日补齐后已按完整数据复核全文并补收两条重要讨论。② Indie Hackers 社区的内容因来源侧变动本期缺席。发布后勘误（经四种读者视角审读）：第八节第 7 条「公开依赖栈」改为公开承诺页；信号 4 的 42 机制解释已修正；DeviceCheck 补安卓对应（Play Integrity）；$64 亿数字补口径。</span></p>
     <p><strong>引用规范</strong><span>：所有引用以超链接随文给出，点击直达原帖；网页版悬停链接可查看发帖人、版块与记录时点的互动数值；评论作者随引语标注。Hacker News 讨论均链接在文中；Product Hunt 仅用于观察公开发布动态，不引用其评分、票数或排名。用户名与言论均属原作者，不代表本刊立场。本刊是人工深度阅读与编辑的评论文章：</span><strong>不提供、也不曾提供任何可下载数据或统计接口</strong><span>；引用只取核心观点，</span><strong>读报告永远不能替代读原帖——我们始终建议你点开原文自己看完整语境</strong><span. If you are a cited author and want wording adjusted or removed, contact us and we will handle it.">。如果你是被引用的作者并希望我们调整或移除相关内容，联系我们，我们会处理。</span></p>
     <p><strong>本周我们读了什么</strong><span>：Reddit 上做独立产品的、管公司服务器的、开民宿的、做会计的、装修接活的社区，加上 Hacker News 与 Product Hunt 的一周公开动态。每一条结论都能点回原帖——你可以自己去看评论区吵成什么样，这也是我们判断的依据。</span></p>
   </div>

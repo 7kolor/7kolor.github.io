@@ -14,7 +14,7 @@
 
 This week's community intelligence: Consensus is forming that AI coding has shifted from 'omnipotent' to 'unreliable.' HN's 'Coding expertise collapse' received 544 comments—developers agree development is 3x faster but technical debt increased 5x. Pricing strategy has become the customer acquisition switch—a Brazilian developer removed free trial and doubled price, achieving $1,600 MRR in 23 days. Compliance costs are rising as a hidden threat, with EU regulations and banking controls 'killing' makers. New products like PaymentKit, Skydive, Diet Claude show AI Agent infrastructure and cost management as emerging tracks. Success cases validate community-driven growth > paid ads. User pain points focus on AI tool governance, Docker management, procurement compliance, and service price opacity—providing clear product opportunities for indie developers.
 
-    22,760 Total Heat   18.6% Positive    56.5% Neutral    24.9% Negative     Topic Heat This Week  AI Coding3,847 Pricing2,891 Growth2,756 Compliance2,432 Burnout1,891       🔥
+    Topic Heat This Week  AI Coding3,847 Pricing2,891 Growth2,756 Compliance2,432 Burnout1,891       🔥
 
 ## Hot Trends
 

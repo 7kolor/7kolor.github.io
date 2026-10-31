@@ -14,7 +14,7 @@
 
 ① Your users are being devoured by 'AI is replacing my job' anxiety—the 11,433-pt post is the fattest acquisition soil; ② but the same week shows the layoff wave reversing: 55% of execs regret AI-driven layoffs (5,284 pts) + 'Visa cuts its $500K exec' (6,012 pts), a rehiring signal forming; ③ Self-hosting event cluster (Portainer CE cut + FileBrowser EOL + Proxmox security update 712 pts) + hardware price hike (hyperscalers booked 2027 RAM supply), a 4-8 week migration window opening.
 
-    34,271 New Posts This Week (last week 16,346, +109%)   18,192 User Pain / Complaints / Urgent Needs   13,665 User 'Help Me' Posts   5,279 Buy / Recommend Signals   2,479 Failure / Rant Postmortems   420 Breakout Hot Posts       ①
+       ①
 
 ## Six-Step Framework: How Signals Map to Dev Decisions
 

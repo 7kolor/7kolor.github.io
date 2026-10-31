@@ -8,8 +8,6 @@
 
 ---
 
-22,033 Developer Discussions (8h tail missing)   401 Validation Density / 1k (3rd week up)    16.5 Churn hints / 1k (within noise)    3 Straight weeks of thickening quote-cluster evidence (only one in the dataset)
-
 ## 1. Three things worth 2 minutes of your time this week
 
 #### 1. The contractor quote war, week three: the rot reaches the capital structure

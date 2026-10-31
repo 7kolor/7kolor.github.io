@@ -14,7 +14,7 @@
 
 5 signals this week: ① Model triple-release (Fable 5.1 / GPT-6 Astra / Gemini 3.8 Flash) ignites AI creation track; ② AI slop proliferation triggers quality anxiety (1,593 pts); ③ Self-hosted Homelab continues hot (1,945 / 1,847 pts); ④ Edge local inference becomes new direction (1,122 pts); ⑤ Career burnout & skill anxiety drive indie dev (1,720 / 1,354 pts).
 
-    132 High-Engagement Posts   13,670 Pain Point Signals    3,393 Success Stories    40 New Products Launched        ①
+       ①
 
 ## Discover — What Can Make Money?
 
