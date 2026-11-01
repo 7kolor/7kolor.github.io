@@ -116,64 +116,79 @@
 
 <div class="section reveal" id="pains">
   <div class="section-header"><h2>二、用户痛点：本周评论区里最密集的四个</h2></div>
-  <div class="takeaway reveal-item"><span class="tk-tag">本节结论</span><span>每个痛点都带可抄动作——点击卡片右下角「翻面」查看；全部来自评论区原文。</span></div>
+  <div class="takeaway reveal-item"><span class="tk-tag">本节结论</span><span>从本周打标数据里筛出的高信号痛点帖——每条都带评论区的态度与现成方案；点击卡片右下角翻面看可抄动作。</span></div>
 
-  <div class="pain-flip reveal-item" data-flip>
+  <div class="chart-card reveal-item">
+    <div class="ch-title">本周用户帖子的信号分布</div>
+    <div class="bar-row"><span class="bar-label">痛点</span><div class="bar-track"><div class="bar-fill" style="width:100%"></div></div><span class="bar-num">372</span></div>
+    <div class="bar-row"><span class="bar-label">求认同</span><div class="bar-track"><div class="bar-fill b2" style="width:20%"></div></div><span class="bar-num">74</span></div>
+    <div class="bar-row"><span class="bar-label">负面反馈</span><div class="bar-track"><div class="bar-fill b4" style="width:9%"></div></div><span class="bar-num">32</span></div>
+    <div class="bar-row"><span class="bar-label">急需求</span><div class="bar-track"><div class="bar-fill b4" style="width:4%"></div></div><span class="bar-num">15</span></div>
+    <div class="bar-row"><span class="bar-label">购买意图</span><div class="bar-track"><div class="bar-fill b3" style="width:3%"></div></div><span class="bar-num">10</span></div>
+    <div class="bar-row"><span class="bar-label">价格敏感</span><div class="bar-track"><div class="bar-fill b3" style="width:2%"></div></div><span class="bar-num">7</span></div>
+    <div class="ch-note">其余：功能请求 6 · 预算顾虑 5 · 竞品提及 7 · 营销意图 9 · 问题求解 30</div>
+  </div>
+
+<div class="pain-flip reveal-item" data-flip>
   <div class="pf-inner">
     <div class="pf-face pf-front">
-    <h4>1. 小企业定价抱怨手册：一份可以直接抄的话术合集</h4>
-    <p><a class="src-link" href="https://www.reddit.com/r/smallbusiness/comments/1xhpdgb/">一位小老板问</a>：「怎么处理抱怨你价格的人？」——<strong>筛选逻辑</strong>：「抱怨价格的人，本来就不是你的客户」（9 分）、「免费客户最难伺候」（6 分）；<strong>反直觉</strong>：「涨价之后，有时生意反而更好」（9 分）；<strong>价值话术</strong>（16 分 + 8 分幼儿园园主案例）：「价格=它带来的价值」「我们比别人贵一点，但给老师高工资，所以请得到最好的老师」；<strong>内容营销洞察</strong>（5 分）：「认真回复一次价格质疑，是写给沉默的读者看的」；<strong>技术前置</strong>（5 分）：「Calendly 预约前就展示底价并要求确认，觉得贵的人根本走不到我面前」。</p>
+    <h4>1. AI 爬虫把自托管站点打成了废墟</h4>
+    <div class="pf-meta"><span class="sig-chip neg">负面反馈</span><span class="sig-chip">功能缺口</span><span class="pf-count">307 评 · 835 分</span></div>
+    <p><a class="src-link" href="https://www.reddit.com/r/selfhosted/comments/1xgae5q/">一位自托管站长开帖</a>：「受够这些 AI 爬虫了。」评论区不是抱怨，是<strong>一整套现成方案</strong>：蜜罐加训练毒数据（507 分：「给他们无限生成的胡话，链接层层相扣」）；<strong>fail2ban 式限流</strong>（133 分：「单个 IP 几分钟内来 200 次请求，那就不是人」）；专门的反爬工具（36 分多人只回两个字：「Anubis！」）；以及最省事的一条（24 分）：<strong>「其实大部分爬虫是尊重 robots.txt 的」</strong>。规模感来自 118 分的计数：「它们是庞大的 botnet，多半是住宅 IP——我遇到时数到约 35,000 个 IP」；62 分的实测：「我原来每天 3–5 千次请求，夏天涨到 2 万以上，fail2ban 拦掉 90%」。</p>
     <span class="pf-flip-hint">翻面看可抄动作 →</span>
     </div>
     <div class="pf-face pf-back">
     <h5>可抄动作</h5>
-    <p><strong>定价抱怨话术模板</strong>：筛选逻辑 + 价值话术 + 价格前置，30 分钟抄进客服流程。国内语境：把「Calendly 前置底价」换成「报价单/小程序先亮价」。</p>
-    <p class="pf-link">出处：<a class="src-link pf-link" href="https://www.reddit.com/r/smallbusiness/comments/1xhpdgb/">第二节原帖</a></p>
+    <p><strong>内容位 + 工具位</strong>：本站自己就挂着 AI 爬虫蜜罐（<code>/ai/ping</code>）——爬虫这条路对你不是抽象威胁。先量一次你的站点被爬了多少，再决定是开 robots.txt、限流，还是上反爬。</p>
+    <p class="pf-link">出处：<a class="src-link pf-link" href="https://www.reddit.com/r/selfhosted/comments/1xgae5q/">原帖</a></p>
     </div>
   </div>
 </div>
 
-  <div class="pain-flip reveal-item" data-flip>
+<div class="pain-flip reveal-item" data-flip>
   <div class="pf-inner">
     <div class="pf-face pf-front">
-    <h4>2. 「2026 年找客户，是不是变得离谱地难？」</h4>
-    <p><a class="src-link" href="https://www.reddit.com/r/smallbusiness/comments/1xguhky/">这条发问</a>（87 评）把冷触达的死因摆上台面：「<strong>我一天被塞 50 条垃圾信息</strong>」（50 分）；「<strong>每天 300–500 封邮件、短信、Shopify 询盘，全是同样的模糊话术</strong>」（19 分）——卖服务的人淹死了找服务的人。出路（24 分）：「<strong>把一个具体结果卖给一类生意，比把一长串服务卖给所有人容易</strong>」；「冷触达基本没用——市场饱和加上预算收缩」（11 分）。</p>
+    <h4>2. 两年笔记库说没就没：本地优先产品没有兜底</h4>
+    <div class="pf-meta"><span class="sig-chip neg">负面反馈</span><span class="sig-chip">用户痛点</span><span class="pf-count">312 评 · 315 分</span></div>
+    <p><a class="src-link" href="https://www.reddit.com/r/obsidianmd/comments/1xipb51/">一位用户两年前开始写的 Obsidian 笔记库整个消失</a>，发帖问「怎么修」。评论区最专业的追问（54 分）：<strong>「等等，笔记库怎么会自己删掉自己？」</strong>——然后是全场共识（45 分）：<strong>「是不是你开了同步，然后同步了一个空库？」</strong>以及最扎心的一句（183 分）：「我没丢过笔记库，但这些年丢过很多数据。」有人直接把它当公告模板（40 分）：<strong>「我要把它当成通用的服务公告提醒」</strong>。底下还有一层业务洞察（30 分）：「有些人只说一半真相，好藏住自己犯的错。」</p>
     <span class="pf-flip-hint">翻面看可抄动作 →</span>
     </div>
     <div class="pf-face pf-back">
     <h5>可抄动作</h5>
-    <p><strong>渠道聚焦</strong>：把一个具体结果卖给一类生意——先写下你的「一类生意」和「一个结果」，再决定渠道；国内语境同步适用于抖音/美团/微信的冷触达。</p>
-    <p class="pf-link">出处：<a class="src-link pf-link" href="https://www.reddit.com/r/smallbusiness/comments/1xguhky/">第二节原帖</a></p>
+    <p><strong>可抄动作</strong>：凡是把用户的创作资产放在本地/自托管里的产品，<strong>恢复路径必须是一等公民</strong>——「怎么修」的答案不该是「你用错了」，而是可执行的恢复清单。这是产品文案与增长的分界线。</p>
+    <p class="pf-link">出处：<a class="src-link pf-link" href="https://www.reddit.com/r/obsidianmd/comments/1xipb51/">原帖</a></p>
     </div>
   </div>
 </div>
 
-  <div class="pain-flip reveal-item" data-flip>
+<div class="pain-flip reveal-item" data-flip>
   <div class="pf-inner">
     <div class="pf-face pf-front">
-    <h4>3. 产品改版的「少数派反弹」：抱怨最凶的，是最不可能流失的</h4>
-    <p><a class="src-link" href="https://www.reddit.com/r/ProductManagement/comments/1xikydy/">一位产品经理的困境</a>：「改版后几乎所有用户都适应了，但一小撮用户的不满大到客服要求回滚。」——<strong>定调</strong>（78 分）：「这种反对是不理性的，而且在大盘里是小事」；<strong>机制</strong>（17 分）：「<strong>用户对切换成本的厌恶，恰恰就是他们抱怨的原因——他们是最不可能把生意搬走的人</strong>」；<strong>角色纠偏</strong>（5 分）：「客服的职责是帮客户从新版拿到价值，不是替用户要求回滚」；<strong>落地</strong>（4 分）：「叙事从修复坏功能换成升级工作方式，用产品数据证明 + 两场工作流短训」。</p>
+    <h4>3. 企业备份选型：一条帖问出整条采购链</h4>
+    <div class="pf-meta"><span class="sig-chip buy">购买意图</span><span class="sig-chip">价格敏感</span><span class="sig-chip">竞品提及</span><span class="pf-count">220 评 · 47 分</span></div>
+    <p><a class="src-link" href="https://www.reddit.com/r/sysadmin/comments/1xhb4np/">一位 sysadmin 发帖求推荐</a>：「公司的 Microsoft 365 邮箱需要一个好的备份方案。」这是本周打标数据里最典型的<strong>购买意图 + 价格敏感 + 竞品提及</strong>三信号叠加帖——它不是在抱怨，是在选型，而且评论区会自然流出竞品名与价格区间。对做企业工具的人：<strong>选型帖 = 最贵的流量</strong>，用户的预算已经在讨论里了。</p>
     <span class="pf-flip-hint">翻面看可抄动作 →</span>
     </div>
     <div class="pf-face pf-back">
     <h5>可抄动作</h5>
-    <p><strong>改版反弹应对卡</strong>：算清客户切换成本 + 数据话术 + 客服改「采用教练」——写进产品变更 runbook。</p>
-    <p class="pf-link">出处：<a class="src-link pf-link" href="https://www.reddit.com/r/ProductManagement/comments/1xikydy/">第二节原帖</a></p>
+    <p><strong>可抄动作</strong>：去你自己的社区里找「求推荐 / 用什么 / 换掉 X」这类帖子——那里的用户不是在抱怨，是在<strong>准备掏钱</strong>。评论区里出现的竞品名与价格区间，就是你的定价锚。</p>
+    <p class="pf-link">出处：<a class="src-link pf-link" href="https://www.reddit.com/r/sysadmin/comments/1xhb4np/">原帖</a></p>
     </div>
   </div>
 </div>
 
-  <div class="pain-flip reveal-item" data-flip>
+<div class="pain-flip reveal-item" data-flip>
   <div class="pf-inner">
     <div class="pf-face pf-front">
-    <h4>4. 小卖家的运费之殇：低客单电商的成本线被政策击穿</h4>
-    <p><a class="src-link" href="https://www.reddit.com/r/flipping/comments/1xi5u86/">一位二手卖家</a>开帖：「Ground Advantage 运费把低价商品的线上生意毁了」——一年涨五次，运费超过货值。评论区情绪主导（166 分最高赞指向机构动机），但商业教训藏在情绪后面：<strong>低客单 + 重物流的品类，运费敏感度是生死线</strong>。</p>
+    <h4>4. 定价抱怨：小老板们其实早就想好了答案</h4>
+    <div class="pf-meta"><span class="sig-chip neg">负面反馈</span><span class="sig-chip">功能缺口</span><span class="pf-count">91 评</span></div>
+    <p><a class="src-link" href="https://www.reddit.com/r/smallbusiness/comments/1xhpdgb/">一位小老板问</a>：「怎么处理抱怨你价格的人？」评论区是一份定价心理手册：<strong>筛选逻辑</strong>——「抱怨价格的人，本来就不是你的客户」（9 分）、「免费客户最难伺候」（6 分）；<strong>反直觉</strong>——「涨价之后，有时生意反而更好」（9 分）；<strong>价值话术</strong>（16 分 + 8 分幼儿园园主案例）：「价格=它带来的价值」「我们比别人贵一点，但给老师高工资，所以请得到最好的老师」；<strong>技术前置</strong>（5 分）：「预约前就展示底价并要求确认，觉得贵的人根本走不到我面前」。</p>
     <span class="pf-flip-hint">翻面看可抄动作 →</span>
     </div>
     <div class="pf-face pf-back">
     <h5>可抄动作</h5>
-    <p><strong>成本结构分析</strong>：出路只有满额包邮门槛、本地化交易、或换品类——把这条情绪帖写成成本结构分析的内容位，还空着。</p>
-    <p class="pf-link">出处：<a class="src-link pf-link" href="https://www.reddit.com/r/flipping/comments/1xi5u86/">第二节原帖</a></p>
+    <p><strong>定价话术模板</strong>：筛选逻辑 + 价值话术 + 价格前置，30 分钟抄进客服流程。国内语境：把「预约前亮底价」换成「报价单/小程序先亮价」。</p>
+    <p class="pf-link">出处：<a class="src-link pf-link" href="https://www.reddit.com/r/smallbusiness/comments/1xhpdgb/">原帖</a></p>
     </div>
   </div>
 </div>
