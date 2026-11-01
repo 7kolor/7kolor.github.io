@@ -1016,3 +1016,38 @@ html { scroll-behavior: smooth; }
 .content .radar-table td { padding: 9px 12px; border-bottom: 1px solid #EEF2F7; vertical-align: top; color: #33475C; line-height: 1.6; }
 .content .radar-table td:first-child { white-space: nowrap; font-weight: 600; }
 .content .cc-note-inline { font-size: 12px; color: #8A97A8; }
+
+/* ---------- W43 UI Pass：进度条/滚动计数/翻转卡/分段切换/scrollspy/stagger ---------- */
+.scroll-progress { position: fixed; top: 0; left: 0; height: 3px; width: 0; background: linear-gradient(90deg, #0E7490, #14B8A6); z-index: 999; transition: width .1s linear; }
+.content .reveal, .content .reveal-item { opacity: 0; transform: translateY(18px); transition: opacity .6s cubic-bezier(.2,.7,.3,1), transform .6s cubic-bezier(.2,.7,.3,1); }
+.content .revealed { opacity: 1; transform: none; }
+.content .card:nth-child(2) { transition-delay: .06s; } .content .card:nth-child(3) { transition-delay: .12s; } .content .card:nth-child(4) { transition-delay: .18s; }
+.content .card { transition: transform .25s cubic-bezier(.2,.7,.3,1), box-shadow .25s, border-color .25s, opacity .6s cubic-bezier(.2,.7,.3,1); }
+.content .card:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(22,40,59,.10); border-color: #B8C6D6; }
+.content .case-card:hover { border-color: #0E7490; box-shadow: 0 12px 32px rgba(14,116,144,.12); transform: translateY(-2px); }
+.content .stat-card { transition: transform .25s, box-shadow .25s; }
+.content .stat-card:hover { transform: translateY(-4px); box-shadow: 0 14px 34px rgba(22,40,59,.14); }
+.sidebar-nav a { transition: color .2s, border-color .2s, padding-left .2s; }
+.sidebar-nav li.active a { color: #0E7490; font-weight: 600; padding-left: 6px; border-left: 2px solid #0E7490; }
+/* 分段切换（赚钱/翻车） */
+.content .seg-tabs { display: flex; gap: 8px; margin: 0 0 14px; }
+.content .seg-btn { border: 1px solid #DCE5EE; background: #fff; color: #33475C; padding: 7px 16px; border-radius: 999px; font-size: 13.5px; cursor: pointer; font-family: inherit; transition: all .2s; }
+.content .seg-btn:hover { border-color: #B45309; color: #B45309; }
+.content .seg-btn.active { background: #16283B; border-color: #16283B; color: #fff; }
+.content .seg-group.hidden { display: none; }
+.content .seg-group { animation: segIn .35s cubic-bezier(.2,.7,.3,1); }
+@keyframes segIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+/* 翻转卡：痛点正面 / 可抄动作背面 */
+.pain-flip { perspective: 1400px; margin: 0 0 16px; }
+.pf-inner { position: relative; transform-style: preserve-3d; transition: transform .7s cubic-bezier(.3,.7,.3,1); }
+.pain-flip.flipped .pf-inner { transform: rotateY(180deg); }
+.pf-face { backface-visibility: hidden; -webkit-backface-visibility: hidden; border: 1px solid #DCE5EE; border-radius: 14px; background: #fff; padding: 20px 22px; }
+.pf-front { box-shadow: 0 2px 10px rgba(22,40,59,.04); }
+.pf-back { position: absolute; inset: 0; transform: rotateY(180deg); background: linear-gradient(135deg, #16283B, #1E3A54); color: #E8EEF5; display: flex; flex-direction: column; justify-content: center; box-shadow: 0 10px 30px rgba(22,40,59,.18); }
+.pf-back h5 { margin: 0 0 8px; font-size: 13px; letter-spacing: .12em; color: #7FD4C4; font-family: "Space Grotesk", sans-serif; }
+.pf-back p { margin: 0 0 8px; font-size: 14.5px; line-height: 1.75; color: #DCE5EE; }
+.pf-back .pf-link { color: #7FD4C4; font-size: 13px; }
+.pf-flip-hint { position: absolute; right: 14px; bottom: 12px; font-size: 12px; color: #8A97A8; cursor: pointer; user-select: none; transition: color .2s; }
+.pf-flip-hint:hover { color: #0E7490; }
+.pf-front h4 { padding-right: 88px; }
+@media (prefers-reduced-motion: reduce) { .pf-inner, .bar-fill, .stat-card, .card { transition: none !important; } }
