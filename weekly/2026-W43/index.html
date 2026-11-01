@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7Kolor Insights — 2026 W43</title>
+    <meta name="description" content="2026 W43：给 AI 打零工的人，和给 AI 造工具的人。">
+    <link rel="icon" type="image/png" href="/assets/img/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=Inter:wght@400;500;600;700&amp;family=Fira+Code:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/main.css?v=ab469da241">
+    <link rel="stylesheet" href="/weekly/2026-W43/w43.css">
+    <!-- AUTO:head-meta:begin -->
+    <!-- AUTO:head-meta:end -->
+</head>
+<body>
+<!-- AUTO:header:begin -->
+<!-- AUTO:header:end -->
+
+    <section class="hero">
+        <div class="hero-content reveal">
+            <div class="hero-badge"><span class="dot"></span><span>2026 W43</span></div>
+            <h1>给 AI 打零工的人，和给 AI 造工具的人</h1>
+            <p>独立开发者商业情报：谁在赚钱、哪些方向别碰、技术大事只收回执</p>
+            <div class="hero-meta">
+                <span>2026-10-25 ~ 10-31</span>
+                <span>Reddit · HN · PH</span>
+            </div>
+        </div>
+    </section>
+
+    <main class="main">
+        <div class="content-grid">
+            <aside class="sidebar">
+                <div class="sidebar-title">目录</div>
+                <ul class="sidebar-nav"><li><a href="#top3"><span>三件最重要的事</span></a></li><li><a href="#pains"><span>用户痛点</span></a></li><li><a href="#cases"><span>谁赚到了钱，谁翻了车</span></a></li><li><a href="#radar"><span>新品雷达</span></a></li><li><a href="#signals"><span>值得记下的信号</span></a></li><li><a href="#noneng"><span>非工程师的抱怨</span></a></li><li><a href="#actions"><span>本周行动清单</span></a></li></ul>
+            </aside>
+            <div class="content">
+                <!-- CONTENT:BEGIN -->
+
+<div class="section reveal" id="lede">
+  <p><strong>本周主线一句话</strong>：AI 正在把「工作」拆成两层生意——<strong>一端是给 AI 打零工的人</strong>（训练 AI 认外卖场景、改 AI 文案、录有声书，三个招聘帖在同一社区一周内出现）；<strong>另一端是给 AI 造工具的人</strong>（Product Hunt 本周新品里，AI Agent 基建类占了近四成）；夹在中间的「真人溢价」在涨价：一位 CEO 开价 13 万美元，雇一个陌生人「在 LinkedIn 上扮演他本人」。同时，<strong>分发的地基在移动</strong>——Google 搜索历史上第一次占 Alphabet 收入不足一半。</p>
+
+  <div class="pull-quote reveal">
+    <blockquote>「人人都会做披萨，但披萨店还在赚钱。」——本周，这句话有了新的下联：<br>「AI 会写所有代码，但签字的人只有一个。」</blockquote>
+    <div class="pq-src">主线 · 真人溢价正在涨价</div>
+  </div>
+
+  <div class="stat-grid w43-kpi">
+    <div class="stat-card"><span class="stat-label">人格外包岗挂牌年薪</span><span class="stat-value"><span data-count="130" data-decimals="0" data-prefix="$" data-suffix="k">$130k</span></span><span class="stat-sub">在 LinkedIn 上扮演 CEO 本人</span><span class="stat-tag self">当事人自述</span></div>
+    <div class="stat-card"><span class="stat-label">给 AI 当老师的时薪</span><span class="stat-value"><span data-count="50" data-decimals="0" data-prefix="$" data-suffix="/时">$50/时</span></span><span class="stat-sub">一周三个招聘帖 · 新工种成型</span><span class="stat-tag">帖内转述</span></div>
+    <div class="stat-card"><span class="stat-label">SaaS 上线 18 天收入</span><span class="stat-value"><span data-count="600" data-decimals="0" data-prefix="$">$600</span></span><span class="stat-sub">首笔真实收入的完整路径帖</span><span class="stat-tag self">当事人自述</span></div>
+    <div class="stat-card is-bad"><span class="stat-label">Binance 被盗金额</span><span class="stat-value"><span data-count="5.6" data-decimals="1" data-prefix="$" data-suffix="B">$5.6B</span></span><span class="stat-sub">你的资产托管方出过事故吗</span><span class="stat-tag">外部大事件</span></div>
+  </div>
+
+  <p><strong>急着做决定的话</strong>：读第二节四个痛点（每个都带可抄动作）→ 自己开公司的直接看第七节行动清单 → 想知道别做什么，看文末「明确不要做的」。</p>
+</div>
+
+<div class="speedboard reveal">
+  <div class="sb-head">本期速览 · 三分钟版</div>
+  <div class="sb-cols">
+    <div class="sb-col go">
+      <div class="sb-title">✓ 建议动手</div>
+      <a class="sb-item" href="#actions"><strong>AI 可见度自查</strong><span>三个 AI 助手问一遍你的品类</span></a>
+      <a class="sb-item" href="#actions"><strong>定价话术模板</strong><span>评论区合集，30 分钟进客服</span></a>
+      <a class="sb-item" href="#actions"><strong>改版应对卡</strong><span>切换成本 + 数据话术</span></a>
+    </div>
+    <div class="sb-col stop">
+      <div class="sb-title">✗ 评论区已否决</div>
+      <a class="sb-item" href="#actions"><strong>粉丝关系修复平台</strong><span>动机问题，产品解决不了</span></a>
+      <a class="sb-item" href="#actions"><strong>AI 训练零工平台</strong><span>供给红海，无差异化</span></a>
+      <a class="sb-item" href="#actions"><strong>无 ACCESS 代笔工具</strong><span>报酬在人脉不在文字</span></a>
+    </div>
+    <div class="sb-col watch">
+      <div class="sb-title">! 观察位</div>
+      <a class="sb-item" href="#cases"><strong>人设代笔工具</strong><span>等付费晒单证据出现</span></a>
+      <a class="sb-item" href="#signals"><strong>验收工具窗口</strong><span>供给涌入期，当用户不当竞品</span></a>
+      <a class="sb-item" href="#signals"><strong>信任基建（主推）</strong><span>真人溢价连续三周上涨</span></a>
+    </div>
+  </div>
+</div>
+
+<div class="section reveal" id="top3">
+  <div class="section-header"><h2>一、本周三件最重要的事</h2></div>
+  <div class="takeaway reveal-item"><span class="tk-tag">本节结论</span><span>人格外包挂出价签、获客地基在移动、就业叙事两极撞车——三件事共同指向：真人溢价与可验证性在涨价。</span></div>
+
+  <div class="top3-card is-good">
+  <div class="top3-num">01</div>
+  <div class="top3-body">
+    <h3>1. 人格外包岗挂出第一张价签：13 万美元，"在 LinkedIn 上扮演我"</h3>
+    <p><a class="src-link" href="https://www.reddit.com/r/careerguidance/comments/1xh4pqa/">一位企业传播从业者发帖</a>说，一位 CEO 开出 13 万美元——比她现薪高 67%——雇她「假装是他本人」发内容、回评论。评论区拆得比任何职业指南都清楚：<strong>这是 40 年老行业</strong>（1,098 分：「政客和名人一直如此——这就是代笔」）；<strong>幻觉戳破</strong>（142 分：「你要互动的所有高管账号，也全是雇员在管」）；<strong>风险条款</strong>（123 分：「等哪天你写的东西翻车了，你就是被怒炒的替罪羊」）；<strong>真报酬是人脉</strong>（54 分：「你会认识一堆高层——他们是你的下一份工作」）。</p>
+    <p><strong>对独立开发者</strong>：可做的不是代写工具（AI 写得够好了），是<strong>「人设运营订阅」托管服务</strong>——AI 负责产量，真人负责担责。证伪条件：评论区出现代笔服务付费晒单。</p>
+  </div>
+  </div>
+
+  <div class="top3-card is-watch">
+  <div class="top3-num">02</div>
+  <div class="top3-body">
+    <h3>2. Google 搜索第一次跌破 Alphabet 收入一半：小生意的获客地基在移动</h3>
+    <p><a class="src-link" href="https://news.ycombinator.com/item?id=50291945">HN 这条讨论</a>（355 评）不是科技八卦——对靠搜索获客的小生意，这是渠道结构的地震。同期两个信号互证：Product Hunt 出现了 <a class="src-link" href="https://www.producthunt.com/posts/notra-5">Notra</a>——帮网站在 <strong>AI 搜索结果</strong>里提升排名的工具，SEO 之后 GEO 开始产品化。</p>
+    <p><strong>落点</strong>：把你的产品名丢进三个 AI 助手，问一遍「这类工具用什么」——<strong>记下结果，这就是你的 AI 可见度基线</strong>。上期判断（GEO 是窗口期，当用户不当竞品）继续成立。</p>
+  </div>
+  </div>
+
+  <div class="top3-card is-bad">
+  <div class="top3-num">03</div>
+  <div class="top3-body">
+    <h3>3. AI 就业的叙事在两极撞车，而新工种已经成型</h3>
+    <p><a class="src-link" href="https://news.ycombinator.com/item?id=50245524">微软对约四分之一员工提出买断</a>（1,172 评）的同周，r/cscareerquestions 两条爆帖对撞：<a class="src-link" href="https://www.reddit.com/r/cscareerquestions/comments/1xiqz5g/">为什么有人以看我们失业为乐</a>（1,039 评）对撞<a class="src-link" href="https://www.reddit.com/r/cscareerquestions/comments/1xgjudc/">你们欠末日论者一个道歉</a>（856 评）。而 r/remoteworkers 一周出现三个「给 AI 打工」的招聘帖：<a class="src-link" href="https://www.reddit.com/r/remoteworkers/comments/1xfwqal/">训练 AI 认外卖场景</a>时薪 10–30 美元、<a class="src-link" href="https://www.reddit.com/r/remoteworkers/comments/1xgv2h7/">改进 AI 文案</a>时薪 50 美元、<a class="src-link" href="https://www.reddit.com/r/remoteworkers/comments/1xff8t2/">录有声书</a>时薪 20–25 美元。第四个声音来自 <a class="src-link" href="https://www.reddit.com/r/developers/comments/1xivgy7/">r/developers 的冷静调查</a>：「真有谁被替代了吗？」——主流回答：「还没有，但面试已经在变了。」</p>
+    <p><strong>统一读法</strong>：裁员叙事由 CEO 讲（效率），零工市场由 AI 公司讲（数据饥渴），一线体感是「暂时没替代、长期在重定价」。<strong>自动化「录入」，别碰「判断」，永远不碰「背锅」。</strong></p>
+  </div>
+  </div>
+</div>
+
+<div class="section reveal" id="pains">
+  <div class="section-header"><h2>二、用户痛点：本周评论区里最密集的四个</h2></div>
+  <div class="takeaway reveal-item"><span class="tk-tag">本节结论</span><span>每个痛点都带可抄动作：定价话术、渠道聚焦、改版应对卡、成本结构分析——全部来自评论区原文。</span></div>
+
+  <div class="card">
+    <h4>1. 小企业定价抱怨手册：一份可以直接抄的话术合集</h4>
+    <p><a class="src-link" href="https://www.reddit.com/r/smallbusiness/comments/1xhpdgb/">一位小老板问</a>：「怎么处理抱怨你价格的人？」——<strong>筛选逻辑</strong>：「抱怨价格的人，本来就不是你的客户」（9 分）、「免费客户最难伺候」（6 分）；<strong>反直觉</strong>：「涨价之后，有时生意反而更好」（9 分）；<strong>价值话术</strong>（8 分幼儿园园主案例）：「我们比别人贵一点，但给老师高工资和带薪托育，所以请得到最好的老师——对家庭如实讲，不合适请便」；<strong>内容营销洞察</strong>（5 分）：「认真回复一次价格质疑，是写给沉默的读者看的」；<strong>技术前置</strong>（5 分）：「Calendly 预约前就展示底价并要求确认，觉得贵的人根本走不到我面前」。</p>
+    <p><strong>可抄</strong>：这套话术 + 价格前置写成定价沟通模板，30 分钟进客服流程。国内语境：把「Calendly 前置底价」换成「报价单/小程序先亮价」。</p>
+  </div>
+
+  <div class="card">
+    <h4>2. 「2026 年找客户，是不是变得离谱地难？」</h4>
+    <p><a class="src-link" href="https://www.reddit.com/r/smallbusiness/comments/1xguhky/">这条发问</a>（87 评）把冷触达的死因摆上台面：「<strong>我一天被塞 50 条垃圾信息</strong>」（50 分）；「<strong>每天 300–500 封邮件、短信、Shopify 询盘，全是同样的模糊话术</strong>」（19 分）——卖服务的人淹死了找服务的人。出路（24 分）：「<strong>把一个具体结果卖给一类生意，比把一长串服务卖给所有人容易</strong>」；「冷触达基本没用——市场饱和加上预算收缩」（11 分）。</p>
+  </div>
+
+  <div class="card">
+    <h4>3. 产品改版的「少数派反弹」：抱怨最凶的，是最不可能流失的</h4>
+    <p><a class="src-link" href="https://www.reddit.com/r/ProductManagement/comments/1xikydy/">一位产品经理的困境</a>：「改版后几乎所有用户都适应了，但一小撮用户的不满大到客服要求回滚。」——<strong>定调</strong>（78 分）：「这种反对是不理性的，而且在大盘里是小事」；<strong>机制</strong>（17 分）：「<strong>用户对切换成本的厌恶，恰恰就是他们抱怨的原因——他们是最不可能把生意搬走的人</strong>」，8 分 war story：客户迁移成本以百万美元计时，砍掉他们 barely 用的产品也没人走；<strong>角色纠偏</strong>（5 分）：「客服的职责是帮客户从新版拿到价值，不是替用户要求回滚」；<strong>落地</strong>（4 分）：「叙事从修复坏功能换成升级工作方式，用产品数据证明，再给少数派开两场工作流短训」。</p>
+    <p><strong>可抄</strong>：改版反弹应对卡 = 算清切换成本 + 数据话术 + 客服改「采用教练」——直接进产品变更 runbook。</p>
+  </div>
+
+  <div class="card">
+    <h4>4. 小卖家的运费之殇：低客单电商的成本线被政策击穿</h4>
+    <p><a class="src-link" href="https://www.reddit.com/r/flipping/comments/1xi5u86/">一位二手卖家</a>开帖：「Ground Advantage 运费把低价商品的线上生意毁了」——一年涨五次，运费超过货值。评论区情绪主导（166 分最高赞指向机构动机），但商业教训藏在情绪后面：<strong>低客单 + 重物流的品类，运费敏感度是生死线</strong>——出路只有满额包邮门槛、本地化交易、或换品类。把这条情绪帖写成成本结构分析的内容位，还空着。</p>
+  </div>
+</div>
+
+<div class="section reveal" id="cases">
+  <div class="section-header"><h2>三、这周谁赚到了钱，谁翻了车</h2></div>
+  <div class="takeaway reveal-item"><span class="tk-tag">本节结论</span><span>赚到钱的都有可验证路径；翻了车的都留下可复用的机制——先建市场再建产品、被喜欢不等于付费、关停要有死亡条件。</span></div>
+
+  <h3 class="sub-head">赚到钱的</h3>
+  <div class="case-card">
+    <div class="cc-head"><span class="cc-num">①</span><h4>人格外包岗</h4><span class="cc-money">$130k / 年</span></div>
+    <p class="cc-field"><b>为什么成立</b>：现金 + 高层人脉 + 替老板担责——三样 AI 都替代不了（第一节第 1 条）。</p>
+    <p class="cc-field"><b>可抄条件</b>：算一遍你产品对应岗位的「信任溢价」。<span class="cc-note-inline">当事人自述。</span></p>
+  </div>
+  <div class="case-card">
+    <div class="cc-head"><span class="cc-num">②</span><h4>AI 训练零工平台方</h4><span class="cc-money">$10–50 / 时</span></div>
+    <p class="cc-field"><b>为什么成立</b>：三个招聘帖互证，AI 公司的数据饥渴是真实的；平台方赚「AI 人力差价」，供给端已开始红海。<span class="cc-note-inline">帖内转述。</span></p>
+  </div>
+  <div class="case-card">
+    <div class="cc-head"><span class="cc-num">③</span><h4><a class="src-link" href="https://www.reddit.com/r/SaaS/comments/1xianw4/">SaaS 上线 18 天的首笔收入</a></h4><span class="cc-money">$600 / 18 天</span></div>
+    <p class="cc-field"><b>为什么成立</b>：完整路径帖（132 评），评论区在逐条追问定价与渠道——适合对照自己的上线节奏。<span class="cc-note-inline">当事人自述。</span></p>
+  </div>
+  <div class="case-card">
+    <div class="cc-head"><span class="cc-num">④</span><h4><a class="src-link" href="https://www.reddit.com/r/indiehackers/comments/1xfrmup/">副业年入近 $8,000，附「什么有效」</a></h4><span class="cc-money">$8,000 / 年</span></div>
+    <p class="cc-field"><b>为什么成立</b>：收入报告体（88 评），路径的可复制性高于金额——重点看他列的「worked」清单里哪些你已经在做。<span class="cc-note-inline">当事人自述。</span></p>
+  </div>
+  <div class="case-card">
+    <div class="cc-head"><span class="cc-num">⑤</span><h4><a class="src-link" href="https://www.producthunt.com/posts/ifttt-ai">IFTTT 更名 IFTTT.ai，免费构建无限 Applets</a></h4><span class="cc-money">免费攻势</span></div>
+    <p class="cc-field"><b>警示</b>：<strong>你的付费功能正被大厂标成免费</strong>——自动化入口的定价权之争开始了。<span class="cc-note-inline">来自 Product Hunt 发布动态。</span></p>
+  </div>
+
+  <h3 class="sub-head">翻了车的</h3>
+  <ul class="action-list">
+    <li><strong>「我把生意做大，然后失去了一切」</strong>——<a class="src-link" href="https://www.reddit.com/r/smallbusiness/comments/1xhnmgp/">一位创始人的完整复盘</a>：2009 年离开六位数工作，跨州创办「建筑行业的人脉社交网络」，拉了投资、砸重金做网站——<strong>钱全花在产品上，一分没花在建市场上</strong>。评论区没有安慰，给的是三样东西：<strong>验尸</strong>（「23 个员工、人均创收只有 6.3 万美元——模式本身不成立」）；<strong>重建药方</strong>（多人一致：「用你的运营背景做牙科诊所咨询，最低风险地重建现金流，顺便物色值得收购的标的」）；<strong>过来人样本</strong>（「地产做到 500 万美元后主动归零，现在第三次创业」「1 万美元起家做到 7 家餐厅后退休」）。<strong>机制：先建市场，再建产品；失败后的最低风险动作是用旧能力卖咨询，不是再押一次身家。</strong></li>
+    <li><strong>「关停一个大家喜欢的产品」</strong>——<a class="src-link" href="https://www.reddit.com/r/entrepreneurridealong/comments/1xhnikt/">创始人的告别帖</a>。最疼的一条（3 分）：「<strong>不算失败也不算成功的产品最难杀——死得不够彻底逼你动手，长得不够快让你觉得不该继续，就在小口小口吃掉你的注意力。</strong>」解法（2 分）：「在动感情之前定好数字和日期，写在不能偷偷修改的地方——没达标就死，不需要开会。」OP 的告别很体面：群发邮件、给老用户发纪念徽章。最尖锐的追问（1 分）：「整篇讲死掉的项目，<strong>却只字未提吃掉它时间的新项目是什么</strong>」。<strong>机制：被喜欢是留存，不是付费；关停要有预设的死亡条件，也要有体面的告别。</strong></li>
+    <li><strong>Etsy 的平台风险续篇</strong>——<a class="src-link" href="https://www.reddit.com/r/Etsy/comments/1xfwqhx/">卖家自述</a>：「Etsy 自己都不同意自己的政策，而我的店可能随时被关。」规则朝令夕改 + 单一渠道依赖，与上期民宿三连同构。</li>
+    <li><strong>Binance 被盗 56 亿美元</strong>——<a class="src-link" href="https://news.ycombinator.com/item?id=50296470">HN 讨论</a>（1,238 评）。回执一句话：<strong>你的资产托管方出过事故吗？</strong></li>
+  </ul>
+</div>
+
+<div class="section reveal" id="radar">
+  <div class="section-header"><h2>四、新品雷达</h2></div>
+  <div class="takeaway reveal-item"><span class="tk-tag">本节结论</span><span>Product Hunt 本周 75 个新品的分类分布如下——Agent 基建是最大的簇，小企业主语音助手首次扎堆，两个团队的评论区替你验证了痛点。</span></div>
+
+  <div class="chart-card reveal-item">
+    <div class="ch-title">本周 PH 新品分类分布</div>
+    <div class="bar-row"><span class="bar-label">AI Agent</span><div class="bar-track"><div class="bar-fill" style="width:100%"></div></div><span class="bar-num">28</span></div>
+    <div class="bar-row"><span class="bar-label">SaaS</span><div class="bar-track"><div class="bar-fill b2" style="width:54%"></div></div><span class="bar-num">15</span></div>
+    <div class="bar-row"><span class="bar-label">开发工具</span><div class="bar-track"><div class="bar-fill b2" style="width:46%"></div></div><span class="bar-num">13</span></div>
+    <div class="bar-row"><span class="bar-label">效率</span><div class="bar-track"><div class="bar-fill b3" style="width:32%"></div></div><span class="bar-num">9</span></div>
+    <div class="bar-row"><span class="bar-label">其他</span><div class="bar-track"><div class="bar-fill b3" style="width:36%"></div></div><span class="bar-num">10</span></div>
+    <div class="ch-note">仅观察发布动态，不引用票数与排名</div>
+  </div>
+
+  <div class="radar-tabs reveal-item">
+    <button class="rt-btn active" data-cat="all">全部</button>
+    <button class="rt-btn" data-cat="agent">Agent 基建</button>
+    <button class="rt-btn" data-cat="smb">小企业主</button>
+    <button class="rt-btn" data-cat="tool">工具与成本</button>
+  </div>
+  <div class="table-wrap">
+  <table class="radar-table">
+    <thead><tr><th>产品</th><th>做什么</th><th>为什么值得看</th></tr></thead>
+    <tbody>
+      <tr data-cat="agent"><td><a class="src-link" href="https://www.producthunt.com/posts/flatbread">Flatbread</a></td><td>Agent 编码会话的共享与复用</td><td>Agent 基建是本周最大的产品簇，会话资产化是新方向</td></tr>
+      <tr data-cat="agent"><td><a class="src-link" href="https://www.producthunt.com/posts/kin-c629f0ba-aa5e-4681-a288-b149a9b6dc4b">Kin</a></td><td>Agent 安全控制，连 GitHub 即用</td><td>安全护栏紧随 Agent 铺开——上期验收焦虑的配套位</td></tr>
+      <tr data-cat="agent"><td><a class="src-link" href="https://www.producthunt.com/posts/backenly">Backenly</a></td><td>MCP 协议让 Agent 自动建 Postgres 后端</td><td>「Agent 自己搭后端」从演示走向产品</td></tr>
+      <tr data-cat="agent"><td><a class="src-link" href="https://www.producthunt.com/posts/telemetry-dev">telemetry.dev</a></td><td>Agent 运行可观测</td><td>每次运行记录成数据——Agent 的行车记录仪</td></tr>
+      <tr data-cat="agent"><td><a class="src-link" href="https://www.producthunt.com/posts/spacesheep">Spacesheep</a></td><td>把 Agent 工作成果变成团队资产</td><td>瞄准「Agent 干完活东西在哪」的组织痛点</td></tr>
+      <tr data-cat="smb"><td><a class="src-link" href="https://www.producthunt.com/posts/empacer">Empacer</a></td><td>小企业主语音 AI 助手</td><td>评论区验证痛点：「用 AI 工具本身变成了另一份工作——这就是我认识的每个小企业主的感受」「三个设置问题替代每次重新解释业务，正是让我理发师永远用不上 AI 的那道摩擦」</td></tr>
+      <tr data-cat="smb"><td><a class="src-link" href="https://www.producthunt.com/posts/vaani-developer-platform">Vaani</a></td><td>无代码搭拟人语音 Agent</td><td>与 Empacer 同日同向：小企业主语音助手首次扎堆</td></tr>
+      <tr data-cat="smb"><td><a class="src-link" href="https://www.producthunt.com/posts/tulu">Tulu</a></td><td>中小企业营销运营与分析</td><td>终结手动 UTM 和表格——营销执行层的自动化</td></tr>
+      <tr data-cat="smb"><td><a class="src-link" href="https://www.producthunt.com/posts/throxy">throxy</a></td><td>YC 的 AI 原生销售代理</td><td>直打制造业/物流/建筑 B2B——传统行业被 Agent 渗透</td></tr>
+      <tr data-cat="tool"><td><a class="src-link" href="https://www.producthunt.com/posts/cloudknife">CloudKnife</a></td><td>云成本自动优化</td><td>评论区最买账：「大多数工具只会说降配，它带确定性核验地自动执行」</td></tr>
+      <tr data-cat="tool"><td><a class="src-link" href="https://www.producthunt.com/posts/notra-5">Notra</a></td><td>AI 搜索排名优化（GEO）</td><td>呼应第一节：搜索入口迁移的最直接工具化</td></tr>
+      <tr data-cat="tool"><td><a class="src-link" href="https://www.producthunt.com/posts/specsight">Specsight</a></td><td>代码变更自动变产品功能地图</td><td>「文档保鲜先做可程序化部分」最接近落地的产品</td></tr>
+      <tr data-cat="tool"><td><a class="src-link" href="https://news.ycombinator.com/item?id=50246238">Hob</a></td><td>开源本地的 Claude Cowork 替代</td><td>「开源版大厂产品」仍是独立开发者稳定赛道（HN 176 分）</td></tr>
+      <tr data-cat="tool"><td><a class="src-link" href="https://news.ycombinator.com/item?id=50238708">TitleArt</a></td><td>做出 1997 年质感的文字</td><td>怀旧质感 + 行为设计是本周功能创新高频词（Flipcorder/TONKO/Mozy/Orbit 同向）</td></tr>
+    </tbody>
+  </table>
+  </div>
+</div>
+
+<div class="section reveal" id="signals">
+  <div class="section-header"><h2>五、值得记下的信号</h2></div>
+  <div class="takeaway reveal-item"><span class="tk-tag">本节结论</span><span>四条信号都带评论区证据：知识广场加速塌方、晋升陷阱挂出 5,793 分、创作者断裂继续、AI 疲劳与语音优先在供需两端汇合。</span></div>
+
+  <div class="card">
+    <h4>1. 知识广场的迁移在加速</h4>
+    <p><a class="src-link" href="https://www.reddit.com/r/dataisbeautiful/comments/1xi0ilu/">StackOverflow 月提问跌破 1,000</a>（Reddit 5,078 分 + <a class="src-link" href="https://news.ycombinator.com/item?id=50282454">HN 833 分</a> 双源），且一天之内涨了 3,581 分——<strong>不是稳态，是塌方曲线</strong>。验证层（可信度/出处/时效）的工具继续涌入，当用户不当竞品。</p>
+  </div>
+  <div class="card">
+    <h4>2. 「晋升陷阱」帖拿下 5,793 分</h4>
+    <p><a class="src-link" href="https://www.reddit.com/r/careerguidance/comments/1xh0ebl/">经理亲口承认「不敢晋升你，因为部门离不开你」</a>——1,382 分的最高赞回复：「这是结构性无能的自白」。评论区给出的应对：<strong>「坐地晋升谈判：两个月内加薪 20%，做不到就带着技能去市场上」</strong>（284 分）、「责任和薪资对齐，否则就走」（203 分）。<strong>可抄</strong>：部门离不开的人，恰恰是晋升谈判筹码最足的人——用「责任与薪资对齐」代替「用感情留人」。</p>
+  </div>
+  <div class="card">
+    <h4>3. 创作者与粉丝的断裂仍在继续</h4>
+    <p><a class="src-link" href="https://www.reddit.com/r/youtube/comments/1xi6sp1/">YouTuber 取关帖</a>（1,422 评）里高频词是「人设是假的」「广告织进了视频里」——对做内容的人，<strong>真实感是唯一不会被 AI 批量生产的资产</strong>。</p>
+  </div>
+  <div class="card">
+    <h4>4. AI 时代的集体疲惫</h4>
+    <p><a class="src-link" href="https://news.ycombinator.com/item?id=50301479">Ask HN: 你在 AI 时代也累了吗</a>（141 评）——降低认知负荷的工具（语音优先、自动记忆）正是第四节 SMB 助手扎堆的原因，<strong>需求与供给在同一点汇合</strong>。</p>
+  </div>
+</div>
+
+<div class="section reveal" id="noneng">
+  <div class="section-header"><h2>六、非工程师的抱怨怎么变成生意</h2></div>
+  <div class="takeaway reveal-item"><span class="tk-tag">本节结论</span><span>生活流的分发力、民宿运营细节下沉、管理注意力成本、Etsy 期望错配——四条抱怨各有一个内容位或产品位。</span></div>
+
+  <div class="card">
+    <h4>1. 生活流的分发力</h4>
+    <p><a class="src-link" href="https://www.reddit.com/r/homeowners/comments/1xg9tk9/">「我注意到邻居每天早上第一件事是先开车库门」</a>（1,694 评）——本周热度第二的帖子没有任何「干货」，只有具体细节。<strong>具体 &gt; 正确</strong>，这是上期「不脸红的分发」的第二个实证。</p>
+  </div>
+  <div class="card">
+    <h4>2. 民宿运营细节下沉</h4>
+    <p><a class="src-link" href="https://www.reddit.com/r/airbnb_hosts/comments/1xhqziy/">无信用历史的房客怎么处理</a>（61 评）、<a class="src-link" href="https://www.reddit.com/r/airbnb_hosts/comments/1xiz725/">床单上的头发怎么清洁</a>（52 评）——上期「旺季政策」之后，房东痛点向运营执行层下沉，内容位仍在。</p>
+  </div>
+  <div class="card">
+    <h4>3. 带团队的隐性成本</h4>
+    <p><a class="src-link" href="https://www.reddit.com/r/managers/comments/1xirgsd/">怎么管理一个变安静但绩效还行的员工</a>（182 评 / 341 分）——上期「教学成本」之后，管理注意力是企业侧工具的第二个入口；叠加第五节「晋升陷阱」帖，管理者的两大恐惧（教不会、留不住）都有真实声音。</p>
+  </div>
+  <div class="card">
+    <h4>4. Etsy 卖家的期望错配</h4>
+    <p><a class="src-link" href="https://www.reddit.com/r/EtsySellers/comments/1xiiukq/">「买家在『想象』他们买到的东西」</a>（86 评 / 163 分）——展示与实物的一致性是差评之源；对独立电商，详情页视频化是已验证的解法。</p>
+  </div>
+</div>
+
+<div class="section reveal" id="actions">
+  <div class="section-header"><h2>七、本周行动清单</h2></div>
+  <div class="tier-panel tier-a">
+    <div class="tier-badge">2H</div>
+    <div class="tier-body">
+      <h3>如果你只有 2 小时</h3>
+      <ul class="action-list">
+        <li><strong>1. 定价话术模板</strong>：第二节第 1 条的评论区合集，抄进客服流程；国内语境把「Calendly 前置底价」换成「报价单/小程序先亮价」。</li>
+        <li><strong>2. 改版应对卡</strong>：切换成本 + 数据话术 + 客服改「采用教练」（第二节第 3 条）——写进产品变更 runbook。</li>
+        <li><strong>3. AI 可见度自查</strong>：三个 AI 助手问一遍你的品类，记下基线（第一节第 2 条），下季度对比。</li>
+        <li><strong>4. 人格托管说明书</strong>：谁可代表你发言、出事谁负责（第一节第 1 条）——「关键人清单」的自指应用。</li>
+        <li><strong>5. 晋升陷阱预防</strong>：责任与薪资对齐（第五节第 2 条），代替「用感情留人」。</li>
+      </ul>
+    </div>
+  </div>
+  <div class="tier-panel tier-b">
+    <div class="tier-badge">1W</div>
+    <div class="tier-body">
+      <h3>如果你有 1 个周末</h3>
+      <ul class="action-list">
+        <li><strong>6. 试用本周 Agent 基建新品</strong>（Flatbread / telemetry.dev / Kin），第一手校准你的产品路线。</li>
+      </ul>
+    </div>
+  </div>
+  <div class="tier-panel tier-c">
+    <div class="tier-badge">3M</div>
+    <div class="tier-body">
+      <h3>如果你要押一个方向</h3>
+      <ul class="action-list">
+        <li><strong>7. 信任基建（维持主推）</strong>——人格外包、知识外包的时代，「真人在场 + 敢签字 + 可验证」的溢价只会更高。</li>
+      </ul>
+      <p><strong>明确不要做的</strong>：粉丝关系修复平台（动机问题产品解决不了）；AI 训练零工平台（红海）；无 ACCESS 资源的代笔工具（报酬在人脉不在文字）。</p>
+    </div>
+  </div>
+</div>
+
+  <!-- CONTENT:END -->
+            </div>
+        </div>
+    </main>
+
+<!-- AUTO:footer:begin -->
+<!-- AUTO:footer:end -->
+
+    <script src="/assets/js/main.js"></script>
+    <script>
+    (function () {
+      var REDUCED = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var tip = document.createElement('div'); tip.className = 'w41-tip'; document.body.appendChild(tip);
+      var tipFor = null, tipTimer = null;
+      function showTip(a) {
+        tip.textContent = a.getAttribute('data-tip') || '';
+        var r = a.getBoundingClientRect();
+        tip.classList.add('show');
+        var tw = tip.offsetWidth, th = tip.offsetHeight;
+        tip.style.left = Math.min(Math.max(8, r.left + window.scrollX - 8), window.scrollX + document.documentElement.clientWidth - tw - 8) + 'px';
+        tip.style.top = (r.top + window.scrollY - th - 10) + 'px';
+      }
+      document.querySelectorAll('a.src-link[data-tip]').forEach(function (a) {
+        a.addEventListener('mouseenter', function () { tipFor = a; clearTimeout(tipTimer); tipTimer = setTimeout(function () { if (tipFor === a) showTip(a); }, 180); });
+        a.addEventListener('mouseleave', function () { tipFor = null; clearTimeout(tipTimer); tip.classList.remove('show'); });
+      });
+      window.addEventListener('scroll', function () { tip.classList.remove('show'); }, { passive: true });
+      function revealSweep() {
+        document.querySelectorAll('.reveal:not(.revealed), .reveal-item:not(.revealed)').forEach(function (el) {
+          var r = el.getBoundingClientRect();
+          if (r.top < window.innerHeight * 1.2 && r.bottom > 0) el.classList.add('revealed');
+        });
+      }
+      window.addEventListener('scroll', function () { requestAnimationFrame(revealSweep); }, { passive: true });
+      window.addEventListener('hashchange', function () {
+        document.querySelectorAll('.reveal:not(.revealed)').forEach(function (el) { el.classList.add('revealed'); });
+      });
+      setTimeout(revealSweep, 1200);
+      var topBtn = document.createElement('button');
+      topBtn.className = 'w41-top'; topBtn.setAttribute('aria-label', 'Back to top');
+      topBtn.innerHTML = '&uarr;'; document.body.appendChild(topBtn);
+      topBtn.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: REDUCED ? 'auto' : 'smooth' }); });
+      var topTick = false;
+      window.addEventListener('scroll', function () {
+        if (topTick) return; topTick = true;
+        requestAnimationFrame(function () { topBtn.classList.toggle('show', window.scrollY > 900); topTick = false; });
+      }, { passive: true });
+      // ---- 新品雷达分类切换 ----
+      document.querySelectorAll('.rt-btn').forEach(function (b) {
+        b.addEventListener('click', function () {
+          document.querySelectorAll('.rt-btn').forEach(function (x) { x.classList.remove('active'); });
+          b.classList.add('active');
+          var cat = b.getAttribute('data-cat');
+          document.querySelectorAll('.radar-table tbody tr').forEach(function (tr) {
+            tr.style.display = (cat === 'all' || tr.getAttribute('data-cat') === cat) ? '' : 'none';
+          });
+        });
+      });
+    })();
+    </script>
+</body>
+</html>
