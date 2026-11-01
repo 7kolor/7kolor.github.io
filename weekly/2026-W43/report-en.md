@@ -8,294 +8,292 @@
 
 ---
 
-**本周主线一句话**：AI 正在把「工作」拆成两层生意——**一端是给 AI 打零工的人**（训练 AI 认外卖场景、改 AI 文案、录有声书，三个招聘帖在同一社区一周内出现）；**另一端是给 AI 造工具的人**（Product Hunt 本周新品里，AI Agent 基建类占了近四成）；夹在中间的「真人溢价」在涨价：一位 CEO 开价 13 万美元，雇一个陌生人「在 LinkedIn 上扮演他本人」。同时，**分发的地基在移动**——Google 搜索历史上第一次占 Alphabet 收入不足一半。
+**The week in one line**: AI is splitting the idea of work into two separate businesses — **one side: people who gig for AI** (training AI to recognize food-delivery scenes, rewriting AI copy, recording audiobooks — three hiring posts in one community inside a single week); **the other: people who build tools for AI** (of this week's Product Hunt launches, close to 40% are AI Agent infrastructure); and the premium in between — for a real human in the loop — keeps climbing: one CEO offered $130k to hire a stranger to "be him on LinkedIn." At the same time, **the ground under distribution is moving** — Google search, for the first time in its history, accounted for less than half of Alphabet's revenue.
 
-> 「人人都会做披萨，但披萨店还在赚钱。」——本周，这句话有了新的下联：
-「AI 会写所有代码，但签字的人只有一个。」
+> "Everyone can make pizza, but pizzerias still make money."
 
- 主线 · 真人溢价正在涨价   人格外包岗挂牌年薪$130k在 LinkedIn 上扮演 CEO 本人当事人自述 给 AI 当老师的时薪$50/时一周三个招聘帖 · 新工种成型帖内转述 SaaS 上线 18 天收入$600首笔真实收入的完整路径帖当事人自述 Binance 被盗金额$5.6B你的资产托管方出过事故吗外部大事件
+ r/SaaS 203-point thread, verbatim · Main line: the premium on real humans is rising   Listed salary for the personality-outsourcing gig$130kPlaying the CEO himself on LinkedInself-reported Hourly rate for teaching AI$50/hrthree hiring posts in one week · a new job categorysecondhand via the post Revenue 18 days after a SaaS launch$600the thread with the full path to first real revenueself-reported Amount stolen from Binance$5.6BHas your custodian ever had an incident?external event
 
-**急着做决定的话**：读第二节四个痛点（每个都带可抄动作）→ 自己开公司的直接看第七节行动清单 → 想知道别做什么，看文末「明确不要做的」。
+**If you need a decision fast**: read the four pain points in Section 2 (each one comes with a move you can copy) → if you run a company, go straight to the action list in Section 7 → if you only want to know what not to do, see "explicitly don't" at the end.
 
-   本期速览 · 三分钟版   ✓ 建议动手 [**AI 可见度自查**三个 AI 助手问一遍你的品类](#actions) [**定价话术模板**评论区合集，30 分钟进客服](#actions) [**依赖栈体检**AI 爬虫量化 + 恢复路径](#actions)   ✗ 评论区已否决 [**粉丝关系修复平台**动机问题，产品解决不了](#actions) [**AI 训练零工平台**供给红海，无差异化](#actions) [**无 ACCESS 代笔工具**报酬在人脉不在文字](#actions)   ! 观察位 [**人设代笔工具**等付费晒单证据出现](#cases) [**验收工具窗口**供给涌入期，当用户不当竞品](#signals) [**信任基建（主推）**真人溢价连续三周上涨](#signals)
+   This issue in three minutes   ✓ Do this [**AI visibility self-check**Ask three AI assistants about your category](#actions) [**Pricing script template**Compiled from the comments, into support in 30 min](#actions) [**Dependency-stack checkup**Quantify AI crawlers + recovery path](#actions)   ✗ Killed in the comments [**A fan-relationship repair platform**A motivation problem no product can fix](#actions) [**An AI training gig platform**Red ocean of supply, no differentiation](#actions) [**Ghostwriting tools without ACCESS**The pay lives in the network, not the prose](#actions)   ! Watchlist [**Persona ghostwriting tools**Waiting for paid-receipt evidence](#cases) [**The acceptance-tool window**Supply is flooding in — be a user, not a competitor](#signals) [**Trust infrastructure (our main bet)**The human premium has risen three weeks running](#signals)
 
-## 一、本周三件最重要的事
+## 1. The Three Things That Mattered Most
 
- 本节结论人格外包挂出价签、获客地基在移动、就业叙事两极撞车——三件事共同指向：真人溢价与可验证性在涨价。  01
+ VerdictPersonality outsourcing puts a price tag on the table, the ground under customer acquisition is moving, and the employment narrative collides head-on from both poles — all three point the same way: the premium on real humans, and on verifiability, is going up.  01
 
-### 1. 人格外包岗挂出第一张价签：13 万美元，"在 LinkedIn 上扮演我"
+### 1. The personality-outsourcing gig posts its first price tag: $130k to "be me on LinkedIn"
 
-[一位企业传播从业者发帖](https://www.reddit.com/r/careerguidance/comments/1xh4pqa/)说，一位 CEO 开出 13 万美元——比她现薪高 67%——雇她「假装是他本人」发内容、回评论。评论区拆得比任何职业指南都清楚：**这是 40 年老行业**（1,098 分：「政客和名人一直如此——这就是代笔」）；**幻觉戳破**（142 分：「你要互动的所有高管账号，也全是雇员在管」）；**风险条款**（123 分：「等哪天你写的东西翻车了，你就是被怒炒的替罪羊」）；**真报酬是人脉**（54 分：「你会认识一堆高层——他们是你的下一份工作」）。
+[a corporate communications professional posted](https://www.reddit.com/r/careerguidance/comments/1xh4pqa/)said a CEO offered $130k — 67% above her current salary — to hire her to "pretend to be him" posting content and replying to comments. The comment section unpacked it more clearly than any career guide: **this is a 40-year-old industry** (1,098 points: "Politicians and celebrities have always done this — this is ghostwriting"); **the illusion gets punctured** (142 points: "Every executive account you interact with is also run by employees"); **the risk clause** (123 points: "The day what you wrote blows up, you are the scapegoat who gets fired"); **the real payoff is the network** (54 points: "You will meet a pile of executives — and they are your next job").
 
-**对独立开发者**：可做的不是代写工具（AI 写得够好了），是**「人设运营订阅」托管服务**——AI 负责产量，真人负责担责。证伪条件：评论区出现代笔服务付费晒单。
+**For indie developers**: the opportunity is not a ghostwriting tool (AI already writes well enough) but a **managed "persona operations" subscription** — AI handles output, a human handles liability. Falsification condition: a paid receipt for ghostwriting services shows up in the comments.
 
     02
 
-### 2. Google 搜索第一次跌破 Alphabet 收入一半：小生意的获客地基在移动
+### 2. Google search drops below half of Alphabet's revenue for the first time: the ground under small-business customer acquisition is moving
 
-[HN 这条讨论](https://news.ycombinator.com/item?id=50291945)（355 评）不是科技八卦——对靠搜索获客的小生意，这是渠道结构的地震。同期两个信号互证：Product Hunt 出现了 [Notra](https://www.producthunt.com/posts/notra-5)——帮网站在 **AI 搜索结果**里获得排名的工具，SEO 之后 GEO 开始产品化。
+[this HN discussion](https://news.ycombinator.com/item?id=50291945) (355 comments) is not tech gossip — for a small business that gets its customers through search, this is an earthquake in the channel structure. Two signals from the same week corroborate it: Product Hunt saw [Notra](https://www.producthunt.com/posts/notra-5) — a tool that gets a site ranked in **AI search results** — after SEO, GEO is starting to turn into a product category.
 
-**落点**：把你的产品名丢进三个 AI 助手，问一遍「这类工具用什么」——**记下结果，这就是你的 AI 可见度基线**。上期判断（GEO 是窗口期，当用户不当竞品）继续成立。
+**The takeaway**: drop your product name into three AI assistants and ask them "what do people use for this kind of tool" — **write down what comes back — that is your AI visibility baseline**. Last issue's call (GEO is a window: be a user, not a competitor) still holds.
 
     03
 
-### 3. AI 就业的叙事在两极撞车，而新工种已经成型
+### 3. The AI-employment narrative collides from both poles — and the new job category is already here
 
-[微软对约四分之一员工提出买断](https://news.ycombinator.com/item?id=50245524)（1,172 评）的同周，r/cscareerquestions 两条爆帖对撞：[为什么有人以看我们失业为乐](https://www.reddit.com/r/cscareerquestions/comments/1xiqz5g/)（1,039 评）对撞[你们欠末日论者一个道歉](https://www.reddit.com/r/cscareerquestions/comments/1xgjudc/)（856 评）——**后者恰恰站在末日论者一边**：「你们说 AI 只是个花哨的聊天机器人……你们该向我们道歉」。两条同时爆，说明**叙事本身就是分裂的**，两边在用同一批证据。
+[Microsoft offered buyouts to about a quarter of its staff](https://news.ycombinator.com/item?id=50245524) (1,172 comments) — in that same week, two viral threads on r/cscareerquestions collided: [why is someone gleeful about our layoffs](https://www.reddit.com/r/cscareerquestions/comments/1xiqz5g/) (1,039 comments) against [you owe the doomers an apology](https://www.reddit.com/r/cscareerquestions/comments/1xgjudc/) (856 comments) — **and the second one actually sides with the doomers**: "You said AI is just a fancy chatbot... you should apologize to us." Both going viral at once shows that **the narrative itself is split** — both sides are working from the same evidence.
 
-而 r/remoteworkers 同期出现三条「给 AI 打工」的招聘帖：[训练 AI 认外卖场景](https://www.reddit.com/r/remoteworkers/comments/1xfwqal/)时薪 10–30 美元、[改进 AI 文案](https://www.reddit.com/r/remoteworkers/comments/1xgv2h7/)时薪 50 美元、[录有声书](https://www.reddit.com/r/remoteworkers/comments/1xff8t2/)时薪 20–25 美元——**但要说清楚：三条出自同一个账号，它本周在那个社区发了 45 帖**，是同一个招聘号的自我复制，不是三方独立佐证。这本身就是信号：**这类「高薪零工」帖正在被批量投放，求职者和客户都得先验真伪。**
+Meanwhile r/remoteworkers saw three "working for AI" hiring posts: [training AI to recognize food-delivery scenes](https://www.reddit.com/r/remoteworkers/comments/1xfwqal/) at $10–30/hour, [improving AI copy](https://www.reddit.com/r/remoteworkers/comments/1xgv2h7/) at $50/hour, [recording audiobooks](https://www.reddit.com/r/remoteworkers/comments/1xff8t2/) at $20–25/hour — **but let's be precise: all three come from one account, which posted 45 times in that community this week** — it is one recruiter account copying itself, not three independent confirmations. That is itself the signal: **these "high-paying gig" posts are being mass-distributed, and both job seekers and clients have to verify them first.**
 
-第四个声音来自 [r/developers 的调查](https://www.reddit.com/r/developers/comments/1xivgy7/)：「你认识的开发者里真有谁被替代了吗？」——**高分回答并不乐观**：「我们团队去年从 7 人裁到 4 人」「用我和另一个开发换掉了 10 个人」「我们区域裁掉了半个开发与 QA 团队」。楼主正文说的是「远程招聘？有。AI？没有」，但那只是他自己的经历，不是评论区的结论。
+A fourth voice comes from [a survey on r/developers](https://www.reddit.com/r/developers/comments/1xivgy7/): "Has anyone you know actually been replaced as a developer?" — **the top answers are not encouraging**: "We cut our team from 7 down to 4 last year", "We replaced 10 people with me and one other developer", "Our region cut half the dev and QA team." The OP's own post says "Remote hiring? Yes. AI? No" — but that is his experience, not the conclusion of the comments.
 
-**统一读法**：裁员叙事由 CEO 讲（效率），零工市场由 AI 公司讲（数据饥渴），一线体感是「暂时没替代、长期在重定价」。**自动化「录入」，别碰「判断」，永远不碰「背锅」。**
+**How to read all of it**: the layoff story is told by CEOs (efficiency), the gig-market story is told by AI companies (data hunger), and the people on the ground feel "not replaced yet, repriced over the long run".**Automate the "entry", stay out of the "judgment", and never touch the "blame".**
 
-## 二、用户痛点：本周评论区里最密集的四个
+## 2. User Pain Points: the Four Most Crowded Threads in This Week's Comments
 
- 本节结论从本周用户反馈里筛出的四个高信号痛点——每条都带评论区的态度与现成方案；点击卡片右下角翻面看可抄动作。  本周用户帖子的信号分布 求认同8,058 痛点6,729 负面反馈1,555 招人需求1,372 购买意图906 价格敏感383 其余：推荐 1,413 · 营销意图 1,176 · 问题求解 886 · 竞品提及 509 · 流失风险 294 · 预算顾虑 198（一帖可含多个信号）
+ VerdictFour high-signal pain points filtered out of this week's user feedback — each one comes with the comment section's verdict and a ready-made answer; click the bottom-right corner of a card to flip it and see the move you can copy.  Signal distribution across this week's user threads Seeking validation8,058 Pain points6,729 Negative feedback1,555 Hiring demand1,372 Purchase intent906 Price sensitivity383 The rest: recommendations 1,413 · marketing intent 1,176 · problem solving 886 · competitor mentions 509 · churn risk 294 · budget concerns 198 (one post can carry several signals)
 
-#### 1. AI 爬虫把自托管站点打成了废墟
+#### 1. AI crawlers turned a self-hosted site into rubble
 
- 负面反馈功能缺口372 评 · 1,061 分
+ Negative feedbackFeature gap372 comments · 1,061 points
 
-[一位自托管站长开帖](https://www.reddit.com/r/selfhosted/comments/1xgae5q/)：「受够这些 AI 爬虫了。」评论区不是抱怨，是**一整套现成方案**：蜜罐加训练毒数据（507 分：「给他们无限生成的胡话，链接层层相扣」）；**fail2ban 式限流**（133 分：「单个 IP 几分钟内来 200 次请求，那就不是人」）；专门的反爬工具（36 分多人只回两个字：「Anubis！」）；以及最省事的一条（24 分）：**「其实大部分爬虫是尊重 robots.txt 的」**。规模感来自 118 分的计数：「它们是庞大的 botnet，多半是住宅 IP——我遇到时数到约 35,000 个 IP」；62 分的实测：「我原来每天 3–5 千次请求，夏天涨到 2 万以上，fail2ban 拦掉 90%」。
+[a self-hosted site owner opened a thread](https://www.reddit.com/r/selfhosted/comments/1xgae5q/): "I'm sick of these AI crawlers." The comment section isn't a complaint, it is **a whole ready-made playbook**: honeypots plus poisoned training data (507 points: "Feed them endlessly generated nonsense, with links pointing at links"); **fail2ban-style rate limiting** (133 points: "One IP sending 200 requests inside a few minutes is not a person"); dedicated anti-scraping tools (36 points — several people reply with two words only: "Anubis!"); and the easiest option of all (24 points): **"Actually, most crawlers do respect robots.txt"**. The sense of scale comes from a 118-point count: "They are a huge botnet, mostly residential IPs — when it hit me I counted roughly 35,000 IPs"; and a 62-point measurement: "I used to get 3–5 thousand requests a day, in summer it went past 20,000, and fail2ban blocked 90%".
 
- 翻面看可抄动作 →
+ Flip for the move you can copy →
 
-##### 可抄动作
+##### Move you can copy
 
-← 翻回原文
+← Flip back to the original
 
-**内容位 + 工具位**：本站自己就挂着 AI 爬虫蜜罐（`/ai/ping`）——爬虫这条路对你不是抽象威胁。先量一次你的站点被爬了多少，再决定是开 robots.txt、限流，还是上反爬。
+**A content slot plus a tool slot**: this site runs its own AI crawler honeypot (`/ai/ping`) — crawling is not an abstract threat for you. Measure how hard your site gets crawled, once, then decide whether to turn on robots.txt, rate-limit, or put anti-scraping in front of it.
 
-出处：[原帖](https://www.reddit.com/r/selfhosted/comments/1xgae5q/)
+Source: [original thread](https://www.reddit.com/r/selfhosted/comments/1xgae5q/)
 
-#### 2. 两年笔记库说没就没：本地优先产品没有兜底
+#### 2. Two years of notes, gone without a word: local-first products have no fallback
 
- 负面反馈用户痛点312 评 · 315 分
+ Negative feedbackUser pain point312 comments · 315 points
 
-[一位用户两年前开始写的 Obsidian 笔记库整个消失](https://www.reddit.com/r/obsidianmd/comments/1xipb51/)，发帖问「怎么修」。评论区最专业的追问（54 分）：**「等等，笔记库怎么会自己删掉自己？」**——然后是全场共识（45 分）：**「是不是你开了同步，然后同步了一个空库？」**以及最扎心的一句（183 分）：「我没丢过笔记库，但这些年丢过很多数据。」有人直接把它当公告模板（40 分）：**「我要把它当成通用的服务公告提醒」**。底下还有一层业务洞察（30 分）：「有些人只说一半真相，好藏住自己犯的错。」
+[an Obsidian vault a user had been writing for two years vanished entirely](https://www.reddit.com/r/obsidianmd/comments/1xipb51/), and the thread asked "how do I fix this?" The sharpest question in the comments (54 points): **"Wait — how does a vault delete itself?"** — and then the consensus of the room (45 points): **"Did you turn on sync, and then sync an empty vault?"**and the most cutting line of all (183 points): "I have never lost a vault, but I have lost a lot of data over the years." One person took it straight as a service-announcement template (40 points): **"I'm going to use this as a generic service-outage notice"**. Underneath it there is a business insight too (30 points): "Some people tell half the truth, so they can hide the mistake they made."
 
- 翻面看可抄动作 →
+ Flip for the move you can copy →
 
-##### 可抄动作
+##### Move you can copy
 
-← 翻回原文
+← Flip back to the original
 
-**可抄动作**：凡是把用户的创作资产放在本地/自托管里的产品，**恢复路径必须是一等公民**——「怎么修」的答案不该是「你用错了」，而是可执行的恢复清单。这是产品文案与增长的分界线。
+**Move you can copy**: for any product that keeps users' creative work on their own machines or on self-hosted servers, **the recovery path has to be a first-class citizen** — the answer to "how do I fix this" should never be "you used it wrong"; it should be an executable recovery checklist. That is the line between product copy and growth.
 
-出处：[原帖](https://www.reddit.com/r/obsidianmd/comments/1xipb51/)
+Source: [original thread](https://www.reddit.com/r/obsidianmd/comments/1xipb51/)
 
-#### 3. 企业备份选型：一条帖问出整条采购链
+#### 3. Enterprise backup selection: one thread, a whole procurement chain
 
- 购买意图价格敏感竞品提及272 评 · 52 分
+ Purchase intentPrice sensitivityCompetitor mention272 comments · 52 points
 
-[一位 sysadmin 发帖求推荐](https://www.reddit.com/r/sysadmin/comments/1xhb4np/)：「公司的 Microsoft 365 邮箱需要一个好的备份方案。」这是本周最典型的**购买意图 + 价格敏感 + 竞品提及**三信号叠加帖——它不是在抱怨，是在选型，而且评论区会自然流出竞品名与价格区间。对做企业工具的人：**选型帖 = 最贵的流量**，用户的预算已经在讨论里了。
+[a sysadmin asked for recommendations](https://www.reddit.com/r/sysadmin/comments/1xhb4np/): "Our company Microsoft 365 mailboxes need a good backup solution." This is the week's most textbook **purchase intent + price sensitivity + competitor mention**three-signal stack — it is not a complaint, it is a selection process, and competitor names and price ranges leak out of the comments on their own. For anyone building enterprise tools: **a selection thread = the most expensive traffic there is** — the user's budget is already being talked about in the thread.
 
- 翻面看可抄动作 →
+ Flip for the move you can copy →
 
-##### 可抄动作
+##### Move you can copy
 
-← 翻回原文
+← Flip back to the original
 
-**可抄动作**：去你自己的社区里找「求推荐 / 用什么 / 换掉 X」这类帖子——那里的用户不是在抱怨，是在**准备掏钱**。评论区里出现的竞品名与价格区间，就是你的定价锚。
+**Move you can copy**: go to your own community and look for threads like "recommendations? / what do you use / replacing X" — the people there are not complaining, they are **about to pay**. The competitor names and price ranges that surface in those comments are your pricing anchor.
 
-出处：[原帖](https://www.reddit.com/r/sysadmin/comments/1xhb4np/)
+Source: [original thread](https://www.reddit.com/r/sysadmin/comments/1xhb4np/)
 
-#### 4. 定价抱怨：小老板们其实早就想好了答案
+#### 4. Pricing complaints: the small business owners already know the answer
 
- 负面反馈功能缺口91 评
+ Negative feedbackFeature gap91 comments
 
-[一位小老板问](https://www.reddit.com/r/smallbusiness/comments/1xhpdgb/)：「怎么处理抱怨你价格的人？」评论区是一份定价心理手册：**筛选逻辑**——「抱怨价格的人，本来就不是你的客户」（9 分）、「免费客户最难伺候」（6 分）；**反直觉**——「涨价之后，有时生意反而更好」（9 分）；**价值话术**（16 分 + 8 分幼儿园园主案例）：「价格=它带来的价值」「我们比别人贵一点，但给老师高工资，所以请得到最好的老师」；**技术前置**（5 分）：「预约前就展示底价并要求确认，觉得贵的人根本走不到我面前」。
+[a small business owner asked](https://www.reddit.com/r/smallbusiness/comments/1xhpdgb/): "How do you handle people who complain about your price?" The comment section is a pricing psychology handbook: **The filter** — "People who complain about price were never your customers anyway" (9 points), "Free customers are the hardest to serve" (6 points); **The counter-intuitive part** — "After a price increase, sometimes the business actually gets better" (9 points); **Value framing** (16 points, plus an 8-point kindergarten-owner case): "Price equals the value it delivers"; "We charge a bit more than others, but we pay our teachers well, so you get the best teachers"; **Put it in the product** (5 points): "Show the base price before the booking and make them confirm it — anyone who thinks it is too expensive never even gets to me".
 
- 翻面看可抄动作 →
+ Flip for the move you can copy →
 
-##### 可抄动作
+##### Move you can copy
 
-← 翻回原文
+← Flip back to the original
 
-**定价话术模板**：筛选逻辑 + 价值话术 + 价格前置，30 分钟抄进客服流程。国内语境：把「预约前亮底价」换成「报价单/小程序先亮价」。
+**Pricing script template**: filter + value framing + price upfront, copied into your support workflow in 30 minutes. In a China-market context: swap "show the base price before the booking" for "put the price on the quote sheet or in the mini program first".
 
-出处：[原帖](https://www.reddit.com/r/smallbusiness/comments/1xhpdgb/)
+Source: [original thread](https://www.reddit.com/r/smallbusiness/comments/1xhpdgb/)
 
-#### 5. 卖服务的人，被卖服务的人淹死了
+#### 5. The people who sell services drowned the people who buy them
 
- 负面反馈功能缺口87 评
+ Negative feedbackFeature gap87 comments
 
-[这条发问](https://www.reddit.com/r/smallbusiness/comments/1xguhky/)：「2026 年找客户，是不是变得离谱地难？」评论区把死因摆上台面：「**我一天被塞 50 条垃圾信息**」（50 分）；「**每天 300–500 封邮件、短信、Shopify 询盘，全是同样的模糊话术**」（19 分）——卖服务的人淹死了找服务的人。出路也有：**「把一个具体结果卖给一类生意，比把一长串服务卖给所有人容易」**（24 分）；「冷触达基本没用——市场饱和加上预算收缩」（11 分）。
+[this question](https://www.reddit.com/r/smallbusiness/comments/1xguhky/): "Has finding customers become ridiculously hard in 2026?" The comments put the cause of death on the table: "**I get 50 spam messages a day**" (50 points); "**300–500 emails, texts and Shopify inquiries a day, every one of them the same vague pitch**" (19 points) — the people who sell services drowned the people who look for services. There is a way out too: **"Selling one specific outcome to one kind of business is easier than selling a long list of services to everybody"** (24 points); "Cold outreach is basically useless — the market is saturated and budgets are shrinking" (11 points).
 
- 翻面看可抄动作 →
+ Flip for the move you can copy →
 
-##### 可抄动作
+##### Move you can copy
 
-← 翻回原文
+← Flip back to the original
 
-**渠道聚焦**：先写下你的「一类生意」和「一个结果」，再决定投放渠道；国内语境同步适用于抖音/美团/微信的冷触达。
+**Channel focus**: write down your "one kind of business" and your "one result" first, then pick the channel; the same applies to cold outreach on Douyin, Meituan and WeChat in a China-market context.
 
-出处：[原帖](https://www.reddit.com/r/smallbusiness/comments/1xguhky/)
+Source: [original thread](https://www.reddit.com/r/smallbusiness/comments/1xguhky/)
 
-#### 6. 产品改版的少数派反弹：抱怨最凶的，最不会走
+#### 6. The redesign backlash minority: the loudest complainers are the ones who stay
 
- 负面反馈功能缺口47 评
+ Negative feedbackFeature gap47 comments
 
-[一位产品经理的困境](https://www.reddit.com/r/ProductManagement/comments/1xikydy/)：「改版后几乎所有用户都适应了，但一小撮用户的不满大到客服要求回滚。」评论区拆解：**定调**（78 分）：「这种反对是不理性的，而且在大盘里是小事」；**机制**（17 分）：「**用户对切换成本的厌恶，恰恰就是他们抱怨的原因——他们是最不可能把生意搬走的人**」；**角色纠偏**（5 分）：「客服的职责是帮客户从新版拿到价值，不是替用户要求回滚」；**落地**（4 分）：「叙事从修复坏功能换成升级工作方式，用产品数据证明 + 工作流短训」。
+[a product manager's dilemma](https://www.reddit.com/r/ProductManagement/comments/1xikydy/): "After the redesign almost every user adapted, but a small group was unhappy enough that support demanded a rollback." The comments break it down: **Tone** (78 points): "This kind of objection is irrational, and in the overall numbers it is small potatoes"; **Mechanism** (17 points): "**Users' aversion to switching costs is precisely why they complain — they are the least likely people to take their business elsewhere**"; **Role correction** (5 points): "Support's job is to help customers get value out of the new version, not to demand a rollback on their behalf"; **Landing it** (4 points): "Shift the narrative from fixing broken features to upgrading how people work, and back it with product data plus a short workflow training".
 
- 翻面看可抄动作 →
+ Flip for the move you can copy →
 
-##### 可抄动作
+##### Move you can copy
 
-← 翻回原文
+← Flip back to the original
 
-**改版反弹应对卡**：算清客户切换成本 + 数据话术 + 客服改「采用教练」——写进产品变更 runbook。
+**Redesign-backlash playbook**: work out the customer's switching cost + the data story + reposition support as an adoption coach — and write it into the product change runbook.
 
-出处：[原帖](https://www.reddit.com/r/ProductManagement/comments/1xikydy/)
+Source: [original thread](https://www.reddit.com/r/ProductManagement/comments/1xikydy/)
 
-## 三、这周谁赚到了钱，谁翻了车
+## 3. Who Made Money This Week, and Who Crashed
 
- 本节结论赚到钱的都有可验证路径；翻了车的都留下可复用的机制——先建市场再建产品、被喜欢不等于付费、关停要有死亡条件。
+ VerdictEveryone who made money has a verifiable path; everyone who crashed left behind a reusable mechanism — build the market before the product, being liked is not the same as being paid, and a shutdown needs death criteria.
 
-### 赚到钱的
+### The ones who made money
 
   ①
 
-#### 人格外包岗
+#### The personality-outsourcing gig
 
-$130k / 年
+$130k / yr
 
-**为什么成立**：现金 + 高层人脉 + 替老板担责——三样 AI 都替代不了（第一节第 1 条）。
+**Why it works**: cash + access to executives + taking the boss's blame — none of the three is replaceable by AI (item 1 in Section 1).
 
-**可抄条件**：算一遍你产品对应岗位的「信任溢价」。当事人自述。
+**The condition to copy it**: price the "trust premium" for the role your product maps to.Self-reported.
 
    ②
 
-#### AI 训练零工平台方
+#### AI training gig platforms
 
-$10–50 / 时
+$10–50 / hr
 
-**为什么成立**：时薪 10–30 美元的三条招聘帖——**但它们出自同一个账号，它本周在那个社区发了 45 帖**，是招聘号的自我复制而非三方佐证。这本身是信号：**这类「高薪零工」帖正被批量投放，客户与求职者都得先验真伪**。帖内转述。
+**Why it works**: three hiring posts at $10–30 an hour — **but all three come from one account, which posted 45 times in that community this week** — it is one recruiter account copying itself, not three independent confirmations. That is itself the signal: **these "high-paying gig" posts are being mass-distributed, and both clients and job seekers have to verify them first**.Secondhand via the post.
 
    ③
 
-#### [SaaS 上线 18 天的首笔收入](https://www.reddit.com/r/SaaS/comments/1xianw4/)
+#### [the first revenue, 18 days after a SaaS launch](https://www.reddit.com/r/SaaS/comments/1xianw4/)
 
-$600 / 18 天
+$600 / 18 days
 
-**怎么做到的**：创始人自己交代了渠道——**除 X（Twitter）外没做任何投放**，产品是一个 web 应用托管平台（dotstore.io），收入靠 Stripe 与信任度平台展示的真实收入数据带来自然流量。**评论区把三个陷阱说透了**：「首笔陌生人的钱是最难赚的，你要盯的是**折扣结束后的续费**」（2 分）；「$600 是总额不是月收入，MRR 要单独记」（2 分）；「重度折扣 + 广告收入看起来像增长，折扣一停就消失」（2 分）。另有一条冷静质疑（4 分）：「几乎每个预算追踪 App 都有这功能，谁会再付钱？」
+**How it was done**: the founder named the channel himself — **no paid acquisition at all except on X (Twitter)**, the product is a web app hosting platform (dotstore.io), and the money came from organic traffic driven by the real revenue numbers Stripe and the trust-badge platform display.**the comment section spells out three traps**: "The first money from a stranger is the hardest to earn — what you have to watch is **the renewal after the discount ends**" (2 points); "$600 is a total, not monthly revenue — track MRR on its own" (2 points); "Heavy discounts plus ad revenue look like growth, and vanish the moment the discount stops" (2 points). And one cool-headed objection (4 points): "Every budgeting app already has this feature — who is going to pay for it again?"
 
-**可抄条件**：**首笔收入来自单渠道 + 折扣期不算数**——先验证原价续费，再谈规模化。当事人自述。
+**The condition to copy it**: **first revenue from a single channel, and discount-period revenue does not count** — verify renewal at full price first, then talk about scaling.Self-reported.
 
    ④
 
-#### [副业年入近 $8,000，附「什么有效」](https://www.reddit.com/r/indiehackers/comments/1xfrmup/)
+#### [a side business close to $8,000 a year, with a list of what worked](https://www.reddit.com/r/indiehackers/comments/1xfrmup/)
 
-$8,000 / 年
+$8,000 / yr
 
-**为什么成立**：收入报告体（88 评），路径的可复制性高于金额——重点看他列的「worked」清单里哪些你已经在做。当事人自述。
+**Why it works**: an income report (88 comments), and the path is more copyable than the amount — focus on which items in his "worked" list you are already doing.Self-reported.
 
    ⑤
 
-#### [IFTTT 更名 IFTTT.ai，免费构建无限 Applets](https://www.producthunt.com/posts/ifttt-ai)
+#### [IFTTT becomes IFTTT.ai, with unlimited Applets built for free](https://www.producthunt.com/posts/ifttt-ai)
 
-免费攻势
+The free offensive
 
-**警示**：**你的付费功能正被大厂标成免费**——自动化入口的定价权之争开始了。来自 Product Hunt 发布动态。
+**Warning**: **your paid features are being marked free by a big platform** — the pricing-power fight over the automation entry point has started.From the Product Hunt launch feed.
 
-### 翻了车的
+### The ones who crashed
 
-- **
-- **「把生意做大，然后失去了一切」**——[一位创始人发帖求建议](https://www.reddit.com/r/smallbusiness/comments/1xhnmgp/)：他有牙科诊所管理与商业地产背景，公司做到 23 名员工、人均创收约 6.3 万美元，最终因设备被破坏、维修成本压垮而停业。评论区最高赞的一句其实是**提问**：「你怎么做到 23 个员工、人均创收只有 6.3 万美元？」——留下的是一个更大的问号：**规模本身不等于模式成立**。往下是重建药方（多人一致：「用你的运营背景做牙科诊所咨询，最稳妥地重建现金流」）与过来人样本（「地产做到 500 万美元后主动归零，现在第三次创业」）。**机制：失败后先盘数据，再选最快产生现金流的那条旧能力，而不是再押一次身家。**
-- **「关停一个大家喜欢的产品」**——[创始人的告别帖](https://www.reddit.com/r/entrepreneurridealong/comments/1xhnikt/)。最疼的一条（3 分）：「**不算失败也不算成功的产品最难杀——死得不够彻底逼你动手，长得不够快让你觉得不该继续，就在小口小口吃掉你的注意力。**」解法（2 分）：「在动感情之前定好数字和日期，写在不能偷偷修改的地方——没达标就死，不需要开会。」OP 的告别很体面：群发邮件、给老用户发纪念徽章。最尖锐的追问（1 分）：「整篇讲死掉的项目，**却只字未提吃掉它时间的新项目是什么**」。**机制：被喜欢是留存，不是付费；关停要有预设的死亡条件，也要有体面的告别。**
-- **Etsy 的平台风险续篇**——[卖家自述](https://www.reddit.com/r/Etsy/comments/1xfwqhx/)：「Etsy 自己都不同意自己的政策，而我的店可能随时被关。」规则朝令夕改 + 单一渠道依赖，与上期民宿三连同构。
-- **Binance 被盗 56 亿美元**——[HN 讨论](https://news.ycombinator.com/item?id=50296470)（1,238 评）。回执一句话：**你的资产托管方出过事故吗？**
+- **"Grow the business, then lose everything"** — [a founder asked for advice](https://www.reddit.com/r/smallbusiness/comments/1xhnmgp/): he came from dental clinic management and commercial real estate, grew the company to 23 employees at roughly $63k of revenue per head, and it shut down when broken equipment and repair costs crushed it. The top-voted comment is actually a question: **a question**: "How did you get to 23 employees with only $63k of revenue per head?" — and what it leaves behind is a bigger question: **scale by itself is not proof the model works**. Below that comes the rebuild recipe (several people agree: "use your operating background to advise dental clinics — the safest way to rebuild cash flow") and a sample from someone who has been there ("Got real estate to $5M, zeroed it out on purpose, and this is my third startup").**Mechanism: after a failure, count the numbers first, then pick the old skill that produces cash fastest, instead of betting the family fortune again.**
+- **"Shut down a product everybody likes"** — [the founder's farewell post](https://www.reddit.com/r/entrepreneurridealong/comments/1xhnikt/). The most painful comment (3 points): "**A product that is neither a failure nor a success is the hardest to kill — it does not die thoroughly enough to force your hand, and it does not grow fast enough for you to feel you should stop, so it eats your attention in small bites.**" The fix (2 points): "Set the numbers and the date before you get emotional, and write them where you cannot quietly edit them — if it misses the mark, it dies, and no meeting is needed." The OP's goodbye was dignified: a mass email, commemorative badges for old users. The sharpest follow-up (1 point): "an entire post about a dead project, **that never says a word about the new project that ate its time**."**Mechanism: being liked is retention, not payment; a shutdown needs preset death criteria, and it needs a dignified goodbye.**
+- **Etsy's platform risk, continued** — [a seller reported](https://www.reddit.com/r/Etsy/comments/1xfwqhx/): "Etsy does not even agree with its own policies, and my shop could be shut down at any time." Rules that change overnight plus dependence on a single channel — the same shape as last issue's Airbnb trilogy.
+- **$5.6B stolen from Binance** — [the HN discussion](https://news.ycombinator.com/item?id=50296470) (1,238 comments). One-line receipt: **Has your asset custodian ever had an incident?**
 
-## 四、新品雷达
+## 4. New Product Radar
 
- 本节结论Product Hunt 本周 75 个新品的分类分布如下——Agent 基建是最大的簇，小企业主语音助手首次扎堆，两个团队的评论区替你验证了痛点。  本周 PH 新品分类分布 AI Agent28 SaaS15 开发工具13 效率9 其他10 仅观察发布动态，不引用票数与排名
+ VerdictHere is how this week's 75 Product Hunt launches break down by category — Agent infrastructure is the biggest cluster, voice assistants for small business owners arrived in force for the first time, and two teams' comment sections validated the pain points for you.  Category breakdown of this week's PH launches AI Agent28 SaaS15 Developer tools13 Productivity9 Other10 Launch feed observed only; no votes or rankings cited
 
-| 产品 | 做什么 | 为什么值得看 |
+| Product | What it does | Why it's worth a look |
 |---|---|---|
-| [Flatbread](https://www.producthunt.com/posts/flatbread) | Agent 编码会话的共享与复用 | Agent 基建是本周最大的产品簇，会话资产化是新方向 |
-| [Kin](https://www.producthunt.com/posts/kin-c629f0ba-aa5e-4681-a288-b149a9b6dc4b) | Agent 安全控制，连 GitHub 即用 | 安全护栏紧随 Agent 铺开——上期验收焦虑的配套位 |
-| [Backenly](https://www.producthunt.com/posts/backenly) | MCP 协议让 Agent 自动建 Postgres 后端 | 「Agent 自己搭后端」从演示走向产品 |
-| [telemetry.dev](https://www.producthunt.com/posts/telemetry-dev) | Agent 运行可观测 | 每次运行记录成数据——Agent 的行车记录仪 |
-| [Spacesheep](https://www.producthunt.com/posts/spacesheep) | 把 Agent 工作成果变成团队资产 | 瞄准「Agent 干完活东西在哪」的组织痛点 |
-| [Empacer](https://www.producthunt.com/posts/empacer) | 小企业主语音 AI 助手 | 三个语音助手同日扎堆，指向同一个判断：**小老板没时间每次重新解释业务**（产品设计是「三个设置问题，之后语音请求直接变成计划」） |
-| [Vaani](https://www.producthunt.com/posts/vaani-developer-platform) | 无代码搭拟人语音 Agent | 与 Empacer 同日同向：小企业主语音助手首次扎堆 |
-| [Tulu](https://www.producthunt.com/posts/tulu) | 中小企业营销运营与分析 | 终结手动 UTM 和表格——营销执行层的自动化 |
-| [throxy](https://www.producthunt.com/posts/throxy) | YC 的 AI 原生销售代理 | 直打制造业/物流/建筑 B2B——传统行业被 Agent 渗透 |
-| [CloudKnife](https://www.producthunt.com/posts/cloudknife) | 云成本自动优化 | 卖点是**执行而非建议**：确定性内核逐条核对建议是否违反硬规则，而不是只丢一句「降配这个」 |
-| [Notra](https://www.producthunt.com/posts/notra-5) | AI 搜索结果里的排名优化（GEO） | 呼应第一节：搜索入口迁移的最直接工具化 |
-| [Specsight](https://www.producthunt.com/posts/specsight) | 代码变更自动变产品功能地图 | 「文档保鲜先做可程序化部分」最接近落地的产品 |
-| [Hob](https://news.ycombinator.com/item?id=50246238) | 开源本地的 Claude Cowork 替代 | 「开源版大厂产品」仍是独立开发者稳定赛道（HN 176 分） |
-| [TitleArt](https://news.ycombinator.com/item?id=50238708) | 做出 1997 年质感的文字 | 怀旧质感 + 行为设计是本周功能创新高频词（Flipcorder/TONKO/Mozy/Orbit 同向） |
+| [Flatbread](https://www.producthunt.com/posts/flatbread) | Sharing and reuse of Agent coding sessions | Agent infrastructure is the biggest product cluster this week; turning sessions into an asset is the new direction |
+| [Kin](https://www.producthunt.com/posts/kin-c629f0ba-aa5e-4681-a288-b149a9b6dc4b) | Agent security controls, live as soon as you connect GitHub | Safety guardrails are spreading right behind the Agents — the companion slot to last issue's acceptance anxiety |
+| [Backenly](https://www.producthunt.com/posts/backenly) | The MCP protocol lets an Agent spin up a Postgres backend on its own | "The Agent builds its own backend" moves from demo to product |
+| [telemetry.dev](https://www.producthunt.com/posts/telemetry-dev) | Observability for Agent runs | Every run recorded as data — the Agent's dashcam |
+| [Spacesheep](https://www.producthunt.com/posts/spacesheep) | Turns an Agent's output into a team asset | Aimed at the organizational pain point of "where did the Agent leave the work?" |
+| [Empacer](https://www.producthunt.com/posts/empacer) | A voice AI assistant for small business owners | Three voice assistants launched the same day, all pointing at one conclusion: **a small business owner has no time to re-explain the business every time** (the product asks three setup questions, then turns a voice request straight into a plan) |
+| [Vaani](https://www.producthunt.com/posts/vaani-developer-platform) | Build a human-sounding voice Agent with no code | Same day, same direction as Empacer: voice assistants for small business owners arrive in force for the first time |
+| [Tulu](https://www.producthunt.com/posts/tulu) | Marketing operations and analytics for small businesses | Ends manual UTMs and spreadsheets — automation for the marketing execution layer |
+| [throxy](https://www.producthunt.com/posts/throxy) | YC's AI-native sales agent | Goes straight at manufacturing, logistics and construction B2B — Agents seeping into traditional industries |
+| [CloudKnife](https://www.producthunt.com/posts/cloudknife) | Automatic cloud cost optimization | The pitch is **execution, not advice**: a deterministic core checks every recommendation against hard rules, instead of just telling you to "downsize this one" |
+| [Notra](https://www.producthunt.com/posts/notra-5) | Ranking optimization inside AI search results (GEO) | Echoes Section 1: the most direct tooling for the migration of the search entry point |
+| [Specsight](https://www.producthunt.com/posts/specsight) | Turns code changes into an automatic map of product features | The closest thing to a shipped product for "keep the docs fresh, start with the parts you can program" |
+| [Hob](https://news.ycombinator.com/item?id=50246238) | An open-source, local alternative to Claude Cowork | "Open-source versions of big-platform products" remain a steady lane for indie developers (176 points on HN) |
+| [TitleArt](https://news.ycombinator.com/item?id=50238708) | Type that looks like 1997 | Nostalgic texture plus behavior design are this week's high-frequency words in feature innovation (Flipcorder/TONKO/Mozy/Orbit point the same way) |
 
-## 五、值得记下的信号
+## 5. Signals Worth Noting
 
- 本节结论四条信号都带评论区证据：知识广场加速塌方、晋升陷阱挂出 5,793 分、创作者断裂继续、AI 疲劳与语音优先在供需两端汇合。
+ VerdictFour signals, each with comment-section evidence: the knowledge square is collapsing faster, the promotion-trap thread scored 5,793 points, the creator-fan rupture continues, and AI fatigue meets voice-first on both the supply and the demand side.
 
-#### 1. 知识广场的迁移在加速
+#### 1. The migration of the knowledge square is accelerating
 
-[StackOverflow 月提问跌破 1,000](https://www.reddit.com/r/dataisbeautiful/comments/1xi0ilu/)（Reddit 5,078 分 + [HN 833 分](https://news.ycombinator.com/item?id=50282454) 双源），且一天之内涨了 3,581 分——**不是稳态，是塌方曲线**。验证层（可信度/出处/时效）的工具继续涌入，当用户不当竞品。
+[StackOverflow's monthly questions fell below 1,000](https://www.reddit.com/r/dataisbeautiful/comments/1xi0ilu/) (Reddit 5,078 points + [HN 833 points](https://news.ycombinator.com/item?id=50282454) from two sources), and it gained 3,581 points inside a single day — **this is not a steady state, it is a collapse curve**. Tools for the verification layer (credibility, sourcing, freshness) keep flooding in — be a user, not a competitor.
 
-#### 2. 「晋升陷阱」帖拿下 5,793 分
+#### 2. The "promotion trap" thread took 5,793 points
 
-[经理亲口承认「不敢晋升你，因为部门离不开你」](https://www.reddit.com/r/careerguidance/comments/1xh0ebl/)——1,382 分的最高赞回复：「这是结构性无能的自白」。评论区给出的应对：**「坐地晋升谈判：两个月内加薪 20%，做不到就带着技能去市场上」**（284 分）、「责任和薪资对齐，否则就走」（203 分）。**可抄**：部门离不开的人，恰恰是晋升谈判筹码最足的人——用「责任与薪资对齐」代替「用感情留人」。
+[a manager admits outright "I can't promote you, because the department can't do without you"](https://www.reddit.com/r/careerguidance/comments/1xh0ebl/) — the top reply, at 1,382 points: "This is a confession of structural incompetence." The answers in the comments: **"Negotiate the promotion where you sit: a 20% raise within two months, and if it does not happen, take your skills to the market"** (284 points), "Align responsibility with salary, otherwise leave" (203 points).**Copy this**: the people a department cannot do without are exactly the ones with the most leverage in a promotion negotiation — replace "keep them with affection" with "align responsibility and salary".
 
-#### 3. 创作者与粉丝的断裂仍在继续
+#### 3. The rupture between creators and fans continues
 
-[YouTuber 取关帖](https://www.reddit.com/r/youtube/comments/1xi6sp1/)（1,422 评）里高频词是「人设是假的」「广告织进了视频里」——对做内容的人，**真实感是唯一不会被 AI 批量生产的资产**。
+[a YouTuber's unfollow thread](https://www.reddit.com/r/youtube/comments/1xi6sp1/) (1,422 comments) repeats two phrases over and over: "the persona is fake" and "ads are woven into the video" — for anyone making content, **authenticity is the one asset AI cannot mass-produce**.
 
-#### 4. AI 时代的集体疲惫
+#### 4. Collective exhaustion in the AI era
 
-[Ask HN: 你在 AI 时代也累了吗](https://news.ycombinator.com/item?id=50301479)（141 评）——降低认知负荷的工具（语音优先、自动记忆）正是第四节 SMB 助手扎堆的原因，**需求与供给在同一点汇合**。
+[Ask HN: Are you tired too, in the age of AI?](https://news.ycombinator.com/item?id=50301479) (141 comments) — tools that cut cognitive load (voice first, automatic memory) are exactly why the SMB assistants piled up in Section 4, **demand and supply meet at the same point**.
 
-## 六、非工程师的抱怨怎么变成生意
+## 6. How Non-Engineer Complaints Turn Into Business
 
- 本节结论生活流的分发力、民宿运营细节下沉、管理注意力成本、Etsy 期望错配——四条抱怨各有一个内容位或产品位。
+ VerdictThe pull of everyday life, the operational details of running a rental, the cost of a manager's attention, and the expectation mismatch on Etsy — four complaints, each with a content slot or a product slot.
 
-#### 1. 生活流的分发力
+#### 1. The pull of everyday life
 
-[「我注意到邻居每天早上第一件事是先开车库门」](https://www.reddit.com/r/homeowners/comments/1xg9tk9/)（1,694 评）——本周热度第二的帖子没有任何「干货」，只有具体细节。**具体 > 正确**，这是上期「不脸红的分发」的第二个实证。
+["I noticed my neighbour drives his garage door open first thing every morning"](https://www.reddit.com/r/homeowners/comments/1xg9tk9/) (1,694 comments) — the second-hottest thread this week contains no "pro tips" at all, only concrete detail.**Specific > correct** — that is the second piece of evidence for last issue's "distribution without blushing".
 
-#### 2. 民宿运营细节下沉
+#### 2. Host operations sink into the details
 
-[无信用历史的房客怎么处理](https://www.reddit.com/r/airbnb_hosts/comments/1xhqziy/)（61 评）、[床单上的头发怎么清洁](https://www.reddit.com/r/airbnb_hosts/comments/1xiz725/)（52 评）——上期「旺季政策」之后，房东痛点向运营执行层下沉，内容位仍在。
+[how to handle a guest with no credit history](https://www.reddit.com/r/airbnb_hosts/comments/1xhqziy/) (61 comments), [how to clean hair off the sheets](https://www.reddit.com/r/airbnb_hosts/comments/1xiz725/) (52 comments) — after last issue's "peak-season policy", the host's pain points sink into the execution layer, and the content slot is still there.
 
-#### 3. 带团队的隐性成本
+#### 3. The hidden cost of leading a team
 
-[怎么管理一个变安静但绩效还行的员工](https://www.reddit.com/r/managers/comments/1xirgsd/)（182 评 / 341 分）——上期「教学成本」之后，管理注意力是企业侧工具的第二个入口；叠加第五节「晋升陷阱」帖，管理者的两大恐惧（教不会、留不住）都有真实声音。
+[how to manage an employee who has gone quiet but still performs fine](https://www.reddit.com/r/managers/comments/1xirgsd/) (182 comments / 341 points) — after last issue's "cost of teaching", a manager's attention is the second entry point for enterprise-side tools; stacked on the "promotion trap" thread in Section 5, both of a manager's fears (you can't teach them, you can't keep them) now have real voices behind them.
 
-#### 4. Etsy 卖家的期望错配
+#### 4. The expectation mismatch of Etsy sellers
 
-[「买家在『想象』他们买到的东西」](https://www.reddit.com/r/EtsySellers/comments/1xiiukq/)（86 评 / 163 分）——展示与实物的一致性是差评之源；对独立电商，详情页视频化是已验证的解法。
+["Buyers are 'imagining' what they buy"](https://www.reddit.com/r/EtsySellers/comments/1xiiukq/) (86 comments / 163 points) — consistency between the listing and the object is where one-star reviews come from; for independent e-commerce, turning the product page into video is a proven fix.
 
-## 七、本周行动清单
+## 7. This Week's Action List
 
   2H
 
-### 如果你只有 2 小时
+### If you only have 2 hours
 
-- **1. 定价话术模板**：第二节第 4 条的评论区合集，抄进客服流程；国内语境把「预约前亮底价」换成「报价单/小程序先亮价」。
-- **2. 依赖栈体检**：量一次你的站点被 AI 爬虫抓了多少（第二节第 1 条），再决定开 robots.txt、限流还是上反爬；本地优先的产品把「恢复路径」做成产品的一部分（第二节第 2 条）；改版反弹应对卡（第二节第 6 条）。
-- **3. AI 可见度自查**：三个 AI 助手问一遍你的品类，记下基线（第一节第 2 条），下季度对比；顺带查「选型帖」里出现的竞品名与价格区间，作为定价锚。
-- **4. 人格托管说明书**：谁可代表你发言、出事谁负责（第一节第 1 条）。
-- **5. 选型帖雷达**：去自己社区找「求推荐 / 用什么 / 换掉 X」的帖子（第二节第 3 条）——那里的用户不是在抱怨，是在准备掏钱。
+- **1. Pricing script template**: the comment-section compilation from item 4 of Section 2, copied into your support workflow; in a China-market context, swap "show the base price before the booking" for "put the price on the quote sheet or in the mini program first".
+- **2. Dependency-stack checkup**: measure how hard AI crawlers hit your site (item 1 of Section 2), then decide between robots.txt, rate limiting and anti-scraping; for local-first products, make the recovery path part of the product (item 2 of Section 2); the redesign-backlash playbook (item 6 of Section 2).
+- **3. AI visibility self-check**: ask three AI assistants about your category and write down the baseline (item 2 of Section 1) so you can compare next quarter; while you are there, note the competitor names and price ranges that show up in selection threads — they make your pricing anchor.
+- **4. A personality-custody manual**: who may speak for you, and who answers for it when something goes wrong (item 1 of Section 1).
+- **5. A radar for selection threads**: go to your own community and look for "recommendations? / what do you use / replacing X" threads (item 3 of Section 2) — the people there are not complaining, they are about to pay.
     1W
 
-### 如果你有 1 个周末
+### If you have one weekend
 
-- **6. 试用本周 Agent 基建新品**（Flatbread / telemetry.dev / Kin），第一手校准你的产品路线。
+- **6. Try this week's Agent infrastructure launches** (Flatbread / telemetry.dev / Kin), and calibrate your product roadmap with first-hand use.
     3M
 
-### 如果你要押一个方向
+### If you are betting on one direction
 
-- **7. 信任基建（维持主推）**——人格外包、知识外包的时代，「真人在场 + 敢签字 + 可验证」的溢价只会更高。
+- **7. Trust infrastructure (still our main bet)** — in an era of outsourced personalities and outsourced knowledge, the premium on "a real person in the room + willing to sign + verifiable" only goes up.
 
-**明确不要做的**：粉丝关系修复平台（动机问题产品解决不了）；AI 训练零工平台（红海）；无 ACCESS 资源的代笔工具（报酬在人脉不在文字）。
+**Explicitly not doing**: a fan-relationship repair platform (a motivation problem no product can solve); an AI training gig platform (red ocean); ghostwriting tools without ACCESS to the people involved (the pay lives in the network, not the prose).
 
-### 关于本报告
+### About this report
 
-**数据口径**：文中分数与评论数是我们在**记录当天（2026-11-01）**记下的**所引单个帖子的公开互动数值**，不是也不代表任何整体统计；Reddit 的分数一直在涨，你点开链接看到的数字通常更高——不矛盾，只是时间差。**结论不依赖具体数值，依赖的是评论区里在说什么。**两个如实交代：① 初稿成于 10 月 31 日，当时上游收录尚不完整（当日的抓取与内容标注均未完成）；11 月 1 日补齐后已按完整数据复核全文数字。② Indie Hackers 社区的内容因来源侧变动本期缺席。
+**Data conventions**: the scores and comment counts here are the**public interaction numbers of the single threads we cite,** recorded on**the day of writing (2026-11-01)**, and they are not, and do not represent, any aggregate statistic; Reddit's scores keep climbing, so the numbers you see when you open a link are usually higher — no contradiction, just a time difference.**The conclusions do not depend on the exact numbers; they depend on what the comment sections are saying.**Two honest disclosures: ① the first draft was finished on October 31, when upstream collection was still incomplete (that day's crawl and content tagging were not done); once the data was completed on November 1, every number in this report was re-checked against the full figures. ② content from the Indie Hackers community is absent from this issue because of a change on the source side.
 
-**引用规范**：所有引用以超链接随文给出，点击直达原帖；**网页版悬停任意引用链接，可查看该帖的发帖人、版块与记录时点的互动数值**（共 46 处）。评论作者随引语标注。Hacker News 讨论均链接在文中；Product Hunt 仅用于观察公开发布动态，不引用其评分、票数或排名。用户名与言论均属原作者，不代表本刊立场。
+**Citation rules**: every citation is given inline as a hyperlink that takes you straight to the original thread; **on the web version, hovering any citation link shows the thread's author, the subreddit and the interaction numbers at the moment we recorded them** (46 in total). Comment authors are credited next to the quotes. Hacker News discussions are all linked inline; Product Hunt is used only to watch public launch activity, and none of its scores, votes or rankings are cited. Usernames and statements belong to their original authors and do not represent this publication's position.
 
-**使用边界**：本刊是人工深度阅读与编辑的评论文章，**不提供、也不曾提供任何可下载数据或统计接口**；引用只取核心观点，**读报告永远不能替代读原帖——我们始终建议你点开原文自己看完整语境**。文中出现的用户名与言论均属原作者，不代表本刊立场。如果你是被引用的作者并希望我们调整或移除相关内容，联系我们，我们会处理。
+**Limits of use**: this is commentary written by people who read the sources in depth and edit by hand, **it does not offer, and never has offered, any downloadable data or statistics API**; citations take only the core of each point, **reading this report can never replace reading the original thread — we always suggest you open the source and read the full context yourself**. Usernames and statements that appear here belong to their original authors and do not represent this publication's position. If you are a cited author and would like us to adjust or remove the relevant material, contact us and we will handle it.
