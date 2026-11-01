@@ -8,8 +8,25 @@
     "insights",
     "cases"
   ],
-  "count": 9,
+  "count": 10,
   "reports": [
+    {
+      "id": "2026-W43",
+      "kind": "weekly",
+      "title_zh": "给 AI 打零工的人，和给 AI 造工具的人",
+      "title_en": "Those Who Gig for AI, and Those Who Build for AI",
+      "desc_zh": "AI 正在把工作拆成两层生意：一端是给 AI 打零工的人，另一端是给 AI 造工具的人；夹在中间的真人溢价在涨价——一位 CEO 开价 13 万美元雇人扮演自己。",
+      "desc_en": "AI is splitting work into two businesses: gig workers who train AI, and builders who make AI tools — while the premium on real human presence keeps rising.",
+      "date": "2026-10-31",
+      "url": "https://7kolor.github.io/weekly/2026-W43/",
+      "links": {
+        "page": "https://7kolor.github.io/weekly/2026-W43/",
+        "zh": "https://7kolor.github.io/weekly/2026-W43/report-zh.html",
+        "en": "https://7kolor.github.io/weekly/2026-W43/report-en.html",
+        "markdown": "https://7kolor.github.io/weekly/2026-W43/report.md",
+        "markdown_en": "https://7kolor.github.io/weekly/2026-W43/report-en.md"
+      }
+    },
     {
       "id": "2026-W42",
       "kind": "weekly",

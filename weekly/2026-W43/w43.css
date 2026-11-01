@@ -1089,3 +1089,58 @@ html { scroll-behavior: smooth; }
 .content .bar-fill.b3 { background: linear-gradient(90deg, #5B7C99, #8FA9BF); }
 .content .bar-fill.b2 { background: linear-gradient(90deg, #16283B, #3B5578); }
 .content .pull-quote { background: linear-gradient(135deg, #F4FAFB 0%, #FFFFFF 65%); border-left: 4px solid #0E7490; }
+
+/* ---------- W43 排版修正：章节上一行、段落间半行 ---------- */
+.content .section { margin-top: 30px; }                 /* 章节之间：一行 */
+.content .section:first-child { margin-top: 0; }
+.content .section-header { margin-bottom: 14px; }
+.content .section-header h2 { margin-bottom: 0; }
+.content .takeaway { margin: 0 0 16px; padding: 12px 16px; }
+.content .takeaway + .card, .content .takeaway + .pain-flip { margin-top: 0; }
+/* 段落间距：半行（9px），替代默认 18px */
+.content p { margin: 0 0 9px; line-height: 1.8; }
+.content p + p { margin-top: 0; }
+.content .card p:last-child, .content .pain-flip p:last-child { margin-bottom: 0; }
+.content .card, .content .pain-flip, .content .top3-card, .content .case-card, .content .chart-card { margin-bottom: 14px; }
+.content .sub-head { margin: 18px 0 10px; }
+/* 列表项间距收紧 */
+.content ul.action-list { margin: 4px 0 0; }
+.content ul.action-list li { padding: 9px 0 9px 20px; line-height: 1.75; }
+.content ul.action-list li + li { border-top: 1px solid #EEF2F7; }
+/* 翻转卡：正反面等高、内部不留空行 */
+.content .pain-flip { margin-bottom: 12px; }
+.content .pf-front { padding: 16px 18px; }
+.content .pf-front p { margin-bottom: 8px; }
+.content .pf-back { padding: 16px 18px; }
+.content .pf-back p { margin-bottom: 6px; }
+.content .pf-flip-hint { right: 12px; bottom: 8px; }
+.content .pf-flip-hint.back { left: 12px; right: auto; top: 10px; bottom: auto; color: #5B7C99; }
+/* 指标卡（KPI）排版：标题一行、数值一行、单位贴附、标签贴底 */
+.content .w43-kpi .stat-card { display: flex; flex-direction: column; gap: 6px; padding: 16px 16px 14px; }
+.content .w43-kpi .stat-label { font-size: 12.5px; line-height: 1.5; color: #5B6B7E; min-height: 2.6em; }
+.content .w43-kpi .stat-value { display: flex; align-items: baseline; gap: 2px; font-size: 30px; line-height: 1.1; white-space: nowrap; }
+.content .w43-kpi .stat-unit { font-size: .52em; font-weight: 600; color: #0E7490; letter-spacing: .02em; }
+.content .w43-kpi .stat-sub { font-size: 12.5px; line-height: 1.55; color: #5B6B7E; margin-top: auto; }
+.content .w43-kpi .stat-tag { align-self: flex-start; margin-top: 2px; }
+
+/* ---------- W43 间距收紧：消除大空白 ---------- */
+.content .speedboard { margin: 14px 0 20px; }
+.content .stat-grid.w43-kpi { margin: 12px 0 16px; }
+.content .speedboard + .section, .content .section + .section { margin-top: 26px; }
+.content .section-header h2 { line-height: 1.3; }
+.content .pull-quote { margin: 12px 0 14px; padding: 16px 20px; }
+.content .pull-quote blockquote { margin: 0 0 6px; }
+.content .pull-quote .pq-src { font-size: 12.5px; }
+
+/* ---------- W43 间距最终校准（提高权重确保覆盖）---------- */
+.content .speedboard.speedboard { margin: 16px 0 18px; }
+.content .stat-grid.stat-grid { margin: 12px 0 14px; }
+.content .pull-quote.pull-quote { margin: 12px 0 12px; }
+.content .section.section { margin-top: 28px; }
+.content .section.section + .section.section { margin-top: 28px; }
+.content .top3-card.top3-card { margin-bottom: 14px; }
+.content .chart-card.chart-card { margin-bottom: 14px; }
+.content .pain-flip.pain-flip { margin-bottom: 12px; }
+.content .case-card.case-card { margin-bottom: 12px; }
+.content p.p { margin-bottom: 9px; }
+.content .takeaway.takeaway { margin-bottom: 14px; }
