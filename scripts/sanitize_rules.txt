@@ -1,0 +1,39 @@
+# 7Kolor sanitize rules（公开、可审计，fork PR 也能跑）
+# 格式：! <regex> = 命中即 FAIL；? <regex> = 仅 WARN
+#
+# 分级说明：
+#  · 凭据类用 ! —— 任何位置都不该出现，命中即失败
+#  · 内部标识类用 ? —— 这类字符串已存在于早期 git 历史（重写历史会破坏
+#    公开 PR ref 与 Pages 部署链，改代码也消除不了），因此记为告警；
+#    历史清理完成后应升级为 ! 。新引入仍会在 PR review 中被拦。
+
+# --- 凭据类：命中即失败 ---
+! (?i)(ghp_|gho_|github_pat_|glpat-)[A-Za-z0-9_]{10,}
+! (?i)sk-[A-Za-z0-9]{20,}
+! (?i)sk-ant-[A-Za-z0-9-]{20,}
+! AKIA[0-9A-Z]{16}
+! AIza[0-9A-Za-z\-_]{30,}
+! xox[baprs]-[0-9A-Za-z-]{10,}
+! -----BEGIN [A-Z ]*PRIVATE KEY-----
+! (?i)client_secret\s*[:=]
+! (?i)api[_-]?key\s*[:=]
+! (?i)access[_-]?token\s*[:=]
+! (?i)developer_token\s*[:=]
+! (?i)bearer\s+[A-Za-z0-9._\-]{20,}
+
+# --- 内部数据链路标识：历史已存在，暂记告警 ---
+? sjsj-\d+
+? (?i)signal[\s_\-]*hunter
+? \bposts_layer\d
+? \bcomments_raw_data
+? (?i)bigquery|\bbq\b
+? (?i)summy
+? vw_weekly_\w+
+? gcp_creds
+? (?i)oxylabs
+
+# --- 本机路径与用户名 ---
+? /Users/[a-z]
+? /home/[a-z]
+
+? \b(?=[a-z0-9_.]*_)[a-z][a-z0-9_]{2,}\.[a-z][a-z0-9_]{2,}\.[a-z][a-z0-9_]{2,}\b

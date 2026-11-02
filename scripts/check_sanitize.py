@@ -93,6 +93,9 @@ def main():
 
     files = walk_files(args.path) if args.path else target_files(args.staged)
     for f in files:
+        # 规则文件本身含全部模式串，扫描它只会自我触发——跳过
+        if os.path.basename(f).startswith("sanitize_rules"):
+            continue
         try:
             raw = open(f, "rb").read()
             if b"\0" in raw[:8192]:

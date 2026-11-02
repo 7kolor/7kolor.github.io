@@ -46,8 +46,8 @@ test("email masking keeps first char and domain (issue #31 format)", () => {
 });
 
 test("user fields and home directories are masked", () => {
-  const stored = sanitizeUa("codex_cli_rs/0.42 (user=rocky; home=/Users/rocky/tmp)");
-  assert.ok(!stored.includes("rocky"), "username leaked: " + stored);
+  const stored = sanitizeUa("codex_cli_rs/0.42 (user=alice; home=/Users/alice/tmp)");
+  assert.ok(!stored.includes("alice"), "username leaked: " + stored);
   assert.ok(stored.includes("user=***"), stored);
   assert.ok(stored.includes("/Users/***/tmp"), stored);
   const stored2 = sanitizeUa("agent/1.0 login:testuser /home/testuser/work");
