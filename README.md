@@ -17,7 +17,7 @@
 
 ## What is 7Kolor?
 
-7Kolor is an intelligence platform for **indie developers**. We analyze millions of discussions to deliver weekly insights on:
+7Kolor is an intelligence platform for **indie developers**. We read a small number of threads people actually argued about, and turn them into weekly insights on:
 
 - 📊 **Trend Analysis** — What's happening in the indie dev world
 - 🎯 **Pain Signals** — What users are struggling with
@@ -63,9 +63,9 @@ For your specific industry and track, we deliver:
 
 ## Data Foundation
 
-- **1,000,000+** raw intelligence records
+- **0** downloadable datasets (we ship no raw data downloads)
 - **10 years** of data analysis experience
-- **LLM-powered** tagging and layering
+- **Every citation links back to the original post** and names the author
 
 ## Get in Touch
 

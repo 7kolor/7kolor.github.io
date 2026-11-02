@@ -2,19 +2,19 @@
 
 ## 三场信任崩塌，钱在观望：帮决定、帮搬走、帮验证
 
-> 22,033 条讨论：雇主、订阅商、卖家三场信任崩塌同周发生——主推互信报价单；新增上期判断回执栏。
+> 雇主、订阅商、卖家三场信任崩塌同周发生——主推互信报价单；新增上期判断回执栏。
 
 原文 / Source: /weekly/2026-W40/
 
 ---
 
-22,033 开发者讨论帖（缺 8 小时尾巴）   401 求认同密度·每千帖（三周抬升）    16.5 流失暗示·每千帖（密度噪声内）    3 报价簇证据连续变厚·周数（全数据集唯一）
+401 求认同密度·每千帖（三周抬升）    16.5 流失暗示·每千帖（密度噪声内）    3 报价簇证据连续变厚·周数（全数据集唯一）
 
 ## 一、本周三件值得你花 2 分钟读完的事
 
 #### 1. 承包商报价心理战第三周：病灶挖到了资本结构层
 
- PE 正在收购家庭服务公司，强推 flat-rate pricing + 提成制。252 赞[报价已成心理战帖 · 2,142 评](https://www.reddit.com/r/homeimprovement/comments/1wzl6kd/)
+ PE 正在收购家庭服务公司，强推 flat-rate pricing + 提成制。252 赞[报价已成心理战帖 · 2,142 评 · u/Dreznon](https://www.reddit.com/r/homeimprovement/comments/1wzl6kd/)
 
 1,050 赞晒单“换热水器报价 $8k，热水器本体建材行 $900”——注意 $900 是设备件价，$8k 含人工/许可/保修/垫资；基准页的活是拆“合理人工”和“溢价楔子”，不是把 9 倍当信息差本身。457 赞“专宰失智老人”、172 赞承包商自辩“成本翻三倍”——骂宰客、怪房主、PE 结构派、护老人、辩成本、晒比价，六种声音同场：这正是最玻璃的黑箱。
 
@@ -54,7 +54,7 @@
 
 #### 2. 全网拆智能设备数据后门：开源声誉位，不是生意位
 
- 等他们新固件检测到网卡被拔、直接锁机吧。790 赞[LG 电视拔网卡帖（对照：531 赞“99% 的用户照样连 WiFi”）](https://www.reddit.com/r/homelab/comments/1wxmzo5/)
+ 等他们新固件检测到网卡被拔、直接锁机吧。790 赞[LG 电视拔网卡帖（对照：531 赞“99% 的用户照样连 WiFi”） · u/_benj](https://www.reddit.com/r/homelab/comments/1wxmzo5/)
 
 [HN 佐证：父母咖啡机 10 天偷传 1TB](https://news.ycombinator.com/item?id=49995495)。Firewalla/Fing 已在卖硬件方案，开源社区有一堆零散分析器——空位是“把已有底座的数据变成普通人能读懂的一键体检报告”（产品化层）。技术边界要写明：Pi-hole/AdGuard 只有 DNS 层——“连了哪些域、传了多少”做得出来，“连谁共享后台”做不出来。
 
@@ -62,7 +62,7 @@
 
 #### 3. Plex $749.99、Notion 翻倍、Pterodactyl 删差评：接住别人的流失用户
 
- 开源也会变差，只是烂的方式不同（没人维护、代码腐化）。155 赞[Plex 涨价+砍功能帖（同帖 588 赞骂“经典 Plex 操作”）](https://www.reddit.com/r/selfhosted/comments/1x0hapb/)
+ 开源也会变差，只是烂的方式不同（没人维护、代码腐化）。155 赞[Plex 涨价+砍功能帖（同帖 588 赞骂“经典 Plex 操作”） · u/lenicalicious](https://www.reddit.com/r/selfhosted/comments/1x0hapb/)
 
 所以撤离工具的卖点要选对：不卖“开源信仰”，卖“数据永远拿得走”。Pterodactyl 被收购后把“负能量”写进版规，353 赞直接给出迁移目标 Pelican、69 赞已迁完——用户不等你，你也不用等。Notion 翻倍时 57 赞说得最透：“数据一旦进去，迁移成本就是你被锁死的证据。”
 
@@ -72,14 +72,14 @@
 
 ## 二、六步框架：本周信号怎么落成决策
 
-| 步骤 | 要回答的问题 | 命中的讨论 | 本周 | 密度 | 上周 | 变化 |
-|---|---|---|---|---|---|---|
-| ① 发现机会 | 做什么能赚钱？ | 付费/购买意向 | 1,093 | 50 | 1,277 | 密度持平* |
-| ② 收集信号 | 用户在抱怨什么？ | 明确痛点 | 7,861 | 357 | 9,123 | 密度持平 |
-| ③ 深挖问题 | 为什么难受？ | 负面反馈 | 1,630 | 74 | 1,908 | 持平 |
-| ④ 验证假设 | 我理解对了吗？ | 求认同/求支持 | 8,828 | 401 | 9,660 | ↑7% |
-| ⑤ 最后把关 | 上线前漏了什么？ | 流失/想卸载 | 364 | 16.5 | 399 | ↑6% |
-| ⑥ 验证有人买 | “我做好了/解决了” | 供给侧信号 | 1,023 | 46 | 1,222 | 密度持平 |
+| 步骤 | 要回答的问题 | 命中的讨论 | 密度 | 变化 |
+|---|---|---|---|---|
+| ① 发现机会 | 做什么能赚钱？ | 付费/购买意向 | 50 | 密度持平* |
+| ② 收集信号 | 用户在抱怨什么？ | 明确痛点 | 357 | 密度持平 |
+| ③ 深挖问题 | 为什么难受？ | 负面反馈 | 74 | 持平 |
+| ④ 验证假设 | 我理解对了吗？ | 求认同/求支持 | 401 | ↑7% |
+| ⑤ 最后把关 | 上线前漏了什么？ | 流失/想卸载 | 16.5 | ↑6% |
+| ⑥ 验证有人买 | “我做好了/解决了” | 供给侧信号 | 46 | 密度持平 |
 
 三周连读：钱没有消失，钱在观望——流向帮决定（分发层）、帮搬走、帮验证。
 
@@ -95,14 +95,14 @@
 
 | 方向 | 用户在喊什么 | 别人做到哪了 | 判断 |
 |---|---|---|---|
-| 报价基准/互信报价单 | [报价心理战 2,142 评：骂宰客、怪房主、PE 结构派同场](https://www.reddit.com/r/homeimprovement/comments/1wzl6kd/) | ConstructIQ 自称 $50k/月（承包商工作流） | 主推 · 档案 A |
-| SaaS 撤离套餐 | [Plex $749.99：588 赞骂、155 赞“开源也会烂”](https://www.reddit.com/r/selfhosted/comments/1x0hapb/) | Task Session 自称 $92k/月（定位信号） | 档案 B |
-| 遗留系统单环节迁移 | [AS/400 全业务在线上，175 评吵不出答案](https://www.reddit.com/r/sysadmin/comments/1wzhctv/) | hypercubic 58 票、Coasty 155 票，均早期 | 档案 C |
-| AI 应用毛利 | [13k 装机亏 €6k，账单全公开，97 评自发做成本诊断](https://www.reddit.com/r/SaaS/comments/1wy4wbu/) | Helicone/Langfuse/OpenRouter 已覆盖逐请求成本 | 档案 D |
-| 设备隐私体检 | [LG 拔网卡：行动派 vs 泼冷水派分裂](https://www.reddit.com/r/homelab/comments/1wxmzo5/) | Firewalla/Fing 硬件方案；“体检报告”层空 | 观察位 |
-| 婚礼宾客收图 | [298 赞“开源已有人做”+49 赞“用了没人传”](https://www.reddit.com/r/selfhosted/comments/1wx8klb/) | WeddingShare 开源已存在 | 反例位 · 别做 |
+| 报价基准/互信报价单 | [报价心理战 2,142 评：骂宰客、怪房主、PE 结构派同场 · u/Dreznon](https://www.reddit.com/r/homeimprovement/comments/1wzl6kd/) | ConstructIQ 自称 $50k/月（承包商工作流） | 主推 · 档案 A |
+| SaaS 撤离套餐 | [Plex $749.99：588 赞骂、155 赞“开源也会烂” · u/lenicalicious](https://www.reddit.com/r/selfhosted/comments/1x0hapb/) | Task Session 自称 $92k/月（定位信号） | 档案 B |
+| 遗留系统单环节迁移 | [AS/400 全业务在线上，175 评吵不出答案 · u/Kaleidoscope_Tux5513](https://www.reddit.com/r/sysadmin/comments/1wzhctv/) | hypercubic 58 票、Coasty 155 票，均早期 | 档案 C |
+| AI 应用毛利 | [13k 装机亏 €6k，账单全公开，97 评自发做成本诊断 · u/SuspiciousSoftware74](https://www.reddit.com/r/SaaS/comments/1wy4wbu/) | Helicone/Langfuse/OpenRouter 已覆盖逐请求成本 | 档案 D |
+| 设备隐私体检 | [LG 拔网卡：行动派 vs 泼冷水派分裂 · u/_benj](https://www.reddit.com/r/homelab/comments/1wxmzo5/) | Firewalla/Fing 硬件方案；“体检报告”层空 | 观察位 |
+| 婚礼宾客收图 | [298 赞“开源已有人做”+49 赞“用了没人传” · u/RekcuFasiia](https://www.reddit.com/r/selfhosted/comments/1wx8klb/) | WeddingShare 开源已存在 | 反例位 · 别做 |
 | 仪表盘个性化 | [插画师版 HA 仪表盘 927 分](https://news.ycombinator.com/item?id=49986882) | HA 生态无可定制皮肤层 | 开源声誉位 |
-| 装备回本计算器 | [电工 $2,150 弯管机：1,265 赞“这是老板买的工具”](https://www.reddit.com/r/electricians/comments/1x15cqr/) | 无 | 低优观察 |
+| 装备回本计算器 | [电工 $2,150 弯管机：1,265 赞“这是老板买的工具” · u/Electrical-Juice-915](https://www.reddit.com/r/electricians/comments/1x15cqr/) | 无 | 低优观察 |
  A报价基准/互信报价单 —— 主推：把“互信”做成承包商的获客资产
 
 - 三周证据链：W38 AI 客户经理拖延报价 → W39 $8,400 刷漆 + “不想接活价”机制被点破 → W40 病灶到结构层（PE 收购，252 赞）+ 性别溢价单帖观察（n=1）。唯一连续三周证据变厚的簇。
@@ -129,7 +129,7 @@
 
 | 案例 | 数据 | 评论区在干嘛 | 你该带走 |
 |---|---|---|---|
-| [Prep66：第二次创业](https://www.reddit.com/r/SaaS/comments/1wxabzn/) | 第一次 £4k 广告 9 个月 $0；第二次 £25 即有 MRR | 5 赞点破：“£210 换 15,000 访问 0 付费才是该看的数” | 准对照（n=2）：同人相近投入换赛道，维生素→止痛药。先验证用户肯完成第一个动作，再放大投放 |
+| [Prep66：第二次创业 · u/keepingmemories](https://www.reddit.com/r/SaaS/comments/1wxabzn/) | 第一次 £4k 广告 9 个月 $0；第二次 £25 即有 MRR | 5 赞点破：“£210 换 15,000 访问 0 付费才是该看的数” | 准对照（n=2）：同人相近投入换赛道，维生素→止痛药。先验证用户肯完成第一个动作，再放大投放 |
 | [Task Session：自托管 CRM](https://www.indiehackers.com/product/task-session) | 自称 $92k/月（社区存疑） | 数字打折后仍说明反定位有真实购买力 | 不做“更聪明的 CRM”，做“数据在你服务器上的 CRM”——订阅疲劳变成卖点 |
 | PH 叙事观察：IrisGo 539 票 · Rill 543 票 | PH 第 3 / 543 票 | AI 叙事从“帮你”转向“替你”；AI 编程工作流的配套位开新品类——票数=注意力，与 W39 对 iFixAi 同一折扣口径 | 盘点你 AI 工作流的断点，每个断点是候选产品 |
 
@@ -143,11 +143,11 @@
 
 #### 婚礼收图——教科书级伪需求样本，值得当作“判定范式”收藏
 
-[摄影工作室问“让宾客随便传视频会怎样”](https://www.reddit.com/r/selfhosted/comments/1wx8klb/)：298 赞——[“开源方案 WeddingShare，already done, nothing to build”](https://github.com/Cirx08/WeddingShare)；227 赞嘲讽 vibecoding；49 赞最致命——“我们婚礼用了，没人传”。判伪通用规则：开源存在性要看它覆盖的是不是目标用户（WeddingShare 是自托管方案，覆盖不了不会自建 VPS 的工作室——但判伪的承重证据是“用了没人传”）。两个证据一天能收集齐，能省下无数个周末。
+[摄影工作室问“让宾客随便传视频会怎样” · u/RekcuFasiia](https://www.reddit.com/r/selfhosted/comments/1wx8klb/)：298 赞——[“开源方案 WeddingShare，already done, nothing to build”](https://github.com/Cirx08/WeddingShare)；227 赞嘲讽 vibecoding；49 赞最致命——“我们婚礼用了，没人传”。判伪通用规则：开源存在性要看它覆盖的是不是目标用户（WeddingShare 是自托管方案，覆盖不了不会自建 VPS 的工作室——但判伪的承重证据是“用了没人传”）。两个证据一天能收集齐，能省下无数个周末。
 
 #### IKEA 厨房进高端房——“反品牌迷信”是装修内容的天然爆款位
 
-[“该不该在 150 万+ 的房子装 IKEA 厨房”](https://www.reddit.com/r/homeimprovement/comments/1wzazrk/)，834 赞一锤定音——“为自己住的房子做决定，别为转售”。这条和报价簇共用同一批读者：$8,400 刷漆、$14k 前门、Leafguard $17k 全是同款结构。对报价基准站的直接启示：除了价格基准页，“XX 品牌值不值溢价”系列是第二内容引擎。
+[“该不该在 150 万+ 的房子装 IKEA 厨房” · u/MumblingPixie](https://www.reddit.com/r/homeimprovement/comments/1wzazrk/)，834 赞一锤定音——“为自己住的房子做决定，别为转售”。这条和报价簇共用同一批读者：$8,400 刷漆、$14k 前门、Leafguard $17k 全是同款结构。对报价基准站的直接启示：除了价格基准页，“XX 品牌值不值溢价”系列是第二内容引擎。
 
 ## 六、非工程师的抱怨怎么变成你的生意
 
@@ -163,10 +163,10 @@
 
 | 帖子 | 僵点与产品定义 |
 |---|---|
-| [AS/400 换不换（175 评）](https://www.reddit.com/r/sysadmin/comments/1wzhctv/) | “选型比迁移贵”派和“就该换了”派都对——迁移成本是黑箱。产品：不是迁移平台，是卡点清单（哪类表/报表/接口）；第一步：人工归类 175 条评论，产出第一版清单。 |
-| [offer 压价 20%（1,229 评）](https://www.reddit.com/r/careerguidance/comments/1x0kvgn/) | 撕破脸派（1,713 赞“这是在赌你 desperate”）和跑路派都在人肉算账。流量地图位（已定论）：offer 决策计算器是钩子，独立立项不做。 |
-| [油价吃掉工资](https://www.reddit.com/r/managers/comments/1wy6ukc/) | 206 赞冷笑“你们什么都试了，除了钱”。僵局揭示问题出在激励结构而非工具——这条的价值是反向的：主动降级，移入“不碰”名单。敢写“这条没有机会”也是报告的义务。 |
-| [报价已成心理战（2,142 评）](https://www.reddit.com/r/homeimprovement/comments/1wzl6kd/) | 六种声音同场——已并入档案 A 的施工图（主推）。 |
+| [AS/400 换不换（175 评） · u/Kaleidoscope_Tux5513](https://www.reddit.com/r/sysadmin/comments/1wzhctv/) | “选型比迁移贵”派和“就该换了”派都对——迁移成本是黑箱。产品：不是迁移平台，是卡点清单（哪类表/报表/接口）；第一步：人工归类 175 条评论，产出第一版清单。 |
+| [offer 压价 20%（1,229 评） · u/Netrunneeryopta](https://www.reddit.com/r/careerguidance/comments/1x0kvgn/) | 撕破脸派（1,713 赞“这是在赌你 desperate”）和跑路派都在人肉算账。流量地图位（已定论）：offer 决策计算器是钩子，独立立项不做。 |
+| [油价吃掉工资 · u/Cocrawfo](https://www.reddit.com/r/managers/comments/1wy6ukc/) | 206 赞冷笑“你们什么都试了，除了钱”。僵局揭示问题出在激励结构而非工具——这条的价值是反向的：主动降级，移入“不碰”名单。敢写“这条没有机会”也是报告的义务。 |
+| [报价已成心理战（2,142 评） · u/Dreznon](https://www.reddit.com/r/homeimprovement/comments/1wzl6kd/) | 六种声音同场——已并入档案 A 的施工图（主推）。 |
 
 ## 八、本周行动清单
 
