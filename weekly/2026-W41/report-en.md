@@ -26,13 +26,13 @@
 
 **⚠️ Be precise about the strength of this evidence, or it will mislead you**: the $11.3M proves there is budget for ** the migration decision and its execution** — **not for post-migration operations.** Those are two different procurement line items. The granularity is also mismatched: $11.3M is enterprise-project scale, while the product shape we suggest below is "call an expert per incident" (a ticket price maybe in the hundreds to low thousands of dollars) — **two orders of magnitude apart**.
 
-**More importantly, the counter-evidence sits in the same week's data**: the ** most direct demand signal** for this direction (the Hyper-V consultant request, [1x410ow](https://www.reddit.com/r/sysadmin/comments/1x410ow/hyperv_consultants/)) scored only ** 56 points / 95 comments** — for comparison, the Topgolf thread (2,475 points / 326 comments) runs ** an order of magnitude hotter**. If "after the migration" were a hard need, why is the most direct request so cold? Both explanations must be stated: ** (a)** the need is real but the population is small and those people do not post (they phone an MSP); ** (b)** most of these failures are already solved by free answers on Proxmox forums or Microsoft KBs, so nobody asks. ** This report cannot rule out (b)** — low engagement is itself a signal that the answer may already be searchable. Treat this direction as ** unverified**, not verified.
+**More importantly, the counter-evidence sits in the same week's data**: the ** most direct demand signal** for this direction (the Hyper-V consultant request, [1x410ow · u/notaramblingman](https://www.reddit.com/r/sysadmin/comments/1x410ow/hyperv_consultants/)) scored only ** 56 points / 95 comments** — for comparison, the Topgolf thread (2,475 points / 326 comments) runs ** an order of magnitude hotter**. If "after the migration" were a hard need, why is the most direct request so cold? Both explanations must be stated: ** (a)** the need is real but the population is small and those people do not post (they phone an MSP); ** (b)** most of these failures are already solved by free answers on Proxmox forums or Microsoft KBs, so nobody asks. ** This report cannot rule out (b)** — low engagement is itself a signal that the answer may already be searchable. Treat this direction as ** unverified**, not verified.
 
-A r/sysadmin thread on Topgolf saving $11.3M by dropping VMware hit 2,475 points and 326 comments ([original thread](https://www.reddit.com/r/sysadmin/comments/1x5mfzq/)), and the comments turned into a "we left too" roll call: one shop moved from VMware to Nutanix, 6 hosts and 2 vCenters, ** saving $600k** (the sentence ends with profanity — read the temperature yourself); an MSP worker says "we have done loads of Hyper-V migrations this year and have plenty more in the pipeline"; and someone mentions a company at a conference already selling ** "BREXIT" (Broadcom Exit)** migration services — **which means the budget has become institutional, not a passing mood**.
+A r/sysadmin thread on Topgolf saving $11.3M by dropping VMware hit 2,475 points and 326 comments ([original thread · u/matthieuC](https://www.reddit.com/r/sysadmin/comments/1x5mfzq/)), and the comments turned into a "we left too" roll call: one shop moved from VMware to Nutanix, 6 hosts and 2 vCenters, ** saving $600k** (the sentence ends with profanity — read the temperature yourself); an MSP worker says "we have done loads of Hyper-V migrations this year and have plenty more in the pipeline"; and someone mentions a company at a conference already selling ** "BREXIT" (Broadcom Exit)** migration services — **which means the budget has become institutional, not a passing mood**.
 
 But the pain shows up on the last mile — in two independent, concrete failures that official support could not fix:
 
-- Teams that moved to ** Hyper-V**: host-to-CSV connections dropping repeatedly, VMs going down, weeks of Microsoft support with no resolution, ending with ** a Reddit post begging for a consultant** ([1x410ow](https://www.reddit.com/r/sysadmin/comments/1x410ow/), titled literally "Hyper-V Consultants").
+- Teams that moved to ** Hyper-V**: host-to-CSV connections dropping repeatedly, VMs going down, weeks of Microsoft support with no resolution, ending with ** a Reddit post begging for a consultant** ([1x410ow · u/notaramblingman](https://www.reddit.com/r/sysadmin/comments/1x410ow/), titled literally "Hyper-V Consultants").
 - Teams that moved to ** Proxmox**: tortured by iSCSI multipath configuration for ** two days to a week** (1x35mn7, whose title is already angry).
 
 **This is the textbook "it exists but does not cover you" case**: the target platforms (Proxmox VE / Hyper-V / Nutanix / VergeIO) all exist and are mature, Veeam handles backups, and comparison threads are everywhere — **but the layer of "a post-migration failure decision tree plus on-demand expert access" is empty**. The top comment nails the payment shape: `No, you don't need to buy the cow when you just need a cup of milk` — **nobody wants an annual consulting retainer; what people want is to reach, per incident, someone who knows how to configure Proxmox iSCSI**.
@@ -54,7 +54,7 @@ But the pain shows up on the last mile — in two independent, concrete failures
 
 **The value first**: the ** most concrete technical gap** of the week. Not "people feel they need this" — experts in the comments explain why existing approaches ** structurally cannot do it**.
 
-Marketing teams are now being chased by clients with one question: ** "Are we being recommended in ChatGPT?"** And they have no answer. One r/askmarketing thread ([1x5n7lb](https://www.reddit.com/r/askmarketing/comments/1x5n7lb/)) puts it plainly: the agency wants to build a brand-mention monitoring workflow for AI search, has tried manual prompting, Semrush and Brand24, and ** none of them capture brand recommendations inside LLM-generated answers**.
+Marketing teams are now being chased by clients with one question: ** "Are we being recommended in ChatGPT?"** And they have no answer. One r/askmarketing thread ([1x5n7lb · u/Both_Chard2990](https://www.reddit.com/r/askmarketing/comments/1x5n7lb/)) puts it plainly: the agency wants to build a brand-mention monitoring workflow for AI search, has tried manual prompting, Semrush and Brand24, and ** none of them capture brand recommendations inside LLM-generated answers**.
 
 At least three independent corroborations (this is the point — not one thread's mood): someone asks "is GEO actually working, or are we all just guessing" (r/digitalmarketing); someone says they tried structured data and FAQ blocks and ** saw no real traffic conversion**; and someone found that when ChatGPT recommends companies, ** it cites a dead-subreddit post with three upvotes** (1x5zsrf) — written by the moderator of one of the companies involved, and it got far more exposure than that company's official blog did all year.
 
@@ -63,7 +63,7 @@ At least three independent corroborations (this is the point — not one thread'
 And the expert testimony in the comments sets out ** the real product constraints**:
 
 - "`manual prompting? - been there done that. Does not scale`" — manual prompting does not scale. That is a requirement, not a complaint.
-- "AI visibility tools are flawed by nature. They're a barometer at best, ** not a source of truth**." ([an independent r/localseo discussion the same week](https://www.reddit.com/r/localseo/comments/1x4r1e6/), 3 points) — **two unrelated communities reached the same verdict**: existing tools are a barometer, not a source of truth.
+- "AI visibility tools are flawed by nature. They're a barometer at best, ** not a source of truth**." ([an independent r/localseo discussion the same week · u/dewharmony03](https://www.reddit.com/r/localseo/comments/1x4r1e6/), 3 points) — **two unrelated communities reached the same verdict**: existing tools are a barometer, not a source of truth.
 - The most important engineering detail: ** you cannot measure it via API**. API behaviour differs from the consumer interface and hides live citations, so you have to scrape the interface side.
 - And the line that reads most like a product requirement: ** "thats your baseline and its the only number that means anything here."** (His method: list the questions buyers would actually ask and run them on a schedule — **but schema and FAQ blocks alone do not move it.**)
 
@@ -75,7 +75,7 @@ And the expert testimony in the comments sets out ** the real product constraint
 
 ### 3. Opaque pricing: huge engagement, but nobody in the comments wants a tool
 
-**The change first**: this section started as the week's top pick, because a r/askaplumber thread asking whether a $1,925 water-heater quote was fair drew  730 comments ([1x6yqsb](https://www.reddit.com/r/askaplumber/comments/1x6yqsb/)), one of the highest-engagement threads in a traditional trade this week. ** But after reading the comments line by line, we found: **Nobody wants a tool.
+**The change first**: this section started as the week's top pick, because a r/askaplumber thread asking whether a $1,925 water-heater quote was fair drew  730 comments ([1x6yqsb · u/OrangeInQC](https://www.reddit.com/r/askaplumber/comments/1x6yqsb/)), one of the highest-engagement threads in a traditional trade this week. ** But after reading the comments line by line, we found: **Nobody wants a tool.
 
 **The most counter-intuitive piece of evidence goes first**: we took this thread plus r/plumbingrepair's "sewer camera inspection turned into a $15k pipe replacement" (there were similar threads), the R22 recharge thread (1x3yg5s), and the DIY furnace swap (1x67yej) — and read ** all four comment sections end to end**, specifically looking for anyone wanting a price-comparison tool or quote-lookup app. ** Not one**.
 
@@ -95,9 +95,9 @@ So we did not rest the call on that alone. The load-bearing evidence is the next
 
 **So where is the real gap?** Not in calculating a price — in ** "why should I believe you?"**:
 
-- [1x5kvnd](https://www.reddit.com/r/PlumbingRepair/comments/1x5kvnd/sewer_camera_inspection_turned_into_a_15k/) — the customer asks for ** the camera footage** and cannot get it: there is no retainable, re-checkable evidence.
-- [1x3yg5s](https://www.reddit.com/r/hvacadvice/comments/1x3yg5s/i_keep_hearing_its_a_fortune_to_recharge_an_r22/) — **the same canister of R22 draws four different prices — $300 / $450 / $1,400 / $1,800** — and the technicians accuse each other of using counterfeit refrigerant (the thread reads as heated dispute; top comment 50 points).
-- [1x67yej](https://www.reddit.com/r/hvacadvice/comments/1x67yej/how_hard_would_it_be_to_change_my_own_furnace/) — the DIY crowd is not short on tutorials; what they lack is ** verification that they got it right** — the 208-point top comment says it plainly: it is not technically hard, but ** a mistake destroys the new equipment**.
+- [1x5kvnd · u/Fun-Web-7237](https://www.reddit.com/r/PlumbingRepair/comments/1x5kvnd/sewer_camera_inspection_turned_into_a_15k/) — the customer asks for ** the camera footage** and cannot get it: there is no retainable, re-checkable evidence.
+- [1x3yg5s · u/crazymjb](https://www.reddit.com/r/hvacadvice/comments/1x3yg5s/i_keep_hearing_its_a_fortune_to_recharge_an_r22/) — **the same canister of R22 draws four different prices — $300 / $450 / $1,400 / $1,800** — and the technicians accuse each other of using counterfeit refrigerant (the thread reads as heated dispute; top comment 50 points).
+- [1x67yej · u/PretzelTitties](https://www.reddit.com/r/hvacadvice/comments/1x67yej/how_hard_would_it_be_to_change_my_own_furnace/) — the DIY crowd is not short on tutorials; what they lack is ** verification that they got it right** — the 208-point top comment says it plainly: it is not technically hard, but ** a mistake destroys the new equipment**.
 
 **So the valuable thing is verifiability of evidence, not price arithmetic.** And that is exactly ** very hard to turn into pure software** — it needs on-site evidence capture.
 
@@ -384,7 +384,7 @@ The crashes — focus on how to spot them early:
 
 ##### The engagement illusion
 
- ([1x42vho](https://www.reddit.com/r/sidehustlepaglu/comments/1x42vho/), 1,022 comments): one of the hottest recruiting posts this week, and the comments are ** almost entirely bot replies and noise**. ** Lesson**: high engagement ≠ a strong signal. If the comments contain no specific people, numbers, or failures, it's noise. This one is now written into how this report filters everything.
+ ([1x42vho · u/resident__tense12](https://www.reddit.com/r/sidehustlepaglu/comments/1x42vho/), 1,022 comments): one of the hottest recruiting posts this week, and the comments are ** almost entirely bot replies and noise**. ** Lesson**: high engagement ≠ a strong signal. If the comments contain no specific people, numbers, or failures, it's noise. This one is now written into how this report filters everything.
 
   Case 2 / 6
 
@@ -440,7 +440,7 @@ But ** the most valuable thing in the same thread is the opposition**, which def
 
  Top-down AI mandates drive out the seniors — the #1 failure mode for enterprise AI tools.Click to expandCollapse
 
-An r/sysadmin post with 2,069 points and 412 comments ([1x71qye](https://www.reddit.com/r/sysadmin/comments/1x71qye/)): a ** 28-year IT veteran quit**. The key detail: ** the reason wasn't AI itself, it was being forced to use unvalidated AI**.
+An r/sysadmin post with 2,069 points and 412 comments ([1x71qye · u/_ELAP_](https://www.reddit.com/r/sysadmin/comments/1x71qye/)): a ** 28-year IT veteran quit**. The key detail: ** the reason wasn't AI itself, it was being forced to use unvalidated AI**.
 
 **Why this matters if you build products**: if your product “helps companies adopt AI,” this post hands you the failure mode — **top-down mandates drive out the most senior people, and they're exactly the ones who can tell whether AI output is right**. Supporting evidence the same week: complaints about “the company going all-in on agentic” (1x5160t, r/cscareerquestions, 466 comments), where phrases like “Tired of corporate politics” recur — the same narrative.
 
@@ -475,7 +475,7 @@ In an r/cscareerquestions post with 392 points and 373 comments (1x3t8ud), a com
 - **NameCheap hikes + Verisign price increase** (r/selfhosted + r/domains): the community answers are already sufficient (Cloudflare Registrar at cost, Porkbun .com under $12). ** what's missing is the migration execution layer** — bulk domain inventory → price comparison → transfer → verify DNS/ACME/mail records stay intact. A pure tool, weekend-scale.
 - **An Ahrefs/Semrush alternative** (r/SEO): price sensitivity for SEO tools keeps climbing. Note this is ** two anxieties of the same user base** (existing tools cost too much + the new need can't be measured).
 - **Dockge stops being maintained → users migrate to Arcane** (r/selfhosted): in the self-hosting world, “project dies → users migrate” is ** a recurring, predictable** need. You could build a self-hosted project health tracker (last commit, issue response, maintainer count) — **a product that helps people see a dying dependency before it dies**.
-- **Obsidian lands on a “kill list”** ([1x4wwpd](https://www.reddit.com/r/obsidianmd/comments/1x4wwpd/), 223 comments): users of local-first tools are extremely sensitive to cloud-ification and commercialization. Same root as the exit theme in section III.
+- **Obsidian lands on a “kill list”** ([1x4wwpd · u/TutorialDoctor](https://www.reddit.com/r/obsidianmd/comments/1x4wwpd/), 223 comments): users of local-first tools are extremely sensitive to cloud-ification and commercialization. Same root as the exit theme in section III.
 - **HN: Passkeys are a trap** ([1,143 points / 576 comments](https://news.ycombinator.com/item?id=50048312)): technical consensus in authentication is shifting. The same week HN carried a rebuttal, [ Passkeys are not a trap](https://news.ycombinator.com/item?id=50088935) (667 points / 812 comments) — **two camps colliding on the same day means the consensus is unsettled**. Worth watching, but not a direct opening for indie developers.
 
 #### Signal 6: The strongest payment signal this week is “will you change on me?” — not features
@@ -492,7 +492,7 @@ This comes from cross-checking three separate batches of threads — **the most 
 
 **And the most valuable thing in those comments isn't about features at all**. In the Obsidian thread, one 54-point comment explains it more clearly than any product doc:
 
- Part of the reason I pay for sync is that it has a very clear value proposition that I trust won't suddenly change. … It syncs and costs a couple bucks a month.54 points[ r/obsidianmd · will Obsidian get killed · 223 comments](https://www.reddit.com/r/obsidianmd/comments/1x4wwpd/)
+ Part of the reason I pay for sync is that it has a very clear value proposition that I trust won't suddenly change. … It syncs and costs a couple bucks a month.54 points[ r/obsidianmd · will Obsidian get killed · 223 comments · u/TutorialDoctor](https://www.reddit.com/r/obsidianmd/comments/1x4wwpd/)
 
 He isn't paying for more features; he's paying because ** “I know it won't suddenly change”** — the rest of the comment: “They're not going to add AI crap nobody asked for, sell my data, etc.”
 
@@ -518,11 +518,11 @@ In this week's data, ** the most emotionally charged and highest-engagement pain
 
 **The value of that sentence pattern**: ** Is this normal?** is the highest-frequency, highest-traffic sentence pattern in homeowner communities. It tells you ** ordinary people have almost no reliable source for spotting anomalies in their own property**. This is two sides of the same market as the quoting baseline in section III — one asks “is this price fair?”, the other asks “is this normal?”. ** But the right move on both sides is content, not a tool**: users already have a zero-cost workaround — posting and asking people. If you build home-inspection-style ** content**, that sentence pattern is your headline template.
 
-**2. The technical gap in home services** — an r/landscaping post, “a 3-foot PVC pipe was left in my front yard” ([original thread](https://www.reddit.com/r/landscaping/comments/1x55gmx/)) is one of this week's biggest threads by comment volume. The top comments are all doers: saw the pipe flush and cap it, hide it with a fake rock, plant shrubs. Someone even confirms from the contractor side: “if one of my guys left that, I'd get chewed out.” ** Almost no disagreement — pure problem-solving consensus** — the emotional outlet is aimed at the water utility.
+**2. The technical gap in home services** — an r/landscaping post, “a 3-foot PVC pipe was left in my front yard” ([original thread · u/OldClub9636](https://www.reddit.com/r/landscaping/comments/1x55gmx/)) is one of this week's biggest threads by comment volume. The top comments are all doers: saw the pipe flush and cap it, hide it with a fake rock, plant shrubs. Someone even confirms from the contractor side: “if one of my guys left that, I'd get chewed out.” ** Almost no disagreement — pure problem-solving consensus** — the emotional outlet is aimed at the water utility.
 
 **How to read it**: this is homeowner communities' **strongest source of stickiness** (something's wrong at home + the authorities can't explain it). What users reveal is “I don't know if this is normal, and I don't know who to ask” — **this is a content opportunity, not a tool opportunity**: users already solve it with the zero-cost workaround of posting and asking, so a tool would run straight into the same free alternative. ** Same conclusion as the quoting baseline in section III.**
 
-**3. The quote psychology war in HVAC and plumbing** — covered in section I, item 3 and the quoting baseline in section III. One more piece of structural evidence: an r/construction painting contractor, “underbid a $200k job badly, missed fly ash and Azek trim in the estimate, now either eats tens of thousands to perform or defaults and gets sued by the GC,” scored 506 points / 420 comments ([1x5ba0z](https://www.reddit.com/r/construction/comments/1x5ba0z/)). The comments surface two independent severe cases (**one company folded after 20 years in business over a $600k estimating shortfall**), and expose an industry open secret: ** bid low to win, then claw it back through change orders**.”
+**3. The quote psychology war in HVAC and plumbing** — covered in section I, item 3 and the quoting baseline in section III. One more piece of structural evidence: an r/construction painting contractor, “underbid a $200k job badly, missed fly ash and Azek trim in the estimate, now either eats tens of thousands to perform or defaults and gets sued by the GC,” scored 506 points / 420 comments ([1x5ba0z · u/2021RGS](https://www.reddit.com/r/construction/comments/1x5ba0z/)). The comments surface two independent severe cases (**one company folded after 20 years in business over a $600k estimating shortfall**), and expose an industry open secret: ** bid low to win, then claw it back through change orders**.”
 
 **Where it lands**: existing estimating tools (Procore, Bluebeam) solve “producing a number.” ** They don't solve “is the number right?”** What's missing is pre-signature cost-baseline comparison and omission checks (was this specific material included?) — the direct cause of this accident. Filed as a watch item (section VII).
 
@@ -546,7 +546,7 @@ The single most repeated point in the thread: collect 30–50% up front before s
 
 Don't invent your own rules. Use terms your customers have already seen: net-14 (due in 14 days) or 2/10 net 15 (due in 15, minus 2% if paid within 10). Pair that with a 1–2% early-payment discount and a 3–5% late fee.
 
-⚠️ Do the math before you offer a discount: an early-payment discount comes out of your profit, not your revenue. In [ another thread](https://www.reddit.com/r/smallbusiness/comments/1x4pwa9/) this week, someone in commercial financing warned: "Before offering early-payment discounts, calculate the dollars you would give up and compare that with your margin." On small, thin-margin jobs, 2% can mean working for free. If your margins are already tight, skip the discount and just spell out the late fee.
+⚠️ Do the math before you offer a discount: an early-payment discount comes out of your profit, not your revenue. In [ another thread · u/_1x1](https://www.reddit.com/r/smallbusiness/comments/1x4pwa9/) this week, someone in commercial financing warned: "Before offering early-payment discounts, calculate the dollars you would give up and compare that with your margin." On small, thin-margin jobs, 2% can mean working for free. If your margins are already tight, skip the discount and just spell out the late fee.
 
 #### 3. Invoice past due and nobody's responding? Go to AP, not your contact
 
@@ -568,7 +568,7 @@ Schedule the follow-up in advance and you never have to re-decide whether to cha
 
 #### 6. Don't fix years of underpricing in one jump
 
-A real case from this week: someone hadn't raised prices in three years, then [ raised them 22% at once and lost about half their regulars](https://www.reddit.com/r/smallbusiness/comments/1x40gbo/) (original thread).
+A real case from this week: someone hadn't raised prices in three years, then [ raised them 22% at once and lost about half their regulars · u/Electrical_Garden404](https://www.reddit.com/r/smallbusiness/comments/1x40gbo/) (original thread).
 
 The thread gave actual numbers, which is far more useful than "raise prices gradually": 3–8% a year, with independent comments landing at 3–6%, 4–5%, 5–8%, and 7%. One person's company raises a flat 5% every year because it's predictable and customers rarely leave. Low end or high end? The person who said 7% put it plainly: people accept 7% more easily than they'll go through the hassle of finding another vendor — it depends on how costly you are to replace. A comment at 132 points was blunter still: small, frequent increases beat one big catch-up increase after waiting too long.
 
@@ -576,8 +576,8 @@ A counterintuitive finding: the person who raised prices 22% saw revenue stay ro
 
 ### Two more industry signals worth your time this week
 
-- Rent up 70%: the comment thread on a lease [ "Lease renewal, 70% increase for the next 5 years"](https://www.reddit.com/r/smallbusiness/comments/1x42ni7/) renewal jumping 70% over five years stayed cold-blooded — you can't negotiate that number down, so the real calculation is relocation cost versus staying.
-- Insurance becoming unaffordable: one owner's premium went from **$1,200/month** to **$3,100/month** ([original thread](https://www.reddit.com/r/smallbusiness/comments/1x47zyv/)). That thread is wall-to-wall recognition and not one solution — which tells you this isn't your problem alone, and it isn't solvable with better tactics.
+- Rent up 70%: the comment thread on a lease [ "Lease renewal, 70% increase for the next 5 years" · u/Tasty_Shopping_7904](https://www.reddit.com/r/smallbusiness/comments/1x42ni7/) renewal jumping 70% over five years stayed cold-blooded — you can't negotiate that number down, so the real calculation is relocation cost versus staying.
+- Insurance becoming unaffordable: one owner's premium went from **$1,200/month** to **$3,100/month** ([original thread · u/chutupandtakemykarma](https://www.reddit.com/r/smallbusiness/comments/1x47zyv/)). That thread is wall-to-wall recognition and not one solution — which tells you this isn't your problem alone, and it isn't solvable with better tactics.
 
 An honest summary: in this week's threads the answers were mostly tougher contract terms and earlier cash-flow discipline, not software. But a zero-cost move like putting collections on the calendar often beats switching to a new system.
 
@@ -597,7 +597,7 @@ See section VI. ** Deadlock**: the authorities can't explain it, but the communi
 
  Real demand for early warnings, but you must draw the warning-vs-leaking line first.Click to expandCollapse
 
-An r/careerguidance post: a direct report is burning out and refusing to take PTO, but the manager knows she's going to be laid off. ([original thread](https://www.reddit.com/r/careerguidance/comments/1x4ekyr/)). The top comment (2,803 points) is pure tactics: any vacation longer than 10 days is gone if the rumor comes true, so burn the 10-plus days first. Right behind it at 1,585 points is not an opinion but a parallel experience — "I've been through this, here's how I handled the one-on-one." Another high scorer turns on the poster instead: she's your strongest analyst, so why is she the one being cut? — a rare case of** empathy and accountability coexisting**.
+An r/careerguidance post: a direct report is burning out and refusing to take PTO, but the manager knows she's going to be laid off. ([original thread · u/KanelBrisk7](https://www.reddit.com/r/careerguidance/comments/1x4ekyr/)). The top comment (2,803 points) is pure tactics: any vacation longer than 10 days is gone if the rumor comes true, so burn the 10-plus days first. Right behind it at 1,585 points is not an opinion but a parallel experience — "I've been through this, here's how I handled the one-on-one." Another high scorer turns on the poster instead: she's your strongest analyst, so why is she the one being cut? — a rare case of** empathy and accountability coexisting**.
 
 Product implication: the thread keeps repeating one line — "** companies do not let managers give advance notice** " — one institutional constraint, which means employee risk warnings (industry layoff signals, personal market-value assessment) are a real need even under compliance,** but carry inherent ethical risk**. If you build one, the first task is drawing a hard line between warning and leaking.
 
@@ -605,7 +605,7 @@ Product implication: the thread keeps repeating one line — "** companies do no
 
  1,307-point consensus: never take the counter offer — one simple verdict plus personal stories is the high-engagement shape.Click to expandCollapse
 
-[original thread](https://www.reddit.com/r/careerguidance/comments/1x38ba7/). The consensus is unusually tight: "Never take the counter offer. Join the new company" (1,307 points). A long tail of mid-voted comments adds firsthand regret, all circling one argument — "** they could have paid this all along — they only offered it once you resigned** ".
+[original thread · u/Chrome_Viperenk](https://www.reddit.com/r/careerguidance/comments/1x38ba7/). The consensus is unusually tight: "Never take the counter offer. Join the new company" (1,307 points). A long tail of mid-voted comments adds firsthand regret, all circling one argument — "** they could have paid this all along — they only offered it once you resigned** ".
 
 > "Never take the counter offer. Join the new company."
 
@@ -617,7 +617,7 @@ Product implication: this ** consensus-driven, high-engagement** is the classic 
 
  Comments reframed money as life expectancy — a small hourly-rate tool is missing.Click to expandCollapse
 
-[Original post](https://www.reddit.com/r/careeradvice/comments/1x3dfv9/): walking away from a fresh $200k offer for $364k with brutal hours. The thread drags the question from whether to take the money to whether you want a life: the top comment (861 points) asks flatly, do you want a life? This job won't give you one. Others argue the poster got the hourly math wrong.
+[Original post · u/PapaSecundus](https://www.reddit.com/r/careeradvice/comments/1x3dfv9/): walking away from a fresh $200k offer for $364k with brutal hours. The thread drags the question from whether to take the money to whether you want a life: the top comment (861 points) asks flatly, do you want a life? This job won't give you one. Others argue the poster got the hourly math wrong.
 
 Product implication: ** no off-the-shelf tool for hourly-rate / quality-of-life math** — a small, buildable wedge, and it rhymes with the pricing thinking in section IV on a 3.5-year-old app's decay curve. It also confirms signal 4: in 2026, tech workers are less willing to trade their life for a big number.
 
@@ -637,7 +637,7 @@ One general rule for reading: across this week's five fights, ** whenever both s
 
 - **Write down 10 prompts your buyers would actually type into ChatGPT**, run them, and note who gets named — the baseline method from section III on GEO, doable today at zero cost.
 - **Turn this week's quote threads into a public baseline table** (trade × region × model) and post it to r/askaplumber or r/hvacadvice answering "is this price fair?".** Tightened pass bar: 3+ substantive inquiries in two weeks, at least one asking about another trade** ⚠️ This is a content play, not a product play —**nobody in the threads wanted a tool** (section III, quote baselines).
-- **Go into the r/sysadmin "looking for a consultant" thread and answer one specific failure under your real name** (e.g. [ 1x410ow](https://www.reddit.com/r/sysadmin/comments/1x410ow/)). ⚠️ **Note: free answers are already there** (the comments at 40, 22 and 13 points all gave concrete fixes), so what you need to prove isn't "I know this" but "** when those fixes fail, someone will pay me to show up** ". ** Pass bar: 3 DMs asking whether you take work. If you can't hit that, drop the direction.**
+- **Go into the r/sysadmin "looking for a consultant" thread and answer one specific failure under your real name** (e.g. [ 1x410ow · u/notaramblingman](https://www.reddit.com/r/sysadmin/comments/1x410ow/)). ⚠️ **Note: free answers are already there** (the comments at 40, 22 and 13 points all gave concrete fixes), so what you need to prove isn't "I know this" but "** when those fixes fail, someone will pay me to show up** ". ** Pass bar: 3 DMs asking whether you take work. If you can't hit that, drop the direction.**
     1W
 
 ### If you have a weekend (build an MVP)
@@ -654,7 +654,7 @@ One general rule for reading: across this week's five fights, ** whenever both s
 
 ### ⚠️ Why this direction may be a false need (and this report has to say so itself)
 
-Of the five supporting signals above, the first is ** someone publicly asking whether GEO works at all or whether everyone is just guessing** — We listed it as support, but read literally it is an ** expression of self-doubt**. We read all the comments on that thread ([1x6wehh](https://www.reddit.com/r/DigitalMarketing/comments/1x6wehh/is_geo_actually_working_for_anyone_or_are_we_all/), 23 comments in total), and the dominant note isn't strong demand but** "can't attribute it"**:
+Of the five supporting signals above, the first is ** someone publicly asking whether GEO works at all or whether everyone is just guessing** — We listed it as support, but read literally it is an ** expression of self-doubt**. We read all the comments on that thread ([1x6wehh · u/Cool_Reality9325](https://www.reddit.com/r/DigitalMarketing/comments/1x6wehh/is_geo_actually_working_for_anyone_or_are_we_all/), 23 comments in total), and the dominant note isn't strong demand but** "can't attribute it"**:
 
 - "My client has been getting twice the number of incoming leads from LLMs, ** and not through schema or reddit** " (5 points) — **a direct rebuttal of** the schema selling point.
 - "But that increase in LLM activity ** may not have any connection** to the content marketing you've done." (2 points) — questioning the attribution.

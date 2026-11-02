@@ -26,13 +26,13 @@
 
 **⚠️ 这里的证据强度必须分清（否则会误导你）**：$11.3M 证明的是**迁移决策与执行**有预算，**不是「迁移后运维」有预算**——这是两个采购科目。而且粒度错配：$11.3M 是企业级项目量级，而本报告下面推荐的产品形态是「按次叫专家」（客单价可能几百到几千美元），**差了两个数量级**。
 
-**更要紧的是反证就在同一周的数据里**：本方向**最直接的需求证据**（Hyper-V 顾问求助帖 [1x410ow](https://www.reddit.com/r/sysadmin/comments/1x410ow/hyperv_consultants/)）只有 **56 分 / 95 评**，而 Topgolf 帖（2,475 分 / 326 评）的热度是它的 **一个数量级以上**。如果「迁完之后」真是硬需求，为什么最直接的求助帖这么冷？两种解释都要摆出来：**(a)** 需求真实但人少、且这些人不发帖（他们打电话找 MSP）；**(b)** 这类故障大多能靠 Proxmox 论坛/微软 KB 的免费答案解决，所以没人求助。**本报告无法排除 (b)**——低互动本身就是「可能已能搜到答案」的信号。请把这个方向当**待验证**，不要当已验证。
+**更要紧的是反证就在同一周的数据里**：本方向**最直接的需求证据**（Hyper-V 顾问求助帖 [1x410ow · u/notaramblingman](https://www.reddit.com/r/sysadmin/comments/1x410ow/hyperv_consultants/)）只有 **56 分 / 95 评**，而 Topgolf 帖（2,475 分 / 326 评）的热度是它的 **一个数量级以上**。如果「迁完之后」真是硬需求，为什么最直接的求助帖这么冷？两种解释都要摆出来：**(a)** 需求真实但人少、且这些人不发帖（他们打电话找 MSP）；**(b)** 这类故障大多能靠 Proxmox 论坛/微软 KB 的免费答案解决，所以没人求助。**本报告无法排除 (b)**——低互动本身就是「可能已能搜到答案」的信号。请把这个方向当**待验证**，不要当已验证。
 
-r/sysadmin 一条 Topgolf 弃用 VMware 省下 $11.3M 的帖子拿到 2,475 分、326 条评论（[原帖](https://www.reddit.com/r/sysadmin/comments/1x5mfzq/)），评论区直接变成「我们也走了」的现场：有人从 VMware 换到 Nutanix、6 台主机 2 个 vCenter，**省了 $600k**（原话收尾是一句脏话，情绪浓度自见）；有 MSP 从业者说「今年做了大量 Hyper-V 迁移，管线里还有一堆」；还有人提到展会上已经出现专做 **「BREXIT」（Broadcom Exit）**迁移服务的公司——**说明预算已经制度化，不是一时情绪**。
+r/sysadmin 一条 Topgolf 弃用 VMware 省下 $11.3M 的帖子拿到 2,475 分、326 条评论（[原帖 · u/matthieuC](https://www.reddit.com/r/sysadmin/comments/1x5mfzq/)），评论区直接变成「我们也走了」的现场：有人从 VMware 换到 Nutanix、6 台主机 2 个 vCenter，**省了 $600k**（原话收尾是一句脏话，情绪浓度自见）；有 MSP 从业者说「今年做了大量 Hyper-V 迁移，管线里还有一堆」；还有人提到展会上已经出现专做 **「BREXIT」（Broadcom Exit）**迁移服务的公司——**说明预算已经制度化，不是一时情绪**。
 
 但痛点出现在下一公里，而且是两个各自独立的、官方支持解决不了的具体故障：
 
-- 迁到 **Hyper-V** 的团队：主机与 CSV 连接反复丢失、VM 宕机，微软官方支持数周无解，最后**只能在 Reddit 发帖求顾问**（[1x410ow](https://www.reddit.com/r/sysadmin/comments/1x410ow/)，标题就叫 "Hyper-V Consultants"）。
+- 迁到 **Hyper-V** 的团队：主机与 CSV 连接反复丢失、VM 宕机，微软官方支持数周无解，最后**只能在 Reddit 发帖求顾问**（[1x410ow · u/notaramblingman](https://www.reddit.com/r/sysadmin/comments/1x410ow/)，标题就叫 "Hyper-V Consultants"）。
 - 迁到 **Proxmox** 的团队：被 iSCSI 多路径配置折磨**两天到一周**（1x35mn7，标题就带着怒气）。
 
 **这就是标准的「已有但覆盖不了」**：迁移目标平台（Proxmox VE / Hyper-V / Nutanix / VergeIO）全都存在且成熟，备份有 Veeam，选型讨论遍地都是——**但「迁移后故障决策树 + 专家按需接入」这个层是空的**。评论区那句高赞「你不需要为了喝杯牛奶买头牛」（`No, you don't need to buy the cow when you just need a cup of milk`）点破了付费形态：**没人想买年度顾问合约，大家想要的是「出事的时候按次叫到一个知道 Proxmox iSCSI 怎么配的人」**。
@@ -54,7 +54,7 @@ r/sysadmin 一条 Topgolf 弃用 VMware 省下 $11.3M 的帖子拿到 2,475 分�
 
 **先说价值**：本周**技术缺口最具体**的一条。不是「大家觉得需要」，是评论区专家给出了为什么现有方案**结构上做不到**。
 
-营销团队现在被客户追着问一句话：**「我们在 ChatGPT 里被推荐了吗？」** 而他们手上没有答案。r/askmarketing 一条帖子（[1x5n7lb](https://www.reddit.com/r/askmarketing/comments/1x5n7lb/)）原话是：机构想建 AI 搜索的品牌提及监控工作流，试过手动 prompt、Semrush、Brand24，**都抓不到 LLM 生成式回答里的品牌推荐**。
+营销团队现在被客户追着问一句话：**「我们在 ChatGPT 里被推荐了吗？」** 而他们手上没有答案。r/askmarketing 一条帖子（[1x5n7lb · u/Both_Chard2990](https://www.reddit.com/r/askmarketing/comments/1x5n7lb/)）原话是：机构想建 AI 搜索的品牌提及监控工作流，试过手动 prompt、Semrush、Brand24，**都抓不到 LLM 生成式回答里的品牌推荐**。
 
 独立出现的佐证至少 3 条（这才是重点——不是单帖情绪）：有人问「GEO 到底有没有用，还是我们都在猜」（r/digitalmarketing），有人说结构化数据、FAQ 全试过、**没看到真实流量转化**；还有人发现 ChatGPT 推荐公司时，**引用的是一个只有 3 个赞的死版帖子**（1x5zsrf）——那条帖由其中一家公司的版主所写，曝光量远超官方博客一整年。
 
@@ -63,7 +63,7 @@ r/sysadmin 一条 Topgolf 弃用 VMware 省下 $11.3M 的帖子拿到 2,475 分�
 而评论区的专家证词给出了**真正的产品约束**：
 
 - 「`manual prompting? - been there done that. Does not scale`」——手动跑 prompt 不可扩展，这是需求，不是抱怨。
-- 「AI visibility tools are flawed by nature. They're a barometer at best, **not a source of truth**.」（[r/localseo 同一周的独立讨论](https://www.reddit.com/r/localseo/comments/1x4r1e6/)，3 分）——**两个不相干的社区给出了同一句判断**，现有工具被直接定性为「晴雨表不是事实来源」。
+- 「AI visibility tools are flawed by nature. They're a barometer at best, **not a source of truth**.」（[r/localseo 同一周的独立讨论 · u/dewharmony03](https://www.reddit.com/r/localseo/comments/1x4r1e6/)，3 分）——**两个不相干的社区给出了同一句判断**，现有工具被直接定性为「晴雨表不是事实来源」。
 - 最关键的工程细节：**不能用 API 测**。API 行为与消费端界面不同，且看不到实时引用，只能从界面侧抓取。
 - 以及那句最像产品需求的：**「thats your baseline and its the only number that means anything here.」**（他给的方法是自己列买家会问的问题、定期去跑——**但 schema 和 FAQ 块本身不解决问题**）
 
@@ -75,7 +75,7 @@ r/sysadmin 一条 Topgolf 弃用 VMware 省下 $11.3M 的帖子拿到 2,475 分�
 
 ### 3. 报价不透明：互动量很大，但评论区里没人要工具
 
-**先说结论变化**：这一节原先是本周的「头号推荐」，因为 r/askaplumber 一条「换热水器报价 $1,925 公不公平」拿到 730 条评论（[1x6yqsb](https://www.reddit.com/r/askaplumber/comments/1x6yqsb/)），是本周传统行业里互动最高的帖子之一。**但逐条读完评论区后我们发现：**没有人想要一个工具。
+**先说结论变化**：这一节原先是本周的「头号推荐」，因为 r/askaplumber 一条「换热水器报价 $1,925 公不公平」拿到 730 条评论（[1x6yqsb · u/OrangeInQC](https://www.reddit.com/r/askaplumber/comments/1x6yqsb/)），是本周传统行业里互动最高的帖子之一。**但逐条读完评论区后我们发现：**没有人想要一个工具。
 
 **这条最反直觉的证据必须放在最前面**：我们把这条帖子，加上 r/plumbingrepair 的「下水道摄像检查变成 $15k 换管」（另有同类帖子）、R22 加氟（1x3yg5s）、自己换炉子（1x67yej）——这四条帖子的评论区**从头翻到尾**，专门找「有没有人想要一个比价工具/报价查询 App」——**一条都没有**。
 
@@ -95,9 +95,9 @@ r/sysadmin 一条 Topgolf 弃用 VMware 省下 $11.3M 的帖子拿到 2,475 分�
 
 **那真正的缺口在哪？**不在「算价格」，在**「凭什么信你」**：
 
-- [1x5kvnd](https://www.reddit.com/r/PlumbingRepair/comments/1x5kvnd/sewer_camera_inspection_turned_into_a_15k/) 里客户要**摄像视频**，拿不到——没有可留存、可复核的证据。
-- [1x3yg5s](https://www.reddit.com/r/hvacadvice/comments/1x3yg5s/i_keep_hearing_its_a_fortune_to_recharge_an_r22/) 里**同一罐 R22，技师报出 $300 / $450 / $1,400 / $1,800 四种价**，而且技师之间互相指责对方用假货（该帖态度为「激烈争议」，最高赞 50 分）。
-- [1x67yej](https://www.reddit.com/r/hvacadvice/comments/1x67yej/how_hard_would_it_be_to_change_my_own_furnace/) 里 DIY 的人不缺教程，缺的是**「我做对了吗」的验证**——最高赞 208 分说得很直白：技术上不难，**犯错会毁掉新设备**。
+- [1x5kvnd · u/Fun-Web-7237](https://www.reddit.com/r/PlumbingRepair/comments/1x5kvnd/sewer_camera_inspection_turned_into_a_15k/) 里客户要**摄像视频**，拿不到——没有可留存、可复核的证据。
+- [1x3yg5s · u/crazymjb](https://www.reddit.com/r/hvacadvice/comments/1x3yg5s/i_keep_hearing_its_a_fortune_to_recharge_an_r22/) 里**同一罐 R22，技师报出 $300 / $450 / $1,400 / $1,800 四种价**，而且技师之间互相指责对方用假货（该帖态度为「激烈争议」，最高赞 50 分）。
+- [1x67yej · u/PretzelTitties](https://www.reddit.com/r/hvacadvice/comments/1x67yej/how_hard_would_it_be_to_change_my_own_furnace/) 里 DIY 的人不缺教程，缺的是**「我做对了吗」的验证**——最高赞 208 分说得很直白：技术上不难，**犯错会毁掉新设备**。
 
 **所以真正值钱的是「证据可验证性」，不是「价格计算」。**而这一条恰好**很难做成纯软件**——它需要现场取证能力。
 
@@ -384,7 +384,7 @@ r/smallbusiness 一条「能不能让我吐槽一下客户不按时付款」（6
 
 ##### 互动量幻觉
 
-（[1x42vho](https://www.reddit.com/r/sidehustlepaglu/comments/1x42vho/)，1,022 条评论）：本周最热的招募帖之一，评论区**几乎全是机器人回复和噪音**。**教训**：高互动 ≠ 强信号。评论里没有具体的人、具体的数字、具体的失败，就是噪音。这条已作为过滤器写入本报告全流程。
+（[1x42vho · u/resident__tense12](https://www.reddit.com/r/sidehustlepaglu/comments/1x42vho/)，1,022 条评论）：本周最热的招募帖之一，评论区**几乎全是机器人回复和噪音**。**教训**：高互动 ≠ 强信号。评论里没有具体的人、具体的数字、具体的失败，就是噪音。这条已作为过滤器写入本报告全流程。
 
   案例 2 / 6
 
@@ -440,7 +440,7 @@ r/smallbusiness 一条「能不能让我吐槽一下客户不按时付款」（6
 
  top-down 强推 AI 会赶走最资深的人——企业 AI 工具的头号失败模式。点击展开收起
 
-r/sysadmin 一条 2,069 分 / 412 评的帖子（[1x71qye](https://www.reddit.com/r/sysadmin/comments/1x71qye/)）：一位 **28 年老 IT 辞职**。关键细节是**离职理由不是 AI 本身，而是被强制使用未经验证的 AI**。
+r/sysadmin 一条 2,069 分 / 412 评的帖子（[1x71qye · u/_ELAP_](https://www.reddit.com/r/sysadmin/comments/1x71qye/)）：一位 **28 年老 IT 辞职**。关键细节是**离职理由不是 AI 本身，而是被强制使用未经验证的 AI**。
 
 **为什么这对做产品的人重要**：如果你的产品是“帮企业上 AI”，这条帖子告诉你失败模式——**自上而下强制推行会赶走最资深的人，而他们恰恰是唯一能判断 AI 输出对不对的人**。评论区同周的配套证据：有人抱怨“公司全力 agentic 化”（1x5160t，r/cscareerquestions，466 评），该帖评论区里 “Tired of corporate politics” 这类表达反复出现，构成同一叙事。
 
@@ -475,7 +475,7 @@ r/cscareerquestions 一条 392 分 / 373 评的帖子（1x3t8ud）里，一位�
 - **NameCheap 涨价 + Verisign 提价**（r/selfhosted + r/domains）：社区答案已经充分（Cloudflare Registrar 成本价、Porkbun .com <$12），**缺的是迁移执行层**——批量域名盘点 → 比价 → 转移 → 验证 DNS/ACME/邮件记录不中断。纯工具，周末级。
 - **Ahrefs/Semrush 替代**（r/SEO）：SEO 工具价格敏感度持续上升。注意这与第三节「GEO」是**同一批用户的两种焦虑**（现有工具太贵 + 新需求测不到）。
 - **Dockge 停止维护 → 迁移到 Arcane**（r/selfhosted）：自托管生态的“项目死亡 → 用户迁移”是**周期性、可预测**的需求。可以做一个“自托管项目健康度追踪”（最后提交、issue 响应、维护者数量）——**这是“帮人提前发现依赖要死”的产品**。
-- **Obsidian 被列上“砍掉名单”**（[1x4wwpd](https://www.reddit.com/r/obsidianmd/comments/1x4wwpd/)，223 评）：本地优先工具的用户对“云化/商业化”极度敏感。这条与第三节「迁移后运维」的撤离主题同源。
+- **Obsidian 被列上“砍掉名单”**（[1x4wwpd · u/TutorialDoctor](https://www.reddit.com/r/obsidianmd/comments/1x4wwpd/)，223 评）：本地优先工具的用户对“云化/商业化”极度敏感。这条与第三节「迁移后运维」的撤离主题同源。
 - **HN：Passkeys 是个陷阱**（[1,143 分 / 576 评](https://news.ycombinator.com/item?id=50048312)）：身份认证领域的技术共识正在移动。同一周 HN 上还有一篇反方 [Passkeys are not a trap](https://news.ycombinator.com/item?id=50088935)（667 分 / 812 评）——**两派同日对撞说明共识未定**，值得关注但对独立开发者不是直接机会。
 
 #### 信号 6：本周最强的付费信号是“你会不会变心”——不是功能
@@ -492,7 +492,7 @@ r/cscareerquestions 一条 392 分 / 373 评的帖子（1x3t8ud）里，一位�
 
 **而评论区里最值钱的，说的都不是功能**。Obsidian 的讨论里有一条 54 分的评论，把这件事说得比任何产品文档都清楚：
 
- Part of the reason I pay for sync is that it has a very clear value proposition that I trust won't suddenly change. … It syncs and costs a couple bucks a month.54 分[r/obsidianmd · Obsidian 会不会被砍 · 223 评](https://www.reddit.com/r/obsidianmd/comments/1x4wwpd/)
+ Part of the reason I pay for sync is that it has a very clear value proposition that I trust won't suddenly change. … It syncs and costs a couple bucks a month.54 分[r/obsidianmd · Obsidian 会不会被砍 · 223 评 · u/TutorialDoctor](https://www.reddit.com/r/obsidianmd/comments/1x4wwpd/)
 
 他付钱的理由不是功能多，而是**「我知道它不会突然变」**——后半段原话是「他们不会加没人要的 AI 垃圾，也不会卖我的数据」。
 
@@ -518,11 +518,11 @@ r/cscareerquestions 一条 392 分 / 373 评的帖子（1x3t8ud）里，一位�
 
 **这个句式的价值**：**这是不是正常？**是 homeowner 社区最高频、最能带量的句式，它说明**普通人对自家资产的“异常识别”几乎没有可靠信息源**。这与第三节「报价基线」是同一个市场的两面——一面是“这个价合理吗”，另一面是“这个现象正常吗”。**但两面的正确做法都是做内容，不是做工具**：因为用户已经在用“发帖问人”这个零成本办法了。做家宅检测类**内容**，这个句式就是你的标题模板。
 
-**2. 家用服务的技术断层**——r/landscaping 一条“前院被强制留了一根 3 英尺 PVC 管”（[原帖](https://www.reddit.com/r/landscaping/comments/1x55gmx/)）是本周讨论量最大的帖子之一。高赞全是“动手派”：锯管封盖、假石头遮挡、种灌木；还有人从施工方视角确认“我们的人要是留这么一根，我会被骂”。**几乎无对立，是纯问题解决型共识**——情绪出口集中在吐槽水务公司。
+**2. 家用服务的技术断层**——r/landscaping 一条“前院被强制留了一根 3 英尺 PVC 管”（[原帖 · u/OldClub9636](https://www.reddit.com/r/landscaping/comments/1x55gmx/)）是本周讨论量最大的帖子之一。高赞全是“动手派”：锯管封盖、假石头遮挡、种灌木；还有人从施工方视角确认“我们的人要是留这么一根，我会被骂”。**几乎无对立，是纯问题解决型共识**——情绪出口集中在吐槽水务公司。
 
 **读法**：这是 homeowner 类社区的**最强粘性来源**（家宅异常 + 官方说不清）。用户暴露的是“我不知道这正不正常、也不知道该找谁”——**这是一个内容机会，不是工具机会**：因为用户已经在用“发帖问人”这个零成本办法解决了，做工具会撞上同样的免费替代。**这条与第三节「报价基线」是同一个结论。**
 
-**3. HVAC/水管行业的报价心理战**——已在第一节 3 和第三节「报价基线」展开。补充一条行业结构性证据：r/construction 一位油漆承包商“20 万美元项目严重低价中标，估算漏算飞灰和 Azek 饰条，现在要么自掏数万履约、要么违约被总包索赔”拿到 506 分 / 420 评（[1x5ba0z](https://www.reddit.com/r/construction/comments/1x5ba0z/)）。评论区出现两个独立重伤案例（**一家因估算低估 60 万而倒闭，经营 20 年**），并暴露行业潜规则“**先低价中标再靠变更单找回来**”。
+**3. HVAC/水管行业的报价心理战**——已在第一节 3 和第三节「报价基线」展开。补充一条行业结构性证据：r/construction 一位油漆承包商“20 万美元项目严重低价中标，估算漏算飞灰和 Azek 饰条，现在要么自掏数万履约、要么违约被总包索赔”拿到 506 分 / 420 评（[1x5ba0z · u/2021RGS](https://www.reddit.com/r/construction/comments/1x5ba0z/)）。评论区出现两个独立重伤案例（**一家因估算低估 60 万而倒闭，经营 20 年**），并暴露行业潜规则“**先低价中标再靠变更单找回来**”。
 
 **落点**：现有估算工具（Procore、Bluebeam）解决“算出来”，**不解决“算得对不对”**。缺签约前的成本基线比对与漏项检查（如特定材料是否已计入）——这正是本次事故的直接成因。列观察位（第七节）。
 
@@ -546,7 +546,7 @@ r/cscareerquestions 一条 392 分 / 373 评的帖子（1x3t8ud）里，一位�
 
 别自己发明规则。用 net-14（14 天内付款）或 2/10 net 15（15 天内付清，10 天内付可打 2% 折）这种客户已经见过的说法。配合 1–2% 早付折扣 + 3–5% 逾期罚息。
 
-⚠️ 先算一笔账再决定打不打折：早付折扣是从你的利润里让出去的，不是从营业额里。本周[另一条讨论](https://www.reddit.com/r/smallbusiness/comments/1x4pwa9/)里，一位做商业融资的人提醒过：「在提供早付折扣之前，先算清楚你让出去多少钱，再拿它跟你的毛利比。」对小活薄利的生意，2% 可能等于白干。如果你本来毛利就薄，宁可不打折，只写清逾期罚息。
+⚠️ 先算一笔账再决定打不打折：早付折扣是从你的利润里让出去的，不是从营业额里。本周[另一条讨论 · u/_1x1](https://www.reddit.com/r/smallbusiness/comments/1x4pwa9/)里，一位做商业融资的人提醒过：「在提供早付折扣之前，先算清楚你让出去多少钱，再拿它跟你的毛利比。」对小活薄利的生意，2% 可能等于白干。如果你本来毛利就薄，宁可不打折，只写清逾期罚息。
 
 #### 3. 发票到期了没人理？去找 AP，别找对接人
 
@@ -568,7 +568,7 @@ r/cscareerquestions 一条 392 分 / 373 评的帖子（1x3t8ud）里，一位�
 
 #### 6. 涨价不要一次补齐
 
-一条真实案例：有人三年没涨价，[一次性涨了 22%，跑掉约一半老客户](https://www.reddit.com/r/smallbusiness/comments/1x40gbo/)（原帖）。
+一条真实案例：有人三年没涨价，[一次性涨了 22%，跑掉约一半老客户 · u/Electrical_Garden404](https://www.reddit.com/r/smallbusiness/comments/1x40gbo/)（原帖）。
 
 评论区给出了具体幅度，这比「分次小幅涨」有用得多：每年 3–8%（多条独立评论分别给出 3–6%、4–5%、5–8%、7%），有人所在公司每年固定涨 5%，因为「涨得可预期，客户很少流失」。取低还是取高？给 7% 那位说得很实在：「人们更容易接受 7%，而不是费劲去找另一家服务商」——取决于你的客户换供应商的成本有多高。一位 132 分的评论说得很直白：「小步、多次地涨，比等太久再一次涨到位好」。
 
@@ -576,8 +576,8 @@ r/cscareerquestions 一条 392 分 / 373 评的帖子（1x3t8ud）里，一位�
 
 ### 本周另外两条对你有用的行业信号
 
-- 租金涨 70%：一条[「续约，未来五年涨 70%」](https://www.reddit.com/r/smallbusiness/comments/1x42ni7/)的评论区很冷静——这个幅度谈不下来，要算的是搬迁成本对比。
-- 保险涨到扛不住：有人说保费从 **$1,200/月** 涨到 **$3,100/月**（[原帖](https://www.reddit.com/r/smallbusiness/comments/1x47zyv/)）。这一条评论区全是共鸣，没有人给出解法——说明这不是你一个人的问题，也不是靠技巧能解决的。
+- 租金涨 70%：一条[「续约，未来五年涨 70%」 · u/Tasty_Shopping_7904](https://www.reddit.com/r/smallbusiness/comments/1x42ni7/)的评论区很冷静——这个幅度谈不下来，要算的是搬迁成本对比。
+- 保险涨到扛不住：有人说保费从 **$1,200/月** 涨到 **$3,100/月**（[原帖 · u/chutupandtakemykarma](https://www.reddit.com/r/smallbusiness/comments/1x47zyv/)）。这一条评论区全是共鸣，没有人给出解法——说明这不是你一个人的问题，也不是靠技巧能解决的。
 
 一句实话：本周这些讨论里，正解大多是「更狠的合同条款」和「更早的现金流纪律」，不是软件。但「提前把催收排进日程」这种零成本动作，效果往往比换一套系统更明显。
 
@@ -597,7 +597,7 @@ r/cscareerquestions 一条 392 分 / 373 评的帖子（1x3t8ud）里，一位�
 
  预警有真实需求，但先做产品得划清「预警」和「泄密」的线。点击展开收起
 
-r/careerguidance 一条「直属下属快 burnout 了、拒绝休假，但我知道她要被裁」（[原帖](https://www.reddit.com/r/careerguidance/comments/1x4ekyr/)）。最高赞（2,803 分）是纯操作建议（「任何超过 10 天的假期，如果传言成真就没了，先把 10 天以上的额度用掉」）；紧随其后的 1,585 分不是表态而是同类经历：「我也遇到过，我是这么一对一说的……」；另有高赞反过来质疑楼主：「她是你最强的分析师，为什么裁的是她？」——呈现罕见的**共情 + 追责并存**。
+r/careerguidance 一条「直属下属快 burnout 了、拒绝休假，但我知道她要被裁」（[原帖 · u/KanelBrisk7](https://www.reddit.com/r/careerguidance/comments/1x4ekyr/)）。最高赞（2,803 分）是纯操作建议（「任何超过 10 天的假期，如果传言成真就没了，先把 10 天以上的额度用掉」）；紧随其后的 1,585 分不是表态而是同类经历：「我也遇到过，我是这么一对一说的……」；另有高赞反过来质疑楼主：「她是你最强的分析师，为什么裁的是她？」——呈现罕见的**共情 + 追责并存**。
 
 产品含义：评论区反复出现「**公司不允许管理者提前告知**」这一制度性约束，说明在合规前提下做「员工风险预警」（行业裁员信号、个人市场价值评估）存在真实需求，**但天然带伦理风险**。这类产品要做，第一件事是划清「预警」和「泄密」的界线。
 
@@ -605,7 +605,7 @@ r/careerguidance 一条「直属下属快 burnout 了、拒绝休假，但我知
 
  1,307 分共识：Never take the counter offer——简单结论+亲历故事=高互动结构。点击展开收起
 
-[原帖](https://www.reddit.com/r/careerguidance/comments/1x38ba7/)。共识高度一致：「Never take the counter offer. Join the new company」（1,307 分）。大量中赞补充亲身踩坑史，核心论点是「**这笔钱他们本来就能给，是你提离职才给的**」。
+[原帖 · u/Chrome_Viperenk](https://www.reddit.com/r/careerguidance/comments/1x38ba7/)。共识高度一致：「Never take the counter offer. Join the new company」（1,307 分）。大量中赞补充亲身踩坑史，核心论点是「**这笔钱他们本来就能给，是你提离职才给的**」。
 
 > 「Never take the counter offer. Join the new company.」
 
@@ -617,7 +617,7 @@ r/careerguidance 一条「直属下属快 burnout 了、拒绝休假，但我知
 
  评论把「要不要钱」拉成「要不要命」——缺一个算时薪的小工具。点击展开收起
 
-[原帖](https://www.reddit.com/r/careeradvice/comments/1x3dfv9/)，「放弃刚入职的 20 万去 36.4 万但疯狂加班」。评论区把话题从「要不要钱」拉到「要不要命」：最高赞（861 分）直接问「你想有生活吗？这份工作你不会有的」；还有人质疑楼主算错时薪。
+[原帖 · u/PapaSecundus](https://www.reddit.com/r/careeradvice/comments/1x3dfv9/)，「放弃刚入职的 20 万去 36.4 万但疯狂加班」。评论区把话题从「要不要钱」拉到「要不要命」：最高赞（861 分）直接问「你想有生活吗？这份工作你不会有的」；还有人质疑楼主算错时薪。
 
 产品含义：**「算时薪/生活质量」缺现成工具**——这是可做的小切口，且与第四节「3 年半老应用衰减曲线」的定价思考同源。同时它印证了信号 4：2026 年技术从业者对「高薪换命」的容忍度在下降。
 
@@ -637,7 +637,7 @@ r/careerguidance 一条「直属下属快 burnout 了、拒绝休假，但我知
 
 - **写下 10 个你的买家真会打进 ChatGPT 的 prompt**，跑一遍，记下谁被点名——这是第三节「GEO」给的基线做法，今天就能做，零成本。
 - **把本周的报价帖整理成一张公开基线表**（工种 × 地区 × 机型），发到 r/askaplumber 或 r/hvacadvice 回答「这个价合理吗」。**及格线收紧：两周 ≥3 条实质询价，且 ≥1 条主动问别的工种**。⚠️ 这是内容动作不是产品动作——**评论区里没人要工具**（第三节「报价基线」）。
-- **去 r/sysadmin 的「求顾问」帖里，用真名答一个具体故障**（如 [1x410ow](https://www.reddit.com/r/sysadmin/comments/1x410ow/)）。⚠️ **注意：那里已经有免费答案了**（40 分、22 分、13 分的评论都给了具体修法），所以你要证明的不是「我懂」，而是「**试过这些还是不行时，有人愿意花钱叫我**」。**及格线：3 次私信问「你接不接活」。做不到就放弃这个方向。**
+- **去 r/sysadmin 的「求顾问」帖里，用真名答一个具体故障**（如 [1x410ow · u/notaramblingman](https://www.reddit.com/r/sysadmin/comments/1x410ow/)）。⚠️ **注意：那里已经有免费答案了**（40 分、22 分、13 分的评论都给了具体修法），所以你要证明的不是「我懂」，而是「**试过这些还是不行时，有人愿意花钱叫我**」。**及格线：3 次私信问「你接不接活」。做不到就放弃这个方向。**
     1W
 
 ### 如果你有 1 个周末（做 MVP）
@@ -654,7 +654,7 @@ r/careerguidance 一条「直属下属快 burnout 了、拒绝休假，但我知
 
 ### ⚠️ 为什么这个方向可能是伪需求（本报告必须自己说出来）
 
-上面 5 条佐证里，第一条就是**有人公开问「GEO 到底有没有用，还是我们都在猜」**——我们把它列在佐证里，但它字面上是一句**自我怀疑**。我们把该帖（[1x6wehh](https://www.reddit.com/r/DigitalMarketing/comments/1x6wehh/is_geo_actually_working_for_anyone_or_are_we_all/)）23 条评论读完了，主旋律不是「需求强烈」，而是**「无法归因」**：
+上面 5 条佐证里，第一条就是**有人公开问「GEO 到底有没有用，还是我们都在猜」**——我们把它列在佐证里，但它字面上是一句**自我怀疑**。我们把该帖（[1x6wehh · u/Cool_Reality9325](https://www.reddit.com/r/DigitalMarketing/comments/1x6wehh/is_geo_actually_working_for_anyone_or_are_we_all/)）23 条评论读完了，主旋律不是「需求强烈」，而是**「无法归因」**：
 
 - 「My client has been getting twice the number of incoming leads from LLMs, **and not through schema or reddit**」（5 分）——**直接反驳** schema 这条卖点。
 - 「But that increase in LLM activity **may not have any connection** to the content marketing you've done.」（2 分）——质疑归因。

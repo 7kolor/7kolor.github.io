@@ -2,13 +2,13 @@
 
 ## 买家还在观望，动手的人先醒了：帮人敢下单的三个方向
 
-> 25,785 条讨论：晒单密度 +15% 是唯一超阈值异动，掏钱更谨慎——主推报价基准数据站，第 0 步只要 2 小时。
+> 晒单密度 +15% 是唯一超阈值异动，掏钱更谨慎——主推报价基准数据站，第 0 步只要 2 小时。
 
 原文 / Source: /weekly/2026-W39/
 
 ---
 
-25,785 开发者讨论帖   354 痛点密度·每千帖（持平）    −7% 购买意向密度环比（噪声边缘）    +15% 晒单密度环比（唯一超阈值）
+354 痛点密度·每千帖（持平）    −7% 购买意向密度环比（噪声边缘）    +15% 晒单密度环比（唯一超阈值）
 
 ## 一、本周三件值得你花 2 分钟读完的事
 
@@ -16,7 +16,7 @@
 
 先说价值：你卖的是“看得懂的底价”——产品是数据+表单+内容页；付费方是天天要报价的承包商，房主侧免费攒流量。不碰施工，不用懂装修。
 
- 这是“不想被打扰”价。1,335 赞[刷漆报价 $8,400 帖 · 673 评](https://www.reddit.com/r/homeimprovement/comments/1wt8iyg/)
+ 这是“不想被打扰”价。1,335 赞[刷漆报价 $8,400 帖 · 673 评 · u/mspoonygp](https://www.reddit.com/r/homeimprovement/comments/1wt8iyg/)
 
 202 赞追问“为什么不直说不接？”——房主侧的高赞共识：直说会被挂差评，天价是变相拒绝。信息差 + 双向不敢说真话 = 底价数据真空；Angi/Thumbtack 卖的是“连接”，没动机做中立底价。
 
@@ -36,7 +36,7 @@
 
 ##### 拼出底价 MVP：三条数据供给
 
-承包商自报（挂名者即首批数据源）+ 建材行目录价 + 公开工时费率；页面公开样本量与偏差方向。品类从热帖长尾起步：$8,400 刷漆、$17k 雨槽（[647 赞](https://www.reddit.com/r/homeimprovement/comments/1wvwizg/)“专盯老人和没时间的富人”）。
+承包商自报（挂名者即首批数据源）+ 建材行目录价 + 公开工时费率；页面公开样本量与偏差方向。品类从热帖长尾起步：$8,400 刷漆、$17k 雨槽（[647 赞 · u/Giftof1004moves](https://www.reddit.com/r/homeimprovement/comments/1wvwizg/)“专盯老人和没时间的富人”）。
 
   STEP 2 · W2
 
@@ -56,17 +56,17 @@
 
 #### 2. AI 反噬第一案：一条产品红线，一个被嘲讽遮住的真需求
 
- 欢迎来到派对——我十年动效技能，上个月刚被最新 Claude 干掉。228 赞[年收入 €50k→€12k 的素材卖家帖](https://www.reddit.com/r/SaaS/comments/1wt49xm/)
+ 欢迎来到派对——我十年动效技能，上个月刚被最新 Claude 干掉。228 赞[年收入 €50k→€12k 的素材卖家帖 · u/trying-to-whistle](https://www.reddit.com/r/SaaS/comments/1wt49xm/)
 
 80% 流失用户直说“因为 AI”。同帖 57 赞的嘲讽——“要不请 AI 来做个审计？;)”——恰好指着真空位：他想做审计，但年入 5 万雇不起 4 万的机构。
 
-[sysadmin 老兵承认“破防了，开始用 Claude 管生产脚本”](https://www.reddit.com/r/sysadmin/comments/1wuzqi2/)：435 条评论里没有一条讨论“怎么验收 AI 的产出”。使用已是事实，验货没跟上。GPTZero 类做通用检测；行业规则库（品牌口径、事实核查、合规红线）没人做。
+[sysadmin 老兵承认“破防了，开始用 Claude 管生产脚本” · u/iama_bad_person](https://www.reddit.com/r/sysadmin/comments/1wuzqi2/)：435 条评论里没有一条讨论“怎么验收 AI 的产出”。使用已是事实，验货没跟上。GPTZero 类做通用检测；行业规则库（品牌口径、事实核查、合规红线）没人做。
 
 第一周产出物：选一个你懂的行业，手写 30 条质检规则（示例：编造的统计与引用 / 把“辅助驾驶”写成“自动驾驶” / AI 高频套话 / 参数与法规错误）+ LLM 评审管道 = 一页诊断报告。定价锚：$4 万机构审计 ↔ $49 自助。误判伤人——报告用概率与证据定位。
 
-#### 3. 「分析了 2,300 条真实机主帖」：一周出 v0 的内容模板
+#### 3. 「分析了 大量真实机主帖」：一周出 v0 的内容模板
 
- 这数据很难解读——前一台手机的影响没控制。843 赞[iPhone 后悔率帖 · 争论即分发](https://www.reddit.com/r/dataisbeautiful/comments/1wrx4u3/)
+ 这数据很难解读——前一台手机的影响没控制。843 赞[iPhone 后悔率帖 · 争论即分发 · u/Any_Ad2758](https://www.reddit.com/r/dataisbeautiful/comments/1wrx4u3/)
 
 管道全是现成的：Reddit 公开 API + LLM 分类 + 统计页，一周能出 v0。关键在第二环：统计结论要反直觉但站得住——纯客观没人转，纯标题党被拆穿。壁垒只有两个：清洗质量、每周更新——运营活，不是技术活。时间账按季度排：v0 一周，SEO 收录 3-6 个月。
 
@@ -74,38 +74,38 @@
 
 ## 二、六步框架：本周信号怎么落成决策
 
-| 步骤 | 要回答的问题 | 命中的讨论 | 本周 | 密度 | 上周 | 变化 |
-|---|---|---|---|---|---|---|
-| ① 发现机会 | 做什么能赚钱？ | 付费/购买意向 | 1,277 | 50 | 1,369 | ↓7% |
-| ② 收集信号 | 用户在抱怨什么？ | 明确痛点 | 9,123 | 354 | 8,523 | ↑7% |
-| ③ 深挖问题 | 为什么难受？ | 负面反馈 | 1,908 | 74 | 1,912 | 持平 |
-| ④ 验证假设 | 我理解对了吗？ | 求认同/求支持 | 9,660 | 375 | 9,056 | ↑7% |
-| ⑤ 最后把关 | 上线前漏了什么？ | 流失/想卸载 | 399 | 15.5 | 388 | 持平 |
-| ⑥ 验证有人买 | “我做好了/解决了” | 供给侧信号 | 1,222 | 47 | 1,063 | ↑15% |
+| 步骤 | 要回答的问题 | 命中的讨论 | 密度 | 变化 |
+|---|---|---|---|---|
+| ① 发现机会 | 做什么能赚钱？ | 付费/购买意向 | 50 | ↓7% |
+| ② 收集信号 | 用户在抱怨什么？ | 明确痛点 | 354 | ↑7% |
+| ③ 深挖问题 | 为什么难受？ | 负面反馈 | 74 | 持平 |
+| ④ 验证假设 | 我理解对了吗？ | 求认同/求支持 | 375 | ↑7% |
+| ⑤ 最后把关 | 上线前漏了什么？ | 流失/想卸载 | 15.5 | 持平 |
+| ⑥ 验证有人买 | “我做好了/解决了” | 供给侧信号 | 47 | ↑15% |
 
-噪声阈值：打标由 LLM 完成，±7% 以内不解读为趋势。唯一超阈值的是 ⑥（计数 +15.0%、密度 +15.2% 同向）。看构成：热榜被报价、职场、AI 验货三簇占据——痛点主题正从“工具难用”漂向“不知道该信谁”。④是分发层不是产品层：决策辅助走 lead-gen / affiliate / 内容钩子变现，别按“有人付费”排期。
+噪声阈值：信号分类由 LLM 辅助完成，±7% 以内不解读为趋势。唯一超阈值的是 ⑥（计数 +15.0%、密度 +15.2% 同向）。看构成：热榜被报价、职场、AI 验货三簇占据——痛点主题正从“工具难用”漂向“不知道该信谁”。④是分发层不是产品层：决策辅助走 lead-gen / affiliate / 内容钩子变现，别按“有人付费”排期。
 
 ## 三、需求 × 供给：八个方向的判断与档案
 
 | 方向 | 用户在喊什么 | 别人做到哪了 | 判断 |
 |---|---|---|---|
-| 家庭维修价格基准 | [刷漆 $8,400，673 评一边倒识破“赶客价”](https://www.reddit.com/r/homeimprovement/comments/1wt8iyg/) | HomeRepairCalc 自称 $1k/月；Angi 类有利益冲突 | 主推 · 档案 A |
-| 垂直 AI 质检 | [卖家想要审计但雇不起](https://www.reddit.com/r/SaaS/comments/1wt49xm/) | iFixAi 441 票仅通用位（注意力≠收入） | 档案 B |
-| 抱怨数据内容站 | [2,300 条机主帖分析上热榜](https://www.reddit.com/r/dataisbeautiful/comments/1wrx4u3/) | 无同款上榜；人人能开，壁垒在运营 | 档案 C |
-| 自托管撤离+平价备份 | [Notion 翻倍，57 赞“数据锁死你”](https://www.reddit.com/r/notion/comments/1wsti6y/) | Task Session 自称 $92k/月；导出器产品缺位 | 档案 D |
-| 会计单干工具 | [474 赞“我禁止孩子学会计”](https://www.reddit.com/r/accounting/comments/1wv63dt/) | TaxDrop 自称 $11.5k/月，单环节幸存 | 只进缝隙 · E |
-| 薪酬决策辅助 | [拒绝假晋升帖近 4,000 评全员站队“拒绝”](https://www.reddit.com/r/careerguidance/comments/1wsejs6/) | 供给最高 22 票玩具 | 流量地图位 |
-| 房主设备档案 | [新房圣诞灯失控，评论区接龙同款](https://www.reddit.com/r/homeowners/comments/1wsywzg/) | 无产品 | 内容起手 |
-| 单干成本计算 | [$44k/年医保劝退单干，367 赞共鸣](https://www.reddit.com/r/smallbusiness/comments/1wsu2va/) | 无 | 内容钩子位 |
+| 家庭维修价格基准 | [刷漆 $8,400，673 评一边倒识破“赶客价” · u/mspoonygp](https://www.reddit.com/r/homeimprovement/comments/1wt8iyg/) | HomeRepairCalc 自称 $1k/月；Angi 类有利益冲突 | 主推 · 档案 A |
+| 垂直 AI 质检 | [卖家想要审计但雇不起 · u/trying-to-whistle](https://www.reddit.com/r/SaaS/comments/1wt49xm/) | iFixAi 441 票仅通用位（注意力≠收入） | 档案 B |
+| 抱怨数据内容站 | [大量机主帖分析上热榜 · u/Any_Ad2758](https://www.reddit.com/r/dataisbeautiful/comments/1wrx4u3/) | 无同款上榜；人人能开，壁垒在运营 | 档案 C |
+| 自托管撤离+平价备份 | [Notion 翻倍，57 赞“数据锁死你” · u/lizzo1973](https://www.reddit.com/r/notion/comments/1wsti6y/) | Task Session 自称 $92k/月；导出器产品缺位 | 档案 D |
+| 会计单干工具 | [474 赞“我禁止孩子学会计” · u/JustBrosDocking](https://www.reddit.com/r/accounting/comments/1wv63dt/) | TaxDrop 自称 $11.5k/月，单环节幸存 | 只进缝隙 · E |
+| 薪酬决策辅助 | [拒绝假晋升帖近 4,000 评全员站队“拒绝” · u/Tarnished_Crow](https://www.reddit.com/r/careerguidance/comments/1wsejs6/) | 供给最高 22 票玩具 | 流量地图位 |
+| 房主设备档案 | [新房圣诞灯失控，评论区接龙同款 · u/Infinite-Chip-3365](https://www.reddit.com/r/homeowners/comments/1wsywzg/) | 无产品 | 内容起手 |
+| 单干成本计算 | [$44k/年医保劝退单干，367 赞共鸣 · u/Style_Necessary](https://www.reddit.com/r/smallbusiness/comments/1wsu2va/) | 无 | 内容钩子位 |
  A家庭维修价格基准 —— 主推：第 0 步 2 小时，两周定生死
 
-- 证据链（跨三周）：W38 AI 客户经理拖延报价被反感 → 本周 $8,400 刷漆 + [Leafguard $17k](https://www.reddit.com/r/homeimprovement/comments/1wvwizg/)——“这个价正常吗”被同一句话追问了三周。
+- 证据链（跨三周）：W38 AI 客户经理拖延报价被反感 → 本周 $8,400 刷漆 + [Leafguard $17k · u/Giftof1004moves](https://www.reddit.com/r/homeimprovement/comments/1wvwizg/)——“这个价正常吗”被同一句话追问了三周。
 - 竞争版图：HomeAdvisor/Angi Cost Guides、Fixr 类成本指南矩阵占 SERP 多年——长尾正面攻不动；差异化 = 逐项体检 + 报价单上传评分，接受 8-12 个月的 SEO 等待期。
 - 数据三条供给：承包商自报（第 0 步挂名者即首批数据源）+ 建材行目录价 + 公开工时费率；页面公开样本量与偏差方向——“自报价样本 N=xx、方向性偏差：偏低”。
 - 证伪：能杀死方向的证据——承包商全只愿免费挂名，或同类免费工具上线。第 0 步两周无回应即砍；项目页先看外部分发（3 个同款提问下回帖的点击，2 周），自然搜索 8-12 周后才计入止损。
   B垂直 AI 质检 —— 把“4 万美元的审计”做成 $49 的自助报告
 
-- 证据：-76% 卖家的 42 赞自述“我们给流失客户做了正经调研”——中小卖家愿为诊断付费，只是够不到价格；sysadmin 帖 435 评零“验收方法”；[营销代理自证“AI 重做官网后流量暴跌”](https://www.reddit.com/r/digitalmarketing/comments/1wwliss/)。四条轶事同向，但无一直接证明付费意愿——种子用户测试必须先走。
+- 证据：-76% 卖家的 42 赞自述“我们给流失客户做了正经调研”——中小卖家愿为诊断付费，只是够不到价格；sysadmin 帖 435 评零“验收方法”；[营销代理自证“AI 重做官网后流量暴跌” · u/069420](https://www.reddit.com/r/digitalmarketing/comments/1wwliss/)。四条轶事同向，但无一直接证明付费意愿——种子用户测试必须先走。
 - 种子渠道现成：-76% 帖和 sysadmin 帖的评论区就是第一批用户池（回帖参与，别硬推）。
 - 证伪：5 个种子用户两周内无人留邮箱，砍。长期风险：通用模型每次升级都在吃质检位——资产押在行业规则库上，不押模型。
   C抱怨数据内容站 —— 抓一次数据，吃三个变现口
@@ -128,26 +128,26 @@
 
 | 案例 | 数据 | 评论区在干嘛 | 你该带走 |
 |---|---|---|---|
-| [GhostText：一个快捷键卖 $4.99](https://www.reddit.com/r/Startup_Ideas/comments/1wsjbio/) | 买断制持续出单 | 楼主自答：冷启动全靠 r/macapps 精准社区，广告费为零 | 失败条件：一旦要服务器和客服，买断制成本结构就崩 |
-| [ownedfor.com：2,300 条机主帖](https://www.reddit.com/r/dataisbeautiful/comments/1wrx4u3/) | 上热榜 | 一半捧一半挑方法论毛病——争论即流量 | 热帖流量→站内转化无公开数据，别按 1:1 估 |
+| [GhostText：一个快捷键卖 $4.99 · u/Adept_Storm805](https://www.reddit.com/r/Startup_Ideas/comments/1wsjbio/) | 买断制持续出单 | 楼主自答：冷启动全靠 r/macapps 精准社区，广告费为零 | 失败条件：一旦要服务器和客服，买断制成本结构就崩 |
+| [ownedfor.com：2,300 条机主帖 · u/Any_Ad2758](https://www.reddit.com/r/dataisbeautiful/comments/1wrx4u3/) | 上热榜 | 一半捧一半挑方法论毛病——争论即流量 | 热帖流量→站内转化无公开数据，别按 1:1 估 |
 | [iFixAi：AI agent 独立审计](https://www.producthunt.com/products/ifixai) | PH 第 5（441 票） | 票数=注意力验证，不是购买验证 | 垂直位还空；无“窗口正在关闭”的证据 |
-| [Pandas→Polars 官方亲自答](https://www.reddit.com/r/Python/comments/1wrihu9/) | 官方回复拿最高赞区 | 权威来自维护者身份；独立开发者没有这个来源 | 但“发布日守评论区、作者身份回第一条”的纪律同样有效 |
+| [Pandas→Polars 官方亲自答 · u/Harshita_Netla](https://www.reddit.com/r/Python/comments/1wrihu9/) | 官方回复拿最高赞区 | 权威来自维护者身份；独立开发者没有这个来源 | 但“发布日守评论区、作者身份回第一条”的纪律同样有效 |
 
 翻车的——重点看“怎么提前发现”：
 
 - 产品就是 AI 能生成的东西：根因不是 AI 太强，是商品无边际差异化。提前发现法：把产品描述写出来——若 ChatGPT 一句话提示词能复现 80%，危险。
-- 单干前没算固定成本：[$44k/年医保帖](https://www.reddit.com/r/smallbusiness/comments/1wsu2va/)——单干账只算了收入没算固定成本。“单干成本计算器”本身是被评论区验证缺位的内容钩子，挂任何工具站都能引流。
+- 单干前没算固定成本：[$44k/年医保帖 · u/Style_Necessary](https://www.reddit.com/r/smallbusiness/comments/1wsu2va/)——单干账只算了收入没算固定成本。“单干成本计算器”本身是被评论区验证缺位的内容钩子，挂任何工具站都能引流。
 - 晒数字不晒漏斗：IH 上[“新增 100 用户，大多数人永远不会付费”](https://www.indiehackers.com/post/6b6920845d)因为晒了真实漏斗反而赢得信任。你的 launch 叙事照此校准。
 
 ## 五、本周帖子里值得看的信号
 
 #### 数字遗产进了 sysadmin 日常——低频、敏感、零竞争的观察位
 
-[“我讨厌注销逝者账号”](https://www.reddit.com/r/sysadmin/comments/1wsg85r/)：1,155 赞的故事是替 24 年老友做迁移系统的最后一步，168 赞发明了“tech mortician（技术入殓师）”。流程自动化有人做（HR 级联注销已被提及），“通知与告别”的人文层没人做。低频+敏感+情感负载，撑不起独立产品——蹲守，记录为“数字遗产”信号第一条。
+[“我讨厌注销逝者账号” · u/rarkmeece](https://www.reddit.com/r/sysadmin/comments/1wsg85r/)：1,155 赞的故事是替 24 年老友做迁移系统的最后一步，168 赞发明了“tech mortician（技术入殓师）”。流程自动化有人做（HR 级联注销已被提及），“通知与告别”的人文层没人做。低频+敏感+情感负载，撑不起独立产品——蹲守，记录为“数字遗产”信号第一条。
 
 #### 「房子的说明书」——新房主真空位，内容起手、工具收尾
 
-[新房自带圣诞灯却找不到控制器（4,029 赞）](https://www.reddit.com/r/homeowners/comments/1wsywzg/)，评论区全是“我也要问同款”的接龙。前任房主装的智能系统，新主人接手即失联——设备档案、交接清单、隐藏控制器定位指南：大平台嫌碎、本地服务商没产品化，内容站起手成本几乎为零，攒起流量后自然长出“房屋档案工具”，与 A 共用同一批读者。
+[新房自带圣诞灯却找不到控制器（4,029 赞） · u/Infinite-Chip-3365](https://www.reddit.com/r/homeowners/comments/1wsywzg/)，评论区全是“我也要问同款”的接龙。前任房主装的智能系统，新主人接手即失联——设备档案、交接清单、隐藏控制器定位指南：大平台嫌碎、本地服务商没产品化，内容站起手成本几乎为零，攒起流量后自然长出“房屋档案工具”，与 A 共用同一批读者。
 
 ## 六、非工程师的抱怨怎么变成你的生意
 
@@ -165,10 +165,10 @@
 
 | 帖子 | 僵点与产品定义 |
 |---|---|
-| [院子里一个泥坑（1,262 评）](https://www.reddit.com/r/landscaping/comments/1wu51m2/) | 碎石派 1,865 赞 vs 种树派 1,091 赞；最高赞自述“我不是专业的”——专业建议缺位。产品：决策卡（症状→方案→成本→工期）；第一步：3 个求助帖手工做 3 张卡，投到同款提问下测反应。 |
-| [Pandas 还是 Polars](https://www.reddit.com/r/Python/comments/1wrihu9/) | 官方下场也只敢说“看情况”——迁移成本从没人量过。产品：兼容性扫描器，服务“不迁的那半边”，市场比迁移器大、竞争为零。 |
-| [Veeam 换不换](https://www.reddit.com/r/sysadmin/comments/1wthktn/) | 省钱派和折腾派都对——没人把迁移总成本（人力×工时+停机风险+学习）和续费放一张表。产品：迁移总成本对比器，先做内容页。 |
-| [$8,400 刷一间房](https://www.reddit.com/r/homeimprovement/comments/1wt8iyg/) | 吵的是报价机制本身——已并入档案 A 的施工图。 |
+| [院子里一个泥坑（1,262 评） · u/spike_the_dealer](https://www.reddit.com/r/landscaping/comments/1wu51m2/) | 碎石派 1,865 赞 vs 种树派 1,091 赞；最高赞自述“我不是专业的”——专业建议缺位。产品：决策卡（症状→方案→成本→工期）；第一步：3 个求助帖手工做 3 张卡，投到同款提问下测反应。 |
+| [Pandas 还是 Polars · u/Harshita_Netla](https://www.reddit.com/r/Python/comments/1wrihu9/) | 官方下场也只敢说“看情况”——迁移成本从没人量过。产品：兼容性扫描器，服务“不迁的那半边”，市场比迁移器大、竞争为零。 |
+| [Veeam 换不换 · u/SpidyParkerPeterMan](https://www.reddit.com/r/sysadmin/comments/1wthktn/) | 省钱派和折腾派都对——没人把迁移总成本（人力×工时+停机风险+学习）和续费放一张表。产品：迁移总成本对比器，先做内容页。 |
+| [$8,400 刷一间房 · u/mspoonygp](https://www.reddit.com/r/homeimprovement/comments/1wt8iyg/) | 吵的是报价机制本身——已并入档案 A 的施工图。 |
 
 ## 八、本周行动清单
 
