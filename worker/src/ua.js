@@ -23,12 +23,12 @@ export function bucketUa(ua) {
 //（issue #31 给出的格式）。任何邮箱必须先被本规则覆盖，才能进入存储层。
 const EMAIL_RE = /([A-Za-z0-9._%+-])[A-Za-z0-9._%+-]*@([A-Za-z0-9-]+(?:\.[A-Za-z0-9-]+)+)/g;
 
-// 用户名式键值打码：user: bob / login=rocky / uid: alice -> "***"
+// 用户名式键值打码：user: bob / login=someone / uid: alice -> "***"
 //（Claude Code 等终端 agent 会在 UA 里自报用户名/邮箱）。
 // 值终止字符集排除空白与 , ; ) ] } " '
 const USER_FIELD_RE = /((?:user|username|login|account|uid)\s*[=:]\s*)("[^"]*"|[^\s,;)\]}"']+)/gi;
 
-// 家目录用户名打码：/Users/rocky/... /home/rocky/... -> /***/
+// 家目录用户名打码：/Users/<user>/... /home/<user>/... -> /***/
 const HOME_DIR_RE = /(\/(?:Users|home)\/)[^/\s,;)\]}"']+/g;
 
 // UA 脱敏：这是唯一允许把 UA 写进存储层的通道（worker.js 只能先调它）。

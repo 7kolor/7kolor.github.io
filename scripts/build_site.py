@@ -429,6 +429,17 @@ def build_llms_reports(items) -> str:
             if desc:
                 line += f" — {desc}"
             lines.append(line)
+            # 每期各格式的直链（与 reports.json 同一套「文件真实存在」校验，不产生死链）
+            rel = m["url"].lstrip("/")
+            extra = []
+            for fname, tag in (("report.md", "md"),
+                               ("report-en.md", "md-en"),
+                               ("report-zh.html", "zh"),
+                               ("report-en.html", "en")):
+                if (ROOT / rel / fname).is_file():
+                    extra.append(f"[{tag}]({SITE}{m['url']}{fname})")
+            if extra:
+                lines.append("  - " + " · ".join(extra))
         chunks.append(f"### {title_zh} / {title_en}\n" + "\n".join(lines))
     return "\n\n".join(chunks)
 

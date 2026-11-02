@@ -10,21 +10,25 @@
 
 **The week in one line**: AI is splitting the idea of work into two separate businesses — **one side: people who gig for AI** (training AI to recognize food-delivery scenes, rewriting AI copy, recording audiobooks — three hiring posts in one community inside a single week); **the other: people who build tools for AI** (of this week's Product Hunt launches, close to 40% are AI Agent infrastructure); and the premium in between — for a real human in the loop — keeps climbing: one CEO offered $130k to hire a stranger to "be him on LinkedIn." At the same time, **the ground under distribution is moving** — Google search, for the first time in its history, accounted for less than half of Alphabet's revenue.
 
-> "Everyone can make pizza, but pizzerias still make money."
+> "Aside from the pay, the best thing in this job is the connections — they become your network for the next one."
 
- r/SaaS 203-point thread, verbatim · Main line: the premium on real humans is rising   Listed salary for the personality-outsourcing gig$130kPlaying the CEO himself on LinkedInself-reported Hourly rate for teaching AI$50/hrthree hiring posts in one week · a new job categorysecondhand via the post Revenue 18 days after a SaaS launch$600the thread with the full path to first real revenueself-reported Amount stolen from Binance$5.6BHas your custodian ever had an incident?external event
+ [r/careerguidance · u/chipmunksocute · 54 points · Main line: the premium on real humans is rising](https://www.reddit.com/r/careerguidance/comments/1xh4pqa/)
+- **Listed salary for the personality-outsourcing gig**：$130k · Playing the CEO himself on LinkedIn · self-reported
+- **Hourly rate for teaching AI**：$50/hr · three hiring posts in one week · a new job category · secondhand via the post
+- **Revenue 18 days after a SaaS launch**：$600 · the thread with the full path to first real revenue · self-reported
+- **Amount stolen from Binance**：$5.6B · Has your custodian ever had an incident? · external event
 
-**If you need a decision fast**: read the four pain points in Section 2 (each one comes with a move you can copy) → if you run a company, go straight to the action list in Section 7 → if you only want to know what not to do, see "explicitly don't" at the end.
+**If you need a decision fast**: read the six pain points in Section 2 (each one comes with a move you can copy) → if you run a company, go straight to the action list in Section 7 → if you only want to know what not to do, see "explicitly don't" at the end.
 
-   This issue in three minutes   ✓ Do this [**AI visibility self-check**Ask three AI assistants about your category](#actions) [**Pricing script template**Compiled from the comments, into support in 30 min](#actions) [**Dependency-stack checkup**Quantify AI crawlers + recovery path](#actions)   ✗ Killed in the comments [**A fan-relationship repair platform**A motivation problem no product can fix](#actions) [**An AI training gig platform**Red ocean of supply, no differentiation](#actions) [**Ghostwriting tools without ACCESS**The pay lives in the network, not the prose](#actions)   ! Watchlist [**Persona ghostwriting tools**Waiting for paid-receipt evidence](#cases) [**The acceptance-tool window**Supply is flooding in — be a user, not a competitor](#signals) [**Trust infrastructure (our main bet)**The human premium has risen three weeks running](#signals)
+   This issue in three minutes   ✓ Do this [**AI visibility self-check**Ask three AI assistants about your category](#actions) [**Pricing script template**Compiled from the comments, into support in 30 min](#actions) [**Dependency-stack checkup**Quantify AI crawlers + recovery path](#actions)   ✗ Killed in the comments [**A fan-relationship repair platform**A motivation problem no product can fix](#actions) [**An AI training gig platform**Red ocean of supply, no differentiation](#actions) [**Ghostwriting tools without ACCESS**The pay lives in the network, not the prose](#actions)   ! Watchlist [**Persona ghostwriting tools**Waiting for paid-receipt evidence](#cases) [**The acceptance-tool window**Supply is flooding in — be a user, not a competitor](#signals) [**Trust infrastructure (our main bet)**The human premium rose again this week](#signals)
 
 ## 1. The Three Things That Mattered Most
 
- VerdictPersonality outsourcing puts a price tag on the table, the ground under customer acquisition is moving, and the employment narrative collides head-on from both poles — all three point the same way: the premium on real humans, and on verifiability, is going up.  01
+ Personality outsourcing puts a price tag on the table, the ground under customer acquisition is moving, and the employment narrative collides head-on from both poles — all three point the same way: the premium on real humans, and on verifiability, is going up.  01
 
 ### 1. The personality-outsourcing gig posts its first price tag: $130k to "be me on LinkedIn"
 
-[a corporate communications professional posted](https://www.reddit.com/r/careerguidance/comments/1xh4pqa/)said a CEO offered $130k — 67% above her current salary — to hire her to "pretend to be him" posting content and replying to comments. The comment section unpacked it more clearly than any career guide: **this is a 40-year-old industry** (1,098 points: "Politicians and celebrities have always done this — this is ghostwriting"); **the illusion gets punctured** (142 points: "Every executive account you interact with is also run by employees"); **the risk clause** (123 points: "The day what you wrote blows up, you are the scapegoat who gets fired"); **the real payoff is the network** (54 points: "You will meet a pile of executives — and they are your next job").
+[a corporate communications professional posted](https://www.reddit.com/r/careerguidance/comments/1xh4pqa/)said a CEO offered $130k — 67% above her current salary — to hire her to "pretend to be him" posting content and replying to comments. The comment section unpacked it more clearly than any career guide: **this is not a new trade** (1,098 points: "Politicians and celebrities have always done this — this is ghostwriting"); **the illusion gets punctured** (142 points: "Every executive account you interact with is also run by employees"); **the risk clause** (123 points: "The day what you wrote blows up, you are the scapegoat who gets fired"); **the real payoff is the network** (54 points: "You will meet a pile of executives — and they are your next job").
 
 **For indie developers**: the opportunity is not a ghostwriting tool (AI already writes well enough) but a **managed "persona operations" subscription** — AI handles output, a human handles liability. Falsification condition: a paid receipt for ghostwriting services shows up in the comments.
 
@@ -48,21 +52,17 @@ A fourth voice comes from [a survey on r/developers](https://www.reddit.com/r/de
 
 **How to read all of it**: the layoff story is told by CEOs (efficiency), the gig-market story is told by AI companies (data hunger), and the people on the ground feel "not replaced yet, repriced over the long run".**Automate the "entry", stay out of the "judgment", and never touch the "blame".**
 
-## 2. User Pain Points: the Four Most Crowded Threads in This Week's Comments
+## 2. User Pain Points: the Six Most Crowded Threads in This Week's Comments
 
- VerdictFour high-signal pain points filtered out of this week's user feedback — each one comes with the comment section's verdict and a ready-made answer; click the bottom-right corner of a card to flip it and see the move you can copy.
+ Six high-signal pain points filtered out of this week's user feedback — each one comes with the comment section's verdict and a ready-made answer; click the bottom-right corner of a card to flip it and see the move you can copy.
 
 #### 1. AI crawlers turned a self-hosted site into rubble
 
- Negative feedbackFeature gap372 comments · 1,061 points
+ 372 comments · 1,061 points
 
 [a self-hosted site owner opened a thread](https://www.reddit.com/r/selfhosted/comments/1xgae5q/): "I'm sick of these AI crawlers." The comment section isn't a complaint, it is **a whole ready-made playbook**: honeypots plus poisoned training data (507 points: "Feed them endlessly generated nonsense, with links pointing at links"); **fail2ban-style rate limiting** (133 points: "One IP sending 200 requests inside a few minutes is not a person"); dedicated anti-scraping tools (36 points — several people reply with two words only: "Anubis!"); and the easiest option of all (24 points): **"Actually, most crawlers do respect robots.txt"**. The sense of scale comes from a 118-point count: "They are a huge botnet, mostly residential IPs — when it hit me I counted roughly 35,000 IPs"; and a 62-point measurement: "I used to get 3–5 thousand requests a day, in summer it went past 20,000, and fail2ban blocked 90%".
 
- Flip for the move you can copy →
-
 ##### Move you can copy
-
-← Flip back to the original
 
 **A content slot plus a tool slot**: this site runs its own AI crawler honeypot (`/ai/ping`) — crawling is not an abstract threat for you. Measure how hard your site gets crawled, once, then decide whether to turn on robots.txt, rate-limit, or put anti-scraping in front of it.
 
@@ -70,31 +70,23 @@ Source: [original thread](https://www.reddit.com/r/selfhosted/comments/1xgae5q/)
 
 #### 2. Two years of notes, gone without a word: local-first products have no fallback
 
- Negative feedbackUser pain point312 comments · 315 points
+ 312 comments · 315 points
 
-[an Obsidian vault a user had been writing for two years vanished entirely](https://www.reddit.com/r/obsidianmd/comments/1xipb51/), and the thread asked "how do I fix this?" The sharpest question in the comments (54 points): **"Wait — how does a vault delete itself?"** — and then the consensus of the room (45 points): **"Did you turn on sync, and then sync an empty vault?"**and the most cutting line of all (183 points): "I have never lost a vault, but I have lost a lot of data over the years." One person took it straight as a service-announcement template (40 points): **"I'm going to use this as a generic service-outage notice"**. Underneath it there is a business insight too (30 points): "Some people tell half the truth, so they can hide the mistake they made."
-
- Flip for the move you can copy →
+[an Obsidian vault a user had been writing for two years vanished entirely](https://www.reddit.com/r/obsidianmd/comments/1xipb51/), data-en=**"Wait — how does a vault delete itself?"** — and then the consensus of the room (45 points): **"Did you turn on sync, and then sync an empty vault?"**and the most cutting line of all (183 points): "I have never lost a vault, but I have lost a lot of data over the years." One person took it straight as a service-announcement template (40 points): **"I'm going to use this as a generic service-outage notice"**. Underneath it there is a business insight too (30 points): "Some people tell half the truth, so they can hide the mistake they made."
 
 ##### Move you can copy
 
-← Flip back to the original
-
-**Move you can copy**: for any product that keeps users' creative work on their own machines or on self-hosted servers, **the recovery path has to be a first-class citizen** — the answer to "how do I fix this" should never be "you used it wrong"; it should be an executable recovery checklist. That is the line between product copy and growth.
+**Move you can copy**: for any product that keeps users' creative work on their own machines or on self-hosted servers, **the recovery path has to be a first-class citizen** — the answer to a broken product should never be "you used it wrong"; it should be an executable recovery checklist. That is the line between product copy and growth.
 
 Source: [original thread](https://www.reddit.com/r/obsidianmd/comments/1xipb51/)
 
 #### 3. Enterprise backup selection: one thread, a whole procurement chain
 
- Purchase intentPrice sensitivityCompetitor mention272 comments · 52 points
+ 272 comments · 52 points
 
 [a sysadmin asked for recommendations](https://www.reddit.com/r/sysadmin/comments/1xhb4np/): "Our company Microsoft 365 mailboxes need a good backup solution." This is the week's most textbook **purchase intent + price sensitivity + competitor mention**three-signal stack — it is not a complaint, it is a selection process, and competitor names and price ranges leak out of the comments on their own. For anyone building enterprise tools: **a selection thread = the most expensive traffic there is** — the user's budget is already being talked about in the thread.
 
- Flip for the move you can copy →
-
 ##### Move you can copy
-
-← Flip back to the original
 
 **Move you can copy**: go to your own community and look for threads like "recommendations? / what do you use / replacing X" — the people there are not complaining, they are **about to pay**. The competitor names and price ranges that surface in those comments are your pricing anchor.
 
@@ -102,15 +94,11 @@ Source: [original thread](https://www.reddit.com/r/sysadmin/comments/1xhb4np/)
 
 #### 4. Pricing complaints: the small business owners already know the answer
 
- Negative feedbackFeature gap91 comments
+ 91 comments
 
 [a small business owner asked](https://www.reddit.com/r/smallbusiness/comments/1xhpdgb/): "How do you handle people who complain about your price?" The comment section is a pricing psychology handbook: **The filter** — "People who complain about price were never your customers anyway" (9 points), "Free customers are the hardest to serve" (6 points); **The counter-intuitive part** — "After a price increase, sometimes the business actually gets better" (9 points); **Value framing** (16 points, plus an 8-point kindergarten-owner case): "Price equals the value it delivers"; "We charge a bit more than others, but we pay our teachers well, so you get the best teachers"; **Put it in the product** (5 points): "Show the base price before the booking and make them confirm it — anyone who thinks it is too expensive never even gets to me".
 
- Flip for the move you can copy →
-
 ##### Move you can copy
-
-← Flip back to the original
 
 **Pricing script template**: filter + value framing + price upfront, copied into your support workflow in 30 minutes. In a China-market context: swap "show the base price before the booking" for "put the price on the quote sheet or in the mini program first".
 
@@ -118,15 +106,11 @@ Source: [original thread](https://www.reddit.com/r/smallbusiness/comments/1xhpdg
 
 #### 5. The people who sell services drowned the people who buy them
 
- Negative feedbackFeature gap87 comments
+ 87 comments
 
 [this question](https://www.reddit.com/r/smallbusiness/comments/1xguhky/): "Has finding customers become ridiculously hard in 2026?" The comments put the cause of death on the table: "**I get 50 spam messages a day**" (50 points); "**300–500 emails, texts and Shopify inquiries a day, every one of them the same vague pitch**" (19 points) — the people who sell services drowned the people who look for services. There is a way out too: **"Selling one specific outcome to one kind of business is easier than selling a long list of services to everybody"** (24 points); "Cold outreach is basically useless — the market is saturated and budgets are shrinking" (11 points).
 
- Flip for the move you can copy →
-
 ##### Move you can copy
-
-← Flip back to the original
 
 **Channel focus**: write down your "one kind of business" and your "one result" first, then pick the channel; the same applies to cold outreach on Douyin, Meituan and WeChat in a China-market context.
 
@@ -134,15 +118,11 @@ Source: [original thread](https://www.reddit.com/r/smallbusiness/comments/1xguhk
 
 #### 6. The redesign backlash minority: the loudest complainers are the ones who stay
 
- Negative feedbackFeature gap47 comments
+ 47 comments
 
 [a product manager's dilemma](https://www.reddit.com/r/ProductManagement/comments/1xikydy/): "After the redesign almost every user adapted, but a small group was unhappy enough that support demanded a rollback." The comments break it down: **Tone** (78 points): "This kind of objection is irrational, and in the overall numbers it is small potatoes"; **Mechanism** (17 points): "**Users' aversion to switching costs is precisely why they complain — they are the least likely people to take their business elsewhere**"; **Role correction** (5 points): "Support's job is to help customers get value out of the new version, not to demand a rollback on their behalf"; **Landing it** (4 points): "Shift the narrative from fixing broken features to upgrading how people work, and back it with product data plus a short workflow training".
 
- Flip for the move you can copy →
-
 ##### Move you can copy
-
-← Flip back to the original
 
 **Redesign-backlash playbook**: work out the customer's switching cost + the data story + reposition support as an adoption coach — and write it into the product change runbook.
 
@@ -150,7 +130,7 @@ Source: [original thread](https://www.reddit.com/r/ProductManagement/comments/1x
 
 ## 3. Who Made Money This Week, and Who Crashed
 
- VerdictEveryone who made money has a verifiable path; everyone who crashed left behind a reusable mechanism — build the market before the product, being liked is not the same as being paid, and a shutdown needs death criteria.
+ Everyone who made money has a verifiable path; everyone who crashed left behind a reusable mechanism — build the market before the product, being liked is not the same as being paid, and a shutdown needs death criteria.
 
 ### The ones who made money
 
@@ -206,7 +186,7 @@ The free offensive
 
 Shut down
 
-**What happened**: [a founder asked for advice](https://www.reddit.com/r/smallbusiness/comments/1xhnmgp/): he came from dental clinic management and commercial real estate, grew the company to 23 employees at roughly $63k of revenue per head, and it shut down when broken equipment and repair costs crushed it. The top-voted comment is actually a question: **a question**: "How did you get to 23 employees with only $63k of revenue per head?" — and what it leaves behind is a bigger question: **scale by itself is not proof the model works**. Below that comes the rebuild recipe (several people agree: "use your operating background to advise dental clinics — the safest way to rebuild cash flow") and a sample from someone who has been there ("Got real estate to $5M, zeroed it out on purpose, and this is my third startup").
+**What happened**: [a founder asked for advice](https://www.reddit.com/r/smallbusiness/comments/1xhnmgp/): he came from dental clinic management and commercial real estate, and the business shut down when broken equipment and repair costs crushed it. The second-most-upvoted comment is actually a question: **a question**: "How did you get to 23 employees with only $63k of revenue per head?" — and what it leaves behind is a bigger question: **scale by itself is not proof the model works**. Below that comes the rebuild recipe (several people agree: "use your operating background to advise dental clinics — the safest way to rebuild cash flow") and a sample from someone who has been there ("Got real estate to $5M, zeroed it out on purpose, and this is my third startup").
 
 **Mechanism**: after a failure, count the numbers first, then pick the old skill that produces cash fastest, instead of betting the family fortune again.
 
@@ -238,28 +218,28 @@ $5.6B stolen
 
 ## 4. New Product Radar
 
- VerdictHere is how this week's 75 Product Hunt launches break down by category — Agent infrastructure is the biggest cluster, voice assistants for small business owners arrived in force for the first time, and two teams' comment sections validated the pain points for you.  Category breakdown of this week's PH launches AI Agent28 SaaS15 Developer tools13 Productivity9 Other10 Launch feed observed only; no votes or rankings cited
+ Here is how this week's Product Hunt launches break down by category — Agent infrastructure is the biggest cluster, and three voice products shipped this week, on three different days, all in the same direction.  Category breakdown of this week's PH launches AI Agent28 SaaS15 Developer tools13 Productivity9 Other10 Launch feed observed only; no votes or rankings cited
 
 | Product | What it does | Why it's worth a look |
 |---|---|---|
 | [Flatbread](https://www.producthunt.com/posts/flatbread) | Sharing and reuse of Agent coding sessions | Agent infrastructure is the biggest product cluster this week; turning sessions into an asset is the new direction |
 | [Kin](https://www.producthunt.com/posts/kin-c629f0ba-aa5e-4681-a288-b149a9b6dc4b) | Agent security controls, live as soon as you connect GitHub | Safety guardrails are spreading right behind the Agents — the companion slot to last issue's acceptance anxiety |
-| [Backenly](https://www.producthunt.com/posts/backenly) | The MCP protocol lets an Agent spin up a Postgres backend on its own | "The Agent builds its own backend" moves from demo to product |
+| [Backenly](https://www.producthunt.com/posts/backenly-2) | The MCP protocol lets an Agent spin up a Postgres backend on its own | "The Agent builds its own backend" moves from demo to product |
 | [telemetry.dev](https://www.producthunt.com/posts/telemetry-dev) | Observability for Agent runs | Every run recorded as data — the Agent's dashcam |
 | [Spacesheep](https://www.producthunt.com/posts/spacesheep) | Turns an Agent's output into a team asset | Aimed at the organizational pain point of "where did the Agent leave the work?" |
-| [Empacer](https://www.producthunt.com/posts/empacer) | A voice AI assistant for small business owners | Three voice assistants launched the same day, all pointing at one conclusion: **a small business owner has no time to re-explain the business every time** (the product asks three setup questions, then turns a voice request straight into a plan) |
-| [Vaani](https://www.producthunt.com/posts/vaani-developer-platform) | Build a human-sounding voice Agent with no code | Same day, same direction as Empacer: voice assistants for small business owners arrive in force for the first time |
+| [Empacer](https://www.producthunt.com/posts/empacer) | A voice AI assistant for small business owners | Three voice products shipped this week, on three different days, all pointing at one conclusion: **a small business owner has no time to re-explain the business every time** (the product asks three setup questions, then turns a voice request straight into a plan) |
+| [Vaani](https://www.producthunt.com/posts/vaani-developer-platform) | Build a human-sounding voice Agent with no code | One day after Empacer and in the same direction: a no-code platform for building human-sounding voice Agents |
 | [Tulu](https://www.producthunt.com/posts/tulu) | Marketing operations and analytics for small businesses | Ends manual UTMs and spreadsheets — automation for the marketing execution layer |
 | [throxy](https://www.producthunt.com/posts/throxy) | YC's AI-native sales agent | Goes straight at manufacturing, logistics and construction B2B — Agents seeping into traditional industries |
 | [CloudKnife](https://www.producthunt.com/posts/cloudknife) | Automatic cloud cost optimization | The pitch is **execution, not advice**: a deterministic core checks every recommendation against hard rules, instead of just telling you to "downsize this one" |
 | [Notra](https://www.producthunt.com/posts/notra-5) | Ranking optimization inside AI search results (GEO) | Echoes Section 1: the most direct tooling for the migration of the search entry point |
-| [Specsight](https://www.producthunt.com/posts/specsight) | Turns code changes into an automatic map of product features | The closest thing to a shipped product for "keep the docs fresh, start with the parts you can program" |
+| [Specsight](https://www.producthunt.com/posts/specsight-2) | Turns code changes into an automatic map of product features | The closest thing to a shipped product for "keep the docs fresh, start with the parts you can program" |
 | [Hob](https://news.ycombinator.com/item?id=50246238) | An open-source, local alternative to Claude Cowork | "Open-source versions of big-platform products" remain a steady lane for indie developers (176 points on HN) |
 | [TitleArt](https://news.ycombinator.com/item?id=50238708) | Type that looks like 1997 | Nostalgic texture plus behavior design are this week's high-frequency words in feature innovation (Flipcorder/TONKO/Mozy/Orbit point the same way) |
 
 ## 5. Signals Worth Noting
 
- VerdictFour signals, each with comment-section evidence: the knowledge square is collapsing faster, the promotion-trap thread scored 5,793 points, the creator-fan rupture continues, and AI fatigue meets voice-first on both the supply and the demand side.
+ Four signals, each with comment-section evidence: the knowledge square is collapsing faster, the promotion-trap thread scored 5,793 points, the creator-fan rupture continues, and AI fatigue meets voice-first on both the supply and the demand side.
 
 #### 1. The migration of the knowledge square is accelerating
 
@@ -279,7 +259,7 @@ $5.6B stolen
 
 ## 6. How Non-Engineer Complaints Turn Into Business
 
- VerdictThe pull of everyday life, the operational details of running a rental, the cost of a manager's attention, and the expectation mismatch on Etsy — four complaints, each with a content slot or a product slot.
+ The pull of everyday life, the operational details of running a rental, the cost of a manager's attention, and the expectation mismatch on Etsy — four complaints, each with a content slot or a product slot.
 
 #### 1. The pull of everyday life
 

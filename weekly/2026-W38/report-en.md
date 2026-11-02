@@ -8,7 +8,8 @@
 
 ---
 
--22% Purchase Intent Density WoW    321 Pain Density / 1k Posts     📋
+- **-22%**：Purchase Intent Density WoW
+- **321**：Pain Density / 1k Posts  📋
 
 ## 1. Three things worth 2 minutes of your time this week
 

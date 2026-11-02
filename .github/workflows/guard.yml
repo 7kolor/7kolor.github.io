@@ -11,10 +11,12 @@ jobs:
       - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5.6.0 pinned by SHA
         with:
           python-version: "3.12"
+      # PR 的 head ref 长期存在于 GitHub，但默认 clone 不含 refs/pull/*，
+      # 只在 PR 分支上存在的内容会逃过 --history 扫描 —— 显式拉下来。
+      - name: Fetch pull-request refs
+        run: git fetch origin '+refs/pull/*/head:refs/pr/*' --quiet || true
       - name: Sanitize check (worktree + full history)
-        env:
-          SANITIZE_RULES_B64: ${{ secrets.SANITIZE_RULES_B64 }}
-        run: python3 scripts/check_sanitize.py --all --history
+        run: python3 scripts/check_sanitize.py --all --history --rules scripts/sanitize_rules.txt
 
   # 合并门禁：所有 push / PR 都必须通过。配合仓库 Settings → Branches
   # 的 "Require status checks" 启用后，不过关无法合并进 main。

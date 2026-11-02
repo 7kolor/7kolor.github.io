@@ -109,6 +109,15 @@ def retarget_toggle(html: str, lang: str, base: Path) -> str:
 
 
 _SKIP_TAGS = {"script", "style", "svg", "nav", "header", "footer", "button"}
+# 纯布局/交互噪音：折叠提示、导读条、徽标——离开布局后文本无意义
+_DROP_CLASSES = {"fold-cue", "cue-on", "cue-off", "sb-foot", "tk-tag", "kv-tag",
+                "board-head", "breach-bar",
+                "stat-bar", "pf-flip-hint", "sig-chip"}
+# 结构化降级：数据保留，改写成 Markdown 列表/表格，不整块丢弃
+_BULLET_GRIDS = {"stat-grid"}   # speedboard 暂不做降级（避免丢数据），后续单独处理
+
+# 网页专属的布局容器：转 Markdown 时整块剥离（数字卡 / 速览看板脱离布局后不可读）
+_SKIP_CLASSES = {"stat-grid", "speedboard", "board-head", "breach-bar"}
 _INLINE_TAGS = {"a", "strong", "b", "em", "i", "code", "br", "img"}
 _HEADING_PREFIX = {"h1": "# ", "h2": "## ", "h3": "### ", "h4": "#### ",
                      "h5": "##### ", "h6": "###### "}
@@ -135,8 +144,32 @@ class _MdConverter(HTMLParser):
         self.in_heading = None   # h1-h6 tag name while inside it
         self.in_bq = 0           # blockquote nesting depth
         self.table = None        # {"rows": [...], "row": [...], "cell": str}
+        self.skip_depth = 0      # >0 表示正在跳过 _SKIP_CLASSES 容器（计所有嵌套标签）
+
+        self.mode = None        # None | stat | speed（结构化降级状态）
+        self.mode_depth = 0     # 容器（stat-grid / speedboard）入栈深度
+        self.stat_depth = 0     # 当前 stat-card 深度
+        self.sb_depth = 0       # 当前 sb-col 深度
+        self.field = None       # 当前采集字段
+        self.stat_cells = []    # 当前 stat-card 的字段列表
+        self.sb_col = None      # 当前 sb-col
+        self.sb_item = None     # 当前 sb-item
+        self.in_strong = False  # sb-item 内是否在 strong 中
+
+
 
     def _emit(self, s):
+        if self.mode == 'stat':
+            if self.stat_cells:
+                self.stat_cells[-1] += s
+            return
+        if self.mode == 'speed':
+            if self.field == 'sb-head' and self.sb_col is not None:
+                self.sb_col['head'] += s
+            elif self.field == 'sb-item' and self.sb_item is not None:
+                self.sb_item['t' if self.in_strong else 'd'] += s
+            return
+
         if self.table is not None:
             self.table["cell"] += s
         else:
@@ -161,6 +194,47 @@ class _MdConverter(HTMLParser):
 
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
+        if self.skip_depth > 0:
+            self.skip_depth += 1
+            self.stack.append(tag)
+            return
+
+
+        cls = set((attrs.get('class') or '').split())
+        if self.mode is None:
+            if cls & _BULLET_GRIDS:
+                self.mode = 'stat' if 'stat-grid' in cls else 'speed'
+                self.stack.append(tag)
+                self.mode_depth = len(self.stack)
+                return
+        elif self.mode == 'stat':
+            self.stack.append(tag)
+            if 'stat-card' in cls:
+                self.stat_cells = []
+                self.stat_depth = len(self.stack)
+            elif cls & {'stat-label', 'stat-value', 'stat-sub', 'stat-tag'}:
+                self.stat_cells.append('')
+            return
+        else:
+            self.stack.append(tag)
+            if 'sb-col' in cls:
+                self.sb_col = {'head': ''}
+                self.sb_depth = len(self.stack)
+            elif 'sb-head' in cls:
+                self.field = 'sb-head'
+            elif 'sb-item' in cls:
+                self.sb_item = {'t': '', 'd': ''}
+                self.field = 'sb-item'
+            return
+        if cls & _DROP_CLASSES:
+            self.skip_depth = 1
+            self.stack.append(tag)
+            return
+
+
+            self.skip_depth = 1
+            self.stack.append(tag)
+            return
         self.stack.append(tag)
         if tag in _SKIP_TAGS:
             return
@@ -191,6 +265,16 @@ class _MdConverter(HTMLParser):
                 marker = "-"
             self._emit(f"{indent}{marker} ")
         elif tag in ("strong", "b"):
+            if self.mode == 'speed' and self.field == 'sb-item':
+                self.in_strong = True
+                self.stack.append(tag)
+                return
+
+            if self.mode == 'speed' and self.field == 'sb-item':
+                self.in_strong = True
+                self.stack.append(tag)
+                return
+
             self._emit("**")
         elif tag in ("em", "i"):
             self._emit("*")
@@ -225,6 +309,91 @@ class _MdConverter(HTMLParser):
         # other tags: traverse children, keep text
 
     def handle_endtag(self, tag):
+        if self.skip_depth > 0:
+            self.skip_depth -= 1
+            if self.stack and self.stack[-1] == tag:
+                self.stack.pop()
+            return
+
+        if self.mode == 'speed' and self.field == 'sb-item' and tag in ('strong', 'b'):
+            self.in_strong = False
+            return
+
+
+        if self.mode == 'stat':
+            if tag == 'div':
+                if self.stat_depth and len(self.stack) == self.stat_depth:
+                    parts = [c.strip() for c in self.stat_cells if c.strip()]
+                    if len(parts) >= 2:
+                        saved = self.mode
+                        self.mode = None
+                        self._newline(1)
+                        self._emit('- **' + parts[0] + '**' + (('：' + ' · '.join(parts[1:])) if len(parts) > 1 else ''))
+                        self.mode = saved
+                    self.stat_cells = []
+                    self.stat_depth = 0
+                elif len(self.stack) == self.mode_depth:
+                    self.mode = None
+                    self.mode_depth = 0
+                if self.stack and self.stack[-1] == tag:
+                    self.stack.pop()
+                return
+        if self.mode == 'speed':
+            if tag == 'a' and self.sb_item is not None:
+                saved = self.mode
+                self.mode = None
+                self._newline(1)
+                t = self.sb_item['t'].strip()
+                d = self.sb_item['d'].strip()
+                self._emit('- **' + t + '**' + ((' — ' + d) if d else ''))
+                self.mode = saved
+                self.sb_item = None
+                self.field = None
+                if self.stack and self.stack[-1] == tag:
+                    self.stack.pop()
+                return
+            if tag == 'div':
+                if self.sb_depth and len(self.stack) == self.sb_depth:
+                    if self.sb_col and self.sb_col['head']:
+                        saved = self.mode
+                        self.mode = None
+                        self._newline(2)
+                        self._emit('### ' + self.sb_col['head'].strip())
+                        self.mode = saved
+                    self.sb_col = None
+                    self.sb_depth = 0
+                elif len(self.stack) == self.mode_depth:
+                    self.mode = None
+                    self.mode_depth = 0
+                if self.stack and self.stack[-1] == tag:
+                    self.stack.pop()
+                return
+        if self.mode == 'speed' and tag == 'div':
+            if self.sb_item is not None:
+                saved = self.mode
+                self.mode = None
+                self._newline(1)
+                t = self.sb_item['t'].strip()
+                d = self.sb_item['d'].strip()
+                self._emit('- **' + t + '**' + ((' — ' + d) if d else ''))
+                self.mode = saved
+                self.sb_item = None
+                self.field = None
+            elif self.sb_col is not None and self.sb_col['head']:
+                saved = self.mode
+                self.mode = None
+                self._newline(2)
+                self._emit('### ' + self.sb_col['head'].strip())
+                self.mode = saved
+                self.sb_col = None
+                self.field = None
+            if self.stack and self.stack[-1] == tag:
+                self.stack.pop()
+            return
+
+        if self.mode == 'speed' and self.field == 'sb-item' and tag in ('strong', 'b'):
+            self.in_strong = False
+            return
         if self.stack and self.stack[-1] == tag:
             self.stack.pop()
         if tag in _SKIP_TAGS:
@@ -284,12 +453,16 @@ class _MdConverter(HTMLParser):
         self._newline(1)
 
     def handle_startendtag(self, tag, attrs):
+        if self.skip_depth > 0:
+            return
         if tag == "br":
             self._newline(1)
         elif tag == "img":
             self.handle_starttag(tag, attrs)
 
     def handle_data(self, data):
+        if self.skip_depth > 0:
+            return
         if any(t in _SKIP_TAGS for t in self.stack):
             return
         if self.pre or self.in_heading:

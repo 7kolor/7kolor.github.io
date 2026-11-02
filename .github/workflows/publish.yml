@@ -42,7 +42,10 @@ jobs:
         run: |
           git config user.name "7kolor-bot"
           git config user.email "actions@github.com"
-          git add -A
+          # 只 add 构建产物与已知目录，不用 git add -A：
+          # 避免任何「未被 .gitignore 忽略」的未跟踪文件被自动推上 Pages
+          git add -A weekly analysis insights cases assets scripts templates
+          git add -u
           if ! git diff --cached --quiet; then
             git commit -m "chore: auto-build content [skip ci]"
             git push
