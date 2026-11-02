@@ -50,7 +50,7 @@ A fourth voice comes from [a survey on r/developers](https://www.reddit.com/r/de
 
 ## 2. User Pain Points: the Four Most Crowded Threads in This Week's Comments
 
- VerdictFour high-signal pain points filtered out of this week's user feedback — each one comes with the comment section's verdict and a ready-made answer; click the bottom-right corner of a card to flip it and see the move you can copy.  Signal distribution across this week's user threads Seeking validation8,058 Pain points6,729 Negative feedback1,555 Hiring demand1,372 Purchase intent906 Price sensitivity383 The rest: recommendations 1,413 · marketing intent 1,176 · problem solving 886 · competitor mentions 509 · churn risk 294 · budget concerns 198 (one post can carry several signals)
+ VerdictFour high-signal pain points filtered out of this week's user feedback — each one comes with the comment section's verdict and a ready-made answer; click the bottom-right corner of a card to flip it and see the move you can copy.
 
 #### 1. AI crawlers turned a self-hosted site into rubble
 
@@ -200,10 +200,41 @@ The free offensive
 
 ### The ones who crashed
 
-- **"Grow the business, then lose everything"** — [a founder asked for advice](https://www.reddit.com/r/smallbusiness/comments/1xhnmgp/): he came from dental clinic management and commercial real estate, grew the company to 23 employees at roughly $63k of revenue per head, and it shut down when broken equipment and repair costs crushed it. The top-voted comment is actually a question: **a question**: "How did you get to 23 employees with only $63k of revenue per head?" — and what it leaves behind is a bigger question: **scale by itself is not proof the model works**. Below that comes the rebuild recipe (several people agree: "use your operating background to advise dental clinics — the safest way to rebuild cash flow") and a sample from someone who has been there ("Got real estate to $5M, zeroed it out on purpose, and this is my third startup").**Mechanism: after a failure, count the numbers first, then pick the old skill that produces cash fastest, instead of betting the family fortune again.**
-- **"Shut down a product everybody likes"** — [the founder's farewell post](https://www.reddit.com/r/entrepreneurridealong/comments/1xhnikt/). The most painful comment (3 points): "**A product that is neither a failure nor a success is the hardest to kill — it does not die thoroughly enough to force your hand, and it does not grow fast enough for you to feel you should stop, so it eats your attention in small bites.**" The fix (2 points): "Set the numbers and the date before you get emotional, and write them where you cannot quietly edit them — if it misses the mark, it dies, and no meeting is needed." The OP's goodbye was dignified: a mass email, commemorative badges for old users. The sharpest follow-up (1 point): "an entire post about a dead project, **that never says a word about the new project that ate its time**."**Mechanism: being liked is retention, not payment; a shutdown needs preset death criteria, and it needs a dignified goodbye.**
-- **Etsy's platform risk, continued** — [a seller reported](https://www.reddit.com/r/Etsy/comments/1xfwqhx/): "Etsy does not even agree with its own policies, and my shop could be shut down at any time." Rules that change overnight plus dependence on a single channel — the same shape as last issue's Airbnb trilogy.
-- **$5.6B stolen from Binance** — [the HN discussion](https://news.ycombinator.com/item?id=50296470) (1,238 comments). One-line receipt: **Has your asset custodian ever had an incident?**
+  ①
+
+#### "Grow the business, then lose everything"
+
+Shut down
+
+**What happened**: [a founder asked for advice](https://www.reddit.com/r/smallbusiness/comments/1xhnmgp/): he came from dental clinic management and commercial real estate, grew the company to 23 employees at roughly $63k of revenue per head, and it shut down when broken equipment and repair costs crushed it. The top-voted comment is actually a question: **a question**: "How did you get to 23 employees with only $63k of revenue per head?" — and what it leaves behind is a bigger question: **scale by itself is not proof the model works**. Below that comes the rebuild recipe (several people agree: "use your operating background to advise dental clinics — the safest way to rebuild cash flow") and a sample from someone who has been there ("Got real estate to $5M, zeroed it out on purpose, and this is my third startup").
+
+**Mechanism**: after a failure, count the numbers first, then pick the old skill that produces cash fastest, instead of betting the family fortune again.
+
+   ②
+
+#### "Shut down a product everybody likes"
+
+Wound down
+
+**What happened**: [the founder's farewell post](https://www.reddit.com/r/entrepreneurridealong/comments/1xhnikt/). The most painful comment (3 points): "**A product that is neither a failure nor a success is the hardest to kill — it does not die thoroughly enough to force your hand, and it does not grow fast enough for you to feel you should stop, so it eats your attention in small bites.**" The fix (2 points): "Set the numbers and the date before you get emotional, and write them where you cannot quietly edit them — if it misses the mark, it dies, and no meeting is needed." The OP's goodbye was dignified: a mass email, commemorative badges for old users. The sharpest follow-up (1 point): "an entire post about a dead project, **that never says a word about the new project that ate its time**."
+
+**Mechanism**: being liked is retention, not payment; a shutdown needs preset death criteria, and it needs a dignified goodbye.
+
+   ③
+
+#### Etsy's platform risk, continued
+
+Platform risk
+
+**What happened**: [a seller reported](https://www.reddit.com/r/Etsy/comments/1xfwqhx/): "Etsy does not even agree with its own policies, and my shop could be shut down at any time." Rules that change overnight plus dependence on a single channel — the same shape as last issue's Airbnb trilogy.
+
+   ④
+
+#### $5.6B stolen from Binance
+
+$5.6B stolen
+
+**What happened**: [the HN discussion](https://news.ycombinator.com/item?id=50296470) (1,238 comments). One-line receipt: **Has your asset custodian ever had an incident?**
 
 ## 4. New Product Radar
 

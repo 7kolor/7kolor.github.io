@@ -497,12 +497,10 @@ html { scroll-behavior: smooth; }
 .content .verdict-bad  { box-shadow: 0 0 0 3px rgba(180,83,42,.07); }
 .content .verdict-watch{ box-shadow: 0 0 0 3px rgba(199,162,42,.09); }
 
-/* ---------- 行动清单：保留虚线清单风格，只加悬浮微交互 ---------- */
-.content ul.action-list li { transition: background .18s ease, padding-left .18s ease; }
+/* ---------- 行动清单：保留虚线清单风格；悬浮只改底色，不位移（避免文字跳行） ---------- */
+.content ul.action-list li { transition: background .18s ease; }
 .content ul.action-list li:hover { background: #F6FAFB; }
-@media (prefers-reduced-motion: no-preference) {
-    .content ul.action-list li:hover { padding-left: 36px; }
-}
+/* 悬浮不改变排版：删除原 padding-left 位移（36px → 回到基础 20px） */
 
 /* ---------- Hero 精修（仅本期） ---------- */
 .hero { overflow: hidden; padding: 76px 24px 64px; }
@@ -1142,5 +1140,11 @@ html { scroll-behavior: smooth; }
 .content .chart-card.chart-card { margin-bottom: 14px; }
 .content .pain-flip.pain-flip { margin-bottom: 12px; }
 .content .case-card.case-card { margin-bottom: 12px; }
+
+/* ---------- 翻车卡片（case-card.fail）：翻车色系，与「赚到钱的」卡片区分 ---------- */
+.content .case-card.fail { border-left: 3px solid #B4532A; background: linear-gradient(180deg, #FFFDFC 0%, #FDF8F5 100%); }
+.content .case-card.fail .cc-num { color: #B4532A; }
+.content .case-card.fail .cc-money { background: #FCEDE4; border-color: #EFC7B2; color: #9A3E1C; }
+.content .case-card.fail:hover { border-color: #B4532A; box-shadow: 0 12px 32px rgba(180, 83, 42, .14); }
 .content p.p { margin-bottom: 9px; }
 .content .takeaway.takeaway { margin-bottom: 14px; }
