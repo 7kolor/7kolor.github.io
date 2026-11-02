@@ -44,7 +44,10 @@ jobs:
           git config user.email "actions@github.com"
           # 只 add 构建产物与已知目录，不用 git add -A：
           # 避免任何「未被 .gitignore 忽略」的未跟踪文件被自动推上 Pages
-          git add -A weekly analysis insights cases assets scripts templates
+          # 逐个判断目录是否存在（analysis/insights/cases 等内容类型尚未启用时不存在）
+          for d in weekly assets scripts templates steps docs worker; do
+            [ -d "$d" ] && git add -A -- "$d"
+          done
           git add -u
           if ! git diff --cached --quiet; then
             git commit -m "chore: auto-build content [skip ci]"
