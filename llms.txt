@@ -10,7 +10,7 @@
 
 按问题类型选最省的路径：
 
-- **只要目录**（有哪些期、每期标题/摘要/日期）→ 抓 [reports.json](https://7kolor.github.io/reports.json)（约 4KB，含每期全部格式的直接链接）。
+- **只要目录**（有哪些期、每期标题/摘要/日期）→ 抓 [reports.json](https://7kolor.github.io/reports.json)（约 11KB，含每期全部格式的直接链接）。
 - **只要某一期的正文** → 抓 `/{kind}/{id}/report.md`（中文 Markdown）或 `report-en.md`（英文），无需解析 HTML。
 - **要全量正文一次拿全** → 抓 [feed.xml](https://7kolor.github.io/feed.xml)（全文 RSS，含全部各期完整正文）。
 - **要网页渲染版**（人类阅读）→ 内容页 `/{kind}/{id}/` 默认中文，单语版 `report-zh.html` / `report-en.html`。
@@ -22,7 +22,7 @@ URL 约定：`{kind}` 目前有 `weekly`（周报），未来扩展 analysis / i
 
 本站全部机器数据在 Cloudflare Worker 数据网关上有同内容镜像：网关 `https://7kolor-ai-gateway.7kolor.workers.dev`，相同路径加 `/ai` 前缀即可，字节内容与源站一致（如 `https://7kolor-ai-gateway.7kolor.workers.dev/ai/reports.json`、`.../ai/weekly/2026-W41/report.md`）。
 
-- **自愿签到 / Voluntary check-in**：配合的 agent 每个会话可向网关发起一次 `GET /ai/ping`，作为「已读到本导览」的信号（仅计数，不带任何额外数据）。
+- **自愿签到 / Voluntary check-in**：配合的 agent 每个会话可向网关发起一次 `GET /ai/ping`，作为「已读到本导览」的信号（记录路径桶与脱敏后的 UA 指纹；不记录 IP、query 与请求体）。
 - 访问统计（按 agent 桶 / 路径 / 天聚合 + 最近 ≤20 条脱敏记录）公开在网关的 `/ai-stats`。
 
 ## 更新节奏 / Cadence
@@ -34,13 +34,23 @@ URL 约定：`{kind}` 目前有 `weekly`（周报），未来扩展 analysis / i
 <!-- AUTO:llms-reports:begin -->
 ### 📡 每周情报 / 📡 Weekly Intelligence
 - [2026-W43 给 AI 打零工的人，和给 AI 造工具的人](https://7kolor.github.io/weekly/2026-W43/) — AI 正在把工作拆成两层生意：一端是给 AI 打零工的人，另一端是给 AI 造工具的人；夹在中间的真人溢价在涨价——一位 CEO 开价 13 万美元雇人扮演自己。
+  - [md](https://7kolor.github.io/weekly/2026-W43/report.md) · [md-en](https://7kolor.github.io/weekly/2026-W43/report-en.md) · [zh](https://7kolor.github.io/weekly/2026-W43/report-zh.html) · [en](https://7kolor.github.io/weekly/2026-W43/report-en.html)
 - [2026-W42 你看不上的生意，正在赚钱](https://7kolor.github.io/weekly/2026-W42/) — 拍照评腹肌的 App 月入五位数，被断言一句话就能抄死的 AI 套壳晒出亿级年收入，被裁的人比在岗贵——本周商业情报，另附七个我们亲手否掉的方向。
+  - [md](https://7kolor.github.io/weekly/2026-W42/report.md) · [md-en](https://7kolor.github.io/weekly/2026-W42/report-en.md) · [zh](https://7kolor.github.io/weekly/2026-W42/report-zh.html) · [en](https://7kolor.github.io/weekly/2026-W42/report-en.html)
 - [2026-W41 议价权的账单，和那个“没人要工具”的空白](https://7kolor.github.io/weekly/2026-W41/) — 我们读完评论区后，把本周三个候选方向全部否掉了。为什么“没人想要工具”比“没人做过”更值得说。
+  - [md](https://7kolor.github.io/weekly/2026-W41/report.md) · [md-en](https://7kolor.github.io/weekly/2026-W41/report-en.md) · [zh](https://7kolor.github.io/weekly/2026-W41/report-zh.html) · [en](https://7kolor.github.io/weekly/2026-W41/report-en.html)
 - [2026-W40 三场信任崩塌，钱在观望：帮决定、帮搬走、帮验证](https://7kolor.github.io/weekly/2026-W40/) — 雇主、订阅商、卖家三场信任崩塌同周发生——主推互信报价单；新增上期判断回执栏。
+  - [md](https://7kolor.github.io/weekly/2026-W40/report.md) · [md-en](https://7kolor.github.io/weekly/2026-W40/report-en.md) · [zh](https://7kolor.github.io/weekly/2026-W40/report-zh.html) · [en](https://7kolor.github.io/weekly/2026-W40/report-en.html)
 - [2026-W39 买家还在观望，动手的人先醒了：帮人敢下单的三个方向](https://7kolor.github.io/weekly/2026-W39/) — 晒单密度 +15% 是唯一超阈值异动，掏钱更谨慎——主推报价基准数据站，第 0 步只要 2 小时。
+  - [md](https://7kolor.github.io/weekly/2026-W39/report.md) · [md-en](https://7kolor.github.io/weekly/2026-W39/report-en.md) · [zh](https://7kolor.github.io/weekly/2026-W39/report-zh.html) · [en](https://7kolor.github.io/weekly/2026-W39/report-en.html)
 - [2026-W38 需求还在，买家在观望：八大方向的需求×供给对照](https://7kolor.github.io/weekly/2026-W38/) — ① 家庭维修自诊是全年最大真空，供给全是玩具规模；② 记账类工具几乎全哑火，单环节幸存者活得很好；③ AI agent 供给爆炸遇上买方疲劳——PH 票数是同行鼓掌，Reddit 评论区才是用户表情。
+  - [md](https://7kolor.github.io/weekly/2026-W38/report.md) · [md-en](https://7kolor.github.io/weekly/2026-W38/report-en.md) · [zh](https://7kolor.github.io/weekly/2026-W38/report-zh.html) · [en](https://7kolor.github.io/weekly/2026-W38/report-en.html)
 - [2026-W37 非工程师的真实抱怨，是更大的金矿](https://7kolor.github.io/weekly/2026-W37/) — ① 会计/护士/小房东等非工程师的重复流程痛是最大机会面；② 系统运维\(7:1\)、创业者\(6:1\)开发者工具几乎没人做；③ 职场高赞是「反辞职自保」实用主义。
+  - [md](https://7kolor.github.io/weekly/2026-W37/report.md) · [md-en](https://7kolor.github.io/weekly/2026-W37/report-en.md) · [zh](https://7kolor.github.io/weekly/2026-W37/report-zh.html) · [en](https://7kolor.github.io/weekly/2026-W37/report-en.html)
 - [2026-W36 AI 替代焦虑遇上裁员潮反转：双信号之下的职业保障窗口](https://7kolor.github.io/weekly/2026-W36/) — ① 55% 高管后悔 AI 裁员、Visa 反向裁掉 $500K 高管——AI 裁员潮出现对冲；② $70/小时真人 AI 质检服务，付费需求成型；③ 超大规模厂商预订 2027 全球 50% RAM 供应，自托管/AI 硬件成本上行。
+  - [md](https://7kolor.github.io/weekly/2026-W36/report.md) · [md-en](https://7kolor.github.io/weekly/2026-W36/report-en.md) · [zh](https://7kolor.github.io/weekly/2026-W36/report-zh.html) · [en](https://7kolor.github.io/weekly/2026-W36/report-en.html)
 - [2026-W35 AI Agent 基础设施产品化与 AI 治理新赛道](https://7kolor.github.io/weekly/2026-W35/) — 大模型周：GPT-6-Astra / Fable 5.1 / Gemini 3.8 Flash 同周发布，AI 创作交付层、AI 治理质检与端侧自托管成为被数据验证的三条机会赛道。
+  - [md](https://7kolor.github.io/weekly/2026-W35/report.md) · [md-en](https://7kolor.github.io/weekly/2026-W35/report-en.md) · [zh](https://7kolor.github.io/weekly/2026-W35/report-zh.html) · [en](https://7kolor.github.io/weekly/2026-W35/report-en.html)
 - [2026-W34 AI 编程可信度危机与定价获客](https://7kolor.github.io/weekly/2026-W34/) — AI 编程从「万能」到「不可靠」的共识正在形成；取消免费试用+翻倍定价 23 天做到 $1,600 MRR；合规成本上升为隐性威胁。
+  - [md](https://7kolor.github.io/weekly/2026-W34/report.md) · [md-en](https://7kolor.github.io/weekly/2026-W34/report-en.md) · [zh](https://7kolor.github.io/weekly/2026-W34/report-zh.html) · [en](https://7kolor.github.io/weekly/2026-W34/report-en.html)
 <!-- AUTO:llms-reports:end -->
