@@ -1383,3 +1383,18 @@ html { scroll-behavior: smooth; }
 .content .checkline .cl-text { flex: 1; color: #33475C; }
 .content .checkline .cl-text b { color: #0B5F78; margin-right: 4px; }
 .content .cc-quote { font-size: 13px; color: #5B6B7E; }
+
+/* 信号分档（替代象限图：不虚构坐标，按"是否动手"分档） */
+.content .signal-tiers { border: 1px solid #DFE8EF; border-radius: 14px; background: #fff; overflow: hidden; margin: 0 0 18px; box-shadow: 0 2px 8px rgba(22,40,59,.05); }
+.content .st-head { padding: 14px 20px; font-family: "Space Grotesk", sans-serif; font-size: 15px; font-weight: 700; color: #16283B; border-bottom: 1px solid #EEF2F7; background: #FAFCFD; }
+.content .st-row { display: flex; gap: 14px; align-items: flex-start; padding: 13px 20px; border-bottom: 1px solid #F2F6F9; transition: background .18s; }
+.content .st-row:last-child { border-bottom: none; }
+.content .st-row:hover { background: #FBFDFE; }
+.content .st-tag { flex: none; width: 62px; font-size: 11px; font-weight: 700; letter-spacing: .04em; text-align: center; padding: 3px 0; border-radius: 5px; margin-top: 2px; }
+.content .st-now .st-tag { background: #E4F4F1; color: #0E7490; border: 1px solid #A9DCD4; }
+.content .st-watch .st-tag { background: #F1F6FB; color: #33475C; border: 1px solid #D5E2EC; }
+.content .st-note .st-tag { background: #F5F7F9; color: #8A97A8; border: 1px solid #E6EBF0; }
+.content .st-body { flex: 1; min-width: 0; }
+.content .st-body strong { display: block; font-size: 14.5px; color: #16283B; margin-bottom: 3px; line-height: 1.5; }
+.content .st-body span { display: block; font-size: 13.5px; line-height: 1.7; color: #33475C; }
+@media (max-width: 560px) { .content .st-row { flex-direction: column; gap: 6px; } .content .st-tag { width: auto; align-self: flex-start; padding: 2px 8px; } }

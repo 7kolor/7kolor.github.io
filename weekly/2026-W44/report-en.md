@@ -8,7 +8,7 @@
 
 ---
 
-**The week in one line**: **The real theme this week is “ceilings and filters” — what is stopping you is not a lack of ability.**=**they want to pay the most senior person at a junior employee’s price**) — and the people who get filtered out discover that **paper rules (contract terms, degree classifications, salary bands) only take effect at the very end of the process, so at the résumé stage you can never find out which rule blocked you**.
+**The week in one line**: **The real theme this week is “ceilings and filters” — what is stopping you is not a lack of ability.** — subscriptions need a ceiling ($200 a month was a license to keep building things nobody watches); workload needs a ceiling (one best month nearly crushed a small business); pricing must respect the band the buyer left open (junior salary for the most senior person).
 
 > “The cheapest fix is a capacity rule — a system is only useful if the work coming in has a ceiling.”
 
@@ -90,7 +90,7 @@ Source: [original thread](https://www.reddit.com/r/smallbusiness/comments/1xlwbe
 
 [a small-business owner with 10 dessert shops and 150 employees](https://www.reddit.com/r/managers/comments/1xmhtmm/)says he is close to being crushed. The top-voted answer goes straight to the point: “**At the scale you are at, still managing people directly means you need to step above floor-level operations and hire someone to take over the people management — of course you are going to break.**” (625 points)
 
-Below that is a **four handover steps you can copy verbatim** (165 points): “=**”
+Below that is a **four handover steps you can copy verbatim** (165 points): “**"Tell your managers that from date X you will no longer manage their employees directly; ask them to help plan the handover, write policies, and express your confidence in them. When you both agree on the date, announce it to everyone — and from then on, send attendance questions back to the managers.**”
 
 One more pins down the layer of responsibility (44 points): “**You do not have 150 employees. You have 10 — and those 10 are the ones accountable for the 150.**”
 
@@ -303,7 +303,7 @@ And the most honest answer actually answers the poster’s real question (11 poi
 
 ## 6. Signals worth noting
 
- Six items, ranked by whether they change how you run the business — the first one is something you will act on this week.  Where the seven signals sit: further up and right means act now    Affects business decisions Just noise Act on it now Nothing to do about it AI tools taking your data Search alternatives Steam AI disclosure Technical debt Models rewriting weights Data-centre votes Burning the bridge Orange = act this week
+ Six items, ranked by whether they change how you run the business — the first one is something you will act on this week.   Seven signals, sorted by whether you should act this week   Act now  **AI tools are taking your data** Postman silently installing plugins, Claude Code sending your email to sites. Ten minutes to audit, one pre-tool hook to block it.    Act now  **Search is no longer just Google** Real users in the comments have already moved to Kagi and Ecosia. Switching entry points costs far less than switching channels.    Worth knowing  **What one AI run actually costs** Someone broke the bill down: $3.73 median per run, $7.54 worst case; the bulk is cache reads and writes, not the prompt. If you ship AI, price against this.    Worth knowing  **Technical debt has been repriced by AI** Paying it down got cheaper, putting it off got more expensive — AI makes review and migration cheaper and exposes bad code faster.    Just note it  **How thin Steam's AI disclosure numbers are** Officially 49.9% of new games disclose AI content, but disclosure only covers audio and visuals, not code. Recounted by review count, it is only 27–36%.    Just note it  **Models can now rewrite their own weights** Someone training a 2B model found it adjusting its own weights. For app builders it signals costs keep falling; no action needed yet.    Just note it  **Data centres are hitting local resistance** Voters rejected data centres in ballot measures. This is the second line on the AI cost curve, and it is political, not technical.    Just note it  **A raise to retain someone is also an offer** The job-hopper who regretted it: his employer raised his pay to keep him and he still left. Retention is about replacement cost, not promises.
 
 #### 1. AI tools are starting to take your data “on the way”
 
@@ -382,4 +382,4 @@ And the most honest answer actually answers the poster’s real question (11 poi
 
 - **11. The billing and usage layer for agents** (Section 5): Clocknext and Floot Payments show that this need is already its own category — **be a user, do not rush to be a competitor**.
 
-**Explicitly not to do**=
+**Explicitly not to do**"the auto-DM tool for social comments — the hard part is platform rules, not technology. Reply publicly, send manually, keep only the people who answer.
