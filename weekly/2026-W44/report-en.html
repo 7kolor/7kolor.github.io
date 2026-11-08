@@ -147,23 +147,28 @@
   <div class="section-header"><h2>1. The Three Things That Matter Most</h2></div>
   <div class="takeaway reveal-item"><span class="tk-tag">Verdict</span><span>All three point at one structure: ceilings and filters. Subscriptions, workload, pricing — each needs a ceiling you set yourself; and those who get filtered out are the ones the paper rules catch at the very last moment.</span></div>
 
-  <div class="carousel reveal-item" id="top3-carousel">
-    <div class="car-viewport">
-      <div class="car-track">
-    <div class="car-slide">
+  <div class="seg-tabs reveal-item" id="top3-tabs">
+    <button class="seg-btn active" data-top3="0">$149 first sale: the lowest-cost cold start is not cheap</button>
+    <button class="seg-btn" data-top3="1">AI subscriptions are a license</button>
+    <button class="seg-btn" data-top3="2">Paper rules only bite at the end</button>
+  </div>
+  <div class="top3-panel" data-top3-panel="0">
     <div class="top3-card is-good">
   <div class="top3-num">01</div>
   <div class="top3-body">
     <h3>1. The first $149: the lowest-cost cold start is not cheap</h3>
     <p><a class="src-link" href="https://www.reddit.com/r/SaaS/comments/1xoq9qm/" data-tip="r/SaaS · u/OccasionOld4689 · 532 pts / 163 comments" data-tip-zh="r/SaaS · u/OccasionOld4689 · 532 分 / 163 评">a developer’s path post</a><span>: using his own product to serve his own product, 200+ directories brought 1,000+ visits → one order.</span></p>
     <div class="qcard"><p class="qc-text"><strong>The comments are all congratulations, and nobody asks what comes next</strong><span> — readers of a post like that default to congratulating rather than asking “and then what?”. But one comment did give the next step: “</span><strong>your biggest advantage is that you are your own best case study</strong><span>You are your own best case study — using your own service on your own product beats any feature list. The first thing to fix: you spent 12 hours before noticing this payment. Set a payment alert, then ask this customer for a testimonial and two founder names.</span><strong>which works out to an hourly rate of a few dollars — so raise your price before the tenth order starts to hurt you</strong><span>.”</span></p></div>
-    <div class="qcard"><p class="qc-text"><strong>Mechanism</strong><span>: it corrects the phrase “lowest-cost cold start” — </span><strong>that is the lowest cost to start, which is not the same as cheap</strong><span>. The real low cost comes from serving yourself with your own product (the product demo comes for free), not from cheap labor.</span></p></div>
+    <div class="qcard"><p class="qc-text"><strong>Mechanism</strong><span>: it corrects the phrase “lowest-cost cold start” — </span><strong>that is the lowest cost to start, which is not the same as cheap</strong><span>. The real low cost comes from serving yourself with your own product (the product demo comes for free), not from cheap labor.</span></div>
     <div class="abar"><span class="bar-tag">The move</span><span class="bar-body"><span>: after the submissions, compute your hourly rate first, then decide which order is the one where you raise your price.</span></p>
   </div>
   </div>
+  </div>
+  </div>
+  </div>
     </div>
-    </div>
-    <div class="car-slide">
+  </div>
+  <div class="top3-panel" data-top3-panel="1" style="display:none">
     <div class="top3-card is-watch">
   <div class="top3-num">02</div>
   <div class="top3-body">
@@ -172,12 +177,12 @@
     <blockquote><span>“</span><strong>The subscription fee is not a cost. It is a license.</strong><span>Paying $200 a month feels like an investment, so you can keep building things without the guilt of “I did nothing” — and that is exactly what makes it dangerous.</span><strong>The way to break it is one hard rule: keep only one AI subscription until the first paying user shows up</strong><span>, and every tool has to earn back one real user conversation or one real outreach per week — not one more feature. If it only produces code nobody watches, cancel it, however good the code is.”</span></blockquote>
     <div class="qcard"><p class="qc-text"><strong>Another comment in there is about something else entirely</strong><span>: “</span><strong>These comments smell like AI-generated garbage.</strong><span>” — a post about AI subscriptions, with the whole comment layer suspected of being AI-written; and the commenter admits it himself: “English is not my first language, so I use AI to fix my grammar, not to write the comments.”</span><strong>This is the sharpest self-reminder of the week.</strong></p></div>
     <div class="qcard"><p class="qc-text"><span>The same thread also has two complementary fixes: </span><strong>“The five to ten minutes I spend scrolling while waiting for the agent to work are my outreach window — every task I hand the agent, I use to also write one comment or one DM”</strong><span> (23 points); </span><strong>“No new features until at least three people who are not friends have seen the current version — usually that conversation cuts the backlog in half”</strong><span> (9 points).</span></p></div>
-    <div class="qcard"><p class="qc-text"><strong>Mechanism</strong><span>: this is not a money-saving trick, it is </span><strong>a conversion of AI from a production tool into a time-rationed one</strong><span> — the rule has to land on “it has to earn back one real outreach every week”, not on “I will use it a bit less today”.</span></p></div>
+    <div class="qcard"><p class="qc-text"><strong>Mechanism</strong><span>: this is not a money-saving trick, it is </span><strong>a conversion of AI from a production tool into a time-rationed one</strong><span> — the rule has to land on “it has to earn back one real outreach every week”, not on “I will use it a bit less today”.</span></div>
     <div class="abar"><span class="bar-tag">The move</span><span class="bar-body"><span>: keep only one subscription (until the first paying user), and require every tool to earn back one real outreach per week; if you already have paying users, do a 30-day review and cut the ones that did not earn it back.</span></p>
   </div>
   </div>
-    </div>
-    <div class="car-slide">
+  </div>
+  <div class="top3-panel" data-top3-panel="2" style="display:none">
     <div class="top3-card is-bad">
   <div class="top3-num">03</div>
   <div class="top3-body">
@@ -185,25 +190,12 @@
     <p><a class="src-link" href="https://www.reddit.com/r/careeradvice/comments/1xmbunt/" data-tip="r/careeradvice · u/ditswd · 4,755 pts / 2,610 comments" data-tip-zh="r/careeradvice · u/ditswd · 4,755 分 / 2,610 评">a candidate had his job offer rescinded</a><span> (self-reported, 2,610 comments), on the grounds that </span><strong>the degree title was wrong</strong><span> (the school awards a BA, the company wanted a BS) — and that company was Boeing; the poster added it in a follow-up: “The company is Boeing.”</span></span></div>
     <div class="qcard"><p class="qc-text"><span>The comments take the mechanism apart: a defense-industry worker says (96 points): “</span><strong>Our contract places very strict requirements on who we are allowed to hire — this is very likely a “key personnel” clause specifying that it must be a bachelor’s degree in a particular field</strong><span>”; someone else adds (108 points): “</span><span>This is real at schools that run two separate majors, and it often comes from different colleges inside the university</span><span>”. The most valuable line is aimed at the candidate (41 points): “</span><strong>If they got this far and then rescinded the offer over the degree title, you actually dodged a bullet.</strong><span>”</span></p></div>
     <div class="qcard"><p class="qc-text"><strong>A second sample in the same week</strong><span>: </span><a class="src-link" href="https://www.reddit.com/r/careeradvice/comments/1xo8yjt/" data-tip="r/careeradvice · u/Mental-Beginning-458 · 902 pts / 989 comments" data-tip-zh="r/careeradvice · u/Mental-Beginning-458 · 902 分 / 989 评">a job seeker negotiated inside the salary band, and the offer was pulled</a><span> (self-reported, 989 comments), and the comments put it even more harshly (405 points): “</span><strong>This is the risk of negotiating — they can hire someone below your seniority level. All they need is a bachelor’s and one year of experience.</strong><span>” (another, 109 points, is blunter: “</span><strong>They want to pay a junior employee’s price for the most senior employee on the team.</strong><span>”)</span></p></div>
-    <div class="qcard"><p class="qc-text"><strong>Mechanism</strong><span>: paper rules (contract terms, degree classifications, salary bands) can take effect only at the very end of the process — </span><strong>you can never find out at the résumé stage which rule blocked you</strong><span>. And “the band the buyer left open is usually the band you should be paid in” holds just as well for anyone who writes quotes.</span></p></div>
+    <div class="qcard"><p class="qc-text"><strong>Mechanism</strong><span>: paper rules (contract terms, degree classifications, salary bands) can take effect only at the very end of the process — </span><strong>you can never find out at the résumé stage which rule blocked you</strong><span>. And “the band the buyer left open is usually the band you should be paid in” holds just as well for anyone who writes quotes.</span></div>
     <div class="abar"><span class="bar-tag">The move</span><span class="bar-body"><span>: treat the price band the other side can actually pay as a given, and plan your costs and your floor around it; do not try to renegotiate it into existence.</span></p>
   </div>
   </div>
-    </div>
-      </div>
-    </div>
-    <div class="car-nav">
-      <button class="car-arrow" data-car="-1" aria-label="Previous">‹</button>
-      <div class="car-dots">
-        <button class="car-dot active" data-car-go="0" aria-label="Slide 1"></button>
-        <button class="car-dot" data-car-go="1" aria-label="Slide 2"></button>
-        <button class="car-dot" data-car-go="2" aria-label="Slide 3"></button>
-      </div>
-      <span class="car-counter"><span id="car-now">01</span> / 03</span>
-      <button class="car-arrow" data-car="1" aria-label="Next">›</button>
-    </div>
   </div>
-</div>
+
 
 <div class="section reveal" id="pains">
   <div class="section-header"><h2>2. Pain points: four that land on your operations</h2></div>
@@ -362,9 +354,11 @@
     <p class="cc-field"><b>Why it matters to you</b><span>: this is </span><strong>a sample of how the same script gets used on your clients</strong><span> — “today only”, “let me save you the time of deciding” — you should know how you are treated.</span><span class="cc-note-inline">Self-reported.</span></p>
   </div>
   <div class="case-card">
-    <div class="cc-head"><span class="cc-num">⑥</span><h4>IRS looks back ten years and demands $285k</h4><span class="cc-money">Ten years of back taxes</span></div>
+    <div class="case-card">
+  <div class="cc-head"><span class="cc-num">⑥</span><h4>IRS looks back ten years and demands $285k</h4><span class="cc-money">Ten years of back taxes</span></div>
     <div class="checkline"><span class="cl-box"></span><span class="cl-text"><b>How to spot it early</b><span>: keep your tax filing receipts and entity-change records, especially if you operate across borders.</span></span></div>
     <p class="cc-field"><span class="cc-note-inline">Self-reported.</span></p>
+  </div>
   </div>
   </div>
 
@@ -570,8 +564,6 @@
 </div>
 
                 <!-- CONTENT:END -->
-            </div>
-        </div>
     </main>
 
 <!-- AUTO:footer:begin -->
@@ -673,6 +665,24 @@
         });
       }, { rootMargin: '-30% 0px -60% 0px' });
       document.querySelectorAll('.section').forEach(function (sec) { spy.observe(sec); });
+      // 三件事：tab 切换
+      (function () {
+        var btns = document.querySelectorAll('#top3-tabs .seg-btn');
+        var panels = document.querySelectorAll('.top3-panel');
+        if (!btns.length) return;
+        btns.forEach(function (b) {
+          b.addEventListener('click', function () {
+            var k = b.getAttribute('data-top3');
+            btns.forEach(function (x) { x.classList.remove('active'); });
+            b.classList.add('active');
+            panels.forEach(function (p) {
+              var on = p.getAttribute('data-top3-panel') === k;
+              p.style.display = on ? '' : 'none';
+              if (on) p.classList.add('revealed');
+            });
+          });
+        });
+      })();
       // 翻转卡：正反面都可翻
       document.querySelectorAll('.pain-flip').forEach(function (f) {
         f.querySelectorAll('.pf-flip-hint').forEach(function (h) {

@@ -1266,9 +1266,15 @@ html { scroll-behavior: smooth; }
 
 /* ④ 三件事轮播 */
 .content .carousel { position: relative; margin: 0 0 16px; }
-.content .car-viewport { overflow: hidden; border-radius: 14px; }
+/* 轮播：容器高度取"当前可见 slide"，用 grid 叠放实现（不用 flex，避开嵌套高度传染） */
+.content .car-viewport { border-radius: 14px; display: grid; }
+.content .car-viewport > .car-track { display: grid; grid-area: 1 / 1; }
+.content .car-track > .car-slide { grid-area: 1 / 1; min-width: 0; transition: opacity .35s ease, visibility .35s ease; }
+.content .car-track > .car-slide:not(.is-active) { opacity: 0; visibility: hidden; pointer-events: none; }
+.content .car-track > .car-slide.is-active { opacity: 1; visibility: visible; }
 .content .car-track { display: flex; transition: transform .55s cubic-bezier(.25,.8,.3,1); }
-.content .car-slide { flex: 0 0 100%; padding: 2px; }
+.content .car-slide { flex: 0 0 100%; padding: 2px; align-self: flex-start; }
+.content .car-track { align-items: flex-start; }
 .content .car-nav { display: flex; align-items: center; gap: 10px; margin-top: 12px; }
 .content .car-dots { display: flex; gap: 6px; flex: 1; }
 .content .car-dot {
