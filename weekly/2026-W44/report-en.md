@@ -66,7 +66,7 @@ The comments take the mechanism apart: a defense-industry worker says (96 points
 
 #### 1. His best month almost broke him: set the ceiling first, then talk systems
 
- 92comments9top comment points2 weeksschedule buffer 92 comments · 22 points
+ 92comments9top comment points2 weeksschedule buffer
 
 [a small-business owner posted](https://www.reddit.com/r/smallbusiness/comments/1xlwbes/): “My best month almost broke me, because I had no system for handling all that work.”
 
@@ -86,7 +86,7 @@ Source: [original thread](https://www.reddit.com/r/smallbusiness/comments/1xlwbe
 
 #### 2. The scale arrived but the structure did not: hand over first, then talk systems
 
- 10locations150employees625top comment points 512 comments · 484 points
+ 10locations150employees625top comment points
 
 [a small-business owner with 10 dessert shops and 150 employees](https://www.reddit.com/r/managers/comments/1xmhtmm/)says he is close to being crushed. The top-voted answer goes straight to the point: “**At the scale you are at, still managing people directly means you need to step above floor-level operations and hire someone to take over the people management — of course you are going to break.**” (625 points)
 
@@ -104,7 +104,7 @@ Source: [original thread](https://www.reddit.com/r/managers/comments/1xmhtmm/)
 
 #### 3. Boundaries are expressed as calendar slots, not as reasons
 
- 1,807comments4copy-ready scripts245points on the mechanism line 1,807 comments · 4,070 points
+ 1,807comments4copy-ready scripts245points on the mechanism line
 
 [a professional asked](https://www.reddit.com/r/careeradvice/comments/1xm242t/): “How do I gracefully decline to work past five?”
 
@@ -126,7 +126,7 @@ Source: [original thread](https://www.reddit.com/r/careeradvice/comments/1xm242t
 
 #### 4. You're thousands cheaper than rivals, making £250k profit, and still losing customers: price is not cost
 
- 108 comments · 98 points £250kannual profit£544our quote3,000+rival quote
+  £250kannual profit£544our quote3,000+rival quote
 
 [a small business owner posted](https://www.reddit.com/r/smallbusiness/comments/1xmw692/)(self-reported, 108 comments / 98 points): his quote and his rival’s were thousands apart — “We make £250k profit, that is fine, nothing to complain about… but we are**losing customers, because we are still too cheap**.”
 
@@ -144,9 +144,9 @@ Check whether you are also pricing below cost to absorb risk for them — if so,
 
 Source: [original thread](https://www.reddit.com/r/smallbusiness/comments/1xmw692/)
 
-#### 4. A hiring freeze cuts both ways: in the same week one person sent 600 résumés and got no offer, and one manager could not hire for months
+#### 5. A hiring freeze cuts both ways: in the same week one person sent 600 résumés and got no offer, and one manager could not hire for months
 
- 600résumés sent0offers received115hiring manager appears 489 comments · 488 points
+ 600résumés sent0offers received115hiring manager appears
 
 [a tech lead who has sent 600+ résumés since September 1 with zero offers](https://www.reddit.com/r/cscareerquestions/comments/1xl6cfe/). The comments produced the most valuable thing in this issue — **the hiring side shows up in the same thread**: “**Speaking from the other side of the fence (I am the hiring manager) — I have been trying to hire a few engineers for months and have not hired anyone.**” (115 points); the poster adds himself (83 points): “At a small company I used to land jobs fast on being quick on my feet.”
 

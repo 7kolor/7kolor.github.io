@@ -1398,3 +1398,22 @@ html { scroll-behavior: smooth; }
 .content .st-body strong { display: block; font-size: 14.5px; color: #16283B; margin-bottom: 3px; line-height: 1.5; }
 .content .st-body span { display: block; font-size: 13.5px; line-height: 1.7; color: #33475C; }
 @media (max-width: 560px) { .content .st-row { flex-direction: column; gap: 6px; } .content .st-tag { width: auto; align-self: flex-start; padding: 2px 8px; } }
+
+/* ===== 修复：top3 卡片改为单列，隐藏重复的装饰编号 =====
+   背景：card 2/3 的内容逃出了 .top3-body，成为 .top3-card 的直接子元素，
+   落进 44px 的编号列 → 文字被挤成竖排。改为单列后所有子元素都是全宽。 */
+.content .top3-card { grid-template-columns: 1fr !important; gap: 0 !important; }
+.content .top3-num { display: none !important; }
+.content .top3-card > .top3-body { display: block; }
+.content .top3-card > blockquote,
+.content .top3-card > .qcard,
+.content .top3-card > .mbar,
+.content .top3-card > .abar { width: 100%; }
+
+/* ===== 修复：痛点卡改为全宽单列 =====
+   背景：pain-wall 只包住了第 1 张卡（另 4 张是 section 直接子元素），
+   双列网格导致右侧空白、卡片被压到 429px 宽。内容量大，单列反而好读。 */
+.content .pain-wall { display: block !important; }
+.content #pains > .pain-flip,
+.content .pain-wall > .pain-flip { width: 100%; margin: 0 0 16px; }
+.content #pains > .pain-flip:last-child { margin-bottom: 0; }
