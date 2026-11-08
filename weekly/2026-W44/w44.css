@@ -1417,3 +1417,22 @@ html { scroll-behavior: smooth; }
 .content #pains > .pain-flip,
 .content .pain-wall > .pain-flip { width: 100%; margin: 0 0 16px; }
 .content #pains > .pain-flip:last-child { margin-bottom: 0; }
+
+/* ===== 间距收紧（用户反馈：空档太多、太高） =====
+   原值：section 上 28 + 下 92 = 120px 章节间距；tab 到内容 56px。
+   新值：章节间距 40px，tab 到卡片 12px。 */
+.content .section.section { margin-top: 0 !important; margin-bottom: 40px !important; }
+.content .section.section:last-child { margin-bottom: 0 !important; }
+.content .section-header.section-header { margin-bottom: 12px !important; padding-bottom: 10px !important; }
+.content .takeaway.takeaway { margin: 0 0 12px !important; }
+.content .seg-tabs.seg-tabs { margin: 0 0 10px !important; }
+.content .top3-panel { margin-top: 0 !important; }
+.content .top3-panel > .top3-card { padding-top: 16px !important; }
+.content .top3-card > .top3-body > h3 { margin: 0 0 10px !important; }
+.content .card.card { margin-bottom: 12px !important; padding-top: 16px !important; padding-bottom: 16px !important; }
+.content .pain-flip { margin-bottom: 12px !important; }
+.content .pf-front, .content .pf-back { padding: 14px 16px !important; }
+.content .qcard { margin: 8px 0 !important; padding: 12px 16px 10px 42px !important; }
+.content .mbar, .content .abar { margin: 8px 0 !important; padding: 8px 12px !important; }
+.content .metric-strip { margin: 6px 0 8px !important; padding: 7px 10px !important; }
+.content p { margin: 0 0 8px !important; }
