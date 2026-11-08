@@ -8,8 +8,25 @@
     "insights",
     "cases"
   ],
-  "count": 10,
+  "count": 11,
   "reports": [
+    {
+      "id": "2026-W44",
+      "kind": "weekly",
+      "title_zh": "上限与筛子：卡住你的不是能力不够",
+      "title_en": "Ceilings and Filters: What's Stopping You Isn't Ability",
+      "desc_zh": "AI 订阅要设上限、接单要设上限、报价要认买方留出的区间；而纸面规则要到流程末端才生效——本周商业情报。",
+      "desc_en": "Cap your AI subscriptions, cap the work you take on, and price to the band your buyer left open — and the paper rules that filter you only bite at the very end. This week's business intelligence.",
+      "date": "2026-11-07",
+      "url": "https://7kolor.github.io/weekly/2026-W44/",
+      "links": {
+        "page": "https://7kolor.github.io/weekly/2026-W44/",
+        "zh": "https://7kolor.github.io/weekly/2026-W44/report-zh.html",
+        "en": "https://7kolor.github.io/weekly/2026-W44/report-en.html",
+        "markdown": "https://7kolor.github.io/weekly/2026-W44/report.md",
+        "markdown_en": "https://7kolor.github.io/weekly/2026-W44/report-en.md"
+      }
+    },
     {
       "id": "2026-W43",
       "kind": "weekly",
