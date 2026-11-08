@@ -33,6 +33,8 @@ URL 约定：`{kind}` 目前有 `weekly`（周报），未来扩展 analysis / i
 
 <!-- AUTO:llms-reports:begin -->
 ### 📡 每周情报 / 📡 Weekly Intelligence
+- [2026-W44 上限与筛子：卡住你的不是能力不够](https://7kolor.github.io/weekly/2026-W44/) — AI 订阅要设上限、接单要设上限、报价要认买方留出的区间；而纸面规则要到流程末端才生效——本周商业情报。
+  - [md](https://7kolor.github.io/weekly/2026-W44/report.md) · [md-en](https://7kolor.github.io/weekly/2026-W44/report-en.md) · [zh](https://7kolor.github.io/weekly/2026-W44/report-zh.html) · [en](https://7kolor.github.io/weekly/2026-W44/report-en.html)
 - [2026-W43 给 AI 打零工的人，和给 AI 造工具的人](https://7kolor.github.io/weekly/2026-W43/) — AI 正在把工作拆成两层生意：一端是给 AI 打零工的人，另一端是给 AI 造工具的人；夹在中间的真人溢价在涨价——一位 CEO 开价 13 万美元雇人扮演自己。
   - [md](https://7kolor.github.io/weekly/2026-W43/report.md) · [md-en](https://7kolor.github.io/weekly/2026-W43/report-en.md) · [zh](https://7kolor.github.io/weekly/2026-W43/report-zh.html) · [en](https://7kolor.github.io/weekly/2026-W43/report-en.html)
 - [2026-W42 你看不上的生意，正在赚钱](https://7kolor.github.io/weekly/2026-W42/) — 拍照评腹肌的 App 月入五位数，被断言一句话就能抄死的 AI 套壳晒出亿级年收入，被裁的人比在岗贵——本周商业情报，另附七个我们亲手否掉的方向。
