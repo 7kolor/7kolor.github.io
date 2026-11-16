@@ -8,8 +8,25 @@
     "insights",
     "cases"
   ],
-  "count": 11,
+  "count": 12,
   "reports": [
+    {
+      "id": "2026-W45",
+      "kind": "weekly",
+      "title_zh": "三笔到期的账单：AI 的、信任的、和别人替你保管的",
+      "title_en": "Three Bills Coming Due: AI's, Trust's, and the Ones Others Hold",
+      "desc_zh": "AI 工具开始按小时收你的焦虑费，社区里真人快被 AI 内容淹没，而你押在「终身授权」和单一供应商上的家底，随时可以被别人动——本周商业情报。",
+      "desc_en": "AI tools meter your anxiety by the hour, real humans drown in AI content, and the assets you parked in lifetime licenses and single vendors can be moved by others — this week's business intelligence.",
+      "date": "2026-11-14",
+      "url": "https://7kolor.github.io/weekly/2026-W45/",
+      "links": {
+        "page": "https://7kolor.github.io/weekly/2026-W45/",
+        "zh": "https://7kolor.github.io/weekly/2026-W45/report-zh.html",
+        "en": "https://7kolor.github.io/weekly/2026-W45/report-en.html",
+        "markdown": "https://7kolor.github.io/weekly/2026-W45/report.md",
+        "markdown_en": "https://7kolor.github.io/weekly/2026-W45/report-en.md"
+      }
+    },
     {
       "id": "2026-W44",
       "kind": "weekly",
