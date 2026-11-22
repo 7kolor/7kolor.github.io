@@ -487,6 +487,22 @@ def html_to_markdown(html: str) -> str:
     return conv.result()
 
 
+def drop_other_language_charts(html: str, lang: str) -> str:
+    """Remove the hidden chart variant from single-language pages.
+
+    Chart SVGs are opaque to pick_lang, so bilingual pages carry one SVG per
+    language and CSS selects by <html lang>. The single-language build should
+    not ship the other language's hidden labels in HTML or Markdown.
+    """
+    other = "en" if lang == "zh" else "zh"
+    return re.sub(
+        rf'<div class="chart-holder chart-{other}">.*?</div>\s*',
+        "",
+        html,
+        flags=re.S,
+    )
+
+
 def content_div(html: str) -> str:
     """The <div class="content"> body of a report page (same traversal rule
     as build_site._content_html, kept local to avoid a cross-module import)."""
@@ -534,6 +550,7 @@ def build(item_dir: Path) -> None:
     for lang in ("zh", "en"):
         out = src
         out = pick_lang(out, lang)
+        out = drop_other_language_charts(out, lang)
         out = retarget_toggle(out, lang, base)
         out = re.sub(r'<html lang="zh-CN"', f'<html lang="{"zh-CN" if lang == "zh" else lang}"', out, count=1)
         out = re.sub(r"<title>.*?</title>", f"<title>{tt[lang]}</title>", out, count=1)

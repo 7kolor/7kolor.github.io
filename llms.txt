@@ -33,6 +33,8 @@ URL 约定：`{kind}` 目前有 `weekly`（周报），未来扩展 analysis / i
 
 <!-- AUTO:llms-reports:begin -->
 ### 📡 每周情报 / 📡 Weekly Intelligence
+- [2026-W46 三条商业情报：谁在付钱、定价权在谁手里、流量换成了什么](https://7kolor.github.io/weekly/2026-W46/) — 本周最具体的付费信号来自噪音取证，出现捐赠与复刻意愿；定价权的雷点是什么会被收回；部分搜索流量明显下滑，AI 引用是新增渠道——本周商业情报。
+  - [md](https://7kolor.github.io/weekly/2026-W46/report.md) · [md-en](https://7kolor.github.io/weekly/2026-W46/report-en.md) · [zh](https://7kolor.github.io/weekly/2026-W46/report-zh.html) · [en](https://7kolor.github.io/weekly/2026-W46/report-en.html)
 - [2026-W45 三笔到期的账单：AI 的、信任的、和别人替你保管的](https://7kolor.github.io/weekly/2026-W45/) — AI 工具开始按小时收你的焦虑费，社区里真人快被 AI 内容淹没，而你押在「终身授权」和单一供应商上的家底，随时可以被别人动——本周商业情报。
   - [md](https://7kolor.github.io/weekly/2026-W45/report.md) · [md-en](https://7kolor.github.io/weekly/2026-W45/report-en.md) · [zh](https://7kolor.github.io/weekly/2026-W45/report-zh.html) · [en](https://7kolor.github.io/weekly/2026-W45/report-en.html)
 - [2026-W44 上限与筛子：卡住你的不是能力不够](https://7kolor.github.io/weekly/2026-W44/) — AI 订阅要设上限、接单要设上限、报价要认买方留出的区间；而纸面规则要到流程末端才生效——本周商业情报。
