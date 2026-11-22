@@ -77,6 +77,18 @@ class TitlesTest(unittest.TestCase):
         self.assertEqual(t["en"], "7Kolor Insights — 2026 W34 Weekly Report")
 
 
+class LanguageChartsTest(unittest.TestCase):
+    def test_single_language_page_drops_hidden_chart(self):
+        html = ('<div class="chart-holder chart-zh"><svg>中文标签</svg></div>'
+                '<div class="chart-holder chart-en"><svg>English label</svg></div>')
+        zh = build_i18n.drop_other_language_charts(html, "zh")
+        en = build_i18n.drop_other_language_charts(html, "en")
+        self.assertIn("中文标签", zh)
+        self.assertNotIn("English label", zh)
+        self.assertIn("English label", en)
+        self.assertNotIn("中文标签", en)
+
+
 class BuildEndToEndTest(unittest.TestCase):
     def _make_item(self):
         d = Path(tempfile.mkdtemp())

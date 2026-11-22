@@ -8,8 +8,25 @@
     "insights",
     "cases"
   ],
-  "count": 12,
+  "count": 13,
   "reports": [
+    {
+      "id": "2026-W46",
+      "kind": "weekly",
+      "title_zh": "三条商业情报：谁在付钱、定价权在谁手里、流量换成了什么",
+      "title_en": "Three Threads of Business Intel: Who Pays, Who Holds Pricing Power, What Traffic Became",
+      "desc_zh": "本周最具体的付费信号来自噪音取证，出现捐赠与复刻意愿；定价权的雷点是什么会被收回；部分搜索流量明显下滑，AI 引用是新增渠道——本周商业情报。",
+      "desc_en": "The clearest payment signal came from noise evidence, with donation and replication intent; pricing power breaks over revocation; some search traffic is falling and AI citation is a new channel — this week's business intelligence.",
+      "date": "2026-11-21",
+      "url": "https://7kolor.github.io/weekly/2026-W46/",
+      "links": {
+        "page": "https://7kolor.github.io/weekly/2026-W46/",
+        "zh": "https://7kolor.github.io/weekly/2026-W46/report-zh.html",
+        "en": "https://7kolor.github.io/weekly/2026-W46/report-en.html",
+        "markdown": "https://7kolor.github.io/weekly/2026-W46/report.md",
+        "markdown_en": "https://7kolor.github.io/weekly/2026-W46/report-en.md"
+      }
+    },
     {
       "id": "2026-W45",
       "kind": "weekly",
